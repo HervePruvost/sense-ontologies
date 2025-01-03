@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+
+/*
+* {
+    background-image: linear-gradient(
+    90deg,
+    #020024 0%,
+    #090979 35%,
+    #5bc694 100%
+  );
+}*/
+
+body {
+  background-image: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 50%,
+    rgba(43, 117, 157, 0.671) 95%,
+    rgb(49, 251, 204) 100%
+  );
+}
+
+h1 {
+  font: 400 1.75em/1.5em "Raleway", "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+}
+
+label {
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+aside {
+  position: relative;
+  float: left;
+  width: 50vw;
+  top: 0px;
+  bottom: 0px;
+  padding: 0em 0em 0em 0em;
+  margin: 0;
+  color: black;
+  background: white;
+  background-position: top left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  counter-reset: section;
+}
+
+section {
+  position: sticky;
+  float: right;
+  width: 50vw;
+  top: 0px;
+  bottom: 0px;
+  padding: 0;
+  margin: 0;
+}
+
+section > #legend {
+  position: absolute;
+  top: 0px;
+  left: 2rem;
+  min-height: 33px;
+  font: 1rem sans-serif;
+}
+
+#networkGraph {
+  height: 100vh;
+}
+
+#contact {
+  position: fixed;
+  height: 1rem;
+  bottom: 6px;
+  right: 5px;
+  z-index: 200000;
+  color: white;
+  font-size: 1rem;
+}
