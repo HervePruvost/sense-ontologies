@@ -1,0 +1,2673 @@
+@prefix : <https://w3id.org/sense#> .
+@prefix sense: <https://w3id.org/sense#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esim: <https://w3id.org/esim#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix risk: <https://www.w3id.org/risk#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://w3id.org/sense#> .
+
+<https://w3id.org/sense> rdf:type owl:Ontology ;
+                          <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-7604-8543> ,
+                                                             <https://www.linkedin.com/in/hervepruvost> ,
+                                                             "Hervé Pruvost" ;
+                          <http://purl.org/dc/terms/description> "SENSE is a semantic composition that conceptualizes building energy systems in their operation phase. It follows a graph data structure that aggregates further ontologies that all together enable a full description of a building at metadata level."@en ;
+                          <http://purl.org/dc/terms/issued> "2022-05-24"^^xsd:date ;
+                          <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> ;
+                          <http://purl.org/dc/terms/modified> "2023-06-06"^^xsd:date ;
+                          <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> ;
+                          <http://purl.org/dc/terms/title> "SENSE: a semantic composition that conceptualizes building energy systems in their operation phase."@en ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "sense" ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/sense#" ;
+                          <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> ;
+                          rdfs:seeAlso <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> ;
+                          owl:versionInfo "v1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://spinrdf.org/spin#imports
+<http://spinrdf.org/spin#imports> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/sense#identifier
+:identifier rdf:type owl:AnnotationProperty ;
+            rdfs:label "identifier" ;
+            rdfs:range xsd:string ;
+            rdfs:domain owl:Thing .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/esim#composes
+<https://w3id.org/esim#composes> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/esim#hosts
+<https://w3id.org/esim#hosts> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/esim#isComposedOf
+<https://w3id.org/esim#isComposedOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/sense#hasProcedure
+:hasProcedure rdf:type owl:ObjectProperty ;
+              rdfs:label "has procedure" .
+
+
+###  https://w3id.org/sense#hasRule
+:hasRule rdf:type owl:ObjectProperty ;
+         rdfs:label "has rule" .
+
+
+###  https://www.w3id.org/risk#hasRisk
+<https://www.w3id.org/risk#hasRisk> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/sense#appliance_is_on
+:appliance_is_on rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                             <https://brickschema.org/schema/Brick#Location> ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "appliance is on" .
+
+
+###  https://w3id.org/sense#cooling_is_on
+:cooling_is_on rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                           <https://brickschema.org/schema/Brick#Location> ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "cooling is on" .
+
+
+###  https://w3id.org/sense#hasCoolingSystem
+:hasCoolingSystem rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "has cooling system" .
+
+
+###  https://w3id.org/sense#hasHeatRecoverySystem
+:hasHeatRecoverySystem rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "has heat recovery system" .
+
+
+###  https://w3id.org/sense#hasHeatingSystem
+:hasHeatingSystem rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "has heating system" .
+
+
+###  https://w3id.org/sense#heating_is_on
+:heating_is_on rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                           <https://brickschema.org/schema/Brick#Location> ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "heating is on" .
+
+
+###  https://w3id.org/sense#isBeingCooled
+:isBeingCooled rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "is being cooled" .
+
+
+###  https://w3id.org/sense#isBeingHeated
+:isBeingHeated rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "is being heated" .
+
+
+###  https://w3id.org/sense#isClosed
+:isClosed rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "is closed" .
+
+
+###  https://w3id.org/sense#isCooled
+:isCooled rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "is cooled" .
+
+
+###  https://w3id.org/sense#isHeated
+:isHeated rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:boolean ;
+          rdfs:label "is heated" .
+
+
+###  https://w3id.org/sense#isHigh
+:isHigh rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:boolean ;
+        rdfs:label "is high" .
+
+
+###  https://w3id.org/sense#isLow
+:isLow rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:boolean ;
+       rdfs:label "is low" .
+
+
+###  https://w3id.org/sense#isOccupied
+:isOccupied rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:boolean ;
+            rdfs:label "is occupied" .
+
+
+###  https://w3id.org/sense#isOff
+:isOff rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:boolean ;
+       rdfs:label "is off" .
+
+
+###  https://w3id.org/sense#isOn
+:isOn rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:boolean ;
+      rdfs:label "is on" .
+
+
+###  https://w3id.org/sense#isOpen
+:isOpen rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:boolean ;
+        rdfs:label "is open" .
+
+
+###  https://w3id.org/sense#isOrientedSouth
+:isOrientedSouth rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "is oriented south" .
+
+
+###  https://w3id.org/sense#isRecommended
+:isRecommended rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "is recommended" .
+
+
+###  https://w3id.org/sense#isUnoccupied
+:isUnoccupied rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "is unoccupied" .
+
+
+###  https://w3id.org/sense#isVentilated
+:isVentilated rdf:type owl:DatatypeProperty ;
+              rdfs:label "isVentilated" .
+
+
+###  https://w3id.org/sense#light_status
+:light_status rdf:type owl:DatatypeProperty ;
+              rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                          <https://brickschema.org/schema/Brick#Location> ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "light status" .
+
+
+###  https://w3id.org/sense#occupancy
+:occupancy rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:boolean ;
+           rdfs:label "occupancy" .
+
+
+###  https://w3id.org/sense#room_cooling_is_on
+:room_cooling_is_on rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                                <https://brickschema.org/schema/Brick#Room> ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "room cooling is on" .
+
+
+###  https://w3id.org/sense#room_heating_is_on
+:room_heating_is_on rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                                <https://brickschema.org/schema/Brick#Room> ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "room heating is on" .
+
+
+###  https://w3id.org/sense#room_occupancy
+:room_occupancy rdf:type owl:DatatypeProperty ;
+                rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                            <https://brickschema.org/schema/Brick#Room> ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "room occupancy" .
+
+
+###  https://w3id.org/sense#room_temperature
+:room_temperature rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                              <https://brickschema.org/schema/Brick#Room> ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:label "room temperature" .
+
+
+###  https://w3id.org/sense#unoccupied_too_long
+:unoccupied_too_long rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                                 <https://brickschema.org/schema/Brick#Location> ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "unoccupied too long" .
+
+
+###  https://w3id.org/sense#window_is_open
+:window_is_open rdf:type owl:DatatypeProperty ;
+                rdfs:domain <https://w3id.org/esim#SpatialStructureElement> ,
+                            <https://brickschema.org/schema/Brick#Room> ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "window is open" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/esim#AirHandlingUnit
+<https://w3id.org/esim#AirHandlingUnit> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#CoolingSystem
+<https://w3id.org/esim#CoolingSystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#CoolingZone
+<https://w3id.org/esim#CoolingZone> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#EnergyDistribution
+<https://w3id.org/esim#EnergyDistribution> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#EnergySystem
+<https://w3id.org/esim#EnergySystem> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
+                                                        rdfs:label "Energy system" .
+
+
+###  https://w3id.org/esim#EnergySystemComponent
+<https://w3id.org/esim#EnergySystemComponent> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
+                                                                 rdfs:label "Energy system component" .
+
+
+###  https://w3id.org/esim#HeatRecovery
+<https://w3id.org/esim#HeatRecovery> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#HeatingSystem
+<https://w3id.org/esim#HeatingSystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#HeatingZone
+<https://w3id.org/esim#HeatingZone> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#SpatialStructureElement
+<https://w3id.org/esim#SpatialStructureElement> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                                                                   <http://www.w3.org/ns/sosa/Platform> ;
+                                                                   rdfs:label "Spatial structure element" .
+
+
+###  https://w3id.org/esim#VentilationSystem
+<https://w3id.org/esim#VentilationSystem> rdf:type owl:Class .
+
+
+###  https://w3id.org/esim#VentilationZone
+<https://w3id.org/esim#VentilationZone> rdf:type owl:Class .
+
+
+###  https://brickschema.org/schema/Brick#Supply_Air_Flow_Sensor
+<https://brickschema.org/schema/Brick#Supply_Air_Flow_Sensor> owl:equivalentClass <https://w3id.org/mm#SupplyAirVolumeFlow> .
+
+
+###  https://w3id.org/mm#AirCoolingStatus
+<https://w3id.org/mm#AirCoolingStatus> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Air cooling status" .
+
+
+###  https://w3id.org/mm#AirDamperPosition
+<https://w3id.org/mm#AirDamperPosition> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                        rdfs:label "Air damper position" .
+
+
+###  https://w3id.org/mm#AirHandlingUnitSchedule
+<https://w3id.org/mm#AirHandlingUnitSchedule> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                              rdfs:label "Air handling unit schedule" .
+
+
+###  https://w3id.org/mm#AirHeatingStatus
+<https://w3id.org/mm#AirHeatingStatus> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Air heating status" .
+
+
+###  https://w3id.org/mm#AirPreCoolingStatus
+<https://w3id.org/mm#AirPreCoolingStatus> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                          rdfs:label "Air pre cooling status" .
+
+
+###  https://w3id.org/mm#AirPreHeatingStatus
+<https://w3id.org/mm#AirPreHeatingStatus> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                          rdfs:label "Air pre heating status" .
+
+
+###  https://w3id.org/mm#AirPressure
+<https://w3id.org/mm#AirPressure> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                  rdfs:label "Air pressure" .
+
+
+###  https://w3id.org/mm#AirPressureSetPoint
+<https://w3id.org/mm#AirPressureSetPoint> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#PressureSetPoint> ;
+                                          rdfs:label "Air pressure set point" .
+
+
+###  https://w3id.org/mm#AirQuality
+<https://w3id.org/mm#AirQuality> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                 rdfs:label "Air quality" .
+
+
+###  https://w3id.org/mm#AirTemperature
+<https://w3id.org/mm#AirTemperature> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/mm#Temperature> ;
+                                     rdfs:label "Air temperature" .
+
+
+###  https://w3id.org/mm#AirVolumeFlow
+<https://w3id.org/mm#AirVolumeFlow> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/mm#VolumeFlow> ;
+                                    rdfs:label "Air volume flow" .
+
+
+###  https://w3id.org/mm#ApplianceElectricityConsumption
+<https://w3id.org/mm#ApplianceElectricityConsumption> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/mm#ElectricityConsumption> ;
+                                                      rdfs:label "Appliance electricity consumption" .
+
+
+###  https://w3id.org/mm#Azimuth
+<https://w3id.org/mm#Azimuth> rdf:type owl:Class ;
+                              rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Azimuth" .
+
+
+###  https://w3id.org/mm#BlindPosition
+<https://w3id.org/mm#BlindPosition> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                    rdfs:label "Blind position" .
+
+
+###  https://w3id.org/mm#BlindStatus
+<https://w3id.org/mm#BlindStatus> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                  rdfs:label "Blind status" .
+
+
+###  https://w3id.org/mm#BoilerLevel
+<https://w3id.org/mm#BoilerLevel> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                  rdfs:label "Boiler level" .
+
+
+###  https://w3id.org/mm#BoilerReturnWaterTemperature
+<https://w3id.org/mm#BoilerReturnWaterTemperature> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                   rdfs:label "Boiler return water temperature" .
+
+
+###  https://w3id.org/mm#BoilerStatus
+<https://w3id.org/mm#BoilerStatus> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                   rdfs:label "Boiler status" .
+
+
+###  https://w3id.org/mm#BoilerSupplyWaterTemperature
+<https://w3id.org/mm#BoilerSupplyWaterTemperature> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                   rdfs:label "Boiler supply water temperature" .
+
+
+###  https://w3id.org/mm#BoilerValvePosition
+<https://w3id.org/mm#BoilerValvePosition> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                          rdfs:label "Boiler valve position" .
+
+
+###  https://w3id.org/mm#CO2concentration
+<https://w3id.org/mm#CO2concentration> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "CO2concentration" .
+
+
+###  https://w3id.org/mm#ChillerLevel
+<https://w3id.org/mm#ChillerLevel> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                   rdfs:label "Chiller level" .
+
+
+###  https://w3id.org/mm#ChillerStatus
+<https://w3id.org/mm#ChillerStatus> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                    rdfs:label "Chiller status" .
+
+
+###  https://w3id.org/mm#ColdWaterConsumption
+<https://w3id.org/mm#ColdWaterConsumption> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/mm#WaterConsumption> ;
+                                           rdfs:label "Cold water consumption" .
+
+
+###  https://w3id.org/mm#ComputedProperty
+<https://w3id.org/mm#ComputedProperty> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Computed property" .
+
+
+###  https://w3id.org/mm#CoolingCoilValvePosition
+<https://w3id.org/mm#CoolingCoilValvePosition> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                               rdfs:label "Cooling coil valve position" .
+
+
+###  https://w3id.org/mm#CoolingEnergyConsumption
+<https://w3id.org/mm#CoolingEnergyConsumption> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#EnergyConsumption> ;
+                                               rdfs:label "Cooling energy consumption" .
+
+
+###  https://w3id.org/mm#CoolingThermalPower
+<https://w3id.org/mm#CoolingThermalPower> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#ThermalPower> ;
+                                          rdfs:label "Cooling Thermal power" .
+
+
+###  https://w3id.org/mm#DewPoint
+<https://w3id.org/mm#DewPoint> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Dew point" .
+
+
+###  https://w3id.org/mm#DifferentialPressure
+<https://w3id.org/mm#DifferentialPressure> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                           rdfs:label "Differential pressure" .
+
+
+###  https://w3id.org/mm#DifferentialPressureAtNominalVolumeFlow
+<https://w3id.org/mm#DifferentialPressureAtNominalVolumeFlow> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/mm#DifferentialPressure> ;
+                                                              rdfs:label "Differential pressure at nominal volume flow" .
+
+
+###  https://w3id.org/mm#DifferentialPressureLimit
+<https://w3id.org/mm#DifferentialPressureLimit> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/mm#DifferentialPressure> ;
+                                                rdfs:label "Differential pressure limit" .
+
+
+###  https://w3id.org/mm#DistrictHeatingReturnWaterTemperature
+<https://w3id.org/mm#DistrictHeatingReturnWaterTemperature> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                            rdfs:label "District heating return water temperature" .
+
+
+###  https://w3id.org/mm#DistrictHeatingSupplyWaterTemperature
+<https://w3id.org/mm#DistrictHeatingSupplyWaterTemperature> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                            rdfs:label "District heating supply water temperature" .
+
+
+###  https://w3id.org/mm#DistrictHeatingWaterVolumeFlow
+<https://w3id.org/mm#DistrictHeatingWaterVolumeFlow> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/mm#WaterVolumeFlow> ;
+                                                     rdfs:label "District heating water volume flow" .
+
+
+###  https://w3id.org/mm#DoorStatus
+<https://w3id.org/mm#DoorStatus> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                 rdfs:label "Door status" .
+
+
+###  https://w3id.org/mm#ElectricPower
+<https://w3id.org/mm#ElectricPower> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/mm#Power> ;
+                                    rdfs:label "Electric power" .
+
+
+###  https://w3id.org/mm#ElectricityConsumption
+<https://w3id.org/mm#ElectricityConsumption> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/mm#EnergyConsumption> ;
+                                             rdfs:label "Electricity consumption" .
+
+
+###  https://w3id.org/mm#Elevation
+<https://w3id.org/mm#Elevation> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Elevation" .
+
+
+###  https://w3id.org/mm#EnergyConsumption
+<https://w3id.org/mm#EnergyConsumption> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                        rdfs:label "Energy consumption" .
+
+
+###  https://w3id.org/mm#EnergyEfficiencyRate
+<https://w3id.org/mm#EnergyEfficiencyRate> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                           rdfs:label "Energy efficiency rate" .
+
+
+###  https://w3id.org/mm#ExhaustAirDamperPosition
+<https://w3id.org/mm#ExhaustAirDamperPosition> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#AirDamperPosition> ;
+                                               rdfs:label "Exhaust air damper position" .
+
+
+###  https://w3id.org/mm#ExhaustAirTemperature
+<https://w3id.org/mm#ExhaustAirTemperature> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/mm#AirTemperature> ;
+                                            rdfs:label "Exhaust air temperature" .
+
+
+###  https://w3id.org/mm#ExhaustAirVolumeFlow
+<https://w3id.org/mm#ExhaustAirVolumeFlow> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/mm#AirVolumeFlow> ;
+                                           rdfs:label "Exhaust air volume flow" .
+
+
+###  https://w3id.org/mm#FanCoilUnitStatus
+<https://w3id.org/mm#FanCoilUnitStatus> rdf:type owl:Class ;
+                                        rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                        rdfs:label "Fan coil unit status" .
+
+
+###  https://w3id.org/mm#FanCoilUnitValvePosition
+<https://w3id.org/mm#FanCoilUnitValvePosition> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                               rdfs:label "Fan coil unit valve position" .
+
+
+###  https://w3id.org/mm#FanRotationalSpeed
+<https://w3id.org/mm#FanRotationalSpeed> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                         rdfs:label "Fan rotational speed" .
+
+
+###  https://w3id.org/mm#FanSpeedSetPoint
+<https://w3id.org/mm#FanSpeedSetPoint> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Fan speed set point" .
+
+
+###  https://w3id.org/mm#FanStatus
+<https://w3id.org/mm#FanStatus> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Fan status" .
+
+
+###  https://w3id.org/mm#FancoilReturnWaterTemperature
+<https://w3id.org/mm#FancoilReturnWaterTemperature> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                    rdfs:label "Fancoil return water temperature" .
+
+
+###  https://w3id.org/mm#FancoilSupplyWaterTemperature
+<https://w3id.org/mm#FancoilSupplyWaterTemperature> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                    rdfs:label "Fancoil supply water temperature" .
+
+
+###  https://w3id.org/mm#GasConsumption
+<https://w3id.org/mm#GasConsumption> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                     rdfs:label "Gas consumption" .
+
+
+###  https://w3id.org/mm#HeatRecoveryDamperPosition
+<https://w3id.org/mm#HeatRecoveryDamperPosition> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                                 rdfs:label "Heat recovery damper position" .
+
+
+###  https://w3id.org/mm#HeatRecoveryStatus
+<https://w3id.org/mm#HeatRecoveryStatus> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                         rdfs:label "Heat recovery status" .
+
+
+###  https://w3id.org/mm#HeatRecoveryValvePosition
+<https://w3id.org/mm#HeatRecoveryValvePosition> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                                rdfs:label "Heat recovery valve position" .
+
+
+###  https://w3id.org/mm#HeatRecoveryWheelRotationalSpeed
+<https://w3id.org/mm#HeatRecoveryWheelRotationalSpeed> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                                       rdfs:label "Heat recovery wheel rotational speed" .
+
+
+###  https://w3id.org/mm#HeatingCircuitPumpLevel
+<https://w3id.org/mm#HeatingCircuitPumpLevel> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                              rdfs:label "Heating circuit pump level" .
+
+
+###  https://w3id.org/mm#HeatingCircuitPumpStatus
+<https://w3id.org/mm#HeatingCircuitPumpStatus> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                               rdfs:label "Heating circuit pump status" .
+
+
+###  https://w3id.org/mm#HeatingCircuitReturnWaterTemperature
+<https://w3id.org/mm#HeatingCircuitReturnWaterTemperature> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                           rdfs:label "Heating circuit return water temperature" .
+
+
+###  https://w3id.org/mm#HeatingCircuitSupplyWaterTemperature
+<https://w3id.org/mm#HeatingCircuitSupplyWaterTemperature> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                           rdfs:label "Heating circuit supply water temperature" .
+
+
+###  https://w3id.org/mm#HeatingCircuitValvePosition
+<https://w3id.org/mm#HeatingCircuitValvePosition> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                                  rdfs:label "Heating circuit valve position" .
+
+
+###  https://w3id.org/mm#HeatingCoilValvePosition
+<https://w3id.org/mm#HeatingCoilValvePosition> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                               rdfs:label "Heating coil valve position" .
+
+
+###  https://w3id.org/mm#HeatingEnergyConsumption
+<https://w3id.org/mm#HeatingEnergyConsumption> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#EnergyConsumption> ;
+                                               rdfs:label "Heating energy consumption" .
+
+
+###  https://w3id.org/mm#HeatingSystemLevel
+<https://w3id.org/mm#HeatingSystemLevel> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                         rdfs:label "Heating system level" .
+
+
+###  https://w3id.org/mm#HeatingSystemStatus
+<https://w3id.org/mm#HeatingSystemStatus> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                          rdfs:label "Heating system status" .
+
+
+###  https://w3id.org/mm#HeatingThermalPower
+<https://w3id.org/mm#HeatingThermalPower> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#ThermalPower> ;
+                                          rdfs:label "Heating thermal power" .
+
+
+###  https://w3id.org/mm#HotWaterConsumption
+<https://w3id.org/mm#HotWaterConsumption> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#WaterConsumption> ;
+                                          rdfs:label "Hot water consumption" .
+
+
+###  https://w3id.org/mm#HotWaterTankHeatingCartridgeStatus
+<https://w3id.org/mm#HotWaterTankHeatingCartridgeStatus> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                                         rdfs:label "Hot water tank heating cartridge status" .
+
+
+###  https://w3id.org/mm#HotWaterTankTemperature
+<https://w3id.org/mm#HotWaterTankTemperature> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                              rdfs:label "Hot water tank temperature" .
+
+
+###  https://w3id.org/mm#HumidifierStatus
+<https://w3id.org/mm#HumidifierStatus> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Humidifier status" .
+
+
+###  https://w3id.org/mm#Humidity
+<https://w3id.org/mm#Humidity> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Humidity" .
+
+
+###  https://w3id.org/mm#HumiditySetPoint
+<https://w3id.org/mm#HumiditySetPoint> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/mm#SetPoint> ;
+                                       rdfs:label "Humidity set point" .
+
+
+###  https://w3id.org/mm#IndoorAirPressure
+<https://w3id.org/mm#IndoorAirPressure> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/mm#AirPressure> ;
+                                        rdfs:label "Indoor air pressure" .
+
+
+###  https://w3id.org/mm#IndoorAirQuality
+<https://w3id.org/mm#IndoorAirQuality> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/mm#AirQuality> ;
+                                       rdfs:label "Indoor air quality" .
+
+
+###  https://w3id.org/mm#IndoorAirTemperature
+<https://w3id.org/mm#IndoorAirTemperature> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/mm#AirTemperature> ;
+                                           rdfs:label "Indoor air temperature" .
+
+
+###  https://w3id.org/mm#IndoorHumidity
+<https://w3id.org/mm#IndoorHumidity> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/mm#Humidity> ;
+                                     rdfs:label "Indoor humidity" .
+
+
+###  https://w3id.org/mm#IndoorLightLevel
+<https://w3id.org/mm#IndoorLightLevel> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/mm#LightLevel> ;
+                                       rdfs:label "Indoor light level" .
+
+
+###  https://w3id.org/mm#LightLevel
+<https://w3id.org/mm#LightLevel> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                 rdfs:label "Light level" .
+
+
+###  https://w3id.org/mm#LightPosition
+<https://w3id.org/mm#LightPosition> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                    rdfs:label "Light position" .
+
+
+###  https://w3id.org/mm#LightStatus
+<https://w3id.org/mm#LightStatus> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                  rdfs:label "Light status" .
+
+
+###  https://w3id.org/mm#LightingEnergyConsumption
+<https://w3id.org/mm#LightingEnergyConsumption> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/mm#EnergyConsumption> ;
+                                                rdfs:label "Lighting energy consumption" .
+
+
+###  https://w3id.org/mm#LightingPower
+<https://w3id.org/mm#LightingPower> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/mm#Power> ;
+                                    rdfs:label "Lighting power" .
+
+
+###  https://w3id.org/mm#Movement
+<https://w3id.org/mm#Movement> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Movement" .
+
+
+###  https://w3id.org/mm#Occupancy
+<https://w3id.org/mm#Occupancy> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Occupancy" .
+
+
+###  https://w3id.org/mm#OutdoorAirDamperPosition
+<https://w3id.org/mm#OutdoorAirDamperPosition> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/mm#AirDamperPosition> ;
+                                               rdfs:label "Outdoor air damper position" .
+
+
+###  https://w3id.org/mm#OutdoorAirPressure
+<https://w3id.org/mm#OutdoorAirPressure> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/mm#AirPressure> ;
+                                         rdfs:label "Outdoor air pressure" .
+
+
+###  https://w3id.org/mm#OutdoorAirQuality
+<https://w3id.org/mm#OutdoorAirQuality> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/mm#AirQuality> ;
+                                        rdfs:label "Outdoor air quality" .
+
+
+###  https://w3id.org/mm#OutdoorAirTemperature
+<https://w3id.org/mm#OutdoorAirTemperature> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/mm#AirTemperature> ;
+                                            rdfs:label "Outdoor air temperature" .
+
+
+###  https://w3id.org/mm#OutdoorHumidity
+<https://w3id.org/mm#OutdoorHumidity> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/mm#Humidity> ;
+                                      rdfs:label "Outdoor humidity" .
+
+
+###  https://w3id.org/mm#OutdoorLightLevel
+<https://w3id.org/mm#OutdoorLightLevel> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/mm#LightLevel> ;
+                                        rdfs:label "Outdoor light level" .
+
+
+###  https://w3id.org/mm#PostCoolingCoilValvePosition
+<https://w3id.org/mm#PostCoolingCoilValvePosition> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                                   rdfs:label "Post cooling coil valve position" .
+
+
+###  https://w3id.org/mm#PostHeatingCoilValvePosition
+<https://w3id.org/mm#PostHeatingCoilValvePosition> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                                   rdfs:label "Post heating coil valve position" .
+
+
+###  https://w3id.org/mm#Power
+<https://w3id.org/mm#Power> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                            rdfs:label "Power" .
+
+
+###  https://w3id.org/mm#PreCoolingCoilValvePosition
+<https://w3id.org/mm#PreCoolingCoilValvePosition> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                                  rdfs:label "Pre cooling coil valve position" .
+
+
+###  https://w3id.org/mm#PreHeatingCoilValvePosition
+<https://w3id.org/mm#PreHeatingCoilValvePosition> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                                  rdfs:label "Pre heating coil valve position" .
+
+
+###  https://w3id.org/mm#Presence
+<https://w3id.org/mm#Presence> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Presence" .
+
+
+###  https://w3id.org/mm#PressureSetPoint
+<https://w3id.org/mm#PressureSetPoint> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/mm#SetPoint> ;
+                                       rdfs:label "Pressure set point" .
+
+
+###  https://w3id.org/mm#PumpRotationalSpeed
+<https://w3id.org/mm#PumpRotationalSpeed> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                          rdfs:label "Pump rotational speed" .
+
+
+###  https://w3id.org/mm#RadiatorReturnWaterTemperature
+<https://w3id.org/mm#RadiatorReturnWaterTemperature> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                     rdfs:label "Radiator return water temperature" .
+
+
+###  https://w3id.org/mm#RadiatorSupplyWaterTemperature
+<https://w3id.org/mm#RadiatorSupplyWaterTemperature> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/mm#WaterTemperature> ;
+                                                     rdfs:label "Radiator supply water temperature" .
+
+
+###  https://w3id.org/mm#RadiatorTemperature
+<https://w3id.org/mm#RadiatorTemperature> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#Temperature> ;
+                                          rdfs:label "Radiator temperature" .
+
+
+###  https://w3id.org/mm#RadiatorValvePosition
+<https://w3id.org/mm#RadiatorValvePosition> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/mm#ValvePosition> ;
+                                            rdfs:label "Radiator valve position" .
+
+
+###  https://w3id.org/mm#ReturnAirDamperPosition
+<https://w3id.org/mm#ReturnAirDamperPosition> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/mm#AirDamperPosition> ;
+                                              rdfs:label "Return air damper position" .
+
+
+###  https://w3id.org/mm#ReturnAirFanRotationalSpeed
+<https://w3id.org/mm#ReturnAirFanRotationalSpeed> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                                  rdfs:label "Return air fan rotational speed" .
+
+
+###  https://w3id.org/mm#ReturnAirFanStatus
+<https://w3id.org/mm#ReturnAirFanStatus> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                         rdfs:label "Return air fan status" .
+
+
+###  https://w3id.org/mm#ReturnAirTemperature
+<https://w3id.org/mm#ReturnAirTemperature> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/mm#AirTemperature> ;
+                                           rdfs:label "Return air temperature" .
+
+
+###  https://w3id.org/mm#ReturnAirVolumeFlow
+<https://w3id.org/mm#ReturnAirVolumeFlow> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#AirVolumeFlow> ;
+                                          rdfs:label "Return air volume flow" .
+
+
+###  https://w3id.org/mm#SetPoint
+<https://w3id.org/mm#SetPoint> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Set point" .
+
+
+###  https://w3id.org/mm#ShadingLevel
+<https://w3id.org/mm#ShadingLevel> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                   rdfs:label "Shading level" .
+
+
+###  https://w3id.org/mm#ShadingSatus
+<https://w3id.org/mm#ShadingSatus> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                   rdfs:label "Shading status" .
+
+
+###  https://w3id.org/mm#SolarRadiation
+<https://w3id.org/mm#SolarRadiation> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                     rdfs:label "Solar radiation" .
+
+
+###  https://w3id.org/mm#SpecificDifferentialPressure
+<https://w3id.org/mm#SpecificDifferentialPressure> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/mm#DifferentialPressure> ;
+                                                   rdfs:label "Specific differential pressure" .
+
+
+###  https://w3id.org/mm#SpecificFanPower
+<https://w3id.org/mm#SpecificFanPower> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/mm#ElectricPower> ;
+                                       rdfs:label "Specific fan power" .
+
+
+###  https://w3id.org/mm#SpecificPumpPower
+<https://w3id.org/mm#SpecificPumpPower> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/mm#ElectricPower> ;
+                                        rdfs:label "Specific pump power" .
+
+
+###  https://w3id.org/mm#SpecificVolumeFlow
+<https://w3id.org/mm#SpecificVolumeFlow> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/mm#VolumeFlow> ;
+                                         rdfs:label "Specific volume flow" .
+
+
+###  https://w3id.org/mm#SunshineDuration
+<https://w3id.org/mm#SunshineDuration> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Sunshine duration" .
+
+
+###  https://w3id.org/mm#SupplyAirDamperPosition
+<https://w3id.org/mm#SupplyAirDamperPosition> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/mm#AirDamperPosition> ;
+                                              rdfs:label "Supply air damper position" .
+
+
+###  https://w3id.org/mm#SupplyAirFanRotationalSpeed
+<https://w3id.org/mm#SupplyAirFanRotationalSpeed> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                                  rdfs:label "Supply air fan rotational speed" .
+
+
+###  https://w3id.org/mm#SupplyAirFanStatus
+<https://w3id.org/mm#SupplyAirFanStatus> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                         rdfs:label "Supply air fan status" .
+
+
+###  https://w3id.org/mm#SupplyAirHumidity
+<https://w3id.org/mm#SupplyAirHumidity> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/mm#Humidity> ;
+                                        rdfs:label "Supply air humidity" .
+
+
+###  https://w3id.org/mm#SupplyAirHumiditySetPoint
+<https://w3id.org/mm#SupplyAirHumiditySetPoint> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/mm#HumiditySetPoint> ;
+                                                rdfs:label "Supply air humidity set point" .
+
+
+###  https://w3id.org/mm#SupplyAirPressure
+<https://w3id.org/mm#SupplyAirPressure> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/mm#AirPressure> ;
+                                        rdfs:label "Supply air pressure" .
+
+
+###  https://w3id.org/mm#SupplyAirPressureSetPoint
+<https://w3id.org/mm#SupplyAirPressureSetPoint> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/mm#AirPressureSetPoint> ;
+                                                rdfs:label "Supply air pressure set point" .
+
+
+###  https://w3id.org/mm#SupplyAirTemperature
+<https://w3id.org/mm#SupplyAirTemperature> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/mm#AirTemperature> ;
+                                           rdfs:label "Supply air temperature" .
+
+
+###  https://w3id.org/mm#SupplyAirTemperatureSetPoint
+<https://w3id.org/mm#SupplyAirTemperatureSetPoint> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/mm#TemperatureSetPoint> ;
+                                                   rdfs:label "Supply air temperature set point" .
+
+
+###  https://w3id.org/mm#SupplyAirVolumeFlow
+<https://w3id.org/mm#SupplyAirVolumeFlow> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#AirVolumeFlow> ;
+                                          rdfs:label "Supply air volume flow" .
+
+
+###  https://w3id.org/mm#Temperature
+<https://w3id.org/mm#Temperature> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                  rdfs:label "Medium temperature" .
+
+
+###  https://w3id.org/mm#TemperatureSetPoint
+<https://w3id.org/mm#TemperatureSetPoint> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/mm#SetPoint> ;
+                                          rdfs:label "Temperature set point" .
+
+
+###  https://w3id.org/mm#ThermalPower
+<https://w3id.org/mm#ThermalPower> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/mm#Power> ;
+                                   rdfs:label "Thermal power" .
+
+
+###  https://w3id.org/mm#TotalEnergyConsmption
+<https://w3id.org/mm#TotalEnergyConsmption> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/mm#EnergyConsumption> ;
+                                            rdfs:label "Total energy consmption" .
+
+
+###  https://w3id.org/mm#ValvePosition
+<https://w3id.org/mm#ValvePosition> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                    rdfs:label "Valve position" .
+
+
+###  https://w3id.org/mm#Vibration
+<https://w3id.org/mm#Vibration> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Vibration" .
+
+
+###  https://w3id.org/mm#VolumeFlow
+<https://w3id.org/mm#VolumeFlow> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                 rdfs:label "Volume flow" .
+
+
+###  https://w3id.org/mm#WaterConsumption
+<https://w3id.org/mm#WaterConsumption> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "Water consumption" .
+
+
+###  https://w3id.org/mm#WaterTemperature
+<https://w3id.org/mm#WaterTemperature> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/mm#Temperature> ;
+                                       rdfs:label "Water temperature" .
+
+
+###  https://w3id.org/mm#WaterVolumeFlow
+<https://w3id.org/mm#WaterVolumeFlow> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/mm#VolumeFlow> ;
+                                      rdfs:label "Water volume flow" .
+
+
+###  https://w3id.org/mm#WindSpeed
+<https://w3id.org/mm#WindSpeed> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Wind speed" .
+
+
+###  https://w3id.org/mm#WindowStatus
+<https://w3id.org/mm#WindowStatus> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Property> ;
+                                   rdfs:label "Window status" .
+
+
+###  https://w3id.org/sense#Accelerometer
+:Accelerometer rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+               rdfs:label "Accelerometer" .
+
+
+###  https://w3id.org/sense#Anemometer
+:Anemometer rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+            rdfs:label "Anemometer" .
+
+
+###  https://w3id.org/sense#Barometer
+:Barometer rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+           rdfs:label "Barometer" .
+
+
+###  https://w3id.org/sense#ContactSensor
+:ContactSensor rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+               rdfs:label "Contact sensor" .
+
+
+###  https://w3id.org/sense#ControlSettingsRule
+:ControlSettingsRule rdf:type owl:Class ;
+                     rdfs:subClassOf :Function ;
+                     rdfs:label "Control strategy" .
+
+
+###  https://w3id.org/sense#CoolingEnergySavingMeasure
+:CoolingEnergySavingMeasure rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :EnergyConservationMeasure
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.w3.org/ns/ssn/hasOutput> ;
+                                                                         owl:hasValue :saveCoolingEnergy
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf :EnergyConservationMeasure ;
+                            rdfs:label "Cooling energy saving measure" .
+
+
+###  https://w3id.org/sense#CoolingMeter
+:CoolingMeter rdf:type owl:Class ;
+              rdfs:subClassOf :EnergyMeter ;
+              rdfs:label "Cooling meter" .
+
+
+###  https://w3id.org/sense#ElectricalEnergySavingMeasure
+:ElectricalEnergySavingMeasure rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( :EnergyConservationMeasure
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.w3.org/ns/ssn/hasOutput> ;
+                                                                            owl:hasValue :saveElectricalEnergy
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf :EnergyConservationMeasure ;
+                               rdfs:label "Electrical energy saving measure" .
+
+
+###  https://w3id.org/sense#ElectricityMeter
+:ElectricityMeter rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyMeter ;
+                  rdfs:label "Electricity meter" .
+
+
+###  https://w3id.org/sense#EnergyConservationMeasure
+:EnergyConservationMeasure rdf:type owl:Class ;
+                           rdfs:subClassOf <https://www.w3id.org/risk#KnownMeasure> ;
+                           rdfs:label "Energy conservation measure" .
+
+
+###  https://w3id.org/sense#EnergyMeter
+:EnergyMeter rdf:type owl:Class ;
+             rdfs:subClassOf :Meter ;
+             rdfs:label "Energy meter" .
+
+
+###  https://w3id.org/sense#EnumeratedEnergyConservationMeasure
+:EnumeratedEnergyConservationMeasure rdf:type owl:Class ;
+                                     rdfs:subClassOf :EnergyConservationMeasure ;
+                                     rdfs:label "Enumerated energy conservation measure" .
+
+
+###  https://w3id.org/sense#FaultDetectionRule
+:FaultDetectionRule rdf:type owl:Class ;
+                    rdfs:subClassOf :Function ;
+                    rdfs:label "Fault detection rule" .
+
+
+###  https://w3id.org/sense#Function
+:Function rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Function" .
+
+
+###  https://w3id.org/sense#GasMeter
+:GasMeter rdf:type owl:Class ;
+          rdfs:subClassOf :Meter ;
+          rdfs:label "Gas meter" .
+
+
+###  https://w3id.org/sense#GasSensor
+:GasSensor rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+           rdfs:label "Gas sensor" .
+
+
+###  https://w3id.org/sense#HeatMeter
+:HeatMeter rdf:type owl:Class ;
+           rdfs:subClassOf :EnergyMeter ;
+           rdfs:label "Heat meter" .
+
+
+###  https://w3id.org/sense#HeatingEnergySavingMeasure
+:HeatingEnergySavingMeasure rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :EnergyConservationMeasure
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.w3.org/ns/ssn/hasOutput> ;
+                                                                         owl:hasValue :saveHeatingEnergy
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf :EnergyConservationMeasure ;
+                            rdfs:label "Heating energy saving measure" .
+
+
+###  https://w3id.org/sense#Hygrometer
+:Hygrometer rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+            rdfs:label "Hygrometer" .
+
+
+###  https://w3id.org/sense#LightLevelSensor
+:LightLevelSensor rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+                  rdfs:label "Light level sensor" .
+
+
+###  https://w3id.org/sense#LightingEnergyMeter
+:LightingEnergyMeter rdf:type owl:Class ;
+                     rdfs:subClassOf :EnergyMeter ;
+                     rdfs:label "Lighting energy meter" .
+
+
+###  https://w3id.org/sense#LightingEnergySavingMeasure
+:LightingEnergySavingMeasure rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( :EnergyConservationMeasure
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/ssn/hasOutput> ;
+                                                                          owl:hasValue :saveLightingEnergy
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf :EnergyConservationMeasure ;
+                             rdfs:label "Lighting energy saving measure" .
+
+
+###  https://w3id.org/sense#MeasureEffect
+:MeasureEffect rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( :saveCoolingEnergy
+                                                 :saveElectricalEnergy
+                                                 :saveHeatingEnergy
+                                                 :saveLightingEnergy
+                                               )
+                                   ] ;
+               rdfs:subClassOf <http://www.w3.org/ns/ssn/Output> ;
+               rdfs:label "Measure effect" .
+
+
+###  https://w3id.org/sense#Meter
+:Meter rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+       rdfs:label "Meter" .
+
+
+###  https://w3id.org/sense#MotionSensor
+:MotionSensor rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+              rdfs:label "Motion sensor" .
+
+
+###  https://w3id.org/sense#OilMeter
+:OilMeter rdf:type owl:Class ;
+          rdfs:subClassOf :Meter ;
+          rdfs:label "Oil meter" .
+
+
+###  https://w3id.org/sense#Pyranometer
+:Pyranometer rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+             rdfs:label "Pyranometer" .
+
+
+###  https://w3id.org/sense#State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf owl:Thing ;
+       rdfs:label "State" .
+
+
+###  https://w3id.org/sense#SubMeter
+:SubMeter rdf:type owl:Class ;
+          rdfs:subClassOf :Meter ;
+          rdfs:label "Sub meter" .
+
+
+###  https://w3id.org/sense#Thermometer
+:Thermometer rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+             rdfs:label "Thermometer" .
+
+
+###  https://w3id.org/sense#UserAction
+:UserAction rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuation> ;
+            rdfs:label "User action" .
+
+
+###  https://w3id.org/sense#UserBehaviourRule
+:UserBehaviourRule rdf:type owl:Class ;
+                   rdfs:subClassOf :Function ;
+                   rdfs:label "User behaviour rule" .
+
+
+###  https://w3id.org/sense#UtilityMeter
+:UtilityMeter rdf:type owl:Class ;
+              rdfs:subClassOf :Meter ;
+              rdfs:label "Utility meter" .
+
+
+###  https://w3id.org/sense#WaterMeter
+:WaterMeter rdf:type owl:Class ;
+            rdfs:subClassOf :Meter ;
+            rdfs:label "Water meter" .
+
+
+###  https://w3id.org/sense#WeatherStation
+:WeatherStation rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+                rdfs:label "Weather station" .
+
+
+###  https://www.w3id.org/risk#EntityAtRisk
+<https://www.w3id.org/risk#EntityAtRisk> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+
+
+###  https://www.w3id.org/risk#KnownMeasure
+<https://www.w3id.org/risk#KnownMeasure> rdf:type owl:Class .
+
+
+###  https://www.w3id.org/risk#Measure
+<https://www.w3id.org/risk#Measure> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                                    rdfs:label "Measure" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/sense#AirCoolingStatus
+:AirCoolingStatus rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Air cooling status" .
+
+
+###  https://w3id.org/sense#AirDamperPosition
+:AirDamperPosition rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Air damper position" .
+
+
+###  https://w3id.org/sense#AirHandlingUnitSchedule
+:AirHandlingUnitSchedule rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/ssn/Property> ;
+                         rdfs:label "Air handling unit schedule" .
+
+
+###  https://w3id.org/sense#AirHeatingStatus
+:AirHeatingStatus rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Air heating status" .
+
+
+###  https://w3id.org/sense#AirPrecoolingStatus
+:AirPrecoolingStatus rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Air precooling status" .
+
+
+###  https://w3id.org/sense#AirPreheatingStatus
+:AirPreheatingStatus rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Air preheating status" .
+
+
+###  https://w3id.org/sense#AirPressure
+:AirPressure rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/ssn/Property> ;
+             rdfs:label "Air pressure" .
+
+
+###  https://w3id.org/sense#AirPressureSetPoint
+:AirPressureSetPoint rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Air pressure set point" .
+
+
+###  https://w3id.org/sense#AirQuality
+:AirQuality rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/ssn/Property> ;
+            rdfs:label "Air quality" .
+
+
+###  https://w3id.org/sense#AirTemperature
+:AirTemperature rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/ns/ssn/Property> ;
+                rdfs:label "Air temperature" .
+
+
+###  https://w3id.org/sense#AirVolumeFlow
+:AirVolumeFlow rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Air volume flow" .
+
+
+###  https://w3id.org/sense#ApplianceElectricityConsumption
+:ApplianceElectricityConsumption rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/ssn/Property> ;
+                                 rdfs:label "Appliance electricity consumption" .
+
+
+###  https://w3id.org/sense#Azimuth
+:Azimuth rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/ns/ssn/Property> ;
+         rdfs:label "Azimuth" .
+
+
+###  https://w3id.org/sense#BlindPosition
+:BlindPosition rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Blind position" .
+
+
+###  https://w3id.org/sense#BlindStatus
+:BlindStatus rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/ssn/Property> ;
+             rdfs:label "Blind status" .
+
+
+###  https://w3id.org/sense#BoilerLevel
+:BoilerLevel rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/ssn/Property> ;
+             rdfs:label "Boiler level" .
+
+
+###  https://w3id.org/sense#BoilerReturnWaterTemperature
+:BoilerReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Boiler return water temperature" .
+
+
+###  https://w3id.org/sense#BoilerSupplyWaterTemperature
+:BoilerSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Boiler supply water temperature" .
+
+
+###  https://w3id.org/sense#BoilerValvePosition
+:BoilerValvePosition rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Boiler valve position" .
+
+
+###  https://w3id.org/sense#CO2Concentration
+:CO2Concentration rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "CO2 Concentration" .
+
+
+###  https://w3id.org/sense#ChillerLevel
+:ChillerLevel rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/ssn/Property> ;
+              rdfs:label "Chiller level" .
+
+
+###  https://w3id.org/sense#ChillerStatus
+:ChillerStatus rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Chiller status" .
+
+
+###  https://w3id.org/sense#ColdWaterConsumption
+:ColdWaterConsumption rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Cold water consumption" .
+
+
+###  https://w3id.org/sense#CoolingCoilValvePosition
+:CoolingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Cooling coil valve position" .
+
+
+###  https://w3id.org/sense#CoolingEnergyConsumption
+:CoolingEnergyConsumption rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Cooling energy consumption" .
+
+
+###  https://w3id.org/sense#CoolingPower
+:CoolingPower rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/ssn/Property> ;
+              rdfs:label "Cooling power" .
+
+
+###  https://w3id.org/sense#DewPoint
+:DewPoint rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/ssn/Property> ;
+          rdfs:label "Dew point" .
+
+
+###  https://w3id.org/sense#DifferentialPressure
+:DifferentialPressure rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Differential pressure" .
+
+
+###  https://w3id.org/sense#DifferentialPressureAtNominalVolumeFlow
+:DifferentialPressureAtNominalVolumeFlow rdf:type owl:NamedIndividual ,
+                                                  <http://www.w3.org/ns/ssn/Property> ;
+                                         rdfs:label "Differential pressure at nominal volume flow" .
+
+
+###  https://w3id.org/sense#DifferentialPressureLimit
+:DifferentialPressureLimit rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Differential pressure limit" .
+
+
+###  https://w3id.org/sense#DistrictHeatingReturnWaterTemperature
+:DistrictHeatingReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "District heating return water temperature" .
+
+
+###  https://w3id.org/sense#DistrictHeatingSupplyWaterTemperature
+:DistrictHeatingSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/ssn/Property> ;
+                                       rdfs:label "District heating supply water temperature" .
+
+
+###  https://w3id.org/sense#DistrictHeatingWaterVolumeFlow
+:DistrictHeatingWaterVolumeFlow rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "District heating water volume flow" .
+
+
+###  https://w3id.org/sense#DoorStatus
+:DoorStatus rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/ssn/Property> ;
+            rdfs:label "Door status" .
+
+
+###  https://w3id.org/sense#ElectricPower
+:ElectricPower rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Electric power" .
+
+
+###  https://w3id.org/sense#ElectricityConsumption
+:ElectricityConsumption rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/ns/ssn/Property> ;
+                        rdfs:label "Electricity consumption" .
+
+
+###  https://w3id.org/sense#Elevation
+:Elevation rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/ssn/Property> ;
+           rdfs:label "Elevation" .
+
+
+###  https://w3id.org/sense#EnergyConsumption
+:EnergyConsumption rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Energy consumption" .
+
+
+###  https://w3id.org/sense#EnergyEfficiencyRate
+:EnergyEfficiencyRate rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Energy efficiency rate" .
+
+
+###  https://w3id.org/sense#ExhaustAirDamperPosition
+:ExhaustAirDamperPosition rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Exhaust air damper position" .
+
+
+###  https://w3id.org/sense#ExhaustAirTemperature
+:ExhaustAirTemperature rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/ssn/Property> ;
+                       rdfs:label "Exhaust air temperature" .
+
+
+###  https://w3id.org/sense#ExhaustAirVolumeFlow
+:ExhaustAirVolumeFlow rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Exhaust air volume flow" .
+
+
+###  https://w3id.org/sense#FanCoilUnitStatus
+:FanCoilUnitStatus rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Fan coil unit status" .
+
+
+###  https://w3id.org/sense#FanCoilUnitValvePosition
+:FanCoilUnitValvePosition rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Fan coil unit valve position" .
+
+
+###  https://w3id.org/sense#FanRotationalSpeed
+:FanRotationalSpeed rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Fan rotational speed" .
+
+
+###  https://w3id.org/sense#FanSetpoint
+:FanSetpoint rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/ssn/Property> ;
+             rdfs:label "Fan setpoint" .
+
+
+###  https://w3id.org/sense#FanSpeedSetPoint
+:FanSpeedSetPoint rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Fan speed set point" .
+
+
+###  https://w3id.org/sense#FanStatus
+:FanStatus rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/ssn/Property> ;
+           rdfs:label "Fan status" .
+
+
+###  https://w3id.org/sense#FancoilReturnWaterTemperature
+:FancoilReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Fancoil return water temperature" .
+
+
+###  https://w3id.org/sense#FancoilSupplyWaterTemperature
+:FancoilSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/ns/ssn/Property> ;
+                               rdfs:label "Fancoil supply water temperature" .
+
+
+###  https://w3id.org/sense#GasConsumption
+:GasConsumption rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/ns/ssn/Property> ;
+                rdfs:label "Gas consumption" .
+
+
+###  https://w3id.org/sense#HeatRecevoryDamperPosition
+:HeatRecevoryDamperPosition rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/ns/ssn/Property> ;
+                            rdfs:label "Heat recevory damper position" .
+
+
+###  https://w3id.org/sense#HeatRecoveryStatus
+:HeatRecoveryStatus rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Heat recovery status" .
+
+
+###  https://w3id.org/sense#HeatRecoveryValvePosition
+:HeatRecoveryValvePosition rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Heat recovery valve position" .
+
+
+###  https://w3id.org/sense#HeatRecoveryWheelRotationalSpeed
+:HeatRecoveryWheelRotationalSpeed rdf:type owl:NamedIndividual ,
+                                           <http://www.w3.org/ns/ssn/Property> ;
+                                  rdfs:label "Heat recovery wheel rotational speed" .
+
+
+###  https://w3id.org/sense#HeatingCircuitPumpLevel
+:HeatingCircuitPumpLevel rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/ssn/Property> ;
+                         rdfs:label "Heating circuit pump level" .
+
+
+###  https://w3id.org/sense#HeatingCircuitPumpStatus
+:HeatingCircuitPumpStatus rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Heating circuit pump status" .
+
+
+###  https://w3id.org/sense#HeatingCircuitReturnWaterTemperature
+:HeatingCircuitReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/ssn/Property> ;
+                                      rdfs:label "Heating circuit return water temperature" .
+
+
+###  https://w3id.org/sense#HeatingCircuitSupplyWaterTemperature
+:HeatingCircuitSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/ssn/Property> ;
+                                      rdfs:label "Heating circuit supply water temperature" .
+
+
+###  https://w3id.org/sense#HeatingCircuitValvePosition
+:HeatingCircuitValvePosition rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/ns/ssn/Property> ;
+                             rdfs:label "Heating circuit valve position" .
+
+
+###  https://w3id.org/sense#HeatingCoilValvePosition
+:HeatingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Heating coil valve position" .
+
+
+###  https://w3id.org/sense#HeatingEnergyConsumption
+:HeatingEnergyConsumption rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Heating energy consumption" .
+
+
+###  https://w3id.org/sense#HeatingPower
+:HeatingPower rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/ssn/Property> ;
+              rdfs:label "Heating power" .
+
+
+###  https://w3id.org/sense#HeatingSystemLevel
+:HeatingSystemLevel rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Heating system level" .
+
+
+###  https://w3id.org/sense#HeatingSystemStatus
+:HeatingSystemStatus rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Heating system status" .
+
+
+###  https://w3id.org/sense#HotWaterConsumption
+:HotWaterConsumption rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Hot water consumption" .
+
+
+###  https://w3id.org/sense#HotWaterTankHeatingCartridgeStatus
+:HotWaterTankHeatingCartridgeStatus rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/ssn/Property> ;
+                                    rdfs:label "Hot water tank heating cartridge status" .
+
+
+###  https://w3id.org/sense#HotWaterTankTemperature
+:HotWaterTankTemperature rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/ssn/Property> ;
+                         rdfs:label "Hot water tank temperature" .
+
+
+###  https://w3id.org/sense#HumidifierStatus
+:HumidifierStatus rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Humidifier status" .
+
+
+###  https://w3id.org/sense#Humidity
+:Humidity rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/ssn/Property> ;
+          rdfs:label "Humidity" .
+
+
+###  https://w3id.org/sense#HumiditySetPoint
+:HumiditySetPoint rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Humidity set point" .
+
+
+###  https://w3id.org/sense#HumiditySetpoint
+:HumiditySetpoint rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Humidity setpoint" .
+
+
+###  https://w3id.org/sense#IndoorAirPressure
+:IndoorAirPressure rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Indoor air pressure" .
+
+
+###  https://w3id.org/sense#IndoorAirQuality
+:IndoorAirQuality rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Indoor air quality" .
+
+
+###  https://w3id.org/sense#IndoorAirTemperature
+:IndoorAirTemperature rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Indoor air temperature" .
+
+
+###  https://w3id.org/sense#IndoorHumidity
+:IndoorHumidity rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/ns/ssn/Property> ;
+                rdfs:label "Indoor humidity" .
+
+
+###  https://w3id.org/sense#IndoorLightLevel
+:IndoorLightLevel rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Indoor light level" .
+
+
+###  https://w3id.org/sense#IndoorRelativeHumidity
+:IndoorRelativeHumidity rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/ns/ssn/Property> ;
+                        rdfs:label "Indoor relative humidity" .
+
+
+###  https://w3id.org/sense#LightLevel
+:LightLevel rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/ssn/Property> ;
+            rdfs:label "Light level" .
+
+
+###  https://w3id.org/sense#LightPosition
+:LightPosition rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Light position" .
+
+
+###  https://w3id.org/sense#LightStatus
+:LightStatus rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/ssn/Property> ;
+             rdfs:label "Light status" .
+
+
+###  https://w3id.org/sense#LightingEnergyConsumption
+:LightingEnergyConsumption rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Lighting energy consumption" .
+
+
+###  https://w3id.org/sense#LightingPower
+:LightingPower rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Lighting power" .
+
+
+###  https://w3id.org/sense#MediumTemperature
+:MediumTemperature rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Medium temperature" .
+
+
+###  https://w3id.org/sense#Movement
+:Movement rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/ssn/Property> ;
+          rdfs:label "Movement" .
+
+
+###  https://w3id.org/sense#Occupancy
+:Occupancy rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/ssn/Property> ;
+           rdfs:label "Occupancy" .
+
+
+###  https://w3id.org/sense#OutdoorAirDamperPosition
+:OutdoorAirDamperPosition rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/ns/ssn/Property> ;
+                          rdfs:label "Outdoor air damper position" .
+
+
+###  https://w3id.org/sense#OutdoorAirPressure
+:OutdoorAirPressure rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Outdoor air pressure" .
+
+
+###  https://w3id.org/sense#OutdoorAirQuality
+:OutdoorAirQuality rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Outdoor air quality" .
+
+
+###  https://w3id.org/sense#OutdoorAirTemperature
+:OutdoorAirTemperature rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/ssn/Property> ;
+                       rdfs:label "Outdoor air temperature" .
+
+
+###  https://w3id.org/sense#OutdoorHumidity
+:OutdoorHumidity rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/ssn/Property> ;
+                 rdfs:label "Outdoor humidity" .
+
+
+###  https://w3id.org/sense#OutdoorLightLevel
+:OutdoorLightLevel rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Outdoor light level" .
+
+
+###  https://w3id.org/sense#OutdoorRelativeHumidity
+:OutdoorRelativeHumidity rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/ssn/Property> ;
+                         rdfs:label "Outdoor relative humidity" .
+
+
+###  https://w3id.org/sense#PostcoolingCoilValvePosition
+:PostcoolingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Postcooling coil valve position" .
+
+
+###  https://w3id.org/sense#PostheatingCoilValvePosition
+:PostheatingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Postheating coil valve position" .
+
+
+###  https://w3id.org/sense#Power
+:Power rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/ns/ssn/Property> ;
+       rdfs:label "Power" .
+
+
+###  https://w3id.org/sense#PrecoolingCoilValvePosition
+:PrecoolingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/ns/ssn/Property> ;
+                             rdfs:label "Precooling coil valve position" .
+
+
+###  https://w3id.org/sense#PreheatingCoilValvePosition
+:PreheatingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/ns/ssn/Property> ;
+                             rdfs:label "Preheating coil valve position" .
+
+
+###  https://w3id.org/sense#Presence
+:Presence rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/ssn/Property> ;
+          rdfs:label "Presence" .
+
+
+###  https://w3id.org/sense#PressureSetPoint
+:PressureSetPoint rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Pressure set point" .
+
+
+###  https://w3id.org/sense#PumpRotationalSpeed
+:PumpRotationalSpeed rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Pump rotational speed" .
+
+
+###  https://w3id.org/sense#R-ECM1-1
+:R-ECM1-1 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "Checks if solar radiation is high or not" ;
+          rdfs:label "high solar radiation" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF cooling season  is active AND solar radiation is high THEN lower blinds down and reduce cooling" .
+
+
+###  https://w3id.org/sense#R-ECM1-2
+:R-ECM1-2 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some cooling is on while space unocuppied" ;
+          rdfs:label "unused cooling rule" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF room occupancy = 0 AND room occupancy is unchanged for time T AND room cooling is on THEN shut room cooling off" .
+
+
+###  https://w3id.org/sense#R-ECM1-3
+:R-ECM1-3 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some space is being undercooled" ;
+          rdfs:label "undercooling" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF cooling season is active AND room temperature lowerThan Tmin THEN turn cooling down" .
+
+
+###  https://w3id.org/sense#R-ECM1-5
+:R-ECM1-5 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some cooling energy is wasted through some opening" ;
+          rdfs:label "wasted coolness through opening" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF cooling is on AND window is open THEN close window" .
+
+
+###  https://w3id.org/sense#R-ECM2-1
+:R-ECM2-1 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "Checks if solar radiation is high or not" ;
+          rdfs:label "high solar radiation" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF heating season  is active AND solar radiation is high THEN open room blinds up and reduce room heating" .
+
+
+###  https://w3id.org/sense#R-ECM2-2
+:R-ECM2-2 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some heating is on while space unocuppied" ;
+          rdfs:label "unused heating rule" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF room occupancy = 0 AND room occupancy is unchanged for time T AND room heating is on THEN shut room heating off" .
+
+
+###  https://w3id.org/sense#R-ECM2-2-1
+:R-ECM2-2-1 rdf:type owl:NamedIndividual ,
+                     :Function ;
+            rdfs:comment "checks if some heating is on while space unocuppied" ;
+            rdfs:label "unused heating rule" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "IF heating season is active AND room occupancy = 0 AND room occupancy is unchanged for time T AND room temperature greaterThan Tref THEN shut room heating off" .
+
+
+###  https://w3id.org/sense#R-ECM2-3
+:R-ECM2-3 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some space is being overheated" ;
+          rdfs:label "space overheating" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF heating season is active AND room temperature greaterThan Tmax THEN turn heating down" .
+
+
+###  https://w3id.org/sense#R-ECM2-4-1
+:R-ECM2-4-1 rdf:type owl:NamedIndividual ,
+                     :Function ;
+            rdfs:comment "checks if air heating and air cooling work at the same time" ;
+            rdfs:label "simultaneous air heating and cooling" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "IF air heating is on AND air cooling is on THEN air heating and air cooling work simultaneously" .
+
+
+###  https://w3id.org/sense#R-ECM2-4-2a
+:R-ECM2-4-2a rdf:type owl:NamedIndividual ,
+                      :Function ;
+             rdfs:comment "checks if the supply fan works but not the return/exhaust fan" ;
+             rdfs:label "air supplied but not returned" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "IF supply air volume flow > 0 + tolerance AND return air volume flow < 0 + tolerance THEN air supplied but not returned" .
+
+
+###  https://w3id.org/sense#R-ECM2-4-2b
+:R-ECM2-4-2b rdf:type owl:NamedIndividual ,
+                      :Function ;
+             rdfs:comment "checks if the return/exhaust fan works but not the supply fan" ;
+             rdfs:label "air returned but not supplied" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "IF return air flow > 0 + tolerance AND supply air flow < 0 + tolerance THEN air returned but not supplied" .
+
+
+###  https://w3id.org/sense#R-ECM2-4-3
+:R-ECM2-4-3 rdf:type owl:NamedIndividual ,
+                     :Function ;
+            rdfs:comment "checks if air heating works but not the supply fan" ;
+            rdfs:label "air heated but not ventilated" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "IF air heating is on AND supply air flow < 0 + tolerance THEN air heated but not ventilated" .
+
+
+###  https://w3id.org/sense#R-ECM2-4-4
+:R-ECM2-4-4 rdf:type owl:NamedIndividual ,
+                     :Function ;
+            rdfs:comment "checks if air cooling works but not the supply fan" ;
+            rdfs:label "air cooled but not ventilated" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "IF air cooling is on AND supply air flow < 0 + tolerance THEN air cooled but not ventilated" .
+
+
+###  https://w3id.org/sense#R-ECM2-5
+:R-ECM2-5 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some heat is wasted through some opening" ;
+          rdfs:label "wasted heat through opening" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF heating is on AND window is open THEN close window" .
+
+
+###  https://w3id.org/sense#R-ECM3-6
+:R-ECM3-6 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some light was left on while space unocuppied" ;
+          rdfs:label "unused lighting rule" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF room is unoccupied AND room light is on THEN shut room light off" .
+
+
+###  https://w3id.org/sense#R-ECM4-8
+:R-ECM4-8 rdf:type owl:NamedIndividual ,
+                   :Function ;
+          rdfs:comment "checks if some appliance is on while space unocuppied" ;
+          rdfs:label "unused appliance rule" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "IF room is unoccupied AND room occupancy is unchanged for time T AND room appliance consumption increases THEN shut room appliance off" .
+
+
+###  https://w3id.org/sense#RadiatorReturnWaterTemperature
+:RadiatorReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Radiator return water temperature" .
+
+
+###  https://w3id.org/sense#RadiatorSupplyWaterTemperature
+:RadiatorSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/ns/ssn/Property> ;
+                                rdfs:label "Radiator supply water temperature" .
+
+
+###  https://w3id.org/sense#RadiatorTemperature
+:RadiatorTemperature rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Radiator temperature" .
+
+
+###  https://w3id.org/sense#RadiatorValvePosition
+:RadiatorValvePosition rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/ns/ssn/Property> ;
+                       rdfs:label "Radiator valve position" .
+
+
+###  https://w3id.org/sense#ReturnAirDamperPosition
+:ReturnAirDamperPosition rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/ssn/Property> ;
+                         rdfs:label "Return air damper position" .
+
+
+###  https://w3id.org/sense#ReturnAirFanRotationalSpeed
+:ReturnAirFanRotationalSpeed rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/ns/ssn/Property> ;
+                             rdfs:label "Return air fan rotational speed" .
+
+
+###  https://w3id.org/sense#ReturnAirFanStatus
+:ReturnAirFanStatus rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Return air fan status" .
+
+
+###  https://w3id.org/sense#ReturnAirTemperature
+:ReturnAirTemperature rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Return air temperature" .
+
+
+###  https://w3id.org/sense#ReturnAirVolumeFlow
+:ReturnAirVolumeFlow rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Return air volume flow" .
+
+
+###  https://w3id.org/sense#SetPoint
+:SetPoint rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/ssn/Property> ;
+          rdfs:label "Set point" .
+
+
+###  https://w3id.org/sense#ShadingLevel
+:ShadingLevel rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/ssn/Property> ;
+              rdfs:label "Shading level" .
+
+
+###  https://w3id.org/sense#ShadingStatus
+:ShadingStatus rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Shading status" .
+
+
+###  https://w3id.org/sense#SolarRadiation
+:SolarRadiation rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/ns/ssn/Property> ;
+                rdfs:label "Solar radiation" .
+
+
+###  https://w3id.org/sense#SpecificDifferentialPressure
+:SpecificDifferentialPressure rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Specific differential pressure" .
+
+
+###  https://w3id.org/sense#SpecificFanPower
+:SpecificFanPower rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Specific fan power" .
+
+
+###  https://w3id.org/sense#SpecificPumpPower
+:SpecificPumpPower rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Specific pump power" .
+
+
+###  https://w3id.org/sense#SpecificVolumeFlow
+:SpecificVolumeFlow rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Specific volume flow" .
+
+
+###  https://w3id.org/sense#SunshineDuration
+:SunshineDuration rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Sunshine duration" .
+
+
+###  https://w3id.org/sense#SupplyAirDamperPosition
+:SupplyAirDamperPosition rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/ns/ssn/Property> ;
+                         rdfs:label "Supply air damper position" .
+
+
+###  https://w3id.org/sense#SupplyAirFanRotationalSpeed
+:SupplyAirFanRotationalSpeed rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/ns/ssn/Property> ;
+                             rdfs:label "Supply air fan rotational speed" .
+
+
+###  https://w3id.org/sense#SupplyAirFanStatus
+:SupplyAirFanStatus rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/ssn/Property> ;
+                    rdfs:label "Supply air fan status" .
+
+
+###  https://w3id.org/sense#SupplyAirHumidity
+:SupplyAirHumidity rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Supply air humidity" .
+
+
+###  https://w3id.org/sense#SupplyAirHumiditySetPoint
+:SupplyAirHumiditySetPoint rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Supply air humidity set point" .
+
+
+###  https://w3id.org/sense#SupplyAirHumiditySetpoint
+:SupplyAirHumiditySetpoint rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Supply air humidity setpoint" .
+
+
+###  https://w3id.org/sense#SupplyAirPressure
+:SupplyAirPressure rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/ssn/Property> ;
+                   rdfs:label "Supply air pressure" .
+
+
+###  https://w3id.org/sense#SupplyAirPressureSetPoint
+:SupplyAirPressureSetPoint rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Supply air pressure set point" .
+
+
+###  https://w3id.org/sense#SupplyAirPressureSetpoint
+:SupplyAirPressureSetpoint rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/ssn/Property> ;
+                           rdfs:label "Supply air pressure setpoint" .
+
+
+###  https://w3id.org/sense#SupplyAirTemperature
+:SupplyAirTemperature rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/ssn/Property> ;
+                      rdfs:label "Supply air temperature" .
+
+
+###  https://w3id.org/sense#SupplyAirTemperatureSetPoint
+:SupplyAirTemperatureSetPoint rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Supply air temperature set point" .
+
+
+###  https://w3id.org/sense#SupplyAirTemperatureSetpoint
+:SupplyAirTemperatureSetpoint rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/ns/ssn/Property> ;
+                              rdfs:label "Supply air temperature setpoint" .
+
+
+###  https://w3id.org/sense#SupplyAirVolumeFlow
+:SupplyAirVolumeFlow rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Supply air volume flow" .
+
+
+###  https://w3id.org/sense#Temperature
+:Temperature rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/ssn/Property> ;
+             rdfs:label "Temperature" .
+
+
+###  https://w3id.org/sense#TemperatureSetPoint
+:TemperatureSetPoint rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Temperature set point" .
+
+
+###  https://w3id.org/sense#TemperatureSetpoint
+:TemperatureSetpoint rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/ssn/Property> ;
+                     rdfs:label "Temperature setpoint" .
+
+
+###  https://w3id.org/sense#ThermalPower
+:ThermalPower rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/ssn/Property> ;
+              rdfs:label "Thermal power" .
+
+
+###  https://w3id.org/sense#TotalEnergyConsumption
+:TotalEnergyConsumption rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/ns/ssn/Property> ;
+                        rdfs:label "Total energy consumption" .
+
+
+###  https://w3id.org/sense#ValvePosition
+:ValvePosition rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/ssn/Property> ;
+               rdfs:label "Valve position" .
+
+
+###  https://w3id.org/sense#Vibration
+:Vibration rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/ssn/Property> ;
+           rdfs:label "Vibration" .
+
+
+###  https://w3id.org/sense#VolumeFlow
+:VolumeFlow rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/ssn/Property> ;
+            rdfs:label "Volume flow" .
+
+
+###  https://w3id.org/sense#WaterConsumption
+:WaterConsumption rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Water consumption" .
+
+
+###  https://w3id.org/sense#WaterTemperature
+:WaterTemperature rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/ssn/Property> ;
+                  rdfs:label "Water temperature" .
+
+
+###  https://w3id.org/sense#WaterVolumeFlow
+:WaterVolumeFlow rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/ssn/Property> ;
+                 rdfs:label "Water volume flow" .
+
+
+###  https://w3id.org/sense#WindSpeed
+:WindSpeed rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/ssn/Property> ;
+           rdfs:label "Wind speed" .
+
+
+###  https://w3id.org/sense#WindowStatus
+:WindowStatus rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/ssn/Property> ;
+              rdfs:label "Window status" .
+
+
+###  https://w3id.org/sense#lower_blinds_down
+:lower_blinds_down rdf:type owl:NamedIndividual ,
+                            :UserAction ;
+                   rdfs:label "lower blinds down" ;
+                   :identifier "ECMlbd" .
+
+
+###  https://w3id.org/sense#lower_blinds_down_and_reduce_cooling
+:lower_blinds_down_and_reduce_cooling rdf:type owl:NamedIndividual ,
+                                               :UserAction ;
+                                      rdfs:label "lower blinds down and reduce cooling" ;
+                                      :identifier "ECMlbdarc" .
+
+
+###  https://w3id.org/sense#open_blinds_up
+:open_blinds_up rdf:type owl:NamedIndividual ,
+                         :UserAction ;
+                rdfs:label "open blinds up" ;
+                :identifier "ECMobu" .
+
+
+###  https://w3id.org/sense#open_blinds_up_and_reduce_heating
+:open_blinds_up_and_reduce_heating rdf:type owl:NamedIndividual ,
+                                            :UserAction ;
+                                   rdfs:label "open blinds up and reduce heating" ;
+                                   :identifier "ECMobuarh" .
+
+
+###  https://w3id.org/sense#open_blinds_up_and_turn_off_light
+:open_blinds_up_and_turn_off_light rdf:type owl:NamedIndividual ,
+                                            :UserAction ;
+                                   rdfs:label "open blinds up and turn off light" ;
+                                   :identifier "ECMobuatol" .
+
+
+###  https://w3id.org/sense#saveCoolingEnergy
+:saveCoolingEnergy rdf:type owl:NamedIndividual ,
+                            :MeasureEffect ;
+                   rdfs:label "save cooling energy" ;
+                   :identifier "ECM1" .
+
+
+###  https://w3id.org/sense#saveElectricalEnergy
+:saveElectricalEnergy rdf:type owl:NamedIndividual ,
+                               :MeasureEffect ;
+                      rdfs:label "save electrical energy" ;
+                      :identifier "ECM4" .
+
+
+###  https://w3id.org/sense#saveHeatingEnergy
+:saveHeatingEnergy rdf:type owl:NamedIndividual ,
+                            :MeasureEffect ;
+                   rdfs:label "save heating energy" ;
+                   :identifier "ECM2" .
+
+
+###  https://w3id.org/sense#saveLightingEnergy
+:saveLightingEnergy rdf:type owl:NamedIndividual ,
+                             :MeasureEffect ;
+                    rdfs:label "save lighting energy" ;
+                    :identifier "ECM3" .
+
+
+###  https://w3id.org/sense#save_electrical_energy_turning_appliances_down_when_room_unoccupied
+:save_electrical_energy_turning_appliances_down_when_room_unoccupied rdf:type owl:NamedIndividual ,
+                                                                              :EnergyConservationMeasure ;
+                                                                     <http://www.w3.org/ns/ssn/hasOutput> :saveElectricalEnergy ;
+                                                                     rdfs:label "save lighting energy optimizing natural light income" .
+
+
+###  https://w3id.org/sense#save_energy_avoiding_HVAC_operating_errors
+:save_energy_avoiding_HVAC_operating_errors rdf:type owl:NamedIndividual ,
+                                                     :EnergyConservationMeasure ;
+                                            <http://www.w3.org/ns/ssn/hasOutput> :saveCoolingEnergy ,
+                                                                                 :saveHeatingEnergy ;
+                                            rdfs:label "save energy avoiding HVAC operating errors " .
+
+
+###  https://w3id.org/sense#save_energy_avoiding_wastes_through_openings
+:save_energy_avoiding_wastes_through_openings rdf:type owl:NamedIndividual ,
+                                                       :EnergyConservationMeasure ;
+                                              <http://www.w3.org/ns/ssn/hasOutput> :saveCoolingEnergy ,
+                                                                                   :saveHeatingEnergy ;
+                                              rdfs:label "save energy avoiding wastes through openings" .
+
+
+###  https://w3id.org/sense#save_energy_by_better_matching_energy_and_comfort_needs
+:save_energy_by_better_matching_energy_and_comfort_needs rdf:type owl:NamedIndividual ,
+                                                                  :EnergyConservationMeasure ;
+                                                         <http://www.w3.org/ns/ssn/hasOutput> :saveCoolingEnergy ,
+                                                                                              :saveHeatingEnergy ;
+                                                         rdfs:label "save energy when facility not occupied" .
+
+
+###  https://w3id.org/sense#save_energy_by_optimizing_solar_gain
+:save_energy_by_optimizing_solar_gain rdf:type owl:NamedIndividual ,
+                                               :EnergyConservationMeasure ;
+                                      <http://www.w3.org/ns/ssn/hasOutput> :saveCoolingEnergy ,
+                                                                           :saveHeatingEnergy ;
+                                      rdfs:label "save energy by optimizing solar gain" .
+
+
+###  https://w3id.org/sense#save_energy_when_facility_not_occupied
+:save_energy_when_facility_not_occupied rdf:type owl:NamedIndividual ,
+                                                 :EnergyConservationMeasure ;
+                                        <http://www.w3.org/ns/ssn/hasOutput> :saveCoolingEnergy ,
+                                                                             :saveHeatingEnergy ;
+                                        rdfs:label "save energy when facility not occupied" .
+
+
+###  https://w3id.org/sense#save_lighting_energy_optimizing_natural_light_income
+:save_lighting_energy_optimizing_natural_light_income rdf:type owl:NamedIndividual ,
+                                                               :EnergyConservationMeasure ;
+                                                      <http://www.w3.org/ns/ssn/hasOutput> :saveLightingEnergy ;
+                                                      rdfs:label "save lighting energy optimizing natural light income" .
+
+
+###  https://w3id.org/sense#save_lighting_energy_turning_off_lights_when_space_unoccupied
+:save_lighting_energy_turning_off_lights_when_space_unoccupied rdf:type owl:NamedIndividual ,
+                                                                        :EnergyConservationMeasure ;
+                                                               <http://www.w3.org/ns/ssn/hasOutput> :saveLightingEnergy ;
+                                                               rdfs:label "save lighting energy turning off lights when space unoccupied" .
+
+
+###  https://w3id.org/sense#turn_down_cooling
+:turn_down_cooling rdf:type owl:NamedIndividual ,
+                            :UserAction ;
+                   rdfs:label "turn down cooling" ;
+                   :identifier "ECMtdc" .
+
+
+###  https://w3id.org/sense#turn_down_heating
+:turn_down_heating rdf:type owl:NamedIndividual ,
+                            :UserAction ;
+                   rdfs:label "turn down heating" ;
+                   :identifier "ECMtdh" .
+
+
+###  https://w3id.org/sense#turn_off_appliances
+:turn_off_appliances rdf:type owl:NamedIndividual ,
+                              :UserAction ;
+                     rdfs:label "turn off appliances" ;
+                     :identifier "ECMtoa" .
+
+
+###  https://w3id.org/sense#turn_off_cooling
+:turn_off_cooling rdf:type owl:NamedIndividual ,
+                           :UserAction ;
+                  rdfs:label "turn off cooling" ;
+                  :identifier "ECMtoc" .
+
+
+###  https://w3id.org/sense#turn_off_heating
+:turn_off_heating rdf:type owl:NamedIndividual ,
+                           :UserAction ;
+                  rdfs:label "turn off heating" ;
+                  :identifier "ECMtoh" .
+
+
+###  https://w3id.org/sense#turn_off_light
+:turn_off_light rdf:type owl:NamedIndividual ,
+                         :UserAction ;
+                rdfs:label "turn off light" ;
+                :identifier "ECMtol" .
+
+
+###  https://w3id.org/sense#turn_on_heat_recovery
+:turn_on_heat_recovery rdf:type owl:NamedIndividual ,
+                                :UserAction ;
+                       rdfs:label "turn on heat recovery" ;
+                       :identifier "ECMtohr" .
+
+
+###  https://www.w3id.org/risk#AirCooledButNotVentilated
+<https://www.w3id.org/risk#AirCooledButNotVentilated> rdf:type owl:NamedIndividual ;
+                                                      <https://www.w3id.org/risk#assessedBy> :R-ECM2-4-4 .
+
+
+###  https://www.w3id.org/risk#AirHeatedButNotVentilated
+<https://www.w3id.org/risk#AirHeatedButNotVentilated> rdf:type owl:NamedIndividual ;
+                                                      <https://www.w3id.org/risk#assessedBy> :R-ECM2-4-3 .
+
+
+###  https://www.w3id.org/risk#AirHumidifiedButNotVentilated
+<https://www.w3id.org/risk#AirHumidifiedButNotVentilated> rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#AirReturnedButNotSupplied
+<https://www.w3id.org/risk#AirReturnedButNotSupplied> rdf:type owl:NamedIndividual ;
+                                                      <https://www.w3id.org/risk#assessedBy> :R-ECM2-4-2b .
+
+
+###  https://www.w3id.org/risk#AirSuppliedButNotReturned
+<https://www.w3id.org/risk#AirSuppliedButNotReturned> rdf:type owl:NamedIndividual ;
+                                                      <https://www.w3id.org/risk#assessedBy> :R-ECM2-4-2a .
+
+
+###  https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed
+<https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed> rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#HeatRecoveryUnused
+<https://www.w3id.org/risk#HeatRecoveryUnused> rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling
+<https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling> rdf:type owl:NamedIndividual ;
+                                                                <https://www.w3id.org/risk#assessedBy> :R-ECM2-4-1 .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://www.w3id.org/risk#OverheatingThroughSolarGain> <https://www.w3id.org/risk#assessedBy> :R-ECM1-1 ,
+                                                                                                :R-ECM2-1 .
+
+
+<https://www.w3id.org/risk#SpaceOverheating> <https://www.w3id.org/risk#assessedBy> :R-ECM2-3 .
+
+
+<https://www.w3id.org/risk#SpaceUndercooling> <https://www.w3id.org/risk#assessedBy> :R-ECM1-3 .
+
+
+<https://www.w3id.org/risk#UnusedAppliances> <https://www.w3id.org/risk#assessedBy> :R-ECM4-8 .
+
+
+<https://www.w3id.org/risk#UnusedCoolingEnergy> <https://www.w3id.org/risk#assessedBy> :R-ECM1-2 .
+
+
+<https://www.w3id.org/risk#UnusedHeatingEnergy> <https://www.w3id.org/risk#assessedBy> :R-ECM2-2 .
+
+
+<https://www.w3id.org/risk#UnusedLights> <https://www.w3id.org/risk#assessedBy> :R-ECM3-6 .
+
+
+<https://www.w3id.org/risk#WastingEnergyThroughOpenings> <https://www.w3id.org/risk#assessedBy> :R-ECM1-5 ,
+                                                                                                :R-ECM2-5 .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

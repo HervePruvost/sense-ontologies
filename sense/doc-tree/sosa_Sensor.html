@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+<TITLE>'Sensor  [sosa:Sensor]'</TITLE>
+</HEAD>
+<BODY>
+<FONT face="Verdana, Helvetica, sans-serif">
+<H2>
+<FONT SIZE="-1">http://www.w3.org/ns/sosa/Sensor</FONT><BR>
+Class 'Sensor  [sosa:Sensor]'</H2>
+<CENTER><IMG border="0" src="diagrams/sosa_Sensor.jpg"></CENTER><P>
+<HR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1">type</FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/RDFSClass.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+Class  [owl:Class]</FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1">comment</FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/gb.gif" width="16" height="16"></TD><TD><FONT size="-1">
+Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.
+</FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1">isDefinedBy</FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/RDFIndividual.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+<A href="http___www.w3.org_ns_sosa_.html">sosa:</A></FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1">label</FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/gb.gif" width="16" height="16"></TD><TD><FONT size="-1">
+Sensor
+</FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1">subClassOf</FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/OWLAllValuesFrom.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+<A href="ssn_detects.html">detects</A> only <A href="ssn_Stimulus.html">Stimulus</A>
+</FONT></TD></TR></TABLE>
+</DD>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/OWLAllValuesFrom.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+<A href="sosa_madeObservation.html">made observation</A> only <A href="sosa_Observation.html">Observation</A>
+</FONT></TD></TR></TABLE>
+</DD>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/OWLAllValuesFrom.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+<A href="sosa_observes.html">observes</A> only <A href="sosa_ObservableProperty.html">Observable Property</A>
+</FONT></TD></TR></TABLE>
+</DD>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/OWLMinCardinality.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+<A href="ssn_implements.html">implements</A> min 1
+</FONT></TD></TR></TABLE>
+</DD>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/OWLNamedClassPrimitive.greyed.gif" width="16" height="16"></TD><TD><FONT size="-1">
+<A href="ssn_System.html">System</A></FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1"><A href="skos_definition.html">skos:definition</A></FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/gb.gif" width="16" height="16"></TD><TD><FONT size="-1">
+Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.
+</FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TR BGCOLOR="white">
+<TD>
+<B><FONT size="-1"><A href="skos_example.html">skos:example</A></FONT></B>
+<DL>
+<DD>
+<TABLE><TR><TD VALIGN="TOP">
+<IMG border="0" src="icons/gb.gif" width="16" height="16"></TD><TD><FONT size="-1">
+Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes.
+</FONT></TD></TR></TABLE>
+</DD>
+</DL>
+</TD></TR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+1">
+<B>References</B></FONT></TH>
+</TR>
+<TR><TD><FONT size="-1"><UL>
+<LI>as <A href="schema_domainIncludes.html">schema:domainIncludes</A> (<A href="sosa_observes.html">observes</A>,&nbsp;<A href="sosa_madeObservation.html">made observation</A>,&nbsp;<A href="sosa_isHostedBy.html">is hosted by  [sosa:isHostedBy]</A>)</LI><LI>as <A href="schema_rangeIncludes.html">schema:rangeIncludes</A> (<A href="sosa_madeBySensor.html">made by sensor</A>,&nbsp;<A href="sosa_isObservedBy.html">is observed by</A>,&nbsp;<A href="sosa_hosts.html">hosts  [sosa:hosts]</A>)</LI><LI>as subClassOf (<A href="sense_WeatherStation.html">Weather station</A>,&nbsp;<A href="sense_LightLevelSensor.html">Light level sensor</A>,&nbsp;<A href="sense_ContactSensor.html">Contact sensor</A>,&nbsp;<A href="sense_Thermometer.html">Thermometer [sense:Thermometer]</A>,&nbsp;<A href="sense_Pyranometer.html">Pyranometer [sense:Pyranometer]</A>,&nbsp;<A href="sense_Barometer.html">Barometer [sense:Barometer]</A>,&nbsp;<A href="sense_GasSensor.html">Gas sensor</A>,&nbsp;<A href="sense_Anemometer.html">Anemometer [sense:Anemometer]</A>,&nbsp;<A href="sense_Hygrometer.html">Hygrometer [sense:Hygrometer]</A>,&nbsp;<A href="sense_MotionSensor.html">Motion sensor</A>,&nbsp;<A href="sense_Accelerometer.html">Accelerometer [sense:Accelerometer]</A>,&nbsp;<A href="ssn_Stimulus.html">Stimulus</A>,&nbsp;<A href="sosa_Observation.html">Observation</A>,&nbsp;<A href="sosa_ObservableProperty.html">Observable Property</A>)</LI></UL></FONT></TABLE><P>
+</FONT>
+<P align="right"><FONT size="-1" face="Verdana, Helvetica, sans-serif">Generated with <A href="http://www.topbraidcomposer.com" target="_top">TopBraid Composer</A>
+ by <A href="http://www.topquadrant.com" target="_top">TopQuadrant, Inc.</A></P>
+</BODY>
+</HTML>

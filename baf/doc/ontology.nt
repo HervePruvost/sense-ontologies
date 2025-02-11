@@ -1,0 +1,1826 @@
+<https://w3id.org/baf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/baf> <http://www.w3.org/2002/07/owl#imports> <http://org.fhg.iis.eas.eee.esim/ESIMonto> .
+<https://w3id.org/baf> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/bibliographicCitation> "Pruvost. H. (2023): The BAF ontology - a formalization of generic building automation functions for heating, ventilation and air conditioning systems. https://w3id.org/baf."@en .
+<https://w3id.org/baf> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-7604-8543> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/hervepruvost> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/creator> "Hervé Pruvost" .
+<https://w3id.org/baf> <http://purl.org/dc/terms/description> "The BAF (Building Automation Functions) model is a catalogue of generic control functions usually implemented by automation engineers."@en .
+<https://w3id.org/baf> <http://purl.org/dc/terms/issued> "2022-05-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/modified> "2022-05-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> .
+<https://w3id.org/baf> <http://purl.org/dc/terms/publisher> "Fraunhofer IIS/EAS" .
+<https://w3id.org/baf> <http://purl.org/dc/terms/title> "BAF: Building Automation Functions."@en .
+<https://w3id.org/baf> <http://purl.org/vocab/vann/preferredNamespacePrefix> "baf" .
+<https://w3id.org/baf> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/baf#" .
+<https://w3id.org/baf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://linkedbuildingdata.net/ldac2022/files/presentations/20220529_LDAC2022_Pruvost_v3.pdf> .
+<https://w3id.org/baf> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction
+<http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/baf#AnalogSignal
+<https://w3id.org/baf#AnalogSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#AnalogSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#AnalogSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Analog signal" .
+# 
+# https://w3id.org/baf#AntifreezeProtection
+<https://w3id.org/baf#AntifreezeProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#AntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#AntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Antifreeze protection" .
+# 
+# https://w3id.org/baf#BoilerControl
+<https://w3id.org/baf#BoilerControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#BoilerControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#BoilerControl> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler control" .
+# 
+# https://w3id.org/baf#CharacteristicCurve
+<https://w3id.org/baf#CharacteristicCurve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#CharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#CharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#label> "Characteristic curve" .
+# 
+# https://w3id.org/baf#Controller
+<https://w3id.org/baf#Controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#Controller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#Controller> <http://www.w3.org/2000/01/rdf-schema#label> "Controller" .
+# 
+# https://w3id.org/baf#DamperControl
+<https://w3id.org/baf#DamperControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#DamperControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#DamperControl> <http://www.w3.org/2000/01/rdf-schema#label> "Damper control" .
+# 
+# https://w3id.org/baf#EnumeratedControlFunctionPattern
+<https://w3id.org/baf#EnumeratedControlFunctionPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#EnumeratedControlFunctionPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction> .
+<https://w3id.org/baf#EnumeratedControlFunctionPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#ControlActor> .
+<https://w3id.org/baf#EnumeratedControlFunctionPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Enumerated control function pattern" .
+# 
+# https://w3id.org/baf#FanControl
+<https://w3id.org/baf#FanControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FanControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#FanControl> <http://www.w3.org/2000/01/rdf-schema#label> "Fan control" .
+# 
+# https://w3id.org/baf#FbActuationof2PointDampers
+<https://w3id.org/baf#FbActuationof2PointDampers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbActuationof2PointDampers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#DamperControl> .
+<https://w3id.org/baf#FbActuationof2PointDampers> <http://purl.org/dc/terms/identifier> "Fb2PointDamper" .
+<https://w3id.org/baf#FbActuationof2PointDampers> <http://www.w3.org/2000/01/rdf-schema#label> "Actuationof2-Point dampers"@en .
+<https://w3id.org/baf#FbActuationof2PointDampers> <http://www.w3.org/2000/01/rdf-schema#label> "Ansteuerung von 2-Punkt Klappen"@de .
+# 
+# https://w3id.org/baf#FbActuationofContinuousDampers
+<https://w3id.org/baf#FbActuationofContinuousDampers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbActuationofContinuousDampers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#DamperControl> .
+<https://w3id.org/baf#FbActuationofContinuousDampers> <http://purl.org/dc/terms/identifier> "FbContinuousDamper" .
+<https://w3id.org/baf#FbActuationofContinuousDampers> <http://www.w3.org/2000/01/rdf-schema#label> "Actuationof continuous dampers"@en .
+<https://w3id.org/baf#FbActuationofContinuousDampers> <http://www.w3.org/2000/01/rdf-schema#label> "Ansteuerung von stetigen Klappen"@de .
+# 
+# https://w3id.org/baf#FbAirSideAntifreezeProtection
+<https://w3id.org/baf#FbAirSideAntifreezeProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbAirSideAntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AntifreezeProtection> .
+<https://w3id.org/baf#FbAirSideAntifreezeProtection> <http://purl.org/dc/terms/identifier> "FbAntifreezeAir" .
+<https://w3id.org/baf#FbAirSideAntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Air-Side antifreeze protection"@en .
+<https://w3id.org/baf#FbAirSideAntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Luftseitiger Frostschutz"@de .
+# 
+# https://w3id.org/baf#FbAnalog3PointSignal
+<https://w3id.org/baf#FbAnalog3PointSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbAnalog3PointSignal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#GeneralDriver> .
+<https://w3id.org/baf#FbAnalog3PointSignal> <http://purl.org/dc/terms/identifier> "FbAnalog3Point" .
+<https://w3id.org/baf#FbAnalog3PointSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Analog 3-Point signal"@en .
+<https://w3id.org/baf#FbAnalog3PointSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Analoges 3-Punkt-Signal"@de .
+# 
+# https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction
+<https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction> <http://purl.org/dc/terms/identifier> "FbAntiLegionella" .
+<https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Anti legionnaires disease function"@en .
+<https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Anti-Legionellenfunktion"@de .
+# 
+# https://w3id.org/baf#FbAveragedOutsideTemperature
+<https://w3id.org/baf#FbAveragedOutsideTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbAveragedOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#TemperatureEvaluation> .
+<https://w3id.org/baf#FbAveragedOutsideTemperature> <http://purl.org/dc/terms/identifier> "FbAveragedOutsideTemperature" .
+<https://w3id.org/baf#FbAveragedOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Averaged outside temperature"@en .
+<https://w3id.org/baf#FbAveragedOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Gemittelte Außentemperatur"@de .
+# 
+# https://w3id.org/baf#FbBlinker
+<https://w3id.org/baf#FbBlinker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbBlinker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbBlinker> <http://purl.org/dc/terms/identifier> "FbBlinker" .
+<https://w3id.org/baf#FbBlinker> <http://www.w3.org/2000/01/rdf-schema#label> "Blinker"@de .
+<https://w3id.org/baf#FbBlinker> <http://www.w3.org/2000/01/rdf-schema#label> "Blinker"@en .
+# 
+# https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers
+<https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers> <http://purl.org/dc/terms/identifier> "FbBlockingProtectionAnalog" .
+<https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "Blockierschutz für stetige Antriebe"@de .
+<https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "Blocking protection for continuous drivers"@en .
+# 
+# https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler
+<https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#BoilerControl> .
+<https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler> <http://purl.org/dc/terms/identifier> "Fb2LevelBoiler" .
+<https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler module for 2-Level boiler"@en .
+<https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Kesselbaustein für 2-stufige Kessel"@de .
+# 
+# https://w3id.org/baf#FbBoilerModuleForModulatingBoiler
+<https://w3id.org/baf#FbBoilerModuleForModulatingBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbBoilerModuleForModulatingBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#BoilerControl> .
+<https://w3id.org/baf#FbBoilerModuleForModulatingBoiler> <http://purl.org/dc/terms/identifier> "FbModulatingBoiler" .
+<https://w3id.org/baf#FbBoilerModuleForModulatingBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler module for modulating boiler"@en .
+<https://w3id.org/baf#FbBoilerModuleForModulatingBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Kesselbaustein für modulierende Kessel"@de .
+# 
+# https://w3id.org/baf#FbBoilerStrategyForTwoBoilers
+<https://w3id.org/baf#FbBoilerStrategyForTwoBoilers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbBoilerStrategyForTwoBoilers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#BoilerControl> .
+<https://w3id.org/baf#FbBoilerStrategyForTwoBoilers> <http://purl.org/dc/terms/identifier> "Fb2BoilerStrategy" .
+<https://w3id.org/baf#FbBoilerStrategyForTwoBoilers> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler strategy for two boilers"@en .
+<https://w3id.org/baf#FbBoilerStrategyForTwoBoilers> <http://www.w3.org/2000/01/rdf-schema#label> "Kesselstrategie für zwei Kessel"@de .
+# 
+# https://w3id.org/baf#FbCalculationofSupplyTemperature
+<https://w3id.org/baf#FbCalculationofSupplyTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbCalculationofSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FbCalculationofSupplyTemperature> <http://purl.org/dc/terms/identifier> "FbCalculatedSupplyTemperature" .
+<https://w3id.org/baf#FbCalculationofSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Calculationof supply temperature"@en .
+<https://w3id.org/baf#FbCalculationofSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Vorlauftemperaturberechnung"@de .
+# 
+# https://w3id.org/baf#FbCascadeController
+<https://w3id.org/baf#FbCascadeController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbCascadeController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Controller> .
+<https://w3id.org/baf#FbCascadeController> <http://purl.org/dc/terms/identifier> "FbCascadeController" .
+<https://w3id.org/baf#FbCascadeController> <http://www.w3.org/2000/01/rdf-schema#label> "Cascade controller"@en .
+<https://w3id.org/baf#FbCascadeController> <http://www.w3.org/2000/01/rdf-schema#label> "Kaskadenregler"@de .
+# 
+# https://w3id.org/baf#FbCollectiveMalfunction
+<https://w3id.org/baf#FbCollectiveMalfunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbCollectiveMalfunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbCollectiveMalfunction> <http://purl.org/dc/terms/identifier> "FbCollectiveMalfunction" .
+<https://w3id.org/baf#FbCollectiveMalfunction> <http://www.w3.org/2000/01/rdf-schema#label> "Collective malfunction"@en .
+<https://w3id.org/baf#FbCollectiveMalfunction> <http://www.w3.org/2000/01/rdf-schema#label> "Sammelstörung"@de .
+# 
+# https://w3id.org/baf#FbComfortZoneController
+<https://w3id.org/baf#FbComfortZoneController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbComfortZoneController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbComfortZoneController> <http://purl.org/dc/terms/identifier> "FbHxControl" .
+<https://w3id.org/baf#FbComfortZoneController> <http://www.w3.org/2000/01/rdf-schema#label> "Behaglichkeitsfeldregler"@de .
+<https://w3id.org/baf#FbComfortZoneController> <http://www.w3.org/2000/01/rdf-schema#label> "Comfort zone controller"@en .
+# 
+# https://w3id.org/baf#FbControlOf2PointDrivers
+<https://w3id.org/baf#FbControlOf2PointDrivers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbControlOf2PointDrivers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#GeneralDriver> .
+<https://w3id.org/baf#FbControlOf2PointDrivers> <http://purl.org/dc/terms/identifier> "Fb2PointDriver" .
+<https://w3id.org/baf#FbControlOf2PointDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "Ansteuerung von 2-Punkt-Antrieben"@de .
+<https://w3id.org/baf#FbControlOf2PointDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "Control of 2-Point drivers"@en .
+# 
+# https://w3id.org/baf#FbControlOfContinuousDrivers
+<https://w3id.org/baf#FbControlOfContinuousDrivers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbControlOfContinuousDrivers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#GeneralDriver> .
+<https://w3id.org/baf#FbControlOfContinuousDrivers> <http://purl.org/dc/terms/identifier> "FbContinuousDriver" .
+<https://w3id.org/baf#FbControlOfContinuousDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "Ansteuerung von stetigen Antrieben"@de .
+<https://w3id.org/baf#FbControlOfContinuousDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "Control of continuous drivers"@en .
+# 
+# https://w3id.org/baf#FbCoolingSequence
+<https://w3id.org/baf#FbCoolingSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbCoolingSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Sequence> .
+<https://w3id.org/baf#FbCoolingSequence> <http://purl.org/dc/terms/identifier> "FbSequenceCooling" .
+<https://w3id.org/baf#FbCoolingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling sequence"@en .
+<https://w3id.org/baf#FbCoolingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenz Kühlen"@de .
+# 
+# https://w3id.org/baf#FbDampedTemperature
+<https://w3id.org/baf#FbDampedTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbDampedTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#TemperatureEvaluation> .
+<https://w3id.org/baf#FbDampedTemperature> <http://purl.org/dc/terms/identifier> "FbDampedTemperature" .
+<https://w3id.org/baf#FbDampedTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Damped temperature"@en .
+<https://w3id.org/baf#FbDampedTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Gedämpfte Temperatur"@de .
+# 
+# https://w3id.org/baf#FbDehumidifyingSequence
+<https://w3id.org/baf#FbDehumidifyingSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbDehumidifyingSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Sequence> .
+<https://w3id.org/baf#FbDehumidifyingSequence> <http://purl.org/dc/terms/identifier> "FbSequenceDehumidifying" .
+<https://w3id.org/baf#FbDehumidifyingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Dehumidifying sequence"@en .
+<https://w3id.org/baf#FbDehumidifyingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenz Entfeuchten"@de .
+# 
+# https://w3id.org/baf#FbEnergyRecoverySequence
+<https://w3id.org/baf#FbEnergyRecoverySequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbEnergyRecoverySequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Sequence> .
+<https://w3id.org/baf#FbEnergyRecoverySequence> <http://purl.org/dc/terms/identifier> "FbSequenceEnergyRecovery" .
+<https://w3id.org/baf#FbEnergyRecoverySequence> <http://www.w3.org/2000/01/rdf-schema#label> "Energy recovery sequence"@en .
+<https://w3id.org/baf#FbEnergyRecoverySequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenz Energierückgewinnung"@de .
+# 
+# https://w3id.org/baf#FbEnthalpy
+<https://w3id.org/baf#FbEnthalpy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbEnthalpy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#TemperatureEvaluation> .
+<https://w3id.org/baf#FbEnthalpy> <http://purl.org/dc/terms/identifier> "FbEnthalpy" .
+<https://w3id.org/baf#FbEnthalpy> <http://www.w3.org/2000/01/rdf-schema#label> "Enthalpie"@de .
+<https://w3id.org/baf#FbEnthalpy> <http://www.w3.org/2000/01/rdf-schema#label> "Enthalpy"@en .
+# 
+# https://w3id.org/baf#FbFan1Level
+<https://w3id.org/baf#FbFan1Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFan1Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#FanControl> .
+<https://w3id.org/baf#FbFan1Level> <http://purl.org/dc/terms/identifier> "FbFan_1Level" .
+<https://w3id.org/baf#FbFan1Level> <http://www.w3.org/2000/01/rdf-schema#label> "Fan1-Level"@en .
+<https://w3id.org/baf#FbFan1Level> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilator, 1-stufig"@de .
+# 
+# https://w3id.org/baf#FbFan2Level
+<https://w3id.org/baf#FbFan2Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFan2Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#FanControl> .
+<https://w3id.org/baf#FbFan2Level> <http://purl.org/dc/terms/identifier> "FbFan_2Level" .
+<https://w3id.org/baf#FbFan2Level> <http://www.w3.org/2000/01/rdf-schema#label> "Fan2-Level"@en .
+<https://w3id.org/baf#FbFan2Level> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilator, 2-stufig"@de .
+# 
+# https://w3id.org/baf#FbFan3Level
+<https://w3id.org/baf#FbFan3Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFan3Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#FanControl> .
+<https://w3id.org/baf#FbFan3Level> <http://purl.org/dc/terms/identifier> "FbFan_3Level" .
+<https://w3id.org/baf#FbFan3Level> <http://www.w3.org/2000/01/rdf-schema#label> "Fan3-Level"@en .
+<https://w3id.org/baf#FbFan3Level> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilator, 3-stufig"@de .
+# 
+# https://w3id.org/baf#FbFanwithFrequencyConverter
+<https://w3id.org/baf#FbFanwithFrequencyConverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFanwithFrequencyConverter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#FanControl> .
+<https://w3id.org/baf#FbFanwithFrequencyConverter> <http://purl.org/dc/terms/identifier> "FbFan_FC" .
+<https://w3id.org/baf#FbFanwithFrequencyConverter> <http://www.w3.org/2000/01/rdf-schema#label> "Fanwith frequency converter"@en .
+<https://w3id.org/baf#FbFanwithFrequencyConverter> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilator mit Frequenzumrichter"@de .
+# 
+# https://w3id.org/baf#FbFilterMonitoring
+<https://w3id.org/baf#FbFilterMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFilterMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbFilterMonitoring> <http://purl.org/dc/terms/identifier> "FbFilterMonitoring" .
+<https://w3id.org/baf#FbFilterMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Filter monitoring"@en .
+<https://w3id.org/baf#FbFilterMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Filterüberwachung"@de .
+# 
+# https://w3id.org/baf#FbFirstOrderLowPassFilter
+<https://w3id.org/baf#FbFirstOrderLowPassFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilter> <http://purl.org/dc/terms/identifier> "FbLowPassFilter" .
+<https://w3id.org/baf#FbFirstOrderLowPassFilter> <http://www.w3.org/2000/01/rdf-schema#label> "1st order low pass filter"@en .
+<https://w3id.org/baf#FbFirstOrderLowPassFilter> <http://www.w3.org/2000/01/rdf-schema#label> "Tiefpassfilter 1. Ordnung"@de .
+# 
+# https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767> <http://purl.org/dc/terms/identifier> "FbLowPassFilterAI" .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767> <http://www.w3.org/2000/01/rdf-schema#label> "1st order low pass filter for AI 0-32767"@en .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767> <http://www.w3.org/2000/01/rdf-schema#label> "Tiefpassfilter 1. Ordnung für AI 0 - 32767"@de .
+# 
+# https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals> <http://purl.org/dc/terms/identifier> "FbLowPassFilterBus" .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals> <http://www.w3.org/2000/01/rdf-schema#label> "1st order low pass filter for bus signals"@en .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals> <http://www.w3.org/2000/01/rdf-schema#label> "Tiefpassfilter 1. Ordnung für Bussignale"@de .
+# 
+# https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures> <http://purl.org/dc/terms/identifier> "FbLowPassFilterTemp" .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures> <http://www.w3.org/2000/01/rdf-schema#label> "1st order low pass filter for temperatures"@en .
+<https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures> <http://www.w3.org/2000/01/rdf-schema#label> "Tiefpassfilter 1. Ordnung für Temperaturen"@de .
+# 
+# https://w3id.org/baf#FbGlobalCollectiveMalfunction
+<https://w3id.org/baf#FbGlobalCollectiveMalfunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbGlobalCollectiveMalfunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbGlobalCollectiveMalfunction> <http://purl.org/dc/terms/identifier> "FbGlobalMalfunction" .
+<https://w3id.org/baf#FbGlobalCollectiveMalfunction> <http://www.w3.org/2000/01/rdf-schema#label> "Global collective malfunction"@en .
+<https://w3id.org/baf#FbGlobalCollectiveMalfunction> <http://www.w3.org/2000/01/rdf-schema#label> "Globale Sammelstörung"@de .
+# 
+# https://w3id.org/baf#FbHeatingCharacteristics
+<https://w3id.org/baf#FbHeatingCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbHeatingCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FbHeatingCharacteristics> <http://purl.org/dc/terms/identifier> "FbHeatingCharacteristics" .
+<https://w3id.org/baf#FbHeatingCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "Heating characteristics"@en .
+<https://w3id.org/baf#FbHeatingCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "Heizungskennlinie"@de .
+# 
+# https://w3id.org/baf#FbHeatingSequence
+<https://w3id.org/baf#FbHeatingSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbHeatingSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Sequence> .
+<https://w3id.org/baf#FbHeatingSequence> <http://purl.org/dc/terms/identifier> "FbSequenceHeating" .
+<https://w3id.org/baf#FbHeatingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Heating sequence"@en .
+<https://w3id.org/baf#FbHeatingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenz Heizen"@de .
+# 
+# https://w3id.org/baf#FbHumidifier
+<https://w3id.org/baf#FbHumidifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbHumidifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#PumpControl> .
+<https://w3id.org/baf#FbHumidifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#ValveControl> .
+<https://w3id.org/baf#FbHumidifier> <http://purl.org/dc/terms/identifier> "FbHumidifier" .
+<https://w3id.org/baf#FbHumidifier> <http://www.w3.org/2000/01/rdf-schema#label> "Dampfbefeuchter"@de .
+<https://w3id.org/baf#FbHumidifier> <http://www.w3.org/2000/01/rdf-schema#label> "Humidifier"@en .
+# 
+# https://w3id.org/baf#FbHumidifyingSequence
+<https://w3id.org/baf#FbHumidifyingSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbHumidifyingSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Sequence> .
+<https://w3id.org/baf#FbHumidifyingSequence> <http://purl.org/dc/terms/identifier> "FbSequenceHumidifying" .
+<https://w3id.org/baf#FbHumidifyingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Humidifying sequence"@en .
+<https://w3id.org/baf#FbHumidifyingSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenz Befeuchten"@de .
+# 
+# https://w3id.org/baf#FbHysteresis
+<https://w3id.org/baf#FbHysteresis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbHysteresis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbHysteresis> <http://purl.org/dc/terms/identifier> "FbHysteresis" .
+<https://w3id.org/baf#FbHysteresis> <http://www.w3.org/2000/01/rdf-schema#label> "Hysterese"@de .
+<https://w3id.org/baf#FbHysteresis> <http://www.w3.org/2000/01/rdf-schema#label> "Hysteresis"@en .
+# 
+# https://w3id.org/baf#FbImpulseCounter
+<https://w3id.org/baf#FbImpulseCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbImpulseCounter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbImpulseCounter> <http://purl.org/dc/terms/identifier> "FbImpulseCounter" .
+<https://w3id.org/baf#FbImpulseCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Impulse counter"@en .
+<https://w3id.org/baf#FbImpulseCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Impulszähler"@de .
+# 
+# https://w3id.org/baf#FbMinValueAvgValueAndMaxValue
+<https://w3id.org/baf#FbMinValueAvgValueAndMaxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbMinValueAvgValueAndMaxValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbMinValueAvgValueAndMaxValue> <http://www.w3.org/2000/01/rdf-schema#label> "Min. Value, Avg. Value and Max. Value"@en .
+<https://w3id.org/baf#FbMinValueAvgValueAndMaxValue> <http://www.w3.org/2000/01/rdf-schema#label> "Min.-Wert, Mittelwert und Max.-Wert"@de .
+# 
+# https://w3id.org/baf#FbMixedAirSequence
+<https://w3id.org/baf#FbMixedAirSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbMixedAirSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Sequence> .
+<https://w3id.org/baf#FbMixedAirSequence> <http://purl.org/dc/terms/identifier> "FbSequenceMixedAir" .
+<https://w3id.org/baf#FbMixedAirSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Mixed air sequence"@en .
+<https://w3id.org/baf#FbMixedAirSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenz Mischluft"@de .
+# 
+# https://w3id.org/baf#FbOperatingHoursCounter
+<https://w3id.org/baf#FbOperatingHoursCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbOperatingHoursCounter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbOperatingHoursCounter> <http://purl.org/dc/terms/identifier> "FbOperatingHours_01" .
+<https://w3id.org/baf#FbOperatingHoursCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Betriebsstundenzähler"@de .
+<https://w3id.org/baf#FbOperatingHoursCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Operating hours counter"@en .
+# 
+# https://w3id.org/baf#FbOptimizedSupplyTemperature
+<https://w3id.org/baf#FbOptimizedSupplyTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbOptimizedSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FbOptimizedSupplyTemperature> <http://purl.org/dc/terms/identifier> "FbOptimizedSupplyTemperature" .
+<https://w3id.org/baf#FbOptimizedSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Optimierte Vorlauftemperatur"@de .
+<https://w3id.org/baf#FbOptimizedSupplyTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Optimized supply temperature"@en .
+# 
+# https://w3id.org/baf#FbOverheatingandCondensationProtection
+<https://w3id.org/baf#FbOverheatingandCondensationProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbOverheatingandCondensationProtection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FbOverheatingandCondensationProtection> <http://purl.org/dc/terms/identifier> "FbTemperatureOverride" .
+<https://w3id.org/baf#FbOverheatingandCondensationProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Overheatingand condensation protection"@en .
+<https://w3id.org/baf#FbOverheatingandCondensationProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Überhitzungs- und Kondensationsschutz"@de .
+# 
+# https://w3id.org/baf#FbPIDController
+<https://w3id.org/baf#FbPIDController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPIDController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Controller> .
+<https://w3id.org/baf#FbPIDController> <http://purl.org/dc/terms/identifier> "FbPIDController" .
+<https://w3id.org/baf#FbPIDController> <http://www.w3.org/2000/01/rdf-schema#label> "PID-Regler"@de .
+<https://w3id.org/baf#FbPIDController> <http://www.w3.org/2000/01/rdf-schema#label> "PIDController"@en .
+# 
+# https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters
+<https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Controller> .
+<https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters> <http://purl.org/dc/terms/identifier> "FbPIDController2PIDSets" .
+<https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters> <http://www.w3.org/2000/01/rdf-schema#label> "PID-Regler mit zwei Regelparametersätzen"@de .
+<https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters> <http://www.w3.org/2000/01/rdf-schema#label> "PIDControllerwith two setsof control parameters"@en .
+# 
+# https://w3id.org/baf#FbPIDSingleRoomController
+<https://w3id.org/baf#FbPIDSingleRoomController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPIDSingleRoomController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SingleRoomControl> .
+<https://w3id.org/baf#FbPIDSingleRoomController> <http://purl.org/dc/terms/identifier> "FbPIDSingleRoomController" .
+<https://w3id.org/baf#FbPIDSingleRoomController> <http://www.w3.org/2000/01/rdf-schema#label> "PID Einzelraumregler"@de .
+<https://w3id.org/baf#FbPIDSingleRoomController> <http://www.w3.org/2000/01/rdf-schema#label> "PIDSingle room controller"@en .
+# 
+# https://w3id.org/baf#FbPILimitController
+<https://w3id.org/baf#FbPILimitController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPILimitController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Controller> .
+<https://w3id.org/baf#FbPILimitController> <http://purl.org/dc/terms/identifier> "FbLimitController" .
+<https://w3id.org/baf#FbPILimitController> <http://www.w3.org/2000/01/rdf-schema#label> "PI-Begrenzungsregler"@de .
+<https://w3id.org/baf#FbPILimitController> <http://www.w3.org/2000/01/rdf-schema#label> "PILimit controller"@en .
+# 
+# https://w3id.org/baf#FbPWMOutput
+<https://w3id.org/baf#FbPWMOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPWMOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#GeneralDriver> .
+<https://w3id.org/baf#FbPWMOutput> <http://purl.org/dc/terms/identifier> "FbPWM" .
+<https://w3id.org/baf#FbPWMOutput> <http://www.w3.org/2000/01/rdf-schema#label> "PWM Output"@en .
+<https://w3id.org/baf#FbPWMOutput> <http://www.w3.org/2000/01/rdf-schema#label> "PWM-Ausgang"@de .
+# 
+# https://w3id.org/baf#FbPlateTypeHeatExchanger
+<https://w3id.org/baf#FbPlateTypeHeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPlateTypeHeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HeatExchangerControl> .
+<https://w3id.org/baf#FbPlateTypeHeatExchanger> <http://purl.org/dc/terms/identifier> "FbPlateHeatExchanger" .
+<https://w3id.org/baf#FbPlateTypeHeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Plate-Type heat exchanger"@en .
+<https://w3id.org/baf#FbPlateTypeHeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Plattenwärmetauscher"@de .
+# 
+# https://w3id.org/baf#FbPump
+<https://w3id.org/baf#FbPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#PumpControl> .
+<https://w3id.org/baf#FbPump> <http://purl.org/dc/terms/identifier> "FbPump" .
+<https://w3id.org/baf#FbPump> <http://www.w3.org/2000/01/rdf-schema#label> "Pump"@en .
+<https://w3id.org/baf#FbPump> <http://www.w3.org/2000/01/rdf-schema#label> "Pumpe"@de .
+# 
+# https://w3id.org/baf#FbPumpwithFrequencyConverter
+<https://w3id.org/baf#FbPumpwithFrequencyConverter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbPumpwithFrequencyConverter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#PumpControl> .
+<https://w3id.org/baf#FbPumpwithFrequencyConverter> <http://purl.org/dc/terms/identifier> "FbPumpFC" .
+<https://w3id.org/baf#FbPumpwithFrequencyConverter> <http://www.w3.org/2000/01/rdf-schema#label> "Pumpe mit Frequenzumrichter"@de .
+<https://w3id.org/baf#FbPumpwithFrequencyConverter> <http://www.w3.org/2000/01/rdf-schema#label> "Pumpwith frequency converter"@en .
+# 
+# https://w3id.org/baf#FbRamp
+<https://w3id.org/baf#FbRamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbRamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbRamp> <http://purl.org/dc/terms/identifier> "FbRamp" .
+<https://w3id.org/baf#FbRamp> <http://www.w3.org/2000/01/rdf-schema#label> "Ramp"@en .
+<https://w3id.org/baf#FbRamp> <http://www.w3.org/2000/01/rdf-schema#label> "Rampe"@de .
+# 
+# https://w3id.org/baf#FbReducedMinimumFreshAir
+<https://w3id.org/baf#FbReducedMinimumFreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbReducedMinimumFreshAir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FbReducedMinimumFreshAir> <http://purl.org/dc/terms/identifier> "FbMinFreshAir" .
+<https://w3id.org/baf#FbReducedMinimumFreshAir> <http://www.w3.org/2000/01/rdf-schema#label> "Reduced minimum fresh air"@en .
+<https://w3id.org/baf#FbReducedMinimumFreshAir> <http://www.w3.org/2000/01/rdf-schema#label> "Reduzierte Mindestfrischluft"@de .
+# 
+# https://w3id.org/baf#FbRotaryHeatExchanger
+<https://w3id.org/baf#FbRotaryHeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbRotaryHeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HeatExchangerControl> .
+<https://w3id.org/baf#FbRotaryHeatExchanger> <http://purl.org/dc/terms/identifier> "FbRotaryHeatExchanger" .
+<https://w3id.org/baf#FbRotaryHeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Rotary heat exchanger"@en .
+<https://w3id.org/baf#FbRotaryHeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Rotationswärmetauscher"@de .
+# 
+# https://w3id.org/baf#FbRunAroundCoil
+<https://w3id.org/baf#FbRunAroundCoil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbRunAroundCoil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HeatExchangerControl> .
+<https://w3id.org/baf#FbRunAroundCoil> <http://purl.org/dc/terms/identifier> "FbRunAroundCoil" .
+<https://w3id.org/baf#FbRunAroundCoil> <http://www.w3.org/2000/01/rdf-schema#label> "Kreislaufverbundsystem"@de .
+<https://w3id.org/baf#FbRunAroundCoil> <http://www.w3.org/2000/01/rdf-schema#label> "Run-around coil"@en .
+# 
+# https://w3id.org/baf#FbSequenceController
+<https://w3id.org/baf#FbSequenceController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbSequenceController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Controller> .
+<https://w3id.org/baf#FbSequenceController> <http://purl.org/dc/terms/identifier> "FbSequenceController" .
+<https://w3id.org/baf#FbSequenceController> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence controller"@en .
+<https://w3id.org/baf#FbSequenceController> <http://www.w3.org/2000/01/rdf-schema#label> "Sequenzregler"@de .
+# 
+# https://w3id.org/baf#FbStartStop
+<https://w3id.org/baf#FbStartStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbStartStop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbStartStop> <http://purl.org/dc/terms/identifier> "FbStartStop" .
+<https://w3id.org/baf#FbStartStop> <http://www.w3.org/2000/01/rdf-schema#label> "Start/Stop"@en .
+<https://w3id.org/baf#FbStartStop> <http://www.w3.org/2000/01/rdf-schema#label> "Start/Stopp"@de .
+# 
+# https://w3id.org/baf#FbStartStopHeatingCircuitControl
+<https://w3id.org/baf#FbStartStopHeatingCircuitControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbStartStopHeatingCircuitControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbStartStopHeatingCircuitControl> <http://purl.org/dc/terms/identifier> "FbStartStopHeatingCircuit" .
+<https://w3id.org/baf#FbStartStopHeatingCircuitControl> <http://www.w3.org/2000/01/rdf-schema#label> "Start stop heating circuit control"@en .
+<https://w3id.org/baf#FbStartStopHeatingCircuitControl> <http://www.w3.org/2000/01/rdf-schema#label> "Start-/Stopp-Heizkreisregelung"@de .
+# 
+# https://w3id.org/baf#FbStartStopOptimization
+<https://w3id.org/baf#FbStartStopOptimization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbStartStopOptimization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbStartStopOptimization> <http://purl.org/dc/terms/identifier> "FbStartStopOptimization" .
+<https://w3id.org/baf#FbStartStopOptimization> <http://www.w3.org/2000/01/rdf-schema#label> "Start-/Stoppoptimierung"@de .
+<https://w3id.org/baf#FbStartStopOptimization> <http://www.w3.org/2000/01/rdf-schema#label> "Start/Stop optimization"@en .
+# 
+# https://w3id.org/baf#FbSummerNightVentilation
+<https://w3id.org/baf#FbSummerNightVentilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbSummerNightVentilation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SystemMonitoring> .
+<https://w3id.org/baf#FbSummerNightVentilation> <http://purl.org/dc/terms/identifier> "FbSummerNightVentilation" .
+<https://w3id.org/baf#FbSummerNightVentilation> <http://www.w3.org/2000/01/rdf-schema#label> "Sommernachtlüftung"@de .
+<https://w3id.org/baf#FbSummerNightVentilation> <http://www.w3.org/2000/01/rdf-schema#label> "Summer night ventilation"@en .
+# 
+# https://w3id.org/baf#FbTwoPointControllerforDHWPreparation
+<https://w3id.org/baf#FbTwoPointControllerforDHWPreparation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbTwoPointControllerforDHWPreparation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#Controller> .
+<https://w3id.org/baf#FbTwoPointControllerforDHWPreparation> <http://purl.org/dc/terms/identifier> "FbDHWController" .
+<https://w3id.org/baf#FbTwoPointControllerforDHWPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "Two-Point controllerfor DHWPreparation"@en .
+<https://w3id.org/baf#FbTwoPointControllerforDHWPreparation> <http://www.w3.org/2000/01/rdf-schema#label> "Zweipunktregler BWW- Ladung"@de .
+# 
+# https://w3id.org/baf#FbTwoPointIndividualRoomController
+<https://w3id.org/baf#FbTwoPointIndividualRoomController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbTwoPointIndividualRoomController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SingleRoomControl> .
+<https://w3id.org/baf#FbTwoPointIndividualRoomController> <http://purl.org/dc/terms/identifier> "Fb2PointSingleRoomController" .
+<https://w3id.org/baf#FbTwoPointIndividualRoomController> <http://www.w3.org/2000/01/rdf-schema#label> "2-Punkt-Einzelraumregler"@de .
+<https://w3id.org/baf#FbTwoPointIndividualRoomController> <http://www.w3.org/2000/01/rdf-schema#label> "Point individual room controller"@en .
+# 
+# https://w3id.org/baf#FbUnitMonitoring
+<https://w3id.org/baf#FbUnitMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbUnitMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FbUnitMonitoring> <http://purl.org/dc/terms/identifier> "FbRedundancyUnits" .
+<https://w3id.org/baf#FbUnitMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregatsüberwachung"@de .
+<https://w3id.org/baf#FbUnitMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "Unit monitoring"@en .
+# 
+# https://w3id.org/baf#FbValveandPump
+<https://w3id.org/baf#FbValveandPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbValveandPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#PumpControl> .
+<https://w3id.org/baf#FbValveandPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#ValveControl> .
+<https://w3id.org/baf#FbValveandPump> <http://purl.org/dc/terms/identifier> "FbValveAndPump" .
+<https://w3id.org/baf#FbValveandPump> <http://www.w3.org/2000/01/rdf-schema#label> "Ventil und Pumpe"@de .
+<https://w3id.org/baf#FbValveandPump> <http://www.w3.org/2000/01/rdf-schema#label> "Valve and pump {@en} " .
+# 
+# https://w3id.org/baf#FbWaterSideAntifreezeProtection
+<https://w3id.org/baf#FbWaterSideAntifreezeProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FbWaterSideAntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AntifreezeProtection> .
+<https://w3id.org/baf#FbWaterSideAntifreezeProtection> <http://purl.org/dc/terms/identifier> "FbAntifreezeWater" .
+<https://w3id.org/baf#FbWaterSideAntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Wasserseitiger Frostschutz"@de .
+<https://w3id.org/baf#FbWaterSideAntifreezeProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Water-Side antifreeze protection"@en .
+# 
+# https://w3id.org/baf#FuFourPointCharacteristicCurve
+<https://w3id.org/baf#FuFourPointCharacteristicCurve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuFourPointCharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#CharacteristicCurve> .
+<https://w3id.org/baf#FuFourPointCharacteristicCurve> <http://purl.org/dc/terms/identifier> "Fu4Point" .
+<https://w3id.org/baf#FuFourPointCharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#label> "Four-point characteristic curve"@en .
+<https://w3id.org/baf#FuFourPointCharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#label> "Vierpunkt-Kennlinie"@de .
+# 
+# https://w3id.org/baf#FuKTYCharacteristicCurve
+<https://w3id.org/baf#FuKTYCharacteristicCurve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuKTYCharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#CharacteristicCurve> .
+<https://w3id.org/baf#FuKTYCharacteristicCurve> <http://purl.org/dc/terms/identifier> "FuKTY" .
+<https://w3id.org/baf#FuKTYCharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#label> "KTY Characteristic curve"@en .
+<https://w3id.org/baf#FuKTYCharacteristicCurve> <http://www.w3.org/2000/01/rdf-schema#label> "KTY-Kennlinie"@de .
+# 
+# https://w3id.org/baf#FuScalingOfOutputValues0to32767
+<https://w3id.org/baf#FuScalingOfOutputValues0to32767> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuScalingOfOutputValues0to32767> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FuScalingOfOutputValues0to32767> <http://purl.org/dc/terms/identifier> "FuAO" .
+<https://w3id.org/baf#FuScalingOfOutputValues0to32767> <http://www.w3.org/2000/01/rdf-schema#label> "Scaling of output values 0 to 32767"@en .
+<https://w3id.org/baf#FuScalingOfOutputValues0to32767> <http://www.w3.org/2000/01/rdf-schema#label> "Skalierung der Ausgangswerte 0 bis 32767"@de .
+# 
+# https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg
+<https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg> <http://purl.org/dc/terms/identifier> "FuAI_Temp" .
+<https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg> <http://www.w3.org/2000/01/rdf-schema#label> "Scaling of temperature valuesin °C"@en .
+<https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg> <http://www.w3.org/2000/01/rdf-schema#label> "Skalierung der Temperaturwerte in °C"@de .
+# 
+# https://w3id.org/baf#FuScalingofInputValues0to32767
+<https://w3id.org/baf#FuScalingofInputValues0to32767> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuScalingofInputValues0to32767> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#AnalogSignal> .
+<https://w3id.org/baf#FuScalingofInputValues0to32767> <http://purl.org/dc/terms/identifier> "FuAI" .
+<https://w3id.org/baf#FuScalingofInputValues0to32767> <http://www.w3.org/2000/01/rdf-schema#label> "Scalingof input values0to32767"@en .
+<https://w3id.org/baf#FuScalingofInputValues0to32767> <http://www.w3.org/2000/01/rdf-schema#label> "Skalierung der Eingangswerte"@de .
+# 
+# https://w3id.org/baf#FuStatusIndicationAsString
+<https://w3id.org/baf#FuStatusIndicationAsString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuStatusIndicationAsString> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#MiscellaneousFunction> .
+<https://w3id.org/baf#FuStatusIndicationAsString> <http://purl.org/dc/terms/identifier> "FuStatus" .
+<https://w3id.org/baf#FuStatusIndicationAsString> <http://www.w3.org/2000/01/rdf-schema#label> "Statusanzeige als STRING"@de .
+<https://w3id.org/baf#FuStatusIndicationAsString> <http://www.w3.org/2000/01/rdf-schema#label> "Status indication as STRING {@en} " .
+# 
+# https://w3id.org/baf#FuSummerCompensation
+<https://w3id.org/baf#FuSummerCompensation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuSummerCompensation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#SetValueAdjustment> .
+<https://w3id.org/baf#FuSummerCompensation> <http://purl.org/dc/terms/identifier> "FuSummerCompensation" .
+<https://w3id.org/baf#FuSummerCompensation> <http://www.w3.org/2000/01/rdf-schema#label> "Sommerkompensation"@de .
+<https://w3id.org/baf#FuSummerCompensation> <http://www.w3.org/2000/01/rdf-schema#label> "Summer compensation"@en .
+# 
+# https://w3id.org/baf#FuTwoPointCharacteristic
+<https://w3id.org/baf#FuTwoPointCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#FuTwoPointCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#CharacteristicCurve> .
+<https://w3id.org/baf#FuTwoPointCharacteristic> <http://purl.org/dc/terms/identifier> "Fu2Point" .
+<https://w3id.org/baf#FuTwoPointCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Two-point characteristic"@en .
+<https://w3id.org/baf#FuTwoPointCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Zweipunkt-Kennlinie"@de .
+# 
+# https://w3id.org/baf#GeneralDriver
+<https://w3id.org/baf#GeneralDriver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#GeneralDriver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#GeneralDriver> <http://www.w3.org/2000/01/rdf-schema#label> "General driver" .
+# 
+# https://w3id.org/baf#HVAC_Function
+<https://w3id.org/baf#HVAC_Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#HVAC_Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction> .
+<https://w3id.org/baf#HVAC_Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#ControlActor> .
+# 
+# https://w3id.org/baf#HeatExchangerControl
+<https://w3id.org/baf#HeatExchangerControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#HeatExchangerControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#HeatExchangerControl> <http://www.w3.org/2000/01/rdf-schema#label> "Heat exchanger control" .
+# 
+# https://w3id.org/baf#MiscellaneousFunction
+<https://w3id.org/baf#MiscellaneousFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#MiscellaneousFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#MiscellaneousFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Miscellaneous function" .
+# 
+# https://w3id.org/baf#PumpControl
+<https://w3id.org/baf#PumpControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#PumpControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#PumpControl> <http://www.w3.org/2000/01/rdf-schema#label> "Pump control"@en .
+# 
+# https://w3id.org/baf#Sequence
+<https://w3id.org/baf#Sequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#Sequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#Sequence> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence"@en .
+# 
+# https://w3id.org/baf#SetValueAdjustment
+<https://w3id.org/baf#SetValueAdjustment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#SetValueAdjustment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#SetValueAdjustment> <http://www.w3.org/2000/01/rdf-schema#label> "Set value adjustment" .
+# 
+# https://w3id.org/baf#SingleRoomControl
+<https://w3id.org/baf#SingleRoomControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#SingleRoomControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#SingleRoomControl> <http://www.w3.org/2000/01/rdf-schema#label> "Single room control" .
+# 
+# https://w3id.org/baf#SystemMonitoring
+<https://w3id.org/baf#SystemMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#SystemMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#SystemMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "System monitoring" .
+# 
+# https://w3id.org/baf#TemperatureEvaluation
+<https://w3id.org/baf#TemperatureEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#TemperatureEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#TemperatureEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature evaluation" .
+# 
+# https://w3id.org/baf#ValveControl
+<https://w3id.org/baf#ValveControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#ValveControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#ValveControl> <http://www.w3.org/2000/01/rdf-schema#label> "Valve control" .
+# 
+# https://w3id.org/baf#VolumeFlowRegulator
+<https://w3id.org/baf#VolumeFlowRegulator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#VolumeFlowRegulator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/baf#HVAC_Function> .
+<https://w3id.org/baf#VolumeFlowRegulator> <http://purl.org/dc/terms/identifier> "FbVolumeFlowRegulator" .
+<https://w3id.org/baf#VolumeFlowRegulator> <http://www.w3.org/2000/01/rdf-schema#label> "Volume flow regulator"@en .
+<https://w3id.org/baf#VolumeFlowRegulator> <http://www.w3.org/2000/01/rdf-schema#label> "Volumenstromregler"@de .
+# 
+# https://w3id.org/baf#typConfig2LevelBoiler
+<https://w3id.org/baf#typConfig2LevelBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfig2LevelBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfig2LevelBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "typConfig2LevelBoiler" .
+# 
+# https://w3id.org/baf#typConfigAnalog3Point_01
+<https://w3id.org/baf#typConfigAnalog3Point_01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigAnalog3Point_01> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigAnalog3Point_01> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigAnalog3Point_01" .
+# 
+# https://w3id.org/baf#typConfigCascadeController
+<https://w3id.org/baf#typConfigCascadeController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigCascadeController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigCascadeController> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigCascadeController" .
+# 
+# https://w3id.org/baf#typConfigContinuousDamper
+<https://w3id.org/baf#typConfigContinuousDamper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigContinuousDamper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigContinuousDamper> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigContinuousDamper" .
+# 
+# https://w3id.org/baf#typConfigLowPassFilter
+<https://w3id.org/baf#typConfigLowPassFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigLowPassFilter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigLowPassFilter> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigLowPassFilter" .
+# 
+# https://w3id.org/baf#typConfigSequence
+<https://w3id.org/baf#typConfigSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigSequence> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigSequence" .
+# 
+# https://w3id.org/baf#typConfigSequenceController
+<https://w3id.org/baf#typConfigSequenceController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigSequenceController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigSequenceController> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigSequenceController" .
+# 
+# https://w3id.org/baf#typConfigValveAndPump
+<https://w3id.org/baf#typConfigValveAndPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/baf#typConfigValveAndPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ibp/CTRLont#Parameter> .
+<https://w3id.org/baf#typConfigValveAndPump> <http://www.w3.org/2000/01/rdf-schema#label> "typConfigValveAndPump" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/baf#Fb2LevelBoilerPattern
+<https://w3id.org/baf#Fb2LevelBoilerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#Fb2LevelBoilerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#Fb2LevelBoilerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler> .
+<https://w3id.org/baf#Fb2LevelBoilerPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)" .
+<https://w3id.org/baf#Fb2LevelBoilerPattern> <http://www.w3.org/2000/01/rdf-schema#label> " Boiler Module for 2-Level Boiler Pattern" .
+# 
+# https://w3id.org/baf#FbAnalog3PointPattern
+<https://w3id.org/baf#FbAnalog3PointPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbAnalog3PointPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbAnalog3PointPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbAnalog3PointSignal> .
+<https://w3id.org/baf#FbAnalog3PointPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)" .
+<https://w3id.org/baf#FbAnalog3PointPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Analog 3-Point Signal Pattern" .
+# 
+# https://w3id.org/baf#FbCascadeControllerPattern
+<https://w3id.org/baf#FbCascadeControllerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbCascadeControllerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbCascadeControllerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbCascadeController> .
+<https://w3id.org/baf#FbCascadeControllerPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Cascade Controller (FbCascadeController)" .
+<https://w3id.org/baf#FbCascadeControllerPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Cascade Controller Pattern" .
+# 
+# https://w3id.org/baf#FbContinuousDamperPattern
+<https://w3id.org/baf#FbContinuousDamperPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbContinuousDamperPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbContinuousDamperPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbActuationofContinuousDampers> .
+<https://w3id.org/baf#FbContinuousDamperPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)" .
+<https://w3id.org/baf#FbContinuousDamperPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation of Continuous Dampers Pattern" .
+# 
+# https://w3id.org/baf#FbLowPassFilterPattern
+<https://w3id.org/baf#FbLowPassFilterPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbLowPassFilterPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbLowPassFilterPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbFirstOrderLowPassFilter> .
+<https://w3id.org/baf#FbLowPassFilterPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)" .
+<https://w3id.org/baf#FbLowPassFilterPattern> <http://www.w3.org/2000/01/rdf-schema#label> "1st Order Low-Pass Filter Pattern" .
+# 
+# https://w3id.org/baf#FbPlateHeatExchangerPattern
+<https://w3id.org/baf#FbPlateHeatExchangerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbPlateHeatExchangerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbPlateHeatExchangerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbPlateTypeHeatExchanger> .
+<https://w3id.org/baf#FbPlateHeatExchangerPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)" .
+<https://w3id.org/baf#FbPlateHeatExchangerPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Plate-Type Heat Exchanger Pattern" .
+# 
+# https://w3id.org/baf#FbSequenceControllerPattern
+<https://w3id.org/baf#FbSequenceControllerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbSequenceControllerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbSequenceControllerPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbSequenceController> .
+<https://w3id.org/baf#FbSequenceControllerPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Sequence Controller (FbSequenceController)" .
+<https://w3id.org/baf#FbSequenceControllerPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence Controller Pattern" .
+# 
+# https://w3id.org/baf#FbSequenceEnergyRecoveryPattern
+<https://w3id.org/baf#FbSequenceEnergyRecoveryPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbSequenceEnergyRecoveryPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbSequenceEnergyRecoveryPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbEnergyRecoverySequence> .
+<https://w3id.org/baf#FbSequenceEnergyRecoveryPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)" .
+<https://w3id.org/baf#FbSequenceEnergyRecoveryPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Recovery Sequence Pattern" .
+# 
+# https://w3id.org/baf#FbSequenceHeatingPattern
+<https://w3id.org/baf#FbSequenceHeatingPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbSequenceHeatingPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbSequenceHeatingPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbHeatingSequence> .
+<https://w3id.org/baf#FbSequenceHeatingPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Heating Sequence (FbSequenceHeating)" .
+<https://w3id.org/baf#FbSequenceHeatingPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Heating Sequence Pattern" .
+# 
+# https://w3id.org/baf#FbSequenceMixedAirPattern
+<https://w3id.org/baf#FbSequenceMixedAirPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbSequenceMixedAirPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbSequenceMixedAirPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbMixedAirSequence> .
+<https://w3id.org/baf#FbSequenceMixedAirPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)" .
+<https://w3id.org/baf#FbSequenceMixedAirPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Mixed Air Sequence Pattern" .
+# 
+# https://w3id.org/baf#FbValveAndPumpPattern
+<https://w3id.org/baf#FbValveAndPumpPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#FbValveAndPumpPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#FbValveAndPumpPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FbValveandPump> .
+<https://w3id.org/baf#FbValveAndPumpPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Valve and Pump (FbValveAndPump)" .
+<https://w3id.org/baf#FbValveAndPumpPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Valve and Pump Pattern" .
+# 
+# https://w3id.org/baf#Fu4Point
+<https://w3id.org/baf#Fu4Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#Fu4Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#EnumeratedControlFunctionPattern> .
+<https://w3id.org/baf#Fu4Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#FuFourPointCharacteristicCurve> .
+<https://w3id.org/baf#Fu4Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Pattern of function block for Four-Point Characteristic Curve (Fu4Point)" .
+<https://w3id.org/baf#Fu4Point> <http://www.w3.org/2000/01/rdf-schema#label> "Four-Point Characteristic Curve Pattern" .
+# 
+# https://w3id.org/baf#OutputFu4Point
+<https://w3id.org/baf#OutputFu4Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#OutputFu4Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#OutputFu4Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Output value" .
+<https://w3id.org/baf#OutputFu4Point> <http://www.w3.org/2000/01/rdf-schema#label> "Fu4Point" .
+# 
+# https://w3id.org/baf#_bMaxSequenceNumber
+<https://w3id.org/baf#_bMaxSequenceNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_bMaxSequenceNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_bMaxSequenceNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Max. number of sequences used\r\nValue range = 2 – 4\r\nDefault setting = 2" .
+<https://w3id.org/baf#_bMaxSequenceNumber> <http://www.w3.org/2000/01/rdf-schema#label> ".bMaxSequenceNumber" .
+# 
+# https://w3id.org/baf#_bSequenceNumber
+<https://w3id.org/baf#_bSequenceNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_bSequenceNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequence> .
+<https://w3id.org/baf#_bSequenceNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequence number (from cooling toward heating)\r\nValue range = 1 – 4" .
+<https://w3id.org/baf#_bSequenceNumber> <http://www.w3.org/2000/01/rdf-schema#label> ".bSequenceNumber" .
+# 
+# https://w3id.org/baf#_rDeadZone
+<https://w3id.org/baf#_rDeadZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rDeadZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_rDeadZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rDeadZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Dead zone +/- [K]\r\nDefault setting = 0" .
+<https://w3id.org/baf#_rDeadZone> <http://www.w3.org/2000/01/rdf-schema#label> ".rDeadZone" .
+# 
+# https://w3id.org/baf#_rDefaultValue
+<https://w3id.org/baf#_rDefaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rDefaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_rDefaultValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined output value as long as the\r\nxAlarm output is set\r\nDefault setting = 0" .
+<https://w3id.org/baf#_rDefaultValue> <http://www.w3.org/2000/01/rdf-schema#label> ".rDefaultValue" .
+# 
+# https://w3id.org/baf#_rDeviation
+<https://w3id.org/baf#_rDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rDeviation> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum deviation between specified/actual values for the second set of controller parameters [%]\r\nDefault setting = 0 (no switchover)" .
+<https://w3id.org/baf#_rDeviation> <http://www.w3.org/2000/01/rdf-schema#label> ".rDeviation" .
+# 
+# https://w3id.org/baf#_rDiffBoilerAndReturnTemperature
+<https://w3id.org/baf#_rDiffBoilerAndReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rDiffBoilerAndReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rDiffBoilerAndReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Max. temperature difference between boiler and return temperature for deactivation of the boiler circuit pump [K]. Default setting = 5" .
+<https://w3id.org/baf#_rDiffBoilerAndReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rDiffBoilerAndReturnTemperature" .
+# 
+# https://w3id.org/baf#_rHighLimitAlarm
+<https://w3id.org/baf#_rHighLimitAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rHighLimitAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_rHighLimitAlarm> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper limit for value of the output signal alarm\r\nDefault setting = 32768" .
+<https://w3id.org/baf#_rHighLimitAlarm> <http://www.w3.org/2000/01/rdf-schema#label> ".rHighLimitAlarm" .
+# 
+# https://w3id.org/baf#_rHysteresis
+<https://w3id.org/baf#_rHysteresis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rHysteresis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rHysteresis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigAnalog3Point_01> .
+<https://w3id.org/baf#_rHysteresis> <http://www.w3.org/2000/01/rdf-schema#label> ".rHysteresis" .
+# 
+# https://w3id.org/baf#_rKp
+<https://w3id.org/baf#_rKp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rKp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_rKp> <http://www.w3.org/2000/01/rdf-schema#comment> "Proportional gain (P portion)\r\nDefault setting = 2.5" .
+<https://w3id.org/baf#_rKp> <http://www.w3.org/2000/01/rdf-schema#label> ".rKp" .
+# 
+# https://w3id.org/baf#_rKp1
+<https://w3id.org/baf#_rKp1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rKp1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rKp1> <http://www.w3.org/2000/01/rdf-schema#comment> "Proportional gain (P portion) for the first set of controller parameters\r\nDefault setting = 2.5" .
+<https://w3id.org/baf#_rKp1> <http://www.w3.org/2000/01/rdf-schema#label> ".rKp1" .
+# 
+# https://w3id.org/baf#_rKp2
+<https://w3id.org/baf#_rKp2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rKp2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rKp2> <http://www.w3.org/2000/01/rdf-schema#comment> "Proportional gain (P portion) for the second set of controller parameters\r\nDefault setting = 2.5" .
+<https://w3id.org/baf#_rKp2> <http://www.w3.org/2000/01/rdf-schema#label> ".rKp2" .
+# 
+# https://w3id.org/baf#_rKpMinReturnTemperature
+<https://w3id.org/baf#_rKpMinReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rKpMinReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rKpMinReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Proportional gain (P portion). Default setting = 12" .
+<https://w3id.org/baf#_rKpMinReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rKpMinReturnTemperature" .
+# 
+# https://w3id.org/baf#_rLeadHysteresis
+<https://w3id.org/baf#_rLeadHysteresis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rLeadHysteresis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rLeadHysteresis> <http://www.w3.org/2000/01/rdf-schema#comment> "Hysteresis as the lead boiler for the individual limit values. Default setting = 5" .
+<https://w3id.org/baf#_rLeadHysteresis> <http://www.w3.org/2000/01/rdf-schema#label> ".rLeadHysteresis" .
+# 
+# https://w3id.org/baf#_rLeadOffsetReferenceTemperature
+<https://w3id.org/baf#_rLeadOffsetReferenceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rLeadOffsetReferenceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rLeadOffsetReferenceTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Offset to the specified boiler temperature as lead boiler [K]. Default setting = 5" .
+<https://w3id.org/baf#_rLeadOffsetReferenceTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rLeadOffsetReferenceTemperature" .
+# 
+# https://w3id.org/baf#_rLowLimitAlarm
+<https://w3id.org/baf#_rLowLimitAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rLowLimitAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_rLowLimitAlarm> <http://www.w3.org/2000/01/rdf-schema#comment> "Lower limit for value of the output signal\r\nalarm\r\nDefault setting = -32767" .
+<https://w3id.org/baf#_rLowLimitAlarm> <http://www.w3.org/2000/01/rdf-schema#label> ".rLowLimitAlarm" .
+# 
+# https://w3id.org/baf#_rMaxBoilerTemperature
+<https://w3id.org/baf#_rMaxBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMaxBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rMaxBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum boiler temperature at Level 1 [°C]. Default setting = 90" .
+<https://w3id.org/baf#_rMaxBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rMaxBoilerTemperature" .
+# 
+# https://w3id.org/baf#_rMaxBoilerTemperatureLevel2
+<https://w3id.org/baf#_rMaxBoilerTemperatureLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMaxBoilerTemperatureLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rMaxBoilerTemperatureLevel2> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum boiler temperature at Level 2 [°C]. Default setting = 85" .
+<https://w3id.org/baf#_rMaxBoilerTemperatureLevel2> <http://www.w3.org/2000/01/rdf-schema#label> ".rMaxBoilerTemperatureLevel2" .
+# 
+# https://w3id.org/baf#_rMaxReturnTemperature
+<https://w3id.org/baf#_rMaxReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMaxReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rMaxReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum return temperature [°C]. Default setting = 75" .
+<https://w3id.org/baf#_rMaxReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rMaxReturnTemperature" .
+# 
+# https://w3id.org/baf#_rMinBoilerTemperature
+<https://w3id.org/baf#_rMinBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMinBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rMinBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum boiler temperature [°C]. Default setting = 50" .
+<https://w3id.org/baf#_rMinBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rMinBoilerTemperature" .
+# 
+# https://w3id.org/baf#_rMinDeviationMovement
+<https://w3id.org/baf#_rMinDeviationMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMinDeviationMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigContinuousDamper> .
+<https://w3id.org/baf#_rMinDeviationMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum deviation for detection of motion [%]\r\nDefault setting = 5" .
+<https://w3id.org/baf#_rMinDeviationMovement> <http://www.w3.org/2000/01/rdf-schema#label> ".rMinDeviationMovement" .
+# 
+# https://w3id.org/baf#_rMinOutsideTemperature
+<https://w3id.org/baf#_rMinOutsideTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMinOutsideTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_rMinOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum outside temperature for freeze\r\nprotection [°C]\r\nDefault setting = 2 °C" .
+<https://w3id.org/baf#_rMinOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rMinOutsideTemperature" .
+# 
+# https://w3id.org/baf#_rMinReturnTemperature
+<https://w3id.org/baf#_rMinReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rMinReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rMinReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum return temperature [°C]. Default setting = 50" .
+<https://w3id.org/baf#_rMinReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rMinReturnTemperature" .
+# 
+# https://w3id.org/baf#_rOffset
+<https://w3id.org/baf#_rOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_rOffset> <http://www.w3.org/2000/01/rdf-schema#comment> "Measured value compensation for the input\r\nDefault setting = 0" .
+<https://w3id.org/baf#_rOffset> <http://www.w3.org/2000/01/rdf-schema#label> ".rOffset" .
+# 
+# https://w3id.org/baf#_rOffsetMaxReferenceValue
+<https://w3id.org/baf#_rOffsetMaxReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rOffsetMaxReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_rOffsetMaxReferenceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Offset for the maximum reference value for the slave controller as a function of the reference value [K]\r\nDefault setting = 6 K" .
+<https://w3id.org/baf#_rOffsetMaxReferenceValue> <http://www.w3.org/2000/01/rdf-schema#label> ".rOffsetMaxReferenceValue" .
+# 
+# https://w3id.org/baf#_rOffsetMinReference
+<https://w3id.org/baf#_rOffsetMinReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rOffsetMinReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_rOffsetMinReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Offset for the minimum reference value for the slave controller as a function of the reference value [K]\r\nDefault setting = 4 K" .
+<https://w3id.org/baf#_rOffsetMinReference> <http://www.w3.org/2000/01/rdf-schema#label> ".rOffsetMinReferenceValue" .
+# 
+# https://w3id.org/baf#_rOffsetReferenceTemperature
+<https://w3id.org/baf#_rOffsetReferenceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rOffsetReferenceTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rOffsetReferenceTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Offset to the specified boiler temperature [K]. Default setting = 3" .
+<https://w3id.org/baf#_rOffsetReferenceTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rOffsetReferenceTemperature" .
+# 
+# https://w3id.org/baf#_rTd1
+<https://w3id.org/baf#_rTd1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTd1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rTd1> <http://www.w3.org/2000/01/rdf-schema#comment> "Derivative time (D portion) for the first set of controller parameters [s]\r\nDefault setting = 0 s" .
+<https://w3id.org/baf#_rTd1> <http://www.w3.org/2000/01/rdf-schema#label> ".rTd1" .
+# 
+# https://w3id.org/baf#_rTd2
+<https://w3id.org/baf#_rTd2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTd2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rTd2> <http://www.w3.org/2000/01/rdf-schema#comment> "Derivative time (D portion) for the second set of controller parameters [s]\r\nDefault setting = 0 s" .
+<https://w3id.org/baf#_rTd2> <http://www.w3.org/2000/01/rdf-schema#label> ".rTd2" .
+# 
+# https://w3id.org/baf#_rTn
+<https://w3id.org/baf#_rTn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_rTn> <http://www.w3.org/2000/01/rdf-schema#comment> "Reset time of the controller [s]\r\nDefault setting = 300 s" .
+<https://w3id.org/baf#_rTn> <http://www.w3.org/2000/01/rdf-schema#label> ".rTn" .
+# 
+# https://w3id.org/baf#_rTn1
+<https://w3id.org/baf#_rTn1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTn1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rTn1> <http://www.w3.org/2000/01/rdf-schema#comment> "Reset time of the controller for the first set of controller parameters [s]\r\nDefault setting = 300 s" .
+<https://w3id.org/baf#_rTn1> <http://www.w3.org/2000/01/rdf-schema#label> ".rTn1" .
+# 
+# https://w3id.org/baf#_rTn2
+<https://w3id.org/baf#_rTn2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTn2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequenceController> .
+<https://w3id.org/baf#_rTn2> <http://www.w3.org/2000/01/rdf-schema#comment> "Reset time of the controller for the second set of controller parameters [s]\r\nDefault setting = 300 s" .
+<https://w3id.org/baf#_rTn2> <http://www.w3.org/2000/01/rdf-schema#label> ".rTn2" .
+# 
+# https://w3id.org/baf#_rTnMinReturnTemperature
+<https://w3id.org/baf#_rTnMinReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTnMinReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_rTnMinReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Reset time of the controller [s]. Default setting = 0" .
+<https://w3id.org/baf#_rTnMinReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".rTnMinReturnTemperature" .
+# 
+# https://w3id.org/baf#_rTolerance
+<https://w3id.org/baf#_rTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigContinuousDamper> .
+<https://w3id.org/baf#_rTolerance> <http://www.w3.org/2000/01/rdf-schema#comment> "Max. deviation, specified/actual position [%]\r\nDefault setting = 3" .
+<https://w3id.org/baf#_rTolerance> <http://www.w3.org/2000/01/rdf-schema#label> ".rTolerance" .
+# 
+# https://w3id.org/baf#_rValveChimneySweep
+<https://w3id.org/baf#_rValveChimneySweep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rValveChimneySweep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_rValveChimneySweep> <http://www.w3.org/2000/01/rdf-schema#comment> "Chimney sweep function valve position [%]\r\nDefault setting = 25" .
+<https://w3id.org/baf#_rValveChimneySweep> <http://www.w3.org/2000/01/rdf-schema#label> ".rValveChimneySweep" .
+# 
+# https://w3id.org/baf#_rX1
+<https://w3id.org/baf#_rX1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rX1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequence> .
+<https://w3id.org/baf#_rX1> <http://www.w3.org/2000/01/rdf-schema#comment> "Min. setting value for sequence [%]" .
+<https://w3id.org/baf#_rX1> <http://www.w3.org/2000/01/rdf-schema#label> ".rX1" .
+# 
+# https://w3id.org/baf#_rX2
+<https://w3id.org/baf#_rX2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rX2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigSequence> .
+<https://w3id.org/baf#_rX2> <http://www.w3.org/2000/01/rdf-schema#comment> "Max. setting value for sequence [%]" .
+<https://w3id.org/baf#_rX2> <http://www.w3.org/2000/01/rdf-schema#label> ".rX2" .
+# 
+# https://w3id.org/baf#_rY_Min
+<https://w3id.org/baf#_rY_Min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_rY_Min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigContinuousDamper> .
+<https://w3id.org/baf#_rY_Min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_rY_Min> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum set value for valve or damper [%]\r\nDefault setting = 3" .
+<https://w3id.org/baf#_rY_Min> <http://www.w3.org/2000/01/rdf-schema#label> ".rY_Min" .
+# 
+# https://w3id.org/baf#_tAlarm
+<https://w3id.org/baf#_tAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_tAlarm> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum time on limit violation until an alarm is issued.\r\nDefault setting: t#10s" .
+<https://w3id.org/baf#_tAlarm> <http://www.w3.org/2000/01/rdf-schema#label> ".tAlarm" .
+# 
+# https://w3id.org/baf#_tCycleTime
+<https://w3id.org/baf#_tCycleTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tCycleTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_tCycleTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Cycle time for the PT1 circuit" .
+<https://w3id.org/baf#_tCycleTime> <http://www.w3.org/2000/01/rdf-schema#label> ".tCycleTime" .
+# 
+# https://w3id.org/baf#_tDelaySwitchOver
+<https://w3id.org/baf#_tDelaySwitchOver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tDelaySwitchOver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_tDelaySwitchOver> <http://www.w3.org/2000/01/rdf-schema#comment> "Delay time for switching between the two fan levels\r\nDefault setting = t#5 m" .
+<https://w3id.org/baf#_tDelaySwitchOver> <http://www.w3.org/2000/01/rdf-schema#label> ".tDelaySwitchOver" .
+# 
+# https://w3id.org/baf#_tLeadMinRuntimeLevel1
+<https://w3id.org/baf#_tLeadMinRuntimeLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tLeadMinRuntimeLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tLeadMinRuntimeLevel1> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum runtime for lead boiler at Level 1. Default setting = t#5 m" .
+<https://w3id.org/baf#_tLeadMinRuntimeLevel1> <http://www.w3.org/2000/01/rdf-schema#label> ".tLeadMinRuntimeLevel1" .
+# 
+# https://w3id.org/baf#_tLeadSwitchOnDelayLevel2
+<https://w3id.org/baf#_tLeadSwitchOnDelayLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tLeadSwitchOnDelayLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tLeadSwitchOnDelayLevel2> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-on delay for lead boiler at Level 2. Default setting = t#15 m" .
+<https://w3id.org/baf#_tLeadSwitchOnDelayLevel2> <http://www.w3.org/2000/01/rdf-schema#label> ".tLeadSwitchOnDelayLevel2" .
+# 
+# https://w3id.org/baf#_tMaxChimneySweepFunction
+<https://w3id.org/baf#_tMaxChimneySweepFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMaxChimneySweepFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tMaxChimneySweepFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_tMaxChimneySweepFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum duration of chimney sweep function. Default setting = t#15 m" .
+<https://w3id.org/baf#_tMaxChimneySweepFunction> <http://www.w3.org/2000/01/rdf-schema#label> ".tMaxChimneySweepFunction" .
+# 
+# https://w3id.org/baf#_tMaxFlushPeriod
+<https://w3id.org/baf#_tMaxFlushPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMaxFlushPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tMaxFlushPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum time for the startup process. Default setting = t#15 m" .
+<https://w3id.org/baf#_tMaxFlushPeriod> <http://www.w3.org/2000/01/rdf-schema#label> ".tMaxFlushPeriod" .
+# 
+# https://w3id.org/baf#_tMaxOff
+<https://w3id.org/baf#_tMaxOff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMaxOff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_tMaxOff> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum turn-off time of the pump when\r\nblocking protection is enabled\r\nDefault setting = t#48h" .
+<https://w3id.org/baf#_tMaxOff> <http://www.w3.org/2000/01/rdf-schema#label> ".tMaxOff" .
+# 
+# https://w3id.org/baf#_tMaxRunTime
+<https://w3id.org/baf#_tMaxRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMaxRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigAnalog3Point_01> .
+<https://w3id.org/baf#_tMaxRunTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Max. running time, which the actuator\r\nneeds for the max. stroke\r\nDefault setting: t#120s" .
+<https://w3id.org/baf#_tMaxRunTime> <http://www.w3.org/2000/01/rdf-schema#label> ".tMaxRunTime" .
+# 
+# https://w3id.org/baf#_tMaxRuntimeValve
+<https://w3id.org/baf#_tMaxRuntimeValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMaxRuntimeValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tMaxRuntimeValve> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum runtime for 2-way valve. Default setting: t#30s" .
+<https://w3id.org/baf#_tMaxRuntimeValve> <http://www.w3.org/2000/01/rdf-schema#label> ".tMaxRuntimeValve" .
+# 
+# https://w3id.org/baf#_tMaxStartupMinBoilerTemperature
+<https://w3id.org/baf#_tMaxStartupMinBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMaxStartupMinBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tMaxStartupMinBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum time until minimum boiler temperature is achieved during the startup process. Default setting = t#10 m" .
+<https://w3id.org/baf#_tMaxStartupMinBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#label> ".tMaxStartupMinBoilerTemperature" .
+# 
+# https://w3id.org/baf#_tMinRuntimeLevel1
+<https://w3id.org/baf#_tMinRuntimeLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tMinRuntimeLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tMinRuntimeLevel1> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum runtime for lag boiler at Level 1. Default setting = t#3 m" .
+<https://w3id.org/baf#_tMinRuntimeLevel1> <http://www.w3.org/2000/01/rdf-schema#label> ".tMinRuntimeLevel1" .
+# 
+# https://w3id.org/baf#_tOffDelay
+<https://w3id.org/baf#_tOffDelay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOffDelay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_tOffDelay> <http://www.w3.org/2000/01/rdf-schema#comment> "Turn-off delay of the pump\r\nDefault setting = t#15 m" .
+<https://w3id.org/baf#_tOffDelay> <http://www.w3.org/2000/01/rdf-schema#label> ".tOffDelay" .
+# 
+# https://w3id.org/baf#_tOffDelayAdmixingPump
+<https://w3id.org/baf#_tOffDelayAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOffDelayAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tOffDelayAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-off delay for admixing pump. Default setting = t#1 m" .
+<https://w3id.org/baf#_tOffDelayAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> ".tOffDelayAdmixingPump" .
+# 
+# https://w3id.org/baf#_tOffDelayFullLoad
+<https://w3id.org/baf#_tOffDelayFullLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOffDelayFullLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tOffDelayFullLoad> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-off delay for full-load operation. Default setting: t#30s" .
+<https://w3id.org/baf#_tOffDelayFullLoad> <http://www.w3.org/2000/01/rdf-schema#label> ".tOffDelayFullLoad" .
+# 
+# https://w3id.org/baf#_tOffDelayPump
+<https://w3id.org/baf#_tOffDelayPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOffDelayPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tOffDelayPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-off delay for boiler circuit pump. Default setting = t#10 m" .
+<https://w3id.org/baf#_tOffDelayPump> <http://www.w3.org/2000/01/rdf-schema#label> ".tOffDelayPump" .
+# 
+# https://w3id.org/baf#_tOnDelayAlarm
+<https://w3id.org/baf#_tOnDelayAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOnDelayAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigContinuousDamper> .
+<https://w3id.org/baf#_tOnDelayAlarm> <http://www.w3.org/2000/01/rdf-schema#comment> "ON-delay for alarm\r\nDefault setting = t#5 m" .
+<https://w3id.org/baf#_tOnDelayAlarm> <http://www.w3.org/2000/01/rdf-schema#label> ".tOnDelayAlarm" .
+# 
+# https://w3id.org/baf#_tOnDelayPump
+<https://w3id.org/baf#_tOnDelayPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOnDelayPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tOnDelayPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-on delay for boiler circuit pump with one 2-way valve. Default setting = t#2 m" .
+<https://w3id.org/baf#_tOnDelayPump> <http://www.w3.org/2000/01/rdf-schema#label> ".tOnDelayPump" .
+# 
+# https://w3id.org/baf#_tOverride
+<https://w3id.org/baf#_tOverride> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tOverride> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigAnalog3Point_01> .
+<https://w3id.org/baf#_tOverride> <http://www.w3.org/2000/01/rdf-schema#comment> "Run-on time after reaching end\r\npositions" .
+<https://w3id.org/baf#_tOverride> <http://www.w3.org/2000/01/rdf-schema#label> ".tOverride" .
+# 
+# https://w3id.org/baf#_tPumpValveMaxOFF
+<https://w3id.org/baf#_tPumpValveMaxOFF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tPumpValveMaxOFF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tPumpValveMaxOFF> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum turn-off time of the pump and valve up to activation of blocking protection. Default setting = t#24h" .
+<https://w3id.org/baf#_tPumpValveMaxOFF> <http://www.w3.org/2000/01/rdf-schema#label> ".tPumpValveMaxOFF" .
+# 
+# https://w3id.org/baf#_tPumpValveON
+<https://w3id.org/baf#_tPumpValveON> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tPumpValveON> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tPumpValveON> <http://www.w3.org/2000/01/rdf-schema#comment> "Maintenance run time for pump and valve. Default setting: t#30s" .
+<https://w3id.org/baf#_tPumpValveON> <http://www.w3.org/2000/01/rdf-schema#label> ".tPumpValveON" .
+# 
+# https://w3id.org/baf#_tSwitchOn
+<https://w3id.org/baf#_tSwitchOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tSwitchOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_tSwitchOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Turn-on time of the pump when blocking\r\nprotection is enabled\r\nDefault setting: t#60s" .
+<https://w3id.org/baf#_tSwitchOn> <http://www.w3.org/2000/01/rdf-schema#label> ".tSwitchOn" .
+# 
+# https://w3id.org/baf#_tSwitchOnDelayLevel2
+<https://w3id.org/baf#_tSwitchOnDelayLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tSwitchOnDelayLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_tSwitchOnDelayLevel2> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-on delay for lag boiler at Level 2. Default setting = t#20 m" .
+<https://w3id.org/baf#_tSwitchOnDelayLevel2> <http://www.w3.org/2000/01/rdf-schema#label> ".tSwitchOnDelayLevel2" .
+# 
+# https://w3id.org/baf#_tT1
+<https://w3id.org/baf#_tT1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_tT1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_tT1> <http://www.w3.org/2000/01/rdf-schema#comment> "Time constant for the PT1 circuit\r\nDefault setting: t#2s" .
+<https://w3id.org/baf#_tT1> <http://www.w3.org/2000/01/rdf-schema#label> ".tT1" .
+# 
+# https://w3id.org/baf#_xAdmixingPump
+<https://w3id.org/baf#_xAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_xAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Admixing pump present. Default setting = FALSE" .
+<https://w3id.org/baf#_xAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> ".xAdmixingPump" .
+# 
+# https://w3id.org/baf#_xAutoQuit
+<https://w3id.org/baf#_xAutoQuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xAutoQuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigLowPassFilter> .
+<https://w3id.org/baf#_xAutoQuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_xAutoQuit> <http://www.w3.org/2000/01/rdf-schema#comment> "Automatic acknowledgement of the alarm or fault messages" .
+<https://w3id.org/baf#_xAutoQuit> <http://www.w3.org/2000/01/rdf-schema#label> ".xAutoQuit" .
+# 
+# https://w3id.org/baf#_xBlockingProtection
+<https://w3id.org/baf#_xBlockingProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xBlockingProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_xBlockingProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_xBlockingProtection> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable blocking protection. Default setting = TRUE" .
+<https://w3id.org/baf#_xBlockingProtection> <http://www.w3.org/2000/01/rdf-schema#label> ".xBlockingProtection" .
+# 
+# https://w3id.org/baf#_xControlSpeedLevel
+<https://w3id.org/baf#_xControlSpeedLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xControlSpeedLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigCascadeController> .
+<https://w3id.org/baf#_xControlSpeedLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable for determining the required fan level\r\nDefault setting = FALSE" .
+<https://w3id.org/baf#_xControlSpeedLevel> <http://www.w3.org/2000/01/rdf-schema#label> ".xControlSpeedLevel" .
+# 
+# https://w3id.org/baf#_xFeedbackDamper
+<https://w3id.org/baf#_xFeedbackDamper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xFeedbackDamper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigContinuousDamper> .
+<https://w3id.org/baf#_xFeedbackDamper> <http://www.w3.org/2000/01/rdf-schema#comment> "Check-back signal Damper position present\r\nDefault setting = FALSE" .
+<https://w3id.org/baf#_xFeedbackDamper> <http://www.w3.org/2000/01/rdf-schema#label> ".xFeedbackDamper" .
+# 
+# https://w3id.org/baf#_xLimitSwitch
+<https://w3id.org/baf#_xLimitSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xLimitSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigAnalog3Point_01> .
+<https://w3id.org/baf#_xLimitSwitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Monitoring of the limit switches\r\nDefault setting = FALSE" .
+<https://w3id.org/baf#_xLimitSwitch> <http://www.w3.org/2000/01/rdf-schema#label> ".xLimitSwitch" .
+# 
+# https://w3id.org/baf#_xPumpWinter
+<https://w3id.org/baf#_xPumpWinter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xPumpWinter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_xPumpWinter> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable freeze protection" .
+<https://w3id.org/baf#_xPumpWinter> <http://www.w3.org/2000/01/rdf-schema#label> ".xPumpWinter" .
+# 
+# https://w3id.org/baf#_xSmallWaterVolume
+<https://w3id.org/baf#_xSmallWaterVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xSmallWaterVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_xSmallWaterVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "Low volume of water in boiler. Default setting = FALSE" .
+<https://w3id.org/baf#_xSmallWaterVolume> <http://www.w3.org/2000/01/rdf-schema#label> ".xSmallWaterVolume" .
+# 
+# https://w3id.org/baf#_xThreeWayValve
+<https://w3id.org/baf#_xThreeWayValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xThreeWayValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_xThreeWayValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfigValveAndPump> .
+<https://w3id.org/baf#_xThreeWayValve> <http://www.w3.org/2000/01/rdf-schema#comment> "3-way valve present in boiler circuit. Default setting = TRUE" .
+<https://w3id.org/baf#_xThreeWayValve> <http://www.w3.org/2000/01/rdf-schema#label> ".xThreeWayValve" .
+# 
+# https://w3id.org/baf#_xTwoWayValve
+<https://w3id.org/baf#_xTwoWayValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xTwoWayValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_xTwoWayValve> <http://www.w3.org/2000/01/rdf-schema#comment> "2-way valve (boiler valve) present. Default setting = FALSE" .
+<https://w3id.org/baf#_xTwoWayValve> <http://www.w3.org/2000/01/rdf-schema#label> ".xTwoWayValve" .
+# 
+# https://w3id.org/baf#_xTwoWayValvePermanentOpen
+<https://w3id.org/baf#_xTwoWayValvePermanentOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#_xTwoWayValvePermanentOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/baf#typConfig2LevelBoiler> .
+<https://w3id.org/baf#_xTwoWayValvePermanentOpen> <http://www.w3.org/2000/01/rdf-schema#comment> "2-way valve closed in the event of a fault. Default setting = FALSE" .
+<https://w3id.org/baf#_xTwoWayValvePermanentOpen> <http://www.w3.org/2000/01/rdf-schema#label> ".xTwoWayValvePermanentOpen" .
+# 
+# https://w3id.org/baf#bBoilerNumber
+<https://w3id.org/baf#bBoilerNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#bBoilerNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#bBoilerNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler number. Value range = 1 – 2. Default setting = 1" .
+<https://w3id.org/baf#bBoilerNumber> <http://www.w3.org/2000/01/rdf-schema#label> "bBoilerNumber" .
+# 
+# https://w3id.org/baf#bLeadBoiler
+<https://w3id.org/baf#bLeadBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#bLeadBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#bLeadBoiler> <http://www.w3.org/2000/01/rdf-schema#comment> "Defining of lead boiler. Value range = 0 – 2 (0 = both boilers in parallel). Default setting = 1" .
+<https://w3id.org/baf#bLeadBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "bLeadBoiler" .
+# 
+# https://w3id.org/baf#bManualLevelBoiler
+<https://w3id.org/baf#bManualLevelBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#bManualLevelBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#bManualLevelBoiler> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler level in Manual mode. Value range = 0 – 2" .
+<https://w3id.org/baf#bManualLevelBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "bManualLevelBoiler" .
+# 
+# https://w3id.org/baf#dwOperatingMinutes
+<https://w3id.org/baf#dwOperatingMinutes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#dwOperatingMinutes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#dwOperatingMinutes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#dwOperatingMinutes> <http://www.w3.org/2000/01/rdf-schema#comment> "Operating time in minutes" .
+<https://w3id.org/baf#dwOperatingMinutes> <http://www.w3.org/2000/01/rdf-schema#label> "dwOperatingMinutes" .
+# 
+# https://w3id.org/baf#rActualBoilerTemperature
+<https://w3id.org/baf#rActualBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rActualBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rActualBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual boiler temperature [°C]" .
+<https://w3id.org/baf#rActualBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rActualBoilerTemperature" .
+# 
+# https://w3id.org/baf#rActualPosition
+<https://w3id.org/baf#rActualPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rActualPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rActualPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual position of the continuous damper [%]" .
+<https://w3id.org/baf#rActualPosition> <http://www.w3.org/2000/01/rdf-schema#label> "rActualPosition" .
+# 
+# https://w3id.org/baf#rActualReturnTemperature
+<https://w3id.org/baf#rActualReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rActualReturnTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rActualReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual boiler return temperature [°C]" .
+<https://w3id.org/baf#rActualReturnTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rActualReturnTemperature" .
+# 
+# https://w3id.org/baf#rActualValue
+<https://w3id.org/baf#rActualValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rActualValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rActualValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual value [°C]" .
+<https://w3id.org/baf#rActualValue> <http://www.w3.org/2000/01/rdf-schema#label> "rActualValue" .
+# 
+# https://w3id.org/baf#rExhaustAirTemperature
+<https://w3id.org/baf#rExhaustAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rExhaustAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rExhaustAirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual value for exhaust air temperature [°C]" .
+<https://w3id.org/baf#rExhaustAirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rExhaustAirTemperature" .
+# 
+# https://w3id.org/baf#rExitAirTemperature
+<https://w3id.org/baf#rExitAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rExitAirTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rExitAirTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual value exhaust air temperature [°C]" .
+<https://w3id.org/baf#rExitAirTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rExitAirTemperature" .
+# 
+# https://w3id.org/baf#rInput
+<https://w3id.org/baf#rInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Input value" .
+<https://w3id.org/baf#rInput> <http://www.w3.org/2000/01/rdf-schema#label> "rInput" .
+# 
+# https://w3id.org/baf#rManualValue
+<https://w3id.org/baf#rManualValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rManualValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rManualValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value in manual mode [%] or [°C]\r\nValue range = 0 – 100%\r\nDefault setting = 22 °C" .
+<https://w3id.org/baf#rManualValue> <http://www.w3.org/2000/01/rdf-schema#label> "rManualValue" .
+# 
+# https://w3id.org/baf#rManualValueValve
+<https://w3id.org/baf#rManualValueValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rManualValueValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rManualValueValve> <http://www.w3.org/2000/01/rdf-schema#comment> "Valve position in Manual mode [%]" .
+<https://w3id.org/baf#rManualValueValve> <http://www.w3.org/2000/01/rdf-schema#label> "rManualValueValve" .
+# 
+# https://w3id.org/baf#rMaxReferenceValue
+<https://w3id.org/baf#rMaxReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rMaxReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rMaxReferenceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum reference value for slave controller" .
+<https://w3id.org/baf#rMaxReferenceValue> <http://www.w3.org/2000/01/rdf-schema#label> "rMaxReferenceValue" .
+# 
+# https://w3id.org/baf#rMinBoilerTemperature
+<https://w3id.org/baf#rMinBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rMinBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rMinBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum boiler temperature" .
+<https://w3id.org/baf#rMinBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rMinBoilerTemperature" .
+# 
+# https://w3id.org/baf#rMinExitAir
+<https://w3id.org/baf#rMinExitAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rMinExitAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rMinExitAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum exhaust air temperature for\r\nregulation of the plate-type heat exchanger\r\nin the incoming air duct [°C]\r\nDefault setting = 6 °C" .
+<https://w3id.org/baf#rMinExitAir> <http://www.w3.org/2000/01/rdf-schema#label> "rMinExitAir" .
+# 
+# https://w3id.org/baf#rMinReferenceValue
+<https://w3id.org/baf#rMinReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rMinReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rMinReferenceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum reference value for slave controller" .
+<https://w3id.org/baf#rMinReferenceValue> <http://www.w3.org/2000/01/rdf-schema#label> "rMinReferenceValue" .
+# 
+# https://w3id.org/baf#rOutput
+<https://w3id.org/baf#rOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Filtered output value" .
+<https://w3id.org/baf#rOutput> <http://www.w3.org/2000/01/rdf-schema#label> "rOutput" .
+# 
+# https://w3id.org/baf#rOutsideTemperature
+<https://w3id.org/baf#rOutsideTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rOutsideTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual value outside temperature [°C]" .
+<https://w3id.org/baf#rOutsideTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rOutsideTemperature" .
+# 
+# https://w3id.org/baf#rReferenceBoilerTemperature
+<https://w3id.org/baf#rReferenceBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rReferenceBoilerTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rReferenceBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "Specified boiler temperature [°C]" .
+<https://w3id.org/baf#rReferenceBoilerTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "rReferenceBoilerTemperature" .
+# 
+# https://w3id.org/baf#rReferencePosition
+<https://w3id.org/baf#rReferencePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rReferencePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rReferencePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference position of the continuous damper [%]" .
+<https://w3id.org/baf#rReferencePosition> <http://www.w3.org/2000/01/rdf-schema#label> "rReferencePosition" .
+# 
+# https://w3id.org/baf#rReferenceValue
+<https://w3id.org/baf#rReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rReferenceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rReferenceValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference value [°C]\r\nDefault setting = 22 °C" .
+<https://w3id.org/baf#rReferenceValue> <http://www.w3.org/2000/01/rdf-schema#label> "rReferenceValue" .
+# 
+# https://w3id.org/baf#rReferenceValueSlaveController
+<https://w3id.org/baf#rReferenceValueSlaveController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rReferenceValueSlaveController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rReferenceValueSlaveController> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference value for slave controller [°C]" .
+<https://w3id.org/baf#rReferenceValueSlaveController> <http://www.w3.org/2000/01/rdf-schema#label> "rReferenceValueSlaveController" .
+# 
+# https://w3id.org/baf#rValvePosition
+<https://w3id.org/baf#rValvePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rValvePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rValvePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Specified position of valve [%]" .
+<https://w3id.org/baf#rValvePosition> <http://www.w3.org/2000/01/rdf-schema#label> "rValvePosition" .
+# 
+# https://w3id.org/baf#rX1
+<https://w3id.org/baf#rX1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rX1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rX1> <http://www.w3.org/2000/01/rdf-schema#comment> "x-coordinate of the first value" .
+<https://w3id.org/baf#rX1> <http://www.w3.org/2000/01/rdf-schema#label> "rX1" .
+# 
+# https://w3id.org/baf#rX2
+<https://w3id.org/baf#rX2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rX2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rX2> <http://www.w3.org/2000/01/rdf-schema#comment> "x-coordinate of the second value" .
+<https://w3id.org/baf#rX2> <http://www.w3.org/2000/01/rdf-schema#label> "rX2" .
+# 
+# https://w3id.org/baf#rY
+<https://w3id.org/baf#rY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value [%]" .
+<https://w3id.org/baf#rY> <http://www.w3.org/2000/01/rdf-schema#label> "rY" .
+# 
+# https://w3id.org/baf#rY1
+<https://w3id.org/baf#rY1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rY1> <http://www.w3.org/2000/01/rdf-schema#comment> "y-coordinate of the first value" .
+<https://w3id.org/baf#rY1> <http://www.w3.org/2000/01/rdf-schema#label> "rY1" .
+# 
+# https://w3id.org/baf#rY2
+<https://w3id.org/baf#rY2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rY2> <http://www.w3.org/2000/01/rdf-schema#comment> "y-coordinate of the second value" .
+<https://w3id.org/baf#rY2> <http://www.w3.org/2000/01/rdf-schema#label> "rY2" .
+# 
+# https://w3id.org/baf#rY_DamperExhaustAir
+<https://w3id.org/baf#rY_DamperExhaustAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_DamperExhaustAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY_DamperExhaustAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for plate-type heat exchanger in\r\nexhaust air duct [%]\r\nValue range = 0 – 100" .
+<https://w3id.org/baf#rY_DamperExhaustAir> <http://www.w3.org/2000/01/rdf-schema#label> "rY_DamperExhaustAir" .
+# 
+# https://w3id.org/baf#rY_DamperSupplyAir
+<https://w3id.org/baf#rY_DamperSupplyAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_DamperSupplyAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY_DamperSupplyAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for plate-type heat exchanger in\r\nincoming air duct [%]\r\nValue range = 0 – 100" .
+<https://w3id.org/baf#rY_DamperSupplyAir> <http://www.w3.org/2000/01/rdf-schema#label> "rY_DamperSupplyAir" .
+# 
+# https://w3id.org/baf#rY_Dehumidifying
+<https://w3id.org/baf#rY_Dehumidifying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_Dehumidifying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rY_Dehumidifying> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for dehumidifier [%]" .
+<https://w3id.org/baf#rY_Dehumidifying> <http://www.w3.org/2000/01/rdf-schema#label> "rY_Dehumidifying" .
+# 
+# https://w3id.org/baf#rY_EnergyRecovery
+<https://w3id.org/baf#rY_EnergyRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_EnergyRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rY_EnergyRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY_EnergyRecovery> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for energy recovery [%]" .
+<https://w3id.org/baf#rY_EnergyRecovery> <http://www.w3.org/2000/01/rdf-schema#label> "rY_EnergyRecovery" .
+# 
+# https://w3id.org/baf#rY_FreshAir
+<https://w3id.org/baf#rY_FreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_FreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY_FreshAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value mixed air damper [%]" .
+<https://w3id.org/baf#rY_FreshAir> <http://www.w3.org/2000/01/rdf-schema#label> "rY_FreshAir" .
+# 
+# https://w3id.org/baf#rY_Heating
+<https://w3id.org/baf#rY_Heating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_Heating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY_Heating> <http://www.w3.org/2000/01/rdf-schema#comment> "Valve position heating register" .
+<https://w3id.org/baf#rY_Heating> <http://www.w3.org/2000/01/rdf-schema#label> "rY_Heating" .
+# 
+# https://w3id.org/baf#rY_MinFreshAir
+<https://w3id.org/baf#rY_MinFreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_MinFreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#rY_MinFreshAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum fresh air rate [%]" .
+<https://w3id.org/baf#rY_MinFreshAir> <http://www.w3.org/2000/01/rdf-schema#label> "rY_MinFreshAir" .
+# 
+# https://w3id.org/baf#rY_Valve
+<https://w3id.org/baf#rY_Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#rY_Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#rY_Valve> <http://www.w3.org/2000/01/rdf-schema#comment> "Valve position, 3-way valve [%]. Value range = 0 – 100" .
+<https://w3id.org/baf#rY_Valve> <http://www.w3.org/2000/01/rdf-schema#label> "rY_Valve" .
+# 
+# https://w3id.org/baf#typSequenceController
+<https://w3id.org/baf#typSequenceController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#typSequenceController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#typSequenceController> <http://www.w3.org/2000/01/rdf-schema#comment> "Data structure for data exchange between the individual sequences and the sequence controller" .
+<https://w3id.org/baf#typSequenceController> <http://www.w3.org/2000/01/rdf-schema#label> "typSequenceController" .
+# 
+# https://w3id.org/baf#typStatusBoiler
+<https://w3id.org/baf#typStatusBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#typStatusBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#typStatusBoiler> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler status for the strategy module" .
+<https://w3id.org/baf#typStatusBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "typStatusBoiler" .
+# 
+# https://w3id.org/baf#wStatus
+<https://w3id.org/baf#wStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Display current status\r\n0 = OK\r\n1 = On \r\n2 = Off\r\n10 = Error Pump\r\n29 = Error Safety chain\r\n30 = Condensation protection\r\n31 = Chimney sweep function\r\n32 = Overheating protection\r\n33 = Error Valve\r\n34 = Follow up time\r\n35 = Manual operation\r\n36 = In motion\r\n39 = Reference value exceeded\r\n40 = Startup behaviour\r\n42 = Error Damper position\r\n46 = Error limit switch\r\n47 = Synchronisation" .
+<https://w3id.org/baf#wStatus> <http://www.w3.org/2000/01/rdf-schema#label> "wStatus" .
+# 
+# https://w3id.org/baf#wY
+<https://w3id.org/baf#wY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value:\r\nValue range: 0 −32767 for damper" .
+<https://w3id.org/baf#wY> <http://www.w3.org/2000/01/rdf-schema#label> "wY" .
+# 
+# https://w3id.org/baf#wY_DamperExhaustAir
+<https://w3id.org/baf#wY_DamperExhaustAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY_DamperExhaustAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY_DamperExhaustAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for plate-type heat exchanger in\r\nthe exhaust air duct\r\nValue range = 0 – 32767" .
+<https://w3id.org/baf#wY_DamperExhaustAir> <http://www.w3.org/2000/01/rdf-schema#label> "wY_DamperExhaustAir" .
+# 
+# https://w3id.org/baf#wY_DamperSupplyAir
+<https://w3id.org/baf#wY_DamperSupplyAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY_DamperSupplyAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY_DamperSupplyAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for plate-type heat exchanger in\r\nthe incoming air duct\r\nValue range = 0 – 32767" .
+<https://w3id.org/baf#wY_DamperSupplyAir> <http://www.w3.org/2000/01/rdf-schema#label> "wY_DamperSupplyAir" .
+# 
+# https://w3id.org/baf#wY_EnergyRecovery
+<https://w3id.org/baf#wY_EnergyRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY_EnergyRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY_EnergyRecovery> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for energy recovery\r\nValue range = 0 – 32767" .
+<https://w3id.org/baf#wY_EnergyRecovery> <http://www.w3.org/2000/01/rdf-schema#label> "wY_EnergyRecovery" .
+# 
+# https://w3id.org/baf#wY_FreshAir
+<https://w3id.org/baf#wY_FreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY_FreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY_FreshAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Set value for mixed air damper\r\nValue range = 0 – 32767" .
+<https://w3id.org/baf#wY_FreshAir> <http://www.w3.org/2000/01/rdf-schema#label> "wY_FreshAir" .
+# 
+# https://w3id.org/baf#wY_Heating
+<https://w3id.org/baf#wY_Heating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY_Heating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY_Heating> <http://www.w3.org/2000/01/rdf-schema#comment> "Valve position heating register\r\nValue range = 0 – 32767" .
+<https://w3id.org/baf#wY_Heating> <http://www.w3.org/2000/01/rdf-schema#label> "wY_Heating" .
+# 
+# https://w3id.org/baf#wY_Valve
+<https://w3id.org/baf#wY_Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#wY_Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#wY_Valve> <http://www.w3.org/2000/01/rdf-schema#comment> "Valve position, 3-way valve. Value range = 0 – 32767" .
+<https://w3id.org/baf#wY_Valve> <http://www.w3.org/2000/01/rdf-schema#label> "wY_Valve" .
+# 
+# https://w3id.org/baf#xActive
+<https://w3id.org/baf#xActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xActive> <http://www.w3.org/2000/01/rdf-schema#comment> "Active indicator for sequence" .
+<https://w3id.org/baf#xActive> <http://www.w3.org/2000/01/rdf-schema#label> "xActive" .
+# 
+# https://w3id.org/baf#xAdmixingPump
+<https://w3id.org/baf#xAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switching signal for the admixing pump" .
+<https://w3id.org/baf#xAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> "xAdmixingPump" .
+# 
+# https://w3id.org/baf#xAlarm
+<https://w3id.org/baf#xAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xAlarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xAlarm> <http://www.w3.org/2000/01/rdf-schema#comment> "Output signal error" .
+<https://w3id.org/baf#xAlarm> <http://www.w3.org/2000/01/rdf-schema#label> "xAlarm" .
+# 
+# https://w3id.org/baf#xAuto
+<https://w3id.org/baf#xAuto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xAuto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xAuto> <http://www.w3.org/2000/01/rdf-schema#comment> "Automatic mode" .
+<https://w3id.org/baf#xAuto> <http://www.w3.org/2000/01/rdf-schema#label> "xAuto" .
+# 
+# https://w3id.org/baf#xBoilerPump
+<https://w3id.org/baf#xBoilerPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xBoilerPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xBoilerPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler circuit pump" .
+<https://w3id.org/baf#xBoilerPump> <http://www.w3.org/2000/01/rdf-schema#label> "xBoilerPump" .
+# 
+# https://w3id.org/baf#xChimneySweep
+<https://w3id.org/baf#xChimneySweep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xChimneySweep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xChimneySweep> <http://www.w3.org/2000/01/rdf-schema#comment> "Chimney sweep function active" .
+<https://w3id.org/baf#xChimneySweep> <http://www.w3.org/2000/01/rdf-schema#label> "xChimneySweep" .
+# 
+# https://w3id.org/baf#xChimneySweepFunction
+<https://w3id.org/baf#xChimneySweepFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xChimneySweepFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xChimneySweepFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Activate chimney sweep function" .
+<https://w3id.org/baf#xChimneySweepFunction> <http://www.w3.org/2000/01/rdf-schema#label> "xChimneySweepFunction" .
+# 
+# https://w3id.org/baf#xClose
+<https://w3id.org/baf#xClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xClose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xClose> <http://www.w3.org/2000/01/rdf-schema#comment> "Engine coil CLOSED" .
+<https://w3id.org/baf#xClose> <http://www.w3.org/2000/01/rdf-schema#label> "xClose" .
+# 
+# https://w3id.org/baf#xCondensationProtection
+<https://w3id.org/baf#xCondensationProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xCondensationProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xCondensationProtection> <http://www.w3.org/2000/01/rdf-schema#comment> "Condensation protection" .
+<https://w3id.org/baf#xCondensationProtection> <http://www.w3.org/2000/01/rdf-schema#label> "xCondensationProtection" .
+# 
+# https://w3id.org/baf#xDifferentialPressureMonitor
+<https://w3id.org/baf#xDifferentialPressureMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xDifferentialPressureMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xDifferentialPressureMonitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Differential pressure sensor plate-type\r\nheat exchanger\r\nDefault setting = TRUE" .
+<https://w3id.org/baf#xDifferentialPressureMonitor> <http://www.w3.org/2000/01/rdf-schema#label> "xDifferentialPressureMonitor" .
+# 
+# https://w3id.org/baf#xEnable
+<https://w3id.org/baf#xEnable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xEnable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xEnable> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable controller\r\nDefault setting = TRUE" .
+<https://w3id.org/baf#xEnable> <http://www.w3.org/2000/01/rdf-schema#label> "xEnable" .
+# 
+# https://w3id.org/baf#xEnablePump
+<https://w3id.org/baf#xEnablePump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xEnablePump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xEnablePump> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable pump and valve control" .
+<https://w3id.org/baf#xEnablePump> <http://www.w3.org/2000/01/rdf-schema#label> "xEnablePump" .
+# 
+# https://w3id.org/baf#xEnableSystem
+<https://w3id.org/baf#xEnableSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xEnableSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xEnableSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable FbStartStop\r\nDefault setting = TRUE" .
+<https://w3id.org/baf#xEnableSystem> <http://www.w3.org/2000/01/rdf-schema#label> "xEnableSystem" .
+# 
+# https://w3id.org/baf#xError
+<https://w3id.org/baf#xError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xError> <http://www.w3.org/2000/01/rdf-schema#comment> "Some fault" .
+<https://w3id.org/baf#xError> <http://www.w3.org/2000/01/rdf-schema#label> "xError" .
+# 
+# https://w3id.org/baf#xErrorAdmixingPump
+<https://w3id.org/baf#xErrorAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xErrorAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xErrorAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Admixing pump error" .
+<https://w3id.org/baf#xErrorAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> "xErrorAdmixingPump" .
+# 
+# https://w3id.org/baf#xErrorBoilerPump
+<https://w3id.org/baf#xErrorBoilerPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xErrorBoilerPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xErrorBoilerPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler circuit pump error" .
+<https://w3id.org/baf#xErrorBoilerPump> <http://www.w3.org/2000/01/rdf-schema#label> "xErrorBoilerPump" .
+# 
+# https://w3id.org/baf#xErrorPump
+<https://w3id.org/baf#xErrorPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xErrorPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xErrorPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Error message pump" .
+<https://w3id.org/baf#xErrorPump> <http://www.w3.org/2000/01/rdf-schema#label> "xErrorPump" .
+# 
+# https://w3id.org/baf#xErrorSequence
+<https://w3id.org/baf#xErrorSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xErrorSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xErrorSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Error check-back signal from device" .
+<https://w3id.org/baf#xErrorSequence> <http://www.w3.org/2000/01/rdf-schema#label> "xErrorSequence" .
+# 
+# https://w3id.org/baf#xErrorStartUp
+<https://w3id.org/baf#xErrorStartUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xErrorStartUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xErrorStartUp> <http://www.w3.org/2000/01/rdf-schema#comment> "Start-up system fault" .
+<https://w3id.org/baf#xErrorStartUp> <http://www.w3.org/2000/01/rdf-schema#label> "xErrorStartUp" .
+# 
+# https://w3id.org/baf#xFeedbackManualOperation
+<https://w3id.org/baf#xFeedbackManualOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xFeedbackManualOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xFeedbackManualOperation> <http://www.w3.org/2000/01/rdf-schema#comment> "External check-back signal, Manual mode" .
+<https://w3id.org/baf#xFeedbackManualOperation> <http://www.w3.org/2000/01/rdf-schema#label> "xFeedbackManualOperation" .
+# 
+# https://w3id.org/baf#xFollowUpTime
+<https://w3id.org/baf#xFollowUpTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xFollowUpTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xFollowUpTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Pump is in the follo-up phase" .
+<https://w3id.org/baf#xFollowUpTime> <http://www.w3.org/2000/01/rdf-schema#label> "xFollowUpTime" .
+# 
+# https://w3id.org/baf#xFrostAlarmAir
+<https://w3id.org/baf#xFrostAlarmAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xFrostAlarmAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xFrostAlarmAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Frost alarm from FbAntifreezeAir" .
+<https://w3id.org/baf#xFrostAlarmAir> <http://www.w3.org/2000/01/rdf-schema#label> "xFrostAlarmAir" .
+# 
+# https://w3id.org/baf#xFrostAlarmWater
+<https://w3id.org/baf#xFrostAlarmWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xFrostAlarmWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xFrostAlarmWater> <http://www.w3.org/2000/01/rdf-schema#comment> "Frost alarm from FbAntifreezeWater" .
+<https://w3id.org/baf#xFrostAlarmWater> <http://www.w3.org/2000/01/rdf-schema#label> "xFrostAlarmWater" .
+# 
+# https://w3id.org/baf#xFullLoad
+<https://w3id.org/baf#xFullLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xFullLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xFullLoad> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler is to run at full load" .
+<https://w3id.org/baf#xFullLoad> <http://www.w3.org/2000/01/rdf-schema#label> "xFullLoad" .
+# 
+# https://w3id.org/baf#xInit
+<https://w3id.org/baf#xInit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xInit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xInit> <http://www.w3.org/2000/01/rdf-schema#comment> "A positive flank starts the reference run" .
+<https://w3id.org/baf#xInit> <http://www.w3.org/2000/01/rdf-schema#label> "xInit" .
+# 
+# https://w3id.org/baf#xLevel1
+<https://w3id.org/baf#xLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xLevel1> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler Level 1" .
+<https://w3id.org/baf#xLevel1> <http://www.w3.org/2000/01/rdf-schema#label> "xLevel1" .
+# 
+# https://w3id.org/baf#xLevel2
+<https://w3id.org/baf#xLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xLevel2> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler Level 2" .
+<https://w3id.org/baf#xLevel2> <http://www.w3.org/2000/01/rdf-schema#label> "xLevel2" .
+# 
+# https://w3id.org/baf#xLimitSwitch
+<https://w3id.org/baf#xLimitSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xLimitSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xLimitSwitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Limit switch (opend, closed)" .
+<https://w3id.org/baf#xLimitSwitch> <http://www.w3.org/2000/01/rdf-schema#label> "xLimitSwitch" .
+# 
+# https://w3id.org/baf#xLimitSwitchValve
+<https://w3id.org/baf#xLimitSwitchValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xLimitSwitchValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xLimitSwitchValve> <http://www.w3.org/2000/01/rdf-schema#comment> "Limit switch, 2-way valve. Default setting = TRUE" .
+<https://w3id.org/baf#xLimitSwitchValve> <http://www.w3.org/2000/01/rdf-schema#label> "xLimitSwitchValve" .
+# 
+# https://w3id.org/baf#xManual
+<https://w3id.org/baf#xManual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xManual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xManual> <http://www.w3.org/2000/01/rdf-schema#comment> "Manual mode" .
+<https://w3id.org/baf#xManual> <http://www.w3.org/2000/01/rdf-schema#label> "xManual" .
+# 
+# https://w3id.org/baf#xManualOnAdmixingPump
+<https://w3id.org/baf#xManualOnAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xManualOnAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xManualOnAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch on admixing pump manually" .
+<https://w3id.org/baf#xManualOnAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> "xManualOnAdmixingPump" .
+# 
+# https://w3id.org/baf#xManualOnBoilerPump
+<https://w3id.org/baf#xManualOnBoilerPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xManualOnBoilerPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xManualOnBoilerPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch on boiler circuit pump manually" .
+<https://w3id.org/baf#xManualOnBoilerPump> <http://www.w3.org/2000/01/rdf-schema#label> "xManualOnBoilerPump" .
+# 
+# https://w3id.org/baf#xManualOperation
+<https://w3id.org/baf#xManualOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xManualOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xManualOperation> <http://www.w3.org/2000/01/rdf-schema#comment> "Enable manual operation" .
+<https://w3id.org/baf#xManualOperation> <http://www.w3.org/2000/01/rdf-schema#label> "xManualOperation" .
+# 
+# https://w3id.org/baf#xManualSwitchPump
+<https://w3id.org/baf#xManualSwitchPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xManualSwitchPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xManualSwitchPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch on pump manually" .
+<https://w3id.org/baf#xManualSwitchPump> <http://www.w3.org/2000/01/rdf-schema#label> "xManualSwitchPump" .
+# 
+# https://w3id.org/baf#xMaximalThermostat
+<https://w3id.org/baf#xMaximalThermostat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xMaximalThermostat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xMaximalThermostat> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum thermostat for heating circuit\r\nDefault setting = TRUE" .
+<https://w3id.org/baf#xMaximalThermostat> <http://www.w3.org/2000/01/rdf-schema#label> "xMaximalThermostat" .
+# 
+# https://w3id.org/baf#xMinFreshAir
+<https://w3id.org/baf#xMinFreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xMinFreshAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xMinFreshAir> <http://www.w3.org/2000/01/rdf-schema#comment> "Override mixed air damper using the minimum fresh air rate" .
+<https://w3id.org/baf#xMinFreshAir> <http://www.w3.org/2000/01/rdf-schema#label> "xMinFreshAir" .
+# 
+# https://w3id.org/baf#xMotorProtection
+<https://w3id.org/baf#xMotorProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xMotorProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xMotorProtection> <http://www.w3.org/2000/01/rdf-schema#comment> "Motor protection switch pump\r\nDefault setting = TRUE" .
+<https://w3id.org/baf#xMotorProtection> <http://www.w3.org/2000/01/rdf-schema#label> "xMotorProtection" .
+# 
+# https://w3id.org/baf#xMotorProtectionAdmixingPump
+<https://w3id.org/baf#xMotorProtectionAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xMotorProtectionAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xMotorProtectionAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Motor protection switch, Admixing pump. Default setting = TRUE" .
+<https://w3id.org/baf#xMotorProtectionAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> "xMotorProtectionAdmixingPump" .
+# 
+# https://w3id.org/baf#xMotorProtectionPump
+<https://w3id.org/baf#xMotorProtectionPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xMotorProtectionPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xMotorProtectionPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Motor protection switch, Boiler circuit pump. Default setting = TRUE" .
+<https://w3id.org/baf#xMotorProtectionPump> <http://www.w3.org/2000/01/rdf-schema#label> "xMotorProtectionPump" .
+# 
+# https://w3id.org/baf#xNightVentilation
+<https://w3id.org/baf#xNightVentilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xNightVentilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xNightVentilation> <http://www.w3.org/2000/01/rdf-schema#comment> "Opening damper during night ventilation" .
+<https://w3id.org/baf#xNightVentilation> <http://www.w3.org/2000/01/rdf-schema#label> "xNightVentilation" .
+# 
+# https://w3id.org/baf#xOpen
+<https://w3id.org/baf#xOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xOpen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xOpen> <http://www.w3.org/2000/01/rdf-schema#comment> "Engine coil OPEN" .
+<https://w3id.org/baf#xOpen> <http://www.w3.org/2000/01/rdf-schema#label> "xOpen" .
+# 
+# https://w3id.org/baf#xPump
+<https://w3id.org/baf#xPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Switching signal for the pump" .
+<https://w3id.org/baf#xPump> <http://www.w3.org/2000/01/rdf-schema#label> "xPump" .
+# 
+# https://w3id.org/baf#xQuit
+<https://w3id.org/baf#xQuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xQuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xQuit> <http://www.w3.org/2000/01/rdf-schema#comment> "Error message acknowledgement" .
+<https://w3id.org/baf#xQuit> <http://www.w3.org/2000/01/rdf-schema#label> "xQuit" .
+# 
+# https://w3id.org/baf#xRepairSwitch
+<https://w3id.org/baf#xRepairSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xRepairSwitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xRepairSwitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Repair switch pump\r\nDefault setting = TRUE" .
+<https://w3id.org/baf#xRepairSwitch> <http://www.w3.org/2000/01/rdf-schema#label> "xRepairSwitch" .
+# 
+# https://w3id.org/baf#xRepairSwitchAdmixingPump
+<https://w3id.org/baf#xRepairSwitchAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xRepairSwitchAdmixingPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xRepairSwitchAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Repair switch, Admixing pump. Default setting = TRUE" .
+<https://w3id.org/baf#xRepairSwitchAdmixingPump> <http://www.w3.org/2000/01/rdf-schema#label> "xRepairSwitchAdmixingPump" .
+# 
+# https://w3id.org/baf#xRepairSwitchPump
+<https://w3id.org/baf#xRepairSwitchPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xRepairSwitchPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xRepairSwitchPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Repair switch, Boiler circuit pump. Default setting = TRUE" .
+<https://w3id.org/baf#xRepairSwitchPump> <http://www.w3.org/2000/01/rdf-schema#label> "xRepairSwitchPump" .
+# 
+# https://w3id.org/baf#xSafetyChain
+<https://w3id.org/baf#xSafetyChain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xSafetyChain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xSafetyChain> <http://www.w3.org/2000/01/rdf-schema#comment> "Check-back signal from boiler safety chain. Default setting = TRUE" .
+<https://w3id.org/baf#xSafetyChain> <http://www.w3.org/2000/01/rdf-schema#label> "xSafetyChain" .
+# 
+# https://w3id.org/baf#xSpeedLevel1
+<https://w3id.org/baf#xSpeedLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xSpeedLevel1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xSpeedLevel1> <http://www.w3.org/2000/01/rdf-schema#comment> "Request fan level 1" .
+<https://w3id.org/baf#xSpeedLevel1> <http://www.w3.org/2000/01/rdf-schema#label> "xSpeedLevel1" .
+# 
+# https://w3id.org/baf#xSpeedLevel2
+<https://w3id.org/baf#xSpeedLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xSpeedLevel2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xSpeedLevel2> <http://www.w3.org/2000/01/rdf-schema#comment> "Request fan level 2" .
+<https://w3id.org/baf#xSpeedLevel2> <http://www.w3.org/2000/01/rdf-schema#label> "xSpeedLevel2" .
+# 
+# https://w3id.org/baf#xSwitchOnBoiler
+<https://w3id.org/baf#xSwitchOnBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xSwitchOnBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Input> .
+<https://w3id.org/baf#xSwitchOnBoiler> <http://www.w3.org/2000/01/rdf-schema#comment> "Switch-on signal in Automatic mode (e.g., from boiler strategy)" .
+<https://w3id.org/baf#xSwitchOnBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "xSwitchOnBoiler" .
+# 
+# https://w3id.org/baf#xValve
+<https://w3id.org/baf#xValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/baf#xValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ibp/CTRLont#Output> .
+<https://w3id.org/baf#xValve> <http://www.w3.org/2000/01/rdf-schema#comment> "Switching signal 2-way valve" .
+<https://w3id.org/baf#xValve> <http://www.w3.org/2000/01/rdf-schema#label> "xValve" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

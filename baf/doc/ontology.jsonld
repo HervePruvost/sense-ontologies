@@ -1,0 +1,3425 @@
+[ {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/baf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@language" : "en",
+    "@value" : "Pruvost. H. (2023): The BAF ontology - a formalization of generic building automation functions for heating, ventilation and air conditioning systems. https://w3id.org/baf."
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0001-7604-8543"
+  }, {
+    "@id" : "https://www.linkedin.com/in/hervepruvost"
+  }, {
+    "@value" : "Hervé Pruvost"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The BAF (Building Automation Functions) model is a catalogue of generic control functions usually implemented by automation engineers."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-05-29"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by-sa/4.0"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-05-29"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://www.eas.iis.fraunhofer.de/"
+  }, {
+    "@value" : "Fraunhofer IIS/EAS"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "BAF: Building Automation Functions."
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "baf"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/baf#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://linkedbuildingdata.net/ldac2022/files/presentations/20220529_LDAC2022_Pruvost_v3.pdf"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto"
+  }, {
+    "@id" : "https://w3id.org/ibp/CTRLont"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#AnalogSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Analog signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#AntifreezeProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Antifreeze protection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#BoilerControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#CharacteristicCurve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Characteristic curve"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#Controller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#DamperControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Damper control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enumerated control function pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction"
+  }, {
+    "@id" : "https://w3id.org/ibp/CTRLont#ControlActor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FanControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#Fb2LevelBoilerPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : " Boiler Module for 2-Level Boiler Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbActuationof2PointDampers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fb2PointDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Actuationof2-Point dampers"
+  }, {
+    "@language" : "de",
+    "@value" : "Ansteuerung von 2-Punkt Klappen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#DamperControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbActuationofContinuousDampers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbContinuousDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Actuationof continuous dampers"
+  }, {
+    "@language" : "de",
+    "@value" : "Ansteuerung von stetigen Klappen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#DamperControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbAirSideAntifreezeProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbAntifreezeAir"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Air-Side antifreeze protection"
+  }, {
+    "@language" : "de",
+    "@value" : "Luftseitiger Frostschutz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AntifreezeProtection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbAnalog3PointPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbAnalog3PointSignal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Analog 3-Point Signal Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbAnalog3PointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbAnalog3Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Analog 3-Point signal"
+  }, {
+    "@language" : "de",
+    "@value" : "Analoges 3-Punkt-Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#GeneralDriver"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbAntiLegionella"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Anti legionnaires disease function"
+  }, {
+    "@language" : "de",
+    "@value" : "Anti-Legionellenfunktion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbAveragedOutsideTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbAveragedOutsideTemperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Averaged outside temperature"
+  }, {
+    "@language" : "de",
+    "@value" : "Gemittelte Außentemperatur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#TemperatureEvaluation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbBlinker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbBlinker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Blinker"
+  }, {
+    "@language" : "en",
+    "@value" : "Blinker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbBlockingProtectionAnalog"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Blockierschutz für stetige Antriebe"
+  }, {
+    "@language" : "en",
+    "@value" : "Blocking protection for continuous drivers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fb2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boiler module for 2-Level boiler"
+  }, {
+    "@language" : "de",
+    "@value" : "Kesselbaustein für 2-stufige Kessel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#BoilerControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbBoilerModuleForModulatingBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbModulatingBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boiler module for modulating boiler"
+  }, {
+    "@language" : "de",
+    "@value" : "Kesselbaustein für modulierende Kessel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#BoilerControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbBoilerStrategyForTwoBoilers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fb2BoilerStrategy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boiler strategy for two boilers"
+  }, {
+    "@language" : "de",
+    "@value" : "Kesselstrategie für zwei Kessel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#BoilerControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbCalculationofSupplyTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbCalculatedSupplyTemperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Calculationof supply temperature"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorlauftemperaturberechnung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbCascadeController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cascade controller"
+  }, {
+    "@language" : "de",
+    "@value" : "Kaskadenregler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Controller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbCascadeControllerPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Cascade Controller (FbCascadeController)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cascade Controller Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbCollectiveMalfunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbCollectiveMalfunction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Collective malfunction"
+  }, {
+    "@language" : "de",
+    "@value" : "Sammelstörung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbComfortZoneController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbHxControl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Behaglichkeitsfeldregler"
+  }, {
+    "@language" : "en",
+    "@value" : "Comfort zone controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbContinuousDamperPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbActuationofContinuousDampers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Actuation of Continuous Dampers Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbControlOf2PointDrivers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fb2PointDriver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ansteuerung von 2-Punkt-Antrieben"
+  }, {
+    "@language" : "en",
+    "@value" : "Control of 2-Point drivers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#GeneralDriver"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbControlOfContinuousDrivers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbContinuousDriver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ansteuerung von stetigen Antrieben"
+  }, {
+    "@language" : "en",
+    "@value" : "Control of continuous drivers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#GeneralDriver"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbCoolingSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceCooling"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cooling sequence"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenz Kühlen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Sequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbDampedTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbDampedTemperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Damped temperature"
+  }, {
+    "@language" : "de",
+    "@value" : "Gedämpfte Temperatur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#TemperatureEvaluation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbDehumidifyingSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceDehumidifying"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dehumidifying sequence"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenz Entfeuchten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Sequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbEnergyRecoverySequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceEnergyRecovery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Energy recovery sequence"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenz Energierückgewinnung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Sequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbEnthalpy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbEnthalpy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Enthalpie"
+  }, {
+    "@language" : "en",
+    "@value" : "Enthalpy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#TemperatureEvaluation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFan1Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbFan_1Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fan1-Level"
+  }, {
+    "@language" : "de",
+    "@value" : "Ventilator, 1-stufig"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#FanControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFan2Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbFan_2Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fan2-Level"
+  }, {
+    "@language" : "de",
+    "@value" : "Ventilator, 2-stufig"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#FanControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFan3Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbFan_3Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fan3-Level"
+  }, {
+    "@language" : "de",
+    "@value" : "Ventilator, 3-stufig"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#FanControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFanwithFrequencyConverter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbFan_FC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fanwith frequency converter"
+  }, {
+    "@language" : "de",
+    "@value" : "Ventilator mit Frequenzumrichter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#FanControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFilterMonitoring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbFilterMonitoring"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Filter monitoring"
+  }, {
+    "@language" : "de",
+    "@value" : "Filterüberwachung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFirstOrderLowPassFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1st order low pass filter"
+  }, {
+    "@language" : "de",
+    "@value" : "Tiefpassfilter 1. Ordnung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbLowPassFilterAI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1st order low pass filter for AI 0-32767"
+  }, {
+    "@language" : "de",
+    "@value" : "Tiefpassfilter 1. Ordnung für AI 0 - 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbLowPassFilterBus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1st order low pass filter for bus signals"
+  }, {
+    "@language" : "de",
+    "@value" : "Tiefpassfilter 1. Ordnung für Bussignale"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbLowPassFilterTemp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "1st order low pass filter for temperatures"
+  }, {
+    "@language" : "de",
+    "@value" : "Tiefpassfilter 1. Ordnung für Temperaturen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbGlobalCollectiveMalfunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbGlobalMalfunction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Global collective malfunction"
+  }, {
+    "@language" : "de",
+    "@value" : "Globale Sammelstörung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbHeatingCharacteristics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbHeatingCharacteristics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heating characteristics"
+  }, {
+    "@language" : "de",
+    "@value" : "Heizungskennlinie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbHeatingSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceHeating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heating sequence"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenz Heizen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Sequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbHumidifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbHumidifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Dampfbefeuchter"
+  }, {
+    "@language" : "en",
+    "@value" : "Humidifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#PumpControl"
+  }, {
+    "@id" : "https://w3id.org/baf#ValveControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbHumidifyingSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceHumidifying"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Humidifying sequence"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenz Befeuchten"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Sequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbHysteresis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbHysteresis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hysterese"
+  }, {
+    "@language" : "en",
+    "@value" : "Hysteresis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbImpulseCounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbImpulseCounter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Impulse counter"
+  }, {
+    "@language" : "de",
+    "@value" : "Impulszähler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbLowPassFilterPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbFirstOrderLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1st Order Low-Pass Filter Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbMinValueAvgValueAndMaxValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Min. Value, Avg. Value and Max. Value"
+  }, {
+    "@language" : "de",
+    "@value" : "Min.-Wert, Mittelwert und Max.-Wert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbMixedAirSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceMixedAir"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mixed air sequence"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenz Mischluft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Sequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbOperatingHoursCounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbOperatingHours_01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Betriebsstundenzähler"
+  }, {
+    "@language" : "en",
+    "@value" : "Operating hours counter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbOptimizedSupplyTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbOptimizedSupplyTemperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Optimierte Vorlauftemperatur"
+  }, {
+    "@language" : "en",
+    "@value" : "Optimized supply temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbOverheatingandCondensationProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbTemperatureOverride"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Overheatingand condensation protection"
+  }, {
+    "@language" : "de",
+    "@value" : "Überhitzungs- und Kondensationsschutz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPIDController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPIDController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "PID-Regler"
+  }, {
+    "@language" : "en",
+    "@value" : "PIDController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Controller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPIDController2PIDSets"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "PID-Regler mit zwei Regelparametersätzen"
+  }, {
+    "@language" : "en",
+    "@value" : "PIDControllerwith two setsof control parameters"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Controller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPIDSingleRoomController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPIDSingleRoomController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "PID Einzelraumregler"
+  }, {
+    "@language" : "en",
+    "@value" : "PIDSingle room controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SingleRoomControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPILimitController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbLimitController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "PI-Begrenzungsregler"
+  }, {
+    "@language" : "en",
+    "@value" : "PILimit controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Controller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPWMOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPWM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PWM Output"
+  }, {
+    "@language" : "de",
+    "@value" : "PWM-Ausgang"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#GeneralDriver"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPlateHeatExchangerPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbPlateTypeHeatExchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Plate-Type Heat Exchanger Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPlateTypeHeatExchanger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPlateHeatExchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Plate-Type heat exchanger"
+  }, {
+    "@language" : "de",
+    "@value" : "Plattenwärmetauscher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HeatExchangerControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pump"
+  }, {
+    "@language" : "de",
+    "@value" : "Pumpe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#PumpControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbPumpwithFrequencyConverter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbPumpFC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Pumpe mit Frequenzumrichter"
+  }, {
+    "@language" : "en",
+    "@value" : "Pumpwith frequency converter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#PumpControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbRamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbRamp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ramp"
+  }, {
+    "@language" : "de",
+    "@value" : "Rampe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbReducedMinimumFreshAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbMinFreshAir"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reduced minimum fresh air"
+  }, {
+    "@language" : "de",
+    "@value" : "Reduzierte Mindestfrischluft"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbRotaryHeatExchanger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbRotaryHeatExchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rotary heat exchanger"
+  }, {
+    "@language" : "de",
+    "@value" : "Rotationswärmetauscher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HeatExchangerControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbRunAroundCoil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbRunAroundCoil"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kreislaufverbundsystem"
+  }, {
+    "@language" : "en",
+    "@value" : "Run-around coil"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HeatExchangerControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbSequenceController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequence controller"
+  }, {
+    "@language" : "de",
+    "@value" : "Sequenzregler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Controller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbSequenceControllerPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Sequence Controller (FbSequenceController)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sequence Controller Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbSequenceEnergyRecoveryPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbEnergyRecoverySequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy Recovery Sequence Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbSequenceHeatingPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbHeatingSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Heating Sequence (FbSequenceHeating)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating Sequence Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbSequenceMixedAirPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbMixedAirSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mixed Air Sequence Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbStartStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbStartStop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Start/Stop"
+  }, {
+    "@language" : "de",
+    "@value" : "Start/Stopp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbStartStopHeatingCircuitControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbStartStopHeatingCircuit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Start stop heating circuit control"
+  }, {
+    "@language" : "de",
+    "@value" : "Start-/Stopp-Heizkreisregelung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbStartStopOptimization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbStartStopOptimization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Start-/Stoppoptimierung"
+  }, {
+    "@language" : "en",
+    "@value" : "Start/Stop optimization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbSummerNightVentilation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbSummerNightVentilation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sommernachtlüftung"
+  }, {
+    "@language" : "en",
+    "@value" : "Summer night ventilation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SystemMonitoring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbTwoPointControllerforDHWPreparation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbDHWController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Two-Point controllerfor DHWPreparation"
+  }, {
+    "@language" : "de",
+    "@value" : "Zweipunktregler BWW- Ladung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#Controller"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbTwoPointIndividualRoomController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fb2PointSingleRoomController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "2-Punkt-Einzelraumregler"
+  }, {
+    "@language" : "en",
+    "@value" : "Point individual room controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SingleRoomControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbUnitMonitoring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbRedundancyUnits"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Aggregatsüberwachung"
+  }, {
+    "@language" : "en",
+    "@value" : "Unit monitoring"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbValveAndPumpPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FbValveandPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Valve and Pump (FbValveAndPump)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Valve and Pump Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbValveandPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ventil und Pumpe"
+  }, {
+    "@value" : "Valve and pump {@en} "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#PumpControl"
+  }, {
+    "@id" : "https://w3id.org/baf#ValveControl"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FbWaterSideAntifreezeProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbAntifreezeWater"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Wasserseitiger Frostschutz"
+  }, {
+    "@language" : "en",
+    "@value" : "Water-Side antifreeze protection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AntifreezeProtection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#Fu4Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#EnumeratedControlFunctionPattern"
+  }, {
+    "@id" : "https://w3id.org/baf#FuFourPointCharacteristicCurve"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pattern of function block for Four-Point Characteristic Curve (Fu4Point)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Four-Point Characteristic Curve Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuFourPointCharacteristicCurve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fu4Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Four-point characteristic curve"
+  }, {
+    "@language" : "de",
+    "@value" : "Vierpunkt-Kennlinie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#CharacteristicCurve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuKTYCharacteristicCurve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FuKTY"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "KTY Characteristic curve"
+  }, {
+    "@language" : "de",
+    "@value" : "KTY-Kennlinie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#CharacteristicCurve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuScalingOfOutputValues0to32767",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FuAO"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scaling of output values 0 to 32767"
+  }, {
+    "@language" : "de",
+    "@value" : "Skalierung der Ausgangswerte 0 bis 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FuAI_Temp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scaling of temperature valuesin °C"
+  }, {
+    "@language" : "de",
+    "@value" : "Skalierung der Temperaturwerte in °C"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuScalingofInputValues0to32767",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FuAI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scalingof input values0to32767"
+  }, {
+    "@language" : "de",
+    "@value" : "Skalierung der Eingangswerte"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#AnalogSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuStatusIndicationAsString",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FuStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Statusanzeige als STRING"
+  }, {
+    "@value" : "Status indication as STRING {@en} "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#MiscellaneousFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuSummerCompensation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FuSummerCompensation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sommerkompensation"
+  }, {
+    "@language" : "en",
+    "@value" : "Summer compensation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#SetValueAdjustment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#FuTwoPointCharacteristic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "Fu2Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Two-point characteristic"
+  }, {
+    "@language" : "de",
+    "@value" : "Zweipunkt-Kennlinie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#CharacteristicCurve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#GeneralDriver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "General driver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#HVAC_Function",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction"
+  }, {
+    "@id" : "https://w3id.org/ibp/CTRLont#ControlActor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#HeatExchangerControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat exchanger control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#MiscellaneousFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Miscellaneous function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#OutputFu4Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Output value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fu4Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#PumpControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pump control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#Sequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#SetValueAdjustment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Set value adjustment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#SingleRoomControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Single room control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#SystemMonitoring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "System monitoring"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#TemperatureEvaluation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temperature evaluation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#ValveControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Valve control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#VolumeFlowRegulator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "FbVolumeFlowRegulator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Volume flow regulator"
+  }, {
+    "@language" : "de",
+    "@value" : "Volumenstromregler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/baf#HVAC_Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_bMaxSequenceNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Max. number of sequences used\r\nValue range = 2 – 4\r\nDefault setting = 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".bMaxSequenceNumber"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_bSequenceNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sequence number (from cooling toward heating)\r\nValue range = 1 – 4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".bSequenceNumber"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rDeadZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Dead zone +/- [K]\r\nDefault setting = 0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rDeadZone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rDefaultValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defined output value as long as the\r\nxAlarm output is set\r\nDefault setting = 0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rDefaultValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rDeviation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum deviation between specified/actual values for the second set of controller parameters [%]\r\nDefault setting = 0 (no switchover)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rDeviation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rDiffBoilerAndReturnTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Max. temperature difference between boiler and return temperature for deactivation of the boiler circuit pump [K]. Default setting = 5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rDiffBoilerAndReturnTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rHighLimitAlarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Upper limit for value of the output signal alarm\r\nDefault setting = 32768"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rHighLimitAlarm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rHysteresis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigAnalog3Point_01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rHysteresis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rKp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Proportional gain (P portion)\r\nDefault setting = 2.5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rKp"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rKp1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Proportional gain (P portion) for the first set of controller parameters\r\nDefault setting = 2.5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rKp1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rKp2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Proportional gain (P portion) for the second set of controller parameters\r\nDefault setting = 2.5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rKp2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rKpMinReturnTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Proportional gain (P portion). Default setting = 12"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rKpMinReturnTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rLeadHysteresis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Hysteresis as the lead boiler for the individual limit values. Default setting = 5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rLeadHysteresis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rLeadOffsetReferenceTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Offset to the specified boiler temperature as lead boiler [K]. Default setting = 5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rLeadOffsetReferenceTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rLowLimitAlarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Lower limit for value of the output signal\r\nalarm\r\nDefault setting = -32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rLowLimitAlarm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMaxBoilerTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum boiler temperature at Level 1 [°C]. Default setting = 90"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMaxBoilerTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMaxBoilerTemperatureLevel2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum boiler temperature at Level 2 [°C]. Default setting = 85"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMaxBoilerTemperatureLevel2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMaxReturnTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum return temperature [°C]. Default setting = 75"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMaxReturnTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMinBoilerTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum boiler temperature [°C]. Default setting = 50"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMinBoilerTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMinDeviationMovement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigContinuousDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum deviation for detection of motion [%]\r\nDefault setting = 5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMinDeviationMovement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMinOutsideTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum outside temperature for freeze\r\nprotection [°C]\r\nDefault setting = 2 °C"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMinOutsideTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rMinReturnTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum return temperature [°C]. Default setting = 50"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rMinReturnTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rOffset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Measured value compensation for the input\r\nDefault setting = 0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rOffset"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rOffsetMaxReferenceValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Offset for the maximum reference value for the slave controller as a function of the reference value [K]\r\nDefault setting = 6 K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rOffsetMaxReferenceValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rOffsetMinReference",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Offset for the minimum reference value for the slave controller as a function of the reference value [K]\r\nDefault setting = 4 K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rOffsetMinReferenceValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rOffsetReferenceTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Offset to the specified boiler temperature [K]. Default setting = 3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rOffsetReferenceTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTd1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Derivative time (D portion) for the first set of controller parameters [s]\r\nDefault setting = 0 s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTd1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTd2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Derivative time (D portion) for the second set of controller parameters [s]\r\nDefault setting = 0 s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTd2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reset time of the controller [s]\r\nDefault setting = 300 s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTn1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reset time of the controller for the first set of controller parameters [s]\r\nDefault setting = 300 s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTn1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTn2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reset time of the controller for the second set of controller parameters [s]\r\nDefault setting = 300 s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTn2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTnMinReturnTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reset time of the controller [s]. Default setting = 0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTnMinReturnTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rTolerance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigContinuousDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Max. deviation, specified/actual position [%]\r\nDefault setting = 3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rTolerance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rValveChimneySweep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Chimney sweep function valve position [%]\r\nDefault setting = 25"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rValveChimneySweep"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rX1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Min. setting value for sequence [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rX1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rX2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Max. setting value for sequence [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rX2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_rY_Min",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigContinuousDamper"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum set value for valve or damper [%]\r\nDefault setting = 3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".rY_Min"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tAlarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum time on limit violation until an alarm is issued.\r\nDefault setting: t#10s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tAlarm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tCycleTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Cycle time for the PT1 circuit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tCycleTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tDelaySwitchOver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Delay time for switching between the two fan levels\r\nDefault setting = t#5 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tDelaySwitchOver"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tLeadMinRuntimeLevel1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum runtime for lead boiler at Level 1. Default setting = t#5 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tLeadMinRuntimeLevel1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tLeadSwitchOnDelayLevel2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-on delay for lead boiler at Level 2. Default setting = t#15 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tLeadSwitchOnDelayLevel2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMaxChimneySweepFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum duration of chimney sweep function. Default setting = t#15 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMaxChimneySweepFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMaxFlushPeriod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum time for the startup process. Default setting = t#15 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMaxFlushPeriod"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMaxOff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum turn-off time of the pump when\r\nblocking protection is enabled\r\nDefault setting = t#48h"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMaxOff"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMaxRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigAnalog3Point_01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Max. running time, which the actuator\r\nneeds for the max. stroke\r\nDefault setting: t#120s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMaxRunTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMaxRuntimeValve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum runtime for 2-way valve. Default setting: t#30s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMaxRuntimeValve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMaxStartupMinBoilerTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum time until minimum boiler temperature is achieved during the startup process. Default setting = t#10 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMaxStartupMinBoilerTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tMinRuntimeLevel1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum runtime for lag boiler at Level 1. Default setting = t#3 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tMinRuntimeLevel1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOffDelay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Turn-off delay of the pump\r\nDefault setting = t#15 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOffDelay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOffDelayAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-off delay for admixing pump. Default setting = t#1 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOffDelayAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOffDelayFullLoad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-off delay for full-load operation. Default setting: t#30s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOffDelayFullLoad"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOffDelayPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-off delay for boiler circuit pump. Default setting = t#10 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOffDelayPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOnDelayAlarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigContinuousDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "ON-delay for alarm\r\nDefault setting = t#5 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOnDelayAlarm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOnDelayPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-on delay for boiler circuit pump with one 2-way valve. Default setting = t#2 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOnDelayPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tOverride",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigAnalog3Point_01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Run-on time after reaching end\r\npositions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tOverride"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tPumpValveMaxOFF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum turn-off time of the pump and valve up to activation of blocking protection. Default setting = t#24h"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tPumpValveMaxOFF"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tPumpValveON",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maintenance run time for pump and valve. Default setting: t#30s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tPumpValveON"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tSwitchOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Turn-on time of the pump when blocking\r\nprotection is enabled\r\nDefault setting: t#60s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tSwitchOn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tSwitchOnDelayLevel2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-on delay for lag boiler at Level 2. Default setting = t#20 m"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tSwitchOnDelayLevel2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_tT1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Time constant for the PT1 circuit\r\nDefault setting: t#2s"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".tT1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Admixing pump present. Default setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xAutoQuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigLowPassFilter"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Automatic acknowledgement of the alarm or fault messages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xAutoQuit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xBlockingProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable blocking protection. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xBlockingProtection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xControlSpeedLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable for determining the required fan level\r\nDefault setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xControlSpeedLevel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xFeedbackDamper",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigContinuousDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Check-back signal Damper position present\r\nDefault setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xFeedbackDamper"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xLimitSwitch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigAnalog3Point_01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Monitoring of the limit switches\r\nDefault setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xLimitSwitch"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xPumpWinter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable freeze protection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xPumpWinter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xSmallWaterVolume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Low volume of water in boiler. Default setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xSmallWaterVolume"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xThreeWayValve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  }, {
+    "@id" : "https://w3id.org/baf#typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "3-way valve present in boiler circuit. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xThreeWayValve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xTwoWayValve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "2-way valve (boiler valve) present. Default setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xTwoWayValve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#_xTwoWayValvePermanentOpen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/baf#typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "2-way valve closed in the event of a fault. Default setting = FALSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : ".xTwoWayValvePermanentOpen"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#bBoilerNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler number. Value range = 1 – 2. Default setting = 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bBoilerNumber"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#bLeadBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defining of lead boiler. Value range = 0 – 2 (0 = both boilers in parallel). Default setting = 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bLeadBoiler"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#bManualLevelBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler level in Manual mode. Value range = 0 – 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "bManualLevelBoiler"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#dwOperatingMinutes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Operating time in minutes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "dwOperatingMinutes"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rActualBoilerTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual boiler temperature [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rActualBoilerTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rActualPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual position of the continuous damper [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rActualPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rActualReturnTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual boiler return temperature [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rActualReturnTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rActualValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual value [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rActualValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rExhaustAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual value for exhaust air temperature [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rExhaustAirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rExitAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual value exhaust air temperature [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rExitAirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Input value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rInput"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rManualValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value in manual mode [%] or [°C]\r\nValue range = 0 – 100%\r\nDefault setting = 22 °C"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rManualValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rManualValueValve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Valve position in Manual mode [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rManualValueValve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rMaxReferenceValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum reference value for slave controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rMaxReferenceValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rMinBoilerTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum boiler temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rMinBoilerTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rMinExitAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum exhaust air temperature for\r\nregulation of the plate-type heat exchanger\r\nin the incoming air duct [°C]\r\nDefault setting = 6 °C"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rMinExitAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rMinReferenceValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum reference value for slave controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rMinReferenceValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Filtered output value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rOutput"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rOutsideTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Actual value outside temperature [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rOutsideTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rReferenceBoilerTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specified boiler temperature [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rReferenceBoilerTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rReferencePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reference position of the continuous damper [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rReferencePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rReferenceValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reference value [°C]\r\nDefault setting = 22 °C"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rReferenceValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rReferenceValueSlaveController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reference value for slave controller [°C]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rReferenceValueSlaveController"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specified position of valve [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rX1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "x-coordinate of the first value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rX1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rX2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "x-coordinate of the second value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rX2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "y-coordinate of the first value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "y-coordinate of the second value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_DamperExhaustAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for plate-type heat exchanger in\r\nexhaust air duct [%]\r\nValue range = 0 – 100"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_DamperExhaustAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_DamperSupplyAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for plate-type heat exchanger in\r\nincoming air duct [%]\r\nValue range = 0 – 100"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_DamperSupplyAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_Dehumidifying",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for dehumidifier [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_Dehumidifying"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_EnergyRecovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for energy recovery [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_EnergyRecovery"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_FreshAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value mixed air damper [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_FreshAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_Heating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Valve position heating register"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_Heating"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_MinFreshAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Minimum fresh air rate [%]"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_MinFreshAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#rY_Valve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Valve position, 3-way valve [%]. Value range = 0 – 100"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rY_Valve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfig2LevelBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfig2LevelBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigAnalog3Point_01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigAnalog3Point_01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigCascadeController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigCascadeController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigContinuousDamper",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigContinuousDamper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigLowPassFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigLowPassFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigSequenceController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigSequenceController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typConfigValveAndPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typConfigValveAndPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/ibp/CTRLont#Parameter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typSequenceController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data structure for data exchange between the individual sequences and the sequence controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typSequenceController"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#typStatusBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler status for the strategy module"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typStatusBoiler"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Display current status\r\n0 = OK\r\n1 = On \r\n2 = Off\r\n10 = Error Pump\r\n29 = Error Safety chain\r\n30 = Condensation protection\r\n31 = Chimney sweep function\r\n32 = Overheating protection\r\n33 = Error Valve\r\n34 = Follow up time\r\n35 = Manual operation\r\n36 = In motion\r\n39 = Reference value exceeded\r\n40 = Startup behaviour\r\n42 = Error Damper position\r\n46 = Error limit switch\r\n47 = Synchronisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wStatus"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value:\r\nValue range: 0 −32767 for damper"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY_DamperExhaustAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for plate-type heat exchanger in\r\nthe exhaust air duct\r\nValue range = 0 – 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY_DamperExhaustAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY_DamperSupplyAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for plate-type heat exchanger in\r\nthe incoming air duct\r\nValue range = 0 – 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY_DamperSupplyAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY_EnergyRecovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for energy recovery\r\nValue range = 0 – 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY_EnergyRecovery"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY_FreshAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set value for mixed air damper\r\nValue range = 0 – 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY_FreshAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY_Heating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Valve position heating register\r\nValue range = 0 – 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY_Heating"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#wY_Valve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Valve position, 3-way valve. Value range = 0 – 32767"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wY_Valve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xActive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Active indicator for sequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xActive"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switching signal for the admixing pump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xAlarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Output signal error"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xAlarm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xAuto",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Automatic mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xAuto"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xBoilerPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler circuit pump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xBoilerPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xChimneySweep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Chimney sweep function active"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xChimneySweep"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xChimneySweepFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Activate chimney sweep function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xChimneySweepFunction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xClose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Engine coil CLOSED"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xClose"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xCondensationProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Condensation protection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xCondensationProtection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xDifferentialPressureMonitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Differential pressure sensor plate-type\r\nheat exchanger\r\nDefault setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xDifferentialPressureMonitor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xEnable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable controller\r\nDefault setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xEnable"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xEnablePump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable pump and valve control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xEnablePump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xEnableSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable FbStartStop\r\nDefault setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xEnableSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xError",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Some fault"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xError"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xErrorAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Admixing pump error"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xErrorAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xErrorBoilerPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler circuit pump error"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xErrorBoilerPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xErrorPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Error message pump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xErrorPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xErrorSequence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Error check-back signal from device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xErrorSequence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xErrorStartUp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Start-up system fault"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xErrorStartUp"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xFeedbackManualOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "External check-back signal, Manual mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xFeedbackManualOperation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xFollowUpTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pump is in the follo-up phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xFollowUpTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xFrostAlarmAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Frost alarm from FbAntifreezeAir"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xFrostAlarmAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xFrostAlarmWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Frost alarm from FbAntifreezeWater"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xFrostAlarmWater"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xFullLoad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler is to run at full load"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xFullLoad"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xInit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A positive flank starts the reference run"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xInit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xLevel1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler Level 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xLevel1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xLevel2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Boiler Level 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xLevel2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xLimitSwitch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Limit switch (opend, closed)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xLimitSwitch"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xLimitSwitchValve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Limit switch, 2-way valve. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xLimitSwitchValve"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xManual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Manual mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xManual"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xManualOnAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch on admixing pump manually"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xManualOnAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xManualOnBoilerPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch on boiler circuit pump manually"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xManualOnBoilerPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xManualOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Enable manual operation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xManualOperation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xManualSwitchPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch on pump manually"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xManualSwitchPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xMaximalThermostat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum thermostat for heating circuit\r\nDefault setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xMaximalThermostat"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xMinFreshAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Override mixed air damper using the minimum fresh air rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xMinFreshAir"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xMotorProtection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Motor protection switch pump\r\nDefault setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xMotorProtection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xMotorProtectionAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Motor protection switch, Admixing pump. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xMotorProtectionAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xMotorProtectionPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Motor protection switch, Boiler circuit pump. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xMotorProtectionPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xNightVentilation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Opening damper during night ventilation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xNightVentilation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xOpen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Engine coil OPEN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xOpen"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switching signal for the pump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xQuit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Error message acknowledgement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xQuit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xRepairSwitch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Repair switch pump\r\nDefault setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xRepairSwitch"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xRepairSwitchAdmixingPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Repair switch, Admixing pump. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xRepairSwitchAdmixingPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xRepairSwitchPump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Repair switch, Boiler circuit pump. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xRepairSwitchPump"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xSafetyChain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Check-back signal from boiler safety chain. Default setting = TRUE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xSafetyChain"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xSpeedLevel1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Request fan level 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xSpeedLevel1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xSpeedLevel2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Request fan level 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xSpeedLevel2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xSwitchOnBoiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Input" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switch-on signal in Automatic mode (e.g., from boiler strategy)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xSwitchOnBoiler"
+  } ]
+}, {
+  "@id" : "https://w3id.org/baf#xValve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/ibp/CTRLont#Output" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Switching signal 2-way valve"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "xValve"
+  } ]
+} ]

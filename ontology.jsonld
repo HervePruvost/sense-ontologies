@@ -1,0 +1,3549 @@
+[ {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#AirHandlingUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#CoolingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#CoolingZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#EnergyDistribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#EnergySystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#EnergySystemComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy system component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#HeatRecovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#HeatingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#HeatingZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Spatial structure element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  }, {
+    "@id" : "http://www.w3.org/ns/sosa/Platform"
+  } ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#VentilationSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#VentilationZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#composes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#hosts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#isComposedOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://spinrdf.org/spin#imports",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://brickschema.org/schema/Brick#Supply_Air_Flow_Sensor",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/mm#SupplyAirVolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirCoolingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air cooling status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air damper position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirHandlingUnitSchedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air handling unit schedule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirHeatingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air heating status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirPreCoolingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air pre cooling status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirPreHeatingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air pre heating status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirPressureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air pressure set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#PressureSetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#AirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#VolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ApplianceElectricityConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Appliance electricity consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ElectricityConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Azimuth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Azimuth"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BlindPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Blind position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BlindStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Blind status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BoilerLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BoilerReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler return water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BoilerStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BoilerSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler supply water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#BoilerValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#CO2concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CO2concentration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ChillerLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chiller level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ChillerStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chiller status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ColdWaterConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cold water consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ComputedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Computed property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#CoolingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling coil valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#CoolingEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling energy consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#EnergyConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#CoolingThermalPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling Thermal power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ThermalPower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DewPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dew point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DifferentialPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Differential pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DifferentialPressureAtNominalVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Differential pressure at nominal volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#DifferentialPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DifferentialPressureLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Differential pressure limit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#DifferentialPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DistrictHeatingReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "District heating return water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DistrictHeatingSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "District heating supply water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DistrictHeatingWaterVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "District heating water volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterVolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#DoorStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Door status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ElectricPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electric power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ElectricityConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electricity consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#EnergyConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Elevation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Elevation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#EnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#EnergyEfficiencyRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy efficiency rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ExhaustAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Exhaust air damper position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirDamperPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ExhaustAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Exhaust air temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ExhaustAirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Exhaust air volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirVolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FanCoilUnitStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan coil unit status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FanCoilUnitValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan coil unit valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FanRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan rotational speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FanSpeedSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan speed set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FanStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FancoilReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fancoil return water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#FancoilSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fancoil supply water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#GasConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gas consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatRecoveryDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery damper position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatRecoveryStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatRecoveryValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatRecoveryWheelRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery wheel rotational speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingCircuitPumpLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit pump level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingCircuitPumpStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit pump status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingCircuitReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit return water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingCircuitSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit supply water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingCircuitValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating coil valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating energy consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#EnergyConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingSystemLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating system level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingSystemStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating system status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HeatingThermalPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating thermal power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ThermalPower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HotWaterConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hot water consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HotWaterTankHeatingCartridgeStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hot water tank heating cartridge status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HotWaterTankTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hot water tank temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HumidifierStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidifier status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Humidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#HumiditySetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidity set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#SetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#IndoorAirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor air pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#IndoorAirQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor air quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirQuality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#IndoorAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor air temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#IndoorHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor humidity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#IndoorLightLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor light level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#LightLevel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#LightLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#LightPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#LightStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#LightingEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lighting energy consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#EnergyConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#LightingPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lighting power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Movement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Movement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Occupancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Occupancy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#OutdoorAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air damper position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirDamperPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#OutdoorAirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#OutdoorAirQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirQuality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#OutdoorAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#OutdoorHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor humidity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#OutdoorLightLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor light level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#LightLevel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#PostCoolingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Post cooling coil valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#PostHeatingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Post heating coil valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Power",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#PreCoolingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pre cooling coil valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#PreHeatingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pre heating coil valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Presence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Presence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#PressureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pressure set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#SetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#PumpRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pump rotational speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#RadiatorReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator return water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#RadiatorSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator supply water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#WaterTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#RadiatorTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#RadiatorValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ValvePosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ReturnAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air damper position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirDamperPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ReturnAirFanRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air fan rotational speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ReturnAirFanStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air fan status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ReturnAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ReturnAirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirVolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ShadingLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shading level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ShadingSatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shading status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SolarRadiation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Solar radiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SpecificDifferentialPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific differential pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#DifferentialPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SpecificFanPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific fan power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ElectricPower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SpecificPumpPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific pump power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#ElectricPower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SpecificVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#VolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SunshineDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sunshine duration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air damper position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirDamperPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirFanRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air fan rotational speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirFanStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air fan status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirHumiditySetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#HumiditySetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirPressureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirPressureSetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirTemperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirTemperatureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#TemperatureSetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#SupplyAirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#AirVolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Medium temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#TemperatureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temperature set point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#SetPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ThermalPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Thermal power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#TotalEnergyConsmption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Total energy consmption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#EnergyConsumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#ValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Valve position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#Vibration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vibration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#VolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#WaterConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#WaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#Temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#WaterVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water volume flow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/mm#VolumeFlow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#WindSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wind speed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mm#WindowStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Window status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0001-7604-8543"
+  }, {
+    "@id" : "https://www.linkedin.com/in/hervepruvost"
+  }, {
+    "@value" : "Hervé Pruvost"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "SENSE is a semantic composition that conceptualizes building energy systems in their operation phase. It follows a graph data structure that aggregates further ontologies that all together enable a full description of a building at metadata level."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-05-24"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by-sa/4.0"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-06-06"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://www.eas.iis.fraunhofer.de/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "SENSE: a semantic composition that conceptualizes building energy systems in their operation phase."
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "sense"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/sense#"
+  } ],
+  "http://spinrdf.org/spin#imports" : [ {
+    "@id" : "http://topbraid.org/spin/owlrl-all"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto"
+  }, {
+    "@id" : "http://www.w3.org/ns/ssn/"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick"
+  }, {
+    "@id" : "https://www.w3id.org/risk"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Accelerometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Accelerometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirCoolingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air cooling status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air damper position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirHandlingUnitSchedule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air handling unit schedule"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirHeatingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air heating status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirPrecoolingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air precooling status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirPreheatingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air preheating status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirPressureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air pressure set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air quality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#AirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Anemometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Anemometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ApplianceElectricityConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Appliance electricity consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Azimuth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Azimuth"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Barometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Barometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#BlindPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Blind position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#BlindStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Blind status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#BoilerLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#BoilerReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler return water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#BoilerSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler supply water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#BoilerValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#CO2Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CO2 Concentration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ChillerLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chiller level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ChillerStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chiller status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ColdWaterConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cold water consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ContactSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Contact sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ControlSettingsRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Control strategy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#CoolingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling coil valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#CoolingEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling energy consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#CoolingEnergySavingMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling energy saving measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid37"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#CoolingMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyMeter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#CoolingPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cooling power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DewPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dew point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DifferentialPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Differential pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DifferentialPressureAtNominalVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Differential pressure at nominal volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DifferentialPressureLimit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Differential pressure limit"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DistrictHeatingReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "District heating return water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DistrictHeatingSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "District heating supply water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DistrictHeatingWaterVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "District heating water volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#DoorStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Door status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ElectricPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electric power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ElectricalEnergySavingMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electrical energy saving measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid41"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ElectricityConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electricity consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ElectricityMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electricity meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyMeter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Elevation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Elevation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#EnergyConservationMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy conservation measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#KnownMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#EnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#EnergyEfficiencyRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy efficiency rate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#EnergyMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Meter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#EnumeratedEnergyConservationMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enumerated energy conservation measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ExhaustAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Exhaust air damper position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ExhaustAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Exhaust air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ExhaustAirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Exhaust air volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FanCoilUnitStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan coil unit status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FanCoilUnitValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan coil unit valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FanRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan rotational speed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FanSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FanSpeedSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan speed set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FanStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FancoilReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fancoil return water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FancoilSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fancoil supply water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#FaultDetectionRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fault detection rule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Function",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#GasConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gas consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#GasMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gas meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Meter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#GasSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gas sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyMeter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatRecevoryDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recevory damper position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatRecoveryStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatRecoveryValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatRecoveryWheelRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery wheel rotational speed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingCircuitPumpLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit pump level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingCircuitPumpStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit pump status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingCircuitReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit return water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingCircuitSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit supply water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingCircuitValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating circuit valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating coil valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating energy consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingEnergySavingMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating energy saving measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid45"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingSystemLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating system level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HeatingSystemStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heating system status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HotWaterConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hot water consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HotWaterTankHeatingCartridgeStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hot water tank heating cartridge status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HotWaterTankTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hot water tank temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HumidifierStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidifier status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Humidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HumiditySetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidity set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#HumiditySetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Humidity setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Hygrometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hygrometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#IndoorAirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor air pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#IndoorAirQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor air quality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#IndoorAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#IndoorHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#IndoorLightLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor light level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#IndoorRelativeHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor relative humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightLevelSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light level sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightingEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lighting energy consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightingEnergyMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lighting energy meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyMeter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightingEnergySavingMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lighting energy saving measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid49"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#LightingPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Lighting power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#MeasureEffect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measure effect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Output"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid53"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#MediumTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Medium temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Meter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/System"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#MotionSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Motion sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Movement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Movement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Occupancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Occupancy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OilMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Oil meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Meter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air damper position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorAirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorAirQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air quality"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorLightLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor light level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#OutdoorRelativeHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor relative humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#PostcoolingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Postcooling coil valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#PostheatingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Postheating coil valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Power",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#PrecoolingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Precooling coil valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#PreheatingCoilValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Preheating coil valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Presence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Presence"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#PressureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pressure set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#PumpRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pump rotational speed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Pyranometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pyranometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM1-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Checks if solar radiation is high or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "high solar radiation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF cooling season  is active AND solar radiation is high THEN lower blinds down and reduce cooling"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM1-2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some cooling is on while space unocuppied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unused cooling rule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF room occupancy = 0 AND room occupancy is unchanged for time T AND room cooling is on THEN shut room cooling off"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM1-3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some space is being undercooled"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "undercooling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF cooling season is active AND room temperature lowerThan Tmin THEN turn cooling down"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM1-5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some cooling energy is wasted through some opening"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wasted coolness through opening"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF cooling is on AND window is open THEN close window"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Checks if solar radiation is high or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "high solar radiation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF heating season  is active AND solar radiation is high THEN open room blinds up and reduce room heating"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some heating is on while space unocuppied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unused heating rule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF room occupancy = 0 AND room occupancy is unchanged for time T AND room heating is on THEN shut room heating off"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-2-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some heating is on while space unocuppied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unused heating rule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF heating season is active AND room occupancy = 0 AND room occupancy is unchanged for time T AND room temperature greaterThan Tref THEN shut room heating off"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some space is being overheated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "space overheating"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF heating season is active AND room temperature greaterThan Tmax THEN turn heating down"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-4-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if air heating and air cooling work at the same time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "simultaneous air heating and cooling"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF air heating is on AND air cooling is on THEN air heating and air cooling work simultaneously"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-4-2a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if the supply fan works but not the return/exhaust fan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air supplied but not returned"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF supply air volume flow > 0 + tolerance AND return air volume flow < 0 + tolerance THEN air supplied but not returned"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-4-2b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if the return/exhaust fan works but not the supply fan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air returned but not supplied"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF return air flow > 0 + tolerance AND supply air flow < 0 + tolerance THEN air returned but not supplied"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-4-3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if air heating works but not the supply fan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air heated but not ventilated"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF air heating is on AND supply air flow < 0 + tolerance THEN air heated but not ventilated"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-4-4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if air cooling works but not the supply fan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "air cooled but not ventilated"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF air cooling is on AND supply air flow < 0 + tolerance THEN air cooled but not ventilated"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM2-5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some heat is wasted through some opening"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "wasted heat through opening"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF heating is on AND window is open THEN close window"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM3-6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some light was left on while space unocuppied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unused lighting rule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF room is unoccupied AND room light is on THEN shut room light off"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#R-ECM4-8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "checks if some appliance is on while space unocuppied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unused appliance rule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "IF room is unoccupied AND room occupancy is unchanged for time T AND room appliance consumption increases THEN shut room appliance off"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#RadiatorReturnWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator return water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#RadiatorSupplyWaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator supply water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#RadiatorTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#RadiatorValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiator valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ReturnAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air damper position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ReturnAirFanRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air fan rotational speed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ReturnAirFanStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air fan status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ReturnAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ReturnAirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Return air volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ShadingLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shading level"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ShadingStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shading status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SolarRadiation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Solar radiation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SpecificDifferentialPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific differential pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SpecificFanPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific fan power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SpecificPumpPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific pump power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SpecificVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specific volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#State",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "State"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SubMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sub meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Meter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SunshineDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sunshine duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirDamperPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air damper position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirFanRotationalSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air fan rotational speed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirFanStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air fan status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirHumiditySetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirHumiditySetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirPressureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirPressureSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirTemperatureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirTemperatureSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#SupplyAirVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#TemperatureSetPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temperature set point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#TemperatureSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temperature setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ThermalPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Thermal power"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Thermometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Thermometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#TotalEnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Total energy consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#UserAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "User action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Actuation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#UserBehaviourRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "User behaviour rule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Function"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#UtilityMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Utility meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Meter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#ValvePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Valve position"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#Vibration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vibration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#VolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WaterConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water consumption"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WaterMeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water meter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/sense#Meter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WaterTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WaterVolumeFlow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Water volume flow"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WeatherStation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Weather station"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WindSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wind speed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#WindowStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/ssn/Property" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Window status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#appliance_is_on",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "appliance is on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#cooling_is_on",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cooling is on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#hasCoolingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has cooling system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#hasHeatRecoverySystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has heat recovery system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#hasHeatingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has heating system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#hasProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has procedure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#hasRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has rule"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#heating_is_on",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "heating is on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isBeingCooled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is being cooled"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isBeingHeated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is being heated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isClosed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is closed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isCooled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is cooled"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isHeated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is heated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isHigh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is high"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isLow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is low"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isOccupied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is occupied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isOff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is off"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isOpen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is open"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isOrientedSouth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is oriented south"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isRecommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is recommended"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isUnoccupied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is unoccupied"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#isVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isVentilated"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#light_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "light status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#lower_blinds_down",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lower blinds down"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMlbd"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#lower_blinds_down_and_reduce_cooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lower blinds down and reduce cooling"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMlbdarc"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#occupancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "occupancy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#open_blinds_up",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "open blinds up"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMobu"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#open_blinds_up_and_reduce_heating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "open blinds up and reduce heating"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMobuarh"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#open_blinds_up_and_turn_off_light",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "open blinds up and turn off light"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMobuatol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#room_cooling_is_on",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Room"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "room cooling is on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#room_heating_is_on",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Room"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "room heating is on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#room_occupancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Room"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "room occupancy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#room_temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Room"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "room temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#saveCoolingEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#MeasureEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save cooling energy"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECM1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#saveElectricalEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#MeasureEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save electrical energy"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECM4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#saveHeatingEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#MeasureEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save heating energy"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECM2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#saveLightingEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#MeasureEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save lighting energy"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECM3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_electrical_energy_turning_appliances_down_when_room_unoccupied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save lighting energy optimizing natural light income"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveElectricalEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_energy_avoiding_HVAC_operating_errors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save energy avoiding HVAC operating errors "
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveCoolingEnergy"
+  }, {
+    "@id" : "https://w3id.org/sense#saveHeatingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_energy_avoiding_wastes_through_openings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save energy avoiding wastes through openings"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveCoolingEnergy"
+  }, {
+    "@id" : "https://w3id.org/sense#saveHeatingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_energy_by_better_matching_energy_and_comfort_needs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save energy when facility not occupied"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveCoolingEnergy"
+  }, {
+    "@id" : "https://w3id.org/sense#saveHeatingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_energy_by_optimizing_solar_gain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save energy by optimizing solar gain"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveCoolingEnergy"
+  }, {
+    "@id" : "https://w3id.org/sense#saveHeatingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_energy_when_facility_not_occupied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save energy when facility not occupied"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveCoolingEnergy"
+  }, {
+    "@id" : "https://w3id.org/sense#saveHeatingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_lighting_energy_optimizing_natural_light_income",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save lighting energy optimizing natural light income"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveLightingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#save_lighting_energy_turning_off_lights_when_space_unoccupied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#EnergyConservationMeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "save lighting energy turning off lights when space unoccupied"
+  } ],
+  "http://www.w3.org/ns/ssn/hasOutput" : [ {
+    "@id" : "https://w3id.org/sense#saveLightingEnergy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_down_cooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn down cooling"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtdc"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_down_heating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn down heating"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtdh"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_off_appliances",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn off appliances"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtoa"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_off_cooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn off cooling"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtoc"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_off_heating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn off heating"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtoh"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_off_light",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn off light"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtol"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#turn_on_heat_recovery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/sense#UserAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "turn on heat recovery"
+  } ],
+  "https://w3id.org/sense#identifier" : [ {
+    "@value" : "ECMtohr"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#unoccupied_too_long",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unoccupied too long"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/sense#window_is_open",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#SpatialStructureElement"
+  }, {
+    "@id" : "https://brickschema.org/schema/Brick#Room"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "window is open"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirCooledButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-4-4"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirHeatedButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-4-3"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirHumidifiedButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirReturnedButNotSupplied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-4-2b"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirSuppliedButNotReturned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-4-2a"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#EntityAtRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#HeatRecoveryUnused",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#KnownMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Measure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Procedure"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#OverheatingThroughSolarGain",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM1-1"
+  }, {
+    "@id" : "https://w3id.org/sense#R-ECM2-1"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-4-1"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SpaceOverheating",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-3"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SpaceUndercooling",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM1-3"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedAppliances",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM4-8"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedCoolingEnergy",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM1-2"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedHeatingEnergy",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM2-2"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedLights",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM3-6"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#WastingEnergyThroughOpenings",
+  "https://www.w3id.org/risk#assessedBy" : [ {
+    "@id" : "https://w3id.org/sense#R-ECM1-5"
+  }, {
+    "@id" : "https://w3id.org/sense#R-ECM2-5"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#assessedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+} ]

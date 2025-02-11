@@ -1,0 +1,2065 @@
+<https://w3id.org/esim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/bibliographicCitation> "Pruvost, H., Enge-Rosenblatt, O. and Haufe J.. Information Integration and Semantic Interpretation for Building Energy System Operation and Maintenance. IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society, Washington, DC, USA, 2018, pp. 813-818, DOI: https://doi.org/10.1109/IECON.2018.8591740."@en .
+<https://w3id.org/esim> <http://purl.org/dc/terms/bibliographicCitation> "Stenzel, P. (2016). Potentiale des BIM-basierten Entwurfs und Betriebs in der Gebäudeautomation [Potentials of BIM-based design and operation in building automation]. AUTOMATION 2016 conference, 2. VDI-Fachkonferenz Gebäudeautomation, Baden-Baden, Germany, June 2016. DOI: https://doi.org/10.24406/publica-fhg-392335"@en .
+<https://w3id.org/esim> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/pit-stenzel-33a41998> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Pit-Stenzel> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/creator> "Jens Kaiser" .
+<https://w3id.org/esim> <http://purl.org/dc/terms/creator> "Pit Stenzel" .
+<https://w3id.org/esim> <http://purl.org/dc/terms/crontributor> <https://orcid.org/0000-0001-7604-8543> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/crontributor> <https://www.linkedin.com/in/hervepruvost> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/crontributor> "Hervé Pruvost" .
+<https://w3id.org/esim> <http://purl.org/dc/terms/description> "Energy System Information Model (ESIM) is a domain specific model that provides information of the urban and building energy system including the automation and control systems. It comprises functional, structural and physical descriptions of the systems as master data and additional operational data."@en .
+<https://w3id.org/esim> <http://purl.org/dc/terms/issued> "2015-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/modified> "2023-06-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> .
+<https://w3id.org/esim> <http://purl.org/dc/terms/publisher> "Fraunhofer IIS/EAS" .
+<https://w3id.org/esim> <http://purl.org/dc/terms/title> "ESIM: Energy System Information Model."@en .
+<https://w3id.org/esim> <http://purl.org/vocab/vann/preferredNamespacePrefix> "esim" .
+<https://w3id.org/esim> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/esim#" .
+<https://w3id.org/esim> <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> .
+<https://w3id.org/esim> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://publica.fraunhofer.de/bitstreams/4e5c5599-8bf0-47f9-8f27-545dc41dcd1a/download> .
+<https://w3id.org/esim> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://slideplayer.com/slide/10823731/> .
+<https://w3id.org/esim> <http://www.w3.org/2002/07/owl#versionInfo> "v1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/crontributor
+<http://purl.org/dc/terms/crontributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://spinrdf.org/spin#imports
+<http://spinrdf.org/spin#imports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/esim#omniclass
+<https://w3id.org/esim#omniclass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/esim#omniclass> <http://www.w3.org/2000/01/rdf-schema#label> "omniclass" .
+<https://w3id.org/esim#omniclass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/esim#composes
+<https://w3id.org/esim#composes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#composes> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/esim#isComposedOf> .
+<https://w3id.org/esim#composes> <http://www.w3.org/2000/01/rdf-schema#label> "composes" .
+# 
+# https://w3id.org/esim#consumes
+<https://w3id.org/esim#consumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#consumes> <http://www.w3.org/2000/01/rdf-schema#label> "consumes" .
+# 
+# https://w3id.org/esim#hasAdministrationalInformation
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#AdministrationalInformation> .
+<https://w3id.org/esim#hasAdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#label> "has administrational information" .
+# 
+# https://w3id.org/esim#hasAutomationAndControlFacility
+<https://w3id.org/esim#hasAutomationAndControlFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasAutomationAndControlFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasAutomationAndControlFacility> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#ControlFacility> .
+<https://w3id.org/esim#hasAutomationAndControlFacility> <http://www.w3.org/2000/01/rdf-schema#label> "has automation and control facility" .
+# 
+# https://w3id.org/esim#hasAutomationAndControlFunction
+<https://w3id.org/esim#hasAutomationAndControlFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasAutomationAndControlFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasAutomationAndControlFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#ControlFunction> .
+<https://w3id.org/esim#hasAutomationAndControlFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has automation and control function" .
+# 
+# https://w3id.org/esim#hasAutomationAndControlSystemType
+<https://w3id.org/esim#hasAutomationAndControlSystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasAutomationAndControlSystemType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasAutomationAndControlSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "has automation and control system type" .
+# 
+# https://w3id.org/esim#hasCOP
+<https://w3id.org/esim#hasCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasCOP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasCOP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasCOP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasCOP> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#hasCOP> <http://www.w3.org/2000/01/rdf-schema#label> "has COP" .
+# 
+# https://w3id.org/esim#hasControlStrategy
+<https://w3id.org/esim#hasControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasControlStrategy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasControlStrategy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#ControlStrategy> .
+<https://w3id.org/esim#hasControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "has control strategy" .
+# 
+# https://w3id.org/esim#hasCostInformation
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#CostInformation> .
+<https://w3id.org/esim#hasCostInformation> <http://www.w3.org/2000/01/rdf-schema#label> "has cost information" .
+# 
+# https://w3id.org/esim#hasDetailedBehaviourModel
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> .
+<https://w3id.org/esim#hasDetailedBehaviourModel> <http://www.w3.org/2000/01/rdf-schema#label> "has detailed behaviour model" .
+# 
+# https://w3id.org/esim#hasDetailedBehaviourModelEnergyDistributionSystem
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasDetailedBehaviourModel> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#DetailedBehaviouralModelEnergyDistributionSystem> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has detailed behaviour model energy distribution system" .
+# 
+# https://w3id.org/esim#hasDetailedBehaviourModelEnergySource
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasDetailedBehaviourModel> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#DetailedBehaviourModelEnergySource> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "has detailed behaviour model energy source" .
+# 
+# https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasDetailedBehaviourModel> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#DetailedBehaviouralModelEnergyTransformationFacility> .
+<https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#label> "has detailed behaviour model energy transformation facility" .
+# 
+# https://w3id.org/esim#hasEnergyConsumptionAndUsageType
+<https://w3id.org/esim#hasEnergyConsumptionAndUsageType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergyConsumptionAndUsageType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#hasEnergyConsumptionAndUsageType> <http://www.w3.org/2000/01/rdf-schema#label> "has energy consumption and usage type" .
+# 
+# https://w3id.org/esim#hasEnergyDistributionSystemType
+<https://w3id.org/esim#hasEnergyDistributionSystemType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergyDistributionSystemType> <http://www.w3.org/2000/01/rdf-schema#label> "has energy distribution system type" .
+# 
+# https://w3id.org/esim#hasEnergyRelatedDataType
+<https://w3id.org/esim#hasEnergyRelatedDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergyRelatedDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyRelatedData> .
+<https://w3id.org/esim#hasEnergyRelatedDataType> <http://www.w3.org/2000/01/rdf-schema#label> "has energy related data Type" .
+# 
+# https://w3id.org/esim#hasEnergySourceCOP
+<https://w3id.org/esim#hasEnergySourceCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergySourceCOP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasCOP> .
+<https://w3id.org/esim#hasEnergySourceCOP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasEnergySourceCOP> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#EnergySourceCOP> .
+<https://w3id.org/esim#hasEnergySourceCOP> <http://www.w3.org/2000/01/rdf-schema#label> "has energy source COP" .
+# 
+# https://w3id.org/esim#hasEnergySourceType
+<https://w3id.org/esim#hasEnergySourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergySourceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasEnergySourceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#hasEnergySourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has energy source type" .
+# 
+# https://w3id.org/esim#hasEnergyTransformationFacilityCOP
+<https://w3id.org/esim#hasEnergyTransformationFacilityCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergyTransformationFacilityCOP> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasCOP> .
+<https://w3id.org/esim#hasEnergyTransformationFacilityCOP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasEnergyTransformationFacilityCOP> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#EnergyTransformationCOP> .
+<https://w3id.org/esim#hasEnergyTransformationFacilityCOP> <http://www.w3.org/2000/01/rdf-schema#label> "has energy transformation facility COP" .
+# 
+# https://w3id.org/esim#hasEnergyTransformationFacilityType
+<https://w3id.org/esim#hasEnergyTransformationFacilityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasEnergyTransformationFacilityType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasEnergyTransformationFacilityType> <http://www.w3.org/2000/01/rdf-schema#label> "has energy transformation facility type" .
+# 
+# https://w3id.org/esim#hasFunctionalInterfaceDescription
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#FunctionalInterfaceDescription> .
+<https://w3id.org/esim#hasFunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has functional interface description" .
+# 
+# https://w3id.org/esim#hasIdentifier
+<https://w3id.org/esim#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyRelatedData> .
+<https://w3id.org/esim#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#Identifier> .
+<https://w3id.org/esim#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier" .
+# 
+# https://w3id.org/esim#hasPhysicalInterfaceDescription
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#PhysicalInterfaceDescription> .
+<https://w3id.org/esim#hasPhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has physical interface description" .
+# 
+# https://w3id.org/esim#hasPhysicalParameter
+<https://w3id.org/esim#hasPhysicalParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasPhysicalParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#PhysicalParameter> .
+<https://w3id.org/esim#hasPhysicalParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has physical parameter" .
+# 
+# https://w3id.org/esim#hasPort
+<https://w3id.org/esim#hasPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasPort> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#InterfaceDescription> .
+<https://w3id.org/esim#hasPort> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#Port> .
+<https://w3id.org/esim#hasPort> <http://www.w3.org/2000/01/rdf-schema#label> "has port" .
+# 
+# https://w3id.org/esim#hasPortType
+<https://w3id.org/esim#hasPortType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasPortType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#Port> .
+<https://w3id.org/esim#hasPortType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#PortType> .
+<https://w3id.org/esim#hasPortType> <http://www.w3.org/2000/01/rdf-schema#label> "has port type" .
+# 
+# https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource
+<https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasSimplifiedBehaviouralModel> .
+<https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#BehaviouralModelEnergySource> .
+<https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "has simplified bahaviour model energy source" .
+# 
+# https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyDistributionSystem
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasSimplifiedBehaviouralModel> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#BehaviouralModelEnergyDistributionSystem> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has simplified behaviour model energy distribution system" .
+# 
+# https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/esim#hasSimplifiedBehaviouralModel> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#BehaviouralModelEnergyTransformationFacility> .
+<https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#label> "has simplified behaviour model energy transformation facility" .
+# 
+# https://w3id.org/esim#hasSimplifiedBehaviouralModel
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> .
+<https://w3id.org/esim#hasSimplifiedBehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#label> "has behavioural model" .
+# 
+# https://w3id.org/esim#hasSystem
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#Building> .
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#City> .
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#Site> .
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#Zone> .
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#hasSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has system" .
+# 
+# https://w3id.org/esim#hosts
+<https://w3id.org/esim#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#hosts> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/esim#isHostedBy> .
+<https://w3id.org/esim#hosts> <http://www.w3.org/2000/01/rdf-schema#label> "hosts" .
+# 
+# https://w3id.org/esim#isComposedOf
+<https://w3id.org/esim#isComposedOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#isComposedOf> <http://www.w3.org/2000/01/rdf-schema#label> "is composed of" .
+# 
+# https://w3id.org/esim#isHostedBy
+<https://w3id.org/esim#isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by" .
+# 
+# https://w3id.org/esim#isSuppliedBy
+<https://w3id.org/esim#isSuppliedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#isSuppliedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/esim#supplies> .
+<https://w3id.org/esim#isSuppliedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is supplied by" .
+# 
+# https://w3id.org/esim#isSuppliedWith
+<https://w3id.org/esim#isSuppliedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#isSuppliedWith> <http://www.w3.org/2000/01/rdf-schema#label> "is supplied with" .
+# 
+# https://w3id.org/esim#produces
+<https://w3id.org/esim#produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#produces> <http://www.w3.org/2000/01/rdf-schema#label> "produces" .
+# 
+# https://w3id.org/esim#supplies
+<https://w3id.org/esim#supplies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#supplies> <http://www.w3.org/2000/01/rdf-schema#label> "supplies" .
+# 
+# https://w3id.org/esim#suppliesWith
+<https://w3id.org/esim#suppliesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/esim#suppliesWith> <http://www.w3.org/2000/01/rdf-schema#label> "supplies with" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/esim#hasCoolingSystem
+<https://w3id.org/esim#hasCoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasCoolingSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/esim#hasCoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has cooling system" .
+# 
+# https://w3id.org/esim#hasCostValue
+<https://w3id.org/esim#hasCostValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasCostValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#CostInformation> .
+<https://w3id.org/esim#hasCostValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/esim#hasCostValue> <http://www.w3.org/2000/01/rdf-schema#label> "has cost value" .
+# 
+# https://w3id.org/esim#hasHeatRecoverySystem
+<https://w3id.org/esim#hasHeatRecoverySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasHeatRecoverySystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/esim#hasHeatRecoverySystem> <http://www.w3.org/2000/01/rdf-schema#label> "has heat recovery system" .
+# 
+# https://w3id.org/esim#hasHeatingSystem
+<https://w3id.org/esim#hasHeatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasHeatingSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/esim#hasHeatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has heating system" .
+# 
+# https://w3id.org/esim#hasID
+<https://w3id.org/esim#hasID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/esim#hasID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/esim#hasID> <http://www.w3.org/2000/01/rdf-schema#label> "has ID" .
+# 
+# https://w3id.org/esim#hasMaximumLoadValue
+<https://w3id.org/esim#hasMaximumLoadValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasMaximumLoadValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#hasMaximumLoadValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/esim#hasMaximumLoadValue> <http://www.w3.org/2000/01/rdf-schema#label> "has maximum load value" .
+# 
+# https://w3id.org/esim#hasMinimumLoadValue
+<https://w3id.org/esim#hasMinimumLoadValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasMinimumLoadValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#hasMinimumLoadValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/esim#hasMinimumLoadValue> <http://www.w3.org/2000/01/rdf-schema#label> "has minimum load value" .
+# 
+# https://w3id.org/esim#hasName
+<https://w3id.org/esim#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/esim#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/esim#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name" .
+# 
+# https://w3id.org/esim#hasPartialLoadValue
+<https://w3id.org/esim#hasPartialLoadValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasPartialLoadValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#hasPartialLoadValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/esim#hasPartialLoadValue> <http://www.w3.org/2000/01/rdf-schema#label> "has partial load value" .
+# 
+# https://w3id.org/esim#hasPortDescription
+<https://w3id.org/esim#hasPortDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasPortDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#Port> .
+<https://w3id.org/esim#hasPortDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/esim#hasPortDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has port description" .
+# 
+# https://w3id.org/esim#hasPortID
+<https://w3id.org/esim#hasPortID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#hasPortID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/esim#Port> .
+<https://w3id.org/esim#hasPortID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/esim#hasPortID> <http://www.w3.org/2000/01/rdf-schema#label> "has port ID" .
+# 
+# https://w3id.org/esim#ifcGloballyUniqueId
+<https://w3id.org/esim#ifcGloballyUniqueId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#ifcGloballyUniqueId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/esim#ifcGloballyUniqueId> <http://www.w3.org/2000/01/rdf-schema#label> "ifc globally unique id" .
+# 
+# https://w3id.org/esim#isOrientedSouth
+<https://w3id.org/esim#isOrientedSouth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/esim#isOrientedSouth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/esim#isOrientedSouth> <http://www.w3.org/2000/01/rdf-schema#label> "is oriented south" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/esim#AC_Network
+<https://w3id.org/esim#AC_Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AC_Network> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CableNetwork> .
+<https://w3id.org/esim#AC_Network> <http://www.w3.org/2000/01/rdf-schema#label> "AC Network" .
+# 
+# https://w3id.org/esim#AbsorptionChiller
+<https://w3id.org/esim#AbsorptionChiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AbsorptionChiller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Chiller> .
+<https://w3id.org/esim#AbsorptionChiller> <http://www.w3.org/2000/01/rdf-schema#comment> "A chiller that uses a heat source such as steam or hot water to move the refrigerant around the system" .
+<https://w3id.org/esim#AbsorptionChiller> <http://www.w3.org/2000/01/rdf-schema#label> "Vapor-absorption chiller" .
+# 
+# https://w3id.org/esim#Actuator
+<https://w3id.org/esim#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlComponent> .
+<https://w3id.org/esim#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator" .
+# 
+# https://w3id.org/esim#AdministrationalInformation
+<https://w3id.org/esim#AdministrationalInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AdministrationalInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Administrational information" .
+# 
+# https://w3id.org/esim#AdsorptionChiller
+<https://w3id.org/esim#AdsorptionChiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AdsorptionChiller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Chiller> .
+<https://w3id.org/esim#AdsorptionChiller> <http://www.w3.org/2000/01/rdf-schema#comment> "Adsorption Chiller is able to make chilled water with low temperature (65℃～100℃) hot water. It uses solid sorption materials instead of liquid solutions." .
+<https://w3id.org/esim#AdsorptionChiller> <http://www.w3.org/2000/01/rdf-schema#label> "Adsorption chiller" .
+# 
+# https://w3id.org/esim#AirAirHeatPump
+<https://w3id.org/esim#AirAirHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AirAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AirSourceHeatPump> .
+<https://w3id.org/esim#AirAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "An ASHP that absorbs heat from outside air and releases it inside the building as hot air" .
+<https://w3id.org/esim#AirAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Air air heat pump" .
+# 
+# https://w3id.org/esim#AirDistributionBox
+<https://w3id.org/esim#AirDistributionBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AirDistributionBox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#AirDistributionBox> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<https://w3id.org/esim#AirDistributionBox> <http://www.w3.org/2000/01/rdf-schema#label> "Air distribution box" .
+# 
+# https://w3id.org/esim#AirHandlingUnit
+<https://w3id.org/esim#AirHandlingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AirHandlingUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#AirHandlingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Air handling unit" .
+# 
+# https://w3id.org/esim#AirSourceHeatPump
+<https://w3id.org/esim#AirSourceHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AirSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HeatPump> .
+<https://w3id.org/esim#AirSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "An air source heat pump (ASHP) is a system which transfers heat from outside to inside a building, or vice versa." .
+<https://w3id.org/esim#AirSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Air source heat pump" .
+# 
+# https://w3id.org/esim#AirWaterHeatPump
+<https://w3id.org/esim#AirWaterHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AirWaterHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AirSourceHeatPump> .
+<https://w3id.org/esim#AirWaterHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "An ASHP that absorbs heat from outside air and releases it inside the building as hot water" .
+<https://w3id.org/esim#AirWaterHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Air water heat pump" .
+# 
+# https://w3id.org/esim#Algorithm
+<https://w3id.org/esim#Algorithm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Algorithm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSoftware> .
+<https://w3id.org/esim#Algorithm> <http://www.w3.org/2000/01/rdf-schema#label> "Algorithm" .
+# 
+# https://w3id.org/esim#AverageUnavailability
+<https://w3id.org/esim#AverageUnavailability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#AverageUnavailability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SystemProperty> .
+<https://w3id.org/esim#AverageUnavailability> <http://www.w3.org/2000/01/rdf-schema#label> "Average unavailability" .
+# 
+# https://w3id.org/esim#BAC_Function
+<https://w3id.org/esim#BAC_Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BAC_Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlFunction> .
+<https://w3id.org/esim#BAC_Function> <http://www.w3.org/2000/01/rdf-schema#label> "BAC Function" .
+# 
+# https://w3id.org/esim#BasicTariff
+<https://w3id.org/esim#BasicTariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BasicTariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTarif> .
+<https://w3id.org/esim#BasicTariff> <http://www.w3.org/2000/01/rdf-schema#label> "Basic tariff" .
+# 
+# https://w3id.org/esim#Bathroom
+<https://w3id.org/esim#Bathroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Bathroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#Bathroom> <http://www.w3.org/2000/01/rdf-schema#label> "Bathroom" .
+<https://w3id.org/esim#Bathroom> <https://w3id.org/esim#omniclass> "13-65 13 00" .
+# 
+# https://w3id.org/esim#Battery
+<https://w3id.org/esim#Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Battery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery" .
+# 
+# https://w3id.org/esim#Bedroom
+<https://w3id.org/esim#Bedroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Bedroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#Bedroom> <http://www.w3.org/2000/01/rdf-schema#label> "Bedroom" .
+<https://w3id.org/esim#Bedroom> <https://w3id.org/esim#omniclass> "13-65 19 00" .
+# 
+# https://w3id.org/esim#BehaviouralModel
+<https://w3id.org/esim#BehaviouralModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModel> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model" .
+# 
+# https://w3id.org/esim#BehaviouralModelEnergyConsumptionUsage
+<https://w3id.org/esim#BehaviouralModelEnergyConsumptionUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelEnergyConsumptionUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> .
+<https://w3id.org/esim#BehaviouralModelEnergyConsumptionUsage> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy consumption usage" .
+# 
+# https://w3id.org/esim#BehaviouralModelEnergyDistributionSystem
+<https://w3id.org/esim#BehaviouralModelEnergyDistributionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> .
+<https://w3id.org/esim#BehaviouralModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy distribution system" .
+# 
+# https://w3id.org/esim#BehaviouralModelEnergySource
+<https://w3id.org/esim#BehaviouralModelEnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> .
+<https://w3id.org/esim#BehaviouralModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy source" .
+# 
+# https://w3id.org/esim#BehaviouralModelEnergyStorage
+<https://w3id.org/esim#BehaviouralModelEnergyStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelEnergyStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> .
+<https://w3id.org/esim#BehaviouralModelEnergyStorage> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy storage" .
+# 
+# https://w3id.org/esim#BehaviouralModelEnergyTransformationFacility
+<https://w3id.org/esim#BehaviouralModelEnergyTransformationFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> .
+<https://w3id.org/esim#BehaviouralModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy transformation facility" .
+# 
+# https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic
+<https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModel> .
+<https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model with detailed characteristic" .
+# 
+# https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic
+<https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModel> .
+<https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model with simplified characteristic" .
+# 
+# https://w3id.org/esim#BioGas
+<https://w3id.org/esim#BioGas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BioGas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Gas> .
+<https://w3id.org/esim#BioGas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#BioGas> <http://www.w3.org/2000/01/rdf-schema#label> "Bio gas" .
+# 
+# https://w3id.org/esim#Biomass
+<https://w3id.org/esim#Biomass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Biomass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#Biomass> <http://www.w3.org/2000/01/rdf-schema#label> "Biomass" .
+# 
+# https://w3id.org/esim#Boiler
+<https://w3id.org/esim#Boiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Boiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#Boiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler" .
+# 
+# https://w3id.org/esim#BreakoutSpace
+<https://w3id.org/esim#BreakoutSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BreakoutSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Space> .
+<https://w3id.org/esim#BreakoutSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Breakout Space" .
+<https://w3id.org/esim#BreakoutSpace> <https://w3id.org/esim#omniclass> "13-31 11 00" .
+# 
+# https://w3id.org/esim#Building
+<https://w3id.org/esim#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
+# 
+# https://w3id.org/esim#BuildingControlSystem
+<https://w3id.org/esim#BuildingControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BuildingControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#BuildingControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Building control system" .
+# 
+# https://w3id.org/esim#BuildingCooling
+<https://w3id.org/esim#BuildingCooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BuildingCooling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Cooling> .
+<https://w3id.org/esim#BuildingCooling> <http://www.w3.org/2000/01/rdf-schema#label> "Building cooling" .
+# 
+# https://w3id.org/esim#BuildingEnergySystem
+<https://w3id.org/esim#BuildingEnergySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BuildingEnergySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#BuildingEnergySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Building energy system" .
+# 
+# https://w3id.org/esim#BuildingEnvelope
+<https://w3id.org/esim#BuildingEnvelope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BuildingEnvelope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#BuildingEnvelope> <http://www.w3.org/2000/01/rdf-schema#label> "Building envelope" .
+# 
+# https://w3id.org/esim#BuildingHeating
+<https://w3id.org/esim#BuildingHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#BuildingHeating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Heating> .
+<https://w3id.org/esim#BuildingHeating> <http://www.w3.org/2000/01/rdf-schema#label> "Building heating" .
+# 
+# https://w3id.org/esim#Cable
+<https://w3id.org/esim#Cable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Cable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Cable> <http://www.w3.org/2000/01/rdf-schema#label> "Cable" .
+# 
+# https://w3id.org/esim#CableFitting
+<https://w3id.org/esim#CableFitting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CableFitting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Cable> .
+<https://w3id.org/esim#CableFitting> <http://www.w3.org/2000/01/rdf-schema#label> "Cable fitting" .
+# 
+# https://w3id.org/esim#CableNetwork
+<https://w3id.org/esim#CableNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CableNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Cable> .
+<https://w3id.org/esim#CableNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Cable network" .
+# 
+# https://w3id.org/esim#CableSegment
+<https://w3id.org/esim#CableSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CableSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Cable> .
+<https://w3id.org/esim#CableSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Cable segment" .
+# 
+# https://w3id.org/esim#CarbonDioxide
+<https://w3id.org/esim#CarbonDioxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Gas> .
+<https://w3id.org/esim#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#label> "Carbon dioxide" .
+# 
+# https://w3id.org/esim#Ceiling
+<https://w3id.org/esim#Ceiling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Ceiling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Element> .
+<https://w3id.org/esim#Ceiling> <http://www.w3.org/2000/01/rdf-schema#label> "Ceiling" .
+# 
+# https://w3id.org/esim#Chiller
+<https://w3id.org/esim#Chiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Chiller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#Chiller> <http://www.w3.org/2000/01/rdf-schema#label> "Chiller" .
+# 
+# https://w3id.org/esim#City
+<https://w3id.org/esim#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# https://w3id.org/esim#Classroom
+<https://w3id.org/esim#Classroom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Classroom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#Classroom> <http://www.w3.org/2000/01/rdf-schema#label> "Classroom" .
+<https://w3id.org/esim#Classroom> <https://w3id.org/esim#omniclass> "13-31 13 13" .
+# 
+# https://w3id.org/esim#Coal
+<https://w3id.org/esim#Coal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Coal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#FossilFuel> .
+<https://w3id.org/esim#Coal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Solid> .
+<https://w3id.org/esim#Coal> <http://www.w3.org/2000/01/rdf-schema#label> "Coal" .
+# 
+# https://w3id.org/esim#CoefficientOfPerformance
+<https://w3id.org/esim#CoefficientOfPerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CoefficientOfPerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PerformanceParameter> .
+<https://w3id.org/esim#CoefficientOfPerformance> <http://www.w3.org/2000/01/rdf-schema#label> "COP" .
+# 
+# https://w3id.org/esim#ColdEnergyDemand
+<https://w3id.org/esim#ColdEnergyDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ColdEnergyDemand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDemand> .
+<https://w3id.org/esim#ColdEnergyDemand> <http://www.w3.org/2000/01/rdf-schema#label> "Cold energy demand" .
+# 
+# https://w3id.org/esim#ColdEnergySupply
+<https://w3id.org/esim#ColdEnergySupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ColdEnergySupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#ColdEnergySupply> <http://www.w3.org/2000/01/rdf-schema#label> "Cold energy supply" .
+# 
+# https://w3id.org/esim#ColdWaterSupply
+<https://w3id.org/esim#ColdWaterSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ColdWaterSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#WaterSupply> .
+<https://w3id.org/esim#ColdWaterSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Cold water supply" .
+# 
+# https://w3id.org/esim#ColdWaterTank
+<https://w3id.org/esim#ColdWaterTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ColdWaterTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#WaterTank> .
+<https://w3id.org/esim#ColdWaterTank> <http://www.w3.org/2000/01/rdf-schema#label> "Cold water tank" .
+# 
+# https://w3id.org/esim#ComponentProperty
+<https://w3id.org/esim#ComponentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ComponentProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ReliabilityParameter> .
+<https://w3id.org/esim#ComponentProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Component property" .
+# 
+# https://w3id.org/esim#CompressionChiller
+<https://w3id.org/esim#CompressionChiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CompressionChiller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Chiller> .
+<https://w3id.org/esim#CompressionChiller> <http://www.w3.org/2000/01/rdf-schema#comment> "A chiller that uses an electrically driven mechanical compressor to force a refrigerant around the system" .
+<https://w3id.org/esim#CompressionChiller> <http://www.w3.org/2000/01/rdf-schema#label> "Vapor-compression chiller" .
+# 
+# https://w3id.org/esim#ConditionedZone
+<https://w3id.org/esim#ConditionedZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ConditionedZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Zone> .
+<https://w3id.org/esim#ConditionedZone> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/esim#UnconditionedZone> .
+<https://w3id.org/esim#ConditionedZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A space or group of spaces within a building with heating, cooling, and ventilating requirements which can be maintain by a HVAC system" .
+<https://w3id.org/esim#ConditionedZone> <http://www.w3.org/2000/01/rdf-schema#label> "Conditioned zone" .
+# 
+# https://w3id.org/esim#Contract
+<https://w3id.org/esim#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Contract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AdministrationalInformation> .
+<https://w3id.org/esim#Contract> <http://www.w3.org/2000/01/rdf-schema#label> "Contract" .
+# 
+# https://w3id.org/esim#ControlComponent
+<https://w3id.org/esim#ControlComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ControlComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlFacility> .
+<https://w3id.org/esim#ControlComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Automation and control equipment" .
+# 
+# https://w3id.org/esim#ControlFacility
+<https://w3id.org/esim#ControlFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ControlFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Automation and control facility" .
+# 
+# https://w3id.org/esim#ControlFunction
+<https://w3id.org/esim#ControlFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ControlFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Automation and control function" .
+# 
+# https://w3id.org/esim#ControlSoftware
+<https://w3id.org/esim#ControlSoftware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ControlSoftware> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlFacility> .
+<https://w3id.org/esim#ControlSoftware> <http://www.w3.org/2000/01/rdf-schema#label> "Automation and control software" .
+# 
+# https://w3id.org/esim#ControlStrategy
+<https://w3id.org/esim#ControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "Control strategy" .
+# 
+# https://w3id.org/esim#ControlSystem
+<https://w3id.org/esim#ControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Automation and control system" .
+# 
+# https://w3id.org/esim#Controller
+<https://w3id.org/esim#Controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Controller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlComponent> .
+<https://w3id.org/esim#Controller> <http://www.w3.org/2000/01/rdf-schema#label> "Controller" .
+# 
+# https://w3id.org/esim#Cooling
+<https://w3id.org/esim#Cooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Cooling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#Cooling> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling" .
+# 
+# https://w3id.org/esim#CoolingCircuit
+<https://w3id.org/esim#CoolingCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CoolingCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistributionCircuit> .
+<https://w3id.org/esim#CoolingCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling circuit" .
+# 
+# https://w3id.org/esim#CoolingEnergy
+<https://w3id.org/esim#CoolingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CoolingEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#CoolingEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "CoolingEnergy" .
+# 
+# https://w3id.org/esim#CoolingSystem
+<https://w3id.org/esim#CoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling system" .
+# 
+# https://w3id.org/esim#CoolingZone
+<https://w3id.org/esim#CoolingZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CoolingZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ConditionedZone> .
+<https://w3id.org/esim#CoolingZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A space or group of spaces with cooling requirements maintained by a cooling system" .
+<https://w3id.org/esim#CoolingZone> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling zone" .
+# 
+# https://w3id.org/esim#CostInformation
+<https://w3id.org/esim#CostInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#CostInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Cost information" .
+# 
+# https://w3id.org/esim#DC_Network
+<https://w3id.org/esim#DC_Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DC_Network> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CableNetwork> .
+<https://w3id.org/esim#DC_Network> <http://www.w3.org/2000/01/rdf-schema#label> "DC Network" .
+# 
+# https://w3id.org/esim#Data
+<https://w3id.org/esim#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Data> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSoftware> .
+<https://w3id.org/esim#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+# 
+# https://w3id.org/esim#DecisionValue
+<https://w3id.org/esim#DecisionValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DecisionValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyPoint> .
+<https://w3id.org/esim#DecisionValue> <http://www.w3.org/2000/01/rdf-schema#label> "Decision value" .
+# 
+# https://w3id.org/esim#DegradationModel
+<https://w3id.org/esim#DegradationModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DegradationModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModel> .
+<https://w3id.org/esim#DegradationModel> <http://www.w3.org/2000/01/rdf-schema#label> "Degradation model" .
+# 
+# https://w3id.org/esim#DetailedBehaviourModelEnergySource
+<https://w3id.org/esim#DetailedBehaviourModelEnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DetailedBehaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> .
+<https://w3id.org/esim#DetailedBehaviourModelEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "Behaviour model energy source" .
+# 
+# https://w3id.org/esim#DetailedBehaviouralModelEnergyConsumptionUsage
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyConsumptionUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyConsumptionUsage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyConsumptionUsage> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy consumption usage" .
+# 
+# https://w3id.org/esim#DetailedBehaviouralModelEnergyDistributionSystem
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyDistributionSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyDistributionSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy distribution system" .
+# 
+# https://w3id.org/esim#DetailedBehaviouralModelEnergyStorage
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyStorage> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy storage" .
+# 
+# https://w3id.org/esim#DetailedBehaviouralModelEnergyTransformationFacility
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyTransformationFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic> .
+<https://w3id.org/esim#DetailedBehaviouralModelEnergyTransformationFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Behavioural model energy transformation facility" .
+# 
+# https://w3id.org/esim#Dimension
+<https://w3id.org/esim#Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Dimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PhysicalParameter> .
+<https://w3id.org/esim#Dimension> <http://www.w3.org/2000/01/rdf-schema#label> "Dimension" .
+# 
+# https://w3id.org/esim#District
+<https://w3id.org/esim#District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#District> <http://www.w3.org/2000/01/rdf-schema#label> "District" .
+# 
+# https://w3id.org/esim#DistrictCooling
+<https://w3id.org/esim#DistrictCooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DistrictCooling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Cooling> .
+<https://w3id.org/esim#DistrictCooling> <http://www.w3.org/2000/01/rdf-schema#label> "District cooling" .
+# 
+# https://w3id.org/esim#DistrictEnergySystem
+<https://w3id.org/esim#DistrictEnergySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DistrictEnergySystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#DistrictEnergySystem> <http://www.w3.org/2000/01/rdf-schema#label> "District energy system" .
+# 
+# https://w3id.org/esim#DistrictHeating
+<https://w3id.org/esim#DistrictHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DistrictHeating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Heating> .
+<https://w3id.org/esim#DistrictHeating> <http://www.w3.org/2000/01/rdf-schema#label> "District heating" .
+# 
+# https://w3id.org/esim#DomesticColdWater
+<https://w3id.org/esim#DomesticColdWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticColdWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#DomesticWater> .
+<https://w3id.org/esim#DomesticColdWater> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic cold water" .
+# 
+# https://w3id.org/esim#DomesticColdWaterCircuit
+<https://w3id.org/esim#DomesticColdWaterCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticColdWaterCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#DomesticWaterCircuit> .
+<https://w3id.org/esim#DomesticColdWaterCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic cold water circuit" .
+# 
+# https://w3id.org/esim#DomesticHotWater
+<https://w3id.org/esim#DomesticHotWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticHotWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#DomesticWater> .
+<https://w3id.org/esim#DomesticHotWater> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic hot water" .
+# 
+# https://w3id.org/esim#DomesticHotWaterCircuit
+<https://w3id.org/esim#DomesticHotWaterCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticHotWaterCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#DomesticWaterCircuit> .
+<https://w3id.org/esim#DomesticHotWaterCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic hot water circuit" .
+# 
+# https://w3id.org/esim#DomesticHotWaterTank
+<https://w3id.org/esim#DomesticHotWaterTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticHotWaterTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HotWaterTank> .
+<https://w3id.org/esim#DomesticHotWaterTank> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic hot water tank" .
+# 
+# https://w3id.org/esim#DomesticWater
+<https://w3id.org/esim#DomesticWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#DomesticWater> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic water" .
+# 
+# https://w3id.org/esim#DomesticWaterCircuit
+<https://w3id.org/esim#DomesticWaterCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DomesticWaterCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistributionCircuit> .
+<https://w3id.org/esim#DomesticWaterCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Domestic water circuit" .
+# 
+# https://w3id.org/esim#Door
+<https://w3id.org/esim#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Element> .
+<https://w3id.org/esim#Door> <http://www.w3.org/2000/01/rdf-schema#label> "Door" .
+# 
+# https://w3id.org/esim#Duct
+<https://w3id.org/esim#Duct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Duct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Duct> <http://www.w3.org/2000/01/rdf-schema#label> "Duct" .
+# 
+# https://w3id.org/esim#DuctFitting
+<https://w3id.org/esim#DuctFitting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DuctFitting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Duct> .
+<https://w3id.org/esim#DuctFitting> <http://www.w3.org/2000/01/rdf-schema#label> "Duct fitting" .
+# 
+# https://w3id.org/esim#DuctNetwork
+<https://w3id.org/esim#DuctNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DuctNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Duct> .
+<https://w3id.org/esim#DuctNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Duct network" .
+# 
+# https://w3id.org/esim#DuctSegment
+<https://w3id.org/esim#DuctSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DuctSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Duct> .
+<https://w3id.org/esim#DuctSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Duct segment" .
+# 
+# https://w3id.org/esim#DynamicTariff
+<https://w3id.org/esim#DynamicTariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#DynamicTariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTarif> .
+<https://w3id.org/esim#DynamicTariff> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic tariff" .
+# 
+# https://w3id.org/esim#EcologicalEnergyCost
+<https://w3id.org/esim#EcologicalEnergyCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EcologicalEnergyCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyCost> .
+<https://w3id.org/esim#EcologicalEnergyCost> <http://www.w3.org/2000/01/rdf-schema#label> "Ecological energy cost" .
+# 
+# https://w3id.org/esim#EducationFacility
+<https://w3id.org/esim#EducationFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EducationFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Building> .
+<https://w3id.org/esim#EducationFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Education Facility" .
+<https://w3id.org/esim#EducationFacility> <https://w3id.org/esim#omniclass> "11-12 00 00" .
+# 
+# https://w3id.org/esim#ElectricGenerator
+<https://w3id.org/esim#ElectricGenerator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricGenerator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#ElectricGenerator> <http://www.w3.org/2000/01/rdf-schema#label> "Electric generator" .
+# 
+# https://w3id.org/esim#ElectricHeater
+<https://w3id.org/esim#ElectricHeater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricHeater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#ElectricHeater> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical heater" .
+# 
+# https://w3id.org/esim#ElectricMotor
+<https://w3id.org/esim#ElectricMotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricMotor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#ElectricMotor> <http://www.w3.org/2000/01/rdf-schema#label> "Electric motor" .
+# 
+# https://w3id.org/esim#ElectricalAndHeatSupply
+<https://w3id.org/esim#ElectricalAndHeatSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricalAndHeatSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#ElectricalAndHeatSupply> <http://www.w3.org/2000/01/rdf-schema#label> "District electrical and heat supply system" .
+# 
+# https://w3id.org/esim#ElectricalAppliances
+<https://w3id.org/esim#ElectricalAppliances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricalAppliances> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#ElectricalAppliances> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical appliances" .
+# 
+# https://w3id.org/esim#ElectricalEnergy
+<https://w3id.org/esim#ElectricalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricalEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#ElectricalEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricalEnergy" .
+# 
+# https://w3id.org/esim#ElectricalEnergyDemand
+<https://w3id.org/esim#ElectricalEnergyDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricalEnergyDemand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDemand> .
+<https://w3id.org/esim#ElectricalEnergyDemand> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical energy demand" .
+# 
+# https://w3id.org/esim#ElectricalEnergySupply
+<https://w3id.org/esim#ElectricalEnergySupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricalEnergySupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#ElectricalEnergySupply> <http://www.w3.org/2000/01/rdf-schema#label> "District electrical energy supply system" .
+<https://w3id.org/esim#ElectricalEnergySupply> <http://www.w3.org/2000/01/rdf-schema#label> "Electric energy supply" .
+# 
+# https://w3id.org/esim#ElectricalSystem
+<https://w3id.org/esim#ElectricalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#ElectricalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical system" .
+# 
+# https://w3id.org/esim#Electricity
+<https://w3id.org/esim#Electricity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Electricity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#Electricity> <http://www.w3.org/2000/01/rdf-schema#label> "Electricity" .
+# 
+# https://w3id.org/esim#ElectricityUse
+<https://w3id.org/esim#ElectricityUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ElectricityUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#ElectricityUse> <http://www.w3.org/2000/01/rdf-schema#label> "Electricity use" .
+# 
+# https://w3id.org/esim#Element
+<https://w3id.org/esim#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
+# 
+# https://w3id.org/esim#Emission
+<https://w3id.org/esim#Emission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Emission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EcologicalEnergyCost> .
+<https://w3id.org/esim#Emission> <http://www.w3.org/2000/01/rdf-schema#label> "Emission" .
+# 
+# https://w3id.org/esim#EnergyCapacity
+<https://w3id.org/esim#EnergyCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyCapacity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#EnergyCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Energy capacity" .
+# 
+# https://w3id.org/esim#EnergyCollector
+<https://w3id.org/esim#EnergyCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyCollector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#EnergyCollector> <http://www.w3.org/2000/01/rdf-schema#label> "Energy collector" .
+# 
+# https://w3id.org/esim#EnergyConsumption
+<https://w3id.org/esim#EnergyConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#EnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Energy consumption" .
+# 
+# https://w3id.org/esim#EnergyCost
+<https://w3id.org/esim#EnergyCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#EnergyCost> <http://www.w3.org/2000/01/rdf-schema#label> "Energy cost" .
+# 
+# https://w3id.org/esim#EnergyCostTariff
+<https://w3id.org/esim#EnergyCostTariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyCostTariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTarif> .
+<https://w3id.org/esim#EnergyCostTariff> <http://www.w3.org/2000/01/rdf-schema#comment> "Tariffs charged by energy providers for supplied energy" .
+<https://w3id.org/esim#EnergyCostTariff> <http://www.w3.org/2000/01/rdf-schema#label> "Energy cost tariff" .
+# 
+# https://w3id.org/esim#EnergyDemand
+<https://w3id.org/esim#EnergyDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyDemand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#EnergyDemand> <http://www.w3.org/2000/01/rdf-schema#label> "Energy demand" .
+# 
+# https://w3id.org/esim#EnergyDemandForHeating
+<https://w3id.org/esim#EnergyDemandForHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyDemandForHeating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyPerformanceIndicator> .
+<https://w3id.org/esim#EnergyDemandForHeating> <http://www.w3.org/2000/01/rdf-schema#label> "Energy demand for heating" .
+# 
+# https://w3id.org/esim#EnergyDistribution
+<https://w3id.org/esim#EnergyDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyDistribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystemComponent> .
+<https://w3id.org/esim#EnergyDistribution> <http://www.w3.org/2000/01/rdf-schema#label> "Energy distribution" .
+# 
+# https://w3id.org/esim#EnergyDistributionCOP
+<https://w3id.org/esim#EnergyDistributionCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyDistributionCOP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#EnergyDistributionCOP> <http://www.w3.org/2000/01/rdf-schema#label> "Energy distribution COP" .
+# 
+# https://w3id.org/esim#EnergyDistributionCircuit
+<https://w3id.org/esim#EnergyDistributionCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyDistributionCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#EnergyDistributionCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Energy distribution circuit" .
+# 
+# https://w3id.org/esim#EnergyForm
+<https://w3id.org/esim#EnergyForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyForm> <http://www.w3.org/2000/01/rdf-schema#label> "Energy form" .
+# 
+# https://w3id.org/esim#EnergyGain
+<https://w3id.org/esim#EnergyGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#EnergyGain> <http://www.w3.org/2000/01/rdf-schema#label> "Energy gain" .
+# 
+# https://w3id.org/esim#EnergyManagementSystem
+<https://w3id.org/esim#EnergyManagementSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyManagementSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#EnergyManagementSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Energy management system" .
+# 
+# https://w3id.org/esim#EnergyMix
+<https://w3id.org/esim#EnergyMix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyMix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#EnergyMix> <http://www.w3.org/2000/01/rdf-schema#comment> "The energy mix is the group of different primary energy sources from which secondary energy for direct use - usually electricity - is produced." .
+<https://w3id.org/esim#EnergyMix> <http://www.w3.org/2000/01/rdf-schema#label> "Energy mix" .
+# 
+# https://w3id.org/esim#EnergyParameter
+<https://w3id.org/esim#EnergyParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Parameter> .
+<https://w3id.org/esim#EnergyParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Energy parameter" .
+# 
+# https://w3id.org/esim#EnergyRecoveryTariff
+<https://w3id.org/esim#EnergyRecoveryTariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyRecoveryTariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTarif> .
+<https://w3id.org/esim#EnergyRecoveryTariff> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy tariff refunded by providers for recovered energy through e.g. solar collectors" .
+<https://w3id.org/esim#EnergyRecoveryTariff> <http://www.w3.org/2000/01/rdf-schema#label> "EnergyRecoveryTariff" .
+# 
+# https://w3id.org/esim#EnergyRelatedData
+<https://w3id.org/esim#EnergyRelatedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyRelatedData> <http://www.w3.org/2000/01/rdf-schema#label> "Energy related data" .
+# 
+# https://w3id.org/esim#EnergyService
+<https://w3id.org/esim#EnergyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyService> <http://www.w3.org/2000/01/rdf-schema#label> "Energy service" .
+# 
+# https://w3id.org/esim#EnergySource
+<https://w3id.org/esim#EnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergySource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystemComponent> .
+<https://w3id.org/esim#EnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "Energy source" .
+# 
+# https://w3id.org/esim#EnergySourceCOP
+<https://w3id.org/esim#EnergySourceCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergySourceCOP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#EnergySourceCOP> <http://www.w3.org/2000/01/rdf-schema#label> "Energy source COP" .
+# 
+# https://w3id.org/esim#EnergyStorage
+<https://w3id.org/esim#EnergyStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystemComponent> .
+<https://w3id.org/esim#EnergyStorage> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy storage is the capture of energy produced at one time for use at a later time." .
+<https://w3id.org/esim#EnergyStorage> <http://www.w3.org/2000/01/rdf-schema#label> "Energy storage" .
+# 
+# https://w3id.org/esim#EnergyStorageCOP
+<https://w3id.org/esim#EnergyStorageCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyStorageCOP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#EnergyStorageCOP> <http://www.w3.org/2000/01/rdf-schema#label> "Energy storage COP" .
+# 
+# https://w3id.org/esim#EnergySupply
+<https://w3id.org/esim#EnergySupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergySupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystemComponent> .
+<https://w3id.org/esim#EnergySupply> <http://www.w3.org/2000/01/rdf-schema#label> "Energy supply" .
+# 
+# https://w3id.org/esim#EnergySupplyValue
+<https://w3id.org/esim#EnergySupplyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergySupplyValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#EnergySupplyValue> <http://www.w3.org/2000/01/rdf-schema#label> "Energy supply values" .
+# 
+# https://w3id.org/esim#EnergySystem
+<https://w3id.org/esim#EnergySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergySystem> <http://www.w3.org/2000/01/rdf-schema#label> "Energy system" .
+# 
+# https://w3id.org/esim#EnergySystemComponent
+<https://w3id.org/esim#EnergySystemComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergySystemComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Energy system component" .
+# 
+# https://w3id.org/esim#EnergyTarif
+<https://w3id.org/esim#EnergyTarif> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyTarif> <http://www.w3.org/2000/01/rdf-schema#label> "Energy tarif" .
+# 
+# https://w3id.org/esim#EnergyTransformation
+<https://w3id.org/esim#EnergyTransformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyTransformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystemComponent> .
+<https://w3id.org/esim#EnergyTransformation> <http://www.w3.org/2000/01/rdf-schema#label> "Energy transformation" .
+# 
+# https://w3id.org/esim#EnergyTransformationCOP
+<https://w3id.org/esim#EnergyTransformationCOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyTransformationCOP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CoefficientOfPerformance> .
+<https://w3id.org/esim#EnergyTransformationCOP> <http://www.w3.org/2000/01/rdf-schema#label> "Energy transformation COP" .
+# 
+# https://w3id.org/esim#EnergyUse
+<https://w3id.org/esim#EnergyUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#EnergyUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystemComponent> .
+<https://w3id.org/esim#EnergyUse> <http://www.w3.org/2000/01/rdf-schema#label> "Energy use" .
+# 
+# https://w3id.org/esim#Engine
+<https://w3id.org/esim#Engine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Engine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#Engine> <http://www.w3.org/2000/01/rdf-schema#label> "Engine" .
+# 
+# https://w3id.org/esim#Evaporator
+<https://w3id.org/esim#Evaporator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Evaporator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#Evaporator> <http://www.w3.org/2000/01/rdf-schema#label> "Evaporator" .
+# 
+# https://w3id.org/esim#ExhaustAirHeatPump
+<https://w3id.org/esim#ExhaustAirHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ExhaustAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HeatPump> .
+<https://w3id.org/esim#ExhaustAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "An Exhaust Air Heat Pump (EAHP) extracts heat from the exhaust air of a building and transfers the heat to the supply air, hot tap water and/or hydronic heating system (underfloor heating, radiators)." .
+<https://w3id.org/esim#ExhaustAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Ehaust air heat pump" .
+# 
+# https://w3id.org/esim#ExpansionVessel
+<https://w3id.org/esim#ExpansionVessel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ExpansionVessel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#ExpansionVessel> <http://www.w3.org/2000/01/rdf-schema#label> "Expansion vessel" .
+# 
+# https://w3id.org/esim#Fan
+<https://w3id.org/esim#Fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Fan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Fan> <http://www.w3.org/2000/01/rdf-schema#label> "Fan" .
+# 
+# https://w3id.org/esim#Fancoil
+<https://w3id.org/esim#Fancoil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Fancoil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Fancoil> <http://www.w3.org/2000/01/rdf-schema#label> "Fancoil" .
+# 
+# https://w3id.org/esim#FinalEnergy
+<https://w3id.org/esim#FinalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#FinalEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#FinalEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Final energy" .
+# 
+# https://w3id.org/esim#Floor
+<https://w3id.org/esim#Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Element> .
+<https://w3id.org/esim#Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Floor" .
+# 
+# https://w3id.org/esim#FloorHeating
+<https://w3id.org/esim#FloorHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#FloorHeating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#FloorHeating> <http://www.w3.org/2000/01/rdf-schema#label> "FloorHeating" .
+# 
+# https://w3id.org/esim#FossilFuel
+<https://w3id.org/esim#FossilFuel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#FossilFuel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#NonRenewable> .
+<https://w3id.org/esim#FossilFuel> <http://www.w3.org/2000/01/rdf-schema#label> "Fossil fuel" .
+# 
+# https://w3id.org/esim#Function
+<https://w3id.org/esim#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSoftware> .
+<https://w3id.org/esim#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function" .
+# 
+# https://w3id.org/esim#FunctionalInterfaceDescription
+<https://w3id.org/esim#FunctionalInterfaceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#FunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#InterfaceDescription> .
+<https://w3id.org/esim#FunctionalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Functional interface description" .
+# 
+# https://w3id.org/esim#FunctionalPort
+<https://w3id.org/esim#FunctionalPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#FunctionalPort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Port> .
+<https://w3id.org/esim#FunctionalPort> <http://www.w3.org/2000/01/rdf-schema#label> "Functional port" .
+# 
+# https://w3id.org/esim#Gas
+<https://w3id.org/esim#Gas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Gas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Medium> .
+<https://w3id.org/esim#Gas> <http://www.w3.org/2000/01/rdf-schema#label> "Gas" .
+# 
+# https://w3id.org/esim#GasNetwork
+<https://w3id.org/esim#GasNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#GasNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PipeNetwork> .
+<https://w3id.org/esim#GasNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Gas network" .
+# 
+# https://w3id.org/esim#GasTank
+<https://w3id.org/esim#GasTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#GasTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Tank> .
+<https://w3id.org/esim#GasTank> <http://www.w3.org/2000/01/rdf-schema#label> "Gas tank" .
+# 
+# https://w3id.org/esim#Geothermal
+<https://w3id.org/esim#Geothermal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Geothermal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#Geothermal> <http://www.w3.org/2000/01/rdf-schema#label> "Geothermal" .
+# 
+# https://w3id.org/esim#GridElectricalEnergySupply
+<https://w3id.org/esim#GridElectricalEnergySupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#GridElectricalEnergySupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#GridElectricalEnergySupply> <http://www.w3.org/2000/01/rdf-schema#label> "Grid electrical energy supply system" .
+# 
+# https://w3id.org/esim#GroundCollector
+<https://w3id.org/esim#GroundCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#GroundCollector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyCollector> .
+<https://w3id.org/esim#GroundCollector> <http://www.w3.org/2000/01/rdf-schema#label> "Ground collector" .
+# 
+# https://w3id.org/esim#GroundSourceHeatPump
+<https://w3id.org/esim#GroundSourceHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#GroundSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HeatPump> .
+<https://w3id.org/esim#GroundSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "A geothermal heat pump or ground source heat pump (GSHP) is a central heating and/or cooling system that transfers heat to or from the ground." .
+<https://w3id.org/esim#GroundSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Ground source heat pump" .
+# 
+# https://w3id.org/esim#GroundWater
+<https://w3id.org/esim#GroundWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#GroundWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Water> .
+<https://w3id.org/esim#GroundWater> <http://www.w3.org/2000/01/rdf-schema#label> "Ground water" .
+# 
+# https://w3id.org/esim#HazardRate
+<https://w3id.org/esim#HazardRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HazardRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ComponentProperty> .
+<https://w3id.org/esim#HazardRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SystemProperty> .
+<https://w3id.org/esim#HazardRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Hazard or failure rate λ (in h^-1 or y^-1)" .
+<https://w3id.org/esim#HazardRate> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard rate" .
+# 
+# https://w3id.org/esim#HealthCareFacility
+<https://w3id.org/esim#HealthCareFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HealthCareFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Building> .
+<https://w3id.org/esim#HealthCareFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Health Care Facility" .
+<https://w3id.org/esim#HealthCareFacility> <https://w3id.org/esim#omniclass> "11-21 00 00" .
+# 
+# https://w3id.org/esim#HeatEnergyDemand
+<https://w3id.org/esim#HeatEnergyDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatEnergyDemand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDemand> .
+<https://w3id.org/esim#HeatEnergyDemand> <http://www.w3.org/2000/01/rdf-schema#label> "Heat energy demand" .
+# 
+# https://w3id.org/esim#HeatEnergySupply
+<https://w3id.org/esim#HeatEnergySupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatEnergySupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#HeatEnergySupply> <http://www.w3.org/2000/01/rdf-schema#label> "Heat energy supply" .
+# 
+# https://w3id.org/esim#HeatExchanger
+<https://w3id.org/esim#HeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Heat exchanger" .
+# 
+# https://w3id.org/esim#HeatNetwork
+<https://w3id.org/esim#HeatNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PipeNetwork> .
+<https://w3id.org/esim#HeatNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Heat network" .
+# 
+# https://w3id.org/esim#HeatPump
+<https://w3id.org/esim#HeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#HeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Heat pump" .
+# 
+# https://w3id.org/esim#HeatRecovery
+<https://w3id.org/esim#HeatRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatRecovery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#HeatRecovery> <http://www.w3.org/2000/01/rdf-schema#label> "Heat recovery" .
+# 
+# https://w3id.org/esim#Heating
+<https://w3id.org/esim#Heating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Heating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#Heating> <http://www.w3.org/2000/01/rdf-schema#label> "Heating" .
+# 
+# https://w3id.org/esim#HeatingCircuit
+<https://w3id.org/esim#HeatingCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatingCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistributionCircuit> .
+<https://w3id.org/esim#HeatingCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Heating circuit" .
+# 
+# https://w3id.org/esim#HeatingEnergy
+<https://w3id.org/esim#HeatingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatingEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#HeatingEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "HeatingEnergy" .
+# 
+# https://w3id.org/esim#HeatingLoad
+<https://w3id.org/esim#HeatingLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatingLoad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyPerformanceIndicator> .
+<https://w3id.org/esim#HeatingLoad> <http://www.w3.org/2000/01/rdf-schema#label> "Heating load" .
+# 
+# https://w3id.org/esim#HeatingSystem
+<https://w3id.org/esim#HeatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Heating system" .
+# 
+# https://w3id.org/esim#HeatingZone
+<https://w3id.org/esim#HeatingZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HeatingZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ConditionedZone> .
+<https://w3id.org/esim#HeatingZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A space or group of spaces with heating requirements maintained by a heating system" .
+<https://w3id.org/esim#HeatingZone> <http://www.w3.org/2000/01/rdf-schema#label> "Heating zone" .
+# 
+# https://w3id.org/esim#HighLowTariff
+<https://w3id.org/esim#HighLowTariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HighLowTariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTarif> .
+<https://w3id.org/esim#HighLowTariff> <http://www.w3.org/2000/01/rdf-schema#label> "High low tariff" .
+# 
+# https://w3id.org/esim#HotWaterSupply
+<https://w3id.org/esim#HotWaterSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HotWaterSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#WaterSupply> .
+<https://w3id.org/esim#HotWaterSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Hot water supply" .
+# 
+# https://w3id.org/esim#HotWaterTank
+<https://w3id.org/esim#HotWaterTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HotWaterTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#WaterTank> .
+<https://w3id.org/esim#HotWaterTank> <http://www.w3.org/2000/01/rdf-schema#label> "Hot water tank" .
+# 
+# https://w3id.org/esim#Humidifier
+<https://w3id.org/esim#Humidifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Humidifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#Humidifier> <http://www.w3.org/2000/01/rdf-schema#label> "Humidifier" .
+# 
+# https://w3id.org/esim#HybridHeatPump
+<https://w3id.org/esim#HybridHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#HybridHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HeatPump> .
+<https://w3id.org/esim#HybridHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Hybrid heat pump" .
+# 
+# https://w3id.org/esim#Hydro
+<https://w3id.org/esim#Hydro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Hydro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#Hydro> <http://www.w3.org/2000/01/rdf-schema#comment> "Flowing water creates energy that can be captured and turned into electricity. This is called hydroelectric power or hydropower. The most common type of hydroelectric power plant uses a dam on a river to store water in a reservoir." .
+<https://w3id.org/esim#Hydro> <http://www.w3.org/2000/01/rdf-schema#label> "Hydro" .
+# 
+# https://w3id.org/esim#Identifier
+<https://w3id.org/esim#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "EAS Identifier Concept" .
+<https://w3id.org/esim#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier" .
+# 
+# https://w3id.org/esim#InformationNetwork
+<https://w3id.org/esim#InformationNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#InformationNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CableNetwork> .
+<https://w3id.org/esim#InformationNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Information network" .
+# 
+# https://w3id.org/esim#InterfaceDescription
+<https://w3id.org/esim#InterfaceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#InterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Interface description" .
+# 
+# https://w3id.org/esim#InvestmentCost
+<https://w3id.org/esim#InvestmentCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#InvestmentCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CostInformation> .
+<https://w3id.org/esim#InvestmentCost> <http://www.w3.org/2000/01/rdf-schema#label> "Investment cost" .
+# 
+# https://w3id.org/esim#KeyDesignParameter
+<https://w3id.org/esim#KeyDesignParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#KeyDesignParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyPoint> .
+<https://w3id.org/esim#KeyDesignParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Key design parameter" .
+# 
+# https://w3id.org/esim#KeyPerformanceIndicator
+<https://w3id.org/esim#KeyPerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyPoint> .
+<https://w3id.org/esim#KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key performance indicator" .
+# 
+# https://w3id.org/esim#KeyPoint
+<https://w3id.org/esim#KeyPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#KeyPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/esim#KeyPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Key point" .
+# 
+# https://w3id.org/esim#KeyRiskIndicator
+<https://w3id.org/esim#KeyRiskIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#KeyRiskIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyPoint> .
+<https://w3id.org/esim#KeyRiskIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key risk indicator" .
+# 
+# https://w3id.org/esim#Kitchen
+<https://w3id.org/esim#Kitchen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Kitchen> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#Kitchen> <http://www.w3.org/2000/01/rdf-schema#label> "Kitchen" .
+<https://w3id.org/esim#Kitchen> <https://w3id.org/esim#omniclass> "13-65 23 00" .
+# 
+# https://w3id.org/esim#LakeCollector
+<https://w3id.org/esim#LakeCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LakeCollector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyCollector> .
+<https://w3id.org/esim#LakeCollector> <http://www.w3.org/2000/01/rdf-schema#label> "Lake collector" .
+# 
+# https://w3id.org/esim#Lighting
+<https://w3id.org/esim#Lighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Lighting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#Lighting> <http://www.w3.org/2000/01/rdf-schema#label> "Lighting" .
+# 
+# https://w3id.org/esim#LightingEnergy
+<https://w3id.org/esim#LightingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LightingEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#LightingEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "LightingEnergy" .
+# 
+# https://w3id.org/esim#LightingSystem
+<https://w3id.org/esim#LightingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LightingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#LightingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Lighting system" .
+# 
+# https://w3id.org/esim#Liquid
+<https://w3id.org/esim#Liquid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Liquid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Medium> .
+<https://w3id.org/esim#Liquid> <http://www.w3.org/2000/01/rdf-schema#label> "Liquid" .
+# 
+# https://w3id.org/esim#LithiumBromide
+<https://w3id.org/esim#LithiumBromide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LithiumBromide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Solid> .
+<https://w3id.org/esim#LithiumBromide> <http://www.w3.org/2000/01/rdf-schema#label> "Lithium bromide" .
+# 
+# https://w3id.org/esim#LivingRoom
+<https://w3id.org/esim#LivingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LivingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#LivingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Living room" .
+# 
+# https://w3id.org/esim#LoadVariable
+<https://w3id.org/esim#LoadVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LoadVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#DynamicTariff> .
+<https://w3id.org/esim#LoadVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Load variable" .
+# 
+# https://w3id.org/esim#LocalControlSystem
+<https://w3id.org/esim#LocalControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LocalControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#LocalControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Local control system" .
+# 
+# https://w3id.org/esim#LongTermControlStrategy
+<https://w3id.org/esim#LongTermControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#LongTermControlStrategy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlStrategy> .
+<https://w3id.org/esim#LongTermControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "Long term control strategy" .
+# 
+# https://w3id.org/esim#Luminaire
+<https://w3id.org/esim#Luminaire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Luminaire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Luminaire> <http://www.w3.org/2000/01/rdf-schema#label> "Luminaire" .
+# 
+# https://w3id.org/esim#MTBF
+<https://w3id.org/esim#MTBF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MTBF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ComponentProperty> .
+<https://w3id.org/esim#MTBF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SystemProperty> .
+<https://w3id.org/esim#MTBF> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean time between failures" .
+<https://w3id.org/esim#MTBF> <http://www.w3.org/2000/01/rdf-schema#label> "MTBF" .
+# 
+# https://w3id.org/esim#MTTF
+<https://w3id.org/esim#MTTF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MTTF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ComponentProperty> .
+<https://w3id.org/esim#MTTF> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean time to failures" .
+<https://w3id.org/esim#MTTF> <http://www.w3.org/2000/01/rdf-schema#label> "MTTF" .
+# 
+# https://w3id.org/esim#MTTFF
+<https://w3id.org/esim#MTTFF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MTTFF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SystemProperty> .
+<https://w3id.org/esim#MTTFF> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean time to first failure" .
+<https://w3id.org/esim#MTTFF> <http://www.w3.org/2000/01/rdf-schema#label> "MTTFF" .
+# 
+# https://w3id.org/esim#MTTR
+<https://w3id.org/esim#MTTR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MTTR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ComponentProperty> .
+<https://w3id.org/esim#MTTR> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean time to repair" .
+<https://w3id.org/esim#MTTR> <http://www.w3.org/2000/01/rdf-schema#label> "MTTR" .
+# 
+# https://w3id.org/esim#MaintenanceCost
+<https://w3id.org/esim#MaintenanceCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CostInformation> .
+<https://w3id.org/esim#MaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance cost" .
+# 
+# https://w3id.org/esim#ManagementFunction
+<https://w3id.org/esim#ManagementFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ManagementFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlFunction> .
+<https://w3id.org/esim#ManagementFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Management function" .
+# 
+# https://w3id.org/esim#Material
+<https://w3id.org/esim#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PhysicalParameter> .
+<https://w3id.org/esim#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
+# 
+# https://w3id.org/esim#MeasuredEnergyData
+<https://w3id.org/esim#MeasuredEnergyData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MeasuredEnergyData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyRelatedData> .
+<https://w3id.org/esim#MeasuredEnergyData> <http://www.w3.org/2000/01/rdf-schema#label> "Measured energy data" .
+# 
+# https://w3id.org/esim#MechanicalVentilation
+<https://w3id.org/esim#MechanicalVentilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MechanicalVentilation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Ventilation> .
+<https://w3id.org/esim#MechanicalVentilation> <http://www.w3.org/2000/01/rdf-schema#label> "Mechanical ventilation" .
+# 
+# https://w3id.org/esim#Medium
+<https://w3id.org/esim#Medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Medium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/esim#Medium> <http://www.w3.org/2000/01/rdf-schema#comment> "A medium is a substance or material which is used for a particular purpose or in order to produce a particular effect." .
+<https://w3id.org/esim#Medium> <http://www.w3.org/2000/01/rdf-schema#label> "Medium" .
+# 
+# https://w3id.org/esim#MeetingRoom
+<https://w3id.org/esim#MeetingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MeetingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#MeetingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Meeting Room" .
+# 
+# https://w3id.org/esim#Model
+<https://w3id.org/esim#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSoftware> .
+<https://w3id.org/esim#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model" .
+# 
+# https://w3id.org/esim#MonetaryEnergyCost
+<https://w3id.org/esim#MonetaryEnergyCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MonetaryEnergyCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyCost> .
+<https://w3id.org/esim#MonetaryEnergyCost> <http://www.w3.org/2000/01/rdf-schema#label> "Monetary energy cost" .
+# 
+# https://w3id.org/esim#MonitoringSystem
+<https://w3id.org/esim#MonitoringSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#MonitoringSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Monitoring system" .
+# 
+# https://w3id.org/esim#MultipleFamilyResidence
+<https://w3id.org/esim#MultipleFamilyResidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#MultipleFamilyResidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Building> .
+<https://w3id.org/esim#MultipleFamilyResidence> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Family Residence" .
+<https://w3id.org/esim#MultipleFamilyResidence> <https://w3id.org/esim#omniclass> "11-16 21 00" .
+# 
+# https://w3id.org/esim#NaturalGas
+<https://w3id.org/esim#NaturalGas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#NaturalGas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#FossilFuel> .
+<https://w3id.org/esim#NaturalGas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Gas> .
+<https://w3id.org/esim#NaturalGas> <http://www.w3.org/2000/01/rdf-schema#label> "Natural gas" .
+# 
+# https://w3id.org/esim#NaturalGasSupply
+<https://w3id.org/esim#NaturalGasSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#NaturalGasSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#NaturalGasSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Natural gas supply system" .
+# 
+# https://w3id.org/esim#NaturalVentilation
+<https://w3id.org/esim#NaturalVentilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#NaturalVentilation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Ventilation> .
+<https://w3id.org/esim#NaturalVentilation> <http://www.w3.org/2000/01/rdf-schema#label> "Natural ventilation" .
+# 
+# https://w3id.org/esim#NonRenewable
+<https://w3id.org/esim#NonRenewable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#NonRenewable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#NonRenewable> <http://www.w3.org/2000/01/rdf-schema#label> "Non renewable" .
+# 
+# https://w3id.org/esim#NonSpaceCoolingUse
+<https://w3id.org/esim#NonSpaceCoolingUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#NonSpaceCoolingUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#NonSpaceCoolingUse> <http://www.w3.org/2000/01/rdf-schema#label> "None space cooling use" .
+# 
+# https://w3id.org/esim#NonSpaceHeatingUse
+<https://w3id.org/esim#NonSpaceHeatingUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#NonSpaceHeatingUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#NonSpaceHeatingUse> <http://www.w3.org/2000/01/rdf-schema#label> "None space heating use" .
+# 
+# https://w3id.org/esim#Nuclear
+<https://w3id.org/esim#Nuclear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Nuclear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#NonRenewable> .
+<https://w3id.org/esim#Nuclear> <http://www.w3.org/2000/01/rdf-schema#label> "Nuclear" .
+# 
+# https://w3id.org/esim#OccupancyParameter
+<https://w3id.org/esim#OccupancyParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#OccupancyParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Parameter> .
+<https://w3id.org/esim#OccupancyParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Occupancy parameter" .
+# 
+# https://w3id.org/esim#OfficeBuilding
+<https://w3id.org/esim#OfficeBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#OfficeBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Building> .
+<https://w3id.org/esim#OfficeBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "Office Building" .
+<https://w3id.org/esim#OfficeBuilding> <https://w3id.org/esim#omniclass> "11-27 38 00" .
+# 
+# https://w3id.org/esim#OfficeRoom
+<https://w3id.org/esim#OfficeRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#OfficeRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#OfficeRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Office room" .
+# 
+# https://w3id.org/esim#Oil
+<https://w3id.org/esim#Oil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Oil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#FossilFuel> .
+<https://w3id.org/esim#Oil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Liquid> .
+<https://w3id.org/esim#Oil> <http://www.w3.org/2000/01/rdf-schema#label> "Oil" .
+# 
+# https://w3id.org/esim#OnSiteRenewablesThermalEnergy
+<https://w3id.org/esim#OnSiteRenewablesThermalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#OnSiteRenewablesThermalEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#KeyDesignParameter> .
+<https://w3id.org/esim#OnSiteRenewablesThermalEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "On site renewables thermal energy" .
+# 
+# https://w3id.org/esim#OperationalControlStrategy
+<https://w3id.org/esim#OperationalControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#OperationalControlStrategy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlStrategy> .
+<https://w3id.org/esim#OperationalControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "Operational control strategy" .
+# 
+# https://w3id.org/esim#OperationalCost
+<https://w3id.org/esim#OperationalCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#OperationalCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CostInformation> .
+<https://w3id.org/esim#OperationalCost> <http://www.w3.org/2000/01/rdf-schema#label> "Operational cost" .
+# 
+# https://w3id.org/esim#Operator
+<https://w3id.org/esim#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Operator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AdministrationalInformation> .
+<https://w3id.org/esim#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator" .
+# 
+# https://w3id.org/esim#Owner
+<https://w3id.org/esim#Owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Owner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AdministrationalInformation> .
+<https://w3id.org/esim#Owner> <http://www.w3.org/2000/01/rdf-schema#label> "Owner" .
+# 
+# https://w3id.org/esim#Parameter
+<https://w3id.org/esim#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter" .
+# 
+# https://w3id.org/esim#PeakLoad
+<https://w3id.org/esim#PeakLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PeakLoad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyParameter> .
+<https://w3id.org/esim#PeakLoad> <http://www.w3.org/2000/01/rdf-schema#label> "Peak load" .
+# 
+# https://w3id.org/esim#PerformanceParameter
+<https://w3id.org/esim#PerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Parameter> .
+<https://w3id.org/esim#PerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Performance parameter" .
+# 
+# https://w3id.org/esim#PhaseChangeMaterial
+<https://w3id.org/esim#PhaseChangeMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PhaseChangeMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#PhaseChangeMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Phase change material" .
+# 
+# https://w3id.org/esim#PhotovoltaicCollector
+<https://w3id.org/esim#PhotovoltaicCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PhotovoltaicCollector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyCollector> .
+<https://w3id.org/esim#PhotovoltaicCollector> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://bsdd.buildingsmart.org/api/4.0/IfdConcept/2v_K_APKWHuO00025QrE$V> .
+<https://w3id.org/esim#PhotovoltaicCollector> <http://www.w3.org/2000/01/rdf-schema#label> "Photovoltaic" .
+<https://w3id.org/esim#PhotovoltaicCollector> <https://w3id.org/esim#omniclass> "22-26 31 00" .
+# 
+# https://w3id.org/esim#PhysicalInterfaceDescription
+<https://w3id.org/esim#PhysicalInterfaceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#InterfaceDescription> .
+<https://w3id.org/esim#PhysicalInterfaceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Physical interface description" .
+# 
+# https://w3id.org/esim#PhysicalParameter
+<https://w3id.org/esim#PhysicalParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PhysicalParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Parameter> .
+<https://w3id.org/esim#PhysicalParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Physical parameter" .
+# 
+# https://w3id.org/esim#PhysicalPort
+<https://w3id.org/esim#PhysicalPort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PhysicalPort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Port> .
+<https://w3id.org/esim#PhysicalPort> <http://www.w3.org/2000/01/rdf-schema#label> "Physical port" .
+# 
+# https://w3id.org/esim#Pipe
+<https://w3id.org/esim#Pipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Pipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Pipe> <http://www.w3.org/2000/01/rdf-schema#label> "Pipe" .
+# 
+# https://w3id.org/esim#PipeFitting
+<https://w3id.org/esim#PipeFitting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PipeFitting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Pipe> .
+<https://w3id.org/esim#PipeFitting> <http://www.w3.org/2000/01/rdf-schema#label> "Pipe fitting" .
+# 
+# https://w3id.org/esim#PipeNetwork
+<https://w3id.org/esim#PipeNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PipeNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Pipe> .
+<https://w3id.org/esim#PipeNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Pipe network" .
+# 
+# https://w3id.org/esim#PipeSegment
+<https://w3id.org/esim#PipeSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PipeSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Pipe> .
+<https://w3id.org/esim#PipeSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Pipe segment" .
+# 
+# https://w3id.org/esim#PlumbingSystem
+<https://w3id.org/esim#PlumbingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PlumbingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#PlumbingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Plumbing system" .
+# 
+# https://w3id.org/esim#Port
+<https://w3id.org/esim#Port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Port> <http://www.w3.org/2000/01/rdf-schema#label> "Port" .
+# 
+# https://w3id.org/esim#PortType
+<https://w3id.org/esim#PortType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PortType> <http://www.w3.org/2000/01/rdf-schema#label> "Port type" .
+# 
+# https://w3id.org/esim#PredictedEnergyData
+<https://w3id.org/esim#PredictedEnergyData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PredictedEnergyData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyRelatedData> .
+<https://w3id.org/esim#PredictedEnergyData> <http://www.w3.org/2000/01/rdf-schema#label> "Predicted energy data" .
+# 
+# https://w3id.org/esim#PredictionModel
+<https://w3id.org/esim#PredictionModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PredictionModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#BehaviouralModel> .
+<https://w3id.org/esim#PredictionModel> <http://www.w3.org/2000/01/rdf-schema#label> "Prediction model" .
+# 
+# https://w3id.org/esim#PrimaryCircuit
+<https://w3id.org/esim#PrimaryCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PrimaryCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistributionCircuit> .
+<https://w3id.org/esim#PrimaryCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Primary circuit" .
+# 
+# https://w3id.org/esim#PrimaryEnergy
+<https://w3id.org/esim#PrimaryEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#PrimaryEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#PrimaryEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Primary energy" .
+# 
+# https://w3id.org/esim#Pump
+<https://w3id.org/esim#Pump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Pump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Pump> <http://www.w3.org/2000/01/rdf-schema#label> "Pump" .
+# 
+# https://w3id.org/esim#RA_Function
+<https://w3id.org/esim#RA_Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#RA_Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlFunction> .
+<https://w3id.org/esim#RA_Function> <http://www.w3.org/2000/01/rdf-schema#label> "RA Function" .
+# 
+# https://w3id.org/esim#Radiator
+<https://w3id.org/esim#Radiator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Radiator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Radiator> <http://www.w3.org/2000/01/rdf-schema#label> "Radiator" .
+# 
+# https://w3id.org/esim#Regulation
+<https://w3id.org/esim#Regulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Regulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AdministrationalInformation> .
+<https://w3id.org/esim#Regulation> <http://www.w3.org/2000/01/rdf-schema#label> "Regulation" .
+# 
+# https://w3id.org/esim#ReliabilityParameter
+<https://w3id.org/esim#ReliabilityParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ReliabilityParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Parameter> .
+<https://w3id.org/esim#ReliabilityParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Reliability parameter" .
+# 
+# https://w3id.org/esim#Renewable
+<https://w3id.org/esim#Renewable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Renewable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#Renewable> <http://www.w3.org/2000/01/rdf-schema#label> "Renewable" .
+# 
+# https://w3id.org/esim#ReplacementCost
+<https://w3id.org/esim#ReplacementCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ReplacementCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#CostInformation> .
+<https://w3id.org/esim#ReplacementCost> <http://www.w3.org/2000/01/rdf-schema#label> "Replacement cost" .
+# 
+# https://w3id.org/esim#RestRoom
+<https://w3id.org/esim#RestRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#RestRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#RestRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Rest room" .
+# 
+# https://w3id.org/esim#Room
+<https://w3id.org/esim#Room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Room> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Space> .
+<https://w3id.org/esim#Room> <http://www.w3.org/2000/01/rdf-schema#label> "Room" .
+# 
+# https://w3id.org/esim#RoomControlSystem
+<https://w3id.org/esim#RoomControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#RoomControlSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlSystem> .
+<https://w3id.org/esim#RoomControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Room control system" .
+# 
+# https://w3id.org/esim#SecondaryCircuit
+<https://w3id.org/esim#SecondaryCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SecondaryCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistributionCircuit> .
+<https://w3id.org/esim#SecondaryCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Secondary circuit" .
+# 
+# https://w3id.org/esim#SecundaryEnergy
+<https://w3id.org/esim#SecundaryEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SecundaryEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#SecundaryEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Secundary energy" .
+# 
+# https://w3id.org/esim#Sensor
+<https://w3id.org/esim#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlComponent> .
+<https://w3id.org/esim#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor" .
+# 
+# https://w3id.org/esim#ServerRoom
+<https://w3id.org/esim#ServerRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ServerRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#ServerRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Server room" .
+# 
+# https://w3id.org/esim#ShadingSystem
+<https://w3id.org/esim#ShadingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ShadingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#ShadingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Shading system" .
+# 
+# https://w3id.org/esim#ShortTermControlStrategy
+<https://w3id.org/esim#ShortTermControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ShortTermControlStrategy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ControlStrategy> .
+<https://w3id.org/esim#ShortTermControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "Short term control strategy" .
+# 
+# https://w3id.org/esim#SimulatedEnergyData
+<https://w3id.org/esim#SimulatedEnergyData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SimulatedEnergyData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyRelatedData> .
+<https://w3id.org/esim#SimulatedEnergyData> <http://www.w3.org/2000/01/rdf-schema#label> "Simulated energy data" .
+# 
+# https://w3id.org/esim#SingleFamilyResidence
+<https://w3id.org/esim#SingleFamilyResidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SingleFamilyResidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Building> .
+<https://w3id.org/esim#SingleFamilyResidence> <http://www.w3.org/2000/01/rdf-schema#label> "Single Family Residence" .
+<https://w3id.org/esim#SingleFamilyResidence> <https://w3id.org/esim#omniclass> "11-16 11 00" .
+# 
+# https://w3id.org/esim#Site
+<https://w3id.org/esim#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+# 
+# https://w3id.org/esim#SolarAssistedHeatPump
+<https://w3id.org/esim#SolarAssistedHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SolarAssistedHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HeatPump> .
+<https://w3id.org/esim#SolarAssistedHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "A solar-assisted heat pump (SAHP) is a machine that represents the integration of a heat pump and thermal solar panels in a single integrated system." .
+<https://w3id.org/esim#SolarAssistedHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Solar assisted heat pump" .
+# 
+# https://w3id.org/esim#SolarRadiation
+<https://w3id.org/esim#SolarRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SolarRadiation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#SolarRadiation> <http://www.w3.org/2000/01/rdf-schema#label> "Solar radiation" .
+# 
+# https://w3id.org/esim#SolarThermalCollector
+<https://w3id.org/esim#SolarThermalCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SolarThermalCollector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyCollector> .
+<https://w3id.org/esim#SolarThermalCollector> <http://www.w3.org/2000/01/rdf-schema#label> "Solar collector" .
+# 
+# https://w3id.org/esim#Solid
+<https://w3id.org/esim#Solid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Solid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Medium> .
+<https://w3id.org/esim#Solid> <http://www.w3.org/2000/01/rdf-schema#label> "Solid" .
+# 
+# https://w3id.org/esim#Space
+<https://w3id.org/esim#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space" .
+# 
+# https://w3id.org/esim#SpaceCoolingUse
+<https://w3id.org/esim#SpaceCoolingUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SpaceCoolingUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#SpaceCoolingUse> <http://www.w3.org/2000/01/rdf-schema#label> "Space cooling use" .
+# 
+# https://w3id.org/esim#SpaceHeatingUse
+<https://w3id.org/esim#SpaceHeatingUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SpaceHeatingUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#SpaceHeatingUse> <http://www.w3.org/2000/01/rdf-schema#label> "Space heating use" .
+# 
+# https://w3id.org/esim#SpatialCooling
+<https://w3id.org/esim#SpatialCooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SpatialCooling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Cooling> .
+<https://w3id.org/esim#SpatialCooling> <http://www.w3.org/2000/01/rdf-schema#label> "Space cooling" .
+# 
+# https://w3id.org/esim#SpatialHeating
+<https://w3id.org/esim#SpatialHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SpatialHeating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Heating> .
+<https://w3id.org/esim#SpatialHeating> <http://www.w3.org/2000/01/rdf-schema#label> "Space heating" .
+# 
+# https://w3id.org/esim#SpatialStructureElement
+<https://w3id.org/esim#SpatialStructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SpatialStructureElement> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialStructureElement" .
+# 
+# https://w3id.org/esim#Standard
+<https://w3id.org/esim#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#AdministrationalInformation> .
+<https://w3id.org/esim#Standard> <http://www.w3.org/2000/01/rdf-schema#label> "Standard" .
+# 
+# https://w3id.org/esim#Steam
+<https://w3id.org/esim#Steam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Steam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Gas> .
+<https://w3id.org/esim#Steam> <http://www.w3.org/2000/01/rdf-schema#label> "Steam" .
+# 
+# https://w3id.org/esim#Storey
+<https://w3id.org/esim#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey" .
+# 
+# https://w3id.org/esim#SurfaceWater
+<https://w3id.org/esim#SurfaceWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SurfaceWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Water> .
+<https://w3id.org/esim#SurfaceWater> <http://www.w3.org/2000/01/rdf-schema#label> "Surface water" .
+# 
+# https://w3id.org/esim#SystemProperty
+<https://w3id.org/esim#SystemProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#SystemProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ReliabilityParameter> .
+<https://w3id.org/esim#SystemProperty> <http://www.w3.org/2000/01/rdf-schema#label> "System property" .
+# 
+# https://w3id.org/esim#Tank
+<https://w3id.org/esim#Tank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Tank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#Tank> <http://www.w3.org/2000/01/rdf-schema#label> "Tank" .
+# 
+# https://w3id.org/esim#ThermalHeatStorage
+<https://w3id.org/esim#ThermalHeatStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#ThermalHeatStorage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyStorage> .
+<https://w3id.org/esim#ThermalHeatStorage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://bsdd.buildingsmart.org/api/4.0/IfdConcept/1_NeM0PKWHuO00025QrE$V> .
+<https://w3id.org/esim#ThermalHeatStorage> <http://www.w3.org/2000/01/rdf-schema#label> "Thermal heat storage" .
+<https://w3id.org/esim#ThermalHeatStorage> <https://w3id.org/esim#omniclass> "21-04 30 20 30" .
+# 
+# https://w3id.org/esim#TimeVariable
+<https://w3id.org/esim#TimeVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#TimeVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#DynamicTariff> .
+<https://w3id.org/esim#TimeVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Time variable" .
+# 
+# https://w3id.org/esim#Topology
+<https://w3id.org/esim#Topology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Topology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PhysicalParameter> .
+<https://w3id.org/esim#Topology> <http://www.w3.org/2000/01/rdf-schema#label> "Topology" .
+# 
+# https://w3id.org/esim#Transformator
+<https://w3id.org/esim#Transformator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Transformator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#Transformator> <http://www.w3.org/2000/01/rdf-schema#label> "Transformator" .
+# 
+# https://w3id.org/esim#UnconditionedZone
+<https://w3id.org/esim#UnconditionedZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#UnconditionedZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Zone> .
+<https://w3id.org/esim#UnconditionedZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A space or group of spaces within a building without heating, cooling, and ventilating requirements which can be maintain by a HVAC system" .
+<https://w3id.org/esim#UnconditionedZone> <http://www.w3.org/2000/01/rdf-schema#label> "Unconditioned zone" .
+# 
+# https://w3id.org/esim#UsefulEnergy
+<https://w3id.org/esim#UsefulEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#UsefulEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyForm> .
+<https://w3id.org/esim#UsefulEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Useful energy" .
+# 
+# https://w3id.org/esim#UtilityEquipmentRoom
+<https://w3id.org/esim#UtilityEquipmentRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#UtilityEquipmentRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Room> .
+<https://w3id.org/esim#UtilityEquipmentRoom> <http://www.w3.org/2000/01/rdf-schema#label> "Utility equipment room" .
+# 
+# https://w3id.org/esim#Valve
+<https://w3id.org/esim#Valve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Valve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistribution> .
+<https://w3id.org/esim#Valve> <http://www.w3.org/2000/01/rdf-schema#label> "Valve" .
+# 
+# https://w3id.org/esim#Ventilation
+<https://w3id.org/esim#Ventilation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Ventilation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyService> .
+<https://w3id.org/esim#Ventilation> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation" .
+# 
+# https://w3id.org/esim#VentilationCircuit
+<https://w3id.org/esim#VentilationCircuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#VentilationCircuit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyDistributionCircuit> .
+<https://w3id.org/esim#VentilationCircuit> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation circuit" .
+# 
+# https://w3id.org/esim#VentilationSystem
+<https://w3id.org/esim#VentilationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySystem> .
+<https://w3id.org/esim#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation system" .
+# 
+# https://w3id.org/esim#VentilationZone
+<https://w3id.org/esim#VentilationZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#VentilationZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#ConditionedZone> .
+<https://w3id.org/esim#VentilationZone> <http://www.w3.org/2000/01/rdf-schema#comment> "A space or group of spaces with ventilation requirements maintained by a ventilation system" .
+<https://w3id.org/esim#VentilationZone> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation zone" .
+# 
+# https://w3id.org/esim#VolumeTariff
+<https://w3id.org/esim#VolumeTariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#VolumeTariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTarif> .
+<https://w3id.org/esim#VolumeTariff> <http://www.w3.org/2000/01/rdf-schema#label> "Volume tariff" .
+# 
+# https://w3id.org/esim#Wall
+<https://w3id.org/esim#Wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Element> .
+<https://w3id.org/esim#Wall> <http://www.w3.org/2000/01/rdf-schema#label> "Wall" .
+# 
+# https://w3id.org/esim#WasteDisposal
+<https://w3id.org/esim#WasteDisposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WasteDisposal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EcologicalEnergyCost> .
+<https://w3id.org/esim#WasteDisposal> <http://www.w3.org/2000/01/rdf-schema#label> "Waste disposal" .
+# 
+# https://w3id.org/esim#WasteWaterNetwork
+<https://w3id.org/esim#WasteWaterNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WasteWaterNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PipeNetwork> .
+<https://w3id.org/esim#WasteWaterNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Waste water network" .
+# 
+# https://w3id.org/esim#WasteWaterTreatment
+<https://w3id.org/esim#WasteWaterTreatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WasteWaterTreatment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Water> .
+<https://w3id.org/esim#WasteWaterTreatment> <http://www.w3.org/2000/01/rdf-schema#label> "Waste water treatment" .
+# 
+# https://w3id.org/esim#Water
+<https://w3id.org/esim#Water> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Water> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySource> .
+<https://w3id.org/esim#Water> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Liquid> .
+<https://w3id.org/esim#Water> <http://www.w3.org/2000/01/rdf-schema#label> "Water" .
+# 
+# https://w3id.org/esim#WaterAirHeatPump
+<https://w3id.org/esim#WaterAirHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#WaterSourceHeatPump> .
+<https://w3id.org/esim#WaterAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "A water source heat pump where the thermal energy is transferred from the water constituting one medium (often a heat transfer circuit) to the air constituting another medium" .
+<https://w3id.org/esim#WaterAirHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Water air heat pump" .
+# 
+# https://w3id.org/esim#WaterNetwork
+<https://w3id.org/esim#WaterNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterNetwork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#PipeNetwork> .
+<https://w3id.org/esim#WaterNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "Water network" .
+# 
+# https://w3id.org/esim#WaterSourceHeatPump
+<https://w3id.org/esim#WaterSourceHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#HeatPump> .
+<https://w3id.org/esim#WaterSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses flowing water as source or sink for heat" .
+<https://w3id.org/esim#WaterSourceHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Water source heat pump" .
+# 
+# https://w3id.org/esim#WaterSupply
+<https://w3id.org/esim#WaterSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterSupply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergySupply> .
+<https://w3id.org/esim#WaterSupply> <http://www.w3.org/2000/01/rdf-schema#label> "Water supply" .
+# 
+# https://w3id.org/esim#WaterTank
+<https://w3id.org/esim#WaterTank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterTank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Tank> .
+<https://w3id.org/esim#WaterTank> <http://www.w3.org/2000/01/rdf-schema#label> "Water tank" .
+# 
+# https://w3id.org/esim#WaterUse
+<https://w3id.org/esim#WaterUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyUse> .
+<https://w3id.org/esim#WaterUse> <http://www.w3.org/2000/01/rdf-schema#label> "Water use" .
+# 
+# https://w3id.org/esim#WaterWaterHeatPump
+<https://w3id.org/esim#WaterWaterHeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WaterWaterHeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#WaterSourceHeatPump> .
+<https://w3id.org/esim#WaterWaterHeatPump> <http://www.w3.org/2000/01/rdf-schema#comment> "A water source heat pump where the thermal energy is transferred from the water constituting one medium to the water constituting another medium" .
+<https://w3id.org/esim#WaterWaterHeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Water water heat pump" .
+# 
+# https://w3id.org/esim#Wind
+<https://w3id.org/esim#Wind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Wind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#Wind> <http://www.w3.org/2000/01/rdf-schema#label> "Wind" .
+# 
+# https://w3id.org/esim#WindTurbine
+<https://w3id.org/esim#WindTurbine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#EnergyTransformation> .
+<https://w3id.org/esim#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#comment> "A wind turbine is a device that converts the wind's kinetic energy into electrical power." .
+<https://w3id.org/esim#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#label> "Wind turbine" .
+# 
+# https://w3id.org/esim#Window
+<https://w3id.org/esim#Window> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Window> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Element> .
+<https://w3id.org/esim#Window> <http://www.w3.org/2000/01/rdf-schema#label> "Window" .
+# 
+# https://w3id.org/esim#Wood
+<https://w3id.org/esim#Wood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Wood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#Renewable> .
+<https://w3id.org/esim#Wood> <http://www.w3.org/2000/01/rdf-schema#label> "Wood" .
+# 
+# https://w3id.org/esim#Zone
+<https://w3id.org/esim#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/esim#Zone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/esim#SpatialStructureElement> .
+<https://w3id.org/esim#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/esim#INPUT
+<https://w3id.org/esim#INPUT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/esim#INPUT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/esim#PortType> .
+<https://w3id.org/esim#INPUT> <http://www.w3.org/2000/01/rdf-schema#label> "INPUT" .
+# 
+# https://w3id.org/esim#OUTPUT
+<https://w3id.org/esim#OUTPUT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/esim#OUTPUT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/esim#PortType> .
+<https://w3id.org/esim#OUTPUT> <http://www.w3.org/2000/01/rdf-schema#label> "OUTPUT" .
+# 
+# https://w3id.org/esim#PARAMETER
+<https://w3id.org/esim#PARAMETER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/esim#PARAMETER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/esim#PortType> .
+<https://w3id.org/esim#PARAMETER> <http://www.w3.org/2000/01/rdf-schema#label> "PARAMETER" .
+# 
+# https://w3id.org/esim#VARIABLE
+<https://w3id.org/esim#VARIABLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/esim#VARIABLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/esim#PortType> .
+<https://w3id.org/esim#VARIABLE> <http://www.w3.org/2000/01/rdf-schema#label> "VARIABLE" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

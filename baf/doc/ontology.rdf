@@ -1,0 +1,3365 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/baf#"
+     xml:base="https://w3id.org/baf"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/baf">
+        <owl:imports rdf:resource="http://org.fhg.iis.eas.eee.esim/ESIMonto"/>
+        <owl:imports rdf:resource="https://w3id.org/ibp/CTRLont"/>
+        <terms:bibliographicCitation xml:lang="en">Pruvost. H. (2023): The BAF ontology - a formalization of generic building automation functions for heating, ventilation and air conditioning systems. https://w3id.org/baf.</terms:bibliographicCitation>
+        <terms:creator rdf:resource="https://orcid.org/0000-0001-7604-8543"/>
+        <terms:creator rdf:resource="https://www.linkedin.com/in/hervepruvost"/>
+        <terms:creator>Hervé Pruvost</terms:creator>
+        <terms:description xml:lang="en">The BAF (Building Automation Functions) model is a catalogue of generic control functions usually implemented by automation engineers.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-05-29</terms:issued>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-05-29</terms:modified>
+        <terms:publisher rdf:resource="https://www.eas.iis.fraunhofer.de/"/>
+        <terms:publisher>Fraunhofer IIS/EAS</terms:publisher>
+        <terms:title xml:lang="en">BAF: Building Automation Functions.</terms:title>
+        <vann:preferredNamespacePrefix>baf</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/baf#</vann:preferredNamespaceUri>
+        <rdfs:seeAlso rdf:resource="https://linkedbuildingdata.net/ldac2022/files/presentations/20220529_LDAC2022_Pruvost_v3.pdf"/>
+        <owl:versionInfo>v1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction -->
+
+
+    <owl:Class rdf:about="http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction"/>
+    
+
+
+    <!-- https://w3id.org/baf#AnalogSignal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#AnalogSignal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Analog signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#AntifreezeProtection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#AntifreezeProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Antifreeze protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#BoilerControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#BoilerControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Boiler control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#CharacteristicCurve -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#CharacteristicCurve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Characteristic curve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#Controller -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#Controller">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#DamperControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#DamperControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Damper control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#EnumeratedControlFunctionPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#EnumeratedControlFunctionPattern">
+        <rdfs:subClassOf rdf:resource="http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#ControlActor"/>
+        <rdfs:label>Enumerated control function pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FanControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FanControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Fan control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbActuationof2PointDampers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbActuationof2PointDampers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#DamperControl"/>
+        <terms:identifier>Fb2PointDamper</terms:identifier>
+        <rdfs:label xml:lang="en">Actuationof2-Point dampers</rdfs:label>
+        <rdfs:label xml:lang="de">Ansteuerung von 2-Punkt Klappen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbActuationofContinuousDampers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbActuationofContinuousDampers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#DamperControl"/>
+        <terms:identifier>FbContinuousDamper</terms:identifier>
+        <rdfs:label xml:lang="en">Actuationof continuous dampers</rdfs:label>
+        <rdfs:label xml:lang="de">Ansteuerung von stetigen Klappen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbAirSideAntifreezeProtection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbAirSideAntifreezeProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AntifreezeProtection"/>
+        <terms:identifier>FbAntifreezeAir</terms:identifier>
+        <rdfs:label xml:lang="en">Air-Side antifreeze protection</rdfs:label>
+        <rdfs:label xml:lang="de">Luftseitiger Frostschutz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbAnalog3PointSignal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbAnalog3PointSignal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#GeneralDriver"/>
+        <terms:identifier>FbAnalog3Point</terms:identifier>
+        <rdfs:label xml:lang="en">Analog 3-Point signal</rdfs:label>
+        <rdfs:label xml:lang="de">Analoges 3-Punkt-Signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FbAntiLegionella</terms:identifier>
+        <rdfs:label xml:lang="en">Anti legionnaires disease function</rdfs:label>
+        <rdfs:label xml:lang="de">Anti-Legionellenfunktion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbAveragedOutsideTemperature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbAveragedOutsideTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#TemperatureEvaluation"/>
+        <terms:identifier>FbAveragedOutsideTemperature</terms:identifier>
+        <rdfs:label xml:lang="en">Averaged outside temperature</rdfs:label>
+        <rdfs:label xml:lang="de">Gemittelte Außentemperatur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbBlinker -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbBlinker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbBlinker</terms:identifier>
+        <rdfs:label xml:lang="de">Blinker</rdfs:label>
+        <rdfs:label xml:lang="en">Blinker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbBlockingProtectionAnalog</terms:identifier>
+        <rdfs:label xml:lang="de">Blockierschutz für stetige Antriebe</rdfs:label>
+        <rdfs:label xml:lang="en">Blocking protection for continuous drivers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#BoilerControl"/>
+        <terms:identifier>Fb2LevelBoiler</terms:identifier>
+        <rdfs:label xml:lang="en">Boiler module for 2-Level boiler</rdfs:label>
+        <rdfs:label xml:lang="de">Kesselbaustein für 2-stufige Kessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbBoilerModuleForModulatingBoiler -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbBoilerModuleForModulatingBoiler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#BoilerControl"/>
+        <terms:identifier>FbModulatingBoiler</terms:identifier>
+        <rdfs:label xml:lang="en">Boiler module for modulating boiler</rdfs:label>
+        <rdfs:label xml:lang="de">Kesselbaustein für modulierende Kessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbBoilerStrategyForTwoBoilers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbBoilerStrategyForTwoBoilers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#BoilerControl"/>
+        <terms:identifier>Fb2BoilerStrategy</terms:identifier>
+        <rdfs:label xml:lang="en">Boiler strategy for two boilers</rdfs:label>
+        <rdfs:label xml:lang="de">Kesselstrategie für zwei Kessel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbCalculationofSupplyTemperature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbCalculationofSupplyTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FbCalculatedSupplyTemperature</terms:identifier>
+        <rdfs:label xml:lang="en">Calculationof supply temperature</rdfs:label>
+        <rdfs:label xml:lang="de">Vorlauftemperaturberechnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbCascadeController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbCascadeController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Controller"/>
+        <terms:identifier>FbCascadeController</terms:identifier>
+        <rdfs:label xml:lang="en">Cascade controller</rdfs:label>
+        <rdfs:label xml:lang="de">Kaskadenregler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbCollectiveMalfunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbCollectiveMalfunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbCollectiveMalfunction</terms:identifier>
+        <rdfs:label xml:lang="en">Collective malfunction</rdfs:label>
+        <rdfs:label xml:lang="de">Sammelstörung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbComfortZoneController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbComfortZoneController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbHxControl</terms:identifier>
+        <rdfs:label xml:lang="de">Behaglichkeitsfeldregler</rdfs:label>
+        <rdfs:label xml:lang="en">Comfort zone controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbControlOf2PointDrivers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbControlOf2PointDrivers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#GeneralDriver"/>
+        <terms:identifier>Fb2PointDriver</terms:identifier>
+        <rdfs:label xml:lang="de">Ansteuerung von 2-Punkt-Antrieben</rdfs:label>
+        <rdfs:label xml:lang="en">Control of 2-Point drivers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbControlOfContinuousDrivers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbControlOfContinuousDrivers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#GeneralDriver"/>
+        <terms:identifier>FbContinuousDriver</terms:identifier>
+        <rdfs:label xml:lang="de">Ansteuerung von stetigen Antrieben</rdfs:label>
+        <rdfs:label xml:lang="en">Control of continuous drivers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbCoolingSequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbCoolingSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Sequence"/>
+        <terms:identifier>FbSequenceCooling</terms:identifier>
+        <rdfs:label xml:lang="en">Cooling sequence</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenz Kühlen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbDampedTemperature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbDampedTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#TemperatureEvaluation"/>
+        <terms:identifier>FbDampedTemperature</terms:identifier>
+        <rdfs:label xml:lang="en">Damped temperature</rdfs:label>
+        <rdfs:label xml:lang="de">Gedämpfte Temperatur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbDehumidifyingSequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbDehumidifyingSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Sequence"/>
+        <terms:identifier>FbSequenceDehumidifying</terms:identifier>
+        <rdfs:label xml:lang="en">Dehumidifying sequence</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenz Entfeuchten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbEnergyRecoverySequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbEnergyRecoverySequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Sequence"/>
+        <terms:identifier>FbSequenceEnergyRecovery</terms:identifier>
+        <rdfs:label xml:lang="en">Energy recovery sequence</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenz Energierückgewinnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbEnthalpy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbEnthalpy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#TemperatureEvaluation"/>
+        <terms:identifier>FbEnthalpy</terms:identifier>
+        <rdfs:label xml:lang="de">Enthalpie</rdfs:label>
+        <rdfs:label xml:lang="en">Enthalpy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFan1Level -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFan1Level">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#FanControl"/>
+        <terms:identifier>FbFan_1Level</terms:identifier>
+        <rdfs:label xml:lang="en">Fan1-Level</rdfs:label>
+        <rdfs:label xml:lang="de">Ventilator, 1-stufig</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFan2Level -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFan2Level">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#FanControl"/>
+        <terms:identifier>FbFan_2Level</terms:identifier>
+        <rdfs:label xml:lang="en">Fan2-Level</rdfs:label>
+        <rdfs:label xml:lang="de">Ventilator, 2-stufig</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFan3Level -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFan3Level">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#FanControl"/>
+        <terms:identifier>FbFan_3Level</terms:identifier>
+        <rdfs:label xml:lang="en">Fan3-Level</rdfs:label>
+        <rdfs:label xml:lang="de">Ventilator, 3-stufig</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFanwithFrequencyConverter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFanwithFrequencyConverter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#FanControl"/>
+        <terms:identifier>FbFan_FC</terms:identifier>
+        <rdfs:label xml:lang="en">Fanwith frequency converter</rdfs:label>
+        <rdfs:label xml:lang="de">Ventilator mit Frequenzumrichter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFilterMonitoring -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFilterMonitoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbFilterMonitoring</terms:identifier>
+        <rdfs:label xml:lang="en">Filter monitoring</rdfs:label>
+        <rdfs:label xml:lang="de">Filterüberwachung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFirstOrderLowPassFilter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFirstOrderLowPassFilter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FbLowPassFilter</terms:identifier>
+        <rdfs:label xml:lang="en">1st order low pass filter</rdfs:label>
+        <rdfs:label xml:lang="de">Tiefpassfilter 1. Ordnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FbLowPassFilterAI</terms:identifier>
+        <rdfs:label xml:lang="en">1st order low pass filter for AI 0-32767</rdfs:label>
+        <rdfs:label xml:lang="de">Tiefpassfilter 1. Ordnung für AI 0 - 32767</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FbLowPassFilterBus</terms:identifier>
+        <rdfs:label xml:lang="en">1st order low pass filter for bus signals</rdfs:label>
+        <rdfs:label xml:lang="de">Tiefpassfilter 1. Ordnung für Bussignale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FbLowPassFilterTemp</terms:identifier>
+        <rdfs:label xml:lang="en">1st order low pass filter for temperatures</rdfs:label>
+        <rdfs:label xml:lang="de">Tiefpassfilter 1. Ordnung für Temperaturen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbGlobalCollectiveMalfunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbGlobalCollectiveMalfunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbGlobalMalfunction</terms:identifier>
+        <rdfs:label xml:lang="en">Global collective malfunction</rdfs:label>
+        <rdfs:label xml:lang="de">Globale Sammelstörung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbHeatingCharacteristics -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbHeatingCharacteristics">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FbHeatingCharacteristics</terms:identifier>
+        <rdfs:label xml:lang="en">Heating characteristics</rdfs:label>
+        <rdfs:label xml:lang="de">Heizungskennlinie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbHeatingSequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbHeatingSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Sequence"/>
+        <terms:identifier>FbSequenceHeating</terms:identifier>
+        <rdfs:label xml:lang="en">Heating sequence</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenz Heizen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbHumidifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbHumidifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#PumpControl"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#ValveControl"/>
+        <terms:identifier>FbHumidifier</terms:identifier>
+        <rdfs:label xml:lang="de">Dampfbefeuchter</rdfs:label>
+        <rdfs:label xml:lang="en">Humidifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbHumidifyingSequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbHumidifyingSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Sequence"/>
+        <terms:identifier>FbSequenceHumidifying</terms:identifier>
+        <rdfs:label xml:lang="en">Humidifying sequence</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenz Befeuchten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbHysteresis -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbHysteresis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbHysteresis</terms:identifier>
+        <rdfs:label xml:lang="de">Hysterese</rdfs:label>
+        <rdfs:label xml:lang="en">Hysteresis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbImpulseCounter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbImpulseCounter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbImpulseCounter</terms:identifier>
+        <rdfs:label xml:lang="en">Impulse counter</rdfs:label>
+        <rdfs:label xml:lang="de">Impulszähler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbMinValueAvgValueAndMaxValue -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbMinValueAvgValueAndMaxValue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <rdfs:label xml:lang="en">Min. Value, Avg. Value and Max. Value</rdfs:label>
+        <rdfs:label xml:lang="de">Min.-Wert, Mittelwert und Max.-Wert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbMixedAirSequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbMixedAirSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Sequence"/>
+        <terms:identifier>FbSequenceMixedAir</terms:identifier>
+        <rdfs:label xml:lang="en">Mixed air sequence</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenz Mischluft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbOperatingHoursCounter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbOperatingHoursCounter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbOperatingHours_01</terms:identifier>
+        <rdfs:label xml:lang="de">Betriebsstundenzähler</rdfs:label>
+        <rdfs:label xml:lang="en">Operating hours counter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbOptimizedSupplyTemperature -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbOptimizedSupplyTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FbOptimizedSupplyTemperature</terms:identifier>
+        <rdfs:label xml:lang="de">Optimierte Vorlauftemperatur</rdfs:label>
+        <rdfs:label xml:lang="en">Optimized supply temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbOverheatingandCondensationProtection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbOverheatingandCondensationProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FbTemperatureOverride</terms:identifier>
+        <rdfs:label xml:lang="en">Overheatingand condensation protection</rdfs:label>
+        <rdfs:label xml:lang="de">Überhitzungs- und Kondensationsschutz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPIDController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPIDController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Controller"/>
+        <terms:identifier>FbPIDController</terms:identifier>
+        <rdfs:label xml:lang="de">PID-Regler</rdfs:label>
+        <rdfs:label xml:lang="en">PIDController</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Controller"/>
+        <terms:identifier>FbPIDController2PIDSets</terms:identifier>
+        <rdfs:label xml:lang="de">PID-Regler mit zwei Regelparametersätzen</rdfs:label>
+        <rdfs:label xml:lang="en">PIDControllerwith two setsof control parameters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPIDSingleRoomController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPIDSingleRoomController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SingleRoomControl"/>
+        <terms:identifier>FbPIDSingleRoomController</terms:identifier>
+        <rdfs:label xml:lang="de">PID Einzelraumregler</rdfs:label>
+        <rdfs:label xml:lang="en">PIDSingle room controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPILimitController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPILimitController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Controller"/>
+        <terms:identifier>FbLimitController</terms:identifier>
+        <rdfs:label xml:lang="de">PI-Begrenzungsregler</rdfs:label>
+        <rdfs:label xml:lang="en">PILimit controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPWMOutput -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPWMOutput">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#GeneralDriver"/>
+        <terms:identifier>FbPWM</terms:identifier>
+        <rdfs:label xml:lang="en">PWM Output</rdfs:label>
+        <rdfs:label xml:lang="de">PWM-Ausgang</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPlateTypeHeatExchanger -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPlateTypeHeatExchanger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HeatExchangerControl"/>
+        <terms:identifier>FbPlateHeatExchanger</terms:identifier>
+        <rdfs:label xml:lang="en">Plate-Type heat exchanger</rdfs:label>
+        <rdfs:label xml:lang="de">Plattenwärmetauscher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPump -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#PumpControl"/>
+        <terms:identifier>FbPump</terms:identifier>
+        <rdfs:label xml:lang="en">Pump</rdfs:label>
+        <rdfs:label xml:lang="de">Pumpe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbPumpwithFrequencyConverter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbPumpwithFrequencyConverter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#PumpControl"/>
+        <terms:identifier>FbPumpFC</terms:identifier>
+        <rdfs:label xml:lang="de">Pumpe mit Frequenzumrichter</rdfs:label>
+        <rdfs:label xml:lang="en">Pumpwith frequency converter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbRamp -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbRamp">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbRamp</terms:identifier>
+        <rdfs:label xml:lang="en">Ramp</rdfs:label>
+        <rdfs:label xml:lang="de">Rampe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbReducedMinimumFreshAir -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbReducedMinimumFreshAir">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FbMinFreshAir</terms:identifier>
+        <rdfs:label xml:lang="en">Reduced minimum fresh air</rdfs:label>
+        <rdfs:label xml:lang="de">Reduzierte Mindestfrischluft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbRotaryHeatExchanger -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbRotaryHeatExchanger">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HeatExchangerControl"/>
+        <terms:identifier>FbRotaryHeatExchanger</terms:identifier>
+        <rdfs:label xml:lang="en">Rotary heat exchanger</rdfs:label>
+        <rdfs:label xml:lang="de">Rotationswärmetauscher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbRunAroundCoil -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbRunAroundCoil">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HeatExchangerControl"/>
+        <terms:identifier>FbRunAroundCoil</terms:identifier>
+        <rdfs:label xml:lang="de">Kreislaufverbundsystem</rdfs:label>
+        <rdfs:label xml:lang="en">Run-around coil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbSequenceController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbSequenceController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Controller"/>
+        <terms:identifier>FbSequenceController</terms:identifier>
+        <rdfs:label xml:lang="en">Sequence controller</rdfs:label>
+        <rdfs:label xml:lang="de">Sequenzregler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbStartStop -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbStartStop">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbStartStop</terms:identifier>
+        <rdfs:label xml:lang="en">Start/Stop</rdfs:label>
+        <rdfs:label xml:lang="de">Start/Stopp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbStartStopHeatingCircuitControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbStartStopHeatingCircuitControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbStartStopHeatingCircuit</terms:identifier>
+        <rdfs:label xml:lang="en">Start stop heating circuit control</rdfs:label>
+        <rdfs:label xml:lang="de">Start-/Stopp-Heizkreisregelung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbStartStopOptimization -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbStartStopOptimization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbStartStopOptimization</terms:identifier>
+        <rdfs:label xml:lang="de">Start-/Stoppoptimierung</rdfs:label>
+        <rdfs:label xml:lang="en">Start/Stop optimization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbSummerNightVentilation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbSummerNightVentilation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SystemMonitoring"/>
+        <terms:identifier>FbSummerNightVentilation</terms:identifier>
+        <rdfs:label xml:lang="de">Sommernachtlüftung</rdfs:label>
+        <rdfs:label xml:lang="en">Summer night ventilation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbTwoPointControllerforDHWPreparation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbTwoPointControllerforDHWPreparation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#Controller"/>
+        <terms:identifier>FbDHWController</terms:identifier>
+        <rdfs:label xml:lang="en">Two-Point controllerfor DHWPreparation</rdfs:label>
+        <rdfs:label xml:lang="de">Zweipunktregler BWW- Ladung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbTwoPointIndividualRoomController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbTwoPointIndividualRoomController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SingleRoomControl"/>
+        <terms:identifier>Fb2PointSingleRoomController</terms:identifier>
+        <rdfs:label xml:lang="de">2-Punkt-Einzelraumregler</rdfs:label>
+        <rdfs:label xml:lang="en">Point individual room controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbUnitMonitoring -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbUnitMonitoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FbRedundancyUnits</terms:identifier>
+        <rdfs:label xml:lang="de">Aggregatsüberwachung</rdfs:label>
+        <rdfs:label xml:lang="en">Unit monitoring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbValveandPump -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbValveandPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#PumpControl"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#ValveControl"/>
+        <terms:identifier>FbValveAndPump</terms:identifier>
+        <rdfs:label xml:lang="de">Ventil und Pumpe</rdfs:label>
+        <rdfs:label>Valve and pump {@en} </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FbWaterSideAntifreezeProtection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FbWaterSideAntifreezeProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AntifreezeProtection"/>
+        <terms:identifier>FbAntifreezeWater</terms:identifier>
+        <rdfs:label xml:lang="de">Wasserseitiger Frostschutz</rdfs:label>
+        <rdfs:label xml:lang="en">Water-Side antifreeze protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuFourPointCharacteristicCurve -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuFourPointCharacteristicCurve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#CharacteristicCurve"/>
+        <terms:identifier>Fu4Point</terms:identifier>
+        <rdfs:label xml:lang="en">Four-point characteristic curve</rdfs:label>
+        <rdfs:label xml:lang="de">Vierpunkt-Kennlinie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuKTYCharacteristicCurve -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuKTYCharacteristicCurve">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#CharacteristicCurve"/>
+        <terms:identifier>FuKTY</terms:identifier>
+        <rdfs:label xml:lang="en">KTY Characteristic curve</rdfs:label>
+        <rdfs:label xml:lang="de">KTY-Kennlinie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuScalingOfOutputValues0to32767 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuScalingOfOutputValues0to32767">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FuAO</terms:identifier>
+        <rdfs:label xml:lang="en">Scaling of output values 0 to 32767</rdfs:label>
+        <rdfs:label xml:lang="de">Skalierung der Ausgangswerte 0 bis 32767</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FuAI_Temp</terms:identifier>
+        <rdfs:label xml:lang="en">Scaling of temperature valuesin °C</rdfs:label>
+        <rdfs:label xml:lang="de">Skalierung der Temperaturwerte in °C</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuScalingofInputValues0to32767 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuScalingofInputValues0to32767">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#AnalogSignal"/>
+        <terms:identifier>FuAI</terms:identifier>
+        <rdfs:label xml:lang="en">Scalingof input values0to32767</rdfs:label>
+        <rdfs:label xml:lang="de">Skalierung der Eingangswerte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuStatusIndicationAsString -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuStatusIndicationAsString">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#MiscellaneousFunction"/>
+        <terms:identifier>FuStatus</terms:identifier>
+        <rdfs:label xml:lang="de">Statusanzeige als STRING</rdfs:label>
+        <rdfs:label>Status indication as STRING {@en} </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuSummerCompensation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuSummerCompensation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#SetValueAdjustment"/>
+        <terms:identifier>FuSummerCompensation</terms:identifier>
+        <rdfs:label xml:lang="de">Sommerkompensation</rdfs:label>
+        <rdfs:label xml:lang="en">Summer compensation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#FuTwoPointCharacteristic -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#FuTwoPointCharacteristic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#CharacteristicCurve"/>
+        <terms:identifier>Fu2Point</terms:identifier>
+        <rdfs:label xml:lang="en">Two-point characteristic</rdfs:label>
+        <rdfs:label xml:lang="de">Zweipunkt-Kennlinie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#GeneralDriver -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#GeneralDriver">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>General driver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#HVAC_Function -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#HVAC_Function">
+        <rdfs:subClassOf rdf:resource="http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#ControlActor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#HeatExchangerControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#HeatExchangerControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Heat exchanger control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#MiscellaneousFunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#MiscellaneousFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Miscellaneous function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#PumpControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#PumpControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label xml:lang="en">Pump control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#Sequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#Sequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label xml:lang="en">Sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#SetValueAdjustment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#SetValueAdjustment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Set value adjustment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#SingleRoomControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#SingleRoomControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Single room control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#SystemMonitoring -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#SystemMonitoring">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>System monitoring</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#TemperatureEvaluation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#TemperatureEvaluation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Temperature evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#ValveControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#ValveControl">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <rdfs:label>Valve control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#VolumeFlowRegulator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#VolumeFlowRegulator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/baf#HVAC_Function"/>
+        <terms:identifier>FbVolumeFlowRegulator</terms:identifier>
+        <rdfs:label xml:lang="en">Volume flow regulator</rdfs:label>
+        <rdfs:label xml:lang="de">Volumenstromregler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfig2LevelBoiler -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfig2LevelBoiler">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfig2LevelBoiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigAnalog3Point_01 -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigAnalog3Point_01">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigAnalog3Point_01</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigCascadeController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigCascadeController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigCascadeController</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigContinuousDamper -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigContinuousDamper">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigContinuousDamper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigLowPassFilter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigLowPassFilter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigLowPassFilter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigSequence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigSequence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigSequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigSequenceController -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigSequenceController">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigSequenceController</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/baf#typConfigValveAndPump -->
+
+
+    <owl:Class rdf:about="https://w3id.org/baf#typConfigValveAndPump">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ibp/CTRLont#Parameter"/>
+        <rdfs:label>typConfigValveAndPump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/baf#Fb2LevelBoilerPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#Fb2LevelBoilerPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler"/>
+        <rdfs:comment>Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)</rdfs:comment>
+        <rdfs:label> Boiler Module for 2-Level Boiler Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbAnalog3PointPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbAnalog3PointPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbAnalog3PointSignal"/>
+        <rdfs:comment>Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)</rdfs:comment>
+        <rdfs:label>Analog 3-Point Signal Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbCascadeControllerPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbCascadeControllerPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbCascadeController"/>
+        <rdfs:comment>Pattern of function block for Cascade Controller (FbCascadeController)</rdfs:comment>
+        <rdfs:label>Cascade Controller Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbContinuousDamperPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbContinuousDamperPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbActuationofContinuousDampers"/>
+        <rdfs:comment>Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)</rdfs:comment>
+        <rdfs:label>Actuation of Continuous Dampers Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbLowPassFilterPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbLowPassFilterPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbFirstOrderLowPassFilter"/>
+        <rdfs:comment>Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)</rdfs:comment>
+        <rdfs:label>1st Order Low-Pass Filter Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbPlateHeatExchangerPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbPlateHeatExchangerPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbPlateTypeHeatExchanger"/>
+        <rdfs:comment>Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)</rdfs:comment>
+        <rdfs:label>Plate-Type Heat Exchanger Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbSequenceControllerPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbSequenceControllerPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbSequenceController"/>
+        <rdfs:comment>Pattern of function block for Sequence Controller (FbSequenceController)</rdfs:comment>
+        <rdfs:label>Sequence Controller Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbSequenceEnergyRecoveryPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbSequenceEnergyRecoveryPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbEnergyRecoverySequence"/>
+        <rdfs:comment>Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)</rdfs:comment>
+        <rdfs:label>Energy Recovery Sequence Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbSequenceHeatingPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbSequenceHeatingPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbHeatingSequence"/>
+        <rdfs:comment>Pattern of function block for Heating Sequence (FbSequenceHeating)</rdfs:comment>
+        <rdfs:label>Heating Sequence Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbSequenceMixedAirPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbSequenceMixedAirPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbMixedAirSequence"/>
+        <rdfs:comment>Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)</rdfs:comment>
+        <rdfs:label>Mixed Air Sequence Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#FbValveAndPumpPattern -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#FbValveAndPumpPattern">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FbValveandPump"/>
+        <rdfs:comment>Pattern of function block for Valve and Pump (FbValveAndPump)</rdfs:comment>
+        <rdfs:label>Valve and Pump Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#Fu4Point -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#Fu4Point">
+        <rdf:type rdf:resource="https://w3id.org/baf#EnumeratedControlFunctionPattern"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#FuFourPointCharacteristicCurve"/>
+        <rdfs:comment>Pattern of function block for Four-Point Characteristic Curve (Fu4Point)</rdfs:comment>
+        <rdfs:label>Four-Point Characteristic Curve Pattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#OutputFu4Point -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#OutputFu4Point">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Output value</rdfs:comment>
+        <rdfs:label>Fu4Point</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_bMaxSequenceNumber -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_bMaxSequenceNumber">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Max. number of sequences used
+Value range = 2 – 4
+Default setting = 2</rdfs:comment>
+        <rdfs:label>.bMaxSequenceNumber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_bSequenceNumber -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_bSequenceNumber">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequence"/>
+        <rdfs:comment>Sequence number (from cooling toward heating)
+Value range = 1 – 4</rdfs:comment>
+        <rdfs:label>.bSequenceNumber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rDeadZone -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rDeadZone">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Dead zone +/- [K]
+Default setting = 0</rdfs:comment>
+        <rdfs:label>.rDeadZone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rDefaultValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rDefaultValue">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Defined output value as long as the
+xAlarm output is set
+Default setting = 0</rdfs:comment>
+        <rdfs:label>.rDefaultValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rDeviation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rDeviation">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Maximum deviation between specified/actual values for the second set of controller parameters [%]
+Default setting = 0 (no switchover)</rdfs:comment>
+        <rdfs:label>.rDeviation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rDiffBoilerAndReturnTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rDiffBoilerAndReturnTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Max. temperature difference between boiler and return temperature for deactivation of the boiler circuit pump [K]. Default setting = 5</rdfs:comment>
+        <rdfs:label>.rDiffBoilerAndReturnTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rHighLimitAlarm -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rHighLimitAlarm">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Upper limit for value of the output signal alarm
+Default setting = 32768</rdfs:comment>
+        <rdfs:label>.rHighLimitAlarm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rHysteresis -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rHysteresis">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigAnalog3Point_01"/>
+        <rdfs:label>.rHysteresis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rKp -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rKp">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdfs:comment>Proportional gain (P portion)
+Default setting = 2.5</rdfs:comment>
+        <rdfs:label>.rKp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rKp1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rKp1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Proportional gain (P portion) for the first set of controller parameters
+Default setting = 2.5</rdfs:comment>
+        <rdfs:label>.rKp1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rKp2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rKp2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Proportional gain (P portion) for the second set of controller parameters
+Default setting = 2.5</rdfs:comment>
+        <rdfs:label>.rKp2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rKpMinReturnTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rKpMinReturnTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Proportional gain (P portion). Default setting = 12</rdfs:comment>
+        <rdfs:label>.rKpMinReturnTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rLeadHysteresis -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rLeadHysteresis">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Hysteresis as the lead boiler for the individual limit values. Default setting = 5</rdfs:comment>
+        <rdfs:label>.rLeadHysteresis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rLeadOffsetReferenceTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rLeadOffsetReferenceTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Offset to the specified boiler temperature as lead boiler [K]. Default setting = 5</rdfs:comment>
+        <rdfs:label>.rLeadOffsetReferenceTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rLowLimitAlarm -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rLowLimitAlarm">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Lower limit for value of the output signal
+alarm
+Default setting = -32767</rdfs:comment>
+        <rdfs:label>.rLowLimitAlarm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMaxBoilerTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMaxBoilerTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum boiler temperature at Level 1 [°C]. Default setting = 90</rdfs:comment>
+        <rdfs:label>.rMaxBoilerTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMaxBoilerTemperatureLevel2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMaxBoilerTemperatureLevel2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum boiler temperature at Level 2 [°C]. Default setting = 85</rdfs:comment>
+        <rdfs:label>.rMaxBoilerTemperatureLevel2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMaxReturnTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMaxReturnTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum return temperature [°C]. Default setting = 75</rdfs:comment>
+        <rdfs:label>.rMaxReturnTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMinBoilerTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMinBoilerTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Minimum boiler temperature [°C]. Default setting = 50</rdfs:comment>
+        <rdfs:label>.rMinBoilerTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMinDeviationMovement -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMinDeviationMovement">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigContinuousDamper"/>
+        <rdfs:comment>Minimum deviation for detection of motion [%]
+Default setting = 5</rdfs:comment>
+        <rdfs:label>.rMinDeviationMovement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMinOutsideTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMinOutsideTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Minimum outside temperature for freeze
+protection [°C]
+Default setting = 2 °C</rdfs:comment>
+        <rdfs:label>.rMinOutsideTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rMinReturnTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rMinReturnTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Minimum return temperature [°C]. Default setting = 50</rdfs:comment>
+        <rdfs:label>.rMinReturnTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rOffset -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rOffset">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Measured value compensation for the input
+Default setting = 0</rdfs:comment>
+        <rdfs:label>.rOffset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rOffsetMaxReferenceValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rOffsetMaxReferenceValue">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdfs:comment>Offset for the maximum reference value for the slave controller as a function of the reference value [K]
+Default setting = 6 K</rdfs:comment>
+        <rdfs:label>.rOffsetMaxReferenceValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rOffsetMinReference -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rOffsetMinReference">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdfs:comment>Offset for the minimum reference value for the slave controller as a function of the reference value [K]
+Default setting = 4 K</rdfs:comment>
+        <rdfs:label>.rOffsetMinReferenceValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rOffsetReferenceTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rOffsetReferenceTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Offset to the specified boiler temperature [K]. Default setting = 3</rdfs:comment>
+        <rdfs:label>.rOffsetReferenceTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTd1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTd1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Derivative time (D portion) for the first set of controller parameters [s]
+Default setting = 0 s</rdfs:comment>
+        <rdfs:label>.rTd1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTd2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTd2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Derivative time (D portion) for the second set of controller parameters [s]
+Default setting = 0 s</rdfs:comment>
+        <rdfs:label>.rTd2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTn -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTn">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdfs:comment>Reset time of the controller [s]
+Default setting = 300 s</rdfs:comment>
+        <rdfs:label>.rTn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTn1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTn1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Reset time of the controller for the first set of controller parameters [s]
+Default setting = 300 s</rdfs:comment>
+        <rdfs:label>.rTn1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTn2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTn2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequenceController"/>
+        <rdfs:comment>Reset time of the controller for the second set of controller parameters [s]
+Default setting = 300 s</rdfs:comment>
+        <rdfs:label>.rTn2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTnMinReturnTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTnMinReturnTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Reset time of the controller [s]. Default setting = 0</rdfs:comment>
+        <rdfs:label>.rTnMinReturnTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rTolerance -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rTolerance">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigContinuousDamper"/>
+        <rdfs:comment>Max. deviation, specified/actual position [%]
+Default setting = 3</rdfs:comment>
+        <rdfs:label>.rTolerance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rValveChimneySweep -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rValveChimneySweep">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Chimney sweep function valve position [%]
+Default setting = 25</rdfs:comment>
+        <rdfs:label>.rValveChimneySweep</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rX1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rX1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequence"/>
+        <rdfs:comment>Min. setting value for sequence [%]</rdfs:comment>
+        <rdfs:label>.rX1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rX2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rX2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigSequence"/>
+        <rdfs:comment>Max. setting value for sequence [%]</rdfs:comment>
+        <rdfs:label>.rX2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_rY_Min -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_rY_Min">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigContinuousDamper"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Minimum set value for valve or damper [%]
+Default setting = 3</rdfs:comment>
+        <rdfs:label>.rY_Min</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tAlarm -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tAlarm">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Minimum time on limit violation until an alarm is issued.
+Default setting: t#10s</rdfs:comment>
+        <rdfs:label>.tAlarm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tCycleTime -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tCycleTime">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Cycle time for the PT1 circuit</rdfs:comment>
+        <rdfs:label>.tCycleTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tDelaySwitchOver -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tDelaySwitchOver">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdfs:comment>Delay time for switching between the two fan levels
+Default setting = t#5 m</rdfs:comment>
+        <rdfs:label>.tDelaySwitchOver</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tLeadMinRuntimeLevel1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tLeadMinRuntimeLevel1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Minimum runtime for lead boiler at Level 1. Default setting = t#5 m</rdfs:comment>
+        <rdfs:label>.tLeadMinRuntimeLevel1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tLeadSwitchOnDelayLevel2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tLeadSwitchOnDelayLevel2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Switch-on delay for lead boiler at Level 2. Default setting = t#15 m</rdfs:comment>
+        <rdfs:label>.tLeadSwitchOnDelayLevel2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMaxChimneySweepFunction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMaxChimneySweepFunction">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Maximum duration of chimney sweep function. Default setting = t#15 m</rdfs:comment>
+        <rdfs:label>.tMaxChimneySweepFunction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMaxFlushPeriod -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMaxFlushPeriod">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum time for the startup process. Default setting = t#15 m</rdfs:comment>
+        <rdfs:label>.tMaxFlushPeriod</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMaxOff -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMaxOff">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Maximum turn-off time of the pump when
+blocking protection is enabled
+Default setting = t#48h</rdfs:comment>
+        <rdfs:label>.tMaxOff</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMaxRunTime -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMaxRunTime">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigAnalog3Point_01"/>
+        <rdfs:comment>Max. running time, which the actuator
+needs for the max. stroke
+Default setting: t#120s</rdfs:comment>
+        <rdfs:label>.tMaxRunTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMaxRuntimeValve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMaxRuntimeValve">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum runtime for 2-way valve. Default setting: t#30s</rdfs:comment>
+        <rdfs:label>.tMaxRuntimeValve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMaxStartupMinBoilerTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMaxStartupMinBoilerTemperature">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum time until minimum boiler temperature is achieved during the startup process. Default setting = t#10 m</rdfs:comment>
+        <rdfs:label>.tMaxStartupMinBoilerTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tMinRuntimeLevel1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tMinRuntimeLevel1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Minimum runtime for lag boiler at Level 1. Default setting = t#3 m</rdfs:comment>
+        <rdfs:label>.tMinRuntimeLevel1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOffDelay -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOffDelay">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Turn-off delay of the pump
+Default setting = t#15 m</rdfs:comment>
+        <rdfs:label>.tOffDelay</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOffDelayAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOffDelayAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Switch-off delay for admixing pump. Default setting = t#1 m</rdfs:comment>
+        <rdfs:label>.tOffDelayAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOffDelayFullLoad -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOffDelayFullLoad">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Switch-off delay for full-load operation. Default setting: t#30s</rdfs:comment>
+        <rdfs:label>.tOffDelayFullLoad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOffDelayPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOffDelayPump">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Switch-off delay for boiler circuit pump. Default setting = t#10 m</rdfs:comment>
+        <rdfs:label>.tOffDelayPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOnDelayAlarm -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOnDelayAlarm">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigContinuousDamper"/>
+        <rdfs:comment>ON-delay for alarm
+Default setting = t#5 m</rdfs:comment>
+        <rdfs:label>.tOnDelayAlarm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOnDelayPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOnDelayPump">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Switch-on delay for boiler circuit pump with one 2-way valve. Default setting = t#2 m</rdfs:comment>
+        <rdfs:label>.tOnDelayPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tOverride -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tOverride">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigAnalog3Point_01"/>
+        <rdfs:comment>Run-on time after reaching end
+positions</rdfs:comment>
+        <rdfs:label>.tOverride</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tPumpValveMaxOFF -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tPumpValveMaxOFF">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maximum turn-off time of the pump and valve up to activation of blocking protection. Default setting = t#24h</rdfs:comment>
+        <rdfs:label>.tPumpValveMaxOFF</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tPumpValveON -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tPumpValveON">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Maintenance run time for pump and valve. Default setting: t#30s</rdfs:comment>
+        <rdfs:label>.tPumpValveON</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tSwitchOn -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tSwitchOn">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Turn-on time of the pump when blocking
+protection is enabled
+Default setting: t#60s</rdfs:comment>
+        <rdfs:label>.tSwitchOn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tSwitchOnDelayLevel2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tSwitchOnDelayLevel2">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Switch-on delay for lag boiler at Level 2. Default setting = t#20 m</rdfs:comment>
+        <rdfs:label>.tSwitchOnDelayLevel2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_tT1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_tT1">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdfs:comment>Time constant for the PT1 circuit
+Default setting: t#2s</rdfs:comment>
+        <rdfs:label>.tT1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Admixing pump present. Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xAutoQuit -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xAutoQuit">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigLowPassFilter"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Automatic acknowledgement of the alarm or fault messages</rdfs:comment>
+        <rdfs:label>.xAutoQuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xBlockingProtection -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xBlockingProtection">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Enable blocking protection. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>.xBlockingProtection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xControlSpeedLevel -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xControlSpeedLevel">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigCascadeController"/>
+        <rdfs:comment>Enable for determining the required fan level
+Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xControlSpeedLevel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xFeedbackDamper -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xFeedbackDamper">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigContinuousDamper"/>
+        <rdfs:comment>Check-back signal Damper position present
+Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xFeedbackDamper</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xLimitSwitch -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xLimitSwitch">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigAnalog3Point_01"/>
+        <rdfs:comment>Monitoring of the limit switches
+Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xLimitSwitch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xPumpWinter -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xPumpWinter">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>Enable freeze protection</rdfs:comment>
+        <rdfs:label>.xPumpWinter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xSmallWaterVolume -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xSmallWaterVolume">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>Low volume of water in boiler. Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xSmallWaterVolume</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xThreeWayValve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xThreeWayValve">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfigValveAndPump"/>
+        <rdfs:comment>3-way valve present in boiler circuit. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>.xThreeWayValve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xTwoWayValve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xTwoWayValve">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>2-way valve (boiler valve) present. Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xTwoWayValve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#_xTwoWayValvePermanentOpen -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#_xTwoWayValvePermanentOpen">
+        <rdf:type rdf:resource="https://w3id.org/baf#typConfig2LevelBoiler"/>
+        <rdfs:comment>2-way valve closed in the event of a fault. Default setting = FALSE</rdfs:comment>
+        <rdfs:label>.xTwoWayValvePermanentOpen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#bBoilerNumber -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#bBoilerNumber">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Boiler number. Value range = 1 – 2. Default setting = 1</rdfs:comment>
+        <rdfs:label>bBoilerNumber</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#bLeadBoiler -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#bLeadBoiler">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Defining of lead boiler. Value range = 0 – 2 (0 = both boilers in parallel). Default setting = 1</rdfs:comment>
+        <rdfs:label>bLeadBoiler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#bManualLevelBoiler -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#bManualLevelBoiler">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Boiler level in Manual mode. Value range = 0 – 2</rdfs:comment>
+        <rdfs:label>bManualLevelBoiler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#dwOperatingMinutes -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#dwOperatingMinutes">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Operating time in minutes</rdfs:comment>
+        <rdfs:label>dwOperatingMinutes</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rActualBoilerTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rActualBoilerTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual boiler temperature [°C]</rdfs:comment>
+        <rdfs:label>rActualBoilerTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rActualPosition -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rActualPosition">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual position of the continuous damper [%]</rdfs:comment>
+        <rdfs:label>rActualPosition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rActualReturnTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rActualReturnTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual boiler return temperature [°C]</rdfs:comment>
+        <rdfs:label>rActualReturnTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rActualValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rActualValue">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual value [°C]</rdfs:comment>
+        <rdfs:label>rActualValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rExhaustAirTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rExhaustAirTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual value for exhaust air temperature [°C]</rdfs:comment>
+        <rdfs:label>rExhaustAirTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rExitAirTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rExitAirTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual value exhaust air temperature [°C]</rdfs:comment>
+        <rdfs:label>rExitAirTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rInput -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rInput">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Input value</rdfs:comment>
+        <rdfs:label>rInput</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rManualValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rManualValue">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Set value in manual mode [%] or [°C]
+Value range = 0 – 100%
+Default setting = 22 °C</rdfs:comment>
+        <rdfs:label>rManualValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rManualValueValve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rManualValueValve">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Valve position in Manual mode [%]</rdfs:comment>
+        <rdfs:label>rManualValueValve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rMaxReferenceValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rMaxReferenceValue">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Maximum reference value for slave controller</rdfs:comment>
+        <rdfs:label>rMaxReferenceValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rMinBoilerTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rMinBoilerTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Minimum boiler temperature</rdfs:comment>
+        <rdfs:label>rMinBoilerTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rMinExitAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rMinExitAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Minimum exhaust air temperature for
+regulation of the plate-type heat exchanger
+in the incoming air duct [°C]
+Default setting = 6 °C</rdfs:comment>
+        <rdfs:label>rMinExitAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rMinReferenceValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rMinReferenceValue">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Minimum reference value for slave controller</rdfs:comment>
+        <rdfs:label>rMinReferenceValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rOutput -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rOutput">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Filtered output value</rdfs:comment>
+        <rdfs:label>rOutput</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rOutsideTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rOutsideTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Actual value outside temperature [°C]</rdfs:comment>
+        <rdfs:label>rOutsideTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rReferenceBoilerTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rReferenceBoilerTemperature">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Specified boiler temperature [°C]</rdfs:comment>
+        <rdfs:label>rReferenceBoilerTemperature</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rReferencePosition -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rReferencePosition">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Reference position of the continuous damper [%]</rdfs:comment>
+        <rdfs:label>rReferencePosition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rReferenceValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rReferenceValue">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Reference value [°C]
+Default setting = 22 °C</rdfs:comment>
+        <rdfs:label>rReferenceValue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rReferenceValueSlaveController -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rReferenceValueSlaveController">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Reference value for slave controller [°C]</rdfs:comment>
+        <rdfs:label>rReferenceValueSlaveController</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rValvePosition -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rValvePosition">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Specified position of valve [%]</rdfs:comment>
+        <rdfs:label>rValvePosition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rX1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rX1">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>x-coordinate of the first value</rdfs:comment>
+        <rdfs:label>rX1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rX2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rX2">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>x-coordinate of the second value</rdfs:comment>
+        <rdfs:label>rX2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value [%]</rdfs:comment>
+        <rdfs:label>rY</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY1">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>y-coordinate of the first value</rdfs:comment>
+        <rdfs:label>rY1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY2">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>y-coordinate of the second value</rdfs:comment>
+        <rdfs:label>rY2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_DamperExhaustAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_DamperExhaustAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for plate-type heat exchanger in
+exhaust air duct [%]
+Value range = 0 – 100</rdfs:comment>
+        <rdfs:label>rY_DamperExhaustAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_DamperSupplyAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_DamperSupplyAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for plate-type heat exchanger in
+incoming air duct [%]
+Value range = 0 – 100</rdfs:comment>
+        <rdfs:label>rY_DamperSupplyAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_Dehumidifying -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_Dehumidifying">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Set value for dehumidifier [%]</rdfs:comment>
+        <rdfs:label>rY_Dehumidifying</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_EnergyRecovery -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_EnergyRecovery">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for energy recovery [%]</rdfs:comment>
+        <rdfs:label>rY_EnergyRecovery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_FreshAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_FreshAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value mixed air damper [%]</rdfs:comment>
+        <rdfs:label>rY_FreshAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_Heating -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_Heating">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Valve position heating register</rdfs:comment>
+        <rdfs:label>rY_Heating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_MinFreshAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_MinFreshAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Minimum fresh air rate [%]</rdfs:comment>
+        <rdfs:label>rY_MinFreshAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#rY_Valve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#rY_Valve">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Valve position, 3-way valve [%]. Value range = 0 – 100</rdfs:comment>
+        <rdfs:label>rY_Valve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#typSequenceController -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#typSequenceController">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Data structure for data exchange between the individual sequences and the sequence controller</rdfs:comment>
+        <rdfs:label>typSequenceController</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#typStatusBoiler -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#typStatusBoiler">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Boiler status for the strategy module</rdfs:comment>
+        <rdfs:label>typStatusBoiler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wStatus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wStatus">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Display current status
+0 = OK
+1 = On 
+2 = Off
+10 = Error Pump
+29 = Error Safety chain
+30 = Condensation protection
+31 = Chimney sweep function
+32 = Overheating protection
+33 = Error Valve
+34 = Follow up time
+35 = Manual operation
+36 = In motion
+39 = Reference value exceeded
+40 = Startup behaviour
+42 = Error Damper position
+46 = Error limit switch
+47 = Synchronisation</rdfs:comment>
+        <rdfs:label>wStatus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value:
+Value range: 0 −32767 for damper</rdfs:comment>
+        <rdfs:label>wY</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY_DamperExhaustAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY_DamperExhaustAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for plate-type heat exchanger in
+the exhaust air duct
+Value range = 0 – 32767</rdfs:comment>
+        <rdfs:label>wY_DamperExhaustAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY_DamperSupplyAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY_DamperSupplyAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for plate-type heat exchanger in
+the incoming air duct
+Value range = 0 – 32767</rdfs:comment>
+        <rdfs:label>wY_DamperSupplyAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY_EnergyRecovery -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY_EnergyRecovery">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for energy recovery
+Value range = 0 – 32767</rdfs:comment>
+        <rdfs:label>wY_EnergyRecovery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY_FreshAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY_FreshAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Set value for mixed air damper
+Value range = 0 – 32767</rdfs:comment>
+        <rdfs:label>wY_FreshAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY_Heating -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY_Heating">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Valve position heating register
+Value range = 0 – 32767</rdfs:comment>
+        <rdfs:label>wY_Heating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#wY_Valve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#wY_Valve">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Valve position, 3-way valve. Value range = 0 – 32767</rdfs:comment>
+        <rdfs:label>wY_Valve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xActive -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xActive">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Active indicator for sequence</rdfs:comment>
+        <rdfs:label>xActive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Switching signal for the admixing pump</rdfs:comment>
+        <rdfs:label>xAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xAlarm -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xAlarm">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Output signal error</rdfs:comment>
+        <rdfs:label>xAlarm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xAuto -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xAuto">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Automatic mode</rdfs:comment>
+        <rdfs:label>xAuto</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xBoilerPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xBoilerPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Boiler circuit pump</rdfs:comment>
+        <rdfs:label>xBoilerPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xChimneySweep -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xChimneySweep">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Chimney sweep function active</rdfs:comment>
+        <rdfs:label>xChimneySweep</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xChimneySweepFunction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xChimneySweepFunction">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Activate chimney sweep function</rdfs:comment>
+        <rdfs:label>xChimneySweepFunction</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xClose -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xClose">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Engine coil CLOSED</rdfs:comment>
+        <rdfs:label>xClose</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xCondensationProtection -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xCondensationProtection">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Condensation protection</rdfs:comment>
+        <rdfs:label>xCondensationProtection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xDifferentialPressureMonitor -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xDifferentialPressureMonitor">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Differential pressure sensor plate-type
+heat exchanger
+Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xDifferentialPressureMonitor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xEnable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xEnable">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Enable controller
+Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xEnable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xEnablePump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xEnablePump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Enable pump and valve control</rdfs:comment>
+        <rdfs:label>xEnablePump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xEnableSystem -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xEnableSystem">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Enable FbStartStop
+Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xEnableSystem</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xError -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xError">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Some fault</rdfs:comment>
+        <rdfs:label>xError</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xErrorAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xErrorAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Admixing pump error</rdfs:comment>
+        <rdfs:label>xErrorAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xErrorBoilerPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xErrorBoilerPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Boiler circuit pump error</rdfs:comment>
+        <rdfs:label>xErrorBoilerPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xErrorPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xErrorPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Error message pump</rdfs:comment>
+        <rdfs:label>xErrorPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xErrorSequence -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xErrorSequence">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Error check-back signal from device</rdfs:comment>
+        <rdfs:label>xErrorSequence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xErrorStartUp -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xErrorStartUp">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Start-up system fault</rdfs:comment>
+        <rdfs:label>xErrorStartUp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xFeedbackManualOperation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xFeedbackManualOperation">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>External check-back signal, Manual mode</rdfs:comment>
+        <rdfs:label>xFeedbackManualOperation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xFollowUpTime -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xFollowUpTime">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Pump is in the follo-up phase</rdfs:comment>
+        <rdfs:label>xFollowUpTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xFrostAlarmAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xFrostAlarmAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Frost alarm from FbAntifreezeAir</rdfs:comment>
+        <rdfs:label>xFrostAlarmAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xFrostAlarmWater -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xFrostAlarmWater">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Frost alarm from FbAntifreezeWater</rdfs:comment>
+        <rdfs:label>xFrostAlarmWater</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xFullLoad -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xFullLoad">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Boiler is to run at full load</rdfs:comment>
+        <rdfs:label>xFullLoad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xInit -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xInit">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>A positive flank starts the reference run</rdfs:comment>
+        <rdfs:label>xInit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xLevel1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xLevel1">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Boiler Level 1</rdfs:comment>
+        <rdfs:label>xLevel1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xLevel2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xLevel2">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Boiler Level 2</rdfs:comment>
+        <rdfs:label>xLevel2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xLimitSwitch -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xLimitSwitch">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Limit switch (opend, closed)</rdfs:comment>
+        <rdfs:label>xLimitSwitch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xLimitSwitchValve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xLimitSwitchValve">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Limit switch, 2-way valve. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xLimitSwitchValve</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xManual -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xManual">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Manual mode</rdfs:comment>
+        <rdfs:label>xManual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xManualOnAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xManualOnAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Switch on admixing pump manually</rdfs:comment>
+        <rdfs:label>xManualOnAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xManualOnBoilerPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xManualOnBoilerPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Switch on boiler circuit pump manually</rdfs:comment>
+        <rdfs:label>xManualOnBoilerPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xManualOperation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xManualOperation">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Enable manual operation</rdfs:comment>
+        <rdfs:label>xManualOperation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xManualSwitchPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xManualSwitchPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Switch on pump manually</rdfs:comment>
+        <rdfs:label>xManualSwitchPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xMaximalThermostat -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xMaximalThermostat">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Maximum thermostat for heating circuit
+Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xMaximalThermostat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xMinFreshAir -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xMinFreshAir">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Override mixed air damper using the minimum fresh air rate</rdfs:comment>
+        <rdfs:label>xMinFreshAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xMotorProtection -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xMotorProtection">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Motor protection switch pump
+Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xMotorProtection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xMotorProtectionAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xMotorProtectionAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Motor protection switch, Admixing pump. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xMotorProtectionAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xMotorProtectionPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xMotorProtectionPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Motor protection switch, Boiler circuit pump. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xMotorProtectionPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xNightVentilation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xNightVentilation">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Opening damper during night ventilation</rdfs:comment>
+        <rdfs:label>xNightVentilation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xOpen -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xOpen">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Engine coil OPEN</rdfs:comment>
+        <rdfs:label>xOpen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Switching signal for the pump</rdfs:comment>
+        <rdfs:label>xPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xQuit -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xQuit">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Error message acknowledgement</rdfs:comment>
+        <rdfs:label>xQuit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xRepairSwitch -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xRepairSwitch">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Repair switch pump
+Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xRepairSwitch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xRepairSwitchAdmixingPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xRepairSwitchAdmixingPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Repair switch, Admixing pump. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xRepairSwitchAdmixingPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xRepairSwitchPump -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xRepairSwitchPump">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Repair switch, Boiler circuit pump. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xRepairSwitchPump</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xSafetyChain -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xSafetyChain">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Check-back signal from boiler safety chain. Default setting = TRUE</rdfs:comment>
+        <rdfs:label>xSafetyChain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xSpeedLevel1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xSpeedLevel1">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Request fan level 1</rdfs:comment>
+        <rdfs:label>xSpeedLevel1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xSpeedLevel2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xSpeedLevel2">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Request fan level 2</rdfs:comment>
+        <rdfs:label>xSpeedLevel2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xSwitchOnBoiler -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xSwitchOnBoiler">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Input"/>
+        <rdfs:comment>Switch-on signal in Automatic mode (e.g., from boiler strategy)</rdfs:comment>
+        <rdfs:label>xSwitchOnBoiler</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/baf#xValve -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/baf#xValve">
+        <rdf:type rdf:resource="https://w3id.org/ibp/CTRLont#Output"/>
+        <rdfs:comment>Switching signal 2-way valve</rdfs:comment>
+        <rdfs:label>xValve</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

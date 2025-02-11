@@ -1,0 +1,981 @@
+[ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/risk#causes"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsRisk"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.w3id.org/risk#Measure"
+    }, {
+      "@id" : "_:genid15"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsOccurrenceOfRisk"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.w3id.org/risk#Event"
+    }, {
+      "@id" : "https://www.w3id.org/risk#Risk"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/risk#isEffectOf"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#hasRisk"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.w3id.org/risk#Problem"
+    }, {
+      "@id" : "_:genid6"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#occursAt"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#ID"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://www.w3id.org/risk#Measure"
+    }, {
+      "@id" : "_:genid11"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "https://www.w3id.org/risk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@language" : "en",
+    "@value" : "Pruvost. H. (2023): The RISK Ontology for a risk management paradigm in the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/risk."
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0001-7604-8543"
+  }, {
+    "@id" : "https://www.linkedin.com/in/hervepruvost"
+  }, {
+    "@value" : "Hervé Pruvost"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2017-06-22"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by-sa/4.0"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2023-06-07"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://www.eas.iis.fraunhofer.de/"
+  }, {
+    "@value" : "Fraunhofer IIS/EAS"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "RISK: the risk ontology."
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "risk"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/risk#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0.0"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirCooledButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air cooled but not ventilated"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirHeatedButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air heated but not ventilated"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirHumidifiedButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air humidified but not ventilated"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirReturnedButNotSupplied",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air returned but not supplied"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#AirSuppliedButNotReturned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Air supplied but not returned"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#BetterThanTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#MetricValuePartition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#BuildingHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#OutsideTolerance"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#BuildingPermissionRejected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#LegalRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#BuildingTooHigh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#Occurence"
+  } ],
+  "https://www.w3id.org/risk#causedBy" : [ {
+    "@id" : "https://www.w3id.org/risk#BuildingHeight"
+  } ],
+  "https://www.w3id.org/risk#causes" : [ {
+    "@id" : "https://www.w3id.org/risk#BuildingPermissionRejected"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#CertificationRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ConstructionRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#CostRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#CriticalError",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Threshold"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#DesignRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#DesignTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#OutsideTolerance"
+  } ],
+  "https://www.w3id.org/risk#causes" : [ {
+    "@id" : "https://www.w3id.org/risk#NominalDesignTemperature_not_repected"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#EnergyRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#EntityAtRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Entity at risk"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#FitsValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#GeotechnicalMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#KnownMeasure"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#GeotechnicalRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery inefficiently used"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#HeatRecoveryUnused",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery unused"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat recovery used but not ventilated"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#HighPitMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#GeotechnicalMeasure"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#InTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#MetricValuePartition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#InTolerance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#MetricValuePartition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#IncompleteData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#QualitativeUncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Install_Struts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#KnownMeasure"
+  } ],
+  "https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk" : [ {
+    "@id" : "https://www.w3id.org/risk#lowSecurityIndex"
+  } ],
+  "https://www.w3id.org/risk#removesRisk" : [ {
+    "@id" : "https://www.w3id.org/risk#lowSecurityIndex"
+  } ],
+  "https://www.w3id.org/risk#treatsOccurrenceOfRisk" : [ {
+    "@id" : "https://www.w3id.org/risk#lowSecurityIndex"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#KnownMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Measure"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#LegalRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Likelihood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#QuantitativeUncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#LowPitMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#GeotechnicalMeasure"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Maximize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Measure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#MetricValuePartition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#ValuePartition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Minimize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ModelValidityLimitState_overstep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#GeotechnicalRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#NoData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#QualitativeUncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#NominalDesignTemperature_not_repected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#DesignRisk"
+  } ],
+  "https://www.w3id.org/risk#causedBy" : [ {
+    "@id" : "https://www.w3id.org/risk#DesignTemperature"
+  } ],
+  "https://www.w3id.org/risk#hasDescription" : [ {
+    "@value" : "Requested nominal temperature out of normative requirements about indoor condition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Occurence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  }, {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#OutsideTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#MetricValuePartition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#OutsideTolerance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#MetricValuePartition"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#OverheatingThroughSolarGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Overheating through solar gain"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ProactiveMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Measure"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ProbabilityDistribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#QuantitativeUncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Problem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#QualitativeUncertainty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Uncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#QuantitativeUncertainty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Uncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Range",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#QuantitativeUncertainty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ReactiveMeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Measure"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid13"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ReliabilityRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Risk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#RiskEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#RiskOccurence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Occurence"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ServiceabilityLimitState_overstep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#GeotechnicalRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Simulatenous air cooling and radiant heating"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Simultaneous air heating and air cooling"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SpaceOverheating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Space overheating"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SpaceUndercooling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Space undercooling"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SupplyAirHumidity_TooHigh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity Too high"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SupplyAirHumidity_TooLow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air humidity Too low"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SupplyAirPressure_TooHigh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure Too high"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SupplyAirPressure_TooLow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air pressure Too low"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SupplyAirTemperature_TooHigh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature Too high"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#SupplyAirTemperature_TooLow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Supply air temperature Too low"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Threshold",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Treats",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UltimateLimitState_overstep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#GeotechnicalRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Uncertainty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedAppliances",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unused appliances"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedCoolingEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unused cooling energy"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedHeatingEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unused heating energy"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#UnusedLights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unused lights"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#ValuePartition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#Warning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3id.org/risk#Threshold"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#WastingEnergyThroughOpenings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#EnergyRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Wasting energy through openings"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#WindowWallRatio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#InTolerance"
+  }, {
+    "@id" : "https://www.w3id.org/risk#OutsideTarget"
+  } ],
+  "https://www.w3id.org/risk#causes" : [ {
+    "@id" : "https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#Occurence"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#assessedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "assessed by"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/risk#assesses"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#assesses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "assesses"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#causedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#isEffectOf"
+  }, {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#causes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://www.w3id.org/risk#hasEffect"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#effectedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/risk#effects"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#effects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#evacuate_building_site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#KnownMeasure"
+  } ],
+  "https://www.w3id.org/risk#reducesExpectedImpactOfRisk" : [ {
+    "@id" : "https://www.w3id.org/risk#UltimateLimitState_overstep"
+  } ],
+  "https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk" : [ {
+    "@id" : "https://www.w3id.org/risk#UltimateLimitState_overstep"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasEffect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasInstance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasQuantitativeUncertainty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#hasThreshold"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasThreshold",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#hasTolerance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#hasThreshold"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#isCritical",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#isEffectOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#isOccurenceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#RiskOccurence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#isToBeAvoided",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#isToBeReduced",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#isTolerated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#lagging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#leading",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#lowSecurityIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://www.w3id.org/risk#GeotechnicalRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#occursAt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#reducesExpectedImpactOfRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsOccurrenceOfRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#reducesRiskProbability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#relatesTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#removesRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsRisk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#threatens",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Risk"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#treatsOccurrenceOfRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsProblem"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/risk#treatsProblem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.w3id.org/risk#treatsRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/risk#Measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/risk#Problem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/risk#treatsProblem"
+  } ]
+} ]

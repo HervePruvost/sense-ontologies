@@ -1,0 +1,1990 @@
+# baseURI: https://w3id.org/esim
+# prefix: esim
+
+@prefix : <https://w3id.org/esim#> .
+@prefix esim: <https://w3id.org/esim#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/esim>
+  a owl:Ontology ;
+  spin:imports <http://topbraid.org/spin/owlrl-all> ;
+  dcterms:creator "Pit Stenzel",
+                  <https://www.researchgate.net/profile/Pit-Stenzel> ,
+                  <https://www.linkedin.com/in/pit-stenzel-33a41998> ;
+  dcterms:creator "Jens Kaiser";
+  dcterms:crontributor "Hervé Pruvost" ,
+                  <https://orcid.org/0000-0001-7604-8543> ,
+                  <https://www.linkedin.com/in/hervepruvost> ;                  
+  dcterms:issued "2015-09-30"^^xsd:date ;
+  dcterms:modified "2023-06-17"^^xsd:date ;
+  dcterms:title "ESIM: Energy System Information Model."@en ;
+  dcterms:publisher "Fraunhofer IIS/EAS" ,
+                    <https://www.eas.iis.fraunhofer.de/> ;
+  dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+  rdfs:seeAlso <https://publica.fraunhofer.de/bitstreams/4e5c5599-8bf0-47f9-8f27-545dc41dcd1a/download> , 
+               <https://slideplayer.com/slide/10823731/>;
+  vann:preferredNamespacePrefix "esim" ;
+  vann:preferredNamespaceUri "https://w3id.org/esim#" ;
+  dcterms:description "The Energy System Information Model (ESIM) is a domain-specific RDF graph decribes information about energy systems at building and urban levels, including their automation and control systems. It provides a functional, structural and physical description of the systems into a metadata structure and allow for linking additional operational data."@en ;
+  owl:versionInfo "v1.1.0" ;
+  dcterms:bibliographicCitation "Stenzel, P. (2016). Potentiale des BIM-basierten Entwurfs und Betriebs in der Gebäudeautomation [Potentials of BIM-based design and operation in building automation]. AUTOMATION 2016 conference, 2. VDI-Fachkonferenz Gebäudeautomation, Baden-Baden, Germany, June 2016. DOI: https://doi.org/10.24406/publica-fhg-392335"@en ,
+                                "Pruvost, H., Enge-Rosenblatt, O. and Haufe J.. Information Integration and Semantic Interpretation for Building Energy System Operation and Maintenance. IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society, Washington, DC, USA, 2018, pp. 813-818, DOI: https://doi.org/10.1109/IECON.2018.8591740."@en ;
+.
+esim:AC_Network
+  a owl:Class ;
+  rdfs:label "AC Network" ;
+  rdfs:subClassOf esim:CableNetwork ;
+.
+esim:AbsorptionChiller
+  a owl:Class ;
+  rdfs:comment "A chiller that uses a heat source such as steam or hot water to move the refrigerant around the system" ;
+  rdfs:label "Vapor-absorption chiller" ;
+  rdfs:subClassOf esim:Chiller ;
+.
+esim:Actuator
+  a owl:Class ;
+  rdfs:label "Actuator" ;
+  rdfs:subClassOf esim:ControlComponent ;
+.
+esim:AdministrationalInformation
+  a owl:Class ;
+  rdfs:label "Administrational information" ;
+.
+esim:AdsorptionChiller
+  a owl:Class ;
+  rdfs:comment "Adsorption Chiller is able to make chilled water with low temperature (65℃～100℃) hot water. It uses solid sorption materials instead of liquid solutions." ;
+  rdfs:label "Adsorption chiller" ;
+  rdfs:subClassOf esim:Chiller ;
+.
+esim:AirAirHeatPump
+  a owl:Class ;
+  rdfs:comment "An ASHP that absorbs heat from outside air and releases it inside the building as hot air" ;
+  rdfs:label "Air air heat pump" ;
+  rdfs:subClassOf esim:AirSourceHeatPump ;
+.
+esim:AirDistributionBox
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Air distribution box" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:AirHandlingUnit
+  a owl:Class ;
+  rdfs:label "Air handling unit" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:AirSourceHeatPump
+  a owl:Class ;
+  rdfs:comment "An air source heat pump (ASHP) is a system which transfers heat from outside to inside a building, or vice versa." ;
+  rdfs:label "Air source heat pump" ;
+  rdfs:subClassOf esim:HeatPump ;
+.
+esim:AirWaterHeatPump
+  a owl:Class ;
+  rdfs:comment "An ASHP that absorbs heat from outside air and releases it inside the building as hot water" ;
+  rdfs:label "Air water heat pump" ;
+  rdfs:subClassOf esim:AirSourceHeatPump ;
+.
+esim:Algorithm
+  a owl:Class ;
+  rdfs:label "Algorithm" ;
+  rdfs:subClassOf esim:ControlSoftware ;
+.
+esim:AverageUnavailability
+  a owl:Class ;
+  rdfs:label "Average unavailability" ;
+  rdfs:subClassOf esim:SystemProperty ;
+.
+esim:BAC_Function
+  a owl:Class ;
+  rdfs:label "BAC Function" ;
+  rdfs:subClassOf esim:ControlFunction ;
+.
+esim:BasicTariff
+  a owl:Class ;
+  rdfs:label "Basic tariff" ;
+  rdfs:subClassOf esim:EnergyTarif ;
+.
+esim:Bathroom
+  a owl:Class ;
+  esim:omniclass "13-65 13 00" ;
+  rdfs:label "Bathroom" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:Battery
+  a owl:Class ;
+  rdfs:label "Battery" ;
+  rdfs:subClassOf esim:EnergyStorage ;
+.
+esim:Bedroom
+  a owl:Class ;
+  esim:omniclass "13-65 19 00" ;
+  rdfs:label "Bedroom" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:BehaviouralModel
+  a owl:Class ;
+  rdfs:label "Behavioural model" ;
+.
+esim:BehaviouralModelEnergyConsumptionUsage
+  a owl:Class ;
+  rdfs:label "Behavioural model energy consumption usage" ;
+  rdfs:subClassOf esim:BehaviouralModelWithSimplifiedCharacteristic ;
+.
+esim:BehaviouralModelEnergyDistributionSystem
+  a owl:Class ;
+  rdfs:label "Behavioural model energy distribution system" ;
+  rdfs:subClassOf esim:BehaviouralModelWithSimplifiedCharacteristic ;
+.
+esim:BehaviouralModelEnergySource
+  a owl:Class ;
+  rdfs:label "Behavioural model energy source" ;
+  rdfs:subClassOf esim:BehaviouralModelWithSimplifiedCharacteristic ;
+.
+esim:BehaviouralModelEnergyStorage
+  a owl:Class ;
+  rdfs:label "Behavioural model energy storage" ;
+  rdfs:subClassOf esim:BehaviouralModelWithSimplifiedCharacteristic ;
+.
+esim:BehaviouralModelEnergyTransformationFacility
+  a owl:Class ;
+  rdfs:label "Behavioural model energy transformation facility" ;
+  rdfs:subClassOf esim:BehaviouralModelWithSimplifiedCharacteristic ;
+.
+esim:BehaviouralModelWithDetailedCharacteristic
+  a owl:Class ;
+  rdfs:label "Behavioural model with detailed characteristic" ;
+  rdfs:subClassOf esim:BehaviouralModel ;
+.
+esim:BehaviouralModelWithSimplifiedCharacteristic
+  a owl:Class ;
+  rdfs:label "Behavioural model with simplified characteristic" ;
+  rdfs:subClassOf esim:BehaviouralModel ;
+.
+esim:BioGas
+  a owl:Class ;
+  rdfs:label "Bio gas" ;
+  rdfs:subClassOf esim:Gas ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:Biomass
+  a owl:Class ;
+  rdfs:label "Biomass" ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:Boiler
+  a owl:Class ;
+  rdfs:label "Boiler" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:BreakoutSpace
+  a owl:Class ;
+  esim:omniclass "13-31 11 00" ;
+  rdfs:label "Breakout Space" ;
+  rdfs:subClassOf esim:Space ;
+.
+esim:Building
+  a owl:Class ;
+  rdfs:label "Building" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:BuildingControlSystem
+  a owl:Class ;
+  rdfs:label "Building control system" ;
+  rdfs:subClassOf esim:ControlSystem ;
+.
+esim:BuildingCooling
+  a owl:Class ;
+  rdfs:label "Building cooling" ;
+  rdfs:subClassOf esim:Cooling ;
+.
+esim:BuildingEnergySystem
+  a owl:Class ;
+  rdfs:label "Building energy system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:BuildingEnvelope
+  a owl:Class ;
+  rdfs:label "Building envelope" ;
+  rdfs:subClassOf esim:EnergyStorage ;
+.
+esim:BuildingHeating
+  a owl:Class ;
+  rdfs:label "Building heating" ;
+  rdfs:subClassOf esim:Heating ;
+.
+esim:Cable
+  a owl:Class ;
+  rdfs:label "Cable" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:CableFitting
+  a owl:Class ;
+  rdfs:label "Cable fitting" ;
+  rdfs:subClassOf esim:Cable ;
+.
+esim:CableNetwork
+  a owl:Class ;
+  rdfs:label "Cable network" ;
+  rdfs:subClassOf esim:Cable ;
+.
+esim:CableSegment
+  a owl:Class ;
+  rdfs:label "Cable segment" ;
+  rdfs:subClassOf esim:Cable ;
+.
+esim:CarbonDioxide
+  a owl:Class ;
+  rdfs:label "Carbon dioxide" ;
+  rdfs:subClassOf esim:Gas ;
+.
+esim:Ceiling
+  a owl:Class ;
+  rdfs:label "Ceiling" ;
+  rdfs:subClassOf esim:Element ;
+.
+esim:Chiller
+  a owl:Class ;
+  rdfs:label "Chiller" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:City
+  a owl:Class ;
+  rdfs:label "City" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:Classroom
+  a owl:Class ;
+  esim:omniclass "13-31 13 13" ;
+  rdfs:label "Classroom" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:Coal
+  a owl:Class ;
+  rdfs:label "Coal" ;
+  rdfs:subClassOf esim:FossilFuel ;
+  rdfs:subClassOf esim:Solid ;
+.
+esim:CoefficientOfPerformance
+  a owl:Class ;
+  rdfs:label "COP" ;
+  rdfs:subClassOf esim:PerformanceParameter ;
+.
+esim:ColdEnergyDemand
+  a owl:Class ;
+  rdfs:label "Cold energy demand" ;
+  rdfs:subClassOf esim:EnergyDemand ;
+.
+esim:ColdEnergySupply
+  a owl:Class ;
+  rdfs:label "Cold energy supply" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:ColdWaterSupply
+  a owl:Class ;
+  rdfs:label "Cold water supply" ;
+  rdfs:subClassOf esim:WaterSupply ;
+.
+esim:ColdWaterTank
+  a owl:Class ;
+  rdfs:label "Cold water tank" ;
+  rdfs:subClassOf esim:WaterTank ;
+.
+esim:ComponentProperty
+  a owl:Class ;
+  rdfs:label "Component property" ;
+  rdfs:subClassOf esim:ReliabilityParameter ;
+.
+esim:CompressionChiller
+  a owl:Class ;
+  rdfs:comment "A chiller that uses an electrically driven mechanical compressor to force a refrigerant around the system" ;
+  rdfs:label "Vapor-compression chiller" ;
+  rdfs:subClassOf esim:Chiller ;
+.
+esim:ConditionedZone
+  a owl:Class ;
+  rdfs:comment "A space or group of spaces within a building with heating, cooling, and ventilating requirements which can be maintain by a HVAC system" ;
+  rdfs:label "Conditioned zone" ;
+  rdfs:subClassOf esim:Zone ;
+  owl:disjointWith esim:UnconditionedZone ;
+.
+esim:Contract
+  a owl:Class ;
+  rdfs:label "Contract" ;
+  rdfs:subClassOf esim:AdministrationalInformation ;
+.
+esim:ControlComponent
+  a owl:Class ;
+  rdfs:label "Automation and control equipment" ;
+  rdfs:subClassOf esim:ControlFacility ;
+.
+esim:ControlFacility
+  a owl:Class ;
+  rdfs:label "Automation and control facility" ;
+.
+esim:ControlFunction
+  a owl:Class ;
+  rdfs:label "Automation and control function" ;
+.
+esim:ControlSoftware
+  a owl:Class ;
+  rdfs:label "Automation and control software" ;
+  rdfs:subClassOf esim:ControlFacility ;
+.
+esim:ControlStrategy
+  a owl:Class ;
+  rdfs:label "Control strategy" ;
+.
+esim:ControlSystem
+  a owl:Class ;
+  rdfs:label "Automation and control system" ;
+.
+esim:Controller
+  a owl:Class ;
+  rdfs:label "Controller" ;
+  rdfs:subClassOf esim:ControlComponent ;
+.
+esim:Cooling
+  a owl:Class ;
+  rdfs:label "Cooling" ;
+  rdfs:subClassOf esim:EnergyService ;
+.
+esim:CoolingCircuit
+  a owl:Class ;
+  rdfs:label "Cooling circuit" ;
+  rdfs:subClassOf esim:EnergyDistributionCircuit ;
+.
+esim:CoolingEnergy
+  a owl:Class ;
+  rdfs:label "CoolingEnergy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:CoolingSystem
+  a owl:Class ;
+  rdfs:label "Cooling system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:CoolingZone
+  a owl:Class ;
+  rdfs:comment "A space or group of spaces with cooling requirements maintained by a cooling system" ;
+  rdfs:label "Cooling zone" ;
+  rdfs:subClassOf esim:ConditionedZone ;
+.
+esim:CostInformation
+  a owl:Class ;
+  rdfs:label "Cost information" ;
+.
+esim:DC_Network
+  a owl:Class ;
+  rdfs:label "DC Network" ;
+  rdfs:subClassOf esim:CableNetwork ;
+.
+esim:Data
+  a owl:Class ;
+  rdfs:label "Data" ;
+  rdfs:subClassOf esim:ControlSoftware ;
+.
+esim:DecisionValue
+  a owl:Class ;
+  rdfs:label "Decision value" ;
+  rdfs:subClassOf esim:KeyPoint ;
+.
+esim:DegradationModel
+  a owl:Class ;
+  rdfs:label "Degradation model" ;
+  rdfs:subClassOf esim:BehaviouralModel ;
+.
+esim:DetailedBehaviourModelEnergySource
+  a owl:Class ;
+  rdfs:label "Behaviour model energy source" ;
+  rdfs:subClassOf esim:BehaviouralModelWithDetailedCharacteristic ;
+.
+esim:DetailedBehaviouralModelEnergyConsumptionUsage
+  a owl:Class ;
+  rdfs:label "Behavioural model energy consumption usage" ;
+  rdfs:subClassOf esim:BehaviouralModelWithDetailedCharacteristic ;
+.
+esim:DetailedBehaviouralModelEnergyDistributionSystem
+  a owl:Class ;
+  rdfs:label "Behavioural model energy distribution system" ;
+  rdfs:subClassOf esim:BehaviouralModelWithDetailedCharacteristic ;
+.
+esim:DetailedBehaviouralModelEnergyStorage
+  a owl:Class ;
+  rdfs:label "Behavioural model energy storage" ;
+  rdfs:subClassOf esim:BehaviouralModelWithDetailedCharacteristic ;
+.
+esim:DetailedBehaviouralModelEnergyTransformationFacility
+  a owl:Class ;
+  rdfs:label "Behavioural model energy transformation facility" ;
+  rdfs:subClassOf esim:BehaviouralModelWithDetailedCharacteristic ;
+.
+esim:Dimension
+  a owl:Class ;
+  rdfs:label "Dimension" ;
+  rdfs:subClassOf esim:PhysicalParameter ;
+.
+esim:District
+  a owl:Class ;
+  rdfs:label "District" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:DistrictCooling
+  a owl:Class ;
+  rdfs:label "District cooling" ;
+  rdfs:subClassOf esim:Cooling ;
+.
+esim:DistrictEnergySystem
+  a owl:Class ;
+  rdfs:label "District energy system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:DistrictHeating
+  a owl:Class ;
+  rdfs:label "District heating" ;
+  rdfs:subClassOf esim:Heating ;
+.
+esim:DomesticColdWater
+  a owl:Class ;
+  rdfs:label "Domestic cold water" ;
+  rdfs:subClassOf esim:DomesticWater ;
+.
+esim:DomesticColdWaterCircuit
+  a owl:Class ;
+  rdfs:label "Domestic cold water circuit" ;
+  rdfs:subClassOf esim:DomesticWaterCircuit ;
+.
+esim:DomesticHotWater
+  a owl:Class ;
+  rdfs:label "Domestic hot water" ;
+  rdfs:subClassOf esim:DomesticWater ;
+.
+esim:DomesticHotWaterCircuit
+  a owl:Class ;
+  rdfs:label "Domestic hot water circuit" ;
+  rdfs:subClassOf esim:DomesticWaterCircuit ;
+.
+esim:DomesticHotWaterTank
+  a owl:Class ;
+  rdfs:label "Domestic hot water tank" ;
+  rdfs:subClassOf esim:HotWaterTank ;
+.
+esim:DomesticWater
+  a owl:Class ;
+  rdfs:label "Domestic water" ;
+  rdfs:subClassOf esim:EnergyService ;
+.
+esim:DomesticWaterCircuit
+  a owl:Class ;
+  rdfs:label "Domestic water circuit" ;
+  rdfs:subClassOf esim:EnergyDistributionCircuit ;
+.
+esim:Door
+  a owl:Class ;
+  rdfs:label "Door" ;
+  rdfs:subClassOf esim:Element ;
+.
+esim:Duct
+  a owl:Class ;
+  rdfs:label "Duct" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:DuctFitting
+  a owl:Class ;
+  rdfs:label "Duct fitting" ;
+  rdfs:subClassOf esim:Duct ;
+.
+esim:DuctNetwork
+  a owl:Class ;
+  rdfs:label "Duct network" ;
+  rdfs:subClassOf esim:Duct ;
+.
+esim:DuctSegment
+  a owl:Class ;
+  rdfs:label "Duct segment" ;
+  rdfs:subClassOf esim:Duct ;
+.
+esim:DynamicTariff
+  a owl:Class ;
+  rdfs:label "Dynamic tariff" ;
+  rdfs:subClassOf esim:EnergyTarif ;
+.
+esim:EcologicalEnergyCost
+  a owl:Class ;
+  rdfs:label "Ecological energy cost" ;
+  rdfs:subClassOf esim:EnergyCost ;
+.
+esim:EducationFacility
+  a owl:Class ;
+  esim:omniclass "11-12 00 00" ;
+  rdfs:label "Education Facility" ;
+  rdfs:subClassOf esim:Building ;
+.
+esim:ElectricGenerator
+  a owl:Class ;
+  rdfs:label "Electric generator" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:ElectricHeater
+  a owl:Class ;
+  rdfs:label "Electrical heater" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:ElectricMotor
+  a owl:Class ;
+  rdfs:label "Electric motor" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:ElectricalAndHeatSupply
+  a owl:Class ;
+  rdfs:label "District electrical and heat supply system" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:ElectricalAppliances
+  a owl:Class ;
+  rdfs:label "Electrical appliances" ;
+  rdfs:subClassOf esim:EnergyService ;
+.
+esim:ElectricalEnergy
+  a owl:Class ;
+  rdfs:label "ElectricalEnergy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:ElectricalEnergyDemand
+  a owl:Class ;
+  rdfs:label "Electrical energy demand" ;
+  rdfs:subClassOf esim:EnergyDemand ;
+.
+esim:ElectricalEnergySupply
+  a owl:Class ;
+  rdfs:label "District electrical energy supply system" ;
+  rdfs:label "Electric energy supply" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:ElectricalSystem
+  a owl:Class ;
+  rdfs:label "Electrical system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:Electricity
+  a owl:Class ;
+  rdfs:label "Electricity" ;
+  rdfs:subClassOf esim:EnergySource ;
+.
+esim:ElectricityUse
+  a owl:Class ;
+  rdfs:label "Electricity use" ;
+  rdfs:subClassOf esim:EnergyUse ;
+.
+esim:Element
+  a owl:Class ;
+  rdfs:label "Element" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:Emission
+  a owl:Class ;
+  rdfs:label "Emission" ;
+  rdfs:subClassOf esim:EcologicalEnergyCost ;
+.
+esim:EnergyCapacity
+  a owl:Class ;
+  rdfs:label "Energy capacity" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:EnergyCollector
+  a owl:Class ;
+  rdfs:label "Energy collector" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:EnergyConsumption
+  a owl:Class ;
+  rdfs:label "Energy consumption" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:EnergyCost
+  a owl:Class ;
+  rdfs:label "Energy cost" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:EnergyCostTariff
+  a owl:Class ;
+  rdfs:comment "Tariffs charged by energy providers for supplied energy" ;
+  rdfs:label "Energy cost tariff" ;
+  rdfs:subClassOf esim:EnergyTarif ;
+.
+esim:EnergyDemand
+  a owl:Class ;
+  rdfs:label "Energy demand" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:EnergyDemandForHeating
+  a owl:Class ;
+  rdfs:label "Energy demand for heating" ;
+  rdfs:subClassOf esim:KeyPerformanceIndicator ;
+.
+esim:EnergyDistribution
+  a owl:Class ;
+  rdfs:label "Energy distribution" ;
+  rdfs:subClassOf esim:EnergySystemComponent ;
+.
+esim:EnergyDistributionCOP
+  a owl:Class ;
+  rdfs:label "Energy distribution COP" ;
+  rdfs:subClassOf esim:CoefficientOfPerformance ;
+.
+esim:EnergyDistributionCircuit
+  a owl:Class ;
+  rdfs:label "Energy distribution circuit" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:EnergyForm
+  a owl:Class ;
+  rdfs:label "Energy form" ;
+.
+esim:EnergyGain
+  a owl:Class ;
+  rdfs:label "Energy gain" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:EnergyManagementSystem
+  a owl:Class ;
+  rdfs:label "Energy management system" ;
+  rdfs:subClassOf esim:ControlSystem ;
+.
+esim:EnergyMix
+  a owl:Class ;
+  rdfs:comment "The energy mix is the group of different primary energy sources from which secondary energy for direct use - usually electricity - is produced." ;
+  rdfs:label "Energy mix" ;
+  rdfs:subClassOf esim:EnergySource ;
+.
+esim:EnergyParameter
+  a owl:Class ;
+  rdfs:label "Energy parameter" ;
+  rdfs:subClassOf esim:Parameter ;
+.
+esim:EnergyRecoveryTariff
+  a owl:Class ;
+  rdfs:comment "Energy tariff refunded by providers for recovered energy through e.g. solar collectors" ;
+  rdfs:label "EnergyRecoveryTariff" ;
+  rdfs:subClassOf esim:EnergyTarif ;
+.
+esim:EnergyRelatedData
+  a owl:Class ;
+  rdfs:label "Energy related data" ;
+.
+esim:EnergyService
+  a owl:Class ;
+  rdfs:label "Energy service" ;
+.
+esim:EnergySource
+  a owl:Class ;
+  rdfs:label "Energy source" ;
+  rdfs:subClassOf esim:EnergySystemComponent ;
+.
+esim:EnergySourceCOP
+  a owl:Class ;
+  rdfs:label "Energy source COP" ;
+  rdfs:subClassOf esim:CoefficientOfPerformance ;
+.
+esim:EnergyStorage
+  a owl:Class ;
+  rdfs:comment "Energy storage is the capture of energy produced at one time for use at a later time." ;
+  rdfs:label "Energy storage" ;
+  rdfs:subClassOf esim:EnergySystemComponent ;
+.
+esim:EnergyStorageCOP
+  a owl:Class ;
+  rdfs:label "Energy storage COP" ;
+  rdfs:subClassOf esim:CoefficientOfPerformance ;
+.
+esim:EnergySupply
+  a owl:Class ;
+  rdfs:label "Energy supply" ;
+  rdfs:subClassOf esim:EnergySystemComponent ;
+.
+esim:EnergySupplyValue
+  a owl:Class ;
+  rdfs:label "Energy supply values" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:EnergySystem
+  a owl:Class ;
+  rdfs:label "Energy system" ;
+.
+esim:EnergySystemComponent
+  a owl:Class ;
+  rdfs:label "Energy system component" ;
+.
+esim:EnergyTarif
+  a owl:Class ;
+  rdfs:label "Energy tarif" ;
+.
+esim:EnergyTransformation
+  a owl:Class ;
+  rdfs:label "Energy transformation" ;
+  rdfs:subClassOf esim:EnergySystemComponent ;
+.
+esim:EnergyTransformationCOP
+  a owl:Class ;
+  rdfs:label "Energy transformation COP" ;
+  rdfs:subClassOf esim:CoefficientOfPerformance ;
+.
+esim:EnergyUse
+  a owl:Class ;
+  rdfs:label "Energy use" ;
+  rdfs:subClassOf esim:EnergySystemComponent ;
+.
+esim:Engine
+  a owl:Class ;
+  rdfs:label "Engine" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:Evaporator
+  a owl:Class ;
+  rdfs:label "Evaporator" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:ExhaustAirHeatPump
+  a owl:Class ;
+  rdfs:comment "An Exhaust Air Heat Pump (EAHP) extracts heat from the exhaust air of a building and transfers the heat to the supply air, hot tap water and/or hydronic heating system (underfloor heating, radiators)." ;
+  rdfs:label "Ehaust air heat pump" ;
+  rdfs:subClassOf esim:HeatPump ;
+.
+esim:ExpansionVessel
+  a owl:Class ;
+  rdfs:label "Expansion vessel" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:Fan
+  a owl:Class ;
+  rdfs:label "Fan" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:Fancoil
+  a owl:Class ;
+  rdfs:label "Fancoil" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:FinalEnergy
+  a owl:Class ;
+  rdfs:label "Final energy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:Floor
+  a owl:Class ;
+  rdfs:label "Floor" ;
+  rdfs:subClassOf esim:Element ;
+.
+esim:FloorHeating
+  a owl:Class ;
+  rdfs:label "FloorHeating" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:FossilFuel
+  a owl:Class ;
+  rdfs:label "Fossil fuel" ;
+  rdfs:subClassOf esim:NonRenewable ;
+.
+esim:Function
+  a owl:Class ;
+  rdfs:label "Function" ;
+  rdfs:subClassOf esim:ControlSoftware ;
+.
+esim:FunctionalInterfaceDescription
+  a owl:Class ;
+  rdfs:label "Functional interface description" ;
+  rdfs:subClassOf esim:InterfaceDescription ;
+.
+esim:FunctionalPort
+  a owl:Class ;
+  rdfs:label "Functional port" ;
+  rdfs:subClassOf esim:Port ;
+.
+esim:Gas
+  a owl:Class ;
+  rdfs:label "Gas" ;
+  rdfs:subClassOf esim:Medium ;
+.
+esim:GasNetwork
+  a owl:Class ;
+  rdfs:label "Gas network" ;
+  rdfs:subClassOf esim:PipeNetwork ;
+.
+esim:GasTank
+  a owl:Class ;
+  rdfs:label "Gas tank" ;
+  rdfs:subClassOf esim:Tank ;
+.
+esim:Geothermal
+  a owl:Class ;
+  rdfs:label "Geothermal" ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:GridElectricalEnergySupply
+  a owl:Class ;
+  rdfs:label "Grid electrical energy supply system" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:GroundCollector
+  a owl:Class ;
+  rdfs:label "Ground collector" ;
+  rdfs:subClassOf esim:EnergyCollector ;
+.
+esim:GroundSourceHeatPump
+  a owl:Class ;
+  rdfs:comment "A geothermal heat pump or ground source heat pump (GSHP) is a central heating and/or cooling system that transfers heat to or from the ground." ;
+  rdfs:label "Ground source heat pump" ;
+  rdfs:subClassOf esim:HeatPump ;
+.
+esim:GroundWater
+  a owl:Class ;
+  rdfs:label "Ground water" ;
+  rdfs:subClassOf esim:Water ;
+.
+esim:HazardRate
+  a owl:Class ;
+  rdfs:comment "Hazard or failure rate λ (in h^-1 or y^-1)" ;
+  rdfs:label "Hazard rate" ;
+  rdfs:subClassOf esim:ComponentProperty ;
+  rdfs:subClassOf esim:SystemProperty ;
+.
+esim:HealthCareFacility
+  a owl:Class ;
+  esim:omniclass "11-21 00 00" ;
+  rdfs:label "Health Care Facility" ;
+  rdfs:subClassOf esim:Building ;
+.
+esim:HeatEnergyDemand
+  a owl:Class ;
+  rdfs:label "Heat energy demand" ;
+  rdfs:subClassOf esim:EnergyDemand ;
+.
+esim:HeatEnergySupply
+  a owl:Class ;
+  rdfs:label "Heat energy supply" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:HeatExchanger
+  a owl:Class ;
+  rdfs:label "Heat exchanger" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:HeatNetwork
+  a owl:Class ;
+  rdfs:label "Heat network" ;
+  rdfs:subClassOf esim:PipeNetwork ;
+.
+esim:HeatPump
+  a owl:Class ;
+  rdfs:label "Heat pump" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:HeatRecovery
+  a owl:Class ;
+  rdfs:label "Heat recovery" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:Heating
+  a owl:Class ;
+  rdfs:label "Heating" ;
+  rdfs:subClassOf esim:EnergyService ;
+.
+esim:HeatingCircuit
+  a owl:Class ;
+  rdfs:label "Heating circuit" ;
+  rdfs:subClassOf esim:EnergyDistributionCircuit ;
+.
+esim:HeatingEnergy
+  a owl:Class ;
+  rdfs:label "HeatingEnergy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:HeatingLoad
+  a owl:Class ;
+  rdfs:label "Heating load" ;
+  rdfs:subClassOf esim:KeyPerformanceIndicator ;
+.
+esim:HeatingSystem
+  a owl:Class ;
+  rdfs:label "Heating system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:HeatingZone
+  a owl:Class ;
+  rdfs:comment "A space or group of spaces with heating requirements maintained by a heating system" ;
+  rdfs:label "Heating zone" ;
+  rdfs:subClassOf esim:ConditionedZone ;
+.
+esim:HighLowTariff
+  a owl:Class ;
+  rdfs:label "High low tariff" ;
+  rdfs:subClassOf esim:EnergyTarif ;
+.
+esim:HotWaterSupply
+  a owl:Class ;
+  rdfs:label "Hot water supply" ;
+  rdfs:subClassOf esim:WaterSupply ;
+.
+esim:HotWaterTank
+  a owl:Class ;
+  rdfs:label "Hot water tank" ;
+  rdfs:subClassOf esim:WaterTank ;
+.
+esim:Humidifier
+  a owl:Class ;
+  rdfs:label "Humidifier" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:HybridHeatPump
+  a owl:Class ;
+  rdfs:label "Hybrid heat pump" ;
+  rdfs:subClassOf esim:HeatPump ;
+.
+esim:Hydro
+  a owl:Class ;
+  rdfs:comment "Flowing water creates energy that can be captured and turned into electricity. This is called hydroelectric power or hydropower. The most common type of hydroelectric power plant uses a dam on a river to store water in a reservoir." ;
+  rdfs:label "Hydro" ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:INPUT
+  a esim:PortType ;
+  a owl:NamedIndividual ;
+  rdfs:label "INPUT" ;
+.
+esim:Identifier
+  a owl:Class ;
+  rdfs:comment "EAS Identifier Concept" ;
+  rdfs:label "Identifier" ;
+.
+esim:InformationNetwork
+  a owl:Class ;
+  rdfs:label "Information network" ;
+  rdfs:subClassOf esim:CableNetwork ;
+.
+esim:InterfaceDescription
+  a owl:Class ;
+  rdfs:label "Interface description" ;
+.
+esim:InvestmentCost
+  a owl:Class ;
+  rdfs:label "Investment cost" ;
+  rdfs:subClassOf esim:CostInformation ;
+.
+esim:KeyDesignParameter
+  a owl:Class ;
+  rdfs:label "Key design parameter" ;
+  rdfs:subClassOf esim:KeyPoint ;
+.
+esim:KeyPerformanceIndicator
+  a owl:Class ;
+  rdfs:label "Key performance indicator" ;
+  rdfs:subClassOf esim:KeyPoint ;
+.
+esim:KeyPoint
+  a owl:Class ;
+  rdfs:label "Key point" ;
+  rdfs:subClassOf owl:Thing ;
+.
+esim:KeyRiskIndicator
+  a owl:Class ;
+  rdfs:label "Key risk indicator" ;
+  rdfs:subClassOf esim:KeyPoint ;
+.
+esim:Kitchen
+  a owl:Class ;
+  esim:omniclass "13-65 23 00" ;
+  rdfs:label "Kitchen" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:LakeCollector
+  a owl:Class ;
+  rdfs:label "Lake collector" ;
+  rdfs:subClassOf esim:EnergyCollector ;
+.
+esim:Lighting
+  a owl:Class ;
+  rdfs:label "Lighting" ;
+  rdfs:subClassOf esim:EnergyService ;
+.
+esim:LightingEnergy
+  a owl:Class ;
+  rdfs:label "LightingEnergy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:LightingSystem
+  a owl:Class ;
+  rdfs:label "Lighting system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:Liquid
+  a owl:Class ;
+  rdfs:label "Liquid" ;
+  rdfs:subClassOf esim:Medium ;
+.
+esim:LithiumBromide
+  a owl:Class ;
+  rdfs:label "Lithium bromide" ;
+  rdfs:subClassOf esim:Solid ;
+.
+esim:LivingRoom
+  a owl:Class ;
+  rdfs:label "Living room" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:LoadVariable
+  a owl:Class ;
+  rdfs:label "Load variable" ;
+  rdfs:subClassOf esim:DynamicTariff ;
+.
+esim:LocalControlSystem
+  a owl:Class ;
+  rdfs:label "Local control system" ;
+  rdfs:subClassOf esim:ControlSystem ;
+.
+esim:LongTermControlStrategy
+  a owl:Class ;
+  rdfs:label "Long term control strategy" ;
+  rdfs:subClassOf esim:ControlStrategy ;
+.
+esim:Luminaire
+  a owl:Class ;
+  rdfs:label "Luminaire" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:MTBF
+  a owl:Class ;
+  rdfs:comment "Mean time between failures" ;
+  rdfs:label "MTBF" ;
+  rdfs:subClassOf esim:ComponentProperty ;
+  rdfs:subClassOf esim:SystemProperty ;
+.
+esim:MTTF
+  a owl:Class ;
+  rdfs:comment "Mean time to failures" ;
+  rdfs:label "MTTF" ;
+  rdfs:subClassOf esim:ComponentProperty ;
+.
+esim:MTTFF
+  a owl:Class ;
+  rdfs:comment "Mean time to first failure" ;
+  rdfs:label "MTTFF" ;
+  rdfs:subClassOf esim:SystemProperty ;
+.
+esim:MTTR
+  a owl:Class ;
+  rdfs:comment "Mean time to repair" ;
+  rdfs:label "MTTR" ;
+  rdfs:subClassOf esim:ComponentProperty ;
+.
+esim:MaintenanceCost
+  a owl:Class ;
+  rdfs:label "Maintenance cost" ;
+  rdfs:subClassOf esim:CostInformation ;
+.
+esim:ManagementFunction
+  a owl:Class ;
+  rdfs:label "Management function" ;
+  rdfs:subClassOf esim:ControlFunction ;
+.
+esim:Material
+  a owl:Class ;
+  rdfs:label "Material" ;
+  rdfs:subClassOf esim:PhysicalParameter ;
+.
+esim:MeasuredEnergyData
+  a owl:Class ;
+  rdfs:label "Measured energy data" ;
+  rdfs:subClassOf esim:EnergyRelatedData ;
+.
+esim:MechanicalVentilation
+  a owl:Class ;
+  rdfs:label "Mechanical ventilation" ;
+  rdfs:subClassOf esim:Ventilation ;
+.
+esim:Medium
+  a owl:Class ;
+  rdfs:comment "A medium is a substance or material which is used for a particular purpose or in order to produce a particular effect." ;
+  rdfs:label "Medium" ;
+  rdfs:subClassOf owl:Thing ;
+.
+esim:MeetingRoom
+  a owl:Class ;
+  rdfs:label "Meeting Room" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:Model
+  a owl:Class ;
+  rdfs:label "Model" ;
+  rdfs:subClassOf esim:ControlSoftware ;
+.
+esim:MonetaryEnergyCost
+  a owl:Class ;
+  rdfs:label "Monetary energy cost" ;
+  rdfs:subClassOf esim:EnergyCost ;
+.
+esim:MonitoringSystem
+  a owl:Class ;
+  rdfs:label "Monitoring system" ;
+  rdfs:subClassOf esim:ControlSystem ;
+.
+esim:MultipleFamilyResidence
+  a owl:Class ;
+  esim:omniclass "11-16 21 00" ;
+  rdfs:label "Multiple Family Residence" ;
+  rdfs:subClassOf esim:Building ;
+.
+esim:NaturalGas
+  a owl:Class ;
+  rdfs:label "Natural gas" ;
+  rdfs:subClassOf esim:FossilFuel ;
+  rdfs:subClassOf esim:Gas ;
+.
+esim:NaturalGasSupply
+  a owl:Class ;
+  rdfs:label "Natural gas supply system" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:NaturalVentilation
+  a owl:Class ;
+  rdfs:label "Natural ventilation" ;
+  rdfs:subClassOf esim:Ventilation ;
+.
+esim:NonRenewable
+  a owl:Class ;
+  rdfs:label "Non renewable" ;
+  rdfs:subClassOf esim:EnergySource ;
+.
+esim:NonSpaceCoolingUse
+  a owl:Class ;
+  rdfs:label "None space cooling use" ;
+  rdfs:subClassOf esim:EnergyUse ;
+.
+esim:NonSpaceHeatingUse
+  a owl:Class ;
+  rdfs:label "None space heating use" ;
+  rdfs:subClassOf esim:EnergyUse ;
+.
+esim:Nuclear
+  a owl:Class ;
+  rdfs:label "Nuclear" ;
+  rdfs:subClassOf esim:NonRenewable ;
+.
+esim:OUTPUT
+  a esim:PortType ;
+  a owl:NamedIndividual ;
+  rdfs:label "OUTPUT" ;
+.
+esim:OccupancyParameter
+  a owl:Class ;
+  rdfs:label "Occupancy parameter" ;
+  rdfs:subClassOf esim:Parameter ;
+.
+esim:OfficeBuilding
+  a owl:Class ;
+  esim:omniclass "11-27 38 00" ;
+  rdfs:label "Office Building" ;
+  rdfs:subClassOf esim:Building ;
+.
+esim:OfficeRoom
+  a owl:Class ;
+  rdfs:label "Office room" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:Oil
+  a owl:Class ;
+  rdfs:label "Oil" ;
+  rdfs:subClassOf esim:FossilFuel ;
+  rdfs:subClassOf esim:Liquid ;
+.
+esim:OnSiteRenewablesThermalEnergy
+  a owl:Class ;
+  rdfs:label "On site renewables thermal energy" ;
+  rdfs:subClassOf esim:KeyDesignParameter ;
+.
+esim:OperationalControlStrategy
+  a owl:Class ;
+  rdfs:label "Operational control strategy" ;
+  rdfs:subClassOf esim:ControlStrategy ;
+.
+esim:OperationalCost
+  a owl:Class ;
+  rdfs:label "Operational cost" ;
+  rdfs:subClassOf esim:CostInformation ;
+.
+esim:Operator
+  a owl:Class ;
+  rdfs:label "Operator" ;
+  rdfs:subClassOf esim:AdministrationalInformation ;
+.
+esim:Owner
+  a owl:Class ;
+  rdfs:label "Owner" ;
+  rdfs:subClassOf esim:AdministrationalInformation ;
+.
+esim:PARAMETER
+  a esim:PortType ;
+  a owl:NamedIndividual ;
+  rdfs:label "PARAMETER" ;
+.
+esim:Parameter
+  a owl:Class ;
+  rdfs:label "Parameter" ;
+.
+esim:PeakLoad
+  a owl:Class ;
+  rdfs:label "Peak load" ;
+  rdfs:subClassOf esim:EnergyParameter ;
+.
+esim:PerformanceParameter
+  a owl:Class ;
+  rdfs:label "Performance parameter" ;
+  rdfs:subClassOf esim:Parameter ;
+.
+esim:PhaseChangeMaterial
+  a owl:Class ;
+  rdfs:label "Phase change material" ;
+  rdfs:subClassOf esim:EnergyStorage ;
+.
+esim:PhotovoltaicCollector
+  a owl:Class ;
+  esim:omniclass "22-26 31 00" ;
+  rdfs:isDefinedBy <http://bsdd.buildingsmart.org/api/4.0/IfdConcept/2v_K_APKWHuO00025QrE$V> ;
+  rdfs:label "Photovoltaic" ;
+  rdfs:subClassOf esim:EnergyCollector ;
+.
+esim:PhysicalInterfaceDescription
+  a owl:Class ;
+  rdfs:label "Physical interface description" ;
+  rdfs:subClassOf esim:InterfaceDescription ;
+.
+esim:PhysicalParameter
+  a owl:Class ;
+  rdfs:label "Physical parameter" ;
+  rdfs:subClassOf esim:Parameter ;
+.
+esim:PhysicalPort
+  a owl:Class ;
+  rdfs:label "Physical port" ;
+  rdfs:subClassOf esim:Port ;
+.
+esim:Pipe
+  a owl:Class ;
+  rdfs:label "Pipe" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:PipeFitting
+  a owl:Class ;
+  rdfs:label "Pipe fitting" ;
+  rdfs:subClassOf esim:Pipe ;
+.
+esim:PipeNetwork
+  a owl:Class ;
+  rdfs:label "Pipe network" ;
+  rdfs:subClassOf esim:Pipe ;
+.
+esim:PipeSegment
+  a owl:Class ;
+  rdfs:label "Pipe segment" ;
+  rdfs:subClassOf esim:Pipe ;
+.
+esim:PlumbingSystem
+  a owl:Class ;
+  rdfs:label "Plumbing system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:Port
+  a owl:Class ;
+  rdfs:label "Port" ;
+.
+esim:PortType
+  a owl:Class ;
+  rdfs:label "Port type" ;
+.
+esim:PredictedEnergyData
+  a owl:Class ;
+  rdfs:label "Predicted energy data" ;
+  rdfs:subClassOf esim:EnergyRelatedData ;
+.
+esim:PredictionModel
+  a owl:Class ;
+  rdfs:label "Prediction model" ;
+  rdfs:subClassOf esim:BehaviouralModel ;
+.
+esim:PrimaryCircuit
+  a owl:Class ;
+  rdfs:label "Primary circuit" ;
+  rdfs:subClassOf esim:EnergyDistributionCircuit ;
+.
+esim:PrimaryEnergy
+  a owl:Class ;
+  rdfs:label "Primary energy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:Pump
+  a owl:Class ;
+  rdfs:label "Pump" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:RA_Function
+  a owl:Class ;
+  rdfs:label "RA Function" ;
+  rdfs:subClassOf esim:ControlFunction ;
+.
+esim:Radiator
+  a owl:Class ;
+  rdfs:label "Radiator" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:Regulation
+  a owl:Class ;
+  rdfs:label "Regulation" ;
+  rdfs:subClassOf esim:AdministrationalInformation ;
+.
+esim:ReliabilityParameter
+  a owl:Class ;
+  rdfs:label "Reliability parameter" ;
+  rdfs:subClassOf esim:Parameter ;
+.
+esim:Renewable
+  a owl:Class ;
+  rdfs:label "Renewable" ;
+  rdfs:subClassOf esim:EnergySource ;
+.
+esim:ReplacementCost
+  a owl:Class ;
+  rdfs:label "Replacement cost" ;
+  rdfs:subClassOf esim:CostInformation ;
+.
+esim:RestRoom
+  a owl:Class ;
+  rdfs:label "Rest room" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:Room
+  a owl:Class ;
+  rdfs:label "Room" ;
+  rdfs:subClassOf esim:Space ;
+.
+esim:RoomControlSystem
+  a owl:Class ;
+  rdfs:label "Room control system" ;
+  rdfs:subClassOf esim:ControlSystem ;
+.
+esim:SecondaryCircuit
+  a owl:Class ;
+  rdfs:label "Secondary circuit" ;
+  rdfs:subClassOf esim:EnergyDistributionCircuit ;
+.
+esim:SecundaryEnergy
+  a owl:Class ;
+  rdfs:label "Secundary energy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:Sensor
+  a owl:Class ;
+  rdfs:label "Sensor" ;
+  rdfs:subClassOf esim:ControlComponent ;
+.
+esim:ServerRoom
+  a owl:Class ;
+  rdfs:label "Server room" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:ShadingSystem
+  a owl:Class ;
+  rdfs:label "Shading system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:ShortTermControlStrategy
+  a owl:Class ;
+  rdfs:label "Short term control strategy" ;
+  rdfs:subClassOf esim:ControlStrategy ;
+.
+esim:SimulatedEnergyData
+  a owl:Class ;
+  rdfs:label "Simulated energy data" ;
+  rdfs:subClassOf esim:EnergyRelatedData ;
+.
+esim:SingleFamilyResidence
+  a owl:Class ;
+  esim:omniclass "11-16 11 00" ;
+  rdfs:label "Single Family Residence" ;
+  rdfs:subClassOf esim:Building ;
+.
+esim:Site
+  a owl:Class ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:SolarAssistedHeatPump
+  a owl:Class ;
+  rdfs:comment "A solar-assisted heat pump (SAHP) is a machine that represents the integration of a heat pump and thermal solar panels in a single integrated system." ;
+  rdfs:label "Solar assisted heat pump" ;
+  rdfs:subClassOf esim:HeatPump ;
+.
+esim:SolarRadiation
+  a owl:Class ;
+  rdfs:label "Solar radiation" ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:SolarThermalCollector
+  a owl:Class ;
+  rdfs:label "Solar collector" ;
+  rdfs:subClassOf esim:EnergyCollector ;
+.
+esim:Solid
+  a owl:Class ;
+  rdfs:label "Solid" ;
+  rdfs:subClassOf esim:Medium ;
+.
+esim:Space
+  a owl:Class ;
+  rdfs:label "Space" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:SpaceCoolingUse
+  a owl:Class ;
+  rdfs:label "Space cooling use" ;
+  rdfs:subClassOf esim:EnergyUse ;
+.
+esim:SpaceHeatingUse
+  a owl:Class ;
+  rdfs:label "Space heating use" ;
+  rdfs:subClassOf esim:EnergyUse ;
+.
+esim:SpatialCooling
+  a owl:Class ;
+  rdfs:label "Space cooling" ;
+  rdfs:subClassOf esim:Cooling ;
+.
+esim:SpatialHeating
+  a owl:Class ;
+  rdfs:label "Space heating" ;
+  rdfs:subClassOf esim:Heating ;
+.
+esim:SpatialStructureElement
+  a owl:Class ;
+  rdfs:label "SpatialStructureElement" ;
+.
+esim:Standard
+  a owl:Class ;
+  rdfs:label "Standard" ;
+  rdfs:subClassOf esim:AdministrationalInformation ;
+.
+esim:Steam
+  a owl:Class ;
+  rdfs:label "Steam" ;
+  rdfs:subClassOf esim:Gas ;
+.
+esim:Storey
+  a owl:Class ;
+  rdfs:label "Storey" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:SurfaceWater
+  a owl:Class ;
+  rdfs:label "Surface water" ;
+  rdfs:subClassOf esim:Water ;
+.
+esim:SystemProperty
+  a owl:Class ;
+  rdfs:label "System property" ;
+  rdfs:subClassOf esim:ReliabilityParameter ;
+.
+esim:Tank
+  a owl:Class ;
+  rdfs:label "Tank" ;
+  rdfs:subClassOf esim:EnergyStorage ;
+.
+esim:ThermalHeatStorage
+  a owl:Class ;
+  esim:omniclass "21-04 30 20 30" ;
+  rdfs:isDefinedBy <http://bsdd.buildingsmart.org/api/4.0/IfdConcept/1_NeM0PKWHuO00025QrE$V> ;
+  rdfs:label "Thermal heat storage" ;
+  rdfs:subClassOf esim:EnergyStorage ;
+.
+esim:TimeVariable
+  a owl:Class ;
+  rdfs:label "Time variable" ;
+  rdfs:subClassOf esim:DynamicTariff ;
+.
+esim:Topology
+  a owl:Class ;
+  rdfs:label "Topology" ;
+  rdfs:subClassOf esim:PhysicalParameter ;
+.
+esim:Transformator
+  a owl:Class ;
+  rdfs:label "Transformator" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:UnconditionedZone
+  a owl:Class ;
+  rdfs:comment "A space or group of spaces within a building without heating, cooling, and ventilating requirements which can be maintain by a HVAC system" ;
+  rdfs:label "Unconditioned zone" ;
+  rdfs:subClassOf esim:Zone ;
+.
+esim:UsefulEnergy
+  a owl:Class ;
+  rdfs:label "Useful energy" ;
+  rdfs:subClassOf esim:EnergyForm ;
+.
+esim:UtilityEquipmentRoom
+  a owl:Class ;
+  rdfs:label "Utility equipment room" ;
+  rdfs:subClassOf esim:Room ;
+.
+esim:VARIABLE
+  a esim:PortType ;
+  a owl:NamedIndividual ;
+  rdfs:label "VARIABLE" ;
+.
+esim:Valve
+  a owl:Class ;
+  rdfs:label "Valve" ;
+  rdfs:subClassOf esim:EnergyDistribution ;
+.
+esim:Ventilation
+  a owl:Class ;
+  rdfs:label "Ventilation" ;
+  rdfs:subClassOf esim:EnergyService ;
+.
+esim:VentilationCircuit
+  a owl:Class ;
+  rdfs:label "Ventilation circuit" ;
+  rdfs:subClassOf esim:EnergyDistributionCircuit ;
+.
+esim:VentilationSystem
+  a owl:Class ;
+  rdfs:label "Ventilation system" ;
+  rdfs:subClassOf esim:EnergySystem ;
+.
+esim:VentilationZone
+  a owl:Class ;
+  rdfs:comment "A space or group of spaces with ventilation requirements maintained by a ventilation system" ;
+  rdfs:label "Ventilation zone" ;
+  rdfs:subClassOf esim:ConditionedZone ;
+.
+esim:VolumeTariff
+  a owl:Class ;
+  rdfs:label "Volume tariff" ;
+  rdfs:subClassOf esim:EnergyTarif ;
+.
+esim:Wall
+  a owl:Class ;
+  rdfs:label "Wall" ;
+  rdfs:subClassOf esim:Element ;
+.
+esim:WasteDisposal
+  a owl:Class ;
+  rdfs:label "Waste disposal" ;
+  rdfs:subClassOf esim:EcologicalEnergyCost ;
+.
+esim:WasteWaterNetwork
+  a owl:Class ;
+  rdfs:label "Waste water network" ;
+  rdfs:subClassOf esim:PipeNetwork ;
+.
+esim:WasteWaterTreatment
+  a owl:Class ;
+  rdfs:label "Waste water treatment" ;
+  rdfs:subClassOf esim:Water ;
+.
+esim:Water
+  a owl:Class ;
+  rdfs:label "Water" ;
+  rdfs:subClassOf esim:EnergySource ;
+  rdfs:subClassOf esim:Liquid ;
+.
+esim:WaterAirHeatPump
+  a owl:Class ;
+  rdfs:comment "A water source heat pump where the thermal energy is transferred from the water constituting one medium (often a heat transfer circuit) to the air constituting another medium" ;
+  rdfs:label "Water air heat pump" ;
+  rdfs:subClassOf esim:WaterSourceHeatPump ;
+.
+esim:WaterNetwork
+  a owl:Class ;
+  rdfs:label "Water network" ;
+  rdfs:subClassOf esim:PipeNetwork ;
+.
+esim:WaterSourceHeatPump
+  a owl:Class ;
+  rdfs:comment "Uses flowing water as source or sink for heat" ;
+  rdfs:label "Water source heat pump" ;
+  rdfs:subClassOf esim:HeatPump ;
+.
+esim:WaterSupply
+  a owl:Class ;
+  rdfs:label "Water supply" ;
+  rdfs:subClassOf esim:EnergySupply ;
+.
+esim:WaterTank
+  a owl:Class ;
+  rdfs:label "Water tank" ;
+  rdfs:subClassOf esim:Tank ;
+.
+esim:WaterUse
+  a owl:Class ;
+  rdfs:label "Water use" ;
+  rdfs:subClassOf esim:EnergyUse ;
+.
+esim:WaterWaterHeatPump
+  a owl:Class ;
+  rdfs:comment "A water source heat pump where the thermal energy is transferred from the water constituting one medium to the water constituting another medium" ;
+  rdfs:label "Water water heat pump" ;
+  rdfs:subClassOf esim:WaterSourceHeatPump ;
+.
+esim:Wind
+  a owl:Class ;
+  rdfs:label "Wind" ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:WindTurbine
+  a owl:Class ;
+  rdfs:comment "A wind turbine is a device that converts the wind's kinetic energy into electrical power." ;
+  rdfs:label "Wind turbine" ;
+  rdfs:subClassOf esim:EnergyTransformation ;
+.
+esim:Window
+  a owl:Class ;
+  rdfs:label "Window" ;
+  rdfs:subClassOf esim:Element ;
+.
+esim:Wood
+  a owl:Class ;
+  rdfs:label "Wood" ;
+  rdfs:subClassOf esim:Renewable ;
+.
+esim:Zone
+  a owl:Class ;
+  rdfs:label "Zone" ;
+  rdfs:subClassOf esim:SpatialStructureElement ;
+.
+esim:composes
+  a owl:ObjectProperty ;
+  rdfs:label "composes" ;
+  owl:inverseOf esim:isComposedOf ;
+.
+esim:consumes
+  a owl:ObjectProperty ;
+  rdfs:label "consumes" ;
+.
+esim:hasAdministrationalInformation
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:domain esim:EnergyUse ;
+  rdfs:label "has administrational information" ;
+  rdfs:range esim:AdministrationalInformation ;
+.
+esim:hasAutomationAndControlFacility
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:label "has automation and control facility" ;
+  rdfs:range esim:ControlFacility ;
+.
+esim:hasAutomationAndControlFunction
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:label "has automation and control function" ;
+  rdfs:range esim:ControlFunction ;
+.
+esim:hasAutomationAndControlSystemType
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:label "has automation and control system type" ;
+.
+esim:hasCOP
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has COP" ;
+  rdfs:range esim:CoefficientOfPerformance ;
+.
+esim:hasControlStrategy
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:label "has control strategy" ;
+  rdfs:range esim:ControlStrategy ;
+.
+esim:hasCoolingSystem
+  a owl:DatatypeProperty ;
+  rdfs:label "has cooling system" ;
+  rdfs:range xsd:boolean ;
+.
+esim:hasCostInformation
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:domain esim:EnergyUse ;
+  rdfs:label "has cost information" ;
+  rdfs:range esim:CostInformation ;
+.
+esim:hasCostValue
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:CostInformation ;
+  rdfs:label "has cost value" ;
+  rdfs:range xsd:float ;
+.
+esim:hasDetailedBehaviourModel
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:domain esim:EnergyUse ;
+  rdfs:label "has detailed behaviour model" ;
+  rdfs:range esim:BehaviouralModelWithDetailedCharacteristic ;
+.
+esim:hasDetailedBehaviourModelEnergyDistributionSystem
+  a owl:ObjectProperty ;
+  rdfs:label "has detailed behaviour model energy distribution system" ;
+  rdfs:range esim:DetailedBehaviouralModelEnergyDistributionSystem ;
+  rdfs:subPropertyOf esim:hasDetailedBehaviourModel ;
+.
+esim:hasDetailedBehaviourModelEnergySource
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:label "has detailed behaviour model energy source" ;
+  rdfs:range esim:DetailedBehaviourModelEnergySource ;
+  rdfs:subPropertyOf esim:hasDetailedBehaviourModel ;
+.
+esim:hasDetailedBehaviourModelEnergyTransformationFacility
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has detailed behaviour model energy transformation facility" ;
+  rdfs:range esim:DetailedBehaviouralModelEnergyTransformationFacility ;
+  rdfs:subPropertyOf esim:hasDetailedBehaviourModel ;
+.
+esim:hasEnergyConsumptionAndUsageType
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyUse ;
+  rdfs:label "has energy consumption and usage type" ;
+.
+esim:hasEnergyDistributionSystemType
+  a owl:ObjectProperty ;
+  rdfs:label "has energy distribution system type" ;
+.
+esim:hasEnergyRelatedDataType
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyRelatedData ;
+  rdfs:label "has energy related data Type" ;
+.
+esim:hasEnergySourceCOP
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:label "has energy source COP" ;
+  rdfs:range esim:EnergySourceCOP ;
+  rdfs:subPropertyOf esim:hasCOP ;
+.
+esim:hasEnergySourceType
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:label "has energy source type" ;
+  rdfs:range esim:EnergyService ;
+.
+esim:hasEnergyTransformationFacilityCOP
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has energy transformation facility COP" ;
+  rdfs:range esim:EnergyTransformationCOP ;
+  rdfs:subPropertyOf esim:hasCOP ;
+.
+esim:hasEnergyTransformationFacilityType
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has energy transformation facility type" ;
+.
+esim:hasFunctionalInterfaceDescription
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has functional interface description" ;
+  rdfs:range esim:FunctionalInterfaceDescription ;
+.
+esim:hasHeatRecoverySystem
+  a owl:DatatypeProperty ;
+  rdfs:label "has heat recovery system" ;
+  rdfs:range xsd:boolean ;
+.
+esim:hasHeatingSystem
+  a owl:DatatypeProperty ;
+  rdfs:label "has heating system" ;
+  rdfs:range xsd:boolean ;
+.
+esim:hasID
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "has ID" ;
+  rdfs:range xsd:string ;
+.
+esim:hasIdentifier
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyRelatedData ;
+  rdfs:label "has identifier" ;
+  rdfs:range esim:Identifier ;
+.
+esim:hasMaximumLoadValue
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:CoefficientOfPerformance ;
+  rdfs:label "has maximum load value" ;
+  rdfs:range xsd:float ;
+.
+esim:hasMinimumLoadValue
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:CoefficientOfPerformance ;
+  rdfs:label "has minimum load value" ;
+  rdfs:range xsd:float ;
+.
+esim:hasName
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "has name" ;
+  rdfs:range xsd:string ;
+.
+esim:hasPartialLoadValue
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:CoefficientOfPerformance ;
+  rdfs:label "has partial load value" ;
+  rdfs:range xsd:float ;
+.
+esim:hasPhysicalInterfaceDescription
+  a owl:ObjectProperty ;
+  rdfs:domain esim:ControlSystem ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has physical interface description" ;
+  rdfs:range esim:PhysicalInterfaceDescription ;
+.
+esim:hasPhysicalParameter
+  a owl:ObjectProperty ;
+  rdfs:label "has physical parameter" ;
+  rdfs:range esim:PhysicalParameter ;
+.
+esim:hasPort
+  a owl:ObjectProperty ;
+  rdfs:domain esim:InterfaceDescription ;
+  rdfs:label "has port" ;
+  rdfs:range esim:Port ;
+.
+esim:hasPortDescription
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:Port ;
+  rdfs:label "has port description" ;
+  rdfs:range xsd:string ;
+.
+esim:hasPortID
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:Port ;
+  rdfs:label "has port ID" ;
+  rdfs:range xsd:string ;
+.
+esim:hasPortType
+  a owl:ObjectProperty ;
+  rdfs:domain esim:Port ;
+  rdfs:label "has port type" ;
+  rdfs:range esim:PortType ;
+.
+esim:hasSimplifiedBahaviourModelEnergySource
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:label "has simplified bahaviour model energy source" ;
+  rdfs:range esim:BehaviouralModelEnergySource ;
+  rdfs:subPropertyOf esim:hasSimplifiedBehaviouralModel ;
+.
+esim:hasSimplifiedBehaviourModelEnergyDistributionSystem
+  a owl:ObjectProperty ;
+  rdfs:label "has simplified behaviour model energy distribution system" ;
+  rdfs:range esim:BehaviouralModelEnergyDistributionSystem ;
+  rdfs:subPropertyOf esim:hasSimplifiedBehaviouralModel ;
+.
+esim:hasSimplifiedBehaviourModelEnergyTransformationFacility
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:label "has simplified behaviour model energy transformation facility" ;
+  rdfs:range esim:BehaviouralModelEnergyTransformationFacility ;
+  rdfs:subPropertyOf esim:hasSimplifiedBehaviouralModel ;
+.
+esim:hasSimplifiedBehaviouralModel
+  a owl:ObjectProperty ;
+  rdfs:domain esim:EnergySource ;
+  rdfs:domain esim:EnergyStorage ;
+  rdfs:domain esim:EnergyTransformation ;
+  rdfs:domain esim:EnergyUse ;
+  rdfs:label "has behavioural model" ;
+  rdfs:range esim:BehaviouralModelWithSimplifiedCharacteristic ;
+.
+esim:hasSystem
+  a owl:ObjectProperty ;
+  rdfs:domain esim:Building ;
+  rdfs:domain esim:City ;
+  rdfs:domain esim:Site ;
+  rdfs:domain esim:Zone ;
+  rdfs:label "has system" ;
+  rdfs:range esim:EnergySystem ;
+.
+esim:hosts
+  a owl:ObjectProperty ;
+  rdfs:label "hosts" ;
+  owl:inverseOf esim:isHostedBy ;
+.
+esim:ifcGloballyUniqueId
+  a owl:DatatypeProperty ;
+  rdfs:label "ifc globally unique id" ;
+  rdfs:range xsd:string ;
+.
+esim:isComposedOf
+  a owl:ObjectProperty ;
+  rdfs:label "is composed of" ;
+.
+esim:isHostedBy
+  a owl:ObjectProperty ;
+  rdfs:label "is hosted by" ;
+.
+esim:isOrientedSouth
+  a owl:DatatypeProperty ;
+  rdfs:label "is oriented south" ;
+  rdfs:range xsd:boolean ;
+.
+esim:isSuppliedBy
+  a owl:ObjectProperty ;
+  rdfs:label "is supplied by" ;
+  owl:inverseOf esim:supplies ;
+.
+esim:isSuppliedWith
+  a owl:ObjectProperty ;
+  rdfs:label "is supplied with" ;
+.
+esim:omniclass
+  a owl:AnnotationProperty ;
+  rdfs:label "omniclass" ;
+  rdfs:range xsd:string ;
+.
+esim:produces
+  a owl:ObjectProperty ;
+  rdfs:label "produces" ;
+.
+esim:supplies
+  a owl:ObjectProperty ;
+  rdfs:label "supplies" ;
+.
+esim:suppliesWith
+  a owl:ObjectProperty ;
+  rdfs:label "supplies with" ;
+.
+spin:imports
+  a owl:AnnotationProperty ;
+.

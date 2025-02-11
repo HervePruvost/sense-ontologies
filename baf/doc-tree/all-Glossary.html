@@ -1,0 +1,947 @@
+<HTML>
+<HEAD>
+<TITLE>Glossary</TITLE>
+</HEAD>
+<BODY>
+<FONT face="Verdana, Helvetica, sans-serif">
+<P><B>Glossary</B></P>
+<TABLE>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_Fb2LevelBoilerPattern.html"> Boiler Module for 2-Level Boiler Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__bMaxSequenceNumber.html">.bMaxSequenceNumber</A>&nbsp;&nbsp;-&nbsp;&nbsp;Max. number of sequences used
+Value range = 2 – 4
+Default setting = 2  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__bSequenceNumber.html">.bSequenceNumber</A>&nbsp;&nbsp;-&nbsp;&nbsp;Sequence number (from cooling toward heating)
+Value range = 1 – 4  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rDeadZone.html">.rDeadZone</A>&nbsp;&nbsp;-&nbsp;&nbsp;Dead zone +/- [K]
+Default setting = 0  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rDefaultValue.html">.rDefaultValue</A>&nbsp;&nbsp;-&nbsp;&nbsp;Defined output value as long as the
+xAlarm output is set
+Default setting = 0  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rDeviation.html">.rDeviation</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum deviation between specified/actual values for the second set of controller parameters [%]
+Default setting = 0 (no switchover)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rDiffBoilerAndReturnTemperature.html">.rDiffBoilerAndReturnTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Max. temperature difference between boiler and return temperature for deactivation of the boiler circuit pump [K]. Default setting = 5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rHighLimitAlarm.html">.rHighLimitAlarm</A>&nbsp;&nbsp;-&nbsp;&nbsp;Upper limit for value of the output signal alarm
+Default setting = 32768  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rHysteresis.html">.rHysteresis</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rKp.html">.rKp</A>&nbsp;&nbsp;-&nbsp;&nbsp;Proportional gain (P portion)
+Default setting = 2.5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rKp1.html">.rKp1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Proportional gain (P portion) for the first set of controller parameters
+Default setting = 2.5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rKp2.html">.rKp2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Proportional gain (P portion) for the second set of controller parameters
+Default setting = 2.5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rKpMinReturnTemperature.html">.rKpMinReturnTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Proportional gain (P portion). Default setting = 12  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rLeadHysteresis.html">.rLeadHysteresis</A>&nbsp;&nbsp;-&nbsp;&nbsp;Hysteresis as the lead boiler for the individual limit values. Default setting = 5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rLeadOffsetReferenceTemperature.html">.rLeadOffsetReferenceTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Offset to the specified boiler temperature as lead boiler [K]. Default setting = 5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rLowLimitAlarm.html">.rLowLimitAlarm</A>&nbsp;&nbsp;-&nbsp;&nbsp;Lower limit for value of the output signal
+alarm
+Default setting = -32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMaxBoilerTemperature.html">.rMaxBoilerTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum boiler temperature at Level 1 [°C]. Default setting = 90  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMaxBoilerTemperatureLevel2.html">.rMaxBoilerTemperatureLevel2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum boiler temperature at Level 2 [°C]. Default setting = 85  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMaxReturnTemperature.html">.rMaxReturnTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum return temperature [°C]. Default setting = 75  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMinBoilerTemperature.html">.rMinBoilerTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum boiler temperature [°C]. Default setting = 50  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMinDeviationMovement.html">.rMinDeviationMovement</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum deviation for detection of motion [%]
+Default setting = 5  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMinOutsideTemperature.html">.rMinOutsideTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum outside temperature for freeze
+protection [°C]
+Default setting = 2 °C  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rMinReturnTemperature.html">.rMinReturnTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum return temperature [°C]. Default setting = 50  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rOffset.html">.rOffset</A>&nbsp;&nbsp;-&nbsp;&nbsp;Measured value compensation for the input
+Default setting = 0  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rOffsetMaxReferenceValue.html">.rOffsetMaxReferenceValue</A>&nbsp;&nbsp;-&nbsp;&nbsp;Offset for the maximum reference value for the slave controller as a function of the reference value [K]
+Default setting = 6 K  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rOffsetMinReference.html">.rOffsetMinReferenceValue</A>&nbsp;&nbsp;-&nbsp;&nbsp;Offset for the minimum reference value for the slave controller as a function of the reference value [K]
+Default setting = 4 K  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rOffsetReferenceTemperature.html">.rOffsetReferenceTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Offset to the specified boiler temperature [K]. Default setting = 3  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTd1.html">.rTd1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Derivative time (D portion) for the first set of controller parameters [s]
+Default setting = 0 s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTd2.html">.rTd2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Derivative time (D portion) for the second set of controller parameters [s]
+Default setting = 0 s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTn.html">.rTn</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reset time of the controller [s]
+Default setting = 300 s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTn1.html">.rTn1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reset time of the controller for the first set of controller parameters [s]
+Default setting = 300 s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTn2.html">.rTn2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reset time of the controller for the second set of controller parameters [s]
+Default setting = 300 s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTnMinReturnTemperature.html">.rTnMinReturnTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reset time of the controller [s]. Default setting = 0  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rTolerance.html">.rTolerance</A>&nbsp;&nbsp;-&nbsp;&nbsp;Max. deviation, specified/actual position [%]
+Default setting = 3  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rValveChimneySweep.html">.rValveChimneySweep</A>&nbsp;&nbsp;-&nbsp;&nbsp;Chimney sweep function valve position [%]
+Default setting = 25  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rX1.html">.rX1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Min. setting value for sequence [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rX2.html">.rX2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Max. setting value for sequence [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__rY_Min.html">.rY_Min</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum set value for valve or damper [%]
+Default setting = 3  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tAlarm.html">.tAlarm</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum time on limit violation until an alarm is issued.
+Default setting: t#10s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tCycleTime.html">.tCycleTime</A>&nbsp;&nbsp;-&nbsp;&nbsp;Cycle time for the PT1 circuit  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tDelaySwitchOver.html">.tDelaySwitchOver</A>&nbsp;&nbsp;-&nbsp;&nbsp;Delay time for switching between the two fan levels
+Default setting = t#5 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tLeadMinRuntimeLevel1.html">.tLeadMinRuntimeLevel1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum runtime for lead boiler at Level 1. Default setting = t#5 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tLeadSwitchOnDelayLevel2.html">.tLeadSwitchOnDelayLevel2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-on delay for lead boiler at Level 2. Default setting = t#15 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMaxChimneySweepFunction.html">.tMaxChimneySweepFunction</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum duration of chimney sweep function. Default setting = t#15 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMaxFlushPeriod.html">.tMaxFlushPeriod</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum time for the startup process. Default setting = t#15 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMaxOff.html">.tMaxOff</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum turn-off time of the pump when
+blocking protection is enabled
+Default setting = t#48h  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMaxRunTime.html">.tMaxRunTime</A>&nbsp;&nbsp;-&nbsp;&nbsp;Max. running time, which the actuator
+needs for the max. stroke
+Default setting: t#120s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMaxRuntimeValve.html">.tMaxRuntimeValve</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum runtime for 2-way valve. Default setting: t#30s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMaxStartupMinBoilerTemperature.html">.tMaxStartupMinBoilerTemperature</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum time until minimum boiler temperature is achieved during the startup process. Default setting = t#10 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tMinRuntimeLevel1.html">.tMinRuntimeLevel1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum runtime for lag boiler at Level 1. Default setting = t#3 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOffDelay.html">.tOffDelay</A>&nbsp;&nbsp;-&nbsp;&nbsp;Turn-off delay of the pump
+Default setting = t#15 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOffDelayAdmixingPump.html">.tOffDelayAdmixingPump</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-off delay for admixing pump. Default setting = t#1 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOffDelayFullLoad.html">.tOffDelayFullLoad</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-off delay for full-load operation. Default setting: t#30s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOffDelayPump.html">.tOffDelayPump</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-off delay for boiler circuit pump. Default setting = t#10 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOnDelayAlarm.html">.tOnDelayAlarm</A>&nbsp;&nbsp;-&nbsp;&nbsp;ON-delay for alarm
+Default setting = t#5 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOnDelayPump.html">.tOnDelayPump</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-on delay for boiler circuit pump with one 2-way valve. Default setting = t#2 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tOverride.html">.tOverride</A>&nbsp;&nbsp;-&nbsp;&nbsp;Run-on time after reaching end
+positions  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tPumpValveMaxOFF.html">.tPumpValveMaxOFF</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum turn-off time of the pump and valve up to activation of blocking protection. Default setting = t#24h  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tPumpValveON.html">.tPumpValveON</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maintenance run time for pump and valve. Default setting: t#30s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tSwitchOn.html">.tSwitchOn</A>&nbsp;&nbsp;-&nbsp;&nbsp;Turn-on time of the pump when blocking
+protection is enabled
+Default setting: t#60s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tSwitchOnDelayLevel2.html">.tSwitchOnDelayLevel2</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-on delay for lag boiler at Level 2. Default setting = t#20 m  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__tT1.html">.tT1</A>&nbsp;&nbsp;-&nbsp;&nbsp;Time constant for the PT1 circuit
+Default setting: t#2s  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xAdmixingPump.html">.xAdmixingPump</A>&nbsp;&nbsp;-&nbsp;&nbsp;Admixing pump present. Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xAutoQuit.html">.xAutoQuit</A>&nbsp;&nbsp;-&nbsp;&nbsp;Automatic acknowledgement of the alarm or fault messages  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xBlockingProtection.html">.xBlockingProtection</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable blocking protection. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xControlSpeedLevel.html">.xControlSpeedLevel</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable for determining the required fan level
+Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xFeedbackDamper.html">.xFeedbackDamper</A>&nbsp;&nbsp;-&nbsp;&nbsp;Check-back signal Damper position present
+Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xLimitSwitch.html">.xLimitSwitch</A>&nbsp;&nbsp;-&nbsp;&nbsp;Monitoring of the limit switches
+Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xPumpWinter.html">.xPumpWinter</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable freeze protection  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xSmallWaterVolume.html">.xSmallWaterVolume</A>&nbsp;&nbsp;-&nbsp;&nbsp;Low volume of water in boiler. Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xThreeWayValve.html">.xThreeWayValve</A>&nbsp;&nbsp;-&nbsp;&nbsp;3-way valve present in boiler circuit. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xTwoWayValve.html">.xTwoWayValve</A>&nbsp;&nbsp;-&nbsp;&nbsp;2-way valve (boiler valve) present. Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf__xTwoWayValvePermanentOpen.html">.xTwoWayValvePermanentOpen</A>&nbsp;&nbsp;-&nbsp;&nbsp;2-way valve closed in the event of a fault. Default setting = FALSE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFirstOrderLowPassFilter.html">1st order low pass filter</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFirstOrderLowPassFilterForAI0-32767.html">1st order low pass filter for AI 0-32767</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFirstOrderLowPassFilterForBusSignals.html">1st order low pass filter for bus signals</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFirstOrderLowPassFilterForTemperatures.html">1st order low pass filter for temperatures</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbLowPassFilterPattern.html">1st Order Low-Pass Filter Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbContinuousDamperPattern.html">Actuation of Continuous Dampers Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbActuationofContinuousDampers.html">Actuationof continuous dampers</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbActuationof2PointDampers.html">Actuationof2-Point dampers</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbAirSideAntifreezeProtection.html">Air-Side antifreeze protection</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbAnalog3PointSignal.html">Analog 3-Point signal</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbAnalog3PointPattern.html">Analog 3-Point Signal Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_AnalogSignal.html">Analog signal</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbAntiLegionnairesDiseaseFunction.html">Anti legionnaires disease function</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_AntifreezeProtection.html">Antifreeze protection</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbAveragedOutsideTemperature.html">Averaged outside temperature</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_HVAC_Function.html">baf:HVAC_Function</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_bBoilerNumber.html">bBoilerNumber [baf:bBoilerNumber]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler number. Value range = 1 – 2. Default setting = 1  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_bLeadBoiler.html">bLeadBoiler [baf:bLeadBoiler]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Defining of lead boiler. Value range = 0 – 2 (0 = both boilers in parallel). Default setting = 1  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbBlinker.html">Blinker</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbBlockingProtectionForContinuousDrivers.html">Blocking protection for continuous drivers</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_bManualLevelBoiler.html">bManualLevelBoiler [baf:bManualLevelBoiler]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler level in Manual mode. Value range = 0 – 2  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_BoilerControl.html">Boiler control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbBoilerModuleFor2LevelBoiler.html">Boiler module for 2-Level boiler</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbBoilerModuleForModulatingBoiler.html">Boiler module for modulating boiler</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbBoilerStrategyForTwoBoilers.html">Boiler strategy for two boilers</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbCalculationofSupplyTemperature.html">Calculationof supply temperature</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbCascadeController.html">Cascade controller</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbCascadeControllerPattern.html">Cascade Controller Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Cascade Controller (FbCascadeController)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_CharacteristicCurve.html">Characteristic curve</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbCollectiveMalfunction.html">Collective malfunction</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbComfortZoneController.html">Comfort zone controller</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbControlOf2PointDrivers.html">Control of 2-Point drivers</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbControlOfContinuousDrivers.html">Control of continuous drivers</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_Controller.html">Controller [baf:Controller]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbCoolingSequence.html">Cooling sequence</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbDampedTemperature.html">Damped temperature</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_DamperControl.html">Damper control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbDehumidifyingSequence.html">Dehumidifying sequence</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_dwOperatingMinutes.html">dwOperatingMinutes [baf:dwOperatingMinutes]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Operating time in minutes  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbEnergyRecoverySequence.html">Energy recovery sequence</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbSequenceEnergyRecoveryPattern.html">Energy Recovery Sequence Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbEnthalpy.html">Enthalpy</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_EnumeratedControlFunctionPattern.html">Enumerated control function pattern</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FanControl.html">Fan control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFan1Level.html">Fan1-Level</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFan2Level.html">Fan2-Level</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFan3Level.html">Fan3-Level</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFanwithFrequencyConverter.html">Fanwith frequency converter</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbFilterMonitoring.html">Filter monitoring</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuFourPointCharacteristicCurve.html">Four-point characteristic curve</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_Fu4Point.html">Four-Point Characteristic Curve Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Four-Point Characteristic Curve (Fu4Point)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_OutputFu4Point.html">Fu4Point [baf:OutputFu4Point]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Output value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_GeneralDriver.html">General driver</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbGlobalCollectiveMalfunction.html">Global collective malfunction</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_HeatExchangerControl.html">Heat exchanger control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbHeatingCharacteristics.html">Heating characteristics</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbHeatingSequence.html">Heating sequence</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbSequenceHeatingPattern.html">Heating Sequence Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Heating Sequence (FbSequenceHeating)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbHumidifier.html">Humidifier</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbHumidifyingSequence.html">Humidifying sequence</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbHysteresis.html">Hysteresis</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbImpulseCounter.html">Impulse counter</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuKTYCharacteristicCurve.html">KTY Characteristic curve</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbMinValueAvgValueAndMaxValue.html">Min. Value, Avg. Value and Max. Value</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_MiscellaneousFunction.html">Miscellaneous function</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbMixedAirSequence.html">Mixed air sequence</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbSequenceMixedAirPattern.html">Mixed Air Sequence Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbOperatingHoursCounter.html">Operating hours counter</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbOptimizedSupplyTemperature.html">Optimized supply temperature</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbOverheatingandCondensationProtection.html">Overheatingand condensation protection</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPIDController.html">PIDController</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPIDControllerwithTwoSetsofControlParameters.html">PIDControllerwith two setsof control parameters</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPIDSingleRoomController.html">PIDSingle room controller</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPILimitController.html">PILimit controller</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPlateTypeHeatExchanger.html">Plate-Type heat exchanger</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbPlateHeatExchangerPattern.html">Plate-Type Heat Exchanger Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbTwoPointIndividualRoomController.html">Point individual room controller</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPump.html">Pump</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_PumpControl.html">Pump control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPumpwithFrequencyConverter.html">Pumpwith frequency converter</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbPWMOutput.html">PWM Output</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rActualBoilerTemperature.html">rActualBoilerTemperature [baf:rActualBoilerTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual boiler temperature [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rActualPosition.html">rActualPosition [baf:rActualPosition]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual position of the continuous damper [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rActualReturnTemperature.html">rActualReturnTemperature [baf:rActualReturnTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual boiler return temperature [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rActualValue.html">rActualValue [baf:rActualValue]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual value [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbRamp.html">Ramp</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbReducedMinimumFreshAir.html">Reduced minimum fresh air</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rExhaustAirTemperature.html">rExhaustAirTemperature [baf:rExhaustAirTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual value for exhaust air temperature [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rExitAirTemperature.html">rExitAirTemperature [baf:rExitAirTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual value exhaust air temperature [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rInput.html">rInput [baf:rInput]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Input value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rManualValue.html">rManualValue [baf:rManualValue]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value in manual mode [%] or [°C]
+Value range = 0 – 100%
+Default setting = 22 °C  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rManualValueValve.html">rManualValueValve [baf:rManualValueValve]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Valve position in Manual mode [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rMaxReferenceValue.html">rMaxReferenceValue [baf:rMaxReferenceValue]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum reference value for slave controller  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rMinBoilerTemperature.html">rMinBoilerTemperature [baf:rMinBoilerTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum boiler temperature  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rMinExitAir.html">rMinExitAir [baf:rMinExitAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum exhaust air temperature for
+regulation of the plate-type heat exchanger
+in the incoming air duct [°C]
+Default setting = 6 °C  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rMinReferenceValue.html">rMinReferenceValue [baf:rMinReferenceValue]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum reference value for slave controller  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbRotaryHeatExchanger.html">Rotary heat exchanger</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rOutput.html">rOutput [baf:rOutput]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Filtered output value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rOutsideTemperature.html">rOutsideTemperature [baf:rOutsideTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Actual value outside temperature [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rReferenceBoilerTemperature.html">rReferenceBoilerTemperature [baf:rReferenceBoilerTemperature]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Specified boiler temperature [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rReferencePosition.html">rReferencePosition [baf:rReferencePosition]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reference position of the continuous damper [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rReferenceValue.html">rReferenceValue [baf:rReferenceValue]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reference value [°C]
+Default setting = 22 °C  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rReferenceValueSlaveController.html">rReferenceValueSlaveController [baf:rReferenceValueSlaveController]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Reference value for slave controller [°C]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbRunAroundCoil.html">Run-around coil</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rValvePosition.html">rValvePosition [baf:rValvePosition]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Specified position of valve [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rX1.html">rX1 [baf:rX1]</A>&nbsp;&nbsp;-&nbsp;&nbsp;x-coordinate of the first value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rX2.html">rX2 [baf:rX2]</A>&nbsp;&nbsp;-&nbsp;&nbsp;x-coordinate of the second value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY.html">rY [baf:rY]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY1.html">rY1 [baf:rY1]</A>&nbsp;&nbsp;-&nbsp;&nbsp;y-coordinate of the first value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY2.html">rY2 [baf:rY2]</A>&nbsp;&nbsp;-&nbsp;&nbsp;y-coordinate of the second value  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_DamperExhaustAir.html">rY_DamperExhaustAir [baf:rY_DamperExhaustAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for plate-type heat exchanger in
+exhaust air duct [%]
+Value range = 0 – 100  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_DamperSupplyAir.html">rY_DamperSupplyAir [baf:rY_DamperSupplyAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for plate-type heat exchanger in
+incoming air duct [%]
+Value range = 0 – 100  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_Dehumidifying.html">rY_Dehumidifying [baf:rY_Dehumidifying]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for dehumidifier [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_EnergyRecovery.html">rY_EnergyRecovery [baf:rY_EnergyRecovery]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for energy recovery [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_FreshAir.html">rY_FreshAir [baf:rY_FreshAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value mixed air damper [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_Heating.html">rY_Heating [baf:rY_Heating]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Valve position heating register  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_MinFreshAir.html">rY_MinFreshAir [baf:rY_MinFreshAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Minimum fresh air rate [%]  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_rY_Valve.html">rY_Valve [baf:rY_Valve]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Valve position, 3-way valve [%]. Value range = 0 – 100  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuScalingOfOutputValues0to32767.html">Scaling of output values 0 to 32767</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuScalingOfTemperatureValuesInDeg.html">Scaling of temperature valuesin °C</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuScalingofInputValues0to32767.html">Scalingof input values0to32767</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_Sequence.html">Sequence [baf:Sequence]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbSequenceController.html">Sequence controller</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbSequenceControllerPattern.html">Sequence Controller Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Sequence Controller (FbSequenceController)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_SetValueAdjustment.html">Set value adjustment</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_SingleRoomControl.html">Single room control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbStartStopHeatingCircuitControl.html">Start stop heating circuit control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbStartStop.html">Start/Stop</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbStartStopOptimization.html">Start/Stop optimization</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuStatusIndicationAsString.html">Status indication as STRING {@en} </A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuSummerCompensation.html">Summer compensation</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbSummerNightVentilation.html">Summer night ventilation</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_SystemMonitoring.html">System monitoring</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_TemperatureEvaluation.html">Temperature evaluation</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FuTwoPointCharacteristic.html">Two-point characteristic</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbTwoPointControllerforDHWPreparation.html">Two-Point controllerfor DHWPreparation</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfig2LevelBoiler.html">typConfig2LevelBoiler [baf:typConfig2LevelBoiler]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigAnalog3Point_01.html">typConfigAnalog3Point_01 [baf:typConfigAnalog3Point_01]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigCascadeController.html">typConfigCascadeController [baf:typConfigCascadeController]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigContinuousDamper.html">typConfigContinuousDamper [baf:typConfigContinuousDamper]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigLowPassFilter.html">typConfigLowPassFilter [baf:typConfigLowPassFilter]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigSequence.html">typConfigSequence [baf:typConfigSequence]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigSequenceController.html">typConfigSequenceController [baf:typConfigSequenceController]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_typConfigValveAndPump.html">typConfigValveAndPump [baf:typConfigValveAndPump]</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_typSequenceController.html">typSequenceController [baf:typSequenceController]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Data structure for data exchange between the individual sequences and the sequence controller  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_typStatusBoiler.html">typStatusBoiler [baf:typStatusBoiler]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler status for the strategy module  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbUnitMonitoring.html">Unit monitoring</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_FbValveAndPumpPattern.html">Valve and Pump Pattern</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pattern of function block for Valve and Pump (FbValveAndPump)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbValveandPump.html">Valve and pump {@en} </A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_ValveControl.html">Valve control</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_VolumeFlowRegulator.html">Volume flow regulator</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/OWLNamedClassPrimitive.gif" width="16" height="16">&nbsp;<A href="baf_FbWaterSideAntifreezeProtection.html">Water-Side antifreeze protection</A>  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wStatus.html">wStatus [baf:wStatus]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Display current status
+0 = OK
+1 = On 
+2 = Off
+10 = Error Pump
+29 = Error Safety chain
+30 = Condensation protection
+31 = Chimney sweep function
+32 = Overheating protection
+33 = Error Valve
+34 = Follow up time
+35 = Manual operation
+36 = In motion
+39 = Reference value exceeded
+40 = Startup behaviour
+42 = Error Damper position
+46 = Error limit switch
+47 = Synchronisation  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY.html">wY [baf:wY]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value:
+Value range: 0 ?32767 for damper  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY_DamperExhaustAir.html">wY_DamperExhaustAir [baf:wY_DamperExhaustAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for plate-type heat exchanger in
+the exhaust air duct
+Value range = 0 – 32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY_DamperSupplyAir.html">wY_DamperSupplyAir [baf:wY_DamperSupplyAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for plate-type heat exchanger in
+the incoming air duct
+Value range = 0 – 32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY_EnergyRecovery.html">wY_EnergyRecovery [baf:wY_EnergyRecovery]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for energy recovery
+Value range = 0 – 32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY_FreshAir.html">wY_FreshAir [baf:wY_FreshAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Set value for mixed air damper
+Value range = 0 – 32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY_Heating.html">wY_Heating [baf:wY_Heating]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Valve position heating register
+Value range = 0 – 32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_wY_Valve.html">wY_Valve [baf:wY_Valve]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Valve position, 3-way valve. Value range = 0 – 32767  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xActive.html">xActive [baf:xActive]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Active indicator for sequence  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xAdmixingPump.html">xAdmixingPump [baf:xAdmixingPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switching signal for the admixing pump  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xAlarm.html">xAlarm [baf:xAlarm]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Output signal error  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xAuto.html">xAuto [baf:xAuto]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Automatic mode  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xBoilerPump.html">xBoilerPump [baf:xBoilerPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler circuit pump  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xChimneySweep.html">xChimneySweep [baf:xChimneySweep]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Chimney sweep function active  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xChimneySweepFunction.html">xChimneySweepFunction [baf:xChimneySweepFunction]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Activate chimney sweep function  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xClose.html">xClose [baf:xClose]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Engine coil CLOSED  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xCondensationProtection.html">xCondensationProtection [baf:xCondensationProtection]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Condensation protection  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xDifferentialPressureMonitor.html">xDifferentialPressureMonitor [baf:xDifferentialPressureMonitor]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Differential pressure sensor plate-type
+heat exchanger
+Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xEnable.html">xEnable [baf:xEnable]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable controller
+Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xEnablePump.html">xEnablePump [baf:xEnablePump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable pump and valve control  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xEnableSystem.html">xEnableSystem [baf:xEnableSystem]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable FbStartStop
+Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xError.html">xError [baf:xError]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Some fault  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xErrorAdmixingPump.html">xErrorAdmixingPump [baf:xErrorAdmixingPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Admixing pump error  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xErrorBoilerPump.html">xErrorBoilerPump [baf:xErrorBoilerPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler circuit pump error  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xErrorPump.html">xErrorPump [baf:xErrorPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Error message pump  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xErrorSequence.html">xErrorSequence [baf:xErrorSequence]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Error check-back signal from device  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xErrorStartUp.html">xErrorStartUp [baf:xErrorStartUp]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Start-up system fault  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xFeedbackManualOperation.html">xFeedbackManualOperation [baf:xFeedbackManualOperation]</A>&nbsp;&nbsp;-&nbsp;&nbsp;External check-back signal, Manual mode  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xFollowUpTime.html">xFollowUpTime [baf:xFollowUpTime]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Pump is in the follo-up phase  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xFrostAlarmAir.html">xFrostAlarmAir [baf:xFrostAlarmAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Frost alarm from FbAntifreezeAir  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xFrostAlarmWater.html">xFrostAlarmWater [baf:xFrostAlarmWater]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Frost alarm from FbAntifreezeWater  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xFullLoad.html">xFullLoad [baf:xFullLoad]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler is to run at full load  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xInit.html">xInit [baf:xInit]</A>&nbsp;&nbsp;-&nbsp;&nbsp;A positive flank starts the reference run  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xLevel1.html">xLevel1 [baf:xLevel1]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler Level 1  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xLevel2.html">xLevel2 [baf:xLevel2]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Boiler Level 2  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xLimitSwitch.html">xLimitSwitch [baf:xLimitSwitch]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Limit switch (opend, closed)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xLimitSwitchValve.html">xLimitSwitchValve [baf:xLimitSwitchValve]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Limit switch, 2-way valve. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xManual.html">xManual [baf:xManual]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Manual mode  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xManualOnAdmixingPump.html">xManualOnAdmixingPump [baf:xManualOnAdmixingPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch on admixing pump manually  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xManualOnBoilerPump.html">xManualOnBoilerPump [baf:xManualOnBoilerPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch on boiler circuit pump manually  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xManualOperation.html">xManualOperation [baf:xManualOperation]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Enable manual operation  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xManualSwitchPump.html">xManualSwitchPump [baf:xManualSwitchPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch on pump manually  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xMaximalThermostat.html">xMaximalThermostat [baf:xMaximalThermostat]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Maximum thermostat for heating circuit
+Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xMinFreshAir.html">xMinFreshAir [baf:xMinFreshAir]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Override mixed air damper using the minimum fresh air rate  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xMotorProtection.html">xMotorProtection [baf:xMotorProtection]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Motor protection switch pump
+Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xMotorProtectionAdmixingPump.html">xMotorProtectionAdmixingPump [baf:xMotorProtectionAdmixingPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Motor protection switch, Admixing pump. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xMotorProtectionPump.html">xMotorProtectionPump [baf:xMotorProtectionPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Motor protection switch, Boiler circuit pump. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xNightVentilation.html">xNightVentilation [baf:xNightVentilation]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Opening damper during night ventilation  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xOpen.html">xOpen [baf:xOpen]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Engine coil OPEN  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xPump.html">xPump [baf:xPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switching signal for the pump  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xQuit.html">xQuit [baf:xQuit]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Error message acknowledgement  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xRepairSwitch.html">xRepairSwitch [baf:xRepairSwitch]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Repair switch pump
+Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xRepairSwitchAdmixingPump.html">xRepairSwitchAdmixingPump [baf:xRepairSwitchAdmixingPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Repair switch, Admixing pump. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xRepairSwitchPump.html">xRepairSwitchPump [baf:xRepairSwitchPump]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Repair switch, Boiler circuit pump. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xSafetyChain.html">xSafetyChain [baf:xSafetyChain]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Check-back signal from boiler safety chain. Default setting = TRUE  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xSpeedLevel1.html">xSpeedLevel1 [baf:xSpeedLevel1]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Request fan level 1  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xSpeedLevel2.html">xSpeedLevel2 [baf:xSpeedLevel2]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Request fan level 2  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xSwitchOnBoiler.html">xSwitchOnBoiler [baf:xSwitchOnBoiler]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switch-on signal in Automatic mode (e.g., from boiler strategy)  </TD>
+</TR>
+<TR>
+  <TD><IMG border="0" src="icons/RDFIndividual.gif" width="16" height="16">&nbsp;<A href="baf_xValve.html">xValve [baf:xValve]</A>&nbsp;&nbsp;-&nbsp;&nbsp;Switching signal 2-way valve  </TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

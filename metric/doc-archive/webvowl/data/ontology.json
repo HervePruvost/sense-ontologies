@@ -1,0 +1,7827 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/mm" ],
+    "title" : {
+      "en" : "Metric Model"
+    },
+    "iri" : "https://w3id.org/mm",
+    "version" : "v1.0.0",
+    "author" : [ "https://orcid.org/0000-0001-7604-8543", "https://www.linkedin.com/in/hervepruvost", "Hervé Pruvost" ],
+    "description" : {
+      "en" : "The Metric model consists of a taxonomy of quantities, quantity kinds and key metrics e.g. KPI (Key Performance Indicator) or KRI (Key Risk Indicator) that are used for quantification, measurement and sensing in engineering domain. More Specifically, it complements further ontologies like QUDT or SSN/SOSA with very specific metrics for e.g. HVAC (Heating Ventilation and Air Conditioning), building automation, building design, energy management, etc. It contrasts to rather more abstract quantities from other vocabularies."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by-sa/4.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Hervé Pruvost",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0001-7604-8543",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/hervepruvost",
+        "type" : "iri"
+      } ],
+      "imports" : [ {
+        "identifier" : "imports",
+        "language" : "undefined",
+        "value" : "http://topbraid.org/spin/owlrl-all",
+        "type" : "iri"
+      }, {
+        "identifier" : "imports",
+        "language" : "undefined",
+        "value" : "http://topbraid.org/spin/skosspin",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "mm",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2023-06-07",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "Fraunhofer IIS/EAS",
+        "type" : "label"
+      }, {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.eas.iis.fraunhofer.de/",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/mm#",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "Pruvost. H. (2023): The Metric Model - Quantities and Key Indicators for the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/mm.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Metric Model",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2018-10-22",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "144",
+    "type" : "owl:Class"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "171",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "192",
+    "type" : "owl:Class"
+  }, {
+    "id" : "193",
+    "type" : "owl:Class"
+  }, {
+    "id" : "182",
+    "type" : "owl:Class"
+  }, {
+    "id" : "196",
+    "type" : "owl:Class"
+  }, {
+    "id" : "201",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "212",
+    "type" : "owl:Class"
+  }, {
+    "id" : "213",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "152",
+    "type" : "owl:Class"
+  }, {
+    "id" : "216",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "219",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "228",
+    "type" : "owl:Class"
+  }, {
+    "id" : "204",
+    "type" : "owl:Class"
+  }, {
+    "id" : "235",
+    "type" : "owl:Class"
+  }, {
+    "id" : "240",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "305",
+    "type" : "owl:Class"
+  }, {
+    "id" : "306",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "209",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "340",
+    "type" : "owl:Class"
+  }, {
+    "id" : "355",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "139",
+    "type" : "owl:Class"
+  }, {
+    "id" : "292",
+    "type" : "owl:Class"
+  }, {
+    "id" : "262",
+    "type" : "owl:Class"
+  }, {
+    "id" : "411",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "275",
+    "type" : "owl:Class"
+  }, {
+    "id" : "279",
+    "type" : "owl:Class"
+  }, {
+    "id" : "418",
+    "type" : "owl:Class"
+  }, {
+    "id" : "433",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "owl:Class"
+  }, {
+    "id" : "436",
+    "type" : "owl:Class"
+  }, {
+    "id" : "409",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "447",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "429",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "395",
+    "type" : "owl:Class"
+  }, {
+    "id" : "318",
+    "type" : "owl:Class"
+  }, {
+    "id" : "172",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "286",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "267",
+    "type" : "owl:Class"
+  }, {
+    "id" : "351",
+    "type" : "owl:Class"
+  }, {
+    "id" : "465",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "323",
+    "type" : "owl:Class"
+  }, {
+    "id" : "247",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "296",
+    "type" : "owl:Class"
+  }, {
+    "id" : "199",
+    "type" : "owl:Class"
+  }, {
+    "id" : "266",
+    "type" : "owl:Class"
+  }, {
+    "id" : "156",
+    "type" : "owl:Class"
+  }, {
+    "id" : "486",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "488",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "244",
+    "type" : "owl:Class"
+  }, {
+    "id" : "473",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "154",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "490",
+    "type" : "owl:Class"
+  }, {
+    "id" : "207",
+    "type" : "owl:Class"
+  }, {
+    "id" : "506",
+    "type" : "owl:Class"
+  }, {
+    "id" : "463",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "507",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "438",
+    "type" : "owl:Class"
+  }, {
+    "id" : "509",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "143",
+    "type" : "owl:Class"
+  }, {
+    "id" : "510",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "511",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "519",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "523",
+    "type" : "owl:Class"
+  }, {
+    "id" : "239",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "528",
+    "type" : "owl:Class"
+  }, {
+    "id" : "298",
+    "type" : "owl:Class"
+  }, {
+    "id" : "543",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "402",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "425",
+    "type" : "owl:Class"
+  }, {
+    "id" : "211",
+    "type" : "owl:Class"
+  }, {
+    "id" : "545",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "546",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "254",
+    "type" : "owl:Class"
+  }, {
+    "id" : "423",
+    "type" : "owl:Class"
+  }, {
+    "id" : "548",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "333",
+    "type" : "owl:Class"
+  }, {
+    "id" : "202",
+    "type" : "owl:Class"
+  }, {
+    "id" : "158",
+    "type" : "owl:Class"
+  }, {
+    "id" : "164",
+    "type" : "owl:Class"
+  }, {
+    "id" : "574",
+    "type" : "owl:Class"
+  }, {
+    "id" : "345",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "311",
+    "type" : "owl:Class"
+  }, {
+    "id" : "569",
+    "type" : "owl:Class"
+  }, {
+    "id" : "370",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "421",
+    "type" : "owl:Class"
+  }, {
+    "id" : "221",
+    "type" : "owl:Class"
+  }, {
+    "id" : "383",
+    "type" : "owl:Class"
+  }, {
+    "id" : "535",
+    "type" : "owl:Class"
+  }, {
+    "id" : "508",
+    "type" : "owl:Class"
+  }, {
+    "id" : "593",
+    "type" : "owl:Class"
+  }, {
+    "id" : "356",
+    "type" : "owl:Class"
+  }, {
+    "id" : "435",
+    "type" : "owl:Class"
+  }, {
+    "id" : "264",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "227",
+    "type" : "owl:Class"
+  }, {
+    "id" : "502",
+    "type" : "owl:Class"
+  }, {
+    "id" : "392",
+    "type" : "owl:Class"
+  }, {
+    "id" : "151",
+    "type" : "owl:Class"
+  }, {
+    "id" : "366",
+    "type" : "owl:Class"
+  }, {
+    "id" : "596",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "342",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "308",
+    "type" : "owl:Class"
+  }, {
+    "id" : "338",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "583",
+    "type" : "owl:Class"
+  }, {
+    "id" : "503",
+    "type" : "owl:Class"
+  }, {
+    "id" : "258",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "owl:Class"
+  }, {
+    "id" : "568",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "243",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "218",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "149",
+    "type" : "owl:Class"
+  }, {
+    "id" : "195",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "390",
+    "type" : "owl:Class"
+  }, {
+    "id" : "200",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "owl:Class"
+  }, {
+    "id" : "326",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "540",
+    "type" : "owl:Class"
+  }, {
+    "id" : "405",
+    "type" : "owl:Class"
+  }, {
+    "id" : "347",
+    "type" : "owl:Class"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "542",
+    "type" : "owl:Class"
+  }, {
+    "id" : "379",
+    "type" : "owl:Class"
+  }, {
+    "id" : "224",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "544",
+    "type" : "owl:Class"
+  }, {
+    "id" : "557",
+    "type" : "owl:Class"
+  }, {
+    "id" : "360",
+    "type" : "owl:Class"
+  }, {
+    "id" : "364",
+    "type" : "owl:Class"
+  }, {
+    "id" : "375",
+    "type" : "owl:Class"
+  }, {
+    "id" : "189",
+    "type" : "owl:Class"
+  }, {
+    "id" : "518",
+    "type" : "owl:Class"
+  }, {
+    "id" : "605",
+    "type" : "owl:Class"
+  }, {
+    "id" : "184",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "598",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "215",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "516",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  }, {
+    "id" : "522",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "538",
+    "type" : "owl:Class"
+  }, {
+    "id" : "358",
+    "type" : "owl:Class"
+  }, {
+    "id" : "336",
+    "type" : "owl:Class"
+  }, {
+    "id" : "372",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "427",
+    "type" : "owl:Class"
+  }, {
+    "id" : "313",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "432",
+    "type" : "owl:Class"
+  }, {
+    "id" : "368",
+    "type" : "owl:Class"
+  }, {
+    "id" : "288",
+    "type" : "owl:Class"
+  }, {
+    "id" : "177",
+    "type" : "owl:Class"
+  }, {
+    "id" : "283",
+    "type" : "owl:Class"
+  }, {
+    "id" : "205",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "525",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "561",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "304",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "541",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "504",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "397",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "570",
+    "type" : "owl:Class"
+  }, {
+    "id" : "271",
+    "type" : "owl:Class"
+  }, {
+    "id" : "166",
+    "type" : "owl:Class"
+  }, {
+    "id" : "181",
+    "type" : "owl:Class"
+  }, {
+    "id" : "249",
+    "type" : "owl:Class"
+  }, {
+    "id" : "571",
+    "type" : "owl:Class"
+  }, {
+    "id" : "269",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/mm#HeatRecoveryValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatRecoveryValvePosition",
+      "undefined" : "Heat recovery valve position"
+    },
+    "id" : "38",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SetPoint",
+      "undefined" : "Set point"
+    },
+    "subClasses" : [ "51", "52", "53" ],
+    "id" : "50",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SpecificFanPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpecificFanPower",
+      "undefined" : "Specific fan power"
+    },
+    "id" : "56",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Elevation",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Elevation",
+      "undefined" : "Elevation"
+    },
+    "id" : "61",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatRecoveryDamperPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatRecoveryDamperPosition",
+      "undefined" : "Heat recovery damper position"
+    },
+    "id" : "63",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#GrossFloorArea",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GrossFloorArea"
+    },
+    "id" : "64",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "https://w3id.org/mm#LightingPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightingPower",
+      "undefined" : "Lighting power"
+    },
+    "id" : "66",
+    "superClasses" : [ "67" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FancoilSupplyWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FancoilSupplyWaterTemperature",
+      "undefined" : "Fancoil supply water temperature"
+    },
+    "id" : "68",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BuildingHeight",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "BuildingHeight"
+    },
+    "id" : "70",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirPressure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirPressure",
+      "undefined" : "Air pressure"
+    },
+    "subClasses" : [ "74", "75", "76" ],
+    "id" : "2",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PostHeatingCoilValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostHeatingCoilValvePosition",
+      "undefined" : "Post heating coil valve position"
+    },
+    "id" : "77",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Movement",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Movement",
+      "undefined" : "Movement"
+    },
+    "id" : "84",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Tolerance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tolerance"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#BuildingHeightTolerance",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "BuildingHeightTolerance"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#ProbabilityOfLowInternalRateOfReturnTolerance",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "ProbabilityOfLowInternalRateOfReturnTolerance"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#MyDecisionValueTolerance",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "MyDecisionValueTolerance"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#TotalEnergyConsumptionTolerance",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "TotalEnergyConsumptionTolerance"
+      }
+    } ],
+    "id" : "43",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DoorStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DoorStatus",
+      "undefined" : "Door status"
+    },
+    "id" : "14",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SolarRadiation",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SolarRadiation",
+      "undefined" : "Solar radiation"
+    },
+    "id" : "30",
+    "superClasses" : [ "62", "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirFanRotationalSpeed",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirFanRotationalSpeed",
+      "undefined" : "Supply air fan rotational speed"
+    },
+    "id" : "144",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirPreCoolingStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirPreCoolingStatus",
+      "undefined" : "Air pre cooling status"
+    },
+    "id" : "147",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BetterThanTarget",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BetterThanTarget"
+    },
+    "id" : "171",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirDamperPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirDamperPosition",
+      "undefined" : "Air damper position"
+    },
+    "subClasses" : [ "166", "25", "110", "177" ],
+    "id" : "133",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ChillerStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ChillerStatus",
+      "undefined" : "Chiller status"
+    },
+    "id" : "192",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ShadingSatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ShadingSatus",
+      "undefined" : "Shading status"
+    },
+    "id" : "193",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#LightLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightLevel",
+      "undefined" : "Light level"
+    },
+    "subClasses" : [ "181", "186" ],
+    "id" : "182",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BoilerReturnWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoilerReturnWaterTemperature",
+      "undefined" : "Boiler return water temperature"
+    },
+    "id" : "196",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#EnergyDemandForHeating",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyDemandForHeating"
+    },
+    "id" : "201",
+    "superClasses" : [ "202" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "16",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "146",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#RadiatorValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiatorValvePosition",
+      "undefined" : "Radiator valve position"
+    },
+    "id" : "212",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "213",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#Energy-KDP",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Energy-KDP"
+    },
+    "subClasses" : [ "189", "151", "158" ],
+    "id" : "152",
+    "superClasses" : [ "195" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "216",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "219",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "222",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#HeatRecoveryStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatRecoveryStatus",
+      "undefined" : "Heat recovery status"
+    },
+    "id" : "228",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MetricType",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 2,
+    "label" : {
+      "IRI-based" : "MetricType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#Trend",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Trend"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Quantitative",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Quantitative"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Qualitative",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Qualitative"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Leading",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Leading"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Lagging",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Lagging"
+      }
+    } ],
+    "id" : "204"
+  }, {
+    "iri" : "https://w3id.org/mm#DistrictHeatingReturnWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistrictHeatingReturnWaterTemperature",
+      "undefined" : "District heating return water temperature"
+    },
+    "id" : "235",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Template",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Template",
+      "undefined" : "Template"
+    },
+    "id" : "240",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HumiditySetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumiditySetPoint",
+      "undefined" : "Humidity set point"
+    },
+    "subClasses" : [ "100" ],
+    "id" : "51",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Reliability-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Reliability-KRI"
+    },
+    "subClasses" : [ "106", "112" ],
+    "id" : "107",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirFanStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirFanStatus",
+      "undefined" : "Supply air fan status"
+    },
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingCircuitValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingCircuitValvePosition",
+      "undefined" : "Heating circuit valve position"
+    },
+    "id" : "305",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Design-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Design-KRI"
+    },
+    "id" : "306",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Cost-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cost-KRI"
+    },
+    "subClasses" : [ "118", "125" ],
+    "id" : "119",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirTemperature",
+      "undefined" : "Supply air temperature"
+    },
+    "id" : "209",
+    "superClasses" : [ "141" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Temperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Temperature",
+      "undefined" : "Medium temperature"
+    },
+    "subClasses" : [ "69", "135", "141" ],
+    "id" : "130",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HotWaterTankTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotWaterTankTemperature",
+      "undefined" : "Hot water tank temperature"
+    },
+    "id" : "340",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirVolumeFlow",
+      "undefined" : "Supply air volume flow"
+    },
+    "id" : "355",
+    "superClasses" : [ "356" ]
+  }, {
+    "iri" : "https://w3id.org/mm#InvestmentCost",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InvestmentCost"
+    },
+    "id" : "12",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingCircuitPumpStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingCircuitPumpStatus",
+      "undefined" : "Heating circuit pump status"
+    },
+    "id" : "139",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatRecoveryWheelRotationalSpeed",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatRecoveryWheelRotationalSpeed",
+      "undefined" : "Heat recovery wheel rotational speed"
+    },
+    "id" : "292",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirCoolingStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirCoolingStatus",
+      "undefined" : "Air cooling status"
+    },
+    "id" : "262",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PreHeatingCoilValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PreHeatingCoilValvePosition",
+      "undefined" : "Pre heating coil valve position"
+    },
+    "id" : "411",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Cost-KPI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Cost-KPI"
+    },
+    "subClasses" : [ "81", "88", "94", "4", "12", "21" ],
+    "id" : "5",
+    "superClasses" : [ "267" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BoilerLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoilerLevel",
+      "undefined" : "Boiler level"
+    },
+    "id" : "275",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#LightStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightStatus",
+      "undefined" : "Light status"
+    },
+    "id" : "279",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingThermalPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingThermalPower",
+      "undefined" : "Heating thermal power"
+    },
+    "id" : "418",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MetricGroup",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetricGroup"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#Energy",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Energy"
+      }
+    } ],
+    "id" : "433"
+  }, {
+    "iri" : "https://w3id.org/mm#ReturnAirFanRotationalSpeed",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReturnAirFanRotationalSpeed",
+      "undefined" : "Return air fan rotational speed"
+    },
+    "id" : "41",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Product",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Product"
+    },
+    "subClasses" : [ "27" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/mm#WindSpeed",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WindSpeed",
+      "undefined" : "Wind speed"
+    },
+    "id" : "179",
+    "superClasses" : [ "62", "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WindowWallRatio",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WindowWallRatio"
+    },
+    "id" : "436",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AboveTarget",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AboveTarget"
+    },
+    "id" : "409",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MetricRequirement",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetricRequirement"
+    },
+    "subClasses" : [ "34", "43", "49" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirHumiditySetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirHumiditySetPoint",
+      "undefined" : "Supply air humidity set point"
+    },
+    "id" : "100",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://w3id.org/mm#TemperatureSetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TemperatureSetPoint",
+      "undefined" : "Temperature set point"
+    },
+    "subClasses" : [ "92" ],
+    "id" : "53",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Security-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Security-KRI"
+    },
+    "id" : "447",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ThermalPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermalPower",
+      "undefined" : "Thermal power"
+    },
+    "subClasses" : [ "418", "423" ],
+    "id" : "55",
+    "superClasses" : [ "67" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ComputedProperty",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ComputedProperty",
+      "undefined" : "Computed property"
+    },
+    "id" : "137",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirHandlingUnitSchedule",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirHandlingUnitSchedule",
+      "undefined" : "Air handling unit schedule"
+    },
+    "id" : "83",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirHeatingStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirHeatingStatus",
+      "undefined" : "Air heating status"
+    },
+    "id" : "96",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#LightPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightPosition",
+      "undefined" : "Light position"
+    },
+    "id" : "23",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ValuePartition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ValuePartition"
+    },
+    "subClasses" : [ "172" ],
+    "id" : "429"
+  }, {
+    "iri" : "https://w3id.org/mm#Occupancy",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Occupancy",
+      "undefined" : "Occupancy"
+    },
+    "id" : "45",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HotWaterTankHeatingCartridgeStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotWaterTankHeatingCartridgeStatus",
+      "undefined" : "Hot water tank heating cartridge status"
+    },
+    "id" : "37",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutsideTolerance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutsideTolerance"
+    },
+    "id" : "395",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SunshineDuration",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SunshineDuration",
+      "undefined" : "Sunshine duration"
+    },
+    "id" : "318",
+    "superClasses" : [ "62", "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#RequirementCompliance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RequirementCompliance"
+    },
+    "subClasses" : [ "383", "171", "390", "395", "405", "409", "360", "364" ],
+    "id" : "172",
+    "superClasses" : [ "429" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MetricValue",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetricValue"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#MeanUnavailabilityValue",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "MeanUnavailabilityValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#ProbabilityOfLowerIRRvalue",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "ProbabilityOfLowerIRRvalue"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#EnergyConsumptionValue",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "EnergyConsumptionValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#BuildingHeightValue",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "BuildingHeightValue"
+      }
+    } ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/mm#Environment-KPI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Environment-KPI"
+    },
+    "subClasses" : [ "370", "375", "379", "333", "338" ],
+    "id" : "286",
+    "superClasses" : [ "267" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WeatherMetric",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WeatherMetric",
+      "undefined" : "Weather metric"
+    },
+    "subClasses" : [ "74", "30", "181", "19", "179", "318", "296", "326", "61", "258", "215", "86" ],
+    "comment" : {
+      "undefined" : "A metric that is usually used in climatology or meteorology to assess  weather conditions and changes."
+    },
+    "id" : "62",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Power",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Power",
+      "undefined" : "Power"
+    },
+    "subClasses" : [ "55", "57", "66" ],
+    "id" : "67",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PumpRotationalSpeed",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PumpRotationalSpeed",
+      "undefined" : "Pump rotational speed"
+    },
+    "id" : "32",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#KeyPerformanceIndicator",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KeyPerformanceIndicator"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#TotalEnergyConsumption",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "TotalEnergyConsumption",
+        "undefined" : "Total energy consumption"
+      }
+    } ],
+    "subClasses" : [ "266", "244", "5", "202", "286" ],
+    "comment" : {
+      "undefined" : "ToDo: add equivalent class that says: metric + relatedToObjectives(some Objective) = KPI"
+    },
+    "id" : "267",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirHumidity",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirHumidity",
+      "undefined" : "Supply air humidity"
+    },
+    "id" : "351",
+    "superClasses" : [ "425" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "465",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#BlindPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BlindPosition",
+      "undefined" : "Blind position"
+    },
+    "id" : "323",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingCoilValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingCoilValvePosition",
+      "undefined" : "Heating coil valve position"
+    },
+    "id" : "247",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MeanTimeBetweenFailure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeanTimeBetweenFailure"
+    },
+    "id" : "112",
+    "superClasses" : [ "107" ]
+  }, {
+    "iri" : "https://w3id.org/mm#CO2concentration",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CO2concentration",
+      "undefined" : "CO2concentration"
+    },
+    "id" : "296",
+    "superClasses" : [ "62", "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ApplianceElectricityConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ApplianceElectricityConsumption",
+      "undefined" : "Appliance electricity consumption"
+    },
+    "id" : "199",
+    "superClasses" : [ "200" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Health-KPI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Health-KPI"
+    },
+    "id" : "266",
+    "superClasses" : [ "267" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BoilerSupplyWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoilerSupplyWaterTemperature",
+      "undefined" : "Boiler supply water temperature"
+    },
+    "id" : "156",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "486",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "488",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#Comfort-KPI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Comfort-KPI"
+    },
+    "subClasses" : [ "243", "249" ],
+    "id" : "244",
+    "superClasses" : [ "267" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "473",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#EnergyConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyConsumption",
+      "undefined" : "Energy consumption"
+    },
+    "subClasses" : [ "200", "502", "503", "128", "504" ],
+    "id" : "154",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutdoorAirQuality",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutdoorAirQuality",
+      "undefined" : "Outdoor air quality"
+    },
+    "id" : "86",
+    "superClasses" : [ "62", "121" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DistrictHeatingSupplyWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistrictHeatingSupplyWaterTemperature",
+      "undefined" : "District heating supply water temperature"
+    },
+    "id" : "490",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ReturnAirTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReturnAirTemperature",
+      "undefined" : "Return air temperature"
+    },
+    "id" : "207",
+    "superClasses" : [ "141" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FloorToFloorHeight",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FloorToFloorHeight"
+    },
+    "id" : "506",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "463",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#EnergyUseVolatility",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyUseVolatility"
+    },
+    "id" : "507",
+    "superClasses" : [ "508" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FanCoilUnitStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FanCoilUnitStatus",
+      "undefined" : "Fan coil unit status"
+    },
+    "id" : "114",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirTemperatureSetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirTemperatureSetPoint",
+      "undefined" : "Supply air temperature set point"
+    },
+    "id" : "92",
+    "superClasses" : [ "53" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#Role",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Role"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#CostAnalyst",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "CostAnalyst"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#EnergyExpert",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "EnergyExpert"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Architect",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Architect"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#DecisionMaker",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "DecisionMaker"
+      }
+    } ],
+    "id" : "438"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "509",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#RadiatorSupplyWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiatorSupplyWaterTemperature",
+      "undefined" : "Radiator supply water temperature"
+    },
+    "id" : "143",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "510",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "237",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "511",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "232",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "191",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "519",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#CoolingCoilValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoolingCoilValvePosition",
+      "undefined" : "Cooling coil valve position"
+    },
+    "id" : "523",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#IndoorAirTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndoorAirTemperature",
+      "undefined" : "Indoor air temperature"
+    },
+    "id" : "239",
+    "superClasses" : [ "141" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Geometry-KDP",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Geometry-KDP"
+    },
+    "subClasses" : [ "70", "541", "506", "542", "436", "64" ],
+    "id" : "65",
+    "superClasses" : [ "195" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DesignTemperatureSummer",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DesignTemperatureSummer"
+    },
+    "id" : "528",
+    "superClasses" : [ "227" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HotWaterConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotWaterConsumption",
+      "undefined" : "Hot water consumption"
+    },
+    "id" : "298",
+    "superClasses" : [ "397" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "543",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "402",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#Humidity",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Humidity",
+      "undefined" : "Humidity"
+    },
+    "subClasses" : [ "544", "19", "351" ],
+    "id" : "425",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ExhaustAirTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExhaustAirTemperature",
+      "undefined" : "Exhaust air temperature"
+    },
+    "id" : "211",
+    "superClasses" : [ "141" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "545",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "546",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#Presence",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Presence",
+      "undefined" : "Presence"
+    },
+    "id" : "254",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#CoolingThermalPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoolingThermalPower",
+      "undefined" : "Cooling Thermal power"
+    },
+    "id" : "423",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "548",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#DemolitionCost",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DemolitionCost"
+    },
+    "id" : "94",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OzoneDepletionPotential",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OzoneDepletionPotential"
+    },
+    "id" : "333",
+    "superClasses" : [ "286" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Energy-KPI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Energy-KPI"
+    },
+    "subClasses" : [ "201", "569", "570", "571" ],
+    "id" : "202",
+    "superClasses" : [ "267" ]
+  }, {
+    "iri" : "https://w3id.org/mm#EnergySystemTechnology",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergySystemTechnology"
+    },
+    "id" : "158",
+    "superClasses" : [ "152" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SpecificPumpPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpecificPumpPower",
+      "undefined" : "Specific pump power"
+    },
+    "id" : "164",
+    "superClasses" : [ "57" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MetricOptimizationType",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetricOptimizationType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#Maximize",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Maximize"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#FitToGoal",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "FitToGoal"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Minimize",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Minimize"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Optimize",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Optimize"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#FitInRange",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "FitInRange"
+      }
+    } ],
+    "id" : "574"
+  }, {
+    "iri" : "https://w3id.org/mm#GasConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GasConsumption",
+      "undefined" : "Gas consumption"
+    },
+    "id" : "345",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#MetricDefinition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 124,
+    "label" : {
+      "IRI-based" : "MetricDefinition"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#HeatingPower",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "HeatingPower",
+        "undefined" : "Heating power"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#PrecoolingCoilValvePosition",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "PrecoolingCoilValvePosition",
+        "undefined" : "Precooling coil valve position"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#CoolingPower",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "CoolingPower",
+        "undefined" : "Cooling power"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#PostheatingCoilValvePosition",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "PostheatingCoilValvePosition",
+        "undefined" : "Postheating coil valve position"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#HeatRecevoryDamperPosition",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "HeatRecevoryDamperPosition",
+        "undefined" : "Heat recevory damper position"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#MediumTemperature",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "MediumTemperature",
+        "undefined" : "Medium temperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#OutdoorRelativeHumidity",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "OutdoorRelativeHumidity",
+        "undefined" : "Outdoor relative humidity"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#FanSetpoint",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "FanSetpoint",
+        "undefined" : "Fan setpoint"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#TotalEnergyConsumption",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "TotalEnergyConsumption",
+        "undefined" : "Total energy consumption"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#SupplyAirHumiditySetpoint",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "SupplyAirHumiditySetpoint",
+        "undefined" : "Supply air humidity setpoint"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#PostcoolingCoilValvePosition",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "PostcoolingCoilValvePosition",
+        "undefined" : "Postcooling coil valve position"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#ShadingStatus",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "ShadingStatus",
+        "undefined" : "Shading status"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#CO2Concentration",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "CO2Concentration",
+        "undefined" : "CO2 Concentration"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#SupplyAirTemperatureSetpoint",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "SupplyAirTemperatureSetpoint",
+        "undefined" : "Supply air temperature setpoint"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#IndoorRelativeHumidity",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "IndoorRelativeHumidity",
+        "undefined" : "Indoor relative humidity"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#PreheatingCoilValvePosition",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "PreheatingCoilValvePosition",
+        "undefined" : "Preheating coil valve position"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#AirPrecoolingStatus",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "AirPrecoolingStatus",
+        "undefined" : "Air precooling status"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#SupplyAirPressureSetpoint",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "SupplyAirPressureSetpoint",
+        "undefined" : "Supply air pressure setpoint"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#AirPreheatingStatus",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "AirPreheatingStatus",
+        "undefined" : "Air preheating status"
+      }
+    } ],
+    "subClasses" : [ "240" ],
+    "comment" : {
+      "undefined" : "A metric without context i.e. related to no entity like a product or process it can applies to, and without requirements. This is simply the definition of a physical or an abstract measure. Example: energy consumption, number of items, duration...)"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/mm#AirPreHeatingStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirPreHeatingStatus",
+      "undefined" : "Air pre heating status"
+    },
+    "id" : "311",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingLoad",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingLoad"
+    },
+    "id" : "569",
+    "superClasses" : [ "202" ]
+  }, {
+    "iri" : "https://w3id.org/mm#EutrophicationPotential",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EutrophicationPotential"
+    },
+    "id" : "370",
+    "superClasses" : [ "286" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Vibration",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vibration",
+      "undefined" : "Vibration"
+    },
+    "id" : "98",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#InternalRateOfReturn",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InternalRateOfReturn"
+    },
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FancoilReturnWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FancoilReturnWaterTemperature",
+      "undefined" : "Fancoil return water temperature"
+    },
+    "id" : "421",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DifferentialPressureLimit",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DifferentialPressureLimit",
+      "undefined" : "Differential pressure limit"
+    },
+    "id" : "221",
+    "superClasses" : [ "149" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BelowTolerance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BelowTolerance"
+    },
+    "id" : "383",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SpecificVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpecificVolumeFlow",
+      "undefined" : "Specific volume flow"
+    },
+    "id" : "535",
+    "superClasses" : [ "366" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Energy-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Energy-KRI"
+    },
+    "subClasses" : [ "605", "507" ],
+    "id" : "508",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PreCoolingCoilValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PreCoolingCoilValvePosition",
+      "undefined" : "Pre cooling coil valve position"
+    },
+    "id" : "593",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirVolumeFlow",
+      "undefined" : "Air volume flow"
+    },
+    "subClasses" : [ "355", "516", "427" ],
+    "id" : "356",
+    "superClasses" : [ "366" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ProjectPhase",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProjectPhase"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#EarlyDesign",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "EarlyDesign"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Operation",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Operation"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#DetailedDesign",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "DetailedDesign"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Construction",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Construction"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#UrbanDesign",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "UrbanDesign"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Commissioning",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Commissioning"
+      }
+    } ],
+    "id" : "435"
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingCircuitSupplyWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingCircuitSupplyWaterTemperature",
+      "undefined" : "Heating circuit supply water temperature"
+    },
+    "id" : "264",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#LifeCycleCost",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LifeCycleCost"
+    },
+    "id" : "21",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Comfort-KDP",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Comfort-KDP"
+    },
+    "subClasses" : [ "525", "528" ],
+    "id" : "227",
+    "superClasses" : [ "195" ]
+  }, {
+    "iri" : "https://w3id.org/mm#LightingEnergyConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LightingEnergyConsumption",
+      "undefined" : "Lighting energy consumption"
+    },
+    "id" : "502",
+    "superClasses" : [ "154" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BoilerStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoilerStatus",
+      "undefined" : "Boiler status"
+    },
+    "id" : "392",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirTightness",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirTightness"
+    },
+    "id" : "151",
+    "superClasses" : [ "152" ]
+  }, {
+    "iri" : "https://w3id.org/mm#VolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VolumeFlow",
+      "undefined" : "Volume flow"
+    },
+    "subClasses" : [ "10", "356", "535" ],
+    "id" : "366",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FanCoilUnitValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FanCoilUnitValvePosition",
+      "undefined" : "Fan coil unit valve position"
+    },
+    "id" : "596",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FunctionalElement",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FunctionalElement"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#OfficeRoom",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "OfficeRoom"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#OuterWall",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "OuterWall"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Building",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Building"
+      }
+    } ],
+    "subClasses" : [ "538", "540" ],
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WindowStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WindowStatus",
+      "undefined" : "Window status"
+    },
+    "id" : "342",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutdoorHumidity",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutdoorHumidity",
+      "undefined" : "Outdoor humidity"
+    },
+    "id" : "19",
+    "superClasses" : [ "62", "425" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ChillerLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ChillerLevel",
+      "undefined" : "Chiller level"
+    },
+    "id" : "308",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PhotochemicalOzoneCreationPotential",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PhotochemicalOzoneCreationPotential"
+    },
+    "id" : "338",
+    "superClasses" : [ "286" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ProbabilityOfHigherExploitationCost",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProbabilityOfHigherExploitationCost"
+    },
+    "id" : "125",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterTemperature",
+      "undefined" : "Water temperature"
+    },
+    "subClasses" : [ "68", "490", "235", "156", "116", "368", "264", "421", "143", "196" ],
+    "id" : "69",
+    "superClasses" : [ "130" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PostCoolingCoilValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostCoolingCoilValvePosition",
+      "undefined" : "Post cooling coil valve position"
+    },
+    "id" : "583",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#TotalEnergyConsmption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TotalEnergyConsmption",
+      "undefined" : "Total energy consmption"
+    },
+    "id" : "503",
+    "superClasses" : [ "154" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DewPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DewPoint",
+      "undefined" : "Dew point"
+    },
+    "id" : "258",
+    "superClasses" : [ "62", "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirTemperature",
+      "undefined" : "Air temperature"
+    },
+    "subClasses" : [ "239", "207", "209", "211", "215" ],
+    "id" : "141",
+    "superClasses" : [ "130" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Schedule-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Schedule-KRI"
+    },
+    "id" : "568",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Threshold",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Threshold"
+    },
+    "id" : "34",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WindSpeedAroundBuilding",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WindSpeedAroundBuilding"
+    },
+    "id" : "243",
+    "superClasses" : [ "244" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Target",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Target"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#ProbabilityOfLowInternalRateOfReturnTarget",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "ProbabilityOfLowInternalRateOfReturnTarget"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#MyDecisionValueTarget",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "MyDecisionValueTarget"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#TotalEnergyConsumptionTarget",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "TotalEnergyConsumptionTarget"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#BuildingHeightTarget",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "BuildingHeightTarget"
+      }
+    } ],
+    "id" : "49",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirPressure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirPressure",
+      "undefined" : "Supply air pressure"
+    },
+    "id" : "75",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/mm#IndoorAirPressure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndoorAirPressure",
+      "undefined" : "Indoor air pressure"
+    },
+    "id" : "76",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DifferentialPressureAtNominalVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DifferentialPressureAtNominalVolumeFlow",
+      "undefined" : "Differential pressure at nominal volume flow"
+    },
+    "id" : "218",
+    "superClasses" : [ "149" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HumidifierStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HumidifierStatus",
+      "undefined" : "Humidifier status"
+    },
+    "id" : "175",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DifferentialPressure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DifferentialPressure",
+      "undefined" : "Differential pressure"
+    },
+    "subClasses" : [ "218", "221", "224" ],
+    "id" : "149",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#KeyDesignParameter",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "KeyDesignParameter"
+    },
+    "subClasses" : [ "227", "152", "65" ],
+    "comment" : {
+      "undefined" : "A metric that refers to a design constraints or objective, and that has one or more requirements."
+    },
+    "id" : "195",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ConstructionCost",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConstructionCost"
+    },
+    "id" : "88",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutsideTarget",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutsideTarget"
+    },
+    "id" : "390",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ElectricityConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricityConsumption",
+      "undefined" : "Electricity consumption"
+    },
+    "subClasses" : [ "199" ],
+    "id" : "200",
+    "superClasses" : [ "154" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ElectricPower",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElectricPower",
+      "undefined" : "Electric power"
+    },
+    "subClasses" : [ "56", "164" ],
+    "id" : "57",
+    "superClasses" : [ "67" ]
+  }, {
+    "iri" : "https://w3id.org/mm#IndoorLightLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndoorLightLevel",
+      "undefined" : "Indoor light level"
+    },
+    "id" : "186",
+    "superClasses" : [ "182" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Azimuth",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Azimuth",
+      "undefined" : "Azimuth"
+    },
+    "id" : "326",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BlindStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BlindStatus",
+      "undefined" : "Blind status"
+    },
+    "id" : "90",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ElementType",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElementType"
+    },
+    "id" : "540",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BelowTarget",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BelowTarget"
+    },
+    "id" : "405",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FanSpeedSetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FanSpeedSetPoint",
+      "undefined" : "Fan speed set point"
+    },
+    "id" : "347",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DistrictHeatingWaterVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistrictHeatingWaterVolumeFlow",
+      "undefined" : "District heating water volume flow"
+    },
+    "id" : "123",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ExploitationCost",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExploitationCost"
+    },
+    "id" : "81",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/mm#NumberOfFloors",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NumberOfFloors"
+    },
+    "id" : "542",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AcidificationPotential",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcidificationPotential"
+    },
+    "id" : "379",
+    "superClasses" : [ "286" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SpecificDifferentialPressure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SpecificDifferentialPressure",
+      "undefined" : "Specific differential pressure"
+    },
+    "id" : "224",
+    "superClasses" : [ "149" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutdoorAirPressure",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutdoorAirPressure",
+      "undefined" : "Outdoor air pressure"
+    },
+    "id" : "74",
+    "superClasses" : [ "62", "2" ]
+  }, {
+    "iri" : "https://w3id.org/mm#IndoorHumidity",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndoorHumidity",
+      "undefined" : "Indoor humidity"
+    },
+    "id" : "544",
+    "superClasses" : [ "425" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Environmental-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Environmental-KRI"
+    },
+    "id" : "557",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AboveTolerance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AboveTolerance"
+    },
+    "id" : "360",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#InTarget",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InTarget"
+    },
+    "id" : "364",
+    "superClasses" : [ "172" ]
+  }, {
+    "iri" : "https://w3id.org/mm#GlobalWarmingPotential",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GlobalWarmingPotential"
+    },
+    "id" : "375",
+    "superClasses" : [ "286" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ThermalTransmittance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThermalTransmittance"
+    },
+    "id" : "189",
+    "superClasses" : [ "152" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ColdWaterConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ColdWaterConsumption",
+      "undefined" : "Cold water consumption"
+    },
+    "id" : "518",
+    "superClasses" : [ "397" ]
+  }, {
+    "iri" : "https://w3id.org/mm#EnergyUseMean",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyUseMean"
+    },
+    "id" : "605",
+    "superClasses" : [ "508" ]
+  }, {
+    "iri" : "https://w3id.org/mm#EnergyEfficiencyRatio",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "EER",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnergyEfficiencyRatio",
+      "undefined" : "Energy efficiency ratio"
+    },
+    "comment" : {
+      "undefined" : "The EER is the ratio of the cooling capacity (in British thermal units (Btu) per hour) to the power input (in watts). \r\nThe higher the EER rating, the more efficient the air conditioner."
+    },
+    "id" : "184",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#CoolingEnergyConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CoolingEnergyConsumption",
+      "undefined" : "Cooling energy consumption"
+    },
+    "id" : "128",
+    "superClasses" : [ "154" ]
+  }, {
+    "iri" : "https://w3id.org/mm#BoilerValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoilerValvePosition",
+      "undefined" : "Boiler valve position"
+    },
+    "id" : "598",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingSystemLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingSystemLevel",
+      "undefined" : "Heating system level"
+    },
+    "id" : "102",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutdoorAirTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutdoorAirTemperature",
+      "undefined" : "Outdoor air temperature"
+    },
+    "id" : "215",
+    "superClasses" : [ "62", "141" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirPressureSetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirPressureSetPoint",
+      "undefined" : "Supply air pressure set point"
+    },
+    "id" : "47",
+    "superClasses" : [ "168" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ReturnAirVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReturnAirVolumeFlow",
+      "undefined" : "Return air volume flow"
+    },
+    "id" : "516",
+    "superClasses" : [ "356" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirPressureSetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirPressureSetPoint",
+      "undefined" : "Air pressure set point"
+    },
+    "subClasses" : [ "47" ],
+    "id" : "168",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DecisionValue",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DecisionValue"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#MyDecisionValue",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "MyDecisionValue"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A metric that reflects a decision trade-off between several competing objectives, constraints or risks."
+    },
+    "id" : "522",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://w3id.org/mm#IndoorAirQuality",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IndoorAirQuality",
+      "undefined" : "Indoor air quality"
+    },
+    "id" : "104",
+    "superClasses" : [ "121" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ElementInstance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ElementInstance"
+    },
+    "id" : "538",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/mm#SeasonalEnergyEfficiencyRatio",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "SEER",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SeasonalEnergyEfficiencyRatio",
+      "undefined" : "Seasonal energy efficiency ratio"
+    },
+    "comment" : {
+      "undefined" : "The SEER rating of a unit is the cooling output during a typical cooling-season divided by the total electric energy input during the same period. \r\nThe higher the unit's SEER rating the more energy efficient it is."
+    },
+    "id" : "358",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingSystemStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingSystemStatus",
+      "undefined" : "Heating system status"
+    },
+    "id" : "336",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#EnergyEfficiencyRate",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyEfficiencyRate",
+      "undefined" : "Energy efficiency rate"
+    },
+    "id" : "372",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AverageEnergySystemUnavailability",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AverageEnergySystemUnavailability"
+    },
+    "id" : "106",
+    "superClasses" : [ "107" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ExhaustAirVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExhaustAirVolumeFlow",
+      "undefined" : "Exhaust air volume flow"
+    },
+    "id" : "427",
+    "superClasses" : [ "356" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FanRotationalSpeed",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FanRotationalSpeed",
+      "undefined" : "Fan rotational speed"
+    },
+    "id" : "313",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutdoorAirDamperPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutdoorAirDamperPosition",
+      "undefined" : "Outdoor air damper position"
+    },
+    "id" : "25",
+    "superClasses" : [ "133" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ToleranceType",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ToleranceType"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#Absolute",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Absolute"
+      }
+    }, {
+      "iri" : "https://w3id.org/mm#Relative",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "Relative"
+      }
+    } ],
+    "id" : "432"
+  }, {
+    "iri" : "https://w3id.org/mm#RadiatorReturnWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiatorReturnWaterTemperature",
+      "undefined" : "Radiator return water temperature"
+    },
+    "id" : "368",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ShadingLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ShadingLevel",
+      "undefined" : "Shading level"
+    },
+    "id" : "288",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ReturnAirDamperPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReturnAirDamperPosition",
+      "undefined" : "Return air damper position"
+    },
+    "id" : "177",
+    "superClasses" : [ "133" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingCircuitPumpLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingCircuitPumpLevel",
+      "undefined" : "Heating circuit pump level"
+    },
+    "id" : "283",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Process",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process"
+    },
+    "id" : "205"
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingCircuitReturnWaterTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingCircuitReturnWaterTemperature",
+      "undefined" : "Heating circuit return water temperature"
+    },
+    "id" : "116",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ExhaustAirDamperPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExhaustAirDamperPosition",
+      "undefined" : "Exhaust air damper position"
+    },
+    "id" : "110",
+    "superClasses" : [ "133" ]
+  }, {
+    "iri" : "https://w3id.org/mm#DesignTemperatureWinter",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DesignTemperatureWinter"
+    },
+    "id" : "525",
+    "superClasses" : [ "227" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HVACmetric",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HVACmetric",
+      "undefined" : "HVAC metric"
+    },
+    "subClasses" : [ "41", "175", "179", "184", "50", "149", "154", "63", "102", "2", "114", "121", "84", "39", "137", "79", "83", "90", "96", "7", "14", "23", "30", "37", "45", "144", "318", "147", "425", "347", "254", "67", "392", "397", "32", "358", "336", "366", "372", "130", "133", "192", "340", "345", "342", "308", "311", "193", "182", "323", "313", "139", "292", "296", "98", "228", "258", "262", "269", "275", "279", "283", "288" ],
+    "comment" : {
+      "undefined" : "A metric that refers to the behavior of heating, ventilation and air conditioning systems."
+    },
+    "id" : "8",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://w3id.org/mm#AirQuality",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirQuality",
+      "undefined" : "Air quality"
+    },
+    "subClasses" : [ "104", "86" ],
+    "id" : "121",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ValvePosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ValvePosition",
+      "undefined" : "Valve position"
+    },
+    "subClasses" : [ "583", "212", "523", "411", "38", "77", "593", "247", "596", "598", "305" ],
+    "id" : "39",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Safety-KRI",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Safety-KRI"
+    },
+    "id" : "561",
+    "superClasses" : [ "304" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FanStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FanStatus",
+      "undefined" : "Fan status"
+    },
+    "id" : "79",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#KeyRiskIndicator",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "KeyRiskIndicator"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/mm#ProbabilityOfLowInternalRateOfReturn",
+      "baseIri" : "https://w3id.org/mm",
+      "labels" : {
+        "IRI-based" : "ProbabilityOfLowInternalRateOfReturn"
+      }
+    } ],
+    "subClasses" : [ "306", "557", "561", "107", "508", "119", "568", "447" ],
+    "comment" : {
+      "undefined" : "A metric that refers to one or several risks, and that has one or more requirements."
+    },
+    "id" : "304",
+    "superClasses" : [ "271" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WaterVolumeFlow",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterVolumeFlow",
+      "undefined" : "Water volume flow"
+    },
+    "subClasses" : [ "123" ],
+    "id" : "10",
+    "superClasses" : [ "366" ]
+  }, {
+    "iri" : "https://w3id.org/mm#FloorToCeilingHeight",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FloorToCeilingHeight"
+    },
+    "id" : "541",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "https://w3id.org/mm#RadiatorTemperature",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiatorTemperature",
+      "undefined" : "Radiator temperature"
+    },
+    "id" : "135",
+    "superClasses" : [ "130" ]
+  }, {
+    "iri" : "https://w3id.org/mm#HeatingEnergyConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatingEnergyConsumption",
+      "undefined" : "Heating energy consumption"
+    },
+    "id" : "504",
+    "superClasses" : [ "154" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PressureSetPoint",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PressureSetPoint",
+      "undefined" : "Pressure set point"
+    },
+    "subClasses" : [ "168" ],
+    "id" : "52",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WaterConsumption",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterConsumption",
+      "undefined" : "Water consumption"
+    },
+    "subClasses" : [ "298", "518" ],
+    "id" : "397",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ProbabilityOfLowRateOfReturn",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProbabilityOfLowRateOfReturn"
+    },
+    "id" : "118",
+    "superClasses" : [ "119" ]
+  }, {
+    "iri" : "https://w3id.org/mm#RenewableEnergy",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RenewableEnergy"
+    },
+    "id" : "570",
+    "superClasses" : [ "202" ]
+  }, {
+    "iri" : "https://w3id.org/mm#Metric",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metric"
+    },
+    "subClasses" : [ "522", "195", "62", "267", "304", "8" ],
+    "comment" : {
+      "undefined" : "A concrete metric that has a context, namely a product or a process it applies to."
+    },
+    "id" : "271"
+  }, {
+    "iri" : "https://w3id.org/mm#SupplyAirDamperPosition",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SupplyAirDamperPosition",
+      "undefined" : "Supply air damper position"
+    },
+    "id" : "166",
+    "superClasses" : [ "133" ]
+  }, {
+    "iri" : "https://w3id.org/mm#OutdoorLightLevel",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OutdoorLightLevel",
+      "undefined" : "Outdoor light level"
+    },
+    "id" : "181",
+    "superClasses" : [ "62", "182" ]
+  }, {
+    "iri" : "https://w3id.org/mm#WindSpeedAtBuildingEntrance",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WindSpeedAtBuildingEntrance"
+    },
+    "id" : "249",
+    "superClasses" : [ "244" ]
+  }, {
+    "iri" : "https://w3id.org/mm#PrimaryEnergy",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PrimaryEnergy"
+    },
+    "id" : "571",
+    "superClasses" : [ "202" ]
+  }, {
+    "iri" : "https://w3id.org/mm#ReturnAirFanStatus",
+    "baseIri" : "https://w3id.org/mm",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReturnAirFanStatus",
+      "undefined" : "Return air fan status"
+    },
+    "id" : "269",
+    "superClasses" : [ "8" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "97",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "109",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "115",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "155",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "197",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "203",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "220",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "231",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "236",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "241",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "242",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "246",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "248",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "251",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "253",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "255",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "256",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "257",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "259",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "260",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "263",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "265",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "268",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "270",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "272",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "273",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "274",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "276",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "277",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "278",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "280",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "281",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "282",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "284",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "285",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "287",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "289",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "290",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "291",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "293",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "294",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "295",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "297",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "299",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "300",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "301",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "302",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "303",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "307",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "309",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "310",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "312",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "314",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "315",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "316",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "317",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "319",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "320",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "321",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "322",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "324",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "325",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "327",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "328",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "329",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "330",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "331",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "332",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "334",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "335",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "337",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "339",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "341",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "343",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "344",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "346",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "348",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "349",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "350",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "352",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "353",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "354",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "357",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "359",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "361",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "362",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "363",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "365",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "367",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "369",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "371",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "373",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "374",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "376",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "377",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "378",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "380",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "381",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "382",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "384",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "385",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "386",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "387",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "388",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "389",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "391",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "393",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "394",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "396",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "398",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "401",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "403",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "404",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "406",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "407",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "408",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "410",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "399",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "412",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "413",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "414",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "415",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "416",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "417",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "419",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "420",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "422",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "424",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "426",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "428",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "430",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "431",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "434",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "437",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "439",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "440",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "441",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "442",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "443",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "444",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "445",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "446",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "448",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "449",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "450",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "451",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "452",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "453",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "454",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "455",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "456",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "457",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "458",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "459",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "460",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "461",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "462",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "464",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "466",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "467",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "468",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "469",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "470",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "471",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "472",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "474",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "475",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "476",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "477",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "478",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "479",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "480",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "481",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "482",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "483",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "484",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "485",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "487",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "489",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "491",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "492",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "493",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "494",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "495",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "496",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "497",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "498",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "499",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "500",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "501",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "505",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "512",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "513",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "514",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "515",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "517",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "520",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "521",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "524",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "526",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "527",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "529",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "530",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "531",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "532",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "533",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "534",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "536",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "537",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "539",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "547",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "549",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "550",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "551",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "552",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "553",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "554",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "555",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "556",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "558",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "559",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "560",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "562",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "563",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "564",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "565",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "566",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "567",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "572",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "573",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "575",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "576",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "577",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "578",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "579",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "580",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "581",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "582",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "584",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "585",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "586",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "587",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "588",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "589",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "590",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "591",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "592",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "594",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "595",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "597",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "599",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "600",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "601",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "602",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "603",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "604",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "606",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "607",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "609",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "610",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "611",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "612",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "613",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "400",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "614",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "608",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "615",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "616",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "617",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "618",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "619",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "620",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "621",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "622",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "623",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "624",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "625",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "626",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "627",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "628",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "629",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "630",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "631",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "632",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "633",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "634",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "635",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "636",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "637",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "638",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "639",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "640",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "641",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "642",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "643",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "644",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "645",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "646",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "647",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "648",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "649",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "650",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "651",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "652",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "653",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "654",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "655",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "656",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "657",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "658",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "659",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "660",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "661",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "662",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "663",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "664",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "665",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "666",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "667",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "668",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "669",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "670",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "671",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "672",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "673",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "674",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "675",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "676",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "677",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "678",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "679",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "680",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "681",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "682",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "683",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "684",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "685",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "686",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "687",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "688",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "689",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "690",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "domain" : "1",
+    "range" : "2",
+    "id" : "0",
+    "label" : {
+      "IRI-based" : "112",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "6"
+  }, {
+    "domain" : "1",
+    "range" : "10",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "113",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "5",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "range" : "8",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/mm#hasQualitativeValue",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasQualitativeValue"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "15"
+  }, {
+    "domain" : "1",
+    "range" : "19",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "114",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "5",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "8",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "domain" : "1",
+    "range" : "25",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "115",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "8",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "domain" : "1",
+    "range" : "32",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "116",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "35",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "8",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "domain" : "1",
+    "range" : "41",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "117",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "35",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "8",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "domain" : "1",
+    "range" : "47",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "118",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "35",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "domain" : "1",
+    "range" : "55",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "119",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasTime",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "hasTime"
+    },
+    "domain" : "59",
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "16",
+    "subproperty" : [ "72", "73" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "71"
+  }, {
+    "range" : "8",
+    "domain" : "79",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "range" : "5",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "8",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "domain" : "1",
+    "range" : "86",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "110",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "5",
+    "domain" : "88",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "8",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "domain" : "1",
+    "range" : "92",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "111",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "5",
+    "domain" : "94",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "8",
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "domain" : "1",
+    "range" : "98",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "101",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "51",
+    "domain" : "100",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "8",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "domain" : "1",
+    "range" : "104",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "102",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "107",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "range" : "8",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
+  }, {
+    "domain" : "1",
+    "range" : "110",
+    "id" : "109",
+    "label" : {
+      "IRI-based" : "103",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "107",
+    "domain" : "112",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "range" : "8",
+    "domain" : "114",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "domain" : "1",
+    "range" : "116",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "104",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "119",
+    "domain" : "118",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "8",
+    "domain" : "121",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "domain" : "1",
+    "range" : "123",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "105",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "119",
+    "domain" : "125",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "8",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "domain" : "1",
+    "range" : "128",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "106",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "130",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "range" : "8",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "domain" : "1",
+    "range" : "133",
+    "id" : "132",
+    "label" : {
+      "IRI-based" : "107",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "130",
+    "domain" : "135",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "8",
+    "domain" : "137",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "136"
+  }, {
+    "domain" : "1",
+    "range" : "139",
+    "id" : "138",
+    "label" : {
+      "IRI-based" : "108",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "130",
+    "domain" : "141",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "domain" : "1",
+    "range" : "143",
+    "id" : "142",
+    "label" : {
+      "IRI-based" : "109",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasValue",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "146",
+    "label" : {
+      "IRI-based" : "hasValue"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "145"
+  }, {
+    "range" : "8",
+    "domain" : "149",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "range" : "152",
+    "domain" : "151",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "8",
+    "domain" : "154",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "domain" : "1",
+    "range" : "156",
+    "id" : "155",
+    "label" : {
+      "IRI-based" : "100",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "152",
+    "domain" : "158",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "range" : "8",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "2",
+    "domain" : "75",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
+  }, {
+    "range" : "57",
+    "domain" : "56",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "2",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "range" : "57",
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "range" : "133",
+    "domain" : "166",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "168",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "133",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "169"
+  }, {
+    "range" : "8",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "170"
+  }, {
+    "range" : "133",
+    "domain" : "110",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "173"
+  }, {
+    "range" : "8",
+    "domain" : "175",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "174"
+  }, {
+    "range" : "133",
+    "domain" : "177",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "176"
+  }, {
+    "range" : "8",
+    "domain" : "179",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "178"
+  }, {
+    "range" : "182",
+    "domain" : "181",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "180"
+  }, {
+    "range" : "8",
+    "domain" : "184",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "183"
+  }, {
+    "range" : "182",
+    "domain" : "186",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "range" : "8",
+    "domain" : "50",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "range" : "152",
+    "domain" : "189",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "iri" : "https://w3id.org/mm#hasName",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "191",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "maxCardinality" : "1",
+    "cardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "190"
+  }, {
+    "range" : "195",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "194"
+  }, {
+    "range" : "2",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "197"
+  }, {
+    "range" : "200",
+    "domain" : "199",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "domain" : "204",
+    "range" : "205",
+    "id" : "203",
+    "label" : {
+      "IRI-based" : "200",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "141",
+    "domain" : "207",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "206"
+  }, {
+    "range" : "141",
+    "domain" : "209",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "208"
+  }, {
+    "range" : "141",
+    "domain" : "211",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "210"
+  }, {
+    "range" : "141",
+    "domain" : "215",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "214"
+  }, {
+    "range" : "149",
+    "domain" : "218",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "217"
+  }, {
+    "range" : "149",
+    "domain" : "221",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "220"
+  }, {
+    "range" : "149",
+    "domain" : "224",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "223"
+  }, {
+    "range" : "50",
+    "domain" : "51",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "225"
+  }, {
+    "range" : "195",
+    "domain" : "227",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "50",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "229"
+  }, {
+    "range" : "195",
+    "domain" : "152",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "iri" : "https://w3id.org/mm#hasIndex",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "232",
+    "label" : {
+      "IRI-based" : "hasIndex"
+    },
+    "domain" : "59",
+    "attributes" : [ "datatype" ],
+    "id" : "231"
+  }, {
+    "range" : "50",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "222",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "234"
+  }, {
+    "iri" : "https://w3id.org/mm#hasQuantitativeGoalValue",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "237",
+    "label" : {
+      "IRI-based" : "hasQuantitativeGoalValue"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "236"
+  }, {
+    "range" : "141",
+    "domain" : "239",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "domain" : "1",
+    "range" : "141",
+    "id" : "241",
+    "label" : {
+      "IRI-based" : "156",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "244",
+    "domain" : "243",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "242"
+  }, {
+    "range" : "121",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "domain" : "1",
+    "range" : "247",
+    "id" : "246",
+    "label" : {
+      "IRI-based" : "157",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "244",
+    "domain" : "249",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "121",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "domain" : "1",
+    "range" : "90",
+    "id" : "251",
+    "label" : {
+      "IRI-based" : "158",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "154",
+    "domain" : "200",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "252"
+  }, {
+    "domain" : "1",
+    "range" : "254",
+    "id" : "253",
+    "label" : {
+      "IRI-based" : "159",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "8",
+    "domain" : "228",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "255"
+  }, {
+    "range" : "67",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  }, {
+    "range" : "8",
+    "domain" : "258",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "257"
+  }, {
+    "domain" : "1",
+    "range" : "235",
+    "id" : "259",
+    "label" : {
+      "IRI-based" : "150",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "67",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "260"
+  }, {
+    "range" : "8",
+    "domain" : "262",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "domain" : "1",
+    "range" : "264",
+    "id" : "263",
+    "label" : {
+      "IRI-based" : "151",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "267",
+    "domain" : "266",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "8",
+    "domain" : "269",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetricType",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "204",
+    "label" : {
+      "IRI-based" : "hasMetricType"
+    },
+    "domain" : "271",
+    "attributes" : [ "object" ],
+    "id" : "270"
+  }, {
+    "domain" : "1",
+    "range" : "39",
+    "id" : "272",
+    "label" : {
+      "IRI-based" : "152",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "267",
+    "domain" : "244",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  }, {
+    "range" : "8",
+    "domain" : "275",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "274"
+  }, {
+    "domain" : "1",
+    "range" : "51",
+    "id" : "276",
+    "label" : {
+      "IRI-based" : "153",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "267",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "277"
+  }, {
+    "range" : "8",
+    "domain" : "279",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "278"
+  }, {
+    "domain" : "1",
+    "range" : "114",
+    "id" : "280",
+    "label" : {
+      "IRI-based" : "154",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "267",
+    "domain" : "202",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "281"
+  }, {
+    "range" : "8",
+    "domain" : "283",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "282"
+  }, {
+    "domain" : "1",
+    "range" : "53",
+    "id" : "284",
+    "label" : {
+      "IRI-based" : "155",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "267",
+    "domain" : "286",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "285"
+  }, {
+    "range" : "8",
+    "domain" : "288",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "287"
+  }, {
+    "domain" : "1",
+    "range" : "192",
+    "id" : "289",
+    "label" : {
+      "IRI-based" : "145",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "258",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "290"
+  }, {
+    "range" : "8",
+    "domain" : "292",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "291"
+  }, {
+    "domain" : "1",
+    "range" : "149",
+    "id" : "293",
+    "label" : {
+      "IRI-based" : "146",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "215",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "294"
+  }, {
+    "range" : "8",
+    "domain" : "296",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "295"
+  }, {
+    "domain" : "1",
+    "range" : "298",
+    "id" : "297",
+    "label" : {
+      "IRI-based" : "147",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "299"
+  }, {
+    "range" : "8",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "300"
+  }, {
+    "domain" : "1",
+    "range" : "38",
+    "id" : "301",
+    "label" : {
+      "IRI-based" : "148",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "67",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "302"
+  }, {
+    "domain" : "1",
+    "range" : "37",
+    "id" : "303",
+    "label" : {
+      "IRI-based" : "149",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "8",
+    "domain" : "308",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "307"
+  }, {
+    "range" : "62",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "309"
+  }, {
+    "range" : "8",
+    "domain" : "311",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "310"
+  }, {
+    "domain" : "1",
+    "range" : "313",
+    "id" : "312",
+    "label" : {
+      "IRI-based" : "140",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "179",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "314"
+  }, {
+    "range" : "8",
+    "domain" : "193",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "315"
+  }, {
+    "domain" : "1",
+    "range" : "218",
+    "id" : "316",
+    "label" : {
+      "IRI-based" : "141",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "318",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "317"
+  }, {
+    "range" : "8",
+    "domain" : "182",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "319"
+  }, {
+    "domain" : "1",
+    "range" : "61",
+    "id" : "320",
+    "label" : {
+      "IRI-based" : "142",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "296",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "321"
+  }, {
+    "range" : "8",
+    "domain" : "323",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "322"
+  }, {
+    "domain" : "1",
+    "range" : "23",
+    "id" : "324",
+    "label" : {
+      "IRI-based" : "143",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "326",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "325"
+  }, {
+    "range" : "8",
+    "domain" : "313",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "327"
+  }, {
+    "domain" : "1",
+    "range" : "199",
+    "id" : "328",
+    "label" : {
+      "IRI-based" : "144",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "329"
+  }, {
+    "range" : "8",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "330"
+  }, {
+    "domain" : "1",
+    "range" : "30",
+    "id" : "331",
+    "label" : {
+      "IRI-based" : "134",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "286",
+    "domain" : "333",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "332"
+  }, {
+    "range" : "8",
+    "domain" : "192",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "334"
+  }, {
+    "domain" : "1",
+    "range" : "336",
+    "id" : "335",
+    "label" : {
+      "IRI-based" : "135",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "286",
+    "domain" : "338",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "337"
+  }, {
+    "range" : "8",
+    "domain" : "340",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "339"
+  }, {
+    "domain" : "1",
+    "range" : "342",
+    "id" : "341",
+    "label" : {
+      "IRI-based" : "136",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "343"
+  }, {
+    "range" : "8",
+    "domain" : "345",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "344"
+  }, {
+    "domain" : "1",
+    "range" : "347",
+    "id" : "346",
+    "label" : {
+      "IRI-based" : "137",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "348"
+  }, {
+    "range" : "8",
+    "domain" : "342",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "349"
+  }, {
+    "domain" : "1",
+    "range" : "351",
+    "id" : "350",
+    "label" : {
+      "IRI-based" : "138",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "62",
+    "domain" : "181",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "352"
+  }, {
+    "domain" : "1",
+    "range" : "102",
+    "id" : "353",
+    "label" : {
+      "IRI-based" : "139",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetricRequirement",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasMetricRequirement"
+    },
+    "domain" : "216",
+    "attributes" : [ "object" ],
+    "id" : "354"
+  }, {
+    "range" : "8",
+    "domain" : "358",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "357"
+  }, {
+    "range" : "172",
+    "domain" : "360",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "359"
+  }, {
+    "range" : "8",
+    "domain" : "336",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "361"
+  }, {
+    "domain" : "1",
+    "range" : "308",
+    "id" : "362",
+    "label" : {
+      "IRI-based" : "130",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "364",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "363"
+  }, {
+    "range" : "8",
+    "domain" : "366",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "365"
+  }, {
+    "domain" : "1",
+    "range" : "368",
+    "id" : "367",
+    "label" : {
+      "IRI-based" : "131",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "286",
+    "domain" : "370",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "369"
+  }, {
+    "range" : "8",
+    "domain" : "372",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "371"
+  }, {
+    "domain" : "1",
+    "range" : "212",
+    "id" : "373",
+    "label" : {
+      "IRI-based" : "132",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "286",
+    "domain" : "375",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "374"
+  }, {
+    "range" : "8",
+    "domain" : "130",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "376"
+  }, {
+    "domain" : "1",
+    "range" : "288",
+    "id" : "377",
+    "label" : {
+      "IRI-based" : "133",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "286",
+    "domain" : "379",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "378"
+  }, {
+    "range" : "8",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "380"
+  }, {
+    "domain" : "1",
+    "range" : "50",
+    "id" : "381",
+    "label" : {
+      "IRI-based" : "123",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "383",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "382"
+  }, {
+    "range" : "8",
+    "domain" : "254",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "384"
+  }, {
+    "domain" : "1",
+    "range" : "56",
+    "id" : "385",
+    "label" : {
+      "IRI-based" : "124",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "171",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "386"
+  }, {
+    "range" : "8",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "387"
+  }, {
+    "domain" : "1",
+    "range" : "181",
+    "id" : "388",
+    "label" : {
+      "IRI-based" : "125",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "390",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "389"
+  }, {
+    "range" : "8",
+    "domain" : "392",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "391"
+  }, {
+    "domain" : "1",
+    "range" : "75",
+    "id" : "393",
+    "label" : {
+      "IRI-based" : "126",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "395",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "394"
+  }, {
+    "range" : "8",
+    "domain" : "397",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "396"
+  }, {
+    "iri" : "https://w3id.org/mm#isDerivedFrom",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "271",
+    "label" : {
+      "IRI-based" : "isDerivedFrom"
+    },
+    "domain" : "271",
+    "subproperty" : [ "399", "400" ],
+    "attributes" : [ "object" ],
+    "id" : "398"
+  }, {
+    "iri" : "https://w3id.org/mm#hasCategory",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "402",
+    "label" : {
+      "IRI-based" : "hasCategory"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "401"
+  }, {
+    "domain" : "1",
+    "range" : "305",
+    "id" : "403",
+    "label" : {
+      "IRI-based" : "127",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "405",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "404"
+  }, {
+    "range" : "8",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "406"
+  }, {
+    "domain" : "1",
+    "range" : "144",
+    "id" : "407",
+    "label" : {
+      "IRI-based" : "128",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "172",
+    "domain" : "409",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "408"
+  }, {
+    "domain" : "1",
+    "range" : "84",
+    "id" : "410",
+    "label" : {
+      "IRI-based" : "129",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#isMeanOf",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isMeanOf"
+    },
+    "superproperty" : [ "398" ],
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "399"
+  }, {
+    "iri" : "https://w3id.org/mm#hasThreshold",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasThreshold"
+    },
+    "domain" : "271",
+    "attributes" : [ "object" ],
+    "id" : "412"
+  }, {
+    "range" : "8",
+    "domain" : "144",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "413"
+  }, {
+    "range" : "53",
+    "domain" : "92",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "414"
+  }, {
+    "range" : "8",
+    "domain" : "318",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "415"
+  }, {
+    "domain" : "1",
+    "range" : "279",
+    "id" : "416",
+    "label" : {
+      "IRI-based" : "120",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "55",
+    "domain" : "418",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "417"
+  }, {
+    "range" : "8",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "419"
+  }, {
+    "domain" : "1",
+    "range" : "421",
+    "id" : "420",
+    "label" : {
+      "IRI-based" : "121",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "55",
+    "domain" : "423",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "422"
+  }, {
+    "range" : "8",
+    "domain" : "425",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "424"
+  }, {
+    "domain" : "1",
+    "range" : "427",
+    "id" : "426",
+    "label" : {
+      "IRI-based" : "122",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "429",
+    "domain" : "172",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "428"
+  }, {
+    "range" : "8",
+    "domain" : "347",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "430"
+  }, {
+    "range" : "432",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "431"
+  }, {
+    "iri" : "https://w3id.org/mm#usedInProjectPhase",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "435",
+    "label" : {
+      "IRI-based" : "usedInProjectPhase"
+    },
+    "domain" : "271",
+    "attributes" : [ "object" ],
+    "id" : "434"
+  }, {
+    "range" : "438",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "437"
+  }, {
+    "range" : "435",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "439"
+  }, {
+    "range" : "59",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "440"
+  }, {
+    "range" : "432",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "441"
+  }, {
+    "range" : "28",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "442"
+  }, {
+    "range" : "205",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "443"
+  }, {
+    "range" : "28",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "444"
+  }, {
+    "range" : "205",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "445"
+  }, {
+    "range" : "438",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "446"
+  }, {
+    "range" : "435",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "448"
+  }, {
+    "range" : "35",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "449"
+  }, {
+    "range" : "432",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "450"
+  }, {
+    "range" : "59",
+    "domain" : "433",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "451"
+  }, {
+    "range" : "28",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "452"
+  }, {
+    "range" : "205",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "453"
+  }, {
+    "range" : "438",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "454"
+  }, {
+    "range" : "435",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "455"
+  }, {
+    "range" : "433",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "456"
+  }, {
+    "range" : "59",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "457"
+  }, {
+    "range" : "35",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "458"
+  }, {
+    "domain" : "204",
+    "range" : "205",
+    "id" : "459",
+    "label" : {
+      "IRI-based" : "50",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetricRequirement",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasMetricRequirement"
+    },
+    "domain" : "59",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "460"
+  }, {
+    "domain" : "204",
+    "range" : "28",
+    "id" : "461",
+    "label" : {
+      "IRI-based" : "51",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasUnit",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "463",
+    "label" : {
+      "IRI-based" : "hasUnit"
+    },
+    "maxCardinality" : "1",
+    "domain" : "271",
+    "attributes" : [ "datatype" ],
+    "id" : "462"
+  }, {
+    "iri" : "https://w3id.org/mm#hasName",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "465",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "domain" : "433",
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "464"
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetricRequirement",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasMetricRequirement"
+    },
+    "domain" : "271",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "466"
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetric",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "271",
+    "label" : {
+      "IRI-based" : "hasMetric"
+    },
+    "domain" : "35",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "467"
+  }, {
+    "range" : "438",
+    "domain" : "435",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "468"
+  }, {
+    "range" : "432",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "469"
+  }, {
+    "range" : "432",
+    "domain" : "438",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "470"
+  }, {
+    "range" : "432",
+    "domain" : "435",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "471"
+  }, {
+    "iri" : "https://w3id.org/mm#hasUpperBound",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "473",
+    "label" : {
+      "IRI-based" : "hasUpperBound"
+    },
+    "domain" : "35",
+    "attributes" : [ "datatype" ],
+    "id" : "472"
+  }, {
+    "range" : "438",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "474"
+  }, {
+    "range" : "435",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "475"
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetric",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "271",
+    "label" : {
+      "IRI-based" : "hasMetric"
+    },
+    "domain" : "219",
+    "attributes" : [ "object" ],
+    "id" : "476"
+  }, {
+    "range" : "432",
+    "domain" : "205",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "477"
+  }, {
+    "range" : "28",
+    "domain" : "205",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "478"
+  }, {
+    "range" : "432",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "479"
+  }, {
+    "range" : "438",
+    "domain" : "205",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "480"
+  }, {
+    "range" : "435",
+    "domain" : "205",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "481"
+  }, {
+    "range" : "28",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "482"
+  }, {
+    "range" : "205",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "483"
+  }, {
+    "range" : "438",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "484"
+  }, {
+    "range" : "435",
+    "domain" : "59",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "485"
+  }, {
+    "range" : "69",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "487"
+  }, {
+    "range" : "69",
+    "domain" : "490",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "489"
+  }, {
+    "domain" : "195",
+    "range" : "70",
+    "id" : "491",
+    "label" : {
+      "IRI-based" : "74",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "69",
+    "domain" : "235",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "492"
+  }, {
+    "domain" : "70",
+    "range" : "70",
+    "id" : "493",
+    "label" : {
+      "IRI-based" : "73",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "69",
+    "domain" : "156",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "494"
+  }, {
+    "iri" : "https://w3id.org/mm#hasVariantID",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "488",
+    "label" : {
+      "IRI-based" : "hasVariantID"
+    },
+    "domain" : "59",
+    "attributes" : [ "datatype" ],
+    "id" : "495"
+  }, {
+    "range" : "69",
+    "domain" : "116",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "496"
+  }, {
+    "range" : "69",
+    "domain" : "368",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "497"
+  }, {
+    "range" : "69",
+    "domain" : "264",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "498"
+  }, {
+    "range" : "69",
+    "domain" : "421",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "499"
+  }, {
+    "iri" : "https://w3id.org/mm#hasToleranceType",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "432",
+    "label" : {
+      "IRI-based" : "hasToleranceType"
+    },
+    "domain" : "43",
+    "attributes" : [ "functional", "object" ],
+    "id" : "500"
+  }, {
+    "range" : "69",
+    "domain" : "143",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "501"
+  }, {
+    "range" : "69",
+    "domain" : "196",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "505"
+  }, {
+    "range" : "52",
+    "domain" : "168",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "512"
+  }, {
+    "range" : "356",
+    "domain" : "355",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "513"
+  }, {
+    "range" : "397",
+    "domain" : "298",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "514"
+  }, {
+    "range" : "356",
+    "domain" : "516",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "515"
+  }, {
+    "range" : "397",
+    "domain" : "518",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "517"
+  }, {
+    "range" : "356",
+    "domain" : "427",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "520"
+  }, {
+    "range" : "271",
+    "domain" : "522",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "521"
+  }, {
+    "range" : "227",
+    "domain" : "525",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "524"
+  }, {
+    "range" : "271",
+    "domain" : "195",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "526"
+  }, {
+    "range" : "227",
+    "domain" : "528",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "527"
+  }, {
+    "range" : "271",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "529"
+  }, {
+    "range" : "366",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "530"
+  }, {
+    "range" : "271",
+    "domain" : "267",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "531"
+  }, {
+    "range" : "366",
+    "domain" : "356",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "532"
+  }, {
+    "range" : "271",
+    "domain" : "304",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "533"
+  }, {
+    "range" : "366",
+    "domain" : "535",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "534"
+  }, {
+    "range" : "271",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "536"
+  }, {
+    "range" : "27",
+    "domain" : "538",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "537"
+  }, {
+    "range" : "27",
+    "domain" : "540",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "539"
+  }, {
+    "iri" : "https://w3id.org/mm#hasName",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "546",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "domain" : "435",
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "547"
+  }, {
+    "iri" : "https://w3id.org/mm#hasName",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "548",
+    "label" : {
+      "IRI-based" : "hasName"
+    },
+    "domain" : "438",
+    "attributes" : [ "datatype", "someValues" ],
+    "id" : "549"
+  }, {
+    "domain" : "1",
+    "range" : "74",
+    "id" : "550",
+    "label" : {
+      "IRI-based" : "94",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "68",
+    "id" : "551",
+    "label" : {
+      "IRI-based" : "93",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "39",
+    "domain" : "305",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "552"
+  }, {
+    "domain" : "1",
+    "range" : "318",
+    "id" : "553",
+    "label" : {
+      "IRI-based" : "96",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "304",
+    "domain" : "306",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "554"
+  }, {
+    "domain" : "1",
+    "range" : "76",
+    "id" : "555",
+    "label" : {
+      "IRI-based" : "95",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "304",
+    "domain" : "557",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "556"
+  }, {
+    "iri" : "https://w3id.org/mm#hasQualitativeGoalValue",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "509",
+    "label" : {
+      "IRI-based" : "hasQualitativeGoalValue"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "558"
+  }, {
+    "domain" : "1",
+    "range" : "269",
+    "id" : "559",
+    "label" : {
+      "IRI-based" : "90",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "304",
+    "domain" : "561",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "560"
+  }, {
+    "range" : "304",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "562"
+  }, {
+    "domain" : "1",
+    "range" : "544",
+    "id" : "563",
+    "label" : {
+      "IRI-based" : "92",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "304",
+    "domain" : "508",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "564"
+  }, {
+    "domain" : "1",
+    "range" : "164",
+    "id" : "565",
+    "label" : {
+      "IRI-based" : "91",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "304",
+    "domain" : "119",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "566"
+  }, {
+    "range" : "304",
+    "domain" : "568",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "567"
+  }, {
+    "range" : "304",
+    "domain" : "447",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "572"
+  }, {
+    "range" : "10",
+    "domain" : "123",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "573"
+  }, {
+    "iri" : "https://w3id.org/mm#hasTarget",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasTarget"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "domain" : "1",
+    "range" : "83",
+    "id" : "575",
+    "label" : {
+      "IRI-based" : "87",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "228",
+    "id" : "576",
+    "label" : {
+      "IRI-based" : "86",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "490",
+    "id" : "577",
+    "label" : {
+      "IRI-based" : "89",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "518",
+    "id" : "578",
+    "label" : {
+      "IRI-based" : "88",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "535",
+    "id" : "579",
+    "label" : {
+      "IRI-based" : "83",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "67",
+    "id" : "580",
+    "label" : {
+      "IRI-based" : "82",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "221",
+    "id" : "581",
+    "label" : {
+      "IRI-based" : "85",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "39",
+    "domain" : "583",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "582"
+  }, {
+    "domain" : "1",
+    "range" : "200",
+    "id" : "584",
+    "label" : {
+      "IRI-based" : "84",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "39",
+    "domain" : "212",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "585"
+  }, {
+    "range" : "39",
+    "domain" : "523",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "586"
+  }, {
+    "range" : "39",
+    "domain" : "411",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "587"
+  }, {
+    "domain" : "1",
+    "range" : "66",
+    "id" : "588",
+    "label" : {
+      "IRI-based" : "81",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "39",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "589"
+  }, {
+    "domain" : "1",
+    "range" : "166",
+    "id" : "590",
+    "label" : {
+      "IRI-based" : "80",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "39",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "591"
+  }, {
+    "range" : "39",
+    "domain" : "593",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "592"
+  }, {
+    "range" : "39",
+    "domain" : "247",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "594"
+  }, {
+    "range" : "39",
+    "domain" : "596",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "595"
+  }, {
+    "range" : "39",
+    "domain" : "598",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "597"
+  }, {
+    "iri" : "https://w3id.org/mm#assessedBy",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "438",
+    "label" : {
+      "IRI-based" : "assessedBy"
+    },
+    "domain" : "271",
+    "attributes" : [ "object" ],
+    "id" : "599"
+  }, {
+    "domain" : "1",
+    "range" : "154",
+    "id" : "600",
+    "label" : {
+      "IRI-based" : "79",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "355",
+    "id" : "601",
+    "label" : {
+      "IRI-based" : "76",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "323",
+    "id" : "602",
+    "label" : {
+      "IRI-based" : "75",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "516",
+    "id" : "603",
+    "label" : {
+      "IRI-based" : "78",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "224",
+    "id" : "604",
+    "label" : {
+      "IRI-based" : "77",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetricClassID",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "519",
+    "label" : {
+      "IRI-based" : "hasMetricClassID"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "606"
+  }, {
+    "iri" : "https://w3id.org/mm#composes",
+    "inverse" : "608",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "composes"
+    },
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "607"
+  }, {
+    "domain" : "1",
+    "range" : "196",
+    "id" : "609",
+    "label" : {
+      "IRI-based" : "98",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "179",
+    "id" : "610",
+    "label" : {
+      "IRI-based" : "97",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "96",
+    "id" : "611",
+    "label" : {
+      "IRI-based" : "99",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasMetricValue",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasMetricValue"
+    },
+    "domain" : "213",
+    "attributes" : [ "object" ],
+    "id" : "612"
+  }, {
+    "iri" : "https://w3id.org/mm#hasQuantitativeValue",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "510",
+    "label" : {
+      "IRI-based" : "hasQuantitativeValue"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "613"
+  }, {
+    "iri" : "https://w3id.org/mm#isStandardDeviationOf",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isStandardDeviationOf"
+    },
+    "superproperty" : [ "398" ],
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "400"
+  }, {
+    "iri" : "https://w3id.org/mm#hasLowerBound",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "511",
+    "label" : {
+      "IRI-based" : "hasLowerBound"
+    },
+    "domain" : "35",
+    "attributes" : [ "datatype" ],
+    "id" : "614"
+  }, {
+    "iri" : "https://w3id.org/mm#isComposedOf",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "isComposedOf"
+    },
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "608"
+  }, {
+    "iri" : "https://w3id.org/mm#hasDescription",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "543",
+    "label" : {
+      "IRI-based" : "hasDescription"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "615"
+  }, {
+    "iri" : "https://w3id.org/mm#hasRequirementCompliance",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "172",
+    "label" : {
+      "IRI-based" : "hasRequirementCompliance"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "616"
+  }, {
+    "iri" : "https://w3id.org/mm#hasWeight",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "486",
+    "label" : {
+      "IRI-based" : "hasWeight"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "617"
+  }, {
+    "domain" : "1",
+    "range" : "502",
+    "id" : "618",
+    "label" : {
+      "IRI-based" : "190",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "283",
+    "id" : "619",
+    "label" : {
+      "IRI-based" : "191",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "121",
+    "id" : "620",
+    "label" : {
+      "IRI-based" : "192",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "239",
+    "id" : "621",
+    "label" : {
+      "IRI-based" : "193",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "397",
+    "id" : "622",
+    "label" : {
+      "IRI-based" : "194",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "7",
+    "id" : "623",
+    "label" : {
+      "IRI-based" : "195",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "175",
+    "id" : "624",
+    "label" : {
+      "IRI-based" : "196",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "209",
+    "id" : "625",
+    "label" : {
+      "IRI-based" : "197",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "340",
+    "id" : "626",
+    "label" : {
+      "IRI-based" : "198",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "204",
+    "range" : "28",
+    "id" : "627",
+    "label" : {
+      "IRI-based" : "199",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "356",
+    "id" : "628",
+    "label" : {
+      "IRI-based" : "189",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "177",
+    "id" : "629",
+    "label" : {
+      "IRI-based" : "180",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "186",
+    "id" : "630",
+    "label" : {
+      "IRI-based" : "181",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "14",
+    "id" : "631",
+    "label" : {
+      "IRI-based" : "182",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "258",
+    "id" : "632",
+    "label" : {
+      "IRI-based" : "183",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "215",
+    "id" : "633",
+    "label" : {
+      "IRI-based" : "184",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "100",
+    "id" : "634",
+    "label" : {
+      "IRI-based" : "185",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "596",
+    "id" : "635",
+    "label" : {
+      "IRI-based" : "186",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "52",
+    "id" : "636",
+    "label" : {
+      "IRI-based" : "187",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "366",
+    "id" : "637",
+    "label" : {
+      "IRI-based" : "188",
+      "undefined" : "is a"
+    }
+  }, {
+    "domain" : "1",
+    "range" : "275",
+    "id" : "638",
+    "label" : {
+      "IRI-based" : "178",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "508",
+    "domain" : "507",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "639"
+  }, {
+    "domain" : "1",
+    "range" : "45",
+    "id" : "640",
+    "label" : {
+      "IRI-based" : "179",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#hasTolerance",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasTolerance"
+    },
+    "superproperty" : [ "71" ],
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "range" : "425",
+    "domain" : "544",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "641"
+  }, {
+    "domain" : "1",
+    "range" : "326",
+    "id" : "642",
+    "label" : {
+      "IRI-based" : "170",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "425",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "643"
+  }, {
+    "domain" : "1",
+    "range" : "135",
+    "id" : "644",
+    "label" : {
+      "IRI-based" : "171",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "425",
+    "domain" : "351",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "645"
+  }, {
+    "domain" : "1",
+    "range" : "182",
+    "id" : "646",
+    "label" : {
+      "IRI-based" : "172",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "202",
+    "domain" : "201",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "647"
+  }, {
+    "domain" : "1",
+    "range" : "504",
+    "id" : "648",
+    "label" : {
+      "IRI-based" : "173",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "202",
+    "domain" : "569",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "649"
+  }, {
+    "domain" : "1",
+    "range" : "425",
+    "id" : "650",
+    "label" : {
+      "IRI-based" : "174",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "202",
+    "domain" : "570",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "651"
+  }, {
+    "domain" : "1",
+    "range" : "262",
+    "id" : "652",
+    "label" : {
+      "IRI-based" : "175",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "202",
+    "domain" : "571",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "653"
+  }, {
+    "domain" : "1",
+    "range" : "207",
+    "id" : "654",
+    "label" : {
+      "IRI-based" : "176",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "1",
+    "domain" : "240",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "655"
+  }, {
+    "domain" : "1",
+    "range" : "292",
+    "id" : "656",
+    "label" : {
+      "IRI-based" : "177",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "508",
+    "domain" : "605",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "657"
+  }, {
+    "domain" : "1",
+    "range" : "130",
+    "id" : "658",
+    "label" : {
+      "IRI-based" : "167",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "65",
+    "domain" : "436",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "659"
+  }, {
+    "domain" : "1",
+    "range" : "79",
+    "id" : "660",
+    "label" : {
+      "IRI-based" : "168",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "65",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "661"
+  }, {
+    "domain" : "1",
+    "range" : "372",
+    "id" : "662",
+    "label" : {
+      "IRI-based" : "169",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/mm#appliesToEntity",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "appliesToEntity"
+    },
+    "domain" : "16",
+    "attributes" : [ "object" ],
+    "id" : "663"
+  }, {
+    "range" : "154",
+    "domain" : "502",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "664"
+  }, {
+    "domain" : "1",
+    "range" : "168",
+    "id" : "665",
+    "label" : {
+      "IRI-based" : "160",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "154",
+    "domain" : "503",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "666"
+  }, {
+    "domain" : "1",
+    "range" : "211",
+    "id" : "667",
+    "label" : {
+      "IRI-based" : "161",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "154",
+    "domain" : "128",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "668"
+  }, {
+    "domain" : "1",
+    "range" : "69",
+    "id" : "669",
+    "label" : {
+      "IRI-based" : "162",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "154",
+    "domain" : "504",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "670"
+  }, {
+    "domain" : "1",
+    "range" : "523",
+    "id" : "671",
+    "label" : {
+      "IRI-based" : "163",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "65",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "672"
+  }, {
+    "domain" : "1",
+    "range" : "598",
+    "id" : "673",
+    "label" : {
+      "IRI-based" : "164",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "65",
+    "domain" : "541",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "674"
+  }, {
+    "domain" : "1",
+    "range" : "57",
+    "id" : "675",
+    "label" : {
+      "IRI-based" : "165",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "65",
+    "domain" : "506",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "676"
+  }, {
+    "domain" : "1",
+    "range" : "345",
+    "id" : "677",
+    "label" : {
+      "IRI-based" : "166",
+      "undefined" : "is a"
+    }
+  }, {
+    "range" : "65",
+    "domain" : "542",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "678"
+  }, {
+    "iri" : "https://w3id.org/mm#hasOptimizationType",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "574",
+    "label" : {
+      "IRI-based" : "hasOptimizationType"
+    },
+    "domain" : "271",
+    "attributes" : [ "object" ],
+    "id" : "679"
+  }, {
+    "range" : "1",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "680"
+  }, {
+    "range" : "433",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "681"
+  }, {
+    "range" : "59",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "682"
+  }, {
+    "range" : "205",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "683"
+  }, {
+    "range" : "28",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "684"
+  }, {
+    "range" : "435",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "685"
+  }, {
+    "range" : "438",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "686"
+  }, {
+    "range" : "432",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "687"
+  }, {
+    "range" : "540",
+    "domain" : "538",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "688"
+  }, {
+    "range" : "35",
+    "domain" : "271",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "689"
+  }, {
+    "iri" : "https://w3id.org/mm#hasID",
+    "baseIri" : "https://w3id.org/mm",
+    "range" : "545",
+    "label" : {
+      "IRI-based" : "hasID"
+    },
+    "cardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "690"
+  } ]
+}

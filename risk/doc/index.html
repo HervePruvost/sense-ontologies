@@ -1,0 +1,2992 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>RISK: the risk ontology.</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/risk#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/risk#","name":"RISK: the risk ontology.", "headline":"The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain.", "datePublished":"2023-06-07", "version":"v1.0.0", "license":"http://creativecommons.org/licenses/by-sa/4.0", "author":[{"@type":"Person","name":"https://orcid.org/0000-0001-7604-8543","url":"https://orcid.org/0000-0001-7604-8543"},{"@type":"Person","name":"https://www.linkedin.com/in/hervepruvost","url":"https://www.linkedin.com/in/hervepruvost"},{"@type":"Person","name":"Hervé Pruvost"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>RISK: the risk ontology.</h1>
+<h2>Release 2023-06-07</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/risk#">https://w3id.org/risk#</a></dd>
+<dt>Revision:</dt>
+<dd>v1.0.0</dd>
+<dt>Issued on: </dt>
+<dd>2017-06-22</dd>
+<dt>Author:</dt>
+<dd>Hervé Pruvost</dd><dd><a href="https://orcid.org/0000-0001-7604-8543">https://orcid.org/0000-0001-7604-8543</a></dd><dd><a href="https://www.linkedin.com/in/hervepruvost">https://www.linkedin.com/in/hervepruvost</a></dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://www.eas.iis.fraunhofer.de/en.html">Fraunhofer IIS/EAS</a></dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://creativecommons.org/licenses/by-sa/4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by_sa/4.0-blue.svg" alt="http://creativecommons.org/licenses/by-sa/4.0" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Pruvost. H. (2023): The RISK Ontology for a risk management paradigm in the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/risk.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>risk</b></td><td>&lt;https://w3id.org/risk#&gt;</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>risk</b></td><td>&lt;https://www.w3id.org/risk&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">RISK: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://www.w3id.org/risk#BetterThanTarget" title="https://www.w3id.org/risk#BetterThanTarget">
+         <span>better than target</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#CertificationRisk" title="https://www.w3id.org/risk#CertificationRisk">
+         <span>certification risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ConstructionRisk" title="https://www.w3id.org/risk#ConstructionRisk">
+         <span>construction risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#CostRisk" title="https://www.w3id.org/risk#CostRisk">
+         <span>cost risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#CriticalError" title="https://www.w3id.org/risk#CriticalError">
+         <span>critical error</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#DesignRisk" title="https://www.w3id.org/risk#DesignRisk">
+         <span>design risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">
+         <span>energy risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#EntityAtRisk" title="https://www.w3id.org/risk#EntityAtRisk">Entity at risk</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Event" title="https://www.w3id.org/risk#Event">
+         <span>event</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#GeotechnicalMeasure" title="https://www.w3id.org/risk#GeotechnicalMeasure">
+         <span>geotechnical measure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">
+         <span>geotechnical risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#HighPitMeasure" title="https://www.w3id.org/risk#HighPitMeasure">
+         <span>high pit measure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#InTarget" title="https://www.w3id.org/risk#InTarget">
+         <span>in target</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#InTolerance" title="https://www.w3id.org/risk#InTolerance">
+         <span>in tolerance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#IncompleteData" title="https://www.w3id.org/risk#IncompleteData">
+         <span>incomplete data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#KnownMeasure" title="https://www.w3id.org/risk#KnownMeasure">
+         <span>known measure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#LegalRisk" title="https://www.w3id.org/risk#LegalRisk">
+         <span>legal risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Likelihood" title="https://www.w3id.org/risk#Likelihood">
+         <span>likelihood</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#LowPitMeasure" title="https://www.w3id.org/risk#LowPitMeasure">
+         <span>low pit measure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">
+         <span>metric value partition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#NoData" title="https://www.w3id.org/risk#NoData">
+         <span>no data</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Occurence" title="https://www.w3id.org/risk#Occurence">
+         <span>occurence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#OutsideTarget" title="https://www.w3id.org/risk#OutsideTarget">
+         <span>outside target</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#OutsideTolerance" title="https://www.w3id.org/risk#OutsideTolerance">
+         <span>outside tolerance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ProactiveMeasure" title="https://www.w3id.org/risk#ProactiveMeasure">
+         <span>proactive measure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ProbabilityDistribution"
+         title="https://www.w3id.org/risk#ProbabilityDistribution">
+         <span>probability distribution</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#QualitativeUncertainty" title="https://www.w3id.org/risk#QualitativeUncertainty">
+         <span>qualitative uncertainty</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#QuantitativeUncertainty"
+         title="https://www.w3id.org/risk#QuantitativeUncertainty">
+         <span>quantitative uncertainty</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Range" title="https://www.w3id.org/risk#Range">
+         <span>range</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ReactiveMeasure" title="https://www.w3id.org/risk#ReactiveMeasure">
+         <span>reactive measure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ReliabilityRisk" title="https://www.w3id.org/risk#ReliabilityRisk">
+         <span>reliability risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">
+         <span>risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#RiskEvent" title="https://www.w3id.org/risk#RiskEvent">
+         <span>risk event</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#RiskOccurence" title="https://www.w3id.org/risk#RiskOccurence">
+         <span>risk occurence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Warning" title="https://www.w3id.org/risk#Warning">
+         <span>warning</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://www.w3id.org/risk#assessedBy" title="https://www.w3id.org/risk#assessedBy">assessed by</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#assesses" title="https://www.w3id.org/risk#assesses">assesses</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#causedBy" title="https://www.w3id.org/risk#causedBy">
+         <span>caused by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#causes" title="https://www.w3id.org/risk#causes">
+         <span>causes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#effectedBy" title="https://www.w3id.org/risk#effectedBy">
+         <span>effected by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#effects" title="https://www.w3id.org/risk#effects">
+         <span>effects</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#hasEffect" title="https://www.w3id.org/risk#hasEffect">
+         <span>has effect</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#hasRisk" title="https://www.w3id.org/risk#hasRisk">has risk</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#hasTarget" title="https://www.w3id.org/risk#hasTarget">
+         <span>has target</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#hasTolerance" title="https://www.w3id.org/risk#hasTolerance">
+         <span>has tolerance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#isOccurenceOf" title="https://www.w3id.org/risk#isOccurenceOf">
+         <span>is occurence of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#occursAt" title="https://www.w3id.org/risk#occursAt">
+         <span>occurs at</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#reducesExpectedImpactOfRisk"
+         title="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">
+         <span>reduces expected impact of risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk"
+         title="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">
+         <span>reduces occurrence impact of risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#reducesRiskProbability" title="https://www.w3id.org/risk#reducesRiskProbability">
+         <span>reduces risk probability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#removesRisk" title="https://www.w3id.org/risk#removesRisk">
+         <span>removes risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#threatens" title="https://www.w3id.org/risk#threatens">
+         <span>threatens</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#treatsOccurrenceOfRisk" title="https://www.w3id.org/risk#treatsOccurrenceOfRisk">
+         <span>treats occurrence of risk</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#treatsRisk" title="https://www.w3id.org/risk#treatsRisk">
+         <span>treats risk</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://www.w3id.org/risk#isCritical" title="https://www.w3id.org/risk#isCritical">
+         <span>is critical</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#isToBeAvoided" title="https://www.w3id.org/risk#isToBeAvoided">
+         <span>is to be avoided</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#isToBeReduced" title="https://www.w3id.org/risk#isToBeReduced">
+         <span>is to be reduced</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#isTolerated" title="https://www.w3id.org/risk#isTolerated">
+         <span>is tolerated</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://www.w3id.org/risk#AirCooledButNotVentilated"
+         title="https://www.w3id.org/risk#AirCooledButNotVentilated">Air cooled but not ventilated</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#AirHeatedButNotVentilated"
+         title="https://www.w3id.org/risk#AirHeatedButNotVentilated">Air heated but not ventilated</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#AirHumidifiedButNotVentilated"
+         title="https://www.w3id.org/risk#AirHumidifiedButNotVentilated">Air humidified but not ventilated</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#AirReturnedButNotSupplied"
+         title="https://www.w3id.org/risk#AirReturnedButNotSupplied">Air returned but not supplied</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#AirSuppliedButNotReturned"
+         title="https://www.w3id.org/risk#AirSuppliedButNotReturned">Air supplied but not returned</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#BuildingHeight" title="https://www.w3id.org/risk#BuildingHeight">
+         <span>building height</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#BuildingPermissionRejected"
+         title="https://www.w3id.org/risk#BuildingPermissionRejected">
+         <span>building permission rejected</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#BuildingTooHigh" title="https://www.w3id.org/risk#BuildingTooHigh">
+         <span>building too high</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#DesignTemperature" title="https://www.w3id.org/risk#DesignTemperature">
+         <span>design temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#evacuate_building_site"
+         title="https://www.w3id.org/risk#evacuate_building_site">
+         <span>evacuate building site</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed"
+         title="https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed">Heat recovery inefficiently used</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#HeatRecoveryUnused" title="https://www.w3id.org/risk#HeatRecoveryUnused">Heat recovery unused</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated"
+         title="https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated">Heat recovery used but not ventilated</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#Install_Struts" title="https://www.w3id.org/risk#Install_Struts">
+         <span>install struts</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#lowSecurityIndex" title="https://www.w3id.org/risk#lowSecurityIndex">
+         <span>low security index</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ModelValidityLimitState_overstep"
+         title="https://www.w3id.org/risk#ModelValidityLimitState_overstep">
+         <span>model validity limit state overstep</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#NominalDesignTemperature_not_repected"
+         title="https://www.w3id.org/risk#NominalDesignTemperature_not_repected">
+         <span>nominal design temperature not repected</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#OverheatingThroughSolarGain"
+         title="https://www.w3id.org/risk#OverheatingThroughSolarGain">Overheating through solar gain</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#ServiceabilityLimitState_overstep"
+         title="https://www.w3id.org/risk#ServiceabilityLimitState_overstep">
+         <span>serviceability limit state overstep</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating"
+         title="https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating">Simulatenous air cooling and radiant heating</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling"
+         title="https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling">Simultaneous air heating and air cooling</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SpaceOverheating" title="https://www.w3id.org/risk#SpaceOverheating">Space overheating</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SpaceUndercooling" title="https://www.w3id.org/risk#SpaceUndercooling">Space undercooling</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SupplyAirHumidity_TooHigh"
+         title="https://www.w3id.org/risk#SupplyAirHumidity_TooHigh">Supply air humidity Too high</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SupplyAirHumidity_TooLow"
+         title="https://www.w3id.org/risk#SupplyAirHumidity_TooLow">Supply air humidity Too low</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SupplyAirPressure_TooHigh"
+         title="https://www.w3id.org/risk#SupplyAirPressure_TooHigh">Supply air pressure Too high</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SupplyAirPressure_TooLow"
+         title="https://www.w3id.org/risk#SupplyAirPressure_TooLow">Supply air pressure Too low</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SupplyAirTemperature_TooHigh"
+         title="https://www.w3id.org/risk#SupplyAirTemperature_TooHigh">Supply air temperature Too high</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#SupplyAirTemperature_TooLow"
+         title="https://www.w3id.org/risk#SupplyAirTemperature_TooLow">Supply air temperature Too low</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#UltimateLimitState_overstep"
+         title="https://www.w3id.org/risk#UltimateLimitState_overstep">
+         <span>ultimate limit state overstep</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#UnusedAppliances" title="https://www.w3id.org/risk#UnusedAppliances">Unused appliances</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#UnusedCoolingEnergy" title="https://www.w3id.org/risk#UnusedCoolingEnergy">Unused cooling energy</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#UnusedHeatingEnergy" title="https://www.w3id.org/risk#UnusedHeatingEnergy">Unused heating energy</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#UnusedLights" title="https://www.w3id.org/risk#UnusedLights">Unused lights</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#WastingEnergyThroughOpenings"
+         title="https://www.w3id.org/risk#WastingEnergyThroughOpenings">Wasting energy through openings</a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#WindowWallRatio" title="https://www.w3id.org/risk#WindowWallRatio">
+         <span>window wall ratio</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated"
+         title="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated">
+         <span>window wall ratio low but tolerated</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">RISK: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for RISK classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by RISK.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/risk#BetterThanTarget" title="https://www.w3id.org/risk#BetterThanTarget">
+            <span>better than target</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#CertificationRisk" title="https://www.w3id.org/risk#CertificationRisk">
+            <span>certification risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ConstructionRisk" title="https://www.w3id.org/risk#ConstructionRisk">
+            <span>construction risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#CostRisk" title="https://www.w3id.org/risk#CostRisk">
+            <span>cost risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#CriticalError" title="https://www.w3id.org/risk#CriticalError">
+            <span>critical error</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#DesignRisk" title="https://www.w3id.org/risk#DesignRisk">
+            <span>design risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">
+            <span>energy risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#EntityAtRisk" title="https://www.w3id.org/risk#EntityAtRisk">Entity at risk</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Event" title="https://www.w3id.org/risk#Event">
+            <span>event</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#GeotechnicalMeasure" title="https://www.w3id.org/risk#GeotechnicalMeasure">
+            <span>geotechnical measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">
+            <span>geotechnical risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#HighPitMeasure" title="https://www.w3id.org/risk#HighPitMeasure">
+            <span>high pit measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#InTarget" title="https://www.w3id.org/risk#InTarget">
+            <span>in target</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#InTolerance" title="https://www.w3id.org/risk#InTolerance">
+            <span>in tolerance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#IncompleteData" title="https://www.w3id.org/risk#IncompleteData">
+            <span>incomplete data</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#KnownMeasure" title="https://www.w3id.org/risk#KnownMeasure">
+            <span>known measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#LegalRisk" title="https://www.w3id.org/risk#LegalRisk">
+            <span>legal risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Likelihood" title="https://www.w3id.org/risk#Likelihood">
+            <span>likelihood</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#LowPitMeasure" title="https://www.w3id.org/risk#LowPitMeasure">
+            <span>low pit measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">
+            <span>metric value partition</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#NoData" title="https://www.w3id.org/risk#NoData">
+            <span>no data</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Occurence" title="https://www.w3id.org/risk#Occurence">
+            <span>occurence</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#OutsideTarget" title="https://www.w3id.org/risk#OutsideTarget">
+            <span>outside target</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#OutsideTolerance" title="https://www.w3id.org/risk#OutsideTolerance">
+            <span>outside tolerance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ProactiveMeasure" title="https://www.w3id.org/risk#ProactiveMeasure">
+            <span>proactive measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ProbabilityDistribution"
+            title="https://www.w3id.org/risk#ProbabilityDistribution">
+            <span>probability distribution</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#QualitativeUncertainty" title="https://www.w3id.org/risk#QualitativeUncertainty">
+            <span>qualitative uncertainty</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#QuantitativeUncertainty"
+            title="https://www.w3id.org/risk#QuantitativeUncertainty">
+            <span>quantitative uncertainty</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Range" title="https://www.w3id.org/risk#Range">
+            <span>range</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ReactiveMeasure" title="https://www.w3id.org/risk#ReactiveMeasure">
+            <span>reactive measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ReliabilityRisk" title="https://www.w3id.org/risk#ReliabilityRisk">
+            <span>reliability risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">
+            <span>risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#RiskEvent" title="https://www.w3id.org/risk#RiskEvent">
+            <span>risk event</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#RiskOccurence" title="https://www.w3id.org/risk#RiskOccurence">
+            <span>risk occurence</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Warning" title="https://www.w3id.org/risk#Warning">
+            <span>warning</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/risk#BetterThanTarget">
+      <h3>better than target<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#BetterThanTarget</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">metric value partition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#CertificationRisk">
+      <h3>certification risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#CertificationRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ConstructionRisk">
+      <h3>construction risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ConstructionRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#CostRisk">
+      <h3>cost risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#CostRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#CriticalError">
+      <h3>critical error<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#CriticalError</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Threshold"
+               target="_blank"
+               title="https://www.w3id.org/risk#Threshold">threshold</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#DesignRisk">
+      <h3>design risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#DesignRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#NominalDesignTemperature_not_repected"
+               title="https://www.w3id.org/risk#NominalDesignTemperature_not_repected">nominal design temperature not repected</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#EnergyRisk">
+      <h3>energy risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#EnergyRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#AirCooledButNotVentilated"
+               title="https://www.w3id.org/risk#AirCooledButNotVentilated">Air cooled but not ventilated</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#AirHeatedButNotVentilated"
+               title="https://www.w3id.org/risk#AirHeatedButNotVentilated">Air heated but not ventilated</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#AirHumidifiedButNotVentilated"
+               title="https://www.w3id.org/risk#AirHumidifiedButNotVentilated">Air humidified but not ventilated</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#AirReturnedButNotSupplied"
+               title="https://www.w3id.org/risk#AirReturnedButNotSupplied">Air returned but not supplied</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#AirSuppliedButNotReturned"
+               title="https://www.w3id.org/risk#AirSuppliedButNotReturned">Air supplied but not returned</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed"
+               title="https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed">Heat recovery inefficiently used</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#HeatRecoveryUnused" title="https://www.w3id.org/risk#HeatRecoveryUnused">Heat recovery unused</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated"
+               title="https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated">Heat recovery used but not ventilated</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#OverheatingThroughSolarGain"
+               title="https://www.w3id.org/risk#OverheatingThroughSolarGain">Overheating through solar gain</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating"
+               title="https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating">Simulatenous air cooling and radiant heating</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling"
+               title="https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling">Simultaneous air heating and air cooling</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SpaceOverheating" title="https://www.w3id.org/risk#SpaceOverheating">Space overheating</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SpaceUndercooling" title="https://www.w3id.org/risk#SpaceUndercooling">Space undercooling</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SupplyAirHumidity_TooHigh"
+               title="https://www.w3id.org/risk#SupplyAirHumidity_TooHigh">Supply air humidity Too high</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SupplyAirHumidity_TooLow"
+               title="https://www.w3id.org/risk#SupplyAirHumidity_TooLow">Supply air humidity Too low</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SupplyAirPressure_TooHigh"
+               title="https://www.w3id.org/risk#SupplyAirPressure_TooHigh">Supply air pressure Too high</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SupplyAirPressure_TooLow"
+               title="https://www.w3id.org/risk#SupplyAirPressure_TooLow">Supply air pressure Too low</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SupplyAirTemperature_TooHigh"
+               title="https://www.w3id.org/risk#SupplyAirTemperature_TooHigh">Supply air temperature Too high</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#SupplyAirTemperature_TooLow"
+               title="https://www.w3id.org/risk#SupplyAirTemperature_TooLow">Supply air temperature Too low</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#UnusedAppliances" title="https://www.w3id.org/risk#UnusedAppliances">Unused appliances</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#UnusedCoolingEnergy" title="https://www.w3id.org/risk#UnusedCoolingEnergy">Unused cooling energy</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#UnusedHeatingEnergy" title="https://www.w3id.org/risk#UnusedHeatingEnergy">Unused heating energy</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#UnusedLights" title="https://www.w3id.org/risk#UnusedLights">Unused lights</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#WastingEnergyThroughOpenings"
+               title="https://www.w3id.org/risk#WastingEnergyThroughOpenings">Wasting energy through openings</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#EntityAtRisk">
+      <h3>Entity at risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#EntityAtRisk</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#hasRisk" title="https://www.w3id.org/risk#hasRisk">has risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Event">
+      <h3>event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Event</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Problem"
+               target="_blank"
+               title="https://www.w3id.org/risk#Problem">problem</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#GeotechnicalMeasure">
+      <h3>geotechnical measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#GeotechnicalMeasure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#KnownMeasure" title="https://www.w3id.org/risk#KnownMeasure">known measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#HighPitMeasure" title="https://www.w3id.org/risk#HighPitMeasure">high pit measure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#LowPitMeasure" title="https://www.w3id.org/risk#LowPitMeasure">low pit measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#GeotechnicalRisk">
+      <h3>geotechnical risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#GeotechnicalRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#lowSecurityIndex" title="https://www.w3id.org/risk#lowSecurityIndex">low security index</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#ModelValidityLimitState_overstep"
+               title="https://www.w3id.org/risk#ModelValidityLimitState_overstep">model validity limit state overstep</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#ServiceabilityLimitState_overstep"
+               title="https://www.w3id.org/risk#ServiceabilityLimitState_overstep">serviceability limit state overstep</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#UltimateLimitState_overstep"
+               title="https://www.w3id.org/risk#UltimateLimitState_overstep">ultimate limit state overstep</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#HighPitMeasure">
+      <h3>high pit measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#HighPitMeasure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalMeasure" title="https://www.w3id.org/risk#GeotechnicalMeasure">geotechnical measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#InTarget">
+      <h3>in target<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#InTarget</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">metric value partition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#InTolerance">
+      <h3>in tolerance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#InTolerance</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">metric value partition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#WindowWallRatio" title="https://www.w3id.org/risk#WindowWallRatio">window wall ratio</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#IncompleteData">
+      <h3>incomplete data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#IncompleteData</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#QualitativeUncertainty" title="https://www.w3id.org/risk#QualitativeUncertainty">qualitative uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#KnownMeasure">
+      <h3>known measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#KnownMeasure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Measure"
+               target="_blank"
+               title="https://www.w3id.org/risk#Measure">measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalMeasure" title="https://www.w3id.org/risk#GeotechnicalMeasure">geotechnical measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#evacuate_building_site"
+               title="https://www.w3id.org/risk#evacuate_building_site">evacuate building site</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#Install_Struts" title="https://www.w3id.org/risk#Install_Struts">install struts</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#LegalRisk">
+      <h3>legal risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#LegalRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#BuildingPermissionRejected"
+               title="https://www.w3id.org/risk#BuildingPermissionRejected">building permission rejected</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Likelihood">
+      <h3>likelihood<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Likelihood</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#QuantitativeUncertainty"
+               title="https://www.w3id.org/risk#QuantitativeUncertainty">quantitative uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#LowPitMeasure">
+      <h3>low pit measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#LowPitMeasure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalMeasure" title="https://www.w3id.org/risk#GeotechnicalMeasure">geotechnical measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#MetricValuePartition">
+      <h3>metric value partition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#MetricValuePartition</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#ValuePartition"
+               target="_blank"
+               title="https://www.w3id.org/risk#ValuePartition">value partition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#BetterThanTarget" title="https://www.w3id.org/risk#BetterThanTarget">better than target</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#InTarget" title="https://www.w3id.org/risk#InTarget">in target</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#InTolerance" title="https://www.w3id.org/risk#InTolerance">in tolerance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#OutsideTarget" title="https://www.w3id.org/risk#OutsideTarget">outside target</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#OutsideTolerance" title="https://www.w3id.org/risk#OutsideTolerance">outside tolerance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#NoData">
+      <h3>no data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#NoData</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#QualitativeUncertainty" title="https://www.w3id.org/risk#QualitativeUncertainty">qualitative uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Occurence">
+      <h3>occurence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Occurence</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Problem"
+               target="_blank"
+               title="https://www.w3id.org/risk#Problem">problem</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#https://www.w3id.org/risk#occursAt" title="https://www.w3id.org/risk#occursAt">occurs at</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Problem"
+               target="_blank"
+               title="https://www.w3id.org/risk#Problem">problem</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#RiskOccurence" title="https://www.w3id.org/risk#RiskOccurence">risk occurence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#BuildingTooHigh" title="https://www.w3id.org/risk#BuildingTooHigh">building too high</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated"
+               title="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated">window wall ratio low but tolerated</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#OutsideTarget">
+      <h3>outside target<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#OutsideTarget</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">metric value partition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#WindowWallRatio" title="https://www.w3id.org/risk#WindowWallRatio">window wall ratio</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#OutsideTolerance">
+      <h3>outside tolerance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#OutsideTolerance</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#MetricValuePartition" title="https://www.w3id.org/risk#MetricValuePartition">metric value partition</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#BuildingHeight" title="https://www.w3id.org/risk#BuildingHeight">building height</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://www.w3id.org/risk#DesignTemperature" title="https://www.w3id.org/risk#DesignTemperature">design temperature</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ProactiveMeasure">
+      <h3>proactive measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ProactiveMeasure</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Measure"
+               target="_blank"
+               title="https://www.w3id.org/risk#Measure">measure</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#https://www.w3id.org/risk#treatsRisk" title="https://www.w3id.org/risk#treatsRisk">treats risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Measure"
+               target="_blank"
+               title="https://www.w3id.org/risk#Measure">measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ProbabilityDistribution">
+      <h3>probability distribution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ProbabilityDistribution</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#QuantitativeUncertainty"
+               title="https://www.w3id.org/risk#QuantitativeUncertainty">quantitative uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#QualitativeUncertainty">
+      <h3>qualitative uncertainty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#QualitativeUncertainty</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Uncertainty"
+               target="_blank"
+               title="https://www.w3id.org/risk#Uncertainty">uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#IncompleteData" title="https://www.w3id.org/risk#IncompleteData">incomplete data</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#NoData" title="https://www.w3id.org/risk#NoData">no data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#QuantitativeUncertainty">
+      <h3>quantitative uncertainty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#QuantitativeUncertainty</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Uncertainty"
+               target="_blank"
+               title="https://www.w3id.org/risk#Uncertainty">uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Likelihood" title="https://www.w3id.org/risk#Likelihood">likelihood</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#ProbabilityDistribution"
+               title="https://www.w3id.org/risk#ProbabilityDistribution">probability distribution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#Range" title="https://www.w3id.org/risk#Range">range</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Range">
+      <h3>range<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Range</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#QuantitativeUncertainty"
+               title="https://www.w3id.org/risk#QuantitativeUncertainty">quantitative uncertainty</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ReactiveMeasure">
+      <h3>reactive measure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ReactiveMeasure</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Measure"
+               target="_blank"
+               title="https://www.w3id.org/risk#Measure">measure</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#https://www.w3id.org/risk#treatsOccurrenceOfRisk" title="https://www.w3id.org/risk#treatsOccurrenceOfRisk">treats occurrence of risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="https://www.w3id.org/risk#Problem"
+               target="_blank"
+               title="https://www.w3id.org/risk#Problem">problem</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Measure"
+               target="_blank"
+               title="https://www.w3id.org/risk#Measure">measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ReliabilityRisk">
+      <h3>reliability risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ReliabilityRisk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Risk">
+      <h3>risk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Risk</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Problem"
+               target="_blank"
+               title="https://www.w3id.org/risk#Problem">problem</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#CertificationRisk" title="https://www.w3id.org/risk#CertificationRisk">certification risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#ConstructionRisk" title="https://www.w3id.org/risk#ConstructionRisk">construction risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#CostRisk" title="https://www.w3id.org/risk#CostRisk">cost risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#DesignRisk" title="https://www.w3id.org/risk#DesignRisk">design risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">geotechnical risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#LegalRisk" title="https://www.w3id.org/risk#LegalRisk">legal risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#ReliabilityRisk" title="https://www.w3id.org/risk#ReliabilityRisk">reliability risk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://www.w3id.org/risk#RiskEvent" title="https://www.w3id.org/risk#RiskEvent">risk event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#isToBeAvoided" title="https://www.w3id.org/risk#isToBeAvoided">is to be avoided</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/risk#isToBeReduced" title="https://www.w3id.org/risk#isToBeReduced">is to be reduced</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/risk#isTolerated" title="https://www.w3id.org/risk#isTolerated">is tolerated</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://www.w3id.org/risk#occursAt" title="https://www.w3id.org/risk#occursAt">occurs at</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/risk#threatens" title="https://www.w3id.org/risk#threatens">threatens</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#isOccurenceOf" title="https://www.w3id.org/risk#isOccurenceOf">is occurence of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/risk#reducesExpectedImpactOfRisk"
+               title="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">reduces expected impact of risk</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#RiskEvent">
+      <h3>risk event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#RiskEvent</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Event" title="https://www.w3id.org/risk#Event">event</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> 
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#RiskOccurence">
+      <h3>risk occurence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#RiskOccurence</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Occurence" title="https://www.w3id.org/risk#Occurence">occurence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#isOccurenceOf" title="https://www.w3id.org/risk#isOccurenceOf">is occurence of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Warning">
+      <h3>warning<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Warning</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://www.w3id.org/risk#Threshold"
+               target="_blank"
+               title="https://www.w3id.org/risk#Threshold">threshold</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/risk#assessedBy" title="https://www.w3id.org/risk#assessedBy">assessed by</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#assesses" title="https://www.w3id.org/risk#assesses">assesses</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#causedBy" title="https://www.w3id.org/risk#causedBy">
+            <span>caused by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#causes" title="https://www.w3id.org/risk#causes">
+            <span>causes</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#effectedBy" title="https://www.w3id.org/risk#effectedBy">
+            <span>effected by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#effects" title="https://www.w3id.org/risk#effects">
+            <span>effects</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#hasEffect" title="https://www.w3id.org/risk#hasEffect">
+            <span>has effect</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#hasRisk" title="https://www.w3id.org/risk#hasRisk">has risk</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#hasTarget" title="https://www.w3id.org/risk#hasTarget">
+            <span>has target</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#hasTolerance" title="https://www.w3id.org/risk#hasTolerance">
+            <span>has tolerance</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#isOccurenceOf" title="https://www.w3id.org/risk#isOccurenceOf">
+            <span>is occurence of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#occursAt" title="https://www.w3id.org/risk#occursAt">
+            <span>occurs at</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#reducesExpectedImpactOfRisk"
+            title="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">
+            <span>reduces expected impact of risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk"
+            title="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">
+            <span>reduces occurrence impact of risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#reducesRiskProbability" title="https://www.w3id.org/risk#reducesRiskProbability">
+            <span>reduces risk probability</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#removesRisk" title="https://www.w3id.org/risk#removesRisk">
+            <span>removes risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#threatens" title="https://www.w3id.org/risk#threatens">
+            <span>threatens</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#treatsOccurrenceOfRisk" title="https://www.w3id.org/risk#treatsOccurrenceOfRisk">
+            <span>treats occurrence of risk</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#treatsRisk" title="https://www.w3id.org/risk#treatsRisk">
+            <span>treats risk</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/risk#assessedBy">
+      <h3>assessed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#assessedBy</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#assesses" title="https://www.w3id.org/risk#assesses">assesses</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#assesses">
+      <h3>assesses<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#assesses</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#assessedBy" title="https://www.w3id.org/risk#assessedBy">assessed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#causedBy">
+      <h3>caused by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#causedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has equivalent properties</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#isEffectOf"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#isEffectOf">is effect of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#causes">
+      <h3>causes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#causes</p>
+      <div class="description">
+         <dl>
+            <dt>has equivalent properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#hasEffect" title="https://www.w3id.org/risk#hasEffect">has effect</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#effectedBy">
+      <h3>effected by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#effectedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#effects" title="https://www.w3id.org/risk#effects">effects</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#effects">
+      <h3>effects<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#effects</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#effectedBy" title="https://www.w3id.org/risk#effectedBy">effected by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#hasEffect">
+      <h3>has effect<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#hasEffect</p>
+      <div class="description">
+         <dl>
+            <dt>has equivalent properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#causes" title="https://www.w3id.org/risk#causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#hasRisk">
+      <h3>has risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#hasRisk</p>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#hasTarget">
+      <h3>has target<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#hasTarget</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#hasThreshold"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#hasThreshold">has threshold</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#hasTolerance">
+      <h3>has tolerance<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#hasTolerance</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#hasThreshold"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#hasThreshold">has threshold</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#isOccurenceOf">
+      <h3>is occurence of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#isOccurenceOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#RiskOccurence" title="https://www.w3id.org/risk#RiskOccurence">risk occurence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#occursAt">
+      <h3>occurs at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#occursAt</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">
+      <h3>reduces expected impact of risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#reducesExpectedImpactOfRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#treatsRisk" title="https://www.w3id.org/risk#treatsRisk">treats risk</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">
+      <h3>reduces occurrence impact of risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#treatsOccurrenceOfRisk" title="https://www.w3id.org/risk#treatsOccurrenceOfRisk">treats occurrence of risk</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#reducesRiskProbability">
+      <h3>reduces risk probability<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#reducesRiskProbability</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#treatsRisk" title="https://www.w3id.org/risk#treatsRisk">treats risk</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#removesRisk">
+      <h3>removes risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#removesRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#treatsRisk" title="https://www.w3id.org/risk#treatsRisk">treats risk</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#threatens">
+      <h3>threatens<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#threatens</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#treatsOccurrenceOfRisk">
+      <h3>treats occurrence of risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#treatsOccurrenceOfRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#treatsProblem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#treatsProblem">treats problem</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk"
+                  title="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">reduces occurrence impact of risk</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Measure"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Measure">measure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#treatsRisk">
+      <h3>treats risk<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#treatsRisk</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#treatsProblem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#treatsProblem">treats problem</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#reducesExpectedImpactOfRisk"
+                  title="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">reduces expected impact of risk</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/risk#reducesRiskProbability" title="https://www.w3id.org/risk#reducesRiskProbability">reduces risk probability</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#https://www.w3id.org/risk#removesRisk" title="https://www.w3id.org/risk#removesRisk">removes risk</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Measure"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Measure">measure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/risk#isCritical" title="https://www.w3id.org/risk#isCritical">
+            <span>is critical</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#isToBeAvoided" title="https://www.w3id.org/risk#isToBeAvoided">
+            <span>is to be avoided</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#isToBeReduced" title="https://www.w3id.org/risk#isToBeReduced">
+            <span>is to be reduced</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#isTolerated" title="https://www.w3id.org/risk#isTolerated">
+            <span>is tolerated</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/risk#isCritical">
+      <h3>is critical<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#isCritical</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://www.w3id.org/risk#Problem"
+                  target="_blank"
+                  title="https://www.w3id.org/risk#Problem">problem</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#isToBeAvoided">
+      <h3>is to be avoided<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#isToBeAvoided</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#isToBeReduced">
+      <h3>is to be reduced<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#isToBeReduced</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#isTolerated">
+      <h3>is tolerated<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#isTolerated</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://www.w3id.org/risk#Risk" title="https://www.w3id.org/risk#Risk">risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://www.w3id.org/risk#AirCooledButNotVentilated"
+            title="https://www.w3id.org/risk#AirCooledButNotVentilated">Air cooled but not ventilated</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#AirHeatedButNotVentilated"
+            title="https://www.w3id.org/risk#AirHeatedButNotVentilated">Air heated but not ventilated</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#AirHumidifiedButNotVentilated"
+            title="https://www.w3id.org/risk#AirHumidifiedButNotVentilated">Air humidified but not ventilated</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#AirReturnedButNotSupplied"
+            title="https://www.w3id.org/risk#AirReturnedButNotSupplied">Air returned but not supplied</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#AirSuppliedButNotReturned"
+            title="https://www.w3id.org/risk#AirSuppliedButNotReturned">Air supplied but not returned</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#BuildingHeight" title="https://www.w3id.org/risk#BuildingHeight">
+            <span>building height</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#BuildingPermissionRejected"
+            title="https://www.w3id.org/risk#BuildingPermissionRejected">
+            <span>building permission rejected</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#BuildingTooHigh" title="https://www.w3id.org/risk#BuildingTooHigh">
+            <span>building too high</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#DesignTemperature" title="https://www.w3id.org/risk#DesignTemperature">
+            <span>design temperature</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#evacuate_building_site"
+            title="https://www.w3id.org/risk#evacuate_building_site">
+            <span>evacuate building site</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed"
+            title="https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed">Heat recovery inefficiently used</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#HeatRecoveryUnused" title="https://www.w3id.org/risk#HeatRecoveryUnused">Heat recovery unused</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated"
+            title="https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated">Heat recovery used but not ventilated</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#Install_Struts" title="https://www.w3id.org/risk#Install_Struts">
+            <span>install struts</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#lowSecurityIndex" title="https://www.w3id.org/risk#lowSecurityIndex">
+            <span>low security index</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ModelValidityLimitState_overstep"
+            title="https://www.w3id.org/risk#ModelValidityLimitState_overstep">
+            <span>model validity limit state overstep</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#NominalDesignTemperature_not_repected"
+            title="https://www.w3id.org/risk#NominalDesignTemperature_not_repected">
+            <span>nominal design temperature not repected</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#OverheatingThroughSolarGain"
+            title="https://www.w3id.org/risk#OverheatingThroughSolarGain">Overheating through solar gain</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#ServiceabilityLimitState_overstep"
+            title="https://www.w3id.org/risk#ServiceabilityLimitState_overstep">
+            <span>serviceability limit state overstep</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating"
+            title="https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating">Simulatenous air cooling and radiant heating</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling"
+            title="https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling">Simultaneous air heating and air cooling</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SpaceOverheating" title="https://www.w3id.org/risk#SpaceOverheating">Space overheating</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SpaceUndercooling" title="https://www.w3id.org/risk#SpaceUndercooling">Space undercooling</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SupplyAirHumidity_TooHigh"
+            title="https://www.w3id.org/risk#SupplyAirHumidity_TooHigh">Supply air humidity Too high</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SupplyAirHumidity_TooLow"
+            title="https://www.w3id.org/risk#SupplyAirHumidity_TooLow">Supply air humidity Too low</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SupplyAirPressure_TooHigh"
+            title="https://www.w3id.org/risk#SupplyAirPressure_TooHigh">Supply air pressure Too high</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SupplyAirPressure_TooLow"
+            title="https://www.w3id.org/risk#SupplyAirPressure_TooLow">Supply air pressure Too low</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SupplyAirTemperature_TooHigh"
+            title="https://www.w3id.org/risk#SupplyAirTemperature_TooHigh">Supply air temperature Too high</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#SupplyAirTemperature_TooLow"
+            title="https://www.w3id.org/risk#SupplyAirTemperature_TooLow">Supply air temperature Too low</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#UltimateLimitState_overstep"
+            title="https://www.w3id.org/risk#UltimateLimitState_overstep">
+            <span>ultimate limit state overstep</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#UnusedAppliances" title="https://www.w3id.org/risk#UnusedAppliances">Unused appliances</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#UnusedCoolingEnergy" title="https://www.w3id.org/risk#UnusedCoolingEnergy">Unused cooling energy</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#UnusedHeatingEnergy" title="https://www.w3id.org/risk#UnusedHeatingEnergy">Unused heating energy</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#UnusedLights" title="https://www.w3id.org/risk#UnusedLights">Unused lights</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#WastingEnergyThroughOpenings"
+            title="https://www.w3id.org/risk#WastingEnergyThroughOpenings">Wasting energy through openings</a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#WindowWallRatio" title="https://www.w3id.org/risk#WindowWallRatio">
+            <span>window wall ratio</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated"
+            title="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated">
+            <span>window wall ratio low but tolerated</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://www.w3id.org/risk#AirCooledButNotVentilated">
+      <h3>Air cooled but not ventilated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#AirCooledButNotVentilated</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#AirHeatedButNotVentilated">
+      <h3>Air heated but not ventilated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#AirHeatedButNotVentilated</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#AirHumidifiedButNotVentilated">
+      <h3>Air humidified but not ventilated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#AirHumidifiedButNotVentilated</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#AirReturnedButNotSupplied">
+      <h3>Air returned but not supplied<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#AirReturnedButNotSupplied</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#AirSuppliedButNotReturned">
+      <h3>Air supplied but not returned<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#AirSuppliedButNotReturned</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#BuildingHeight">
+      <h3>building height<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#BuildingHeight</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#OutsideTolerance" title="https://www.w3id.org/risk#OutsideTolerance">outside tolerance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#BuildingPermissionRejected">
+      <h3>building permission rejected<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#BuildingPermissionRejected</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#LegalRisk" title="https://www.w3id.org/risk#LegalRisk">legal risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#BuildingTooHigh">
+      <h3>building too high<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#BuildingTooHigh</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Occurence" title="https://www.w3id.org/risk#Occurence">occurence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#causedBy" title="https://www.w3id.org/risk#causedBy">caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#BuildingHeight" title="https://www.w3id.org/risk#BuildingHeight">building height</a>
+         </dd>
+         <dd>
+            <a href="#https://www.w3id.org/risk#causes" title="https://www.w3id.org/risk#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#BuildingPermissionRejected"
+               title="https://www.w3id.org/risk#BuildingPermissionRejected">building permission rejected</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#DesignTemperature">
+      <h3>design temperature<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#DesignTemperature</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#OutsideTolerance" title="https://www.w3id.org/risk#OutsideTolerance">outside tolerance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#causes" title="https://www.w3id.org/risk#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#NominalDesignTemperature_not_repected"
+               title="https://www.w3id.org/risk#NominalDesignTemperature_not_repected">nominal design temperature not repected</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#evacuate_building_site">
+      <h3>evacuate building site<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#evacuate_building_site</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#KnownMeasure" title="https://www.w3id.org/risk#KnownMeasure">known measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#reducesExpectedImpactOfRisk"
+               title="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">reduces expected impact of risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#UltimateLimitState_overstep"
+               title="https://www.w3id.org/risk#UltimateLimitState_overstep">ultimate limit state overstep</a>
+         </dd>
+         <dd>
+            <a href="#https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk"
+               title="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">reduces occurrence impact of risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#UltimateLimitState_overstep"
+               title="https://www.w3id.org/risk#UltimateLimitState_overstep">ultimate limit state overstep</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed">
+      <h3>Heat recovery inefficiently used<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#HeatRecoveryUnused">
+      <h3>Heat recovery unused<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#HeatRecoveryUnused</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated">
+      <h3>Heat recovery used but not ventilated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#Install_Struts">
+      <h3>install struts<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#Install_Struts</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#KnownMeasure" title="https://www.w3id.org/risk#KnownMeasure">known measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk"
+               title="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">reduces occurrence impact of risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#lowSecurityIndex" title="https://www.w3id.org/risk#lowSecurityIndex">low security index</a>
+         </dd>
+         <dd>
+            <a href="#https://www.w3id.org/risk#removesRisk" title="https://www.w3id.org/risk#removesRisk">removes risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#lowSecurityIndex" title="https://www.w3id.org/risk#lowSecurityIndex">low security index</a>
+         </dd>
+         <dd>
+            <a href="#https://www.w3id.org/risk#treatsOccurrenceOfRisk" title="https://www.w3id.org/risk#treatsOccurrenceOfRisk">treats occurrence of risk</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#lowSecurityIndex" title="https://www.w3id.org/risk#lowSecurityIndex">low security index</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#lowSecurityIndex">
+      <h3>low security index<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#lowSecurityIndex</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">geotechnical risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ModelValidityLimitState_overstep">
+      <h3>model validity limit state overstep<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ModelValidityLimitState_overstep</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">geotechnical risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#NominalDesignTemperature_not_repected">
+      <h3>nominal design temperature not repected<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#NominalDesignTemperature_not_repected</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#DesignRisk" title="https://www.w3id.org/risk#DesignRisk">design risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#causedBy" title="https://www.w3id.org/risk#causedBy">caused by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#DesignTemperature" title="https://www.w3id.org/risk#DesignTemperature">design temperature</a>
+         </dd>
+         <dd>
+            <a href="https://www.w3id.org/risk#hasDescription"
+               target="_blank"
+               title="https://www.w3id.org/risk#hasDescription">has description</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"Requested nominal temperature out of normative requirements about indoor condition"</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#OverheatingThroughSolarGain">
+      <h3>Overheating through solar gain<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#OverheatingThroughSolarGain</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#ServiceabilityLimitState_overstep">
+      <h3>serviceability limit state overstep<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#ServiceabilityLimitState_overstep</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">geotechnical risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating">
+      <h3>Simulatenous air cooling and radiant heating<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling">
+      <h3>Simultaneous air heating and air cooling<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SpaceOverheating">
+      <h3>Space overheating<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SpaceOverheating</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SpaceUndercooling">
+      <h3>Space undercooling<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SpaceUndercooling</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SupplyAirHumidity_TooHigh">
+      <h3>Supply air humidity Too high<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SupplyAirHumidity_TooHigh</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SupplyAirHumidity_TooLow">
+      <h3>Supply air humidity Too low<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SupplyAirHumidity_TooLow</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SupplyAirPressure_TooHigh">
+      <h3>Supply air pressure Too high<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SupplyAirPressure_TooHigh</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SupplyAirPressure_TooLow">
+      <h3>Supply air pressure Too low<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SupplyAirPressure_TooLow</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SupplyAirTemperature_TooHigh">
+      <h3>Supply air temperature Too high<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SupplyAirTemperature_TooHigh</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#SupplyAirTemperature_TooLow">
+      <h3>Supply air temperature Too low<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#SupplyAirTemperature_TooLow</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#UltimateLimitState_overstep">
+      <h3>ultimate limit state overstep<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#UltimateLimitState_overstep</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#GeotechnicalRisk" title="https://www.w3id.org/risk#GeotechnicalRisk">geotechnical risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#UnusedAppliances">
+      <h3>Unused appliances<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#UnusedAppliances</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#UnusedCoolingEnergy">
+      <h3>Unused cooling energy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#UnusedCoolingEnergy</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#UnusedHeatingEnergy">
+      <h3>Unused heating energy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#UnusedHeatingEnergy</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#UnusedLights">
+      <h3>Unused lights<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#UnusedLights</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#WastingEnergyThroughOpenings">
+      <h3>Wasting energy through openings<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#WastingEnergyThroughOpenings</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#EnergyRisk" title="https://www.w3id.org/risk#EnergyRisk">energy risk</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#WindowWallRatio">
+      <h3>window wall ratio<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#WindowWallRatio</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#InTolerance" title="https://www.w3id.org/risk#InTolerance">in tolerance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#https://www.w3id.org/risk#OutsideTarget" title="https://www.w3id.org/risk#OutsideTarget">outside target</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#causes" title="https://www.w3id.org/risk#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <a href="#https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated"
+               title="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated">window wall ratio low but tolerated</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated">
+      <h3>window wall ratio low but tolerated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://www.w3id.org/risk#Occurence" title="https://www.w3id.org/risk#Occurence">occurence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

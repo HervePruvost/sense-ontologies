@@ -1,0 +1,1876 @@
+# baseURI: https://w3id.org/sense
+# imports: http://org.fhg.iis.eas.eee.esim/ESIMonto
+# imports: http://www.w3.org/ns/ssn/
+# imports: https://www.w3id.org/risk
+# prefix: sense
+
+@prefix : <https://w3id.org/sense#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esim: <http://org.fhg.iis.eas.eee.esim/ESIMonto#> .
+@prefix mm: <https://w3id.org/mm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix risk: <https://www.w3id.org/risk#> .
+@prefix schema: <http://schema.org/> .
+@prefix sense: <https://w3id.org/sense#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+esim:AirHandlingUnit
+  a owl:Class ;
+.
+esim:CoolingSystem
+  a owl:Class ;
+.
+esim:CoolingZone
+  a owl:Class ;
+.
+esim:EnergyDistribution
+  a owl:Class ;
+.
+esim:EnergySystem
+  a owl:Class ;
+  rdfs:label "Energy system" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
+.
+esim:EnergySystemComponent
+  a owl:Class ;
+  rdfs:label "Energy system component" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
+.
+esim:HeatRecovery
+  a owl:Class ;
+.
+esim:HeatingSystem
+  a owl:Class ;
+.
+esim:HeatingZone
+  a owl:Class ;
+.
+esim:SpatialStructureElement
+  a owl:Class ;
+  rdfs:label "Spatial structure element" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
+.
+esim:VentilationSystem
+  a owl:Class ;
+.
+esim:VentilationZone
+  a owl:Class ;
+.
+esim:composes
+  a owl:ObjectProperty ;
+.
+esim:hosts
+  a owl:ObjectProperty ;
+.
+esim:isComposedOf
+  a owl:ObjectProperty ;
+.
+spin:imports
+  a owl:AnnotationProperty ;
+.
+mm:AirCoolingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air cooling status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air damper position" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirHandlingUnitSchedule
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air handling unit schedule" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirHeatingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air heating status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirPreCoolingStatus
+  a owl:Class ;
+  rdfs:label "Air pre cooling status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirPreHeatingStatus
+  a owl:Class ;
+  rdfs:label "Air pre heating status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirPrecoolingStatus
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air precooling status" ;
+.
+mm:AirPreheatingStatus
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air preheating status" ;
+.
+mm:AirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air pressure" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirPressureSetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air pressure set point" ;
+  rdfs:subClassOf mm:PressureSetPoint ;
+.
+mm:AirQuality
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air quality" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:AirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:AirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Air volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:ApplianceElectricityConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Appliance electricity consumption" ;
+  rdfs:subClassOf mm:ElectricityConsumption ;
+.
+mm:Azimuth
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Azimuth" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:BlindPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Blind position" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:BlindStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Blind status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:BoilerLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Boiler level" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:BoilerReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Boiler return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:BoilerStatus
+  a owl:Class ;
+  rdfs:label "Boiler status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:BoilerSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Boiler supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:BoilerValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Boiler valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:CO2Concentration
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "CO2 Concentration" ;
+.
+mm:CO2concentration
+  a owl:Class ;
+  rdfs:label "CO2concentration" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ChillerLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Chiller level" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ChillerStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Chiller status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ColdWaterConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Cold water consumption" ;
+  rdfs:subClassOf mm:WaterConsumption ;
+.
+mm:ComputedProperty
+  a owl:Class ;
+  rdfs:label "Computed property" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:CoolingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Cooling coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:CoolingEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Cooling energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:CoolingPower
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Cooling power" ;
+.
+mm:CoolingThermalPower
+  a owl:Class ;
+  rdfs:label "Cooling Thermal power" ;
+  rdfs:subClassOf mm:ThermalPower ;
+.
+mm:DewPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Dew point" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:DifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Differential pressure" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:DifferentialPressureAtNominalVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Differential pressure at nominal volume flow" ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+.
+mm:DifferentialPressureLimit
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Differential pressure limit" ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+.
+mm:DistrictHeatingReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "District heating return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:DistrictHeatingSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "District heating supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:DistrictHeatingWaterVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "District heating water volume flow" ;
+  rdfs:subClassOf mm:WaterVolumeFlow ;
+.
+mm:DoorStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Door status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ElectricPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Electric power" ;
+  rdfs:subClassOf mm:Power ;
+.
+mm:ElectricityConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Electricity consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:Elevation
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Elevation" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:EnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Energy consumption" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:EnergyEfficiencyRate
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Energy efficiency rate" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ExhaustAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Exhaust air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:ExhaustAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Exhaust air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:ExhaustAirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Exhaust air volume flow" ;
+  rdfs:subClassOf mm:AirVolumeFlow ;
+.
+mm:FanCoilUnitStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fan coil unit status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:FanCoilUnitValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fan coil unit valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:FanRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fan rotational speed" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:FanSetpoint
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fan setpoint" ;
+.
+mm:FanSpeedSetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fan speed set point" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:FanStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fan status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:FancoilReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fancoil return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:FancoilSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Fancoil supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:GasConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Gas consumption" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatRecevoryDamperPosition
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heat recevory damper position" ;
+.
+mm:HeatRecoveryDamperPosition
+  a owl:Class ;
+  rdfs:label "Heat recovery damper position" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatRecoveryStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heat recovery status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatRecoveryValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heat recovery valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:HeatRecoveryWheelRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heat recovery wheel rotational speed" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatingCircuitPumpLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating circuit pump level" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatingCircuitPumpStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating circuit pump status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatingCircuitReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating circuit return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HeatingCircuitSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating circuit supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HeatingCircuitValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating circuit valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:HeatingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:HeatingEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:HeatingPower
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating power" ;
+.
+mm:HeatingSystemLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating system level" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatingSystemStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Heating system status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HeatingThermalPower
+  a owl:Class ;
+  rdfs:label "Heating thermal power" ;
+  rdfs:subClassOf mm:ThermalPower ;
+.
+mm:HotWaterConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Hot water consumption" ;
+  rdfs:subClassOf mm:WaterConsumption ;
+.
+mm:HotWaterTankHeatingCartridgeStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Hot water tank heating cartridge status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HotWaterTankTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Hot water tank temperature" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HumidifierStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Humidifier status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:Humidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Humidity" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:HumiditySetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Humidity set point" ;
+  rdfs:subClassOf mm:SetPoint ;
+.
+mm:IndoorAirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Indoor air pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+.
+mm:IndoorAirQuality
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Indoor air quality" ;
+  rdfs:subClassOf mm:AirQuality ;
+.
+mm:IndoorAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Indoor air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:IndoorHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Indoor humidity" ;
+  rdfs:subClassOf mm:Humidity ;
+.
+mm:IndoorLightLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Indoor light level" ;
+  rdfs:subClassOf mm:LightLevel ;
+.
+mm:IndoorRelativeHumidity
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Indoor relative humidity" ;
+.
+mm:LightLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Light level" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:LightPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Light position" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:LightStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Light status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:LightingEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Lighting energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:LightingPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Lighting power" ;
+  rdfs:subClassOf mm:Power ;
+.
+mm:MediumTemperature
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Medium temperature" ;
+.
+mm:Movement
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Movement" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:Occupancy
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Occupancy" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:OutdoorAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:OutdoorAirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor air pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+.
+mm:OutdoorAirQuality
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor air quality" ;
+  rdfs:subClassOf mm:AirQuality ;
+.
+mm:OutdoorAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:OutdoorHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor humidity" ;
+  rdfs:subClassOf mm:Humidity ;
+.
+mm:OutdoorLightLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor light level" ;
+  rdfs:subClassOf mm:LightLevel ;
+.
+mm:OutdoorRelativeHumidity
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Outdoor relative humidity" ;
+.
+mm:PostCoolingCoilValvePosition
+  a owl:Class ;
+  rdfs:label "Post cooling coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:PostHeatingCoilValvePosition
+  a owl:Class ;
+  rdfs:label "Post heating coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:PostcoolingCoilValvePosition
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Postcooling coil valve position" ;
+.
+mm:PostheatingCoilValvePosition
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Postheating coil valve position" ;
+.
+mm:Power
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Power" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:PreCoolingCoilValvePosition
+  a owl:Class ;
+  rdfs:label "Pre cooling coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:PreHeatingCoilValvePosition
+  a owl:Class ;
+  rdfs:label "Pre heating coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:PrecoolingCoilValvePosition
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Precooling coil valve position" ;
+.
+mm:PreheatingCoilValvePosition
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Preheating coil valve position" ;
+.
+mm:Presence
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Presence" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:PressureSetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Pressure set point" ;
+  rdfs:subClassOf mm:SetPoint ;
+.
+mm:PumpRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Pump rotational speed" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:RadiatorReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Radiator return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:RadiatorSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Radiator supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:RadiatorTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Radiator temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:RadiatorValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Radiator valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:ReturnAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Return air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:ReturnAirFanRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Return air fan rotational speed" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ReturnAirFanStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Return air fan status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ReturnAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Return air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:ReturnAirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Return air volume flow" ;
+  rdfs:subClassOf mm:AirVolumeFlow ;
+.
+mm:SetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Set point" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ShadingLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Shading level" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ShadingSatus
+  a owl:Class ;
+  rdfs:label "Shading status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:ShadingStatus
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Shading status" ;
+.
+mm:SolarRadiation
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Solar radiation" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:SpecificDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Specific differential pressure" ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+.
+mm:SpecificFanPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Specific fan power" ;
+  rdfs:subClassOf mm:ElectricPower ;
+.
+mm:SpecificPumpPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Specific pump power" ;
+  rdfs:subClassOf mm:ElectricPower ;
+.
+mm:SpecificVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Specific volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:SunshineDuration
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Sunshine duration" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:SupplyAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:SupplyAirFanRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air fan rotational speed" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:SupplyAirFanStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air fan status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:SupplyAirHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air humidity" ;
+  rdfs:subClassOf mm:Humidity ;
+.
+mm:SupplyAirHumiditySetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air humidity set point" ;
+  rdfs:subClassOf mm:HumiditySetPoint ;
+.
+mm:SupplyAirHumiditySetpoint
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air humidity setpoint" ;
+.
+mm:SupplyAirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+.
+mm:SupplyAirPressureSetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air pressure set point" ;
+  rdfs:subClassOf mm:AirPressureSetPoint ;
+.
+mm:SupplyAirPressureSetpoint
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air pressure setpoint" ;
+.
+mm:SupplyAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:SupplyAirTemperatureSetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air temperature set point" ;
+  rdfs:subClassOf mm:TemperatureSetPoint ;
+.
+mm:SupplyAirTemperatureSetpoint
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air temperature setpoint" ;
+.
+mm:SupplyAirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Supply air volume flow" ;
+  rdfs:subClassOf mm:AirVolumeFlow ;
+  owl:equivalentClass brick:Supply_Air_Flow_Sensor ;
+.
+mm:Temperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Medium temperature" ;
+  rdfs:label "Temperature" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:TemperatureSetPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Temperature set point" ;
+  rdfs:subClassOf mm:SetPoint ;
+.
+mm:TemperatureSetpoint
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Temperature setpoint" ;
+.
+mm:ThermalPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Thermal power" ;
+  rdfs:subClassOf mm:Power ;
+.
+mm:TotalEnergyConsmption
+  a owl:Class ;
+  rdfs:label "Total energy consmption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:TotalEnergyConsumption
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Total energy consumption" ;
+.
+mm:ValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Valve position" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:Vibration
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Vibration" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:VolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Volume flow" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:WaterConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Water consumption" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:WaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Water temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:WaterVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Water volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:WindSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Wind speed" ;
+  rdfs:subClassOf ssn:Property ;
+.
+mm:WindowStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a ssn:Property ;
+  rdfs:label "Window status" ;
+  rdfs:subClassOf ssn:Property ;
+.
+<https://w3id.org/sense>
+  a owl:Ontology ;
+  dcterms:creator <https://orcid.org/0000-0001-7604-8543> ;
+  dcterms:creator <https://www.linkedin.com/in/hervepruvost> ;
+  dcterms:creator "Hervé Pruvost" ;
+  dcterms:description "SENSE is a semantic composition that conceptualizes building energy systems in their operation phase. It follows a graph data structure that aggregates further ontologies that all together enable a full description of a building at metadata level."@en ;
+  dcterms:issued "2022-05-24"^^xsd:date ;
+  dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+  dcterms:modified "2023-06-06"^^xsd:date ;
+  dcterms:publisher <https://www.eas.iis.fraunhofer.de/> ;
+  dcterms:title "SENSE: a semantic composition that conceptualizes building energy systems in their operation phase."@en ;
+  vann:preferredNamespacePrefix "sense" ;
+  vann:preferredNamespaceUri "https://w3id.org/sense#" ;
+  spin:imports <http://topbraid.org/spin/owlrl-all> ;
+  rdfs:seeAlso <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> ;
+  owl:imports <http://org.fhg.iis.eas.eee.esim/ESIMonto> ;
+  owl:imports ssn: ;
+  owl:imports <https://www.w3id.org/risk> ;
+  owl:versionInfo "v1.0.0" ;
+.
+sense:Accelerometer
+  a owl:Class ;
+  rdfs:label "Accelerometer" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:Anemometer
+  a owl:Class ;
+  rdfs:label "Anemometer" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:Barometer
+  a owl:Class ;
+  rdfs:label "Barometer" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:ContactSensor
+  a owl:Class ;
+  rdfs:label "Contact sensor" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:ControlSettingsRule
+  a owl:Class ;
+  rdfs:label "Control strategy" ;
+  rdfs:subClassOf sense:Function ;
+.
+sense:CoolingEnergySavingMeasure
+  a owl:Class ;
+  rdfs:label "Cooling energy saving measure" ;
+  rdfs:subClassOf sense:EnergyConservationMeasure ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          sense:EnergyConservationMeasure
+          [
+            a owl:Restriction ;
+            owl:hasValue sense:saveCoolingEnergy ;
+            owl:onProperty ssn:hasOutput ;
+          ]
+        ) ;
+    ] ;
+.
+sense:CoolingMeter
+  a owl:Class ;
+  rdfs:label "Cooling meter" ;
+  rdfs:subClassOf sense:EnergyMeter ;
+.
+sense:ElectricalEnergySavingMeasure
+  a owl:Class ;
+  rdfs:label "Electrical energy saving measure" ;
+  rdfs:subClassOf sense:EnergyConservationMeasure ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          sense:EnergyConservationMeasure
+          [
+            a owl:Restriction ;
+            owl:hasValue sense:saveElectricalEnergy ;
+            owl:onProperty ssn:hasOutput ;
+          ]
+        ) ;
+    ] ;
+.
+sense:ElectricityMeter
+  a owl:Class ;
+  rdfs:label "Electricity meter" ;
+  rdfs:subClassOf sense:EnergyMeter ;
+.
+sense:EnergyConservationMeasure
+  a owl:Class ;
+  rdfs:label "Energy conservation measure" ;
+  rdfs:subClassOf risk:KnownMeasure ;
+.
+sense:EnergyMeter
+  a owl:Class ;
+  rdfs:label "Energy meter" ;
+  rdfs:subClassOf sense:Meter ;
+.
+sense:EnumeratedEnergyConservationMeasure
+  a owl:Class ;
+  rdfs:label "Enumerated energy conservation measure" ;
+  rdfs:subClassOf sense:EnergyConservationMeasure ;
+.
+sense:FaultDetectionRule
+  a owl:Class ;
+  rdfs:label "Fault detection rule" ;
+  rdfs:subClassOf sense:Function ;
+.
+sense:Function
+  a owl:Class ;
+  rdfs:label "Function" ;
+  rdfs:subClassOf owl:Thing ;
+.
+sense:GasMeter
+  a owl:Class ;
+  rdfs:label "Gas meter" ;
+  rdfs:subClassOf sense:Meter ;
+.
+sense:GasSensor
+  a owl:Class ;
+  rdfs:label "Gas sensor" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:HeatMeter
+  a owl:Class ;
+  rdfs:label "Heat meter" ;
+  rdfs:subClassOf sense:EnergyMeter ;
+.
+sense:HeatingEnergySavingMeasure
+  a owl:Class ;
+  rdfs:label "Heating energy saving measure" ;
+  rdfs:subClassOf sense:EnergyConservationMeasure ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          sense:EnergyConservationMeasure
+          [
+            a owl:Restriction ;
+            owl:hasValue sense:saveHeatingEnergy ;
+            owl:onProperty ssn:hasOutput ;
+          ]
+        ) ;
+    ] ;
+.
+sense:Hygrometer
+  a owl:Class ;
+  rdfs:label "Hygrometer" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:LightLevelSensor
+  a owl:Class ;
+  rdfs:label "Light level sensor" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:LightingEnergyMeter
+  a owl:Class ;
+  rdfs:label "Lighting energy meter" ;
+  rdfs:subClassOf sense:EnergyMeter ;
+.
+sense:LightingEnergySavingMeasure
+  a owl:Class ;
+  rdfs:label "Lighting energy saving measure" ;
+  rdfs:subClassOf sense:EnergyConservationMeasure ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          sense:EnergyConservationMeasure
+          [
+            a owl:Restriction ;
+            owl:hasValue sense:saveLightingEnergy ;
+            owl:onProperty ssn:hasOutput ;
+          ]
+        ) ;
+    ] ;
+.
+sense:MeasureEffect
+  a owl:Class ;
+  rdfs:label "Measure effect" ;
+  rdfs:subClassOf ssn:Output ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:oneOf (
+          sense:saveCoolingEnergy
+          sense:saveElectricalEnergy
+          sense:saveHeatingEnergy
+          sense:saveLightingEnergy
+        ) ;
+    ] ;
+.
+sense:Meter
+  a owl:Class ;
+  rdfs:label "Meter" ;
+  rdfs:subClassOf ssn:System ;
+.
+sense:MotionSensor
+  a owl:Class ;
+  rdfs:label "Motion sensor" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:OilMeter
+  a owl:Class ;
+  rdfs:label "Oil meter" ;
+  rdfs:subClassOf sense:Meter ;
+.
+sense:Pyranometer
+  a owl:Class ;
+  rdfs:label "Pyranometer" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:R-ECM1-1
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "Checks if solar radiation is high or not" ;
+  rdfs:label "high solar radiation" ;
+  skos:definition "IF cooling season  is active AND solar radiation is high THEN lower blinds down and reduce cooling" ;
+.
+sense:R-ECM1-2
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some cooling is on while space unocuppied" ;
+  rdfs:label "unused cooling rule" ;
+  skos:definition "IF room occupancy = 0 AND room occupancy is unchanged for time T AND room cooling is on THEN shut room cooling off" ;
+.
+sense:R-ECM1-3
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some space is being undercooled" ;
+  rdfs:label "undercooling" ;
+  skos:definition "IF cooling season is active AND room temperature lowerThan Tmin THEN turn cooling down" ;
+.
+sense:R-ECM1-5
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some cooling energy is wasted through some opening" ;
+  rdfs:label "wasted coolness through opening" ;
+  skos:definition "IF cooling is on AND window is open THEN close window" ;
+.
+sense:R-ECM2-1
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "Checks if solar radiation is high or not" ;
+  rdfs:label "high solar radiation" ;
+  skos:definition "IF heating season  is active AND solar radiation is high THEN open room blinds up and reduce room heating" ;
+.
+sense:R-ECM2-2
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some heating is on while space unocuppied" ;
+  rdfs:label "unused heating rule" ;
+  skos:definition "IF room occupancy = 0 AND room occupancy is unchanged for time T AND room heating is on THEN shut room heating off" ;
+.
+sense:R-ECM2-2-1
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some heating is on while space unocuppied" ;
+  rdfs:label "unused heating rule" ;
+  skos:definition "IF heating season is active AND room occupancy = 0 AND room occupancy is unchanged for time T AND room temperature greaterThan Tref THEN shut room heating off" ;
+.
+sense:R-ECM2-3
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some space is being overheated" ;
+  rdfs:label "space overheating" ;
+  skos:definition "IF heating season is active AND room temperature greaterThan Tmax THEN turn heating down" ;
+.
+sense:R-ECM2-4-1
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if air heating and air cooling work at the same time" ;
+  rdfs:label "simultaneous air heating and cooling" ;
+  skos:definition "IF air heating is on AND air cooling is on THEN air heating and air cooling work simultaneously" ;
+.
+sense:R-ECM2-4-2a
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if the supply fan works but not the return/exhaust fan" ;
+  rdfs:label "air supplied but not returned" ;
+  skos:definition "IF supply air volume flow > 0 + tolerance AND return air volume flow < 0 + tolerance THEN air supplied but not returned" ;
+.
+sense:R-ECM2-4-2b
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if the return/exhaust fan works but not the supply fan" ;
+  rdfs:label "air returned but not supplied" ;
+  skos:definition "IF return air flow > 0 + tolerance AND supply air flow < 0 + tolerance THEN air returned but not supplied" ;
+.
+sense:R-ECM2-4-3
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if air heating works but not the supply fan" ;
+  rdfs:label "air heated but not ventilated" ;
+  skos:definition "IF air heating is on AND supply air flow < 0 + tolerance THEN air heated but not ventilated" ;
+.
+sense:R-ECM2-4-4
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if air cooling works but not the supply fan" ;
+  rdfs:label "air cooled but not ventilated" ;
+  skos:definition "IF air cooling is on AND supply air flow < 0 + tolerance THEN air cooled but not ventilated" ;
+.
+sense:R-ECM2-5
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some heat is wasted through some opening" ;
+  rdfs:label "wasted heat through opening" ;
+  skos:definition "IF heating is on AND window is open THEN close window" ;
+.
+sense:R-ECM3-6
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some light was left on while space unocuppied" ;
+  rdfs:label "unused lighting rule" ;
+  skos:definition "IF room is unoccupied AND room light is on THEN shut room light off" ;
+.
+sense:R-ECM4-8
+  a owl:NamedIndividual ;
+  a sense:Function ;
+  rdfs:comment "checks if some appliance is on while space unocuppied" ;
+  rdfs:label "unused appliance rule" ;
+  skos:definition "IF room is unoccupied AND room occupancy is unchanged for time T AND room appliance consumption increases THEN shut room appliance off" ;
+.
+sense:State
+  a owl:Class ;
+  rdfs:label "State" ;
+  rdfs:subClassOf owl:Thing ;
+.
+sense:SubMeter
+  a owl:Class ;
+  rdfs:label "Sub meter" ;
+  rdfs:subClassOf sense:Meter ;
+.
+sense:Thermometer
+  a owl:Class ;
+  rdfs:label "Thermometer" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:UserAction
+  a owl:Class ;
+  rdfs:label "User action" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Actuation> ;
+.
+sense:UserBehaviourRule
+  a owl:Class ;
+  rdfs:label "User behaviour rule" ;
+  rdfs:subClassOf sense:Function ;
+.
+sense:UtilityMeter
+  a owl:Class ;
+  rdfs:label "Utility meter" ;
+  rdfs:subClassOf sense:Meter ;
+.
+sense:WaterMeter
+  a owl:Class ;
+  rdfs:label "Water meter" ;
+  rdfs:subClassOf sense:Meter ;
+.
+sense:WeatherStation
+  a owl:Class ;
+  rdfs:label "Weather station" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
+.
+sense:appliance_is_on
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Location ;
+  rdfs:label "appliance is on" ;
+  rdfs:range xsd:boolean ;
+.
+sense:cooling_is_on
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Location ;
+  rdfs:label "cooling is on" ;
+  rdfs:range xsd:boolean ;
+.
+sense:hasCoolingSystem
+  a owl:DatatypeProperty ;
+  rdfs:label "has cooling system" ;
+  rdfs:range xsd:boolean ;
+.
+sense:hasHeatRecoverySystem
+  a owl:DatatypeProperty ;
+  rdfs:label "has heat recovery system" ;
+  rdfs:range xsd:boolean ;
+.
+sense:hasHeatingSystem
+  a owl:DatatypeProperty ;
+  rdfs:label "has heating system" ;
+  rdfs:range xsd:boolean ;
+.
+sense:hasProcedure
+  a owl:ObjectProperty ;
+  rdfs:label "has procedure" ;
+.
+sense:hasRule
+  a owl:ObjectProperty ;
+  rdfs:label "has rule" ;
+.
+sense:heating_is_on
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Location ;
+  rdfs:label "heating is on" ;
+  rdfs:range xsd:boolean ;
+.
+sense:identifier
+  a owl:AnnotationProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "identifier" ;
+  rdfs:range xsd:string ;
+.
+sense:isBeingCooled
+  a owl:DatatypeProperty ;
+  rdfs:label "is being cooled" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isBeingHeated
+  a owl:DatatypeProperty ;
+  rdfs:label "is being heated" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isClosed
+  a owl:DatatypeProperty ;
+  rdfs:label "is closed" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isCooled
+  a owl:DatatypeProperty ;
+  rdfs:label "is cooled" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isHeated
+  a owl:DatatypeProperty ;
+  rdfs:label "is heated" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isHigh
+  a owl:DatatypeProperty ;
+  rdfs:label "is high" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isLow
+  a owl:DatatypeProperty ;
+  rdfs:label "is low" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isOccupied
+  a owl:DatatypeProperty ;
+  rdfs:label "is occupied" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isOff
+  a owl:DatatypeProperty ;
+  rdfs:label "is off" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isOn
+  a owl:DatatypeProperty ;
+  rdfs:label "is on" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isOpen
+  a owl:DatatypeProperty ;
+  rdfs:label "is open" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isOrientedSouth
+  a owl:DatatypeProperty ;
+  rdfs:label "is oriented south" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isRecommended
+  a owl:DatatypeProperty ;
+  rdfs:label "is recommended" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isUnoccupied
+  a owl:DatatypeProperty ;
+  rdfs:label "is unoccupied" ;
+  rdfs:range xsd:boolean ;
+.
+sense:isVentilated
+  a owl:DatatypeProperty ;
+  rdfs:label "isVentilated" ;
+.
+sense:light_status
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Location ;
+  rdfs:label "light status" ;
+  rdfs:range xsd:boolean ;
+.
+sense:lower_blinds_down
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "lower blinds down" ;
+  sense:identifier "ECMlbd" ;
+.
+sense:lower_blinds_down_and_reduce_cooling
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "lower blinds down and reduce cooling" ;
+  sense:identifier "ECMlbdarc" ;
+.
+sense:occupancy
+  a owl:DatatypeProperty ;
+  rdfs:label "occupancy" ;
+  rdfs:range xsd:boolean ;
+.
+sense:open_blinds_up
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "open blinds up" ;
+  sense:identifier "ECMobu" ;
+.
+sense:open_blinds_up_and_reduce_heating
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "open blinds up and reduce heating" ;
+  sense:identifier "ECMobuarh" ;
+.
+sense:open_blinds_up_and_turn_off_light
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "open blinds up and turn off light" ;
+  sense:identifier "ECMobuatol" ;
+.
+sense:room_cooling_is_on
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Room ;
+  rdfs:label "room cooling is on" ;
+  rdfs:range xsd:boolean ;
+.
+sense:room_heating_is_on
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Room ;
+  rdfs:label "room heating is on" ;
+  rdfs:range xsd:boolean ;
+.
+sense:room_occupancy
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Room ;
+  rdfs:label "room occupancy" ;
+  rdfs:range xsd:boolean ;
+.
+sense:room_temperature
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Room ;
+  rdfs:label "room temperature" ;
+  rdfs:range xsd:decimal ;
+.
+sense:saveCoolingEnergy
+  a owl:NamedIndividual ;
+  a sense:MeasureEffect ;
+  rdfs:label "save cooling energy" ;
+  sense:identifier "ECM1" ;
+.
+sense:saveElectricalEnergy
+  a owl:NamedIndividual ;
+  a sense:MeasureEffect ;
+  rdfs:label "save electrical energy" ;
+  sense:identifier "ECM4" ;
+.
+sense:saveHeatingEnergy
+  a owl:NamedIndividual ;
+  a sense:MeasureEffect ;
+  rdfs:label "save heating energy" ;
+  sense:identifier "ECM2" ;
+.
+sense:saveLightingEnergy
+  a owl:NamedIndividual ;
+  a sense:MeasureEffect ;
+  rdfs:label "save lighting energy" ;
+  sense:identifier "ECM3" ;
+.
+sense:save_electrical_energy_turning_appliances_down_when_room_unoccupied
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save lighting energy optimizing natural light income" ;
+  ssn:hasOutput sense:saveElectricalEnergy ;
+.
+sense:save_energy_avoiding_HVAC_operating_errors
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save energy avoiding HVAC operating errors " ;
+  ssn:hasOutput sense:saveCoolingEnergy ;
+  ssn:hasOutput sense:saveHeatingEnergy ;
+.
+sense:save_energy_avoiding_wastes_through_openings
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save energy avoiding wastes through openings" ;
+  ssn:hasOutput sense:saveCoolingEnergy ;
+  ssn:hasOutput sense:saveHeatingEnergy ;
+.
+sense:save_energy_by_better_matching_energy_and_comfort_needs
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save energy when facility not occupied" ;
+  ssn:hasOutput sense:saveCoolingEnergy ;
+  ssn:hasOutput sense:saveHeatingEnergy ;
+.
+sense:save_energy_by_optimizing_solar_gain
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save energy by optimizing solar gain" ;
+  ssn:hasOutput sense:saveCoolingEnergy ;
+  ssn:hasOutput sense:saveHeatingEnergy ;
+.
+sense:save_energy_when_facility_not_occupied
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save energy when facility not occupied" ;
+  ssn:hasOutput sense:saveCoolingEnergy ;
+  ssn:hasOutput sense:saveHeatingEnergy ;
+.
+sense:save_lighting_energy_optimizing_natural_light_income
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save lighting energy optimizing natural light income" ;
+  ssn:hasOutput sense:saveLightingEnergy ;
+.
+sense:save_lighting_energy_turning_off_lights_when_space_unoccupied
+  a owl:NamedIndividual ;
+  a sense:EnergyConservationMeasure ;
+  rdfs:label "save lighting energy turning off lights when space unoccupied" ;
+  ssn:hasOutput sense:saveLightingEnergy ;
+.
+sense:turn_down_cooling
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn down cooling" ;
+  sense:identifier "ECMtdc" ;
+.
+sense:turn_down_heating
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn down heating" ;
+  sense:identifier "ECMtdh" ;
+.
+sense:turn_off_appliances
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn off appliances" ;
+  sense:identifier "ECMtoa" ;
+.
+sense:turn_off_cooling
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn off cooling" ;
+  sense:identifier "ECMtoc" ;
+.
+sense:turn_off_heating
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn off heating" ;
+  sense:identifier "ECMtoh" ;
+.
+sense:turn_off_light
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn off light" ;
+  sense:identifier "ECMtol" ;
+.
+sense:turn_on_heat_recovery
+  a owl:NamedIndividual ;
+  a sense:UserAction ;
+  rdfs:label "turn on heat recovery" ;
+  sense:identifier "ECMtohr" ;
+.
+sense:unoccupied_too_long
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Location ;
+  rdfs:label "unoccupied too long" ;
+  rdfs:range xsd:boolean ;
+.
+sense:window_is_open
+  a owl:DatatypeProperty ;
+  rdfs:domain esim:SpatialStructureElement ;
+  rdfs:domain brick:Room ;
+  rdfs:label "window is open" ;
+  rdfs:range xsd:boolean ;
+.
+risk:AirCooledButNotVentilated
+  a owl:NamedIndividual ;
+  risk:assessedBy sense:R-ECM2-4-4 ;
+.
+risk:AirHeatedButNotVentilated
+  a owl:NamedIndividual ;
+  risk:assessedBy sense:R-ECM2-4-3 ;
+.
+risk:AirHumidifiedButNotVentilated
+  a owl:NamedIndividual ;
+.
+risk:AirReturnedButNotSupplied
+  a owl:NamedIndividual ;
+  risk:assessedBy sense:R-ECM2-4-2b ;
+.
+risk:AirSuppliedButNotReturned
+  a owl:NamedIndividual ;
+  risk:assessedBy sense:R-ECM2-4-2a ;
+.
+risk:EntityAtRisk
+  a owl:Class ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+.
+risk:HeatRecoveryInefficientlyUsed
+  a owl:NamedIndividual ;
+.
+risk:HeatRecoveryUnused
+  a owl:NamedIndividual ;
+.
+risk:KnownMeasure
+  a owl:Class ;
+.
+risk:Measure
+  a owl:Class ;
+  rdfs:label "Measure" ;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+.
+risk:OverheatingThroughSolarGain
+  risk:assessedBy sense:R-ECM1-1 ;
+  risk:assessedBy sense:R-ECM2-1 ;
+.
+risk:SimultaneousAirHeatingAndAirCooling
+  a owl:NamedIndividual ;
+  risk:assessedBy sense:R-ECM2-4-1 ;
+.
+risk:SpaceOverheating
+  risk:assessedBy sense:R-ECM2-3 ;
+.
+risk:SpaceUndercooling
+  risk:assessedBy sense:R-ECM1-3 ;
+.
+risk:UnusedAppliances
+  risk:assessedBy sense:R-ECM4-8 ;
+.
+risk:UnusedCoolingEnergy
+  risk:assessedBy sense:R-ECM1-2 ;
+.
+risk:UnusedHeatingEnergy
+  risk:assessedBy sense:R-ECM2-2 ;
+.
+risk:UnusedLights
+  risk:assessedBy sense:R-ECM3-6 ;
+.
+risk:WastingEnergyThroughOpenings
+  risk:assessedBy sense:R-ECM1-5 ;
+  risk:assessedBy sense:R-ECM2-5 ;
+.
+risk:hasRisk
+  a owl:ObjectProperty ;
+.

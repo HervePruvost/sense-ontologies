@@ -1,0 +1,3644 @@
+@prefix : <https://w3id.org/mm#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mm: <https://w3id.org/mm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://w3id.org/mm#> .
+
+<https://w3id.org/mm> rdf:type owl:Ontology ;
+                       <http://purl.org/dc/terms/bibliographicCitation> "Pruvost. H. (2023): The Metric Model - Quantities and Key Indicators for the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/mm."@en ;
+                       <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-7604-8543> ,
+                                                          <https://www.linkedin.com/in/hervepruvost> ,
+                                                          "Hervé Pruvost" ;
+                       <http://purl.org/dc/terms/description> "The Metric model consists of a taxonomy of quantities, quantity kinds and key metrics e.g. KPI (Key Performance Indicator) or KRI (Key Risk Indicator) that are used for quantification, measurement and sensing in engineering domain. More Specifically, it complements further ontologies like QUDT or SSN/SOSA with very specific metrics for e.g. HVAC (Heating Ventilation and Air Conditioning), building automation, building design, energy management, etc. It contrasts to rather more abstract quantities from other vocabularies."@en ;
+                       <http://purl.org/dc/terms/issued> "2018-10-22"^^xsd:date ;
+                       <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> ;
+                       <http://purl.org/dc/terms/modified> "2023-06-07"^^xsd:date ;
+                       <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> ,
+                                                            "Fraunhofer IIS/EAS" ;
+                       <http://purl.org/dc/terms/title> "Metric Model"@en ;
+                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "mm" ;
+                       <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/mm#" ;
+                       <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> ,
+                                                         <http://topbraid.org/spin/skosspin> ;
+                       rdfs:seeAlso <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> ;
+                       owl:versionInfo "v1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://spinrdf.org/spin#imports
+<http://spinrdf.org/spin#imports> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#differentFrom
+owl:differentFrom rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/mm#appliesToEntity
+:appliesToEntity rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/mm#assessedBy
+:assessedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Metric ;
+            rdfs:range :Role .
+
+
+###  https://w3id.org/mm#composes
+:composes rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isComposedOf .
+
+
+###  https://w3id.org/mm#hasMetric
+:hasMetric rdf:type owl:ObjectProperty ;
+           rdfs:range :Metric .
+
+
+###  https://w3id.org/mm#hasMetricRequirement
+:hasMetricRequirement rdf:type owl:ObjectProperty ;
+                      rdfs:range :MetricRequirement .
+
+
+###  https://w3id.org/mm#hasMetricType
+:hasMetricType rdf:type owl:ObjectProperty ;
+               rdfs:domain :Metric ;
+               rdfs:range :MetricType .
+
+
+###  https://w3id.org/mm#hasMetricValue
+:hasMetricValue rdf:type owl:ObjectProperty ;
+                rdfs:range :MetricValue .
+
+
+###  https://w3id.org/mm#hasOptimizationType
+:hasOptimizationType rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Metric ;
+                     rdfs:range :MetricOptimizationType .
+
+
+###  https://w3id.org/mm#hasRequirementCompliance
+:hasRequirementCompliance rdf:type owl:ObjectProperty ;
+                          rdfs:domain :MetricValue ;
+                          rdfs:range :RequirementCompliance .
+
+
+###  https://w3id.org/mm#hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/mm#hasThreshold
+:hasThreshold rdf:type owl:ObjectProperty ;
+              rdfs:domain :Metric ;
+              rdfs:range :Threshold .
+
+
+###  https://w3id.org/mm#hasTolerance
+:hasTolerance rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/mm#hasToleranceType
+:hasToleranceType rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :Tolerance ;
+                  rdfs:range :ToleranceType .
+
+
+###  https://w3id.org/mm#isComposedOf
+:isComposedOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/mm#isDerivedFrom
+:isDerivedFrom rdf:type owl:ObjectProperty ;
+               rdfs:domain :Metric ;
+               rdfs:range :Metric .
+
+
+###  https://w3id.org/mm#isMeanOf
+:isMeanOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :isDerivedFrom .
+
+
+###  https://w3id.org/mm#isStandardDeviationOf
+:isStandardDeviationOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isDerivedFrom .
+
+
+###  https://w3id.org/mm#usedInProjectPhase
+:usedInProjectPhase rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Metric ;
+                    rdfs:range :ProjectPhase .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/mm#hasCategory
+:hasCategory rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasID
+:hasID rdf:type owl:DatatypeProperty ;
+       rdfs:domain owl:Thing ;
+       rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasIndex
+:hasIndex rdf:type owl:DatatypeProperty ;
+          rdfs:domain :MetricValue ;
+          rdfs:range xsd:integer .
+
+
+###  https://w3id.org/mm#hasLowerBound
+:hasLowerBound rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MetricRequirement ;
+               rdfs:range xsd:double .
+
+
+###  https://w3id.org/mm#hasMetricClassID
+:hasMetricClassID rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasQualitativeGoalValue
+:hasQualitativeGoalValue rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasQualitativeValue
+:hasQualitativeValue rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasQuantitativeGoalValue
+:hasQuantitativeGoalValue rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:range xsd:double .
+
+
+###  https://w3id.org/mm#hasQuantitativeValue
+:hasQuantitativeValue rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:range xsd:double .
+
+
+###  https://w3id.org/mm#hasTime
+:hasTime rdf:type owl:DatatypeProperty ;
+         rdfs:domain :MetricValue ;
+         rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/mm#hasUnit
+:hasUnit rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Metric ;
+         rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasUpperBound
+:hasUpperBound rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MetricRequirement ;
+               rdfs:range xsd:double .
+
+
+###  https://w3id.org/mm#hasValue
+:hasValue rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/mm#hasVariantID
+:hasVariantID rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MetricValue ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/mm#hasWeight
+:hasWeight rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:double .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/mm#AboveTarget
+:AboveTarget rdf:type owl:Class ;
+             rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#AboveTolerance
+:AboveTolerance rdf:type owl:Class ;
+                rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#AcidificationPotential
+:AcidificationPotential rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasMetricClassID ;
+                                              owl:hasValue "KPI20"
+                                            ] ;
+                        rdfs:subClassOf :Environment-KPI .
+
+
+###  https://w3id.org/mm#AirCoolingStatus
+:AirCoolingStatus rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#AirDamperPosition
+:AirDamperPosition rdf:type owl:Class ;
+                   rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#AirHandlingUnitSchedule
+:AirHandlingUnitSchedule rdf:type owl:Class ;
+                         rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#AirHeatingStatus
+:AirHeatingStatus rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#AirPreCoolingStatus
+:AirPreCoolingStatus rdf:type owl:Class ;
+                     rdfs:subClassOf :HVACmetric ;
+                     rdfs:label "Air pre cooling status" .
+
+
+###  https://w3id.org/mm#AirPreHeatingStatus
+:AirPreHeatingStatus rdf:type owl:Class ;
+                     rdfs:subClassOf :HVACmetric ;
+                     rdfs:label "Air pre heating status" .
+
+
+###  https://w3id.org/mm#AirPressure
+:AirPressure rdf:type owl:Class ;
+             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#AirPressureSetPoint
+:AirPressureSetPoint rdf:type owl:Class ;
+                     rdfs:subClassOf :PressureSetPoint .
+
+
+###  https://w3id.org/mm#AirQuality
+:AirQuality rdf:type owl:Class ;
+            rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#AirTemperature
+:AirTemperature rdf:type owl:Class ;
+                rdfs:subClassOf :Temperature .
+
+
+###  https://w3id.org/mm#AirTightness
+:AirTightness rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasMetricClassID ;
+                                    owl:hasValue "KDP12"
+                                  ] ;
+              rdfs:subClassOf :Energy-KDP .
+
+
+###  https://w3id.org/mm#AirVolumeFlow
+:AirVolumeFlow rdf:type owl:Class ;
+               rdfs:subClassOf :VolumeFlow .
+
+
+###  https://w3id.org/mm#ApplianceElectricityConsumption
+:ApplianceElectricityConsumption rdf:type owl:Class ;
+                                 rdfs:subClassOf :ElectricityConsumption .
+
+
+###  https://w3id.org/mm#AverageEnergySystemUnavailability
+:AverageEnergySystemUnavailability rdf:type owl:Class ;
+                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasMetricClassID ;
+                                                         owl:hasValue "KRI05"
+                                                       ] ;
+                                   rdfs:subClassOf :Reliability-KRI .
+
+
+###  https://w3id.org/mm#Azimuth
+:Azimuth rdf:type owl:Class ;
+         rdfs:subClassOf :WeatherMetric .
+
+
+###  https://w3id.org/mm#BelowTarget
+:BelowTarget rdf:type owl:Class ;
+             rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#BelowTolerance
+:BelowTolerance rdf:type owl:Class ;
+                rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#BetterThanTarget
+:BetterThanTarget rdf:type owl:Class ;
+                  rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#BlindPosition
+:BlindPosition rdf:type owl:Class ;
+               rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#BlindStatus
+:BlindStatus rdf:type owl:Class ;
+             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#BoilerLevel
+:BoilerLevel rdf:type owl:Class ;
+             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#BoilerReturnWaterTemperature
+:BoilerReturnWaterTemperature rdf:type owl:Class ;
+                              rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#BoilerStatus
+:BoilerStatus rdf:type owl:Class ;
+              rdfs:subClassOf :HVACmetric ;
+              rdfs:label "Boiler status" .
+
+
+###  https://w3id.org/mm#BoilerSupplyWaterTemperature
+:BoilerSupplyWaterTemperature rdf:type owl:Class ;
+                              rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#BoilerValvePosition
+:BoilerValvePosition rdf:type owl:Class ;
+                     rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#BuildingHeight
+:BuildingHeight rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasMetricClassID ;
+                                      owl:hasValue "KDP01"
+                                    ] ;
+                rdfs:subClassOf :Geometry-KDP .
+
+
+###  https://w3id.org/mm#CO2concentration
+:CO2concentration rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric ,
+                                  :WeatherMetric ;
+                  rdfs:label "CO2concentration" .
+
+
+###  https://w3id.org/mm#ChillerLevel
+:ChillerLevel rdf:type owl:Class ;
+              rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ChillerStatus
+:ChillerStatus rdf:type owl:Class ;
+               rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ColdWaterConsumption
+:ColdWaterConsumption rdf:type owl:Class ;
+                      rdfs:subClassOf :WaterConsumption .
+
+
+###  https://w3id.org/mm#Comfort-KDP
+:Comfort-KDP rdf:type owl:Class ;
+             rdfs:subClassOf :KeyDesignParameter .
+
+
+###  https://w3id.org/mm#Comfort-KPI
+:Comfort-KPI rdf:type owl:Class ;
+             rdfs:subClassOf :KeyPerformanceIndicator .
+
+
+###  https://w3id.org/mm#ComputedProperty
+:ComputedProperty rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric ;
+                  rdfs:label "Computed property" .
+
+
+###  https://w3id.org/mm#ConstructionCost
+:ConstructionCost rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasMetricClassID ;
+                                        owl:hasValue "KPI11"
+                                      ] ;
+                  rdfs:subClassOf :Cost-KPI .
+
+
+###  https://w3id.org/mm#CoolingCoilValvePosition
+:CoolingCoilValvePosition rdf:type owl:Class ;
+                          rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#CoolingEnergyConsumption
+:CoolingEnergyConsumption rdf:type owl:Class ;
+                          rdfs:subClassOf :EnergyConsumption .
+
+
+###  https://w3id.org/mm#CoolingThermalPower
+:CoolingThermalPower rdf:type owl:Class ;
+                     rdfs:subClassOf :ThermalPower ;
+                     rdfs:label "Cooling Thermal power" .
+
+
+###  https://w3id.org/mm#Cost-KPI
+:Cost-KPI rdf:type owl:Class ;
+          rdfs:subClassOf :KeyPerformanceIndicator .
+
+
+###  https://w3id.org/mm#Cost-KRI
+:Cost-KRI rdf:type owl:Class ;
+          rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#DecisionValue
+:DecisionValue rdf:type owl:Class ;
+               rdfs:subClassOf :Metric ;
+               rdfs:comment "A metric that reflects a decision trade-off between several competing objectives, constraints or risks." .
+
+
+###  https://w3id.org/mm#DemolitionCost
+:DemolitionCost rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasMetricClassID ;
+                                      owl:hasValue "KPI12"
+                                    ] ;
+                rdfs:subClassOf :Cost-KPI .
+
+
+###  https://w3id.org/mm#Design-KRI
+:Design-KRI rdf:type owl:Class ;
+            rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#DesignTemperatureSummer
+:DesignTemperatureSummer rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasMetricClassID ;
+                                               owl:hasValue "KDP15"
+                                             ] ;
+                         rdfs:subClassOf :Comfort-KDP .
+
+
+###  https://w3id.org/mm#DesignTemperatureWinter
+:DesignTemperatureWinter rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasMetricClassID ;
+                                               owl:hasValue "KDP14"
+                                             ] ;
+                         rdfs:subClassOf :Comfort-KDP .
+
+
+###  https://w3id.org/mm#DewPoint
+:DewPoint rdf:type owl:Class ;
+          rdfs:subClassOf :HVACmetric ,
+                          :WeatherMetric .
+
+
+###  https://w3id.org/mm#DifferentialPressure
+:DifferentialPressure rdf:type owl:Class ;
+                      rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#DifferentialPressureAtNominalVolumeFlow
+:DifferentialPressureAtNominalVolumeFlow rdf:type owl:Class ;
+                                         rdfs:subClassOf :DifferentialPressure .
+
+
+###  https://w3id.org/mm#DifferentialPressureLimit
+:DifferentialPressureLimit rdf:type owl:Class ;
+                           rdfs:subClassOf :DifferentialPressure .
+
+
+###  https://w3id.org/mm#DistrictHeatingReturnWaterTemperature
+:DistrictHeatingReturnWaterTemperature rdf:type owl:Class ;
+                                       rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#DistrictHeatingSupplyWaterTemperature
+:DistrictHeatingSupplyWaterTemperature rdf:type owl:Class ;
+                                       rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#DistrictHeatingWaterVolumeFlow
+:DistrictHeatingWaterVolumeFlow rdf:type owl:Class ;
+                                rdfs:subClassOf :WaterVolumeFlow .
+
+
+###  https://w3id.org/mm#DoorStatus
+:DoorStatus rdf:type owl:Class ;
+            rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ElectricPower
+:ElectricPower rdf:type owl:Class ;
+               rdfs:subClassOf :Power .
+
+
+###  https://w3id.org/mm#ElectricityConsumption
+:ElectricityConsumption rdf:type owl:Class ;
+                        rdfs:subClassOf :EnergyConsumption .
+
+
+###  https://w3id.org/mm#ElementInstance
+:ElementInstance rdf:type owl:Class ;
+                 rdfs:subClassOf :FunctionalElement ;
+                 owl:disjointWith :ElementType .
+
+
+###  https://w3id.org/mm#ElementType
+:ElementType rdf:type owl:Class ;
+             rdfs:subClassOf :FunctionalElement .
+
+
+###  https://w3id.org/mm#Elevation
+:Elevation rdf:type owl:Class ;
+           rdfs:subClassOf :WeatherMetric .
+
+
+###  https://w3id.org/mm#Energy-KDP
+:Energy-KDP rdf:type owl:Class ;
+            rdfs:subClassOf :KeyDesignParameter .
+
+
+###  https://w3id.org/mm#Energy-KPI
+:Energy-KPI rdf:type owl:Class ;
+            rdfs:subClassOf :KeyPerformanceIndicator .
+
+
+###  https://w3id.org/mm#Energy-KRI
+:Energy-KRI rdf:type owl:Class ;
+            rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#EnergyConsumption
+:EnergyConsumption rdf:type owl:Class ;
+                   rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#EnergyDemandForHeating
+:EnergyDemandForHeating rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasMetricClassID ;
+                                              owl:hasValue "KPI16"
+                                            ] ;
+                        rdfs:subClassOf :Energy-KPI .
+
+
+###  https://w3id.org/mm#EnergyEfficiencyRate
+:EnergyEfficiencyRate rdf:type owl:Class ;
+                      rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#EnergyEfficiencyRatio
+:EnergyEfficiencyRatio rdf:type owl:Class ;
+                       rdfs:subClassOf :HVACmetric ;
+                       rdfs:comment """The EER is the ratio of the cooling capacity (in British thermal units (Btu) per hour) to the power input (in watts). 
+The higher the EER rating, the more efficient the air conditioner.""" ;
+                       rdfs:label "Energy efficiency ratio" ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "EER"@en .
+
+
+###  https://w3id.org/mm#EnergySystemTechnology
+:EnergySystemTechnology rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasMetricClassID ;
+                                              owl:hasValue "KDP18"
+                                            ] ;
+                        rdfs:subClassOf :Energy-KDP .
+
+
+###  https://w3id.org/mm#EnergyUseMean
+:EnergyUseMean rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasMetricClassID ;
+                                     owl:hasValue "KRI04"
+                                   ] ;
+               rdfs:subClassOf :Energy-KRI .
+
+
+###  https://w3id.org/mm#EnergyUseVolatility
+:EnergyUseVolatility rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasMetricClassID ;
+                                           owl:hasValue "KRI03"
+                                         ] ;
+                     rdfs:subClassOf :Energy-KRI .
+
+
+###  https://w3id.org/mm#Environment-KPI
+:Environment-KPI rdf:type owl:Class ;
+                 rdfs:subClassOf :KeyPerformanceIndicator .
+
+
+###  https://w3id.org/mm#Environmental-KRI
+:Environmental-KRI rdf:type owl:Class ;
+                   rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#EutrophicationPotential
+:EutrophicationPotential rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasMetricClassID ;
+                                               owl:hasValue "KPI21"
+                                             ] ;
+                         rdfs:subClassOf :Environment-KPI .
+
+
+###  https://w3id.org/mm#ExhaustAirDamperPosition
+:ExhaustAirDamperPosition rdf:type owl:Class ;
+                          rdfs:subClassOf :AirDamperPosition .
+
+
+###  https://w3id.org/mm#ExhaustAirTemperature
+:ExhaustAirTemperature rdf:type owl:Class ;
+                       rdfs:subClassOf :AirTemperature .
+
+
+###  https://w3id.org/mm#ExhaustAirVolumeFlow
+:ExhaustAirVolumeFlow rdf:type owl:Class ;
+                      rdfs:subClassOf :AirVolumeFlow .
+
+
+###  https://w3id.org/mm#ExploitationCost
+:ExploitationCost rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasMetricClassID ;
+                                        owl:hasValue "KPI13"
+                                      ] ;
+                  rdfs:subClassOf :Cost-KPI .
+
+
+###  https://w3id.org/mm#FanCoilUnitStatus
+:FanCoilUnitStatus rdf:type owl:Class ;
+                   rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#FanCoilUnitValvePosition
+:FanCoilUnitValvePosition rdf:type owl:Class ;
+                          rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#FanRotationalSpeed
+:FanRotationalSpeed rdf:type owl:Class ;
+                    rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#FanSpeedSetPoint
+:FanSpeedSetPoint rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#FanStatus
+:FanStatus rdf:type owl:Class ;
+           rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#FancoilReturnWaterTemperature
+:FancoilReturnWaterTemperature rdf:type owl:Class ;
+                               rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#FancoilSupplyWaterTemperature
+:FancoilSupplyWaterTemperature rdf:type owl:Class ;
+                               rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#FloorToCeilingHeight
+:FloorToCeilingHeight rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasMetricClassID ;
+                                            owl:hasValue "KDP06"
+                                          ] ;
+                      rdfs:subClassOf :Geometry-KDP .
+
+
+###  https://w3id.org/mm#FloorToFloorHeight
+:FloorToFloorHeight rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasMetricClassID ;
+                                          owl:hasValue "KDP02"
+                                        ] ;
+                    rdfs:subClassOf :Geometry-KDP .
+
+
+###  https://w3id.org/mm#FunctionalElement
+:FunctionalElement rdf:type owl:Class ;
+                   rdfs:subClassOf :Product ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasID ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasName ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] .
+
+
+###  https://w3id.org/mm#GasConsumption
+:GasConsumption rdf:type owl:Class ;
+                rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#Geometry-KDP
+:Geometry-KDP rdf:type owl:Class ;
+              rdfs:subClassOf :KeyDesignParameter .
+
+
+###  https://w3id.org/mm#GlobalWarmingPotential
+:GlobalWarmingPotential rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasMetricClassID ;
+                                              owl:hasValue "KPI22"
+                                            ] ;
+                        rdfs:subClassOf :Environment-KPI .
+
+
+###  https://w3id.org/mm#GrossFloorArea
+:GrossFloorArea rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasMetricClassID ;
+                                      owl:hasValue "KDP04"
+                                    ] ;
+                rdfs:subClassOf :Geometry-KDP .
+
+
+###  https://w3id.org/mm#HVACmetric
+:HVACmetric rdf:type owl:Class ;
+            rdfs:subClassOf :Metric ;
+            rdfs:comment "A metric that refers to the behavior of heating, ventilation and air conditioning systems." ;
+            rdfs:label "HVAC metric" .
+
+
+###  https://w3id.org/mm#Health-KPI
+:Health-KPI rdf:type owl:Class ;
+            rdfs:subClassOf :KeyPerformanceIndicator .
+
+
+###  https://w3id.org/mm#HeatRecoveryDamperPosition
+:HeatRecoveryDamperPosition rdf:type owl:Class ;
+                            rdfs:subClassOf :HVACmetric ;
+                            rdfs:label "Heat recovery damper position" .
+
+
+###  https://w3id.org/mm#HeatRecoveryStatus
+:HeatRecoveryStatus rdf:type owl:Class ;
+                    rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HeatRecoveryValvePosition
+:HeatRecoveryValvePosition rdf:type owl:Class ;
+                           rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#HeatRecoveryWheelRotationalSpeed
+:HeatRecoveryWheelRotationalSpeed rdf:type owl:Class ;
+                                  rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HeatingCircuitPumpLevel
+:HeatingCircuitPumpLevel rdf:type owl:Class ;
+                         rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HeatingCircuitPumpStatus
+:HeatingCircuitPumpStatus rdf:type owl:Class ;
+                          rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HeatingCircuitReturnWaterTemperature
+:HeatingCircuitReturnWaterTemperature rdf:type owl:Class ;
+                                      rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#HeatingCircuitSupplyWaterTemperature
+:HeatingCircuitSupplyWaterTemperature rdf:type owl:Class ;
+                                      rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#HeatingCircuitValvePosition
+:HeatingCircuitValvePosition rdf:type owl:Class ;
+                             rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#HeatingCoilValvePosition
+:HeatingCoilValvePosition rdf:type owl:Class ;
+                          rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#HeatingEnergyConsumption
+:HeatingEnergyConsumption rdf:type owl:Class ;
+                          rdfs:subClassOf :EnergyConsumption .
+
+
+###  https://w3id.org/mm#HeatingLoad
+:HeatingLoad rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasMetricClassID ;
+                                   owl:hasValue "KPI17"
+                                 ] ;
+             rdfs:subClassOf :Energy-KPI .
+
+
+###  https://w3id.org/mm#HeatingSystemLevel
+:HeatingSystemLevel rdf:type owl:Class ;
+                    rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HeatingSystemStatus
+:HeatingSystemStatus rdf:type owl:Class ;
+                     rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HeatingThermalPower
+:HeatingThermalPower rdf:type owl:Class ;
+                     rdfs:subClassOf :ThermalPower ;
+                     rdfs:label "Heating thermal power" .
+
+
+###  https://w3id.org/mm#HotWaterConsumption
+:HotWaterConsumption rdf:type owl:Class ;
+                     rdfs:subClassOf :WaterConsumption .
+
+
+###  https://w3id.org/mm#HotWaterTankHeatingCartridgeStatus
+:HotWaterTankHeatingCartridgeStatus rdf:type owl:Class ;
+                                    rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HotWaterTankTemperature
+:HotWaterTankTemperature rdf:type owl:Class ;
+                         rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HumidifierStatus
+:HumidifierStatus rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#Humidity
+:Humidity rdf:type owl:Class ;
+          rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#HumiditySetPoint
+:HumiditySetPoint rdf:type owl:Class ;
+                  rdfs:subClassOf :SetPoint .
+
+
+###  https://w3id.org/mm#InTarget
+:InTarget rdf:type owl:Class ;
+          rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#IndoorAirPressure
+:IndoorAirPressure rdf:type owl:Class ;
+                   rdfs:subClassOf :AirPressure .
+
+
+###  https://w3id.org/mm#IndoorAirQuality
+:IndoorAirQuality rdf:type owl:Class ;
+                  rdfs:subClassOf :AirQuality .
+
+
+###  https://w3id.org/mm#IndoorAirTemperature
+:IndoorAirTemperature rdf:type owl:Class ;
+                      rdfs:subClassOf :AirTemperature .
+
+
+###  https://w3id.org/mm#IndoorHumidity
+:IndoorHumidity rdf:type owl:Class ;
+                rdfs:subClassOf :Humidity .
+
+
+###  https://w3id.org/mm#IndoorLightLevel
+:IndoorLightLevel rdf:type owl:Class ;
+                  rdfs:subClassOf :LightLevel .
+
+
+###  https://w3id.org/mm#InternalRateOfReturn
+:InternalRateOfReturn rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasMetricClassID ;
+                                            owl:hasValue "KPI14"
+                                          ] ;
+                      rdfs:subClassOf :Cost-KPI .
+
+
+###  https://w3id.org/mm#InvestmentCost
+:InvestmentCost rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasMetricClassID ;
+                                      owl:hasValue "KPI15"
+                                    ] ;
+                rdfs:subClassOf :Cost-KPI .
+
+
+###  https://w3id.org/mm#KeyDesignParameter
+:KeyDesignParameter rdf:type owl:Class ;
+                    rdfs:subClassOf :Metric ;
+                    rdfs:comment "A metric that refers to a design constraints or objective, and that has one or more requirements." .
+
+
+###  https://w3id.org/mm#KeyPerformanceIndicator
+:KeyPerformanceIndicator rdf:type owl:Class ;
+                         rdfs:subClassOf :Metric ;
+                         rdfs:comment "A metric that refers to an objective and that has one or more requirements." ,
+                                      "ToDo: add equivalent class that says: metric + relatedToObjectives(some Objective) = KPI" .
+
+
+###  https://w3id.org/mm#KeyRiskIndicator
+:KeyRiskIndicator rdf:type owl:Class ;
+                  rdfs:subClassOf :Metric ;
+                  rdfs:comment "A metric that refers to one or several risks, and that has one or more requirements." .
+
+
+###  https://w3id.org/mm#LifeCycleCost
+:LifeCycleCost rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasMetricClassID ;
+                                     owl:hasValue "KPI10"
+                                   ] ;
+               rdfs:subClassOf :Cost-KPI .
+
+
+###  https://w3id.org/mm#LightLevel
+:LightLevel rdf:type owl:Class ;
+            rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#LightPosition
+:LightPosition rdf:type owl:Class ;
+               rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#LightStatus
+:LightStatus rdf:type owl:Class ;
+             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#LightingEnergyConsumption
+:LightingEnergyConsumption rdf:type owl:Class ;
+                           rdfs:subClassOf :EnergyConsumption .
+
+
+###  https://w3id.org/mm#LightingPower
+:LightingPower rdf:type owl:Class ;
+               rdfs:subClassOf :Power .
+
+
+###  https://w3id.org/mm#MeanTimeBetweenFailure
+:MeanTimeBetweenFailure rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasMetricClassID ;
+                                              owl:hasValue "KRI06"
+                                            ] ;
+                        rdfs:subClassOf :Reliability-KRI .
+
+
+###  https://w3id.org/mm#Metric
+:Metric rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasMetricRequirement ;
+                          owl:someValuesFrom :MetricRequirement
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasCategory ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasDescription ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasMetricClassID ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasID ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasName ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasUnit ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ;
+        owl:disjointWith :MetricRequirement ;
+        rdfs:comment "A concrete metric that has a context, namely a product or a process it applies to." .
+
+
+###  https://w3id.org/mm#MetricDefinition
+:MetricDefinition rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasDescription ;
+                                    owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasID ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasName ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasUnit ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  rdfs:comment "A metric without context i.e. related to no entity like a product or process it can applies to, and without requirements. This is simply the definition of a physical or an abstract measure. Example: energy consumption, number of items, duration...)" .
+
+
+###  https://w3id.org/mm#MetricGroup
+:MetricGroup rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasName ;
+                               owl:someValuesFrom xsd:string
+                             ] .
+
+
+###  https://w3id.org/mm#MetricOptimizationType
+:MetricOptimizationType rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Class ;
+                                              owl:oneOf ( :FitInRange
+                                                          :FitToGoal
+                                                          :Maximize
+                                                          :Minimize
+                                                          :Optimize
+                                                        )
+                                            ] .
+
+
+###  https://w3id.org/mm#MetricRequirement
+:MetricRequirement rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasMetric ;
+                                     owl:someValuesFrom :Metric
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasDescription ;
+                                     owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
+                                   ] .
+
+
+###  https://w3id.org/mm#MetricType
+:MetricType rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:oneOf ( :Lagging
+                                              :Leading
+                                              :Process
+                                              :Product
+                                              :Qualitative
+                                              :Quantitative
+                                              :Trend
+                                            )
+                                ] .
+
+
+###  https://w3id.org/mm#MetricValue
+:MetricValue rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMetricRequirement ;
+                               owl:someValuesFrom :MetricRequirement
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :appliesToEntity ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass [ rdf:type owl:Class ;
+                                             owl:unionOf ( :Process
+                                                           :Product
+                                                         )
+                                           ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMetric ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Metric
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasID ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasQualitativeValue ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasQuantitativeValue ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:double
+                             ] .
+
+
+###  https://w3id.org/mm#Movement
+:Movement rdf:type owl:Class ;
+          rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#NumberOfFloors
+:NumberOfFloors rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasMetricClassID ;
+                                      owl:hasValue "KDP03"
+                                    ] ;
+                rdfs:subClassOf :Geometry-KDP .
+
+
+###  https://w3id.org/mm#Occupancy
+:Occupancy rdf:type owl:Class ;
+           rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#OutdoorAirDamperPosition
+:OutdoorAirDamperPosition rdf:type owl:Class ;
+                          rdfs:subClassOf :AirDamperPosition .
+
+
+###  https://w3id.org/mm#OutdoorAirPressure
+:OutdoorAirPressure rdf:type owl:Class ;
+                    rdfs:subClassOf :AirPressure ,
+                                    :WeatherMetric .
+
+
+###  https://w3id.org/mm#OutdoorAirQuality
+:OutdoorAirQuality rdf:type owl:Class ;
+                   rdfs:subClassOf :AirQuality ,
+                                   :WeatherMetric .
+
+
+###  https://w3id.org/mm#OutdoorAirTemperature
+:OutdoorAirTemperature rdf:type owl:Class ;
+                       rdfs:subClassOf :AirTemperature ,
+                                       :WeatherMetric .
+
+
+###  https://w3id.org/mm#OutdoorHumidity
+:OutdoorHumidity rdf:type owl:Class ;
+                 rdfs:subClassOf :Humidity ,
+                                 :WeatherMetric .
+
+
+###  https://w3id.org/mm#OutdoorLightLevel
+:OutdoorLightLevel rdf:type owl:Class ;
+                   rdfs:subClassOf :LightLevel ,
+                                   :WeatherMetric .
+
+
+###  https://w3id.org/mm#OutsideTarget
+:OutsideTarget rdf:type owl:Class ;
+               rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#OutsideTolerance
+:OutsideTolerance rdf:type owl:Class ;
+                  rdfs:subClassOf :RequirementCompliance .
+
+
+###  https://w3id.org/mm#OzoneDepletionPotential
+:OzoneDepletionPotential rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasMetricClassID ;
+                                               owl:hasValue "KPI23"
+                                             ] ;
+                         rdfs:subClassOf :Environment-KPI .
+
+
+###  https://w3id.org/mm#PhotochemicalOzoneCreationPotential
+:PhotochemicalOzoneCreationPotential rdf:type owl:Class ;
+                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasMetricClassID ;
+                                                           owl:hasValue "KPI24"
+                                                         ] ;
+                                     rdfs:subClassOf :Environment-KPI .
+
+
+###  https://w3id.org/mm#PostCoolingCoilValvePosition
+:PostCoolingCoilValvePosition rdf:type owl:Class ;
+                              rdfs:subClassOf :ValvePosition ;
+                              rdfs:label "Post cooling coil valve position" .
+
+
+###  https://w3id.org/mm#PostHeatingCoilValvePosition
+:PostHeatingCoilValvePosition rdf:type owl:Class ;
+                              rdfs:subClassOf :ValvePosition ;
+                              rdfs:label "Post heating coil valve position" .
+
+
+###  https://w3id.org/mm#Power
+:Power rdf:type owl:Class ;
+       rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#PreCoolingCoilValvePosition
+:PreCoolingCoilValvePosition rdf:type owl:Class ;
+                             rdfs:subClassOf :ValvePosition ;
+                             rdfs:label "Pre cooling coil valve position" .
+
+
+###  https://w3id.org/mm#PreHeatingCoilValvePosition
+:PreHeatingCoilValvePosition rdf:type owl:Class ;
+                             rdfs:subClassOf :ValvePosition ;
+                             rdfs:label "Pre heating coil valve position" .
+
+
+###  https://w3id.org/mm#Presence
+:Presence rdf:type owl:Class ;
+          rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#PressureSetPoint
+:PressureSetPoint rdf:type owl:Class ;
+                  rdfs:subClassOf :SetPoint .
+
+
+###  https://w3id.org/mm#PrimaryEnergy
+:PrimaryEnergy rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasMetricClassID ;
+                                     owl:hasValue "KPI19"
+                                   ] ;
+               rdfs:subClassOf :Energy-KPI .
+
+
+###  https://w3id.org/mm#ProbabilityOfHigherExploitationCost
+:ProbabilityOfHigherExploitationCost rdf:type owl:Class ;
+                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasMetricClassID ;
+                                                           owl:hasValue "KRI01"
+                                                         ] ;
+                                     rdfs:subClassOf :Cost-KRI .
+
+
+###  https://w3id.org/mm#ProbabilityOfLowRateOfReturn
+:ProbabilityOfLowRateOfReturn rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasMetricClassID ;
+                                                    owl:hasValue "KRI02"
+                                                  ] ;
+                              rdfs:subClassOf :Cost-KRI .
+
+
+###  https://w3id.org/mm#Process
+:Process rdf:type owl:Class .
+
+
+###  https://w3id.org/mm#Product
+:Product rdf:type owl:Class .
+
+
+###  https://w3id.org/mm#ProjectPhase
+:ProjectPhase rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:oneOf ( :Commissioning
+                                                :Construction
+                                                :DetailedDesign
+                                                :EarlyDesign
+                                                :Operation
+                                                :UrbanDesign
+                                              )
+                                  ] ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasName ;
+                                owl:someValuesFrom xsd:string
+                              ] .
+
+
+###  https://w3id.org/mm#PumpRotationalSpeed
+:PumpRotationalSpeed rdf:type owl:Class ;
+                     rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#RadiatorReturnWaterTemperature
+:RadiatorReturnWaterTemperature rdf:type owl:Class ;
+                                rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#RadiatorSupplyWaterTemperature
+:RadiatorSupplyWaterTemperature rdf:type owl:Class ;
+                                rdfs:subClassOf :WaterTemperature .
+
+
+###  https://w3id.org/mm#RadiatorTemperature
+:RadiatorTemperature rdf:type owl:Class ;
+                     rdfs:subClassOf :Temperature .
+
+
+###  https://w3id.org/mm#RadiatorValvePosition
+:RadiatorValvePosition rdf:type owl:Class ;
+                       rdfs:subClassOf :ValvePosition .
+
+
+###  https://w3id.org/mm#Reliability-KRI
+:Reliability-KRI rdf:type owl:Class ;
+                 rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#RenewableEnergy
+:RenewableEnergy rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetricClassID ;
+                                       owl:hasValue "KPI18"
+                                     ] ;
+                 rdfs:subClassOf :Energy-KPI .
+
+
+###  https://w3id.org/mm#RequirementCompliance
+:RequirementCompliance rdf:type owl:Class ;
+                       rdfs:subClassOf :ValuePartition .
+
+
+###  https://w3id.org/mm#ReturnAirDamperPosition
+:ReturnAirDamperPosition rdf:type owl:Class ;
+                         rdfs:subClassOf :AirDamperPosition .
+
+
+###  https://w3id.org/mm#ReturnAirFanRotationalSpeed
+:ReturnAirFanRotationalSpeed rdf:type owl:Class ;
+                             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ReturnAirFanStatus
+:ReturnAirFanStatus rdf:type owl:Class ;
+                    rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ReturnAirTemperature
+:ReturnAirTemperature rdf:type owl:Class ;
+                      rdfs:subClassOf :AirTemperature .
+
+
+###  https://w3id.org/mm#ReturnAirVolumeFlow
+:ReturnAirVolumeFlow rdf:type owl:Class ;
+                     rdfs:subClassOf :AirVolumeFlow .
+
+
+###  https://w3id.org/mm#Role
+:Role rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasName ;
+                        owl:someValuesFrom xsd:string
+                      ] .
+
+
+###  https://w3id.org/mm#Safety-KRI
+:Safety-KRI rdf:type owl:Class ;
+            rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#Schedule-KRI
+:Schedule-KRI rdf:type owl:Class ;
+              rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#SeasonalEnergyEfficiencyRatio
+:SeasonalEnergyEfficiencyRatio rdf:type owl:Class ;
+                               rdfs:subClassOf :HVACmetric ;
+                               rdfs:comment """The SEER rating of a unit is the cooling output during a typical cooling-season divided by the total electric energy input during the same period. 
+The higher the unit's SEER rating the more energy efficient it is.""" ;
+                               rdfs:label "Seasonal energy efficiency ratio" ;
+                               <http://www.w3.org/2004/02/skos/core#altLabel> "SEER"@en .
+
+
+###  https://w3id.org/mm#Security-KRI
+:Security-KRI rdf:type owl:Class ;
+              rdfs:subClassOf :KeyRiskIndicator .
+
+
+###  https://w3id.org/mm#SetPoint
+:SetPoint rdf:type owl:Class ;
+          rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ShadingLevel
+:ShadingLevel rdf:type owl:Class ;
+              rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#ShadingSatus
+:ShadingSatus rdf:type owl:Class ;
+              rdfs:subClassOf :HVACmetric ;
+              rdfs:label "Shading status" .
+
+
+###  https://w3id.org/mm#SolarRadiation
+:SolarRadiation rdf:type owl:Class ;
+                rdfs:subClassOf :HVACmetric ,
+                                :WeatherMetric .
+
+
+###  https://w3id.org/mm#SpecificDifferentialPressure
+:SpecificDifferentialPressure rdf:type owl:Class ;
+                              rdfs:subClassOf :DifferentialPressure .
+
+
+###  https://w3id.org/mm#SpecificFanPower
+:SpecificFanPower rdf:type owl:Class ;
+                  rdfs:subClassOf :ElectricPower .
+
+
+###  https://w3id.org/mm#SpecificPumpPower
+:SpecificPumpPower rdf:type owl:Class ;
+                   rdfs:subClassOf :ElectricPower .
+
+
+###  https://w3id.org/mm#SpecificVolumeFlow
+:SpecificVolumeFlow rdf:type owl:Class ;
+                    rdfs:subClassOf :VolumeFlow .
+
+
+###  https://w3id.org/mm#SunshineDuration
+:SunshineDuration rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric ,
+                                  :WeatherMetric .
+
+
+###  https://w3id.org/mm#SupplyAirDamperPosition
+:SupplyAirDamperPosition rdf:type owl:Class ;
+                         rdfs:subClassOf :AirDamperPosition .
+
+
+###  https://w3id.org/mm#SupplyAirFanRotationalSpeed
+:SupplyAirFanRotationalSpeed rdf:type owl:Class ;
+                             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#SupplyAirFanStatus
+:SupplyAirFanStatus rdf:type owl:Class ;
+                    rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#SupplyAirHumidity
+:SupplyAirHumidity rdf:type owl:Class ;
+                   rdfs:subClassOf :Humidity .
+
+
+###  https://w3id.org/mm#SupplyAirHumiditySetPoint
+:SupplyAirHumiditySetPoint rdf:type owl:Class ;
+                           rdfs:subClassOf :HumiditySetPoint .
+
+
+###  https://w3id.org/mm#SupplyAirPressure
+:SupplyAirPressure rdf:type owl:Class ;
+                   rdfs:subClassOf :AirPressure .
+
+
+###  https://w3id.org/mm#SupplyAirPressureSetPoint
+:SupplyAirPressureSetPoint rdf:type owl:Class ;
+                           rdfs:subClassOf :AirPressureSetPoint .
+
+
+###  https://w3id.org/mm#SupplyAirTemperature
+:SupplyAirTemperature rdf:type owl:Class ;
+                      rdfs:subClassOf :AirTemperature .
+
+
+###  https://w3id.org/mm#SupplyAirTemperatureSetPoint
+:SupplyAirTemperatureSetPoint rdf:type owl:Class ;
+                              rdfs:subClassOf :TemperatureSetPoint .
+
+
+###  https://w3id.org/mm#SupplyAirVolumeFlow
+:SupplyAirVolumeFlow rdf:type owl:Class ;
+                     rdfs:subClassOf :AirVolumeFlow .
+
+
+###  https://w3id.org/mm#Target
+:Target rdf:type owl:Class ;
+        rdfs:subClassOf :MetricRequirement .
+
+
+###  https://w3id.org/mm#Temperature
+:Temperature rdf:type owl:Class ;
+             rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#TemperatureSetPoint
+:TemperatureSetPoint rdf:type owl:Class ;
+                     rdfs:subClassOf :SetPoint .
+
+
+###  https://w3id.org/mm#Template
+:Template rdf:type owl:Class ;
+          rdfs:subClassOf :MetricDefinition ;
+          rdfs:label "Template" .
+
+
+###  https://w3id.org/mm#ThermalPower
+:ThermalPower rdf:type owl:Class ;
+              rdfs:subClassOf :Power .
+
+
+###  https://w3id.org/mm#ThermalTransmittance
+:ThermalTransmittance rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasMetricClassID ;
+                                            owl:hasValue "KDP08"
+                                          ] ;
+                      rdfs:subClassOf :Energy-KDP .
+
+
+###  https://w3id.org/mm#Threshold
+:Threshold rdf:type owl:Class ;
+           rdfs:subClassOf :MetricRequirement .
+
+
+###  https://w3id.org/mm#Tolerance
+:Tolerance rdf:type owl:Class ;
+           rdfs:subClassOf :MetricRequirement .
+
+
+###  https://w3id.org/mm#ToleranceType
+:ToleranceType rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:oneOf ( :Absolute
+                                                 :Relative
+                                               )
+                                   ] .
+
+
+###  https://w3id.org/mm#TotalEnergyConsmption
+:TotalEnergyConsmption rdf:type owl:Class ;
+                       rdfs:subClassOf :EnergyConsumption ;
+                       rdfs:label "Total energy consmption" .
+
+
+###  https://w3id.org/mm#ValuePartition
+:ValuePartition rdf:type owl:Class .
+
+
+###  https://w3id.org/mm#ValvePosition
+:ValvePosition rdf:type owl:Class ;
+               rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#Vibration
+:Vibration rdf:type owl:Class ;
+           rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#VolumeFlow
+:VolumeFlow rdf:type owl:Class ;
+            rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#WaterConsumption
+:WaterConsumption rdf:type owl:Class ;
+                  rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#WaterTemperature
+:WaterTemperature rdf:type owl:Class ;
+                  rdfs:subClassOf :Temperature .
+
+
+###  https://w3id.org/mm#WaterVolumeFlow
+:WaterVolumeFlow rdf:type owl:Class ;
+                 rdfs:subClassOf :VolumeFlow .
+
+
+###  https://w3id.org/mm#WeatherMetric
+:WeatherMetric rdf:type owl:Class ;
+               rdfs:subClassOf :Metric ;
+               rdfs:comment "A metric that is usually used in climatology or meteorology to assess  weather conditions and changes." ;
+               rdfs:label "Weather metric" .
+
+
+###  https://w3id.org/mm#WindSpeed
+:WindSpeed rdf:type owl:Class ;
+           rdfs:subClassOf :HVACmetric ,
+                           :WeatherMetric .
+
+
+###  https://w3id.org/mm#WindSpeedAroundBuilding
+:WindSpeedAroundBuilding rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasMetricClassID ;
+                                               owl:hasValue "KPI09"
+                                             ] ;
+                         rdfs:subClassOf :Comfort-KPI .
+
+
+###  https://w3id.org/mm#WindSpeedAtBuildingEntrance
+:WindSpeedAtBuildingEntrance rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasMetricClassID ;
+                                                   owl:hasValue "KPI08"
+                                                 ] ;
+                             rdfs:subClassOf :Comfort-KPI .
+
+
+###  https://w3id.org/mm#WindowStatus
+:WindowStatus rdf:type owl:Class ;
+              rdfs:subClassOf :HVACmetric .
+
+
+###  https://w3id.org/mm#WindowWallRatio
+:WindowWallRatio rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetricClassID ;
+                                       owl:hasValue "KDP16"
+                                     ] ;
+                 rdfs:subClassOf :Geometry-KDP .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/mm#Absolute
+:Absolute rdf:type owl:NamedIndividual ,
+                   :ToleranceType .
+
+
+###  https://w3id.org/mm#AirCoolingStatus
+:AirCoolingStatus rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirDamperPosition
+:AirDamperPosition rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirHandlingUnitSchedule
+:AirHandlingUnitSchedule rdf:type owl:NamedIndividual ,
+                                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirHeatingStatus
+:AirHeatingStatus rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirPrecoolingStatus
+:AirPrecoolingStatus rdf:type owl:NamedIndividual ,
+                              :MetricDefinition ;
+                     rdfs:label "Air precooling status" .
+
+
+###  https://w3id.org/mm#AirPreheatingStatus
+:AirPreheatingStatus rdf:type owl:NamedIndividual ,
+                              :MetricDefinition ;
+                     rdfs:label "Air preheating status" .
+
+
+###  https://w3id.org/mm#AirPressure
+:AirPressure rdf:type owl:NamedIndividual ,
+                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirPressureSetPoint
+:AirPressureSetPoint rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirQuality
+:AirQuality rdf:type owl:NamedIndividual ,
+                     :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirTemperature
+:AirTemperature rdf:type owl:NamedIndividual ,
+                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#AirVolumeFlow
+:AirVolumeFlow rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#ApplianceElectricityConsumption
+:ApplianceElectricityConsumption rdf:type owl:NamedIndividual ,
+                                          :MetricDefinition .
+
+
+###  https://w3id.org/mm#Architect
+:Architect rdf:type owl:NamedIndividual ,
+                    :Role ;
+           :hasName "Architect" .
+
+
+###  https://w3id.org/mm#Azimuth
+:Azimuth rdf:type owl:NamedIndividual ,
+                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#BlindPosition
+:BlindPosition rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#BlindStatus
+:BlindStatus rdf:type owl:NamedIndividual ,
+                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#BoilerLevel
+:BoilerLevel rdf:type owl:NamedIndividual ,
+                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#BoilerReturnWaterTemperature
+:BoilerReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#BoilerSupplyWaterTemperature
+:BoilerSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#BoilerValvePosition
+:BoilerValvePosition rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#Building
+:Building rdf:type owl:NamedIndividual ,
+                   :FunctionalElement ;
+          :hasMetricRequirement :BuildingHeightTarget ,
+                                :BuildingHeightTolerance ,
+                                :ProbabilityOfLowInternalRateOfReturnTarget ,
+                                :ProbabilityOfLowInternalRateOfReturnTolerance ,
+                                :TotalEnergyConsumptionTarget ,
+                                :TotalEnergyConsumptionTolerance ;
+          :hasID "edhsthsfh5sfh5f4fz83j" ;
+          :hasName "Office building" .
+
+
+###  https://w3id.org/mm#BuildingHeight
+:BuildingHeight rdf:type owl:NamedIndividual ,
+                         :BuildingHeight ,
+                         :KeyDesignParameter ;
+                :appliesToEntity :Building ;
+                :assessedBy :Architect ;
+                :hasOptimizationType :FitInRange ;
+                :hasTarget :BuildingHeightTarget ;
+                :hasTolerance :BuildingHeightTolerance ;
+                :usedInProjectPhase :UrbanDesign ;
+                :hasDescription "The overall height of the building" ;
+                :hasID "KDP01" ;
+                :hasName "Building height" ;
+                :hasUnit "m" .
+
+
+###  https://w3id.org/mm#BuildingHeightTarget
+:BuildingHeightTarget rdf:type owl:NamedIndividual ,
+                               :Target ;
+                      :hasLowerBound "3.15"^^xsd:double ;
+                      :hasUpperBound "3.35"^^xsd:double .
+
+
+###  https://w3id.org/mm#BuildingHeightTolerance
+:BuildingHeightTolerance rdf:type owl:NamedIndividual ,
+                                  :Tolerance ;
+                         :hasToleranceType :Relative ;
+                         :hasLowerBound "3.087"^^xsd:double .
+
+
+###  https://w3id.org/mm#BuildingHeightValue
+:BuildingHeightValue rdf:type owl:NamedIndividual ,
+                              :MetricValue ;
+                     :appliesToEntity :Building ;
+                     :hasMetric :BuildingHeight ;
+                     :hasQuantitativeValue "3.4"^^xsd:double ;
+                     :hasVariantID "A1V1" .
+
+
+###  https://w3id.org/mm#CO2Concentration
+:CO2Concentration rdf:type owl:NamedIndividual ,
+                           :MetricDefinition ;
+                  rdfs:label "CO2 Concentration" .
+
+
+###  https://w3id.org/mm#ChillerLevel
+:ChillerLevel rdf:type owl:NamedIndividual ,
+                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#ChillerStatus
+:ChillerStatus rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#ColdWaterConsumption
+:ColdWaterConsumption rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#Commissioning
+:Commissioning rdf:type owl:NamedIndividual ,
+                        :ProjectPhase .
+
+
+###  https://w3id.org/mm#Construction
+:Construction rdf:type owl:NamedIndividual ,
+                       :ProjectPhase .
+
+
+###  https://w3id.org/mm#CoolingCoilValvePosition
+:CoolingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#CoolingEnergyConsumption
+:CoolingEnergyConsumption rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#CoolingPower
+:CoolingPower rdf:type owl:NamedIndividual ,
+                       :MetricDefinition ;
+              rdfs:label "Cooling power" .
+
+
+###  https://w3id.org/mm#CostAnalyst
+:CostAnalyst rdf:type owl:NamedIndividual ,
+                      :Role ;
+             :hasName "Cost analyst" .
+
+
+###  https://w3id.org/mm#DecisionMaker
+:DecisionMaker rdf:type owl:NamedIndividual ,
+                        :Role ;
+               :hasName "Decision maker" .
+
+
+###  https://w3id.org/mm#DetailedDesign
+:DetailedDesign rdf:type owl:NamedIndividual ,
+                         :ProjectPhase ;
+                :hasName "Detailed design" .
+
+
+###  https://w3id.org/mm#DewPoint
+:DewPoint rdf:type owl:NamedIndividual ,
+                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#DifferentialPressure
+:DifferentialPressure rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#DifferentialPressureAtNominalVolumeFlow
+:DifferentialPressureAtNominalVolumeFlow rdf:type owl:NamedIndividual ,
+                                                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#DifferentialPressureLimit
+:DifferentialPressureLimit rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#DistrictHeatingReturnWaterTemperature
+:DistrictHeatingReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                                :MetricDefinition .
+
+
+###  https://w3id.org/mm#DistrictHeatingSupplyWaterTemperature
+:DistrictHeatingSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                                :MetricDefinition .
+
+
+###  https://w3id.org/mm#DistrictHeatingWaterVolumeFlow
+:DistrictHeatingWaterVolumeFlow rdf:type owl:NamedIndividual ,
+                                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#DoorStatus
+:DoorStatus rdf:type owl:NamedIndividual ,
+                     :MetricDefinition .
+
+
+###  https://w3id.org/mm#EarlyDesign
+:EarlyDesign rdf:type owl:NamedIndividual ,
+                      :ProjectPhase ;
+             :hasName "Early design" .
+
+
+###  https://w3id.org/mm#ElectricPower
+:ElectricPower rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#ElectricityConsumption
+:ElectricityConsumption rdf:type owl:NamedIndividual ,
+                                 :MetricDefinition .
+
+
+###  https://w3id.org/mm#Elevation
+:Elevation rdf:type owl:NamedIndividual ,
+                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#Energy
+:Energy rdf:type owl:NamedIndividual ,
+                 :MetricGroup ;
+        :isComposedOf :TotalEnergyConsumption ;
+        :hasWeight "0.6"^^xsd:double .
+
+
+###  https://w3id.org/mm#EnergyConsumption
+:EnergyConsumption rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#EnergyConsumptionValue
+:EnergyConsumptionValue rdf:type owl:NamedIndividual ,
+                                 :MetricValue ;
+                        :appliesToEntity :Building ;
+                        :hasMetric :TotalEnergyConsumption ;
+                        :hasQuantitativeValue "35.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#EnergyEfficiencyRate
+:EnergyEfficiencyRate rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#EnergyExpert
+:EnergyExpert rdf:type owl:NamedIndividual ,
+                       :Role ;
+              :hasName "Energy expert" .
+
+
+###  https://w3id.org/mm#ExhaustAirDamperPosition
+:ExhaustAirDamperPosition rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#ExhaustAirTemperature
+:ExhaustAirTemperature rdf:type owl:NamedIndividual ,
+                                :MetricDefinition .
+
+
+###  https://w3id.org/mm#ExhaustAirVolumeFlow
+:ExhaustAirVolumeFlow rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#FanCoilUnitStatus
+:FanCoilUnitStatus rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#FanCoilUnitValvePosition
+:FanCoilUnitValvePosition rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#FanRotationalSpeed
+:FanRotationalSpeed rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#FanSetpoint
+:FanSetpoint rdf:type owl:NamedIndividual ,
+                      :MetricDefinition ;
+             rdfs:label "Fan setpoint" .
+
+
+###  https://w3id.org/mm#FanSpeedSetPoint
+:FanSpeedSetPoint rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#FanStatus
+:FanStatus rdf:type owl:NamedIndividual ,
+                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#FancoilReturnWaterTemperature
+:FancoilReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#FancoilSupplyWaterTemperature
+:FancoilSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#FitInRange
+:FitInRange rdf:type owl:NamedIndividual ,
+                     :MetricOptimizationType .
+
+
+###  https://w3id.org/mm#FitToGoal
+:FitToGoal rdf:type owl:NamedIndividual ,
+                    :MetricOptimizationType .
+
+
+###  https://w3id.org/mm#GasConsumption
+:GasConsumption rdf:type owl:NamedIndividual ,
+                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatRecevoryDamperPosition
+:HeatRecevoryDamperPosition rdf:type owl:NamedIndividual ,
+                                     :MetricDefinition ;
+                            rdfs:label "Heat recevory damper position" .
+
+
+###  https://w3id.org/mm#HeatRecoveryStatus
+:HeatRecoveryStatus rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatRecoveryValvePosition
+:HeatRecoveryValvePosition rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatRecoveryWheelRotationalSpeed
+:HeatRecoveryWheelRotationalSpeed rdf:type owl:NamedIndividual ,
+                                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingCircuitPumpLevel
+:HeatingCircuitPumpLevel rdf:type owl:NamedIndividual ,
+                                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingCircuitPumpStatus
+:HeatingCircuitPumpStatus rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingCircuitReturnWaterTemperature
+:HeatingCircuitReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingCircuitSupplyWaterTemperature
+:HeatingCircuitSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingCircuitValvePosition
+:HeatingCircuitValvePosition rdf:type owl:NamedIndividual ,
+                                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingCoilValvePosition
+:HeatingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingEnergyConsumption
+:HeatingEnergyConsumption rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingPower
+:HeatingPower rdf:type owl:NamedIndividual ,
+                       :MetricDefinition ;
+              rdfs:label "Heating power" .
+
+
+###  https://w3id.org/mm#HeatingSystemLevel
+:HeatingSystemLevel rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#HeatingSystemStatus
+:HeatingSystemStatus rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#HotWaterConsumption
+:HotWaterConsumption rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#HotWaterTankHeatingCartridgeStatus
+:HotWaterTankHeatingCartridgeStatus rdf:type owl:NamedIndividual ,
+                                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#HotWaterTankTemperature
+:HotWaterTankTemperature rdf:type owl:NamedIndividual ,
+                                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#HumidifierStatus
+:HumidifierStatus rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#Humidity
+:Humidity rdf:type owl:NamedIndividual ,
+                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#HumiditySetPoint
+:HumiditySetPoint rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#IndoorAirPressure
+:IndoorAirPressure rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#IndoorAirQuality
+:IndoorAirQuality rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#IndoorAirTemperature
+:IndoorAirTemperature rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#IndoorHumidity
+:IndoorHumidity rdf:type owl:NamedIndividual ,
+                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#IndoorLightLevel
+:IndoorLightLevel rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#IndoorRelativeHumidity
+:IndoorRelativeHumidity rdf:type owl:NamedIndividual ,
+                                 :MetricDefinition ;
+                        rdfs:label "Indoor relative humidity" .
+
+
+###  https://w3id.org/mm#Input
+:Input rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/mm#Lagging
+:Lagging rdf:type owl:NamedIndividual ,
+                  :MetricType .
+
+
+###  https://w3id.org/mm#Leading
+:Leading rdf:type owl:NamedIndividual ,
+                  :MetricType .
+
+
+###  https://w3id.org/mm#LightLevel
+:LightLevel rdf:type owl:NamedIndividual ,
+                     :MetricDefinition .
+
+
+###  https://w3id.org/mm#LightPosition
+:LightPosition rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#LightStatus
+:LightStatus rdf:type owl:NamedIndividual ,
+                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#LightingEnergyConsumption
+:LightingEnergyConsumption rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#LightingPower
+:LightingPower rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#Maximize
+:Maximize rdf:type owl:NamedIndividual ,
+                   :MetricOptimizationType .
+
+
+###  https://w3id.org/mm#MeanUnavailabilityValue
+:MeanUnavailabilityValue rdf:type owl:NamedIndividual ,
+                                  :MetricValue .
+
+
+###  https://w3id.org/mm#MediumTemperature
+:MediumTemperature rdf:type owl:NamedIndividual ,
+                            :MetricDefinition ;
+                   rdfs:label "Medium temperature" .
+
+
+###  https://w3id.org/mm#Minimize
+:Minimize rdf:type owl:NamedIndividual ,
+                   :MetricOptimizationType .
+
+
+###  https://w3id.org/mm#Movement
+:Movement rdf:type owl:NamedIndividual ,
+                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#MyDecisionValue
+:MyDecisionValue rdf:type owl:NamedIndividual ,
+                          :DecisionValue ;
+                 :assessedBy :DecisionMaker ;
+                 :hasOptimizationType :Maximize ;
+                 :hasTarget :MyDecisionValueTarget ;
+                 :hasTolerance :MyDecisionValueTolerance ;
+                 :isComposedOf :Energy ;
+                 :usedInProjectPhase :UrbanDesign ;
+                 :hasDescription "The energy is the most important criterium" ;
+                 :hasID "DV1" ;
+                 :hasName "My decision value" .
+
+
+###  https://w3id.org/mm#MyDecisionValueTarget
+:MyDecisionValueTarget rdf:type owl:NamedIndividual ,
+                                :Target ;
+                       :hasLowerBound "1.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#MyDecisionValueTolerance
+:MyDecisionValueTolerance rdf:type owl:NamedIndividual ,
+                                   :Tolerance ;
+                          :hasToleranceType :Relative ;
+                          :hasLowerBound "5.0"^^xsd:double ;
+                          :hasUpperBound "5.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#Occupancy
+:Occupancy rdf:type owl:NamedIndividual ,
+                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#OfficeRoom
+:OfficeRoom rdf:type owl:NamedIndividual ,
+                     :FunctionalElement .
+
+
+###  https://w3id.org/mm#Operation
+:Operation rdf:type owl:NamedIndividual ,
+                    :ProjectPhase .
+
+
+###  https://w3id.org/mm#Optimize
+:Optimize rdf:type owl:NamedIndividual ,
+                   :MetricOptimizationType .
+
+
+###  https://w3id.org/mm#OutdoorAirDamperPosition
+:OutdoorAirDamperPosition rdf:type owl:NamedIndividual ,
+                                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#OutdoorAirPressure
+:OutdoorAirPressure rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#OutdoorAirQuality
+:OutdoorAirQuality rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#OutdoorAirTemperature
+:OutdoorAirTemperature rdf:type owl:NamedIndividual ,
+                                :MetricDefinition .
+
+
+###  https://w3id.org/mm#OutdoorHumidity
+:OutdoorHumidity rdf:type owl:NamedIndividual ,
+                          :MetricDefinition .
+
+
+###  https://w3id.org/mm#OutdoorLightLevel
+:OutdoorLightLevel rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#OutdoorRelativeHumidity
+:OutdoorRelativeHumidity rdf:type owl:NamedIndividual ,
+                                  :MetricDefinition ;
+                         rdfs:label "Outdoor relative humidity" .
+
+
+###  https://w3id.org/mm#OuterWall
+:OuterWall rdf:type owl:NamedIndividual ,
+                    :FunctionalElement .
+
+
+###  https://w3id.org/mm#Output
+:Output rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/mm#PostcoolingCoilValvePosition
+:PostcoolingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition ;
+                              rdfs:label "Postcooling coil valve position" .
+
+
+###  https://w3id.org/mm#PostheatingCoilValvePosition
+:PostheatingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition ;
+                              rdfs:label "Postheating coil valve position" .
+
+
+###  https://w3id.org/mm#Power
+:Power rdf:type owl:NamedIndividual ,
+                :MetricDefinition .
+
+
+###  https://w3id.org/mm#PrecoolingCoilValvePosition
+:PrecoolingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                      :MetricDefinition ;
+                             rdfs:label "Precooling coil valve position" .
+
+
+###  https://w3id.org/mm#PreheatingCoilValvePosition
+:PreheatingCoilValvePosition rdf:type owl:NamedIndividual ,
+                                      :MetricDefinition ;
+                             rdfs:label "Preheating coil valve position" .
+
+
+###  https://w3id.org/mm#Presence
+:Presence rdf:type owl:NamedIndividual ,
+                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#PressureSetPoint
+:PressureSetPoint rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#ProbabilityOfLowInternalRateOfReturn
+:ProbabilityOfLowInternalRateOfReturn rdf:type owl:NamedIndividual ,
+                                               :KeyRiskIndicator ;
+                                      :appliesToEntity :Building ;
+                                      :assessedBy :CostAnalyst ;
+                                      :hasOptimizationType :Minimize ;
+                                      :hasTarget :ProbabilityOfLowInternalRateOfReturnTarget ;
+                                      :hasTolerance :ProbabilityOfLowInternalRateOfReturnTolerance ;
+                                      :usedInProjectPhase :UrbanDesign ;
+                                      :hasDescription "The probability of having an Internal Rate of Return below 10%. The IRR is one measure of project profitability." ;
+                                      :hasID "KRI05" ;
+                                      :hasName "Probability of low Internal Rate of Return" ;
+                                      :hasUnit "%" .
+
+
+###  https://w3id.org/mm#ProbabilityOfLowInternalRateOfReturnTarget
+:ProbabilityOfLowInternalRateOfReturnTarget rdf:type owl:NamedIndividual ,
+                                                     :Target ;
+                                            :hasUpperBound "15.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#ProbabilityOfLowInternalRateOfReturnTolerance
+:ProbabilityOfLowInternalRateOfReturnTolerance rdf:type owl:NamedIndividual ,
+                                                        :Tolerance ;
+                                               :hasToleranceType :Absolute ;
+                                               :hasUpperBound "15.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#ProbabilityOfLowerIRRvalue
+:ProbabilityOfLowerIRRvalue rdf:type owl:NamedIndividual ,
+                                     :MetricValue ;
+                            :appliesToEntity :Building ;
+                            :hasMetric :ProbabilityOfLowInternalRateOfReturn ;
+                            :hasQuantitativeValue "20.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#Process
+:Process rdf:type owl:NamedIndividual ,
+                  :MetricType .
+
+
+###  https://w3id.org/mm#Product
+:Product rdf:type owl:NamedIndividual ,
+                  :MetricType .
+
+
+###  https://w3id.org/mm#PumpRotationalSpeed
+:PumpRotationalSpeed rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#Qualitative
+:Qualitative rdf:type owl:NamedIndividual ,
+                      :MetricType .
+
+
+###  https://w3id.org/mm#Quantitative
+:Quantitative rdf:type owl:NamedIndividual ,
+                       :MetricType .
+
+
+###  https://w3id.org/mm#RadiatorReturnWaterTemperature
+:RadiatorReturnWaterTemperature rdf:type owl:NamedIndividual ,
+                                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#RadiatorSupplyWaterTemperature
+:RadiatorSupplyWaterTemperature rdf:type owl:NamedIndividual ,
+                                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#RadiatorTemperature
+:RadiatorTemperature rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#RadiatorValvePosition
+:RadiatorValvePosition rdf:type owl:NamedIndividual ,
+                                :MetricDefinition .
+
+
+###  https://w3id.org/mm#Relative
+:Relative rdf:type owl:NamedIndividual ,
+                   :ToleranceType .
+
+
+###  https://w3id.org/mm#ReturnAirDamperPosition
+:ReturnAirDamperPosition rdf:type owl:NamedIndividual ,
+                                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#ReturnAirFanRotationalSpeed
+:ReturnAirFanRotationalSpeed rdf:type owl:NamedIndividual ,
+                                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#ReturnAirFanStatus
+:ReturnAirFanStatus rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#ReturnAirTemperature
+:ReturnAirTemperature rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#ReturnAirVolumeFlow
+:ReturnAirVolumeFlow rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#SetPoint
+:SetPoint rdf:type owl:NamedIndividual ,
+                   :MetricDefinition .
+
+
+###  https://w3id.org/mm#ShadingLevel
+:ShadingLevel rdf:type owl:NamedIndividual ,
+                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#ShadingStatus
+:ShadingStatus rdf:type owl:NamedIndividual ,
+                        :MetricDefinition ;
+               rdfs:label "Shading status" .
+
+
+###  https://w3id.org/mm#SolarRadiation
+:SolarRadiation rdf:type owl:NamedIndividual ,
+                         :MetricDefinition .
+
+
+###  https://w3id.org/mm#SpecificDifferentialPressure
+:SpecificDifferentialPressure rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#SpecificFanPower
+:SpecificFanPower rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#SpecificPumpPower
+:SpecificPumpPower rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#SpecificVolumeFlow
+:SpecificVolumeFlow rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#SunshineDuration
+:SunshineDuration rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirDamperPosition
+:SupplyAirDamperPosition rdf:type owl:NamedIndividual ,
+                                  :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirFanRotationalSpeed
+:SupplyAirFanRotationalSpeed rdf:type owl:NamedIndividual ,
+                                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirFanStatus
+:SupplyAirFanStatus rdf:type owl:NamedIndividual ,
+                             :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirHumidity
+:SupplyAirHumidity rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirHumiditySetPoint
+:SupplyAirHumiditySetPoint rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirHumiditySetpoint
+:SupplyAirHumiditySetpoint rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition ;
+                           rdfs:label "Supply air humidity setpoint" .
+
+
+###  https://w3id.org/mm#SupplyAirPressure
+:SupplyAirPressure rdf:type owl:NamedIndividual ,
+                            :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirPressureSetPoint
+:SupplyAirPressureSetPoint rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirPressureSetpoint
+:SupplyAirPressureSetpoint rdf:type owl:NamedIndividual ,
+                                    :MetricDefinition ;
+                           rdfs:label "Supply air pressure setpoint" .
+
+
+###  https://w3id.org/mm#SupplyAirTemperature
+:SupplyAirTemperature rdf:type owl:NamedIndividual ,
+                               :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirTemperatureSetPoint
+:SupplyAirTemperatureSetPoint rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#SupplyAirTemperatureSetpoint
+:SupplyAirTemperatureSetpoint rdf:type owl:NamedIndividual ,
+                                       :MetricDefinition ;
+                              rdfs:label "Supply air temperature setpoint" .
+
+
+###  https://w3id.org/mm#SupplyAirVolumeFlow
+:SupplyAirVolumeFlow rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#Temperature
+:Temperature rdf:type owl:NamedIndividual ,
+                      :MetricDefinition .
+
+
+###  https://w3id.org/mm#TemperatureSetPoint
+:TemperatureSetPoint rdf:type owl:NamedIndividual ,
+                              :MetricDefinition .
+
+
+###  https://w3id.org/mm#ThermalPower
+:ThermalPower rdf:type owl:NamedIndividual ,
+                       :MetricDefinition .
+
+
+###  https://w3id.org/mm#TotalEnergyConsumption
+:TotalEnergyConsumption rdf:type owl:NamedIndividual ,
+                                 :KeyPerformanceIndicator ,
+                                 :MetricDefinition ;
+                        :appliesToEntity :Building ;
+                        :assessedBy :EnergyExpert ;
+                        :hasOptimizationType :Minimize ;
+                        :hasTarget :TotalEnergyConsumptionTarget ;
+                        :hasTolerance :TotalEnergyConsumptionTolerance ;
+                        :usedInProjectPhase :UrbanDesign ;
+                        :hasDescription "The total energy consumed by the building" ;
+                        :hasID "KPI04" ;
+                        :hasName "Total energy consumption" ;
+                        :hasUnit "kWh/m²a" ;
+                        rdfs:label "Total energy consumption" .
+
+
+###  https://w3id.org/mm#TotalEnergyConsumptionTarget
+:TotalEnergyConsumptionTarget rdf:type owl:NamedIndividual ,
+                                       :Target ;
+                              :hasUpperBound "30.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#TotalEnergyConsumptionTolerance
+:TotalEnergyConsumptionTolerance rdf:type owl:NamedIndividual ,
+                                          :Tolerance ;
+                                 :hasToleranceType :Absolute ;
+                                 :hasUpperBound "40.0"^^xsd:double .
+
+
+###  https://w3id.org/mm#Trend
+:Trend rdf:type owl:NamedIndividual ,
+                :MetricType .
+
+
+###  https://w3id.org/mm#UrbanDesign
+:UrbanDesign rdf:type owl:NamedIndividual ,
+                      :ProjectPhase ;
+             :hasName "Urban design" .
+
+
+###  https://w3id.org/mm#ValvePosition
+:ValvePosition rdf:type owl:NamedIndividual ,
+                        :MetricDefinition .
+
+
+###  https://w3id.org/mm#Vibration
+:Vibration rdf:type owl:NamedIndividual ,
+                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#VolumeFlow
+:VolumeFlow rdf:type owl:NamedIndividual ,
+                     :MetricDefinition .
+
+
+###  https://w3id.org/mm#WaterConsumption
+:WaterConsumption rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#WaterTemperature
+:WaterTemperature rdf:type owl:NamedIndividual ,
+                           :MetricDefinition .
+
+
+###  https://w3id.org/mm#WaterVolumeFlow
+:WaterVolumeFlow rdf:type owl:NamedIndividual ,
+                          :MetricDefinition .
+
+
+###  https://w3id.org/mm#WindSpeed
+:WindSpeed rdf:type owl:NamedIndividual ,
+                    :MetricDefinition .
+
+
+###  https://w3id.org/mm#WindowStatus
+:WindowStatus rdf:type owl:NamedIndividual ,
+                       :MetricDefinition .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:AirCoolingStatus rdfs:label "Air cooling status" .
+
+
+:AirDamperPosition rdfs:label "Air damper position" .
+
+
+:AirHandlingUnitSchedule rdfs:label "Air handling unit schedule" .
+
+
+:AirHeatingStatus rdfs:label "Air heating status" .
+
+
+:AirPressure rdfs:label "Air pressure" .
+
+
+:AirPressureSetPoint rdfs:label "Air pressure set point" .
+
+
+:AirQuality rdfs:label "Air quality" .
+
+
+:AirTemperature rdfs:label "Air temperature" .
+
+
+:AirVolumeFlow rdfs:label "Air volume flow" .
+
+
+:ApplianceElectricityConsumption rdfs:label "Appliance electricity consumption" .
+
+
+:Azimuth rdfs:label "Azimuth" .
+
+
+:BlindPosition rdfs:label "Blind position" .
+
+
+:BlindStatus rdfs:label "Blind status" .
+
+
+:BoilerLevel rdfs:label "Boiler level" .
+
+
+:BoilerReturnWaterTemperature rdfs:label "Boiler return water temperature" .
+
+
+:BoilerSupplyWaterTemperature rdfs:label "Boiler supply water temperature" .
+
+
+:BoilerValvePosition rdfs:label "Boiler valve position" .
+
+
+:ChillerLevel rdfs:label "Chiller level" .
+
+
+:ChillerStatus rdfs:label "Chiller status" .
+
+
+:ColdWaterConsumption rdfs:label "Cold water consumption" .
+
+
+:CoolingCoilValvePosition rdfs:label "Cooling coil valve position" .
+
+
+:CoolingEnergyConsumption rdfs:label "Cooling energy consumption" .
+
+
+:DewPoint rdfs:label "Dew point" .
+
+
+:DifferentialPressure rdfs:label "Differential pressure" .
+
+
+:DifferentialPressureAtNominalVolumeFlow rdfs:label "Differential pressure at nominal volume flow" .
+
+
+:DifferentialPressureLimit rdfs:label "Differential pressure limit" .
+
+
+:DistrictHeatingReturnWaterTemperature rdfs:label "District heating return water temperature" .
+
+
+:DistrictHeatingSupplyWaterTemperature rdfs:label "District heating supply water temperature" .
+
+
+:DistrictHeatingWaterVolumeFlow rdfs:label "District heating water volume flow" .
+
+
+:DoorStatus rdfs:label "Door status" .
+
+
+:ElectricPower rdfs:label "Electric power" .
+
+
+:ElectricityConsumption rdfs:label "Electricity consumption" .
+
+
+:Elevation rdfs:label "Elevation" .
+
+
+:EnergyConsumption rdfs:label "Energy consumption" .
+
+
+:EnergyEfficiencyRate rdfs:label "Energy efficiency rate" .
+
+
+:ExhaustAirDamperPosition rdfs:label "Exhaust air damper position" .
+
+
+:ExhaustAirTemperature rdfs:label "Exhaust air temperature" .
+
+
+:ExhaustAirVolumeFlow rdfs:label "Exhaust air volume flow" .
+
+
+:FanCoilUnitStatus rdfs:label "Fan coil unit status" .
+
+
+:FanCoilUnitValvePosition rdfs:label "Fan coil unit valve position" .
+
+
+:FanRotationalSpeed rdfs:label "Fan rotational speed" .
+
+
+:FanSpeedSetPoint rdfs:label "Fan speed set point" .
+
+
+:FanStatus rdfs:label "Fan status" .
+
+
+:FancoilReturnWaterTemperature rdfs:label "Fancoil return water temperature" .
+
+
+:FancoilSupplyWaterTemperature rdfs:label "Fancoil supply water temperature" .
+
+
+:GasConsumption rdfs:label "Gas consumption" .
+
+
+:HeatRecoveryStatus rdfs:label "Heat recovery status" .
+
+
+:HeatRecoveryValvePosition rdfs:label "Heat recovery valve position" .
+
+
+:HeatRecoveryWheelRotationalSpeed rdfs:label "Heat recovery wheel rotational speed" .
+
+
+:HeatingCircuitPumpLevel rdfs:label "Heating circuit pump level" .
+
+
+:HeatingCircuitPumpStatus rdfs:label "Heating circuit pump status" .
+
+
+:HeatingCircuitReturnWaterTemperature rdfs:label "Heating circuit return water temperature" .
+
+
+:HeatingCircuitSupplyWaterTemperature rdfs:label "Heating circuit supply water temperature" .
+
+
+:HeatingCircuitValvePosition rdfs:label "Heating circuit valve position" .
+
+
+:HeatingCoilValvePosition rdfs:label "Heating coil valve position" .
+
+
+:HeatingEnergyConsumption rdfs:label "Heating energy consumption" .
+
+
+:HeatingSystemLevel rdfs:label "Heating system level" .
+
+
+:HeatingSystemStatus rdfs:label "Heating system status" .
+
+
+:HotWaterConsumption rdfs:label "Hot water consumption" .
+
+
+:HotWaterTankHeatingCartridgeStatus rdfs:label "Hot water tank heating cartridge status" .
+
+
+:HotWaterTankTemperature rdfs:label "Hot water tank temperature" .
+
+
+:HumidifierStatus rdfs:label "Humidifier status" .
+
+
+:Humidity rdfs:label "Humidity" .
+
+
+:HumiditySetPoint rdfs:label "Humidity set point" .
+
+
+:IndoorAirPressure rdfs:label "Indoor air pressure" .
+
+
+:IndoorAirQuality rdfs:label "Indoor air quality" .
+
+
+:IndoorAirTemperature rdfs:label "Indoor air temperature" .
+
+
+:IndoorHumidity rdfs:label "Indoor humidity" .
+
+
+:IndoorLightLevel rdfs:label "Indoor light level" .
+
+
+:LightLevel rdfs:label "Light level" .
+
+
+:LightPosition rdfs:label "Light position" .
+
+
+:LightStatus rdfs:label "Light status" .
+
+
+:LightingEnergyConsumption rdfs:label "Lighting energy consumption" .
+
+
+:LightingPower rdfs:label "Lighting power" .
+
+
+:Movement rdfs:label "Movement" .
+
+
+:Occupancy rdfs:label "Occupancy" .
+
+
+:OutdoorAirDamperPosition rdfs:label "Outdoor air damper position" .
+
+
+:OutdoorAirPressure rdfs:label "Outdoor air pressure" .
+
+
+:OutdoorAirQuality rdfs:label "Outdoor air quality" .
+
+
+:OutdoorAirTemperature rdfs:label "Outdoor air temperature" .
+
+
+:OutdoorHumidity rdfs:label "Outdoor humidity" .
+
+
+:OutdoorLightLevel rdfs:label "Outdoor light level" .
+
+
+:Power rdfs:label "Power" .
+
+
+:Presence rdfs:label "Presence" .
+
+
+:PressureSetPoint rdfs:label "Pressure set point" .
+
+
+:PumpRotationalSpeed rdfs:label "Pump rotational speed" .
+
+
+:RadiatorReturnWaterTemperature rdfs:label "Radiator return water temperature" .
+
+
+:RadiatorSupplyWaterTemperature rdfs:label "Radiator supply water temperature" .
+
+
+:RadiatorTemperature rdfs:label "Radiator temperature" .
+
+
+:RadiatorValvePosition rdfs:label "Radiator valve position" .
+
+
+:ReturnAirDamperPosition rdfs:label "Return air damper position" .
+
+
+:ReturnAirFanRotationalSpeed rdfs:label "Return air fan rotational speed" .
+
+
+:ReturnAirFanStatus rdfs:label "Return air fan status" .
+
+
+:ReturnAirTemperature rdfs:label "Return air temperature" .
+
+
+:ReturnAirVolumeFlow rdfs:label "Return air volume flow" .
+
+
+:SetPoint rdfs:label "Set point" .
+
+
+:ShadingLevel rdfs:label "Shading level" .
+
+
+:SolarRadiation rdfs:label "Solar radiation" .
+
+
+:SpecificDifferentialPressure rdfs:label "Specific differential pressure" .
+
+
+:SpecificFanPower rdfs:label "Specific fan power" .
+
+
+:SpecificPumpPower rdfs:label "Specific pump power" .
+
+
+:SpecificVolumeFlow rdfs:label "Specific volume flow" .
+
+
+:SunshineDuration rdfs:label "Sunshine duration" .
+
+
+:SupplyAirDamperPosition rdfs:label "Supply air damper position" .
+
+
+:SupplyAirFanRotationalSpeed rdfs:label "Supply air fan rotational speed" .
+
+
+:SupplyAirFanStatus rdfs:label "Supply air fan status" .
+
+
+:SupplyAirHumidity rdfs:label "Supply air humidity" .
+
+
+:SupplyAirHumiditySetPoint rdfs:label "Supply air humidity set point" .
+
+
+:SupplyAirPressure rdfs:label "Supply air pressure" .
+
+
+:SupplyAirPressureSetPoint rdfs:label "Supply air pressure set point" .
+
+
+:SupplyAirTemperature rdfs:label "Supply air temperature" .
+
+
+:SupplyAirTemperatureSetPoint rdfs:label "Supply air temperature set point" .
+
+
+:SupplyAirVolumeFlow rdfs:label "Supply air volume flow" .
+
+
+:Temperature rdfs:label "Medium temperature" ,
+                        "Temperature" .
+
+
+:TemperatureSetPoint rdfs:label "Temperature set point" .
+
+
+:ThermalPower rdfs:label "Thermal power" .
+
+
+:ValvePosition rdfs:label "Valve position" .
+
+
+:Vibration rdfs:label "Vibration" .
+
+
+:VolumeFlow rdfs:label "Volume flow" .
+
+
+:WaterConsumption rdfs:label "Water consumption" .
+
+
+:WaterTemperature rdfs:label "Water temperature" .
+
+
+:WaterVolumeFlow rdfs:label "Water volume flow" .
+
+
+:WindSpeed rdfs:label "Wind speed" .
+
+
+:WindowStatus rdfs:label "Window status" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Metric
+                :MetricDefinition
+                :MetricGroup
+                :MetricRequirement
+                :MetricValue
+                :Process
+                :Product
+                :ProjectPhase
+                :Role
+                :ToleranceType
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:m rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:t rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:value rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:goal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:upb rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:lob rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:val rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "MetricValueHasToleranceRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMetric ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :m
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTolerance ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTolerance ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "DifferentFromQualitativeGoalValueRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQualitativeValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :value
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :value ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :goal
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQualitativeGoalValue ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :goal
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTarget ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "OutOfTargetUpperBoundRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :value
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> ( :value
+                                                                                                                                     :upb
+                                                                                                                                   )
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasUpperBound ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :upb
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTarget ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :AboveTarget ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "OutOfToleranceUpperBoundRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :value
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTolerance ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> ( :value
+                                                                                                                                     :upb
+                                                                                                                                   )
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasUpperBound ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :upb
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AboveTolerance ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTolerance ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "LowerThanTargetGoalValueRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :value
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeGoalValue ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :goal
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> ( :goal
+                                                                                                                                                :value
+                                                                                                                                              )
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTarget ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BelowTarget ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "HigherThanTargetGoalValueRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeValue ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :value
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeGoalValue ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :goal
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> ( :value
+                                                                                                                          :goal
+                                                                                                                        )
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTarget ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :AboveTarget ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "OutOfTargetLowerBoundRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> ( :lob
+                                                                                                    :val
+                                                                                                  )
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasLowerBound ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :lob
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeValue ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :val
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTarget ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BelowTarget ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "OutOfToleranceLowerBoundRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> ( :lob
+                                                                                                    :val
+                                                                                                  )
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :MetricValue ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTolerance ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasLowerBound ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :t ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :lob
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasQuantitativeValue ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :val
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :OutsideTolerance ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :BelowTolerance ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "MetricValueHasTargetRule" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMetric ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :m
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasTarget ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :t
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

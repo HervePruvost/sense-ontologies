@@ -1,0 +1,1709 @@
+# baseURI: https://w3id.org/baf
+# imports: http://org.fhg.iis.eas.eee.esim/ESIMonto
+# imports: https://w3id.org/ibp/CTRLont
+
+@prefix : <https://w3id.org/baf#> .
+@prefix CTRLont: <https://w3id.org/ibp/CTRLont#> .
+@prefix baf: <https://w3id.org/baf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esim: <http://org.fhg.iis.eas.eee.esim/ESIMonto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/baf>
+  a owl:Ontology ;
+  dcterms:creator "Hervé Pruvost" ,
+                  <https://orcid.org/0000-0001-7604-8543> ,
+                  <https://www.linkedin.com/in/hervepruvost> ;                  
+  dcterms:issued "2022-05-29"^^xsd:date ;
+  dcterms:modified "2023-06-08"^^xsd:date ;
+  dcterms:title "BAF: Building Automation Functions."@en ;
+  dcterms:publisher <https://www.eas.iis.fraunhofer.de/> ;
+  dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+  rdfs:seeAlso <https://linkedbuildingdata.net/ldac2022/files/presentations/20220529_LDAC2022_Pruvost_v3.pdf> ;
+  vann:preferredNamespacePrefix "baf" ;
+  vann:preferredNamespaceUri "https://w3id.org/baf#" ;
+  dcterms:description "The BAF (Building Automation Functions) model is a catalogue of generic control functions usually implemented by automation engineers."@en ;
+  owl:versionInfo "v1.0.0" ;
+#  owl:imports <http://org.fhg.iis.eas.eee.esim/ESIMonto> ;
+#  owl:imports <https://w3id.org/ibp/CTRLont> ;
+.
+baf:AnalogSignal
+  a owl:Class ;
+  rdfs:label "Analog signal" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:AntifreezeProtection
+  a owl:Class ;
+  rdfs:label "Antifreeze protection" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:BoilerControl
+  a owl:Class ;
+  rdfs:label "Boiler control" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:CharacteristicCurve
+  a owl:Class ;
+  rdfs:label "Characteristic curve" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:Controller
+  a owl:Class ;
+  rdfs:label "Controller" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:DamperControl
+  a owl:Class ;
+  rdfs:label "Damper control" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:EnumeratedControlFunctionPattern
+  a owl:Class ;
+  rdfs:label "Enumerated control function pattern" ;
+  rdfs:subClassOf esim:ControlFunction ;
+  rdfs:subClassOf CTRLont:ControlActor ;
+.
+baf:FanControl
+  a owl:Class ;
+  rdfs:label "Fan control" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:Fb2LevelBoilerPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbBoilerModuleFor2LevelBoiler ;
+  rdfs:comment "Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)" ;
+  rdfs:label " Boiler Module for 2-Level Boiler Pattern" ;
+.
+baf:FbActuationof2PointDampers
+  a owl:Class ;
+  dcterms:identifier "Fb2PointDamper" ;
+  rdfs:label "Actuationof2-Point dampers"@en ;
+  rdfs:label "Ansteuerung von 2-Punkt Klappen"@de ;
+  rdfs:subClassOf baf:DamperControl ;
+.
+baf:FbActuationofContinuousDampers
+  a owl:Class ;
+  dcterms:identifier "FbContinuousDamper" ;
+  rdfs:label "Actuationof continuous dampers"@en ;
+  rdfs:label "Ansteuerung von stetigen Klappen"@de ;
+  rdfs:subClassOf baf:DamperControl ;
+.
+baf:FbAirSideAntifreezeProtection
+  a owl:Class ;
+  dcterms:identifier "FbAntifreezeAir" ;
+  rdfs:label "Air-Side antifreeze protection"@en ;
+  rdfs:label "Luftseitiger Frostschutz"@de ;
+  rdfs:subClassOf baf:AntifreezeProtection ;
+.
+baf:FbAnalog3PointPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbAnalog3PointSignal ;
+  rdfs:comment "Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)" ;
+  rdfs:label "Analog 3-Point Signal Pattern" ;
+.
+baf:FbAnalog3PointSignal
+  a owl:Class ;
+  dcterms:identifier "FbAnalog3Point" ;
+  rdfs:label "Analog 3-Point signal"@en ;
+  rdfs:label "Analoges 3-Punkt-Signal"@de ;
+  rdfs:subClassOf baf:GeneralDriver ;
+.
+baf:FbAntiLegionnairesDiseaseFunction
+  a owl:Class ;
+  dcterms:identifier "FbAntiLegionella" ;
+  rdfs:label "Anti legionnaires disease function"@en ;
+  rdfs:label "Anti-Legionellenfunktion"@de ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FbAveragedOutsideTemperature
+  a owl:Class ;
+  dcterms:identifier "FbAveragedOutsideTemperature" ;
+  rdfs:label "Averaged outside temperature"@en ;
+  rdfs:label "Gemittelte Außentemperatur"@de ;
+  rdfs:subClassOf baf:TemperatureEvaluation ;
+.
+baf:FbBlinker
+  a owl:Class ;
+  dcterms:identifier "FbBlinker" ;
+  rdfs:label "Blinker"@de ;
+  rdfs:label "Blinker"@en ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbBlockingProtectionForContinuousDrivers
+  a owl:Class ;
+  dcterms:identifier "FbBlockingProtectionAnalog" ;
+  rdfs:label "Blockierschutz für stetige Antriebe"@de ;
+  rdfs:label "Blocking protection for continuous drivers"@en ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbBoilerModuleFor2LevelBoiler
+  a owl:Class ;
+  dcterms:identifier "Fb2LevelBoiler" ;
+  rdfs:label "Boiler module for 2-Level boiler"@en ;
+  rdfs:label "Kesselbaustein für 2-stufige Kessel"@de ;
+  rdfs:subClassOf baf:BoilerControl ;
+.
+baf:FbBoilerModuleForModulatingBoiler
+  a owl:Class ;
+  dcterms:identifier "FbModulatingBoiler" ;
+  rdfs:label "Boiler module for modulating boiler"@en ;
+  rdfs:label "Kesselbaustein für modulierende Kessel"@de ;
+  rdfs:subClassOf baf:BoilerControl ;
+.
+baf:FbBoilerStrategyForTwoBoilers
+  a owl:Class ;
+  dcterms:identifier "Fb2BoilerStrategy" ;
+  rdfs:label "Boiler strategy for two boilers"@en ;
+  rdfs:label "Kesselstrategie für zwei Kessel"@de ;
+  rdfs:subClassOf baf:BoilerControl ;
+.
+baf:FbCalculationofSupplyTemperature
+  a owl:Class ;
+  dcterms:identifier "FbCalculatedSupplyTemperature" ;
+  rdfs:label "Calculationof supply temperature"@en ;
+  rdfs:label "Vorlauftemperaturberechnung"@de ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FbCascadeController
+  a owl:Class ;
+  dcterms:identifier "FbCascadeController" ;
+  rdfs:label "Cascade controller"@en ;
+  rdfs:label "Kaskadenregler"@de ;
+  rdfs:subClassOf baf:Controller ;
+.
+baf:FbCascadeControllerPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbCascadeController ;
+  rdfs:comment "Pattern of function block for Cascade Controller (FbCascadeController)" ;
+  rdfs:label "Cascade Controller Pattern" ;
+.
+baf:FbCollectiveMalfunction
+  a owl:Class ;
+  dcterms:identifier "FbCollectiveMalfunction" ;
+  rdfs:label "Collective malfunction"@en ;
+  rdfs:label "Sammelstörung"@de ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbComfortZoneController
+  a owl:Class ;
+  dcterms:identifier "FbHxControl" ;
+  rdfs:label "Behaglichkeitsfeldregler"@de ;
+  rdfs:label "Comfort zone controller"@en ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbContinuousDamperPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbActuationofContinuousDampers ;
+  rdfs:comment "Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)" ;
+  rdfs:label "Actuation of Continuous Dampers Pattern" ;
+.
+baf:FbControlOf2PointDrivers
+  a owl:Class ;
+  dcterms:identifier "Fb2PointDriver" ;
+  rdfs:label "Ansteuerung von 2-Punkt-Antrieben"@de ;
+  rdfs:label "Control of 2-Point drivers"@en ;
+  rdfs:subClassOf baf:GeneralDriver ;
+.
+baf:FbControlOfContinuousDrivers
+  a owl:Class ;
+  dcterms:identifier "FbContinuousDriver" ;
+  rdfs:label "Ansteuerung von stetigen Antrieben"@de ;
+  rdfs:label "Control of continuous drivers"@en ;
+  rdfs:subClassOf baf:GeneralDriver ;
+.
+baf:FbCoolingSequence
+  a owl:Class ;
+  dcterms:identifier "FbSequenceCooling" ;
+  rdfs:label "Cooling sequence"@en ;
+  rdfs:label "Sequenz Kühlen"@de ;
+  rdfs:subClassOf baf:Sequence ;
+.
+baf:FbDampedTemperature
+  a owl:Class ;
+  dcterms:identifier "FbDampedTemperature" ;
+  rdfs:label "Damped temperature"@en ;
+  rdfs:label "Gedämpfte Temperatur"@de ;
+  rdfs:subClassOf baf:TemperatureEvaluation ;
+.
+baf:FbDehumidifyingSequence
+  a owl:Class ;
+  dcterms:identifier "FbSequenceDehumidifying" ;
+  rdfs:label "Dehumidifying sequence"@en ;
+  rdfs:label "Sequenz Entfeuchten"@de ;
+  rdfs:subClassOf baf:Sequence ;
+.
+baf:FbEnergyRecoverySequence
+  a owl:Class ;
+  dcterms:identifier "FbSequenceEnergyRecovery" ;
+  rdfs:label "Energy recovery sequence"@en ;
+  rdfs:label "Sequenz Energierückgewinnung"@de ;
+  rdfs:subClassOf baf:Sequence ;
+.
+baf:FbEnthalpy
+  a owl:Class ;
+  dcterms:identifier "FbEnthalpy" ;
+  rdfs:label "Enthalpie"@de ;
+  rdfs:label "Enthalpy"@en ;
+  rdfs:subClassOf baf:TemperatureEvaluation ;
+.
+baf:FbFan1Level
+  a owl:Class ;
+  dcterms:identifier "FbFan_1Level" ;
+  rdfs:label "Fan1-Level"@en ;
+  rdfs:label "Ventilator, 1-stufig"@de ;
+  rdfs:subClassOf baf:FanControl ;
+.
+baf:FbFan2Level
+  a owl:Class ;
+  dcterms:identifier "FbFan_2Level" ;
+  rdfs:label "Fan2-Level"@en ;
+  rdfs:label "Ventilator, 2-stufig"@de ;
+  rdfs:subClassOf baf:FanControl ;
+.
+baf:FbFan3Level
+  a owl:Class ;
+  dcterms:identifier "FbFan_3Level" ;
+  rdfs:label "Fan3-Level"@en ;
+  rdfs:label "Ventilator, 3-stufig"@de ;
+  rdfs:subClassOf baf:FanControl ;
+.
+baf:FbFanwithFrequencyConverter
+  a owl:Class ;
+  dcterms:identifier "FbFan_FC" ;
+  rdfs:label "Fanwith frequency converter"@en ;
+  rdfs:label "Ventilator mit Frequenzumrichter"@de ;
+  rdfs:subClassOf baf:FanControl ;
+.
+baf:FbFilterMonitoring
+  a owl:Class ;
+  dcterms:identifier "FbFilterMonitoring" ;
+  rdfs:label "Filter monitoring"@en ;
+  rdfs:label "Filterüberwachung"@de ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbFirstOrderLowPassFilter
+  a owl:Class ;
+  dcterms:identifier "FbLowPassFilter" ;
+  rdfs:label "1st order low pass filter"@en ;
+  rdfs:label "Tiefpassfilter 1. Ordnung"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FbFirstOrderLowPassFilterForAI0-32767
+  a owl:Class ;
+  dcterms:identifier "FbLowPassFilterAI" ;
+  rdfs:label "1st order low pass filter for AI 0-32767"@en ;
+  rdfs:label "Tiefpassfilter 1. Ordnung für AI 0 - 32767"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FbFirstOrderLowPassFilterForBusSignals
+  a owl:Class ;
+  dcterms:identifier "FbLowPassFilterBus" ;
+  rdfs:label "1st order low pass filter for bus signals"@en ;
+  rdfs:label "Tiefpassfilter 1. Ordnung für Bussignale"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FbFirstOrderLowPassFilterForTemperatures
+  a owl:Class ;
+  dcterms:identifier "FbLowPassFilterTemp" ;
+  rdfs:label "1st order low pass filter for temperatures"@en ;
+  rdfs:label "Tiefpassfilter 1. Ordnung für Temperaturen"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FbGlobalCollectiveMalfunction
+  a owl:Class ;
+  dcterms:identifier "FbGlobalMalfunction" ;
+  rdfs:label "Global collective malfunction"@en ;
+  rdfs:label "Globale Sammelstörung"@de ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbHeatingCharacteristics
+  a owl:Class ;
+  dcterms:identifier "FbHeatingCharacteristics" ;
+  rdfs:label "Heating characteristics"@en ;
+  rdfs:label "Heizungskennlinie"@de ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FbHeatingSequence
+  a owl:Class ;
+  dcterms:identifier "FbSequenceHeating" ;
+  rdfs:label "Heating sequence"@en ;
+  rdfs:label "Sequenz Heizen"@de ;
+  rdfs:subClassOf baf:Sequence ;
+.
+baf:FbHumidifier
+  a owl:Class ;
+  dcterms:identifier "FbHumidifier" ;
+  rdfs:label "Dampfbefeuchter"@de ;
+  rdfs:label "Humidifier"@en ;
+  rdfs:subClassOf baf:PumpControl ;
+  rdfs:subClassOf baf:ValveControl ;
+.
+baf:FbHumidifyingSequence
+  a owl:Class ;
+  dcterms:identifier "FbSequenceHumidifying" ;
+  rdfs:label "Humidifying sequence"@en ;
+  rdfs:label "Sequenz Befeuchten"@de ;
+  rdfs:subClassOf baf:Sequence ;
+.
+baf:FbHysteresis
+  a owl:Class ;
+  dcterms:identifier "FbHysteresis" ;
+  rdfs:label "Hysterese"@de ;
+  rdfs:label "Hysteresis"@en ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbImpulseCounter
+  a owl:Class ;
+  dcterms:identifier "FbImpulseCounter" ;
+  rdfs:label "Impulse counter"@en ;
+  rdfs:label "Impulszähler"@de ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbLowPassFilterPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbFirstOrderLowPassFilter ;
+  rdfs:comment "Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)" ;
+  rdfs:label "1st Order Low-Pass Filter Pattern" ;
+.
+baf:FbMinValueAvgValueAndMaxValue
+  a owl:Class ;
+  rdfs:label "Min. Value, Avg. Value and Max. Value"@en ;
+  rdfs:label "Min.-Wert, Mittelwert und Max.-Wert"@de ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbMixedAirSequence
+  a owl:Class ;
+  dcterms:identifier "FbSequenceMixedAir" ;
+  rdfs:label "Mixed air sequence"@en ;
+  rdfs:label "Sequenz Mischluft"@de ;
+  rdfs:subClassOf baf:Sequence ;
+.
+baf:FbOperatingHoursCounter
+  a owl:Class ;
+  dcterms:identifier "FbOperatingHours_01" ;
+  rdfs:label "Betriebsstundenzähler"@de ;
+  rdfs:label "Operating hours counter"@en ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbOptimizedSupplyTemperature
+  a owl:Class ;
+  dcterms:identifier "FbOptimizedSupplyTemperature" ;
+  rdfs:label "Optimierte Vorlauftemperatur"@de ;
+  rdfs:label "Optimized supply temperature"@en ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FbOverheatingandCondensationProtection
+  a owl:Class ;
+  dcterms:identifier "FbTemperatureOverride" ;
+  rdfs:label "Overheatingand condensation protection"@en ;
+  rdfs:label "Überhitzungs- und Kondensationsschutz"@de ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FbPIDController
+  a owl:Class ;
+  dcterms:identifier "FbPIDController" ;
+  rdfs:label "PID-Regler"@de ;
+  rdfs:label "PIDController"@en ;
+  rdfs:subClassOf baf:Controller ;
+.
+baf:FbPIDControllerwithTwoSetsofControlParameters
+  a owl:Class ;
+  dcterms:identifier "FbPIDController2PIDSets" ;
+  rdfs:label "PID-Regler mit zwei Regelparametersätzen"@de ;
+  rdfs:label "PIDControllerwith two setsof control parameters"@en ;
+  rdfs:subClassOf baf:Controller ;
+.
+baf:FbPIDSingleRoomController
+  a owl:Class ;
+  dcterms:identifier "FbPIDSingleRoomController" ;
+  rdfs:label "PID Einzelraumregler"@de ;
+  rdfs:label "PIDSingle room controller"@en ;
+  rdfs:subClassOf baf:SingleRoomControl ;
+.
+baf:FbPILimitController
+  a owl:Class ;
+  dcterms:identifier "FbLimitController" ;
+  rdfs:label "PI-Begrenzungsregler"@de ;
+  rdfs:label "PILimit controller"@en ;
+  rdfs:subClassOf baf:Controller ;
+.
+baf:FbPWMOutput
+  a owl:Class ;
+  dcterms:identifier "FbPWM" ;
+  rdfs:label "PWM Output"@en ;
+  rdfs:label "PWM-Ausgang"@de ;
+  rdfs:subClassOf baf:GeneralDriver ;
+.
+baf:FbPlateHeatExchangerPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbPlateTypeHeatExchanger ;
+  rdfs:comment "Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)" ;
+  rdfs:label "Plate-Type Heat Exchanger Pattern" ;
+.
+baf:FbPlateTypeHeatExchanger
+  a owl:Class ;
+  dcterms:identifier "FbPlateHeatExchanger" ;
+  rdfs:label "Plate-Type heat exchanger"@en ;
+  rdfs:label "Plattenwärmetauscher"@de ;
+  rdfs:subClassOf baf:HeatExchangerControl ;
+.
+baf:FbPump
+  a owl:Class ;
+  dcterms:identifier "FbPump" ;
+  rdfs:label "Pump"@en ;
+  rdfs:label "Pumpe"@de ;
+  rdfs:subClassOf baf:PumpControl ;
+.
+baf:FbPumpwithFrequencyConverter
+  a owl:Class ;
+  dcterms:identifier "FbPumpFC" ;
+  rdfs:label "Pumpe mit Frequenzumrichter"@de ;
+  rdfs:label "Pumpwith frequency converter"@en ;
+  rdfs:subClassOf baf:PumpControl ;
+.
+baf:FbRamp
+  a owl:Class ;
+  dcterms:identifier "FbRamp" ;
+  rdfs:label "Ramp"@en ;
+  rdfs:label "Rampe"@de ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbReducedMinimumFreshAir
+  a owl:Class ;
+  dcterms:identifier "FbMinFreshAir" ;
+  rdfs:label "Reduced minimum fresh air"@en ;
+  rdfs:label "Reduzierte Mindestfrischluft"@de ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FbRotaryHeatExchanger
+  a owl:Class ;
+  dcterms:identifier "FbRotaryHeatExchanger" ;
+  rdfs:label "Rotary heat exchanger"@en ;
+  rdfs:label "Rotationswärmetauscher"@de ;
+  rdfs:subClassOf baf:HeatExchangerControl ;
+.
+baf:FbRunAroundCoil
+  a owl:Class ;
+  dcterms:identifier "FbRunAroundCoil" ;
+  rdfs:label "Kreislaufverbundsystem"@de ;
+  rdfs:label "Run-around coil"@en ;
+  rdfs:subClassOf baf:HeatExchangerControl ;
+.
+baf:FbSequenceController
+  a owl:Class ;
+  dcterms:identifier "FbSequenceController" ;
+  rdfs:label "Sequence controller"@en ;
+  rdfs:label "Sequenzregler"@de ;
+  rdfs:subClassOf baf:Controller ;
+.
+baf:FbSequenceControllerPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbSequenceController ;
+  rdfs:comment "Pattern of function block for Sequence Controller (FbSequenceController)" ;
+  rdfs:label "Sequence Controller Pattern" ;
+.
+baf:FbSequenceEnergyRecoveryPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbEnergyRecoverySequence ;
+  rdfs:comment "Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)" ;
+  rdfs:label "Energy Recovery Sequence Pattern" ;
+.
+baf:FbSequenceHeatingPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbHeatingSequence ;
+  rdfs:comment "Pattern of function block for Heating Sequence (FbSequenceHeating)" ;
+  rdfs:label "Heating Sequence Pattern" ;
+.
+baf:FbSequenceMixedAirPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbMixedAirSequence ;
+  rdfs:comment "Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)" ;
+  rdfs:label "Mixed Air Sequence Pattern" ;
+.
+baf:FbStartStop
+  a owl:Class ;
+  dcterms:identifier "FbStartStop" ;
+  rdfs:label "Start/Stop"@en ;
+  rdfs:label "Start/Stopp"@de ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbStartStopHeatingCircuitControl
+  a owl:Class ;
+  dcterms:identifier "FbStartStopHeatingCircuit" ;
+  rdfs:label "Start stop heating circuit control"@en ;
+  rdfs:label "Start-/Stopp-Heizkreisregelung"@de ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbStartStopOptimization
+  a owl:Class ;
+  dcterms:identifier "FbStartStopOptimization" ;
+  rdfs:label "Start-/Stoppoptimierung"@de ;
+  rdfs:label "Start/Stop optimization"@en ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbSummerNightVentilation
+  a owl:Class ;
+  dcterms:identifier "FbSummerNightVentilation" ;
+  rdfs:label "Sommernachtlüftung"@de ;
+  rdfs:label "Summer night ventilation"@en ;
+  rdfs:subClassOf baf:SystemMonitoring ;
+.
+baf:FbTwoPointControllerforDHWPreparation
+  a owl:Class ;
+  dcterms:identifier "FbDHWController" ;
+  rdfs:label "Two-Point controllerfor DHWPreparation"@en ;
+  rdfs:label "Zweipunktregler BWW- Ladung"@de ;
+  rdfs:subClassOf baf:Controller ;
+.
+baf:FbTwoPointIndividualRoomController
+  a owl:Class ;
+  dcterms:identifier "Fb2PointSingleRoomController" ;
+  rdfs:label "2-Punkt-Einzelraumregler"@de ;
+  rdfs:label "Point individual room controller"@en ;
+  rdfs:subClassOf baf:SingleRoomControl ;
+.
+baf:FbUnitMonitoring
+  a owl:Class ;
+  dcterms:identifier "FbRedundancyUnits" ;
+  rdfs:label "Aggregatsüberwachung"@de ;
+  rdfs:label "Unit monitoring"@en ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FbValveAndPumpPattern
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FbValveandPump ;
+  rdfs:comment "Pattern of function block for Valve and Pump (FbValveAndPump)" ;
+  rdfs:label "Valve and Pump Pattern" ;
+.
+baf:FbValveandPump
+  a owl:Class ;
+  dcterms:identifier "FbValveAndPump" ;
+  rdfs:label "Valve and pump {@en} " ;
+  rdfs:label "Ventil und Pumpe"@de ;
+  rdfs:subClassOf baf:PumpControl ;
+  rdfs:subClassOf baf:ValveControl ;
+.
+baf:FbWaterSideAntifreezeProtection
+  a owl:Class ;
+  dcterms:identifier "FbAntifreezeWater" ;
+  rdfs:label "Wasserseitiger Frostschutz"@de ;
+  rdfs:label "Water-Side antifreeze protection"@en ;
+  rdfs:subClassOf baf:AntifreezeProtection ;
+.
+baf:Fu4Point
+  a baf:EnumeratedControlFunctionPattern ;
+  a baf:FuFourPointCharacteristicCurve ;
+  rdfs:comment "Pattern of function block for Four-Point Characteristic Curve (Fu4Point)" ;
+  rdfs:label "Four-Point Characteristic Curve Pattern" ;
+.
+baf:FuFourPointCharacteristicCurve
+  a owl:Class ;
+  dcterms:identifier "Fu4Point" ;
+  rdfs:label "Four-point characteristic curve"@en ;
+  rdfs:label "Vierpunkt-Kennlinie"@de ;
+  rdfs:subClassOf baf:CharacteristicCurve ;
+.
+baf:FuKTYCharacteristicCurve
+  a owl:Class ;
+  dcterms:identifier "FuKTY" ;
+  rdfs:label "KTY Characteristic curve"@en ;
+  rdfs:label "KTY-Kennlinie"@de ;
+  rdfs:subClassOf baf:CharacteristicCurve ;
+.
+baf:FuScalingOfOutputValues0to32767
+  a owl:Class ;
+  dcterms:identifier "FuAO" ;
+  rdfs:label "Scaling of output values 0 to 32767"@en ;
+  rdfs:label "Skalierung der Ausgangswerte 0 bis 32767"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FuScalingOfTemperatureValuesInDeg
+  a owl:Class ;
+  dcterms:identifier "FuAI_Temp" ;
+  rdfs:label "Scaling of temperature valuesin °C"@en ;
+  rdfs:label "Skalierung der Temperaturwerte in °C"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FuScalingofInputValues0to32767
+  a owl:Class ;
+  dcterms:identifier "FuAI" ;
+  rdfs:label "Scalingof input values0to32767"@en ;
+  rdfs:label "Skalierung der Eingangswerte"@de ;
+  rdfs:subClassOf baf:AnalogSignal ;
+.
+baf:FuStatusIndicationAsString
+  a owl:Class ;
+  dcterms:identifier "FuStatus" ;
+  rdfs:label "Status indication as STRING {@en} " ;
+  rdfs:label "Statusanzeige als STRING"@de ;
+  rdfs:subClassOf baf:MiscellaneousFunction ;
+.
+baf:FuSummerCompensation
+  a owl:Class ;
+  dcterms:identifier "FuSummerCompensation" ;
+  rdfs:label "Sommerkompensation"@de ;
+  rdfs:label "Summer compensation"@en ;
+  rdfs:subClassOf baf:SetValueAdjustment ;
+.
+baf:FuTwoPointCharacteristic
+  a owl:Class ;
+  dcterms:identifier "Fu2Point" ;
+  rdfs:label "Two-point characteristic"@en ;
+  rdfs:label "Zweipunkt-Kennlinie"@de ;
+  rdfs:subClassOf baf:CharacteristicCurve ;
+.
+baf:GeneralDriver
+  a owl:Class ;
+  rdfs:label "General driver" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:HVAC_Function
+  a owl:Class ;
+  rdfs:subClassOf esim:ControlFunction ;
+  rdfs:subClassOf CTRLont:ControlActor ;
+.
+baf:HeatExchangerControl
+  a owl:Class ;
+  rdfs:label "Heat exchanger control" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:MiscellaneousFunction
+  a owl:Class ;
+  rdfs:label "Miscellaneous function" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:OutputFu4Point
+  a CTRLont:Output ;
+  rdfs:comment "Output value" ;
+  rdfs:label "Fu4Point" ;
+.
+baf:PumpControl
+  a owl:Class ;
+  rdfs:label "Pump control"@en ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:Sequence
+  a owl:Class ;
+  rdfs:label "Sequence"@en ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:SetValueAdjustment
+  a owl:Class ;
+  rdfs:label "Set value adjustment" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:SingleRoomControl
+  a owl:Class ;
+  rdfs:label "Single room control" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:SystemMonitoring
+  a owl:Class ;
+  rdfs:label "System monitoring" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:TemperatureEvaluation
+  a owl:Class ;
+  rdfs:label "Temperature evaluation" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:ValveControl
+  a owl:Class ;
+  rdfs:label "Valve control" ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:VolumeFlowRegulator
+  a owl:Class ;
+  dcterms:identifier "FbVolumeFlowRegulator" ;
+  rdfs:label "Volume flow regulator"@en ;
+  rdfs:label "Volumenstromregler"@de ;
+  rdfs:subClassOf baf:HVAC_Function ;
+.
+baf:_bMaxSequenceNumber
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Max. number of sequences used
+Value range = 2 – 4
+Default setting = 2""" ;
+  rdfs:label ".bMaxSequenceNumber" ;
+.
+baf:_bSequenceNumber
+  a baf:typConfigSequence ;
+  rdfs:comment """Sequence number (from cooling toward heating)
+Value range = 1 – 4""" ;
+  rdfs:label ".bSequenceNumber" ;
+.
+baf:_rDeadZone
+  a baf:typConfigCascadeController ;
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Dead zone +/- [K]
+Default setting = 0""" ;
+  rdfs:label ".rDeadZone" ;
+.
+baf:_rDefaultValue
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment """Defined output value as long as the
+xAlarm output is set
+Default setting = 0""" ;
+  rdfs:label ".rDefaultValue" ;
+.
+baf:_rDeviation
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Maximum deviation between specified/actual values for the second set of controller parameters [%]
+Default setting = 0 (no switchover)""" ;
+  rdfs:label ".rDeviation" ;
+.
+baf:_rDiffBoilerAndReturnTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Max. temperature difference between boiler and return temperature for deactivation of the boiler circuit pump [K]. Default setting = 5" ;
+  rdfs:label ".rDiffBoilerAndReturnTemperature" ;
+.
+baf:_rHighLimitAlarm
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment """Upper limit for value of the output signal alarm
+Default setting = 32768""" ;
+  rdfs:label ".rHighLimitAlarm" ;
+.
+baf:_rHysteresis
+  a baf:typConfig2LevelBoiler ;
+  a baf:typConfigAnalog3Point_01 ;
+  rdfs:label ".rHysteresis" ;
+.
+baf:_rKp
+  a baf:typConfigCascadeController ;
+  rdfs:comment """Proportional gain (P portion)
+Default setting = 2.5""" ;
+  rdfs:label ".rKp" ;
+.
+baf:_rKp1
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Proportional gain (P portion) for the first set of controller parameters
+Default setting = 2.5""" ;
+  rdfs:label ".rKp1" ;
+.
+baf:_rKp2
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Proportional gain (P portion) for the second set of controller parameters
+Default setting = 2.5""" ;
+  rdfs:label ".rKp2" ;
+.
+baf:_rKpMinReturnTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Proportional gain (P portion). Default setting = 12" ;
+  rdfs:label ".rKpMinReturnTemperature" ;
+.
+baf:_rLeadHysteresis
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Hysteresis as the lead boiler for the individual limit values. Default setting = 5" ;
+  rdfs:label ".rLeadHysteresis" ;
+.
+baf:_rLeadOffsetReferenceTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Offset to the specified boiler temperature as lead boiler [K]. Default setting = 5" ;
+  rdfs:label ".rLeadOffsetReferenceTemperature" ;
+.
+baf:_rLowLimitAlarm
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment """Lower limit for value of the output signal
+alarm
+Default setting = -32767""" ;
+  rdfs:label ".rLowLimitAlarm" ;
+.
+baf:_rMaxBoilerTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum boiler temperature at Level 1 [°C]. Default setting = 90" ;
+  rdfs:label ".rMaxBoilerTemperature" ;
+.
+baf:_rMaxBoilerTemperatureLevel2
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum boiler temperature at Level 2 [°C]. Default setting = 85" ;
+  rdfs:label ".rMaxBoilerTemperatureLevel2" ;
+.
+baf:_rMaxReturnTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum return temperature [°C]. Default setting = 75" ;
+  rdfs:label ".rMaxReturnTemperature" ;
+.
+baf:_rMinBoilerTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Minimum boiler temperature [°C]. Default setting = 50" ;
+  rdfs:label ".rMinBoilerTemperature" ;
+.
+baf:_rMinDeviationMovement
+  a baf:typConfigContinuousDamper ;
+  rdfs:comment """Minimum deviation for detection of motion [%]
+Default setting = 5""" ;
+  rdfs:label ".rMinDeviationMovement" ;
+.
+baf:_rMinOutsideTemperature
+  a baf:typConfigValveAndPump ;
+  rdfs:comment """Minimum outside temperature for freeze
+protection [°C]
+Default setting = 2 °C""" ;
+  rdfs:label ".rMinOutsideTemperature" ;
+.
+baf:_rMinReturnTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Minimum return temperature [°C]. Default setting = 50" ;
+  rdfs:label ".rMinReturnTemperature" ;
+.
+baf:_rOffset
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment """Measured value compensation for the input
+Default setting = 0""" ;
+  rdfs:label ".rOffset" ;
+.
+baf:_rOffsetMaxReferenceValue
+  a baf:typConfigCascadeController ;
+  rdfs:comment """Offset for the maximum reference value for the slave controller as a function of the reference value [K]
+Default setting = 6 K""" ;
+  rdfs:label ".rOffsetMaxReferenceValue" ;
+.
+baf:_rOffsetMinReference
+  a baf:typConfigCascadeController ;
+  rdfs:comment """Offset for the minimum reference value for the slave controller as a function of the reference value [K]
+Default setting = 4 K""" ;
+  rdfs:label ".rOffsetMinReferenceValue" ;
+.
+baf:_rOffsetReferenceTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Offset to the specified boiler temperature [K]. Default setting = 3" ;
+  rdfs:label ".rOffsetReferenceTemperature" ;
+.
+baf:_rTd1
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Derivative time (D portion) for the first set of controller parameters [s]
+Default setting = 0 s""" ;
+  rdfs:label ".rTd1" ;
+.
+baf:_rTd2
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Derivative time (D portion) for the second set of controller parameters [s]
+Default setting = 0 s""" ;
+  rdfs:label ".rTd2" ;
+.
+baf:_rTn
+  a baf:typConfigCascadeController ;
+  rdfs:comment """Reset time of the controller [s]
+Default setting = 300 s""" ;
+  rdfs:label ".rTn" ;
+.
+baf:_rTn1
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Reset time of the controller for the first set of controller parameters [s]
+Default setting = 300 s""" ;
+  rdfs:label ".rTn1" ;
+.
+baf:_rTn2
+  a baf:typConfigSequenceController ;
+  rdfs:comment """Reset time of the controller for the second set of controller parameters [s]
+Default setting = 300 s""" ;
+  rdfs:label ".rTn2" ;
+.
+baf:_rTnMinReturnTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Reset time of the controller [s]. Default setting = 0" ;
+  rdfs:label ".rTnMinReturnTemperature" ;
+.
+baf:_rTolerance
+  a baf:typConfigContinuousDamper ;
+  rdfs:comment """Max. deviation, specified/actual position [%]
+Default setting = 3""" ;
+  rdfs:label ".rTolerance" ;
+.
+baf:_rValveChimneySweep
+  a baf:typConfigValveAndPump ;
+  rdfs:comment """Chimney sweep function valve position [%]
+Default setting = 25""" ;
+  rdfs:label ".rValveChimneySweep" ;
+.
+baf:_rX1
+  a baf:typConfigSequence ;
+  rdfs:comment "Min. setting value for sequence [%]" ;
+  rdfs:label ".rX1" ;
+.
+baf:_rX2
+  a baf:typConfigSequence ;
+  rdfs:comment "Max. setting value for sequence [%]" ;
+  rdfs:label ".rX2" ;
+.
+baf:_rY_Min
+  a baf:typConfigContinuousDamper ;
+  a baf:typConfigValveAndPump ;
+  rdfs:comment """Minimum set value for valve or damper [%]
+Default setting = 3""" ;
+  rdfs:label ".rY_Min" ;
+.
+baf:_tAlarm
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment """Minimum time on limit violation until an alarm is issued.
+Default setting: t#10s""" ;
+  rdfs:label ".tAlarm" ;
+.
+baf:_tCycleTime
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment "Cycle time for the PT1 circuit" ;
+  rdfs:label ".tCycleTime" ;
+.
+baf:_tDelaySwitchOver
+  a baf:typConfigCascadeController ;
+  rdfs:comment """Delay time for switching between the two fan levels
+Default setting = t#5 m""" ;
+  rdfs:label ".tDelaySwitchOver" ;
+.
+baf:_tLeadMinRuntimeLevel1
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Minimum runtime for lead boiler at Level 1. Default setting = t#5 m" ;
+  rdfs:label ".tLeadMinRuntimeLevel1" ;
+.
+baf:_tLeadSwitchOnDelayLevel2
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Switch-on delay for lead boiler at Level 2. Default setting = t#15 m" ;
+  rdfs:label ".tLeadSwitchOnDelayLevel2" ;
+.
+baf:_tMaxChimneySweepFunction
+  a baf:typConfig2LevelBoiler ;
+  a baf:typConfigValveAndPump ;
+  rdfs:comment "Maximum duration of chimney sweep function. Default setting = t#15 m" ;
+  rdfs:label ".tMaxChimneySweepFunction" ;
+.
+baf:_tMaxFlushPeriod
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum time for the startup process. Default setting = t#15 m" ;
+  rdfs:label ".tMaxFlushPeriod" ;
+.
+baf:_tMaxOff
+  a baf:typConfigValveAndPump ;
+  rdfs:comment """Maximum turn-off time of the pump when
+blocking protection is enabled
+Default setting = t#48h""" ;
+  rdfs:label ".tMaxOff" ;
+.
+baf:_tMaxRunTime
+  a baf:typConfigAnalog3Point_01 ;
+  rdfs:comment """Max. running time, which the actuator
+needs for the max. stroke
+Default setting: t#120s""" ;
+  rdfs:label ".tMaxRunTime" ;
+.
+baf:_tMaxRuntimeValve
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum runtime for 2-way valve. Default setting: t#30s" ;
+  rdfs:label ".tMaxRuntimeValve" ;
+.
+baf:_tMaxStartupMinBoilerTemperature
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum time until minimum boiler temperature is achieved during the startup process. Default setting = t#10 m" ;
+  rdfs:label ".tMaxStartupMinBoilerTemperature" ;
+.
+baf:_tMinRuntimeLevel1
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Minimum runtime for lag boiler at Level 1. Default setting = t#3 m" ;
+  rdfs:label ".tMinRuntimeLevel1" ;
+.
+baf:_tOffDelay
+  a baf:typConfigValveAndPump ;
+  rdfs:comment """Turn-off delay of the pump
+Default setting = t#15 m""" ;
+  rdfs:label ".tOffDelay" ;
+.
+baf:_tOffDelayAdmixingPump
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Switch-off delay for admixing pump. Default setting = t#1 m" ;
+  rdfs:label ".tOffDelayAdmixingPump" ;
+.
+baf:_tOffDelayFullLoad
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Switch-off delay for full-load operation. Default setting: t#30s" ;
+  rdfs:label ".tOffDelayFullLoad" ;
+.
+baf:_tOffDelayPump
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Switch-off delay for boiler circuit pump. Default setting = t#10 m" ;
+  rdfs:label ".tOffDelayPump" ;
+.
+baf:_tOnDelayAlarm
+  a baf:typConfigContinuousDamper ;
+  rdfs:comment """ON-delay for alarm
+Default setting = t#5 m""" ;
+  rdfs:label ".tOnDelayAlarm" ;
+.
+baf:_tOnDelayPump
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Switch-on delay for boiler circuit pump with one 2-way valve. Default setting = t#2 m" ;
+  rdfs:label ".tOnDelayPump" ;
+.
+baf:_tOverride
+  a baf:typConfigAnalog3Point_01 ;
+  rdfs:comment """Run-on time after reaching end
+positions""" ;
+  rdfs:label ".tOverride" ;
+.
+baf:_tPumpValveMaxOFF
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maximum turn-off time of the pump and valve up to activation of blocking protection. Default setting = t#24h" ;
+  rdfs:label ".tPumpValveMaxOFF" ;
+.
+baf:_tPumpValveON
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Maintenance run time for pump and valve. Default setting: t#30s" ;
+  rdfs:label ".tPumpValveON" ;
+.
+baf:_tSwitchOn
+  a baf:typConfigValveAndPump ;
+  rdfs:comment """Turn-on time of the pump when blocking
+protection is enabled
+Default setting: t#60s""" ;
+  rdfs:label ".tSwitchOn" ;
+.
+baf:_tSwitchOnDelayLevel2
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Switch-on delay for lag boiler at Level 2. Default setting = t#20 m" ;
+  rdfs:label ".tSwitchOnDelayLevel2" ;
+.
+baf:_tT1
+  a baf:typConfigLowPassFilter ;
+  rdfs:comment """Time constant for the PT1 circuit
+Default setting: t#2s""" ;
+  rdfs:label ".tT1" ;
+.
+baf:_xAdmixingPump
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Admixing pump present. Default setting = FALSE" ;
+  rdfs:label ".xAdmixingPump" ;
+.
+baf:_xAutoQuit
+  a baf:typConfigLowPassFilter ;
+  a baf:typConfigValveAndPump ;
+  rdfs:comment "Automatic acknowledgement of the alarm or fault messages" ;
+  rdfs:label ".xAutoQuit" ;
+.
+baf:_xBlockingProtection
+  a baf:typConfig2LevelBoiler ;
+  a baf:typConfigValveAndPump ;
+  rdfs:comment "Enable blocking protection. Default setting = TRUE" ;
+  rdfs:label ".xBlockingProtection" ;
+.
+baf:_xControlSpeedLevel
+  a baf:typConfigCascadeController ;
+  rdfs:comment """Enable for determining the required fan level
+Default setting = FALSE""" ;
+  rdfs:label ".xControlSpeedLevel" ;
+.
+baf:_xFeedbackDamper
+  a baf:typConfigContinuousDamper ;
+  rdfs:comment """Check-back signal Damper position present
+Default setting = FALSE""" ;
+  rdfs:label ".xFeedbackDamper" ;
+.
+baf:_xLimitSwitch
+  a baf:typConfigAnalog3Point_01 ;
+  rdfs:comment """Monitoring of the limit switches
+Default setting = FALSE""" ;
+  rdfs:label ".xLimitSwitch" ;
+.
+baf:_xPumpWinter
+  a baf:typConfigValveAndPump ;
+  rdfs:comment "Enable freeze protection" ;
+  rdfs:label ".xPumpWinter" ;
+.
+baf:_xSmallWaterVolume
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "Low volume of water in boiler. Default setting = FALSE" ;
+  rdfs:label ".xSmallWaterVolume" ;
+.
+baf:_xThreeWayValve
+  a baf:typConfig2LevelBoiler ;
+  a baf:typConfigValveAndPump ;
+  rdfs:comment "3-way valve present in boiler circuit. Default setting = TRUE" ;
+  rdfs:label ".xThreeWayValve" ;
+.
+baf:_xTwoWayValve
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "2-way valve (boiler valve) present. Default setting = FALSE" ;
+  rdfs:label ".xTwoWayValve" ;
+.
+baf:_xTwoWayValvePermanentOpen
+  a baf:typConfig2LevelBoiler ;
+  rdfs:comment "2-way valve closed in the event of a fault. Default setting = FALSE" ;
+  rdfs:label ".xTwoWayValvePermanentOpen" ;
+.
+baf:bBoilerNumber
+  a CTRLont:Input ;
+  rdfs:comment "Boiler number. Value range = 1 – 2. Default setting = 1" ;
+  rdfs:label "bBoilerNumber" ;
+.
+baf:bLeadBoiler
+  a CTRLont:Input ;
+  rdfs:comment "Defining of lead boiler. Value range = 0 – 2 (0 = both boilers in parallel). Default setting = 1" ;
+  rdfs:label "bLeadBoiler" ;
+.
+baf:bManualLevelBoiler
+  a CTRLont:Input ;
+  rdfs:comment "Boiler level in Manual mode. Value range = 0 – 2" ;
+  rdfs:label "bManualLevelBoiler" ;
+.
+baf:dwOperatingMinutes
+  a CTRLont:Input ;
+  a CTRLont:Output ;
+  rdfs:comment "Operating time in minutes" ;
+  rdfs:label "dwOperatingMinutes" ;
+.
+baf:rActualBoilerTemperature
+  a CTRLont:Input ;
+  rdfs:comment "Actual boiler temperature [°C]" ;
+  rdfs:label "rActualBoilerTemperature" ;
+.
+baf:rActualPosition
+  a CTRLont:Input ;
+  rdfs:comment "Actual position of the continuous damper [%]" ;
+  rdfs:label "rActualPosition" ;
+.
+baf:rActualReturnTemperature
+  a CTRLont:Input ;
+  rdfs:comment "Actual boiler return temperature [°C]" ;
+  rdfs:label "rActualReturnTemperature" ;
+.
+baf:rActualValue
+  a CTRLont:Input ;
+  rdfs:comment "Actual value [°C]" ;
+  rdfs:label "rActualValue" ;
+.
+baf:rExhaustAirTemperature
+  a CTRLont:Input ;
+  rdfs:comment "Actual value for exhaust air temperature [°C]" ;
+  rdfs:label "rExhaustAirTemperature" ;
+.
+baf:rExitAirTemperature
+  a CTRLont:Input ;
+  rdfs:comment "Actual value exhaust air temperature [°C]" ;
+  rdfs:label "rExitAirTemperature" ;
+.
+baf:rInput
+  a CTRLont:Input ;
+  rdfs:comment "Input value" ;
+  rdfs:label "rInput" ;
+.
+baf:rManualValue
+  a CTRLont:Input ;
+  rdfs:comment """Set value in manual mode [%] or [°C]
+Value range = 0 – 100%
+Default setting = 22 °C""" ;
+  rdfs:label "rManualValue" ;
+.
+baf:rManualValueValve
+  a CTRLont:Input ;
+  rdfs:comment "Valve position in Manual mode [%]" ;
+  rdfs:label "rManualValueValve" ;
+.
+baf:rMaxReferenceValue
+  a CTRLont:Output ;
+  rdfs:comment "Maximum reference value for slave controller" ;
+  rdfs:label "rMaxReferenceValue" ;
+.
+baf:rMinBoilerTemperature
+  a CTRLont:Output ;
+  rdfs:comment "Minimum boiler temperature" ;
+  rdfs:label "rMinBoilerTemperature" ;
+.
+baf:rMinExitAir
+  a CTRLont:Input ;
+  rdfs:comment """Minimum exhaust air temperature for
+regulation of the plate-type heat exchanger
+in the incoming air duct [°C]
+Default setting = 6 °C""" ;
+  rdfs:label "rMinExitAir" ;
+.
+baf:rMinReferenceValue
+  a CTRLont:Output ;
+  rdfs:comment "Minimum reference value for slave controller" ;
+  rdfs:label "rMinReferenceValue" ;
+.
+baf:rOutput
+  a CTRLont:Output ;
+  rdfs:comment "Filtered output value" ;
+  rdfs:label "rOutput" ;
+.
+baf:rOutsideTemperature
+  a CTRLont:Input ;
+  rdfs:comment "Actual value outside temperature [°C]" ;
+  rdfs:label "rOutsideTemperature" ;
+.
+baf:rReferenceBoilerTemperature
+  a CTRLont:Input ;
+  rdfs:comment "Specified boiler temperature [°C]" ;
+  rdfs:label "rReferenceBoilerTemperature" ;
+.
+baf:rReferencePosition
+  a CTRLont:Input ;
+  rdfs:comment "Reference position of the continuous damper [%]" ;
+  rdfs:label "rReferencePosition" ;
+.
+baf:rReferenceValue
+  a CTRLont:Input ;
+  rdfs:comment """Reference value [°C]
+Default setting = 22 °C""" ;
+  rdfs:label "rReferenceValue" ;
+.
+baf:rReferenceValueSlaveController
+  a CTRLont:Output ;
+  rdfs:comment "Reference value for slave controller [°C]" ;
+  rdfs:label "rReferenceValueSlaveController" ;
+.
+baf:rValvePosition
+  a CTRLont:Input ;
+  rdfs:comment "Specified position of valve [%]" ;
+  rdfs:label "rValvePosition" ;
+.
+baf:rX1
+  a CTRLont:Input ;
+  rdfs:comment "x-coordinate of the first value" ;
+  rdfs:label "rX1" ;
+.
+baf:rX2
+  a CTRLont:Input ;
+  rdfs:comment "x-coordinate of the second value" ;
+  rdfs:label "rX2" ;
+.
+baf:rY
+  a CTRLont:Input ;
+  a CTRLont:Output ;
+  rdfs:comment "Set value [%]" ;
+  rdfs:label "rY" ;
+.
+baf:rY1
+  a CTRLont:Input ;
+  rdfs:comment "y-coordinate of the first value" ;
+  rdfs:label "rY1" ;
+.
+baf:rY2
+  a CTRLont:Input ;
+  rdfs:comment "y-coordinate of the second value" ;
+  rdfs:label "rY2" ;
+.
+baf:rY_DamperExhaustAir
+  a CTRLont:Output ;
+  rdfs:comment """Set value for plate-type heat exchanger in
+exhaust air duct [%]
+Value range = 0 – 100""" ;
+  rdfs:label "rY_DamperExhaustAir" ;
+.
+baf:rY_DamperSupplyAir
+  a CTRLont:Output ;
+  rdfs:comment """Set value for plate-type heat exchanger in
+incoming air duct [%]
+Value range = 0 – 100""" ;
+  rdfs:label "rY_DamperSupplyAir" ;
+.
+baf:rY_Dehumidifying
+  a CTRLont:Input ;
+  rdfs:comment "Set value for dehumidifier [%]" ;
+  rdfs:label "rY_Dehumidifying" ;
+.
+baf:rY_EnergyRecovery
+  a CTRLont:Input ;
+  a CTRLont:Output ;
+  rdfs:comment "Set value for energy recovery [%]" ;
+  rdfs:label "rY_EnergyRecovery" ;
+.
+baf:rY_FreshAir
+  a CTRLont:Output ;
+  rdfs:comment "Set value mixed air damper [%]" ;
+  rdfs:label "rY_FreshAir" ;
+.
+baf:rY_Heating
+  a CTRLont:Output ;
+  rdfs:comment "Valve position heating register" ;
+  rdfs:label "rY_Heating" ;
+.
+baf:rY_MinFreshAir
+  a CTRLont:Input ;
+  rdfs:comment "Minimum fresh air rate [%]" ;
+  rdfs:label "rY_MinFreshAir" ;
+.
+baf:rY_Valve
+  a CTRLont:Output ;
+  rdfs:comment "Valve position, 3-way valve [%]. Value range = 0 – 100" ;
+  rdfs:label "rY_Valve" ;
+.
+baf:typConfig2LevelBoiler
+  a owl:Class ;
+  rdfs:label "typConfig2LevelBoiler" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigAnalog3Point_01
+  a owl:Class ;
+  rdfs:label "typConfigAnalog3Point_01" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigCascadeController
+  a owl:Class ;
+  rdfs:label "typConfigCascadeController" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigContinuousDamper
+  a owl:Class ;
+  rdfs:label "typConfigContinuousDamper" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigLowPassFilter
+  a owl:Class ;
+  rdfs:label "typConfigLowPassFilter" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigSequence
+  a owl:Class ;
+  rdfs:label "typConfigSequence" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigSequenceController
+  a owl:Class ;
+  rdfs:label "typConfigSequenceController" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typConfigValveAndPump
+  a owl:Class ;
+  rdfs:label "typConfigValveAndPump" ;
+  rdfs:subClassOf CTRLont:Parameter ;
+.
+baf:typSequenceController
+  a CTRLont:Input ;
+  rdfs:comment "Data structure for data exchange between the individual sequences and the sequence controller" ;
+  rdfs:label "typSequenceController" ;
+.
+baf:typStatusBoiler
+  a CTRLont:Output ;
+  rdfs:comment "Boiler status for the strategy module" ;
+  rdfs:label "typStatusBoiler" ;
+.
+baf:wStatus
+  a CTRLont:Output ;
+  rdfs:comment """Display current status
+0 = OK
+1 = On 
+2 = Off
+10 = Error Pump
+29 = Error Safety chain
+30 = Condensation protection
+31 = Chimney sweep function
+32 = Overheating protection
+33 = Error Valve
+34 = Follow up time
+35 = Manual operation
+36 = In motion
+39 = Reference value exceeded
+40 = Startup behaviour
+42 = Error Damper position
+46 = Error limit switch
+47 = Synchronisation""" ;
+  rdfs:label "wStatus" ;
+.
+baf:wY
+  a CTRLont:Output ;
+  rdfs:comment """Set value:
+Value range: 0 −32767 for damper""" ;
+  rdfs:label "wY" ;
+.
+baf:wY_DamperExhaustAir
+  a CTRLont:Output ;
+  rdfs:comment """Set value for plate-type heat exchanger in
+the exhaust air duct
+Value range = 0 – 32767""" ;
+  rdfs:label "wY_DamperExhaustAir" ;
+.
+baf:wY_DamperSupplyAir
+  a CTRLont:Output ;
+  rdfs:comment """Set value for plate-type heat exchanger in
+the incoming air duct
+Value range = 0 – 32767""" ;
+  rdfs:label "wY_DamperSupplyAir" ;
+.
+baf:wY_EnergyRecovery
+  a CTRLont:Output ;
+  rdfs:comment """Set value for energy recovery
+Value range = 0 – 32767""" ;
+  rdfs:label "wY_EnergyRecovery" ;
+.
+baf:wY_FreshAir
+  a CTRLont:Output ;
+  rdfs:comment """Set value for mixed air damper
+Value range = 0 – 32767""" ;
+  rdfs:label "wY_FreshAir" ;
+.
+baf:wY_Heating
+  a CTRLont:Output ;
+  rdfs:comment """Valve position heating register
+Value range = 0 – 32767""" ;
+  rdfs:label "wY_Heating" ;
+.
+baf:wY_Valve
+  a CTRLont:Output ;
+  rdfs:comment "Valve position, 3-way valve. Value range = 0 – 32767" ;
+  rdfs:label "wY_Valve" ;
+.
+baf:xActive
+  a CTRLont:Output ;
+  rdfs:comment "Active indicator for sequence" ;
+  rdfs:label "xActive" ;
+.
+baf:xAdmixingPump
+  a CTRLont:Output ;
+  rdfs:comment "Switching signal for the admixing pump" ;
+  rdfs:label "xAdmixingPump" ;
+.
+baf:xAlarm
+  a CTRLont:Output ;
+  rdfs:comment "Output signal error" ;
+  rdfs:label "xAlarm" ;
+.
+baf:xAuto
+  a CTRLont:Input ;
+  rdfs:comment "Automatic mode" ;
+  rdfs:label "xAuto" ;
+.
+baf:xBoilerPump
+  a CTRLont:Output ;
+  rdfs:comment "Boiler circuit pump" ;
+  rdfs:label "xBoilerPump" ;
+.
+baf:xChimneySweep
+  a CTRLont:Output ;
+  rdfs:comment "Chimney sweep function active" ;
+  rdfs:label "xChimneySweep" ;
+.
+baf:xChimneySweepFunction
+  a CTRLont:Input ;
+  rdfs:comment "Activate chimney sweep function" ;
+  rdfs:label "xChimneySweepFunction" ;
+.
+baf:xClose
+  a CTRLont:Output ;
+  rdfs:comment "Engine coil CLOSED" ;
+  rdfs:label "xClose" ;
+.
+baf:xCondensationProtection
+  a CTRLont:Output ;
+  rdfs:comment "Condensation protection" ;
+  rdfs:label "xCondensationProtection" ;
+.
+baf:xDifferentialPressureMonitor
+  a CTRLont:Input ;
+  rdfs:comment """Differential pressure sensor plate-type
+heat exchanger
+Default setting = TRUE""" ;
+  rdfs:label "xDifferentialPressureMonitor" ;
+.
+baf:xEnable
+  a CTRLont:Input ;
+  rdfs:comment """Enable controller
+Default setting = TRUE""" ;
+  rdfs:label "xEnable" ;
+.
+baf:xEnablePump
+  a CTRLont:Input ;
+  rdfs:comment "Enable pump and valve control" ;
+  rdfs:label "xEnablePump" ;
+.
+baf:xEnableSystem
+  a CTRLont:Input ;
+  rdfs:comment """Enable FbStartStop
+Default setting = TRUE""" ;
+  rdfs:label "xEnableSystem" ;
+.
+baf:xError
+  a CTRLont:Output ;
+  rdfs:comment "Some fault" ;
+  rdfs:label "xError" ;
+.
+baf:xErrorAdmixingPump
+  a CTRLont:Output ;
+  rdfs:comment "Admixing pump error" ;
+  rdfs:label "xErrorAdmixingPump" ;
+.
+baf:xErrorBoilerPump
+  a CTRLont:Output ;
+  rdfs:comment "Boiler circuit pump error" ;
+  rdfs:label "xErrorBoilerPump" ;
+.
+baf:xErrorPump
+  a CTRLont:Output ;
+  rdfs:comment "Error message pump" ;
+  rdfs:label "xErrorPump" ;
+.
+baf:xErrorSequence
+  a CTRLont:Input ;
+  rdfs:comment "Error check-back signal from device" ;
+  rdfs:label "xErrorSequence" ;
+.
+baf:xErrorStartUp
+  a CTRLont:Output ;
+  rdfs:comment "Start-up system fault" ;
+  rdfs:label "xErrorStartUp" ;
+.
+baf:xFeedbackManualOperation
+  a CTRLont:Input ;
+  rdfs:comment "External check-back signal, Manual mode" ;
+  rdfs:label "xFeedbackManualOperation" ;
+.
+baf:xFollowUpTime
+  a CTRLont:Output ;
+  rdfs:comment "Pump is in the follo-up phase" ;
+  rdfs:label "xFollowUpTime" ;
+.
+baf:xFrostAlarmAir
+  a CTRLont:Input ;
+  rdfs:comment "Frost alarm from FbAntifreezeAir" ;
+  rdfs:label "xFrostAlarmAir" ;
+.
+baf:xFrostAlarmWater
+  a CTRLont:Input ;
+  rdfs:comment "Frost alarm from FbAntifreezeWater" ;
+  rdfs:label "xFrostAlarmWater" ;
+.
+baf:xFullLoad
+  a CTRLont:Input ;
+  rdfs:comment "Boiler is to run at full load" ;
+  rdfs:label "xFullLoad" ;
+.
+baf:xInit
+  a CTRLont:Input ;
+  rdfs:comment "A positive flank starts the reference run" ;
+  rdfs:label "xInit" ;
+.
+baf:xLevel1
+  a CTRLont:Output ;
+  rdfs:comment "Boiler Level 1" ;
+  rdfs:label "xLevel1" ;
+.
+baf:xLevel2
+  a CTRLont:Output ;
+  rdfs:comment "Boiler Level 2" ;
+  rdfs:label "xLevel2" ;
+.
+baf:xLimitSwitch
+  a CTRLont:Input ;
+  rdfs:comment "Limit switch (opend, closed)" ;
+  rdfs:label "xLimitSwitch" ;
+.
+baf:xLimitSwitchValve
+  a CTRLont:Input ;
+  rdfs:comment "Limit switch, 2-way valve. Default setting = TRUE" ;
+  rdfs:label "xLimitSwitchValve" ;
+.
+baf:xManual
+  a CTRLont:Input ;
+  rdfs:comment "Manual mode" ;
+  rdfs:label "xManual" ;
+.
+baf:xManualOnAdmixingPump
+  a CTRLont:Input ;
+  rdfs:comment "Switch on admixing pump manually" ;
+  rdfs:label "xManualOnAdmixingPump" ;
+.
+baf:xManualOnBoilerPump
+  a CTRLont:Input ;
+  rdfs:comment "Switch on boiler circuit pump manually" ;
+  rdfs:label "xManualOnBoilerPump" ;
+.
+baf:xManualOperation
+  a CTRLont:Input ;
+  rdfs:comment "Enable manual operation" ;
+  rdfs:label "xManualOperation" ;
+.
+baf:xManualSwitchPump
+  a CTRLont:Input ;
+  rdfs:comment "Switch on pump manually" ;
+  rdfs:label "xManualSwitchPump" ;
+.
+baf:xMaximalThermostat
+  a CTRLont:Input ;
+  rdfs:comment """Maximum thermostat for heating circuit
+Default setting = TRUE""" ;
+  rdfs:label "xMaximalThermostat" ;
+.
+baf:xMinFreshAir
+  a CTRLont:Input ;
+  rdfs:comment "Override mixed air damper using the minimum fresh air rate" ;
+  rdfs:label "xMinFreshAir" ;
+.
+baf:xMotorProtection
+  a CTRLont:Input ;
+  rdfs:comment """Motor protection switch pump
+Default setting = TRUE""" ;
+  rdfs:label "xMotorProtection" ;
+.
+baf:xMotorProtectionAdmixingPump
+  a CTRLont:Input ;
+  rdfs:comment "Motor protection switch, Admixing pump. Default setting = TRUE" ;
+  rdfs:label "xMotorProtectionAdmixingPump" ;
+.
+baf:xMotorProtectionPump
+  a CTRLont:Input ;
+  rdfs:comment "Motor protection switch, Boiler circuit pump. Default setting = TRUE" ;
+  rdfs:label "xMotorProtectionPump" ;
+.
+baf:xNightVentilation
+  a CTRLont:Input ;
+  rdfs:comment "Opening damper during night ventilation" ;
+  rdfs:label "xNightVentilation" ;
+.
+baf:xOpen
+  a CTRLont:Output ;
+  rdfs:comment "Engine coil OPEN" ;
+  rdfs:label "xOpen" ;
+.
+baf:xPump
+  a CTRLont:Output ;
+  rdfs:comment "Switching signal for the pump" ;
+  rdfs:label "xPump" ;
+.
+baf:xQuit
+  a CTRLont:Input ;
+  rdfs:comment "Error message acknowledgement" ;
+  rdfs:label "xQuit" ;
+.
+baf:xRepairSwitch
+  a CTRLont:Input ;
+  rdfs:comment """Repair switch pump
+Default setting = TRUE""" ;
+  rdfs:label "xRepairSwitch" ;
+.
+baf:xRepairSwitchAdmixingPump
+  a CTRLont:Input ;
+  rdfs:comment "Repair switch, Admixing pump. Default setting = TRUE" ;
+  rdfs:label "xRepairSwitchAdmixingPump" ;
+.
+baf:xRepairSwitchPump
+  a CTRLont:Input ;
+  rdfs:comment "Repair switch, Boiler circuit pump. Default setting = TRUE" ;
+  rdfs:label "xRepairSwitchPump" ;
+.
+baf:xSafetyChain
+  a CTRLont:Input ;
+  rdfs:comment "Check-back signal from boiler safety chain. Default setting = TRUE" ;
+  rdfs:label "xSafetyChain" ;
+.
+baf:xSpeedLevel1
+  a CTRLont:Output ;
+  rdfs:comment "Request fan level 1" ;
+  rdfs:label "xSpeedLevel1" ;
+.
+baf:xSpeedLevel2
+  a CTRLont:Output ;
+  rdfs:comment "Request fan level 2" ;
+  rdfs:label "xSpeedLevel2" ;
+.
+baf:xSwitchOnBoiler
+  a CTRLont:Input ;
+  rdfs:comment "Switch-on signal in Automatic mode (e.g., from boiler strategy)" ;
+  rdfs:label "xSwitchOnBoiler" ;
+.
+baf:xValve
+  a CTRLont:Output ;
+  rdfs:comment "Switching signal 2-way valve" ;
+  rdfs:label "xValve" ;
+.

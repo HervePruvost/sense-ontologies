@@ -1,0 +1,2433 @@
+@prefix : <https://w3id.org/esim#> .
+@prefix esim: <https://w3id.org/esim#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/esim#> .
+
+<https://w3id.org/esim> rdf:type owl:Ontology ;
+                         <http://purl.org/dc/terms/bibliographicCitation> "Pruvost, H., Enge-Rosenblatt, O. and Haufe J.. Information Integration and Semantic Interpretation for Building Energy System Operation and Maintenance. IECON 2018 - 44th Annual Conference of the IEEE Industrial Electronics Society, Washington, DC, USA, 2018, pp. 813-818, DOI: https://doi.org/10.1109/IECON.2018.8591740."@en ,
+                                                                          "Stenzel, P. (2016). Potentiale des BIM-basierten Entwurfs und Betriebs in der Gebäudeautomation [Potentials of BIM-based design and operation in building automation]. AUTOMATION 2016 conference, 2. VDI-Fachkonferenz Gebäudeautomation, Baden-Baden, Germany, June 2016. DOI: https://doi.org/10.24406/publica-fhg-392335"@en ;
+                         <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/pit-stenzel-33a41998> ,
+                                                            <https://www.researchgate.net/profile/Pit-Stenzel> ,
+                                                            "Jens Kaiser" ,
+                                                            "Pit Stenzel" ;
+                         <http://purl.org/dc/terms/crontributor> <https://orcid.org/0000-0001-7604-8543> ,
+                                                                 <https://www.linkedin.com/in/hervepruvost> ,
+                                                                 "Hervé Pruvost" ;
+                         <http://purl.org/dc/terms/description> "Energy System Information Model (ESIM) is a domain specific model that provides information of the urban and building energy system including the automation and control systems. It comprises functional, structural and physical descriptions of the systems as master data and additional operational data."@en ;
+                         <http://purl.org/dc/terms/issued> "2015-09-30"^^xsd:date ;
+                         <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> ;
+                         <http://purl.org/dc/terms/modified> "2023-06-17"^^xsd:date ;
+                         <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> ,
+                                                              "Fraunhofer IIS/EAS" ;
+                         <http://purl.org/dc/terms/title> "ESIM: Energy System Information Model."@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "esim" ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/esim#" ;
+                         <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> ;
+                         rdfs:seeAlso <https://publica.fraunhofer.de/bitstreams/4e5c5599-8bf0-47f9-8f27-545dc41dcd1a/download> ,
+                                      <https://slideplayer.com/slide/10823731/> ;
+                         owl:versionInfo "v1.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/crontributor
+<http://purl.org/dc/terms/crontributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://spinrdf.org/spin#imports
+<http://spinrdf.org/spin#imports> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/esim#omniclass
+:omniclass rdf:type owl:AnnotationProperty ;
+           rdfs:label "omniclass" ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/esim#composes
+:composes rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isComposedOf ;
+          rdfs:label "composes" .
+
+
+###  https://w3id.org/esim#consumes
+:consumes rdf:type owl:ObjectProperty ;
+          rdfs:label "consumes" .
+
+
+###  https://w3id.org/esim#hasAdministrationalInformation
+:hasAdministrationalInformation rdf:type owl:ObjectProperty ;
+                                rdfs:domain :ControlSystem ,
+                                            :EnergySource ,
+                                            :EnergyStorage ,
+                                            :EnergyTransformation ,
+                                            :EnergyUse ;
+                                rdfs:range :AdministrationalInformation ;
+                                rdfs:label "has administrational information" .
+
+
+###  https://w3id.org/esim#hasAutomationAndControlFacility
+:hasAutomationAndControlFacility rdf:type owl:ObjectProperty ;
+                                 rdfs:domain :ControlSystem ;
+                                 rdfs:range :ControlFacility ;
+                                 rdfs:label "has automation and control facility" .
+
+
+###  https://w3id.org/esim#hasAutomationAndControlFunction
+:hasAutomationAndControlFunction rdf:type owl:ObjectProperty ;
+                                 rdfs:domain :ControlSystem ;
+                                 rdfs:range :ControlFunction ;
+                                 rdfs:label "has automation and control function" .
+
+
+###  https://w3id.org/esim#hasAutomationAndControlSystemType
+:hasAutomationAndControlSystemType rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :ControlSystem ;
+                                   rdfs:label "has automation and control system type" .
+
+
+###  https://w3id.org/esim#hasCOP
+:hasCOP rdf:type owl:ObjectProperty ;
+        rdfs:domain :EnergySource ,
+                    :EnergyStorage ,
+                    :EnergyTransformation ;
+        rdfs:range :CoefficientOfPerformance ;
+        rdfs:label "has COP" .
+
+
+###  https://w3id.org/esim#hasControlStrategy
+:hasControlStrategy rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ControlSystem ;
+                    rdfs:range :ControlStrategy ;
+                    rdfs:label "has control strategy" .
+
+
+###  https://w3id.org/esim#hasCostInformation
+:hasCostInformation rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ControlSystem ,
+                                :EnergySource ,
+                                :EnergyStorage ,
+                                :EnergyTransformation ,
+                                :EnergyUse ;
+                    rdfs:range :CostInformation ;
+                    rdfs:label "has cost information" .
+
+
+###  https://w3id.org/esim#hasDetailedBehaviourModel
+:hasDetailedBehaviourModel rdf:type owl:ObjectProperty ;
+                           rdfs:domain :EnergySource ,
+                                       :EnergyStorage ,
+                                       :EnergyTransformation ,
+                                       :EnergyUse ;
+                           rdfs:range :BehaviouralModelWithDetailedCharacteristic ;
+                           rdfs:label "has detailed behaviour model" .
+
+
+###  https://w3id.org/esim#hasDetailedBehaviourModelEnergyDistributionSystem
+:hasDetailedBehaviourModelEnergyDistributionSystem rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf :hasDetailedBehaviourModel ;
+                                                   rdfs:range :DetailedBehaviouralModelEnergyDistributionSystem ;
+                                                   rdfs:label "has detailed behaviour model energy distribution system" .
+
+
+###  https://w3id.org/esim#hasDetailedBehaviourModelEnergySource
+:hasDetailedBehaviourModelEnergySource rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :hasDetailedBehaviourModel ;
+                                       rdfs:domain :EnergySource ;
+                                       rdfs:range :DetailedBehaviourModelEnergySource ;
+                                       rdfs:label "has detailed behaviour model energy source" .
+
+
+###  https://w3id.org/esim#hasDetailedBehaviourModelEnergyTransformationFacility
+:hasDetailedBehaviourModelEnergyTransformationFacility rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf :hasDetailedBehaviourModel ;
+                                                       rdfs:domain :EnergyTransformation ;
+                                                       rdfs:range :DetailedBehaviouralModelEnergyTransformationFacility ;
+                                                       rdfs:label "has detailed behaviour model energy transformation facility" .
+
+
+###  https://w3id.org/esim#hasEnergyConsumptionAndUsageType
+:hasEnergyConsumptionAndUsageType rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :EnergyUse ;
+                                  rdfs:label "has energy consumption and usage type" .
+
+
+###  https://w3id.org/esim#hasEnergyDistributionSystemType
+:hasEnergyDistributionSystemType rdf:type owl:ObjectProperty ;
+                                 rdfs:label "has energy distribution system type" .
+
+
+###  https://w3id.org/esim#hasEnergyRelatedDataType
+:hasEnergyRelatedDataType rdf:type owl:ObjectProperty ;
+                          rdfs:domain :EnergyRelatedData ;
+                          rdfs:label "has energy related data Type" .
+
+
+###  https://w3id.org/esim#hasEnergySourceCOP
+:hasEnergySourceCOP rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasCOP ;
+                    rdfs:domain :EnergySource ;
+                    rdfs:range :EnergySourceCOP ;
+                    rdfs:label "has energy source COP" .
+
+
+###  https://w3id.org/esim#hasEnergySourceType
+:hasEnergySourceType rdf:type owl:ObjectProperty ;
+                     rdfs:domain :EnergySource ;
+                     rdfs:range :EnergyService ;
+                     rdfs:label "has energy source type" .
+
+
+###  https://w3id.org/esim#hasEnergyTransformationFacilityCOP
+:hasEnergyTransformationFacilityCOP rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :hasCOP ;
+                                    rdfs:domain :EnergyTransformation ;
+                                    rdfs:range :EnergyTransformationCOP ;
+                                    rdfs:label "has energy transformation facility COP" .
+
+
+###  https://w3id.org/esim#hasEnergyTransformationFacilityType
+:hasEnergyTransformationFacilityType rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :EnergyTransformation ;
+                                     rdfs:label "has energy transformation facility type" .
+
+
+###  https://w3id.org/esim#hasFunctionalInterfaceDescription
+:hasFunctionalInterfaceDescription rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :ControlSystem ,
+                                               :EnergySource ,
+                                               :EnergyStorage ,
+                                               :EnergyTransformation ;
+                                   rdfs:range :FunctionalInterfaceDescription ;
+                                   rdfs:label "has functional interface description" .
+
+
+###  https://w3id.org/esim#hasIdentifier
+:hasIdentifier rdf:type owl:ObjectProperty ;
+               rdfs:domain :EnergyRelatedData ;
+               rdfs:range :Identifier ;
+               rdfs:label "has identifier" .
+
+
+###  https://w3id.org/esim#hasPhysicalInterfaceDescription
+:hasPhysicalInterfaceDescription rdf:type owl:ObjectProperty ;
+                                 rdfs:domain :ControlSystem ,
+                                             :EnergySource ,
+                                             :EnergyStorage ,
+                                             :EnergyTransformation ;
+                                 rdfs:range :PhysicalInterfaceDescription ;
+                                 rdfs:label "has physical interface description" .
+
+
+###  https://w3id.org/esim#hasPhysicalParameter
+:hasPhysicalParameter rdf:type owl:ObjectProperty ;
+                      rdfs:range :PhysicalParameter ;
+                      rdfs:label "has physical parameter" .
+
+
+###  https://w3id.org/esim#hasPort
+:hasPort rdf:type owl:ObjectProperty ;
+         rdfs:domain :InterfaceDescription ;
+         rdfs:range :Port ;
+         rdfs:label "has port" .
+
+
+###  https://w3id.org/esim#hasPortType
+:hasPortType rdf:type owl:ObjectProperty ;
+             rdfs:domain :Port ;
+             rdfs:range :PortType ;
+             rdfs:label "has port type" .
+
+
+###  https://w3id.org/esim#hasSimplifiedBahaviourModelEnergySource
+:hasSimplifiedBahaviourModelEnergySource rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf :hasSimplifiedBehaviouralModel ;
+                                         rdfs:domain :EnergySource ;
+                                         rdfs:range :BehaviouralModelEnergySource ;
+                                         rdfs:label "has simplified bahaviour model energy source" .
+
+
+###  https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyDistributionSystem
+:hasSimplifiedBehaviourModelEnergyDistributionSystem rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf :hasSimplifiedBehaviouralModel ;
+                                                     rdfs:range :BehaviouralModelEnergyDistributionSystem ;
+                                                     rdfs:label "has simplified behaviour model energy distribution system" .
+
+
+###  https://w3id.org/esim#hasSimplifiedBehaviourModelEnergyTransformationFacility
+:hasSimplifiedBehaviourModelEnergyTransformationFacility rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf :hasSimplifiedBehaviouralModel ;
+                                                         rdfs:domain :EnergyTransformation ;
+                                                         rdfs:range :BehaviouralModelEnergyTransformationFacility ;
+                                                         rdfs:label "has simplified behaviour model energy transformation facility" .
+
+
+###  https://w3id.org/esim#hasSimplifiedBehaviouralModel
+:hasSimplifiedBehaviouralModel rdf:type owl:ObjectProperty ;
+                               rdfs:domain :EnergySource ,
+                                           :EnergyStorage ,
+                                           :EnergyTransformation ,
+                                           :EnergyUse ;
+                               rdfs:range :BehaviouralModelWithSimplifiedCharacteristic ;
+                               rdfs:label "has behavioural model" .
+
+
+###  https://w3id.org/esim#hasSystem
+:hasSystem rdf:type owl:ObjectProperty ;
+           rdfs:domain :Building ,
+                       :City ,
+                       :Site ,
+                       :Zone ;
+           rdfs:range :EnergySystem ;
+           rdfs:label "has system" .
+
+
+###  https://w3id.org/esim#hosts
+:hosts rdf:type owl:ObjectProperty ;
+       owl:inverseOf :isHostedBy ;
+       rdfs:label "hosts" .
+
+
+###  https://w3id.org/esim#isComposedOf
+:isComposedOf rdf:type owl:ObjectProperty ;
+              rdfs:label "is composed of" .
+
+
+###  https://w3id.org/esim#isHostedBy
+:isHostedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "is hosted by" .
+
+
+###  https://w3id.org/esim#isSuppliedBy
+:isSuppliedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf :supplies ;
+              rdfs:label "is supplied by" .
+
+
+###  https://w3id.org/esim#isSuppliedWith
+:isSuppliedWith rdf:type owl:ObjectProperty ;
+                rdfs:label "is supplied with" .
+
+
+###  https://w3id.org/esim#produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:label "produces" .
+
+
+###  https://w3id.org/esim#supplies
+:supplies rdf:type owl:ObjectProperty ;
+          rdfs:label "supplies" .
+
+
+###  https://w3id.org/esim#suppliesWith
+:suppliesWith rdf:type owl:ObjectProperty ;
+              rdfs:label "supplies with" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/esim#hasCoolingSystem
+:hasCoolingSystem rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "has cooling system" .
+
+
+###  https://w3id.org/esim#hasCostValue
+:hasCostValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CostInformation ;
+              rdfs:range xsd:float ;
+              rdfs:label "has cost value" .
+
+
+###  https://w3id.org/esim#hasHeatRecoverySystem
+:hasHeatRecoverySystem rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "has heat recovery system" .
+
+
+###  https://w3id.org/esim#hasHeatingSystem
+:hasHeatingSystem rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "has heating system" .
+
+
+###  https://w3id.org/esim#hasID
+:hasID rdf:type owl:DatatypeProperty ;
+       rdfs:domain owl:Thing ;
+       rdfs:range xsd:string ;
+       rdfs:label "has ID" .
+
+
+###  https://w3id.org/esim#hasMaximumLoadValue
+:hasMaximumLoadValue rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :CoefficientOfPerformance ;
+                     rdfs:range xsd:float ;
+                     rdfs:label "has maximum load value" .
+
+
+###  https://w3id.org/esim#hasMinimumLoadValue
+:hasMinimumLoadValue rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :CoefficientOfPerformance ;
+                     rdfs:range xsd:float ;
+                     rdfs:label "has minimum load value" .
+
+
+###  https://w3id.org/esim#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:string ;
+         rdfs:label "has name" .
+
+
+###  https://w3id.org/esim#hasPartialLoadValue
+:hasPartialLoadValue rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :CoefficientOfPerformance ;
+                     rdfs:range xsd:float ;
+                     rdfs:label "has partial load value" .
+
+
+###  https://w3id.org/esim#hasPortDescription
+:hasPortDescription rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Port ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has port description" .
+
+
+###  https://w3id.org/esim#hasPortID
+:hasPortID rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Port ;
+           rdfs:range xsd:string ;
+           rdfs:label "has port ID" .
+
+
+###  https://w3id.org/esim#ifcGloballyUniqueId
+:ifcGloballyUniqueId rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "ifc globally unique id" .
+
+
+###  https://w3id.org/esim#isOrientedSouth
+:isOrientedSouth rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "is oriented south" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/esim#AC_Network
+:AC_Network rdf:type owl:Class ;
+            rdfs:subClassOf :CableNetwork ;
+            rdfs:label "AC Network" .
+
+
+###  https://w3id.org/esim#AbsorptionChiller
+:AbsorptionChiller rdf:type owl:Class ;
+                   rdfs:subClassOf :Chiller ;
+                   rdfs:comment "A chiller that uses a heat source such as steam or hot water to move the refrigerant around the system" ;
+                   rdfs:label "Vapor-absorption chiller" .
+
+
+###  https://w3id.org/esim#Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:subClassOf :ControlComponent ;
+          rdfs:label "Actuator" .
+
+
+###  https://w3id.org/esim#AdministrationalInformation
+:AdministrationalInformation rdf:type owl:Class ;
+                             rdfs:label "Administrational information" .
+
+
+###  https://w3id.org/esim#AdsorptionChiller
+:AdsorptionChiller rdf:type owl:Class ;
+                   rdfs:subClassOf :Chiller ;
+                   rdfs:comment "Adsorption Chiller is able to make chilled water with low temperature (65℃～100℃) hot water. It uses solid sorption materials instead of liquid solutions." ;
+                   rdfs:label "Adsorption chiller" .
+
+
+###  https://w3id.org/esim#AirAirHeatPump
+:AirAirHeatPump rdf:type owl:Class ;
+                rdfs:subClassOf :AirSourceHeatPump ;
+                rdfs:comment "An ASHP that absorbs heat from outside air and releases it inside the building as hot air" ;
+                rdfs:label "Air air heat pump" .
+
+
+###  https://w3id.org/esim#AirDistributionBox
+:AirDistributionBox rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyDistribution ;
+                    rdfs:comment "" ;
+                    rdfs:label "Air distribution box" .
+
+
+###  https://w3id.org/esim#AirHandlingUnit
+:AirHandlingUnit rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyDistribution ;
+                 rdfs:label "Air handling unit" .
+
+
+###  https://w3id.org/esim#AirSourceHeatPump
+:AirSourceHeatPump rdf:type owl:Class ;
+                   rdfs:subClassOf :HeatPump ;
+                   rdfs:comment "An air source heat pump (ASHP) is a system which transfers heat from outside to inside a building, or vice versa." ;
+                   rdfs:label "Air source heat pump" .
+
+
+###  https://w3id.org/esim#AirWaterHeatPump
+:AirWaterHeatPump rdf:type owl:Class ;
+                  rdfs:subClassOf :AirSourceHeatPump ;
+                  rdfs:comment "An ASHP that absorbs heat from outside air and releases it inside the building as hot water" ;
+                  rdfs:label "Air water heat pump" .
+
+
+###  https://w3id.org/esim#Algorithm
+:Algorithm rdf:type owl:Class ;
+           rdfs:subClassOf :ControlSoftware ;
+           rdfs:label "Algorithm" .
+
+
+###  https://w3id.org/esim#AverageUnavailability
+:AverageUnavailability rdf:type owl:Class ;
+                       rdfs:subClassOf :SystemProperty ;
+                       rdfs:label "Average unavailability" .
+
+
+###  https://w3id.org/esim#BAC_Function
+:BAC_Function rdf:type owl:Class ;
+              rdfs:subClassOf :ControlFunction ;
+              rdfs:label "BAC Function" .
+
+
+###  https://w3id.org/esim#BasicTariff
+:BasicTariff rdf:type owl:Class ;
+             rdfs:subClassOf :EnergyTarif ;
+             rdfs:label "Basic tariff" .
+
+
+###  https://w3id.org/esim#Bathroom
+:Bathroom rdf:type owl:Class ;
+          rdfs:subClassOf :Room ;
+          rdfs:label "Bathroom" ;
+          :omniclass "13-65 13 00" .
+
+
+###  https://w3id.org/esim#Battery
+:Battery rdf:type owl:Class ;
+         rdfs:subClassOf :EnergyStorage ;
+         rdfs:label "Battery" .
+
+
+###  https://w3id.org/esim#Bedroom
+:Bedroom rdf:type owl:Class ;
+         rdfs:subClassOf :Room ;
+         rdfs:label "Bedroom" ;
+         :omniclass "13-65 19 00" .
+
+
+###  https://w3id.org/esim#BehaviouralModel
+:BehaviouralModel rdf:type owl:Class ;
+                  rdfs:label "Behavioural model" .
+
+
+###  https://w3id.org/esim#BehaviouralModelEnergyConsumptionUsage
+:BehaviouralModelEnergyConsumptionUsage rdf:type owl:Class ;
+                                        rdfs:subClassOf :BehaviouralModelWithSimplifiedCharacteristic ;
+                                        rdfs:label "Behavioural model energy consumption usage" .
+
+
+###  https://w3id.org/esim#BehaviouralModelEnergyDistributionSystem
+:BehaviouralModelEnergyDistributionSystem rdf:type owl:Class ;
+                                          rdfs:subClassOf :BehaviouralModelWithSimplifiedCharacteristic ;
+                                          rdfs:label "Behavioural model energy distribution system" .
+
+
+###  https://w3id.org/esim#BehaviouralModelEnergySource
+:BehaviouralModelEnergySource rdf:type owl:Class ;
+                              rdfs:subClassOf :BehaviouralModelWithSimplifiedCharacteristic ;
+                              rdfs:label "Behavioural model energy source" .
+
+
+###  https://w3id.org/esim#BehaviouralModelEnergyStorage
+:BehaviouralModelEnergyStorage rdf:type owl:Class ;
+                               rdfs:subClassOf :BehaviouralModelWithSimplifiedCharacteristic ;
+                               rdfs:label "Behavioural model energy storage" .
+
+
+###  https://w3id.org/esim#BehaviouralModelEnergyTransformationFacility
+:BehaviouralModelEnergyTransformationFacility rdf:type owl:Class ;
+                                              rdfs:subClassOf :BehaviouralModelWithSimplifiedCharacteristic ;
+                                              rdfs:label "Behavioural model energy transformation facility" .
+
+
+###  https://w3id.org/esim#BehaviouralModelWithDetailedCharacteristic
+:BehaviouralModelWithDetailedCharacteristic rdf:type owl:Class ;
+                                            rdfs:subClassOf :BehaviouralModel ;
+                                            rdfs:label "Behavioural model with detailed characteristic" .
+
+
+###  https://w3id.org/esim#BehaviouralModelWithSimplifiedCharacteristic
+:BehaviouralModelWithSimplifiedCharacteristic rdf:type owl:Class ;
+                                              rdfs:subClassOf :BehaviouralModel ;
+                                              rdfs:label "Behavioural model with simplified characteristic" .
+
+
+###  https://w3id.org/esim#BioGas
+:BioGas rdf:type owl:Class ;
+        rdfs:subClassOf :Gas ,
+                        :Renewable ;
+        rdfs:label "Bio gas" .
+
+
+###  https://w3id.org/esim#Biomass
+:Biomass rdf:type owl:Class ;
+         rdfs:subClassOf :Renewable ;
+         rdfs:label "Biomass" .
+
+
+###  https://w3id.org/esim#Boiler
+:Boiler rdf:type owl:Class ;
+        rdfs:subClassOf :EnergyTransformation ;
+        rdfs:label "Boiler" .
+
+
+###  https://w3id.org/esim#BreakoutSpace
+:BreakoutSpace rdf:type owl:Class ;
+               rdfs:subClassOf :Space ;
+               rdfs:label "Breakout Space" ;
+               :omniclass "13-31 11 00" .
+
+
+###  https://w3id.org/esim#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :SpatialStructureElement ;
+          rdfs:label "Building" .
+
+
+###  https://w3id.org/esim#BuildingControlSystem
+:BuildingControlSystem rdf:type owl:Class ;
+                       rdfs:subClassOf :ControlSystem ;
+                       rdfs:label "Building control system" .
+
+
+###  https://w3id.org/esim#BuildingCooling
+:BuildingCooling rdf:type owl:Class ;
+                 rdfs:subClassOf :Cooling ;
+                 rdfs:label "Building cooling" .
+
+
+###  https://w3id.org/esim#BuildingEnergySystem
+:BuildingEnergySystem rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergySystem ;
+                      rdfs:label "Building energy system" .
+
+
+###  https://w3id.org/esim#BuildingEnvelope
+:BuildingEnvelope rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyStorage ;
+                  rdfs:label "Building envelope" .
+
+
+###  https://w3id.org/esim#BuildingHeating
+:BuildingHeating rdf:type owl:Class ;
+                 rdfs:subClassOf :Heating ;
+                 rdfs:label "Building heating" .
+
+
+###  https://w3id.org/esim#Cable
+:Cable rdf:type owl:Class ;
+       rdfs:subClassOf :EnergyDistribution ;
+       rdfs:label "Cable" .
+
+
+###  https://w3id.org/esim#CableFitting
+:CableFitting rdf:type owl:Class ;
+              rdfs:subClassOf :Cable ;
+              rdfs:label "Cable fitting" .
+
+
+###  https://w3id.org/esim#CableNetwork
+:CableNetwork rdf:type owl:Class ;
+              rdfs:subClassOf :Cable ;
+              rdfs:label "Cable network" .
+
+
+###  https://w3id.org/esim#CableSegment
+:CableSegment rdf:type owl:Class ;
+              rdfs:subClassOf :Cable ;
+              rdfs:label "Cable segment" .
+
+
+###  https://w3id.org/esim#CarbonDioxide
+:CarbonDioxide rdf:type owl:Class ;
+               rdfs:subClassOf :Gas ;
+               rdfs:label "Carbon dioxide" .
+
+
+###  https://w3id.org/esim#Ceiling
+:Ceiling rdf:type owl:Class ;
+         rdfs:subClassOf :Element ;
+         rdfs:label "Ceiling" .
+
+
+###  https://w3id.org/esim#Chiller
+:Chiller rdf:type owl:Class ;
+         rdfs:subClassOf :EnergyTransformation ;
+         rdfs:label "Chiller" .
+
+
+###  https://w3id.org/esim#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :SpatialStructureElement ;
+      rdfs:label "City" .
+
+
+###  https://w3id.org/esim#Classroom
+:Classroom rdf:type owl:Class ;
+           rdfs:subClassOf :Room ;
+           rdfs:label "Classroom" ;
+           :omniclass "13-31 13 13" .
+
+
+###  https://w3id.org/esim#Coal
+:Coal rdf:type owl:Class ;
+      rdfs:subClassOf :FossilFuel ,
+                      :Solid ;
+      rdfs:label "Coal" .
+
+
+###  https://w3id.org/esim#CoefficientOfPerformance
+:CoefficientOfPerformance rdf:type owl:Class ;
+                          rdfs:subClassOf :PerformanceParameter ;
+                          rdfs:label "COP" .
+
+
+###  https://w3id.org/esim#ColdEnergyDemand
+:ColdEnergyDemand rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyDemand ;
+                  rdfs:label "Cold energy demand" .
+
+
+###  https://w3id.org/esim#ColdEnergySupply
+:ColdEnergySupply rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergySupply ;
+                  rdfs:label "Cold energy supply" .
+
+
+###  https://w3id.org/esim#ColdWaterSupply
+:ColdWaterSupply rdf:type owl:Class ;
+                 rdfs:subClassOf :WaterSupply ;
+                 rdfs:label "Cold water supply" .
+
+
+###  https://w3id.org/esim#ColdWaterTank
+:ColdWaterTank rdf:type owl:Class ;
+               rdfs:subClassOf :WaterTank ;
+               rdfs:label "Cold water tank" .
+
+
+###  https://w3id.org/esim#ComponentProperty
+:ComponentProperty rdf:type owl:Class ;
+                   rdfs:subClassOf :ReliabilityParameter ;
+                   rdfs:label "Component property" .
+
+
+###  https://w3id.org/esim#CompressionChiller
+:CompressionChiller rdf:type owl:Class ;
+                    rdfs:subClassOf :Chiller ;
+                    rdfs:comment "A chiller that uses an electrically driven mechanical compressor to force a refrigerant around the system" ;
+                    rdfs:label "Vapor-compression chiller" .
+
+
+###  https://w3id.org/esim#ConditionedZone
+:ConditionedZone rdf:type owl:Class ;
+                 rdfs:subClassOf :Zone ;
+                 owl:disjointWith :UnconditionedZone ;
+                 rdfs:comment "A space or group of spaces within a building with heating, cooling, and ventilating requirements which can be maintain by a HVAC system" ;
+                 rdfs:label "Conditioned zone" .
+
+
+###  https://w3id.org/esim#Contract
+:Contract rdf:type owl:Class ;
+          rdfs:subClassOf :AdministrationalInformation ;
+          rdfs:label "Contract" .
+
+
+###  https://w3id.org/esim#ControlComponent
+:ControlComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :ControlFacility ;
+                  rdfs:label "Automation and control equipment" .
+
+
+###  https://w3id.org/esim#ControlFacility
+:ControlFacility rdf:type owl:Class ;
+                 rdfs:label "Automation and control facility" .
+
+
+###  https://w3id.org/esim#ControlFunction
+:ControlFunction rdf:type owl:Class ;
+                 rdfs:label "Automation and control function" .
+
+
+###  https://w3id.org/esim#ControlSoftware
+:ControlSoftware rdf:type owl:Class ;
+                 rdfs:subClassOf :ControlFacility ;
+                 rdfs:label "Automation and control software" .
+
+
+###  https://w3id.org/esim#ControlStrategy
+:ControlStrategy rdf:type owl:Class ;
+                 rdfs:label "Control strategy" .
+
+
+###  https://w3id.org/esim#ControlSystem
+:ControlSystem rdf:type owl:Class ;
+               rdfs:label "Automation and control system" .
+
+
+###  https://w3id.org/esim#Controller
+:Controller rdf:type owl:Class ;
+            rdfs:subClassOf :ControlComponent ;
+            rdfs:label "Controller" .
+
+
+###  https://w3id.org/esim#Cooling
+:Cooling rdf:type owl:Class ;
+         rdfs:subClassOf :EnergyService ;
+         rdfs:label "Cooling" .
+
+
+###  https://w3id.org/esim#CoolingCircuit
+:CoolingCircuit rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyDistributionCircuit ;
+                rdfs:label "Cooling circuit" .
+
+
+###  https://w3id.org/esim#CoolingEnergy
+:CoolingEnergy rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyForm ;
+               rdfs:label "CoolingEnergy" .
+
+
+###  https://w3id.org/esim#CoolingSystem
+:CoolingSystem rdf:type owl:Class ;
+               rdfs:subClassOf :EnergySystem ;
+               rdfs:label "Cooling system" .
+
+
+###  https://w3id.org/esim#CoolingZone
+:CoolingZone rdf:type owl:Class ;
+             rdfs:subClassOf :ConditionedZone ;
+             rdfs:comment "A space or group of spaces with cooling requirements maintained by a cooling system" ;
+             rdfs:label "Cooling zone" .
+
+
+###  https://w3id.org/esim#CostInformation
+:CostInformation rdf:type owl:Class ;
+                 rdfs:label "Cost information" .
+
+
+###  https://w3id.org/esim#DC_Network
+:DC_Network rdf:type owl:Class ;
+            rdfs:subClassOf :CableNetwork ;
+            rdfs:label "DC Network" .
+
+
+###  https://w3id.org/esim#Data
+:Data rdf:type owl:Class ;
+      rdfs:subClassOf :ControlSoftware ;
+      rdfs:label "Data" .
+
+
+###  https://w3id.org/esim#DecisionValue
+:DecisionValue rdf:type owl:Class ;
+               rdfs:subClassOf :KeyPoint ;
+               rdfs:label "Decision value" .
+
+
+###  https://w3id.org/esim#DegradationModel
+:DegradationModel rdf:type owl:Class ;
+                  rdfs:subClassOf :BehaviouralModel ;
+                  rdfs:label "Degradation model" .
+
+
+###  https://w3id.org/esim#DetailedBehaviourModelEnergySource
+:DetailedBehaviourModelEnergySource rdf:type owl:Class ;
+                                    rdfs:subClassOf :BehaviouralModelWithDetailedCharacteristic ;
+                                    rdfs:label "Behaviour model energy source" .
+
+
+###  https://w3id.org/esim#DetailedBehaviouralModelEnergyConsumptionUsage
+:DetailedBehaviouralModelEnergyConsumptionUsage rdf:type owl:Class ;
+                                                rdfs:subClassOf :BehaviouralModelWithDetailedCharacteristic ;
+                                                rdfs:label "Behavioural model energy consumption usage" .
+
+
+###  https://w3id.org/esim#DetailedBehaviouralModelEnergyDistributionSystem
+:DetailedBehaviouralModelEnergyDistributionSystem rdf:type owl:Class ;
+                                                  rdfs:subClassOf :BehaviouralModelWithDetailedCharacteristic ;
+                                                  rdfs:label "Behavioural model energy distribution system" .
+
+
+###  https://w3id.org/esim#DetailedBehaviouralModelEnergyStorage
+:DetailedBehaviouralModelEnergyStorage rdf:type owl:Class ;
+                                       rdfs:subClassOf :BehaviouralModelWithDetailedCharacteristic ;
+                                       rdfs:label "Behavioural model energy storage" .
+
+
+###  https://w3id.org/esim#DetailedBehaviouralModelEnergyTransformationFacility
+:DetailedBehaviouralModelEnergyTransformationFacility rdf:type owl:Class ;
+                                                      rdfs:subClassOf :BehaviouralModelWithDetailedCharacteristic ;
+                                                      rdfs:label "Behavioural model energy transformation facility" .
+
+
+###  https://w3id.org/esim#Dimension
+:Dimension rdf:type owl:Class ;
+           rdfs:subClassOf :PhysicalParameter ;
+           rdfs:label "Dimension" .
+
+
+###  https://w3id.org/esim#District
+:District rdf:type owl:Class ;
+          rdfs:subClassOf :SpatialStructureElement ;
+          rdfs:label "District" .
+
+
+###  https://w3id.org/esim#DistrictCooling
+:DistrictCooling rdf:type owl:Class ;
+                 rdfs:subClassOf :Cooling ;
+                 rdfs:label "District cooling" .
+
+
+###  https://w3id.org/esim#DistrictEnergySystem
+:DistrictEnergySystem rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergySystem ;
+                      rdfs:label "District energy system" .
+
+
+###  https://w3id.org/esim#DistrictHeating
+:DistrictHeating rdf:type owl:Class ;
+                 rdfs:subClassOf :Heating ;
+                 rdfs:label "District heating" .
+
+
+###  https://w3id.org/esim#DomesticColdWater
+:DomesticColdWater rdf:type owl:Class ;
+                   rdfs:subClassOf :DomesticWater ;
+                   rdfs:label "Domestic cold water" .
+
+
+###  https://w3id.org/esim#DomesticColdWaterCircuit
+:DomesticColdWaterCircuit rdf:type owl:Class ;
+                          rdfs:subClassOf :DomesticWaterCircuit ;
+                          rdfs:label "Domestic cold water circuit" .
+
+
+###  https://w3id.org/esim#DomesticHotWater
+:DomesticHotWater rdf:type owl:Class ;
+                  rdfs:subClassOf :DomesticWater ;
+                  rdfs:label "Domestic hot water" .
+
+
+###  https://w3id.org/esim#DomesticHotWaterCircuit
+:DomesticHotWaterCircuit rdf:type owl:Class ;
+                         rdfs:subClassOf :DomesticWaterCircuit ;
+                         rdfs:label "Domestic hot water circuit" .
+
+
+###  https://w3id.org/esim#DomesticHotWaterTank
+:DomesticHotWaterTank rdf:type owl:Class ;
+                      rdfs:subClassOf :HotWaterTank ;
+                      rdfs:label "Domestic hot water tank" .
+
+
+###  https://w3id.org/esim#DomesticWater
+:DomesticWater rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyService ;
+               rdfs:label "Domestic water" .
+
+
+###  https://w3id.org/esim#DomesticWaterCircuit
+:DomesticWaterCircuit rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergyDistributionCircuit ;
+                      rdfs:label "Domestic water circuit" .
+
+
+###  https://w3id.org/esim#Door
+:Door rdf:type owl:Class ;
+      rdfs:subClassOf :Element ;
+      rdfs:label "Door" .
+
+
+###  https://w3id.org/esim#Duct
+:Duct rdf:type owl:Class ;
+      rdfs:subClassOf :EnergyDistribution ;
+      rdfs:label "Duct" .
+
+
+###  https://w3id.org/esim#DuctFitting
+:DuctFitting rdf:type owl:Class ;
+             rdfs:subClassOf :Duct ;
+             rdfs:label "Duct fitting" .
+
+
+###  https://w3id.org/esim#DuctNetwork
+:DuctNetwork rdf:type owl:Class ;
+             rdfs:subClassOf :Duct ;
+             rdfs:label "Duct network" .
+
+
+###  https://w3id.org/esim#DuctSegment
+:DuctSegment rdf:type owl:Class ;
+             rdfs:subClassOf :Duct ;
+             rdfs:label "Duct segment" .
+
+
+###  https://w3id.org/esim#DynamicTariff
+:DynamicTariff rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyTarif ;
+               rdfs:label "Dynamic tariff" .
+
+
+###  https://w3id.org/esim#EcologicalEnergyCost
+:EcologicalEnergyCost rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergyCost ;
+                      rdfs:label "Ecological energy cost" .
+
+
+###  https://w3id.org/esim#EducationFacility
+:EducationFacility rdf:type owl:Class ;
+                   rdfs:subClassOf :Building ;
+                   rdfs:label "Education Facility" ;
+                   :omniclass "11-12 00 00" .
+
+
+###  https://w3id.org/esim#ElectricGenerator
+:ElectricGenerator rdf:type owl:Class ;
+                   rdfs:subClassOf :EnergyTransformation ;
+                   rdfs:label "Electric generator" .
+
+
+###  https://w3id.org/esim#ElectricHeater
+:ElectricHeater rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyTransformation ;
+                rdfs:label "Electrical heater" .
+
+
+###  https://w3id.org/esim#ElectricMotor
+:ElectricMotor rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyTransformation ;
+               rdfs:label "Electric motor" .
+
+
+###  https://w3id.org/esim#ElectricalAndHeatSupply
+:ElectricalAndHeatSupply rdf:type owl:Class ;
+                         rdfs:subClassOf :EnergySupply ;
+                         rdfs:label "District electrical and heat supply system" .
+
+
+###  https://w3id.org/esim#ElectricalAppliances
+:ElectricalAppliances rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergyService ;
+                      rdfs:label "Electrical appliances" .
+
+
+###  https://w3id.org/esim#ElectricalEnergy
+:ElectricalEnergy rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyForm ;
+                  rdfs:label "ElectricalEnergy" .
+
+
+###  https://w3id.org/esim#ElectricalEnergyDemand
+:ElectricalEnergyDemand rdf:type owl:Class ;
+                        rdfs:subClassOf :EnergyDemand ;
+                        rdfs:label "Electrical energy demand" .
+
+
+###  https://w3id.org/esim#ElectricalEnergySupply
+:ElectricalEnergySupply rdf:type owl:Class ;
+                        rdfs:subClassOf :EnergySupply ;
+                        rdfs:label "District electrical energy supply system" ,
+                                   "Electric energy supply" .
+
+
+###  https://w3id.org/esim#ElectricalSystem
+:ElectricalSystem rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergySystem ;
+                  rdfs:label "Electrical system" .
+
+
+###  https://w3id.org/esim#Electricity
+:Electricity rdf:type owl:Class ;
+             rdfs:subClassOf :EnergySource ;
+             rdfs:label "Electricity" .
+
+
+###  https://w3id.org/esim#ElectricityUse
+:ElectricityUse rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyUse ;
+                rdfs:label "Electricity use" .
+
+
+###  https://w3id.org/esim#Element
+:Element rdf:type owl:Class ;
+         rdfs:subClassOf :SpatialStructureElement ;
+         rdfs:label "Element" .
+
+
+###  https://w3id.org/esim#Emission
+:Emission rdf:type owl:Class ;
+          rdfs:subClassOf :EcologicalEnergyCost ;
+          rdfs:label "Emission" .
+
+
+###  https://w3id.org/esim#EnergyCapacity
+:EnergyCapacity rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyParameter ;
+                rdfs:label "Energy capacity" .
+
+
+###  https://w3id.org/esim#EnergyCollector
+:EnergyCollector rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyTransformation ;
+                 rdfs:label "Energy collector" .
+
+
+###  https://w3id.org/esim#EnergyConsumption
+:EnergyConsumption rdf:type owl:Class ;
+                   rdfs:subClassOf :EnergyParameter ;
+                   rdfs:label "Energy consumption" .
+
+
+###  https://w3id.org/esim#EnergyCost
+:EnergyCost rdf:type owl:Class ;
+            rdfs:subClassOf :EnergyParameter ;
+            rdfs:label "Energy cost" .
+
+
+###  https://w3id.org/esim#EnergyCostTariff
+:EnergyCostTariff rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyTarif ;
+                  rdfs:comment "Tariffs charged by energy providers for supplied energy" ;
+                  rdfs:label "Energy cost tariff" .
+
+
+###  https://w3id.org/esim#EnergyDemand
+:EnergyDemand rdf:type owl:Class ;
+              rdfs:subClassOf :EnergyParameter ;
+              rdfs:label "Energy demand" .
+
+
+###  https://w3id.org/esim#EnergyDemandForHeating
+:EnergyDemandForHeating rdf:type owl:Class ;
+                        rdfs:subClassOf :KeyPerformanceIndicator ;
+                        rdfs:label "Energy demand for heating" .
+
+
+###  https://w3id.org/esim#EnergyDistribution
+:EnergyDistribution rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergySystemComponent ;
+                    rdfs:label "Energy distribution" .
+
+
+###  https://w3id.org/esim#EnergyDistributionCOP
+:EnergyDistributionCOP rdf:type owl:Class ;
+                       rdfs:subClassOf :CoefficientOfPerformance ;
+                       rdfs:label "Energy distribution COP" .
+
+
+###  https://w3id.org/esim#EnergyDistributionCircuit
+:EnergyDistributionCircuit rdf:type owl:Class ;
+                           rdfs:subClassOf :EnergyDistribution ;
+                           rdfs:label "Energy distribution circuit" .
+
+
+###  https://w3id.org/esim#EnergyForm
+:EnergyForm rdf:type owl:Class ;
+            rdfs:label "Energy form" .
+
+
+###  https://w3id.org/esim#EnergyGain
+:EnergyGain rdf:type owl:Class ;
+            rdfs:subClassOf :EnergyParameter ;
+            rdfs:label "Energy gain" .
+
+
+###  https://w3id.org/esim#EnergyManagementSystem
+:EnergyManagementSystem rdf:type owl:Class ;
+                        rdfs:subClassOf :ControlSystem ;
+                        rdfs:label "Energy management system" .
+
+
+###  https://w3id.org/esim#EnergyMix
+:EnergyMix rdf:type owl:Class ;
+           rdfs:subClassOf :EnergySource ;
+           rdfs:comment "The energy mix is the group of different primary energy sources from which secondary energy for direct use - usually electricity - is produced." ;
+           rdfs:label "Energy mix" .
+
+
+###  https://w3id.org/esim#EnergyParameter
+:EnergyParameter rdf:type owl:Class ;
+                 rdfs:subClassOf :Parameter ;
+                 rdfs:label "Energy parameter" .
+
+
+###  https://w3id.org/esim#EnergyRecoveryTariff
+:EnergyRecoveryTariff rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergyTarif ;
+                      rdfs:comment "Energy tariff refunded by providers for recovered energy through e.g. solar collectors" ;
+                      rdfs:label "EnergyRecoveryTariff" .
+
+
+###  https://w3id.org/esim#EnergyRelatedData
+:EnergyRelatedData rdf:type owl:Class ;
+                   rdfs:label "Energy related data" .
+
+
+###  https://w3id.org/esim#EnergyService
+:EnergyService rdf:type owl:Class ;
+               rdfs:label "Energy service" .
+
+
+###  https://w3id.org/esim#EnergySource
+:EnergySource rdf:type owl:Class ;
+              rdfs:subClassOf :EnergySystemComponent ;
+              rdfs:label "Energy source" .
+
+
+###  https://w3id.org/esim#EnergySourceCOP
+:EnergySourceCOP rdf:type owl:Class ;
+                 rdfs:subClassOf :CoefficientOfPerformance ;
+                 rdfs:label "Energy source COP" .
+
+
+###  https://w3id.org/esim#EnergyStorage
+:EnergyStorage rdf:type owl:Class ;
+               rdfs:subClassOf :EnergySystemComponent ;
+               rdfs:comment "Energy storage is the capture of energy produced at one time for use at a later time." ;
+               rdfs:label "Energy storage" .
+
+
+###  https://w3id.org/esim#EnergyStorageCOP
+:EnergyStorageCOP rdf:type owl:Class ;
+                  rdfs:subClassOf :CoefficientOfPerformance ;
+                  rdfs:label "Energy storage COP" .
+
+
+###  https://w3id.org/esim#EnergySupply
+:EnergySupply rdf:type owl:Class ;
+              rdfs:subClassOf :EnergySystemComponent ;
+              rdfs:label "Energy supply" .
+
+
+###  https://w3id.org/esim#EnergySupplyValue
+:EnergySupplyValue rdf:type owl:Class ;
+                   rdfs:subClassOf :EnergyParameter ;
+                   rdfs:label "Energy supply values" .
+
+
+###  https://w3id.org/esim#EnergySystem
+:EnergySystem rdf:type owl:Class ;
+              rdfs:label "Energy system" .
+
+
+###  https://w3id.org/esim#EnergySystemComponent
+:EnergySystemComponent rdf:type owl:Class ;
+                       rdfs:label "Energy system component" .
+
+
+###  https://w3id.org/esim#EnergyTarif
+:EnergyTarif rdf:type owl:Class ;
+             rdfs:label "Energy tarif" .
+
+
+###  https://w3id.org/esim#EnergyTransformation
+:EnergyTransformation rdf:type owl:Class ;
+                      rdfs:subClassOf :EnergySystemComponent ;
+                      rdfs:label "Energy transformation" .
+
+
+###  https://w3id.org/esim#EnergyTransformationCOP
+:EnergyTransformationCOP rdf:type owl:Class ;
+                         rdfs:subClassOf :CoefficientOfPerformance ;
+                         rdfs:label "Energy transformation COP" .
+
+
+###  https://w3id.org/esim#EnergyUse
+:EnergyUse rdf:type owl:Class ;
+           rdfs:subClassOf :EnergySystemComponent ;
+           rdfs:label "Energy use" .
+
+
+###  https://w3id.org/esim#Engine
+:Engine rdf:type owl:Class ;
+        rdfs:subClassOf :EnergyTransformation ;
+        rdfs:label "Engine" .
+
+
+###  https://w3id.org/esim#Evaporator
+:Evaporator rdf:type owl:Class ;
+            rdfs:subClassOf :EnergyTransformation ;
+            rdfs:label "Evaporator" .
+
+
+###  https://w3id.org/esim#ExhaustAirHeatPump
+:ExhaustAirHeatPump rdf:type owl:Class ;
+                    rdfs:subClassOf :HeatPump ;
+                    rdfs:comment "An Exhaust Air Heat Pump (EAHP) extracts heat from the exhaust air of a building and transfers the heat to the supply air, hot tap water and/or hydronic heating system (underfloor heating, radiators)." ;
+                    rdfs:label "Ehaust air heat pump" .
+
+
+###  https://w3id.org/esim#ExpansionVessel
+:ExpansionVessel rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyDistribution ;
+                 rdfs:label "Expansion vessel" .
+
+
+###  https://w3id.org/esim#Fan
+:Fan rdf:type owl:Class ;
+     rdfs:subClassOf :EnergyDistribution ;
+     rdfs:label "Fan" .
+
+
+###  https://w3id.org/esim#Fancoil
+:Fancoil rdf:type owl:Class ;
+         rdfs:subClassOf :EnergyDistribution ;
+         rdfs:label "Fancoil" .
+
+
+###  https://w3id.org/esim#FinalEnergy
+:FinalEnergy rdf:type owl:Class ;
+             rdfs:subClassOf :EnergyForm ;
+             rdfs:label "Final energy" .
+
+
+###  https://w3id.org/esim#Floor
+:Floor rdf:type owl:Class ;
+       rdfs:subClassOf :Element ;
+       rdfs:label "Floor" .
+
+
+###  https://w3id.org/esim#FloorHeating
+:FloorHeating rdf:type owl:Class ;
+              rdfs:subClassOf :EnergyDistribution ;
+              rdfs:label "FloorHeating" .
+
+
+###  https://w3id.org/esim#FossilFuel
+:FossilFuel rdf:type owl:Class ;
+            rdfs:subClassOf :NonRenewable ;
+            rdfs:label "Fossil fuel" .
+
+
+###  https://w3id.org/esim#Function
+:Function rdf:type owl:Class ;
+          rdfs:subClassOf :ControlSoftware ;
+          rdfs:label "Function" .
+
+
+###  https://w3id.org/esim#FunctionalInterfaceDescription
+:FunctionalInterfaceDescription rdf:type owl:Class ;
+                                rdfs:subClassOf :InterfaceDescription ;
+                                rdfs:label "Functional interface description" .
+
+
+###  https://w3id.org/esim#FunctionalPort
+:FunctionalPort rdf:type owl:Class ;
+                rdfs:subClassOf :Port ;
+                rdfs:label "Functional port" .
+
+
+###  https://w3id.org/esim#Gas
+:Gas rdf:type owl:Class ;
+     rdfs:subClassOf :Medium ;
+     rdfs:label "Gas" .
+
+
+###  https://w3id.org/esim#GasNetwork
+:GasNetwork rdf:type owl:Class ;
+            rdfs:subClassOf :PipeNetwork ;
+            rdfs:label "Gas network" .
+
+
+###  https://w3id.org/esim#GasTank
+:GasTank rdf:type owl:Class ;
+         rdfs:subClassOf :Tank ;
+         rdfs:label "Gas tank" .
+
+
+###  https://w3id.org/esim#Geothermal
+:Geothermal rdf:type owl:Class ;
+            rdfs:subClassOf :Renewable ;
+            rdfs:label "Geothermal" .
+
+
+###  https://w3id.org/esim#GridElectricalEnergySupply
+:GridElectricalEnergySupply rdf:type owl:Class ;
+                            rdfs:subClassOf :EnergySupply ;
+                            rdfs:label "Grid electrical energy supply system" .
+
+
+###  https://w3id.org/esim#GroundCollector
+:GroundCollector rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyCollector ;
+                 rdfs:label "Ground collector" .
+
+
+###  https://w3id.org/esim#GroundSourceHeatPump
+:GroundSourceHeatPump rdf:type owl:Class ;
+                      rdfs:subClassOf :HeatPump ;
+                      rdfs:comment "A geothermal heat pump or ground source heat pump (GSHP) is a central heating and/or cooling system that transfers heat to or from the ground." ;
+                      rdfs:label "Ground source heat pump" .
+
+
+###  https://w3id.org/esim#GroundWater
+:GroundWater rdf:type owl:Class ;
+             rdfs:subClassOf :Water ;
+             rdfs:label "Ground water" .
+
+
+###  https://w3id.org/esim#HazardRate
+:HazardRate rdf:type owl:Class ;
+            rdfs:subClassOf :ComponentProperty ,
+                            :SystemProperty ;
+            rdfs:comment "Hazard or failure rate λ (in h^-1 or y^-1)" ;
+            rdfs:label "Hazard rate" .
+
+
+###  https://w3id.org/esim#HealthCareFacility
+:HealthCareFacility rdf:type owl:Class ;
+                    rdfs:subClassOf :Building ;
+                    rdfs:label "Health Care Facility" ;
+                    :omniclass "11-21 00 00" .
+
+
+###  https://w3id.org/esim#HeatEnergyDemand
+:HeatEnergyDemand rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyDemand ;
+                  rdfs:label "Heat energy demand" .
+
+
+###  https://w3id.org/esim#HeatEnergySupply
+:HeatEnergySupply rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergySupply ;
+                  rdfs:label "Heat energy supply" .
+
+
+###  https://w3id.org/esim#HeatExchanger
+:HeatExchanger rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyTransformation ;
+               rdfs:label "Heat exchanger" .
+
+
+###  https://w3id.org/esim#HeatNetwork
+:HeatNetwork rdf:type owl:Class ;
+             rdfs:subClassOf :PipeNetwork ;
+             rdfs:label "Heat network" .
+
+
+###  https://w3id.org/esim#HeatPump
+:HeatPump rdf:type owl:Class ;
+          rdfs:subClassOf :EnergyTransformation ;
+          rdfs:label "Heat pump" .
+
+
+###  https://w3id.org/esim#HeatRecovery
+:HeatRecovery rdf:type owl:Class ;
+              rdfs:subClassOf :EnergyTransformation ;
+              rdfs:label "Heat recovery" .
+
+
+###  https://w3id.org/esim#Heating
+:Heating rdf:type owl:Class ;
+         rdfs:subClassOf :EnergyService ;
+         rdfs:label "Heating" .
+
+
+###  https://w3id.org/esim#HeatingCircuit
+:HeatingCircuit rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyDistributionCircuit ;
+                rdfs:label "Heating circuit" .
+
+
+###  https://w3id.org/esim#HeatingEnergy
+:HeatingEnergy rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyForm ;
+               rdfs:label "HeatingEnergy" .
+
+
+###  https://w3id.org/esim#HeatingLoad
+:HeatingLoad rdf:type owl:Class ;
+             rdfs:subClassOf :KeyPerformanceIndicator ;
+             rdfs:label "Heating load" .
+
+
+###  https://w3id.org/esim#HeatingSystem
+:HeatingSystem rdf:type owl:Class ;
+               rdfs:subClassOf :EnergySystem ;
+               rdfs:label "Heating system" .
+
+
+###  https://w3id.org/esim#HeatingZone
+:HeatingZone rdf:type owl:Class ;
+             rdfs:subClassOf :ConditionedZone ;
+             rdfs:comment "A space or group of spaces with heating requirements maintained by a heating system" ;
+             rdfs:label "Heating zone" .
+
+
+###  https://w3id.org/esim#HighLowTariff
+:HighLowTariff rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyTarif ;
+               rdfs:label "High low tariff" .
+
+
+###  https://w3id.org/esim#HotWaterSupply
+:HotWaterSupply rdf:type owl:Class ;
+                rdfs:subClassOf :WaterSupply ;
+                rdfs:label "Hot water supply" .
+
+
+###  https://w3id.org/esim#HotWaterTank
+:HotWaterTank rdf:type owl:Class ;
+              rdfs:subClassOf :WaterTank ;
+              rdfs:label "Hot water tank" .
+
+
+###  https://w3id.org/esim#Humidifier
+:Humidifier rdf:type owl:Class ;
+            rdfs:subClassOf :EnergyTransformation ;
+            rdfs:label "Humidifier" .
+
+
+###  https://w3id.org/esim#HybridHeatPump
+:HybridHeatPump rdf:type owl:Class ;
+                rdfs:subClassOf :HeatPump ;
+                rdfs:label "Hybrid heat pump" .
+
+
+###  https://w3id.org/esim#Hydro
+:Hydro rdf:type owl:Class ;
+       rdfs:subClassOf :Renewable ;
+       rdfs:comment "Flowing water creates energy that can be captured and turned into electricity. This is called hydroelectric power or hydropower. The most common type of hydroelectric power plant uses a dam on a river to store water in a reservoir." ;
+       rdfs:label "Hydro" .
+
+
+###  https://w3id.org/esim#Identifier
+:Identifier rdf:type owl:Class ;
+            rdfs:comment "EAS Identifier Concept" ;
+            rdfs:label "Identifier" .
+
+
+###  https://w3id.org/esim#InformationNetwork
+:InformationNetwork rdf:type owl:Class ;
+                    rdfs:subClassOf :CableNetwork ;
+                    rdfs:label "Information network" .
+
+
+###  https://w3id.org/esim#InterfaceDescription
+:InterfaceDescription rdf:type owl:Class ;
+                      rdfs:label "Interface description" .
+
+
+###  https://w3id.org/esim#InvestmentCost
+:InvestmentCost rdf:type owl:Class ;
+                rdfs:subClassOf :CostInformation ;
+                rdfs:label "Investment cost" .
+
+
+###  https://w3id.org/esim#KeyDesignParameter
+:KeyDesignParameter rdf:type owl:Class ;
+                    rdfs:subClassOf :KeyPoint ;
+                    rdfs:label "Key design parameter" .
+
+
+###  https://w3id.org/esim#KeyPerformanceIndicator
+:KeyPerformanceIndicator rdf:type owl:Class ;
+                         rdfs:subClassOf :KeyPoint ;
+                         rdfs:label "Key performance indicator" .
+
+
+###  https://w3id.org/esim#KeyPoint
+:KeyPoint rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Key point" .
+
+
+###  https://w3id.org/esim#KeyRiskIndicator
+:KeyRiskIndicator rdf:type owl:Class ;
+                  rdfs:subClassOf :KeyPoint ;
+                  rdfs:label "Key risk indicator" .
+
+
+###  https://w3id.org/esim#Kitchen
+:Kitchen rdf:type owl:Class ;
+         rdfs:subClassOf :Room ;
+         rdfs:label "Kitchen" ;
+         :omniclass "13-65 23 00" .
+
+
+###  https://w3id.org/esim#LakeCollector
+:LakeCollector rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyCollector ;
+               rdfs:label "Lake collector" .
+
+
+###  https://w3id.org/esim#Lighting
+:Lighting rdf:type owl:Class ;
+          rdfs:subClassOf :EnergyService ;
+          rdfs:label "Lighting" .
+
+
+###  https://w3id.org/esim#LightingEnergy
+:LightingEnergy rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyForm ;
+                rdfs:label "LightingEnergy" .
+
+
+###  https://w3id.org/esim#LightingSystem
+:LightingSystem rdf:type owl:Class ;
+                rdfs:subClassOf :EnergySystem ;
+                rdfs:label "Lighting system" .
+
+
+###  https://w3id.org/esim#Liquid
+:Liquid rdf:type owl:Class ;
+        rdfs:subClassOf :Medium ;
+        rdfs:label "Liquid" .
+
+
+###  https://w3id.org/esim#LithiumBromide
+:LithiumBromide rdf:type owl:Class ;
+                rdfs:subClassOf :Solid ;
+                rdfs:label "Lithium bromide" .
+
+
+###  https://w3id.org/esim#LivingRoom
+:LivingRoom rdf:type owl:Class ;
+            rdfs:subClassOf :Room ;
+            rdfs:label "Living room" .
+
+
+###  https://w3id.org/esim#LoadVariable
+:LoadVariable rdf:type owl:Class ;
+              rdfs:subClassOf :DynamicTariff ;
+              rdfs:label "Load variable" .
+
+
+###  https://w3id.org/esim#LocalControlSystem
+:LocalControlSystem rdf:type owl:Class ;
+                    rdfs:subClassOf :ControlSystem ;
+                    rdfs:label "Local control system" .
+
+
+###  https://w3id.org/esim#LongTermControlStrategy
+:LongTermControlStrategy rdf:type owl:Class ;
+                         rdfs:subClassOf :ControlStrategy ;
+                         rdfs:label "Long term control strategy" .
+
+
+###  https://w3id.org/esim#Luminaire
+:Luminaire rdf:type owl:Class ;
+           rdfs:subClassOf :EnergyDistribution ;
+           rdfs:label "Luminaire" .
+
+
+###  https://w3id.org/esim#MTBF
+:MTBF rdf:type owl:Class ;
+      rdfs:subClassOf :ComponentProperty ,
+                      :SystemProperty ;
+      rdfs:comment "Mean time between failures" ;
+      rdfs:label "MTBF" .
+
+
+###  https://w3id.org/esim#MTTF
+:MTTF rdf:type owl:Class ;
+      rdfs:subClassOf :ComponentProperty ;
+      rdfs:comment "Mean time to failures" ;
+      rdfs:label "MTTF" .
+
+
+###  https://w3id.org/esim#MTTFF
+:MTTFF rdf:type owl:Class ;
+       rdfs:subClassOf :SystemProperty ;
+       rdfs:comment "Mean time to first failure" ;
+       rdfs:label "MTTFF" .
+
+
+###  https://w3id.org/esim#MTTR
+:MTTR rdf:type owl:Class ;
+      rdfs:subClassOf :ComponentProperty ;
+      rdfs:comment "Mean time to repair" ;
+      rdfs:label "MTTR" .
+
+
+###  https://w3id.org/esim#MaintenanceCost
+:MaintenanceCost rdf:type owl:Class ;
+                 rdfs:subClassOf :CostInformation ;
+                 rdfs:label "Maintenance cost" .
+
+
+###  https://w3id.org/esim#ManagementFunction
+:ManagementFunction rdf:type owl:Class ;
+                    rdfs:subClassOf :ControlFunction ;
+                    rdfs:label "Management function" .
+
+
+###  https://w3id.org/esim#Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf :PhysicalParameter ;
+          rdfs:label "Material" .
+
+
+###  https://w3id.org/esim#MeasuredEnergyData
+:MeasuredEnergyData rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyRelatedData ;
+                    rdfs:label "Measured energy data" .
+
+
+###  https://w3id.org/esim#MechanicalVentilation
+:MechanicalVentilation rdf:type owl:Class ;
+                       rdfs:subClassOf :Ventilation ;
+                       rdfs:label "Mechanical ventilation" .
+
+
+###  https://w3id.org/esim#Medium
+:Medium rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        rdfs:comment "A medium is a substance or material which is used for a particular purpose or in order to produce a particular effect." ;
+        rdfs:label "Medium" .
+
+
+###  https://w3id.org/esim#MeetingRoom
+:MeetingRoom rdf:type owl:Class ;
+             rdfs:subClassOf :Room ;
+             rdfs:label "Meeting Room" .
+
+
+###  https://w3id.org/esim#Model
+:Model rdf:type owl:Class ;
+       rdfs:subClassOf :ControlSoftware ;
+       rdfs:label "Model" .
+
+
+###  https://w3id.org/esim#MonetaryEnergyCost
+:MonetaryEnergyCost rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyCost ;
+                    rdfs:label "Monetary energy cost" .
+
+
+###  https://w3id.org/esim#MonitoringSystem
+:MonitoringSystem rdf:type owl:Class ;
+                  rdfs:subClassOf :ControlSystem ;
+                  rdfs:label "Monitoring system" .
+
+
+###  https://w3id.org/esim#MultipleFamilyResidence
+:MultipleFamilyResidence rdf:type owl:Class ;
+                         rdfs:subClassOf :Building ;
+                         rdfs:label "Multiple Family Residence" ;
+                         :omniclass "11-16 21 00" .
+
+
+###  https://w3id.org/esim#NaturalGas
+:NaturalGas rdf:type owl:Class ;
+            rdfs:subClassOf :FossilFuel ,
+                            :Gas ;
+            rdfs:label "Natural gas" .
+
+
+###  https://w3id.org/esim#NaturalGasSupply
+:NaturalGasSupply rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergySupply ;
+                  rdfs:label "Natural gas supply system" .
+
+
+###  https://w3id.org/esim#NaturalVentilation
+:NaturalVentilation rdf:type owl:Class ;
+                    rdfs:subClassOf :Ventilation ;
+                    rdfs:label "Natural ventilation" .
+
+
+###  https://w3id.org/esim#NonRenewable
+:NonRenewable rdf:type owl:Class ;
+              rdfs:subClassOf :EnergySource ;
+              rdfs:label "Non renewable" .
+
+
+###  https://w3id.org/esim#NonSpaceCoolingUse
+:NonSpaceCoolingUse rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyUse ;
+                    rdfs:label "None space cooling use" .
+
+
+###  https://w3id.org/esim#NonSpaceHeatingUse
+:NonSpaceHeatingUse rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyUse ;
+                    rdfs:label "None space heating use" .
+
+
+###  https://w3id.org/esim#Nuclear
+:Nuclear rdf:type owl:Class ;
+         rdfs:subClassOf :NonRenewable ;
+         rdfs:label "Nuclear" .
+
+
+###  https://w3id.org/esim#OccupancyParameter
+:OccupancyParameter rdf:type owl:Class ;
+                    rdfs:subClassOf :Parameter ;
+                    rdfs:label "Occupancy parameter" .
+
+
+###  https://w3id.org/esim#OfficeBuilding
+:OfficeBuilding rdf:type owl:Class ;
+                rdfs:subClassOf :Building ;
+                rdfs:label "Office Building" ;
+                :omniclass "11-27 38 00" .
+
+
+###  https://w3id.org/esim#OfficeRoom
+:OfficeRoom rdf:type owl:Class ;
+            rdfs:subClassOf :Room ;
+            rdfs:label "Office room" .
+
+
+###  https://w3id.org/esim#Oil
+:Oil rdf:type owl:Class ;
+     rdfs:subClassOf :FossilFuel ,
+                     :Liquid ;
+     rdfs:label "Oil" .
+
+
+###  https://w3id.org/esim#OnSiteRenewablesThermalEnergy
+:OnSiteRenewablesThermalEnergy rdf:type owl:Class ;
+                               rdfs:subClassOf :KeyDesignParameter ;
+                               rdfs:label "On site renewables thermal energy" .
+
+
+###  https://w3id.org/esim#OperationalControlStrategy
+:OperationalControlStrategy rdf:type owl:Class ;
+                            rdfs:subClassOf :ControlStrategy ;
+                            rdfs:label "Operational control strategy" .
+
+
+###  https://w3id.org/esim#OperationalCost
+:OperationalCost rdf:type owl:Class ;
+                 rdfs:subClassOf :CostInformation ;
+                 rdfs:label "Operational cost" .
+
+
+###  https://w3id.org/esim#Operator
+:Operator rdf:type owl:Class ;
+          rdfs:subClassOf :AdministrationalInformation ;
+          rdfs:label "Operator" .
+
+
+###  https://w3id.org/esim#Owner
+:Owner rdf:type owl:Class ;
+       rdfs:subClassOf :AdministrationalInformation ;
+       rdfs:label "Owner" .
+
+
+###  https://w3id.org/esim#Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:label "Parameter" .
+
+
+###  https://w3id.org/esim#PeakLoad
+:PeakLoad rdf:type owl:Class ;
+          rdfs:subClassOf :EnergyParameter ;
+          rdfs:label "Peak load" .
+
+
+###  https://w3id.org/esim#PerformanceParameter
+:PerformanceParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :Parameter ;
+                      rdfs:label "Performance parameter" .
+
+
+###  https://w3id.org/esim#PhaseChangeMaterial
+:PhaseChangeMaterial rdf:type owl:Class ;
+                     rdfs:subClassOf :EnergyStorage ;
+                     rdfs:label "Phase change material" .
+
+
+###  https://w3id.org/esim#PhotovoltaicCollector
+:PhotovoltaicCollector rdf:type owl:Class ;
+                       rdfs:subClassOf :EnergyCollector ;
+                       rdfs:isDefinedBy <http://bsdd.buildingsmart.org/api/4.0/IfdConcept/2v_K_APKWHuO00025QrE$V> ;
+                       rdfs:label "Photovoltaic" ;
+                       :omniclass "22-26 31 00" .
+
+
+###  https://w3id.org/esim#PhysicalInterfaceDescription
+:PhysicalInterfaceDescription rdf:type owl:Class ;
+                              rdfs:subClassOf :InterfaceDescription ;
+                              rdfs:label "Physical interface description" .
+
+
+###  https://w3id.org/esim#PhysicalParameter
+:PhysicalParameter rdf:type owl:Class ;
+                   rdfs:subClassOf :Parameter ;
+                   rdfs:label "Physical parameter" .
+
+
+###  https://w3id.org/esim#PhysicalPort
+:PhysicalPort rdf:type owl:Class ;
+              rdfs:subClassOf :Port ;
+              rdfs:label "Physical port" .
+
+
+###  https://w3id.org/esim#Pipe
+:Pipe rdf:type owl:Class ;
+      rdfs:subClassOf :EnergyDistribution ;
+      rdfs:label "Pipe" .
+
+
+###  https://w3id.org/esim#PipeFitting
+:PipeFitting rdf:type owl:Class ;
+             rdfs:subClassOf :Pipe ;
+             rdfs:label "Pipe fitting" .
+
+
+###  https://w3id.org/esim#PipeNetwork
+:PipeNetwork rdf:type owl:Class ;
+             rdfs:subClassOf :Pipe ;
+             rdfs:label "Pipe network" .
+
+
+###  https://w3id.org/esim#PipeSegment
+:PipeSegment rdf:type owl:Class ;
+             rdfs:subClassOf :Pipe ;
+             rdfs:label "Pipe segment" .
+
+
+###  https://w3id.org/esim#PlumbingSystem
+:PlumbingSystem rdf:type owl:Class ;
+                rdfs:subClassOf :EnergySystem ;
+                rdfs:label "Plumbing system" .
+
+
+###  https://w3id.org/esim#Port
+:Port rdf:type owl:Class ;
+      rdfs:label "Port" .
+
+
+###  https://w3id.org/esim#PortType
+:PortType rdf:type owl:Class ;
+          rdfs:label "Port type" .
+
+
+###  https://w3id.org/esim#PredictedEnergyData
+:PredictedEnergyData rdf:type owl:Class ;
+                     rdfs:subClassOf :EnergyRelatedData ;
+                     rdfs:label "Predicted energy data" .
+
+
+###  https://w3id.org/esim#PredictionModel
+:PredictionModel rdf:type owl:Class ;
+                 rdfs:subClassOf :BehaviouralModel ;
+                 rdfs:label "Prediction model" .
+
+
+###  https://w3id.org/esim#PrimaryCircuit
+:PrimaryCircuit rdf:type owl:Class ;
+                rdfs:subClassOf :EnergyDistributionCircuit ;
+                rdfs:label "Primary circuit" .
+
+
+###  https://w3id.org/esim#PrimaryEnergy
+:PrimaryEnergy rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyForm ;
+               rdfs:label "Primary energy" .
+
+
+###  https://w3id.org/esim#Pump
+:Pump rdf:type owl:Class ;
+      rdfs:subClassOf :EnergyDistribution ;
+      rdfs:label "Pump" .
+
+
+###  https://w3id.org/esim#RA_Function
+:RA_Function rdf:type owl:Class ;
+             rdfs:subClassOf :ControlFunction ;
+             rdfs:label "RA Function" .
+
+
+###  https://w3id.org/esim#Radiator
+:Radiator rdf:type owl:Class ;
+          rdfs:subClassOf :EnergyDistribution ;
+          rdfs:label "Radiator" .
+
+
+###  https://w3id.org/esim#Regulation
+:Regulation rdf:type owl:Class ;
+            rdfs:subClassOf :AdministrationalInformation ;
+            rdfs:label "Regulation" .
+
+
+###  https://w3id.org/esim#ReliabilityParameter
+:ReliabilityParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :Parameter ;
+                      rdfs:label "Reliability parameter" .
+
+
+###  https://w3id.org/esim#Renewable
+:Renewable rdf:type owl:Class ;
+           rdfs:subClassOf :EnergySource ;
+           rdfs:label "Renewable" .
+
+
+###  https://w3id.org/esim#ReplacementCost
+:ReplacementCost rdf:type owl:Class ;
+                 rdfs:subClassOf :CostInformation ;
+                 rdfs:label "Replacement cost" .
+
+
+###  https://w3id.org/esim#RestRoom
+:RestRoom rdf:type owl:Class ;
+          rdfs:subClassOf :Room ;
+          rdfs:label "Rest room" .
+
+
+###  https://w3id.org/esim#Room
+:Room rdf:type owl:Class ;
+      rdfs:subClassOf :Space ;
+      rdfs:label "Room" .
+
+
+###  https://w3id.org/esim#RoomControlSystem
+:RoomControlSystem rdf:type owl:Class ;
+                   rdfs:subClassOf :ControlSystem ;
+                   rdfs:label "Room control system" .
+
+
+###  https://w3id.org/esim#SecondaryCircuit
+:SecondaryCircuit rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyDistributionCircuit ;
+                  rdfs:label "Secondary circuit" .
+
+
+###  https://w3id.org/esim#SecundaryEnergy
+:SecundaryEnergy rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyForm ;
+                 rdfs:label "Secundary energy" .
+
+
+###  https://w3id.org/esim#Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf :ControlComponent ;
+        rdfs:label "Sensor" .
+
+
+###  https://w3id.org/esim#ServerRoom
+:ServerRoom rdf:type owl:Class ;
+            rdfs:subClassOf :Room ;
+            rdfs:label "Server room" .
+
+
+###  https://w3id.org/esim#ShadingSystem
+:ShadingSystem rdf:type owl:Class ;
+               rdfs:subClassOf :EnergySystem ;
+               rdfs:label "Shading system" .
+
+
+###  https://w3id.org/esim#ShortTermControlStrategy
+:ShortTermControlStrategy rdf:type owl:Class ;
+                          rdfs:subClassOf :ControlStrategy ;
+                          rdfs:label "Short term control strategy" .
+
+
+###  https://w3id.org/esim#SimulatedEnergyData
+:SimulatedEnergyData rdf:type owl:Class ;
+                     rdfs:subClassOf :EnergyRelatedData ;
+                     rdfs:label "Simulated energy data" .
+
+
+###  https://w3id.org/esim#SingleFamilyResidence
+:SingleFamilyResidence rdf:type owl:Class ;
+                       rdfs:subClassOf :Building ;
+                       rdfs:label "Single Family Residence" ;
+                       :omniclass "11-16 11 00" .
+
+
+###  https://w3id.org/esim#Site
+:Site rdf:type owl:Class ;
+      rdfs:subClassOf :SpatialStructureElement .
+
+
+###  https://w3id.org/esim#SolarAssistedHeatPump
+:SolarAssistedHeatPump rdf:type owl:Class ;
+                       rdfs:subClassOf :HeatPump ;
+                       rdfs:comment "A solar-assisted heat pump (SAHP) is a machine that represents the integration of a heat pump and thermal solar panels in a single integrated system." ;
+                       rdfs:label "Solar assisted heat pump" .
+
+
+###  https://w3id.org/esim#SolarRadiation
+:SolarRadiation rdf:type owl:Class ;
+                rdfs:subClassOf :Renewable ;
+                rdfs:label "Solar radiation" .
+
+
+###  https://w3id.org/esim#SolarThermalCollector
+:SolarThermalCollector rdf:type owl:Class ;
+                       rdfs:subClassOf :EnergyCollector ;
+                       rdfs:label "Solar collector" .
+
+
+###  https://w3id.org/esim#Solid
+:Solid rdf:type owl:Class ;
+       rdfs:subClassOf :Medium ;
+       rdfs:label "Solid" .
+
+
+###  https://w3id.org/esim#Space
+:Space rdf:type owl:Class ;
+       rdfs:subClassOf :SpatialStructureElement ;
+       rdfs:label "Space" .
+
+
+###  https://w3id.org/esim#SpaceCoolingUse
+:SpaceCoolingUse rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyUse ;
+                 rdfs:label "Space cooling use" .
+
+
+###  https://w3id.org/esim#SpaceHeatingUse
+:SpaceHeatingUse rdf:type owl:Class ;
+                 rdfs:subClassOf :EnergyUse ;
+                 rdfs:label "Space heating use" .
+
+
+###  https://w3id.org/esim#SpatialCooling
+:SpatialCooling rdf:type owl:Class ;
+                rdfs:subClassOf :Cooling ;
+                rdfs:label "Space cooling" .
+
+
+###  https://w3id.org/esim#SpatialHeating
+:SpatialHeating rdf:type owl:Class ;
+                rdfs:subClassOf :Heating ;
+                rdfs:label "Space heating" .
+
+
+###  https://w3id.org/esim#SpatialStructureElement
+:SpatialStructureElement rdf:type owl:Class ;
+                         rdfs:label "SpatialStructureElement" .
+
+
+###  https://w3id.org/esim#Standard
+:Standard rdf:type owl:Class ;
+          rdfs:subClassOf :AdministrationalInformation ;
+          rdfs:label "Standard" .
+
+
+###  https://w3id.org/esim#Steam
+:Steam rdf:type owl:Class ;
+       rdfs:subClassOf :Gas ;
+       rdfs:label "Steam" .
+
+
+###  https://w3id.org/esim#Storey
+:Storey rdf:type owl:Class ;
+        rdfs:subClassOf :SpatialStructureElement ;
+        rdfs:label "Storey" .
+
+
+###  https://w3id.org/esim#SurfaceWater
+:SurfaceWater rdf:type owl:Class ;
+              rdfs:subClassOf :Water ;
+              rdfs:label "Surface water" .
+
+
+###  https://w3id.org/esim#SystemProperty
+:SystemProperty rdf:type owl:Class ;
+                rdfs:subClassOf :ReliabilityParameter ;
+                rdfs:label "System property" .
+
+
+###  https://w3id.org/esim#Tank
+:Tank rdf:type owl:Class ;
+      rdfs:subClassOf :EnergyStorage ;
+      rdfs:label "Tank" .
+
+
+###  https://w3id.org/esim#ThermalHeatStorage
+:ThermalHeatStorage rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyStorage ;
+                    rdfs:isDefinedBy <http://bsdd.buildingsmart.org/api/4.0/IfdConcept/1_NeM0PKWHuO00025QrE$V> ;
+                    rdfs:label "Thermal heat storage" ;
+                    :omniclass "21-04 30 20 30" .
+
+
+###  https://w3id.org/esim#TimeVariable
+:TimeVariable rdf:type owl:Class ;
+              rdfs:subClassOf :DynamicTariff ;
+              rdfs:label "Time variable" .
+
+
+###  https://w3id.org/esim#Topology
+:Topology rdf:type owl:Class ;
+          rdfs:subClassOf :PhysicalParameter ;
+          rdfs:label "Topology" .
+
+
+###  https://w3id.org/esim#Transformator
+:Transformator rdf:type owl:Class ;
+               rdfs:subClassOf :EnergyTransformation ;
+               rdfs:label "Transformator" .
+
+
+###  https://w3id.org/esim#UnconditionedZone
+:UnconditionedZone rdf:type owl:Class ;
+                   rdfs:subClassOf :Zone ;
+                   rdfs:comment "A space or group of spaces within a building without heating, cooling, and ventilating requirements which can be maintain by a HVAC system" ;
+                   rdfs:label "Unconditioned zone" .
+
+
+###  https://w3id.org/esim#UsefulEnergy
+:UsefulEnergy rdf:type owl:Class ;
+              rdfs:subClassOf :EnergyForm ;
+              rdfs:label "Useful energy" .
+
+
+###  https://w3id.org/esim#UtilityEquipmentRoom
+:UtilityEquipmentRoom rdf:type owl:Class ;
+                      rdfs:subClassOf :Room ;
+                      rdfs:label "Utility equipment room" .
+
+
+###  https://w3id.org/esim#Valve
+:Valve rdf:type owl:Class ;
+       rdfs:subClassOf :EnergyDistribution ;
+       rdfs:label "Valve" .
+
+
+###  https://w3id.org/esim#Ventilation
+:Ventilation rdf:type owl:Class ;
+             rdfs:subClassOf :EnergyService ;
+             rdfs:label "Ventilation" .
+
+
+###  https://w3id.org/esim#VentilationCircuit
+:VentilationCircuit rdf:type owl:Class ;
+                    rdfs:subClassOf :EnergyDistributionCircuit ;
+                    rdfs:label "Ventilation circuit" .
+
+
+###  https://w3id.org/esim#VentilationSystem
+:VentilationSystem rdf:type owl:Class ;
+                   rdfs:subClassOf :EnergySystem ;
+                   rdfs:label "Ventilation system" .
+
+
+###  https://w3id.org/esim#VentilationZone
+:VentilationZone rdf:type owl:Class ;
+                 rdfs:subClassOf :ConditionedZone ;
+                 rdfs:comment "A space or group of spaces with ventilation requirements maintained by a ventilation system" ;
+                 rdfs:label "Ventilation zone" .
+
+
+###  https://w3id.org/esim#VolumeTariff
+:VolumeTariff rdf:type owl:Class ;
+              rdfs:subClassOf :EnergyTarif ;
+              rdfs:label "Volume tariff" .
+
+
+###  https://w3id.org/esim#Wall
+:Wall rdf:type owl:Class ;
+      rdfs:subClassOf :Element ;
+      rdfs:label "Wall" .
+
+
+###  https://w3id.org/esim#WasteDisposal
+:WasteDisposal rdf:type owl:Class ;
+               rdfs:subClassOf :EcologicalEnergyCost ;
+               rdfs:label "Waste disposal" .
+
+
+###  https://w3id.org/esim#WasteWaterNetwork
+:WasteWaterNetwork rdf:type owl:Class ;
+                   rdfs:subClassOf :PipeNetwork ;
+                   rdfs:label "Waste water network" .
+
+
+###  https://w3id.org/esim#WasteWaterTreatment
+:WasteWaterTreatment rdf:type owl:Class ;
+                     rdfs:subClassOf :Water ;
+                     rdfs:label "Waste water treatment" .
+
+
+###  https://w3id.org/esim#Water
+:Water rdf:type owl:Class ;
+       rdfs:subClassOf :EnergySource ,
+                       :Liquid ;
+       rdfs:label "Water" .
+
+
+###  https://w3id.org/esim#WaterAirHeatPump
+:WaterAirHeatPump rdf:type owl:Class ;
+                  rdfs:subClassOf :WaterSourceHeatPump ;
+                  rdfs:comment "A water source heat pump where the thermal energy is transferred from the water constituting one medium (often a heat transfer circuit) to the air constituting another medium" ;
+                  rdfs:label "Water air heat pump" .
+
+
+###  https://w3id.org/esim#WaterNetwork
+:WaterNetwork rdf:type owl:Class ;
+              rdfs:subClassOf :PipeNetwork ;
+              rdfs:label "Water network" .
+
+
+###  https://w3id.org/esim#WaterSourceHeatPump
+:WaterSourceHeatPump rdf:type owl:Class ;
+                     rdfs:subClassOf :HeatPump ;
+                     rdfs:comment "Uses flowing water as source or sink for heat" ;
+                     rdfs:label "Water source heat pump" .
+
+
+###  https://w3id.org/esim#WaterSupply
+:WaterSupply rdf:type owl:Class ;
+             rdfs:subClassOf :EnergySupply ;
+             rdfs:label "Water supply" .
+
+
+###  https://w3id.org/esim#WaterTank
+:WaterTank rdf:type owl:Class ;
+           rdfs:subClassOf :Tank ;
+           rdfs:label "Water tank" .
+
+
+###  https://w3id.org/esim#WaterUse
+:WaterUse rdf:type owl:Class ;
+          rdfs:subClassOf :EnergyUse ;
+          rdfs:label "Water use" .
+
+
+###  https://w3id.org/esim#WaterWaterHeatPump
+:WaterWaterHeatPump rdf:type owl:Class ;
+                    rdfs:subClassOf :WaterSourceHeatPump ;
+                    rdfs:comment "A water source heat pump where the thermal energy is transferred from the water constituting one medium to the water constituting another medium" ;
+                    rdfs:label "Water water heat pump" .
+
+
+###  https://w3id.org/esim#Wind
+:Wind rdf:type owl:Class ;
+      rdfs:subClassOf :Renewable ;
+      rdfs:label "Wind" .
+
+
+###  https://w3id.org/esim#WindTurbine
+:WindTurbine rdf:type owl:Class ;
+             rdfs:subClassOf :EnergyTransformation ;
+             rdfs:comment "A wind turbine is a device that converts the wind's kinetic energy into electrical power." ;
+             rdfs:label "Wind turbine" .
+
+
+###  https://w3id.org/esim#Window
+:Window rdf:type owl:Class ;
+        rdfs:subClassOf :Element ;
+        rdfs:label "Window" .
+
+
+###  https://w3id.org/esim#Wood
+:Wood rdf:type owl:Class ;
+      rdfs:subClassOf :Renewable ;
+      rdfs:label "Wood" .
+
+
+###  https://w3id.org/esim#Zone
+:Zone rdf:type owl:Class ;
+      rdfs:subClassOf :SpatialStructureElement ;
+      rdfs:label "Zone" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/esim#INPUT
+:INPUT rdf:type owl:NamedIndividual ,
+                :PortType ;
+       rdfs:label "INPUT" .
+
+
+###  https://w3id.org/esim#OUTPUT
+:OUTPUT rdf:type owl:NamedIndividual ,
+                 :PortType ;
+        rdfs:label "OUTPUT" .
+
+
+###  https://w3id.org/esim#PARAMETER
+:PARAMETER rdf:type owl:NamedIndividual ,
+                    :PortType ;
+           rdfs:label "PARAMETER" .
+
+
+###  https://w3id.org/esim#VARIABLE
+:VARIABLE rdf:type owl:NamedIndividual ,
+                   :PortType ;
+          rdfs:label "VARIABLE" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

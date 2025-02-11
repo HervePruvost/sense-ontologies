@@ -1,0 +1,1310 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.w3id.org/risk#"
+     xml:base="https://www.w3id.org/risk"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:risk="https://www.w3id.org/risk#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.w3id.org/risk">
+        <terms:bibliographicCitation xml:lang="en">Pruvost. H. (2023): The RISK Ontology for a risk management paradigm in the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/risk.</terms:bibliographicCitation>
+        <terms:creator rdf:resource="https://orcid.org/0000-0001-7604-8543"/>
+        <terms:creator rdf:resource="https://www.linkedin.com/in/hervepruvost"/>
+        <terms:creator>Hervé Pruvost</terms:creator>
+        <terms:description xml:lang="en">The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-06-22</terms:issued>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-07</terms:modified>
+        <terms:publisher rdf:resource="https://www.eas.iis.fraunhofer.de/"/>
+        <terms:publisher>Fraunhofer IIS/EAS</terms:publisher>
+        <terms:title xml:lang="en">RISK: the risk ontology.</terms:title>
+        <vann:preferredNamespacePrefix>risk</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/risk#</vann:preferredNamespaceUri>
+        <rdfs:seeAlso rdf:resource="https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf"/>
+        <owl:versionInfo>v1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3id.org/risk#Treats -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#Treats"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#assessedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#assessedBy">
+        <owl:inverseOf rdf:resource="https://www.w3id.org/risk#assesses"/>
+        <rdfs:label>assessed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#assesses -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#assesses">
+        <rdfs:label>assesses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#causedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#causedBy">
+        <owl:equivalentProperty rdf:resource="https://www.w3id.org/risk#isEffectOf"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://www.w3id.org/risk#causes"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#causes -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#causes">
+        <owl:equivalentProperty rdf:resource="https://www.w3id.org/risk#hasEffect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#effectedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#effectedBy">
+        <owl:inverseOf rdf:resource="https://www.w3id.org/risk#effects"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Problem"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/risk#Problem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#effects -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#effects">
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Problem"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/risk#Problem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasEffect -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasEffect">
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://www.w3id.org/risk#isEffectOf"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasInstance -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasInstance"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasQuantitativeUncertainty -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasQuantitativeUncertainty"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasRisk -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasRisk">
+        <rdfs:label>has risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasTarget">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#hasThreshold"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasThreshold -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasThreshold"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasTolerance -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#hasTolerance">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#hasThreshold"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#isEffectOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#isEffectOf"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#isOccurenceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#isOccurenceOf">
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#RiskOccurence"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#occursAt -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#occursAt">
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#reducesExpectedImpactOfRisk -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#reducesExpectedImpactOfRisk">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#treatsRisk"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#treatsOccurrenceOfRisk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#reducesRiskProbability -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#reducesRiskProbability">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#treatsRisk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#relatesTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#relatesTo"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#removesRisk -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#removesRisk">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#treatsRisk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#threatens -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#threatens">
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#treatsOccurrenceOfRisk -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#treatsOccurrenceOfRisk">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#treatsProblem"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Measure"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/risk#Problem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#treatsProblem -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#treatsProblem"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#treatsRisk -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/risk#treatsRisk">
+        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/risk#treatsProblem"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Measure"/>
+        <rdfs:range rdf:resource="https://www.w3id.org/risk#Problem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3id.org/risk#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#ID"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#hasDescription"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#hasName"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasTarget -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#hasTarget"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#hasTolerance -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#hasTolerance"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#isCritical -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#isCritical">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Problem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#isToBeAvoided -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#isToBeAvoided">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#isToBeReduced -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#isToBeReduced">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3id.org/risk#isTolerated -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3id.org/risk#isTolerated">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.w3id.org/risk#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3id.org/risk#BetterThanTarget -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#BetterThanTarget">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#MetricValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#CertificationRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#CertificationRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#ConstructionRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#ConstructionRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#CostRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#CostRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#CriticalError -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#CriticalError">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Threshold"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#DesignRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#DesignRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#EnergyRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#EnergyRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#EntityAtRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#EntityAtRisk">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/risk#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="https://www.w3id.org/risk#Risk"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:label>Entity at risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Event -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Event">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#GeotechnicalMeasure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#GeotechnicalMeasure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#KnownMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#GeotechnicalRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#GeotechnicalRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#HighPitMeasure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#HighPitMeasure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#GeotechnicalMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#InTarget -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#InTarget">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#MetricValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#InTolerance -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#InTolerance">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#MetricValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#IncompleteData -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#IncompleteData">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#QualitativeUncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#KnownMeasure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#KnownMeasure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#LegalRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#LegalRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Likelihood -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Likelihood">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#QuantitativeUncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#LowPitMeasure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#LowPitMeasure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#GeotechnicalMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Measure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Measure"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#MetricValuePartition -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#MetricValuePartition">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#NoData -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#NoData">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#QualitativeUncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Occurence -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Occurence">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.w3id.org/risk#Problem"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.w3id.org/risk#occursAt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Problem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3id.org/risk#ID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#OutsideTarget -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#OutsideTarget">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#MetricValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#OutsideTolerance -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#OutsideTolerance">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#MetricValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#ProactiveMeasure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#ProactiveMeasure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.w3id.org/risk#Measure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.w3id.org/risk#treatsRisk"/>
+                        <owl:someValuesFrom rdf:resource="https://www.w3id.org/risk#Risk"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#ProbabilityDistribution -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#ProbabilityDistribution">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#QuantitativeUncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Problem -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Problem"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#QualitativeUncertainty -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#QualitativeUncertainty">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Uncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#QuantitativeUncertainty -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#QuantitativeUncertainty">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Uncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Range -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Range">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#QuantitativeUncertainty"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#ReactiveMeasure -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#ReactiveMeasure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.w3id.org/risk#Measure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://www.w3id.org/risk#treatsOccurrenceOfRisk"/>
+                        <owl:someValuesFrom rdf:resource="https://www.w3id.org/risk#Problem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#ReliabilityRisk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#ReliabilityRisk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Risk -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Risk">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Problem"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#RiskEvent -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#RiskEvent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.w3id.org/risk#Event"/>
+                    <rdf:Description rdf:about="https://www.w3id.org/risk#Risk"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#RiskOccurence -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#RiskOccurence">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Occurence"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3id.org/risk#Threshold -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Threshold"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#Uncertainty -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Uncertainty"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#ValuePartition -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#ValuePartition"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#Warning -->
+
+
+    <owl:Class rdf:about="https://www.w3id.org/risk#Warning">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/risk#Threshold"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3id.org/risk#AirCooledButNotVentilated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#AirCooledButNotVentilated">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Air cooled but not ventilated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#AirHeatedButNotVentilated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#AirHeatedButNotVentilated">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Air heated but not ventilated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#AirHumidifiedButNotVentilated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#AirHumidifiedButNotVentilated">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Air humidified but not ventilated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#AirReturnedButNotSupplied -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#AirReturnedButNotSupplied">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Air returned but not supplied</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#AirSuppliedButNotReturned -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#AirSuppliedButNotReturned">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Air supplied but not returned</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#BuildingHeight -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#BuildingHeight">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#OutsideTolerance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#BuildingPermissionRejected -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#BuildingPermissionRejected">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#LegalRisk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#BuildingTooHigh -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#BuildingTooHigh">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#Occurence"/>
+        <causedBy rdf:resource="https://www.w3id.org/risk#BuildingHeight"/>
+        <causes rdf:resource="https://www.w3id.org/risk#BuildingPermissionRejected"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#DesignTemperature -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#DesignTemperature">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#OutsideTolerance"/>
+        <causes rdf:resource="https://www.w3id.org/risk#NominalDesignTemperature_not_repected"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#FitsValue -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#FitsValue"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Heat recovery inefficiently used</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#HeatRecoveryUnused -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#HeatRecoveryUnused">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Heat recovery unused</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Heat recovery used but not ventilated</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#Install_Struts -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#Install_Struts">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#KnownMeasure"/>
+        <reducesOccurrenceImpactOfRisk rdf:resource="https://www.w3id.org/risk#lowSecurityIndex"/>
+        <removesRisk rdf:resource="https://www.w3id.org/risk#lowSecurityIndex"/>
+        <treatsOccurrenceOfRisk rdf:resource="https://www.w3id.org/risk#lowSecurityIndex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#Maximize -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#Maximize"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#Minimize -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#Minimize"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#ModelValidityLimitState_overstep -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#ModelValidityLimitState_overstep">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#GeotechnicalRisk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#NominalDesignTemperature_not_repected -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#NominalDesignTemperature_not_repected">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#DesignRisk"/>
+        <causedBy rdf:resource="https://www.w3id.org/risk#DesignTemperature"/>
+        <hasDescription>Requested nominal temperature out of normative requirements about indoor condition</hasDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#OverheatingThroughSolarGain -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#OverheatingThroughSolarGain">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Overheating through solar gain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#ServiceabilityLimitState_overstep -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#ServiceabilityLimitState_overstep">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#GeotechnicalRisk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Simulatenous air cooling and radiant heating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Simultaneous air heating and air cooling</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SpaceOverheating -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SpaceOverheating">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Space overheating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SpaceUndercooling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SpaceUndercooling">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Space undercooling</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SupplyAirHumidity_TooHigh -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SupplyAirHumidity_TooHigh">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Supply air humidity Too high</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SupplyAirHumidity_TooLow -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SupplyAirHumidity_TooLow">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Supply air humidity Too low</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SupplyAirPressure_TooHigh -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SupplyAirPressure_TooHigh">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Supply air pressure Too high</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SupplyAirPressure_TooLow -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SupplyAirPressure_TooLow">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Supply air pressure Too low</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SupplyAirTemperature_TooHigh -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SupplyAirTemperature_TooHigh">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Supply air temperature Too high</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#SupplyAirTemperature_TooLow -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#SupplyAirTemperature_TooLow">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Supply air temperature Too low</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#UltimateLimitState_overstep -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#UltimateLimitState_overstep">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#GeotechnicalRisk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#UnusedAppliances -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#UnusedAppliances">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Unused appliances</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#UnusedCoolingEnergy -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#UnusedCoolingEnergy">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Unused cooling energy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#UnusedHeatingEnergy -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#UnusedHeatingEnergy">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Unused heating energy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#UnusedLights -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#UnusedLights">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Unused lights</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#WastingEnergyThroughOpenings -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#WastingEnergyThroughOpenings">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#EnergyRisk"/>
+        <rdfs:label>Wasting energy through openings</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#WindowWallRatio -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#WindowWallRatio">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#InTolerance"/>
+        <rdf:type rdf:resource="https://www.w3id.org/risk#OutsideTarget"/>
+        <causes rdf:resource="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#Occurence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#evacuate_building_site -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#evacuate_building_site">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#KnownMeasure"/>
+        <reducesExpectedImpactOfRisk rdf:resource="https://www.w3id.org/risk#UltimateLimitState_overstep"/>
+        <reducesOccurrenceImpactOfRisk rdf:resource="https://www.w3id.org/risk#UltimateLimitState_overstep"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.w3id.org/risk#lagging -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#lagging"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#leading -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#leading"/>
+    
+
+
+    <!-- https://www.w3id.org/risk#lowSecurityIndex -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.w3id.org/risk#lowSecurityIndex">
+        <rdf:type rdf:resource="https://www.w3id.org/risk#GeotechnicalRisk"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

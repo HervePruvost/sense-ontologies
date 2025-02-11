@@ -1,0 +1,3663 @@
+# baseURI: https://w3id.org/mm
+# prefix: mm
+
+@prefix : <https://w3id.org/mm#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mm: <https://w3id.org/mm#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix widoco: <https://w3id.org/widoco/vocab#> .
+
+
+swrla:isRuleEnabled
+  a owl:AnnotationProperty ;
+.
+<https://w3id.org/mm>
+  a owl:Ontology ;
+  dcterms:bibliographicCitation "Pruvost. H. (2023): The Metrics Model - Quantities and Key Indicators for the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/mm."@en ;
+  dcterms:creator "Hervé Pruvost" ;
+  dcterms:creator <https://orcid.org/0000-0001-7604-8543> ;
+  dcterms:creator <https://www.linkedin.com/in/hervepruvost> ;
+  dcterms:description "The Metrics Model (MM) consists of a taxonomy and vocabularies about quantities, quantity kinds and key metrics e.g. KPIs (Key Performance Indicator) or KRIs (Key Risk Indicator) used by engineers in building design, HVAC and building automation."@en ;
+  dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+  dcterms:created "2017-06-17"^^xsd:date ;
+  dcterms:modified "2024-06-17"^^xsd:date ;
+  dcterms:issued "2023-05-18"^^xsd:date ;
+  dcterms:publisher <https://www.eas.iis.fraunhofer.de/> ;
+  dcterms:publisher "Fraunhofer IIS/EAS" ;
+  dcterms:title "Metrics Model: Metrics for Architecture, Engineering, Construction, and Facility Management domain."@en ;
+  dcterms:abstract "The Metrics model (MM) consists of a taxonomy of quantities, quantity kinds and key metrics e.g. KPI (Key Performance Indicator) or KRI (Key Risk Indicator) that are used for quantification, measurement and sensing in engineering domain. More Specifically, it complements further ontologies like QUDT or SSN/SOSA with very specific metrics for e.g. HVAC (Heating Ventilation and Air Conditioning), building automation, building design, energy management, etc. It contrasts to rather more abstract quantities from other vocabularies."@en ;
+  vann:preferredNamespacePrefix "mm" ;
+  vann:preferredNamespaceUri "https://w3id.org/mm#" ;
+  spin:imports <http://topbraid.org/spin/owlrl-all> ;
+  spin:imports <http://topbraid.org/spin/skosspin> ;
+  rdfs:label "Metrics Model"@en ;
+  rdfs:seeAlso <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> ;
+  owl:versionInfo "v1.1.0" ;
+.
+mm:AboveTarget
+  a owl:Class ;
+  rdfs:label "Above target" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:AboveTolerance
+  a owl:Class ;
+  rdfs:label "Above tolerance" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:Absolute
+  a owl:NamedIndividual ;
+  a mm:ToleranceType ;
+  rdfs:label "Absolute" ;
+.
+mm:AcidificationPotential
+  a owl:Class ;
+  rdfs:label "Acidification potential" ;
+  rdfs:subClassOf mm:Environment-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI20" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:AirCoolingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air cooling status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air damper position" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Air differential pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+.
+mm:AirHandlingUnitSchedule
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air handling unit schedule" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirHeatingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air heating status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirPreCoolingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air precooling status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirPreHeatingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air preheating status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air pressure" ;
+  rdfs:subClassOf mm:Pressure ;
+.
+mm:AirPressureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air pressure setpoint" ;
+  rdfs:subClassOf mm:PressureSetpoint ;
+.
+mm:AirQuality
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air quality" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:AirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:AirTightness
+  a owl:Class ;
+  rdfs:label "Air tightness" ;
+  rdfs:subClassOf mm:Energy-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP12" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:AirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:AirVolumeFlowSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Air volume flow setpoint" ;
+  rdfs:subClassOf mm:VolumeFlowSetpoint ;
+.
+mm:ApplianceElectricityConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Appliance electricity consumption" ;
+  rdfs:subClassOf mm:ElectricityConsumption ;
+.
+mm:Architect
+  a owl:NamedIndividual ;
+  a mm:Role ;
+  rdfs:label "Architect" ;
+  mm:hasName "Architect" ;
+.
+mm:AverageEnergySystemUnavailability
+  a owl:Class ;
+  rdfs:label "Average energy system unavailability" ;
+  rdfs:subClassOf mm:Reliability-KRI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KRI05" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:Azimuth
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Azimuth" ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:BehavioralMetric
+  a owl:Class ;
+  rdfs:comment "A metric that relates to the behavior of human beings or things." ;
+  rdfs:label "Behavioral metric" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:BelowTarget
+  a owl:Class ;
+  rdfs:label "Below target" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:BelowTolerance
+  a owl:Class ;
+  rdfs:label "Below tolerance" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:BetterThanTarget
+  a owl:Class ;
+  rdfs:label "Better than target" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:BlindPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Blind position" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:BlindStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Blind status" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:BoilerHeatingCircuitPumpLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Boiler heating circuit pump level" ;
+  rdfs:subClassOf mm:HeatingCircuitPumpLevel ;
+.
+mm:BoilerHeatingCircuitPumpPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Boiler heating circuit pump position" ;
+  rdfs:subClassOf mm:HeatingCircuitPumpPosition ;
+.
+mm:BoilerHeatingCircuitPumpStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Boiler heating circuit pump status" ;
+  rdfs:subClassOf mm:HeatingCircuitPumpStatus ;
+.
+mm:BoilerHeatingCircuitValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Boiler heating circuit valve position" ;
+  rdfs:subClassOf mm:HeatingCircuitValvePosition ;
+.
+mm:BoilerLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Boiler level" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:BoilerReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Boiler return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:BoilerStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Boiler status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:BoilerSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Boiler supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:BoilerValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Boiler valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:Building
+  a owl:NamedIndividual ;
+  a mm:FunctionalElement ;
+  rdfs:label "Building" ;
+  mm:hasID "edhsthsfh5sfh5f4fz83j" ;
+  mm:hasMetricRequirement mm:BuildingHeightTarget ;
+  mm:hasMetricRequirement mm:BuildingHeightTolerance ;
+  mm:hasMetricRequirement mm:ProbabilityOfLowInternalRateOfReturnTarget ;
+  mm:hasMetricRequirement mm:ProbabilityOfLowInternalRateOfReturnTolerance ;
+  mm:hasMetricRequirement mm:TotalEnergyConsumptionTarget ;
+  mm:hasMetricRequirement mm:TotalEnergyConsumptionTolerance ;
+  mm:hasName "Office building" ;
+.
+mm:BuildingHeight
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:BuildingHeight ;
+  a mm:KeyDesignParameter ;
+  rdfs:label "Building height" ;
+  rdfs:subClassOf mm:Geometry-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP01" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+  mm:appliesToEntity mm:Building ;
+  mm:assessedBy mm:Architect ;
+  mm:hasDescription "The overall height of the building" ;
+  mm:hasID "KDP01" ;
+  mm:hasName "Building height" ;
+  mm:hasOptimizationType mm:FitInRange ;
+  mm:hasTarget mm:BuildingHeightTarget ;
+  mm:hasTolerance mm:BuildingHeightTolerance ;
+  mm:hasUnit "m" ;
+  mm:usedInProjectPhase mm:UrbanDesign ;
+.
+mm:BuildingHeightTarget
+  a owl:NamedIndividual ;
+  a mm:Target ;
+  rdfs:label "Building height target" ;
+  mm:hasLowerBound "3.15"^^xsd:double ;
+  mm:hasUpperBound "3.35"^^xsd:double ;
+.
+mm:BuildingHeightTolerance
+  a owl:NamedIndividual ;
+  a mm:Tolerance ;
+  rdfs:label "Building height tolerance" ;
+  mm:hasLowerBound "3.087"^^xsd:double ;
+  mm:hasToleranceType mm:Relative ;
+.
+mm:BuildingHeightValue
+  a owl:NamedIndividual ;
+  a mm:MetricValue ;
+  rdfs:label "Building height value" ;
+  mm:appliesToEntity mm:Building ;
+  mm:hasMetric mm:BuildingHeight ;
+  mm:hasQuantitativeValue "3.4"^^xsd:double ;
+  mm:hasVariantID "A1V1" ;
+.
+mm:BypassAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Bypass air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:BypassAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Bypass air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:CO2Concentration
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "CO2 concentration" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:EnvironmentalMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:ChillerLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Chiller level" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:ChillerStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Chiller status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:ColdWaterConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cold water consumption" ;
+  rdfs:subClassOf mm:WaterConsumption ;
+.
+mm:ColdWaterTankLowerLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cold water tank lower level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:ColdWaterTankMidLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cold water tank mid-level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:ColdWaterTankMidLowerLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cold water tank mid-lower level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:ColdWaterTankMidUpperLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cold water tank mid-upper level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:ColdWaterTankUpperLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cold water tank upper level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:Comfort-KDP
+  a owl:Class ;
+  rdfs:label "Comfort KDP" ;
+  rdfs:subClassOf mm:KeyDesignParameter ;
+.
+mm:Comfort-KPI
+  a owl:Class ;
+  rdfs:label "Comfort KPI" ;
+  rdfs:subClassOf mm:KeyPerformanceIndicator ;
+.
+mm:Commissioning
+  a owl:NamedIndividual ;
+  a mm:ProjectPhase ;
+  rdfs:label "Commissioning" ;
+.
+mm:Computed
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Computed" ;
+.
+mm:ComputedProperty
+  a owl:Class ;
+  rdfs:label "Computed property" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:Construction
+  a owl:NamedIndividual ;
+  a mm:ProjectPhase ;
+  rdfs:label "Construction" ;
+.
+mm:ConstructionCost
+  a owl:Class ;
+  rdfs:label "Construction cost" ;
+  rdfs:subClassOf mm:Cost-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI11" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:Continuous
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Continuous" ;
+.
+mm:CoolingCircuitPumpLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cooling circuit pump level" ;
+  rdfs:subClassOf mm:PumpLevel ;
+.
+mm:CoolingCircuitPumpPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cooling circuit pump position" ;
+  rdfs:subClassOf mm:PumpPosition ;
+.
+mm:CoolingCircuitPumpStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cooling circuit pump status" ;
+  rdfs:subClassOf mm:PumpStatus ;
+.
+mm:CoolingCircuitReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cooling circuit return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:CoolingCircuitSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cooling circuit supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:CoolingCircuitSupplyWaterTemperatureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cooling circuit supply water temperature setpoint" ;
+  rdfs:subClassOf mm:TemperatureSetpoint ;
+.
+mm:CoolingCircuitValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Cooling circuit valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:CoolingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cooling coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:CoolingEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cooling energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:CoolingEnergyProduction
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cooling energy production" ;
+  rdfs:subClassOf mm:EnergyProduction ;
+.
+mm:CoolingThermalPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Cooling Thermal power" ;
+  rdfs:subClassOf mm:ThermalPower ;
+  skos:altLabel "Cooling power"@en ;
+.
+mm:Cost-KPI
+  a owl:Class ;
+  rdfs:label "Cost KPI" ;
+  rdfs:subClassOf mm:KeyPerformanceIndicator ;
+.
+mm:Cost-KRI
+  a owl:Class ;
+  rdfs:label "Cost KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:CostAnalyst
+  a owl:NamedIndividual ;
+  a mm:Role ;
+  rdfs:label "Cost analyst" ;
+  mm:hasName "Cost analyst" ;
+.
+mm:DecisionMaker
+  a owl:NamedIndividual ;
+  a mm:Role ;
+  rdfs:label "Decision maker" ;
+  mm:hasName "Decision maker" ;
+.
+mm:DecisionValue
+  a owl:Class ;
+  rdfs:comment "A metric that reflects a decision trade-off between several competing objectives, constraints or risks." ;
+  rdfs:label "Decision value" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:DemolitionCost
+  a owl:Class ;
+  rdfs:label "Demolition cost" ;
+  rdfs:subClassOf mm:Cost-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI12" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:Design-KRI
+  a owl:Class ;
+  rdfs:label "Design KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:DesignTemperatureSummer
+  a owl:Class ;
+  rdfs:label "Design temperature summer" ;
+  rdfs:subClassOf mm:Comfort-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP15" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:DesignTemperatureWinter
+  a owl:Class ;
+  rdfs:label "Design Temperature winter" ;
+  rdfs:subClassOf mm:Comfort-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP14" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:DetailedDesign
+  a owl:NamedIndividual ;
+  a mm:ProjectPhase ;
+  rdfs:label "Detailed design" ;
+  mm:hasName "Detailed design" ;
+.
+mm:DewPoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Dew point" ;
+  rdfs:subClassOf mm:HVACmetric ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:DifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Differential pressure" ;
+  rdfs:subClassOf mm:Pressure ;
+.
+mm:DifferentialPressureAtNominalVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Differential pressure at nominal volume flow" ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+.
+mm:DifferentialPressureLimit
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Differential pressure limit" ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+  rdfs:subClassOf mm:Threshold ;
+.
+mm:Discrete
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Discrete" ;
+.
+mm:DistrictHeatingReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "District heating return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:DistrictHeatingSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "District heating supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:DistrictHeatingWaterVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "District heating water volume flow" ;
+  rdfs:subClassOf mm:WaterVolumeFlow ;
+.
+mm:DoorStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Door status" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:EarlyDesign
+  a owl:NamedIndividual ;
+  a mm:ProjectPhase ;
+  rdfs:label "Early design" ;
+  mm:hasName "Early design" ;
+.
+mm:ElectricPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Electric power" ;
+  rdfs:subClassOf mm:Power ;
+.
+mm:ElectricityConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Electricity consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:ElectricityProduction
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Electricity production" ;
+  rdfs:subClassOf mm:EnergyProduction ;
+.
+mm:ElementInstance
+  a owl:Class ;
+  rdfs:label "Element instance" ;
+  rdfs:subClassOf mm:FunctionalElement ;
+  owl:disjointWith mm:ElementType ;
+.
+mm:ElementType
+  a owl:Class ;
+  rdfs:label "Element type" ;
+  rdfs:subClassOf mm:FunctionalElement ;
+.
+mm:Elevation
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Elevation" ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:Energy
+  a owl:NamedIndividual ;
+  a mm:MetricGroup ;
+  rdfs:label "Energy" ;
+  mm:hasWeight "0.6"^^xsd:double ;
+  mm:isComposedOf mm:TotalEnergyConsumption ;
+.
+mm:Energy-KDP
+  a owl:Class ;
+  rdfs:label "Energy KDP" ;
+  rdfs:subClassOf mm:KeyDesignParameter ;
+.
+mm:Energy-KPI
+  a owl:Class ;
+  rdfs:label "Energy KPI" ;
+  rdfs:subClassOf mm:KeyPerformanceIndicator ;
+.
+mm:Energy-KRI
+  a owl:Class ;
+  rdfs:label "Energy KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:EnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Energy consumption" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:EnergyConsumptionValue
+  a owl:NamedIndividual ;
+  a mm:MetricValue ;
+  rdfs:label "Energy consumption value" ;
+  mm:appliesToEntity mm:Building ;
+  mm:hasMetric mm:TotalEnergyConsumption ;
+  mm:hasQuantitativeValue "35.0"^^xsd:double ;
+.
+mm:EnergyDemandForHeating
+  a owl:Class ;
+  rdfs:label "Energy demand for heating" ;
+  rdfs:subClassOf mm:Energy-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI16" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:EnergyEfficiencyRate
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Energy efficiency rate" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:EnergyEfficiencyRatio
+  a owl:Class ;
+  rdfs:comment """The EER is the ratio of the cooling capacity (in British thermal units (Btu) per hour) to the power input (in watts). 
+The higher the EER rating, the more efficient the air conditioner.""" ;
+  rdfs:label "Energy efficiency ratio" ;
+  rdfs:subClassOf mm:HVACmetric ;
+  skos:altLabel "EER"@en ;
+.
+mm:EnergyExpert
+  a owl:NamedIndividual ;
+  a mm:Role ;
+  rdfs:label "Energy expert" ;
+  mm:hasName "Energy expert" ;
+.
+mm:EnergyProduction
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Energy production" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:EnergySystemTechnology
+  a owl:Class ;
+  rdfs:label "Energy system technology" ;
+  rdfs:subClassOf mm:Energy-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP18" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:EnergyUseMean
+  a owl:Class ;
+  rdfs:label "Energy use mean" ;
+  rdfs:subClassOf mm:Energy-KRI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KRI04" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:EnergyUseVolatility
+  a owl:Class ;
+  rdfs:label "Energy use volatility" ;
+  rdfs:subClassOf mm:Energy-KRI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KRI03" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:Environment-KPI
+  a owl:Class ;
+  rdfs:label "Environment KPI" ;
+  rdfs:subClassOf mm:KeyPerformanceIndicator ;
+.
+mm:Environmental-KRI
+  a owl:Class ;
+  rdfs:label "Environmental KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:EnvironmentalMetric
+  a owl:Class ;
+  rdfs:comment "A metric that states about environmental conditions in spaces or areas, that defines boundary conditions of natural phenomena, or measures the impact of processes on the environment." ;
+  rdfs:label "Environmental metric" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:EutrophicationPotential
+  a owl:Class ;
+  rdfs:label "Eutrophication potential" ;
+  rdfs:subClassOf mm:Environment-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI21" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:ExhaustAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Exhaust air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:ExhaustAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Exhaust air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:ExhaustAirFilterDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Exhaust air filter differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:ExhaustAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Exhaust air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:ExhaustAirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Exhaust air volume flow" ;
+  rdfs:subClassOf mm:AirVolumeFlow ;
+.
+mm:ExhaustAirVolumeFlowSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Exhaust air volume flow setpoint" ;
+  rdfs:subClassOf mm:AirVolumeFlowSetpoint ;
+.
+mm:ExploitationCost
+  a owl:Class ;
+  rdfs:label "Exploitation cost" ;
+  rdfs:subClassOf mm:Cost-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI13" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:FanCoilReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan coil return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:FanCoilSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan coil supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:FanCoilUnitStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan coil unit status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:FanCoilUnitValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan coil unit valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:FanRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan rotational speed" ;
+  rdfs:subClassOf mm:RotationalSpeed ;
+.
+mm:FanSpeedLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan speed level" ;
+  rdfs:subClassOf mm:SpeedLevel ;
+.
+mm:FanSpeedSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan speed setpoint" ;
+  rdfs:subClassOf mm:SpeedSetpoint ;
+.
+mm:FanStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Fan status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:FitInRange
+  a owl:NamedIndividual ;
+  a mm:MetricOptimizationType ;
+  rdfs:label "Fit in range" ;
+.
+mm:FitToGoal
+  a owl:NamedIndividual ;
+  a mm:MetricOptimizationType ;
+  rdfs:label "Fit to goal" ;
+.
+mm:FloorToCeilingHeight
+  a owl:Class ;
+  rdfs:label "Floor to ceiling height" ;
+  rdfs:subClassOf mm:Geometry-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP06" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:FloorToFloorHeight
+  a owl:Class ;
+  rdfs:label "Floor to floor height" ;
+  rdfs:subClassOf mm:Geometry-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP02" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:FunctionalElement
+  a owl:Class ;
+  rdfs:label "Functional element" ;
+  rdfs:subClassOf mm:Product ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasID ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasName ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+mm:GasConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Gas consumption" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:Geometry-KDP
+  a owl:Class ;
+  rdfs:label "Geometry KDP" ;
+  rdfs:subClassOf mm:KeyDesignParameter ;
+.
+mm:GlobalWarmingPotential
+  a owl:Class ;
+  rdfs:label "Global warming potential" ;
+  rdfs:subClassOf mm:Environment-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI22" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:GrossFloorArea
+  a owl:Class ;
+  rdfs:label "Gross floor area" ;
+  rdfs:subClassOf mm:Geometry-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP04" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:HVACmetric
+  a owl:Class ;
+  rdfs:comment "A metric that refers to the behavior of heating, ventilation and air conditioning systems." ;
+  rdfs:label "HVAC metric" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:Health-KPI
+  a owl:Class ;
+  rdfs:label "Health KPI" ;
+  rdfs:subClassOf mm:KeyPerformanceIndicator ;
+.
+mm:HeatPumpSinkReturnTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat pump sink return temperature" ;
+  rdfs:subClassOf mm:ReturnFluidTemperature ;
+.
+mm:HeatPumpSinkSupplyTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat pump sink supply temperature" ;
+  rdfs:subClassOf mm:SupplyFluidTemperature ;
+.
+mm:HeatPumpSourceReturnTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat pump source return temperature" ;
+  rdfs:subClassOf mm:ReturnFluidTemperature ;
+.
+mm:HeatPumpSourceSupplyTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat pump source supply temperature" ;
+  rdfs:subClassOf mm:SupplyFluidTemperature ;
+.
+mm:HeatPumpStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat pump status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:HeatRecoveryAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat recovery air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:HeatRecoveryDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heat recovery damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:HeatRecoveryReturnAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat recovery return air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:HeatRecoveryStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heat recovery status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:HeatRecoverySupplyAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heat recovery return air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:HeatRecoveryValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heat recovery valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:HeatRecoveryWheelRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heat recovery wheel rotational speed" ;
+  rdfs:subClassOf mm:RotationalSpeed ;
+.
+mm:HeatingCircuitPumpLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating circuit pump level" ;
+  rdfs:subClassOf mm:PumpLevel ;
+.
+mm:HeatingCircuitPumpPosition
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Heating circuit pump position" ;
+  rdfs:subClassOf mm:PumpPosition ;
+.
+mm:HeatingCircuitPumpStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating circuit pump status" ;
+  rdfs:subClassOf mm:PumpStatus ;
+.
+mm:HeatingCircuitReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating circuit return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HeatingCircuitSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating circuit supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HeatingCircuitSupplyWaterTemperatureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heating circuit supply water temperature setpoint" ;
+  rdfs:subClassOf mm:TemperatureSetpoint ;
+.
+mm:HeatingCircuitValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating circuit valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:HeatingCircuitWaterVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Heating circuit water volume flow" ;
+  rdfs:subClassOf mm:WaterVolumeFlow ;
+.
+mm:HeatingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:HeatingEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:HeatingEnergyProduction
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating energy production" ;
+  rdfs:subClassOf mm:EnergyProduction ;
+.
+mm:HeatingLoad
+  a owl:Class ;
+  rdfs:label "Heating load" ;
+  rdfs:subClassOf mm:Energy-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI17" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:HeatingSystemLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating system level" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:HeatingSystemStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating system status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:HeatingThermalPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Heating thermal power" ;
+  rdfs:subClassOf mm:ThermalPower ;
+  skos:altLabel "Heating power"@en ;
+.
+mm:HotWaterConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Hot water consumption" ;
+  rdfs:subClassOf mm:WaterConsumption ;
+.
+mm:HotWaterTankHeatingCartridgeStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Hot water tank heating cartridge status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:HotWaterTankLowerLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Hot water tank lower level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HotWaterTankMidLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Hot water tank mid-level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HotWaterTankMidLowerLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Hot water tank mid-lower level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HotWaterTankMidUpperLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Hot water tank mid-upper level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HotWaterTankTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Hot water tank temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HotWaterTankUpperLevelTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Hot water tank upper level temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:HumidifierSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Humidifier setpoint" ;
+  rdfs:subClassOf mm:Setpoint ;
+.
+mm:HumidifierStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Humidifier status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:Humidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Humidity" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:HumiditySetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Humidity setpoint" ;
+  rdfs:subClassOf mm:Setpoint ;
+.
+mm:InTarget
+  a owl:Class ;
+  rdfs:label "In target" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:IndoorAirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Indoor air pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+  rdfs:subClassOf mm:EnvironmentalMetric ;
+.
+mm:IndoorAirQuality
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Indoor air quality" ;
+  rdfs:subClassOf mm:AirQuality ;
+  rdfs:subClassOf mm:EnvironmentalMetric ;
+.
+mm:IndoorAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Indoor air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+  rdfs:subClassOf mm:EnvironmentalMetric ;
+.
+mm:IndoorLightLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Indoor light level" ;
+  rdfs:subClassOf mm:EnvironmentalMetric ;
+  rdfs:subClassOf mm:LightLevel ;
+.
+mm:IndoorRelativeHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Indoor relative humidity" ;
+  rdfs:subClassOf mm:EnvironmentalMetric ;
+  rdfs:subClassOf mm:Humidity ;
+.
+mm:Input
+  a owl:NamedIndividual ;
+  rdfs:label "Input" ;
+.
+mm:InternalRateOfReturn
+  a owl:Class ;
+  rdfs:label "Internal rate of return" ;
+  rdfs:subClassOf mm:Cost-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI14" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:InvestmentCost
+  a owl:Class ;
+  rdfs:label "Investment cost" ;
+  rdfs:subClassOf mm:Cost-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI15" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:KeyDesignParameter
+  a owl:Class ;
+  rdfs:comment "A metric that refers to a design constraints or objective, and that has one or more requirements." ;
+  rdfs:label "Key design parameter" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:KeyPerformanceIndicator
+  a owl:Class ;
+  rdfs:comment "A metric that refers to an objective and that has one or more requirements." ;
+  rdfs:comment "ToDo: add equivalent class that says: metric + relatedToObjectives(some Objective) = KPI" ;
+  rdfs:label "Key performance indicator" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:KeyRiskIndicator
+  a owl:Class ;
+  rdfs:comment "A metric that refers to one or several risks, and that has one or more requirements." ;
+  rdfs:label "Key risk indicator" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:Lagging
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:label "Lagging" ;
+.
+mm:Leading
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:label "Leading" ;
+.
+mm:LifeCycleCost
+  a owl:Class ;
+  rdfs:label "Life cycle cost" ;
+  rdfs:subClassOf mm:Cost-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI10" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:LightLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Light level" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:LightPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Light position" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:LightStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Light status" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:LightingEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Lighting energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+.
+mm:LightingPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Lighting power" ;
+  rdfs:subClassOf mm:Power ;
+.
+mm:LogOnChange
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Log on change" ;
+.
+mm:Maximize
+  a owl:NamedIndividual ;
+  a mm:MetricOptimizationType ;
+  rdfs:label "Maximize" ;
+.
+mm:MeanTimeBetweenFailure
+  a owl:Class ;
+  rdfs:label "Mean time between failure" ;
+  rdfs:subClassOf mm:Reliability-KRI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KRI06" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:MeanUnavailabilityValue
+  a owl:NamedIndividual ;
+  a mm:MetricValue ;
+  rdfs:label "Mean unavailability value" ;
+.
+mm:MediumTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Medium temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:MediumVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Medium volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:Metric
+  a owl:Class ;
+  rdfs:comment "A concrete metric that has a context, namely a product or a process it applies to." ;
+  rdfs:label "Metric" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasID ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty mm:hasMetricRequirement ;
+      owl:someValuesFrom mm:MetricRequirement ;
+    ] ;
+  owl:disjointWith mm:MetricRequirement ;
+.
+mm:MetricDefinition
+  a owl:Class ;
+  rdfs:comment "A metric without context i.e. related to no entity like a product or process it can applies to, and without requirements. This is simply the definition of a physical or an abstract measure. Example: energy consumption, number of items, duration...)" ;
+  rdfs:label "Metric definition" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasUnit ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasID ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+mm:MetricGroup
+  a owl:Class ;
+  rdfs:label "Metric group" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty mm:hasName ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+.
+mm:MetricOptimizationType
+  a owl:Class ;
+  rdfs:label "Metric optimization type" ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:oneOf (
+          mm:FitInRange
+          mm:FitToGoal
+          mm:Maximize
+          mm:Minimize
+          mm:Optimize
+        ) ;
+    ] ;
+.
+mm:MetricRequirement
+  a owl:Class ;
+  rdfs:label "Metric requirement" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty mm:hasMetric ;
+      owl:someValuesFrom mm:Metric ;
+    ] ;
+.
+mm:MetricTemplate
+  a owl:Class ;
+  rdfs:label "Metric template" ;
+  rdfs:subClassOf mm:MetricDefinition ;
+.
+mm:MetricType
+  a owl:Class ;
+  rdfs:label "Metric type" ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:oneOf (
+          mm:Computed
+          mm:Continuous
+          mm:Discrete
+          mm:Lagging
+          mm:Leading
+          mm:LogOnChange
+          mm:MostRecent
+          mm:Postprocessed
+          mm:Preprocessed
+          mm:Process
+          mm:Product
+          mm:Qualitative
+          mm:Quantitative
+          mm:Trend
+        ) ;
+    ] ;
+.
+mm:MetricValue
+  a owl:Class ;
+  rdfs:label "Metric value" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:double ;
+      owl:onProperty mm:hasQuantitativeValue ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasQualitativeValue ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass mm:Metric ;
+      owl:onProperty mm:hasMetric ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onClass [
+          a owl:Class ;
+          owl:unionOf (
+              mm:Process
+              mm:Product
+            ) ;
+        ] ;
+      owl:onProperty mm:appliesToEntity ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty mm:hasID ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty mm:hasMetricRequirement ;
+      owl:someValuesFrom mm:MetricRequirement ;
+    ] ;
+.
+mm:Minimize
+  a owl:NamedIndividual ;
+  a mm:MetricOptimizationType ;
+  rdfs:label "Minimize" ;
+.
+mm:MixedAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Mixed air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:MixedAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Mixed air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:MixedAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Mixed air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:MixingBoxDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Mixing box damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:MostRecent
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Most recent" ;
+.
+mm:Movement
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Movement" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:MyDecisionValue
+  a owl:NamedIndividual ;
+  a mm:DecisionValue ;
+  rdfs:label "My decision value" ;
+  mm:assessedBy mm:DecisionMaker ;
+  mm:hasDescription "The energy is the most important criterium" ;
+  mm:hasID "DV1" ;
+  mm:hasName "My decision value" ;
+  mm:hasOptimizationType mm:Maximize ;
+  mm:hasTarget mm:MyDecisionValueTarget ;
+  mm:hasTolerance mm:MyDecisionValueTolerance ;
+  mm:isComposedOf mm:Energy ;
+  mm:usedInProjectPhase mm:UrbanDesign ;
+.
+mm:MyDecisionValueTarget
+  a owl:NamedIndividual ;
+  a mm:Target ;
+  rdfs:label "My decision value target" ;
+  mm:hasLowerBound "1.0"^^xsd:double ;
+.
+mm:MyDecisionValueTolerance
+  a owl:NamedIndividual ;
+  a mm:Tolerance ;
+  rdfs:label "My decision value tolerance" ;
+  mm:hasLowerBound "5.0"^^xsd:double ;
+  mm:hasToleranceType mm:Relative ;
+  mm:hasUpperBound "5.0"^^xsd:double ;
+.
+mm:NumberOfFloors
+  a owl:Class ;
+  rdfs:label "Number of floors" ;
+  rdfs:subClassOf mm:Geometry-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP03" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:Occupancy
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Occupancy" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:OfficeRoom
+  a owl:NamedIndividual ;
+  a mm:FunctionalElement ;
+  rdfs:label "Office room" ;
+.
+mm:Operation
+  a owl:NamedIndividual ;
+  a mm:ProjectPhase ;
+  rdfs:label "Operation" ;
+.
+mm:Optimize
+  a owl:NamedIndividual ;
+  a mm:MetricOptimizationType ;
+  rdfs:label "Optimize" ;
+.
+mm:OutdoorAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Outdoor air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:OutdoorAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Outdoor air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:OutdoorAirFilterDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Outdoor air filter differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:OutdoorAirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Outdoor air pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:OutdoorAirQuality
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Outdoor air quality" ;
+  rdfs:subClassOf mm:AirQuality ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:OutdoorAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Outdoor air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:OutdoorAirVolumeFlowSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Outdoor air volume flow setpoint" ;
+  rdfs:subClassOf mm:AirVolumeFlowSetpoint ;
+.
+mm:OutdoorLightLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Outdoor light level" ;
+  rdfs:subClassOf mm:LightLevel ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:OutdoorRelativeHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Outdoor relative humidity" ;
+  rdfs:subClassOf mm:Humidity ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:OuterWall
+  a owl:NamedIndividual ;
+  a mm:FunctionalElement ;
+  rdfs:label "Outer wall" ;
+.
+mm:Output
+  a owl:NamedIndividual ;
+  rdfs:label "Output" ;
+.
+mm:OutsideTarget
+  a owl:Class ;
+  rdfs:label "Outside target" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:OutsideTolerance
+  a owl:Class ;
+  rdfs:label "Outside tolerance" ;
+  rdfs:subClassOf mm:RequirementCompliance ;
+.
+mm:OzoneDepletionPotential
+  a owl:Class ;
+  rdfs:label "Ozoned depletion potential" ;
+  rdfs:subClassOf mm:Environment-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI23" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:PhotochemicalOzoneCreationPotential
+  a owl:Class ;
+  rdfs:label "Photochemical ozone creation potential" ;
+  rdfs:subClassOf mm:Environment-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI24" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:PostcoolingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Postcooling coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:PostheatingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Postheating coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:Postprocessed
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Postprocessed" ;
+.
+mm:Power
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Power" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:PreconditionedAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Preconditioned air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:PrecooledAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Precooled air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:PrecoolingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Precooling coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:PreheatedAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Preheated air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:PreheatingCoilValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Preheating coil valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:Preprocessed
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "" ;
+  rdfs:label "Preprocessed" ;
+.
+mm:Presence
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Presence" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:Pressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Pressure" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:PressureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Pressure setpoint" ;
+  rdfs:subClassOf mm:Setpoint ;
+.
+mm:PrimaryEnergy
+  a owl:Class ;
+  rdfs:label "Primary energy" ;
+  rdfs:subClassOf mm:Energy-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI19" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:ProbabilityOfHigherExploitationCost
+  a owl:Class ;
+  rdfs:label "Probability of higher exploitation cost" ;
+  rdfs:subClassOf mm:Cost-KRI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KRI01" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:ProbabilityOfLowInternalRateOfReturn
+  a owl:NamedIndividual ;
+  a mm:KeyRiskIndicator ;
+  rdfs:label "Probability of low internal rate of return" ;
+  mm:appliesToEntity mm:Building ;
+  mm:assessedBy mm:CostAnalyst ;
+  mm:hasDescription "The probability of having an Internal Rate of Return below 10%. The IRR is one measure of project profitability." ;
+  mm:hasID "KRI05" ;
+  mm:hasName "Probability of low Internal Rate of Return" ;
+  mm:hasOptimizationType mm:Minimize ;
+  mm:hasTarget mm:ProbabilityOfLowInternalRateOfReturnTarget ;
+  mm:hasTolerance mm:ProbabilityOfLowInternalRateOfReturnTolerance ;
+  mm:hasUnit "%" ;
+  mm:usedInProjectPhase mm:UrbanDesign ;
+.
+mm:ProbabilityOfLowInternalRateOfReturnTarget
+  a owl:NamedIndividual ;
+  a mm:Target ;
+  rdfs:label "Probability of low internal rate of return target" ;
+  mm:hasUpperBound "15.0"^^xsd:double ;
+.
+mm:ProbabilityOfLowInternalRateOfReturnTolerance
+  a owl:NamedIndividual ;
+  a mm:Tolerance ;
+  rdfs:label "Probability of low internal rate of return tolerance" ;
+  mm:hasToleranceType mm:Absolute ;
+  mm:hasUpperBound "15.0"^^xsd:double ;
+.
+mm:ProbabilityOfLowRateOfReturn
+  a owl:Class ;
+  rdfs:label "Probability of low rate of return" ;
+  rdfs:subClassOf mm:Cost-KRI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KRI02" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:ProbabilityOfLowerInternalRateOfReturnValue
+  a owl:NamedIndividual ;
+  a mm:MetricValue ;
+  rdfs:label "Probability of lower internal rate of return value" ;
+  mm:appliesToEntity mm:Building ;
+  mm:hasMetric mm:ProbabilityOfLowInternalRateOfReturn ;
+  mm:hasQuantitativeValue "20.0"^^xsd:double ;
+.
+mm:Process
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "A process or task that a metric can relate to or be produced by" ;
+  rdfs:label "Process" ;
+.
+mm:Product
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "A product, system or component that a metric can relate to or be produced by" ;
+  rdfs:label "Product" ;
+.
+mm:ProjectPhase
+  a owl:Class ;
+  rdfs:label "Project phase" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty mm:hasName ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:oneOf (
+          mm:Commissioning
+          mm:Construction
+          mm:DetailedDesign
+          mm:EarlyDesign
+          mm:Operation
+          mm:UrbanDesign
+        ) ;
+    ] ;
+.
+mm:PumpLevel
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Pump level" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:PumpPosition
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Pump position" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:PumpRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Pump rotational speed" ;
+  rdfs:subClassOf mm:RotationalSpeed ;
+.
+mm:PumpStatus
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Pump status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:Qualitative
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:label "Qualitative" ;
+.
+mm:Quantitative
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:label "Quantitative" ;
+.
+mm:RadiatorReturnWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Radiator return water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:RadiatorSupplyWaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Radiator supply water temperature" ;
+  rdfs:subClassOf mm:WaterTemperature ;
+.
+mm:RadiatorTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Radiator temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:RadiatorValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Radiator valve position" ;
+  rdfs:subClassOf mm:ValvePosition ;
+.
+mm:Rainfall
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "a fall or shower of rain within a given time and area" ;
+  rdfs:label "Rainfall" ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:RainfallDepth
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "the amount of water falling in rain, snow, etc., within a given time and area" ;
+  rdfs:label "Rainfall depth" ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:Raw
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:comment "data as they come from a data acquisition system" ;
+  rdfs:label "Raw" ;
+.
+mm:Relative
+  a owl:NamedIndividual ;
+  a mm:ToleranceType ;
+  rdfs:label "Relative" ;
+.
+mm:Reliability-KRI
+  a owl:Class ;
+  rdfs:label "Reliability KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:RenewableEnergy
+  a owl:Class ;
+  rdfs:label "Renewable energy" ;
+  rdfs:subClassOf mm:Energy-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI18" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:RequirementCompliance
+  a owl:Class ;
+  rdfs:label "Requirement compliance" ;
+  rdfs:subClassOf mm:ValuePartition ;
+.
+mm:ReturnAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Return air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:ReturnAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Return air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:ReturnAirFanRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Return air fan rotational speed" ;
+  rdfs:subClassOf mm:FanRotationalSpeed ;
+.
+mm:ReturnAirFanSpeedLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Return air fan speed level" ;
+  rdfs:subClassOf mm:FanSpeedLevel ;
+.
+mm:ReturnAirFanStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Return air fan status" ;
+  rdfs:subClassOf mm:FanStatus ;
+.
+mm:ReturnAirFilterDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Return air filter differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:ReturnAirHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Return air humidity" ;
+  rdfs:subClassOf mm:Humidity ;
+.
+mm:ReturnAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Return air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:ReturnAirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Return air volume flow" ;
+  rdfs:subClassOf mm:AirVolumeFlow ;
+.
+mm:ReturnAirVolumeFlowSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Return air volume flow setpoint" ;
+  rdfs:subClassOf mm:AirVolumeFlowSetpoint ;
+.
+mm:ReturnFluidTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Return fluid temperature" ;
+  rdfs:subClassOf mm:MediumTemperature ;
+.
+mm:Role
+  a owl:Class ;
+  rdfs:label "Role" ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty mm:hasName ;
+      owl:someValuesFrom xsd:string ;
+    ] ;
+.
+mm:RotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Rotational speed" ;
+  rdfs:subClassOf mm:Speed ;
+.
+mm:Safety-KRI
+  a owl:Class ;
+  rdfs:label "Safety KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:Schedule-KRI
+  a owl:Class ;
+  rdfs:label "Schedule KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:SeasonalEnergyEfficiencyRatio
+  a owl:Class ;
+  rdfs:comment """The SEER rating of a unit is the cooling output during a typical cooling-season divided by the total electric energy input during the same period. 
+The higher the unit's SEER rating the more energy efficient it is.""" ;
+  rdfs:label "Seasonal energy efficiency ratio" ;
+  rdfs:subClassOf mm:HVACmetric ;
+  skos:altLabel "SEER"@en ;
+.
+mm:Security-KRI
+  a owl:Class ;
+  rdfs:label "Security KRI" ;
+  rdfs:subClassOf mm:KeyRiskIndicator ;
+.
+mm:Setpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "setpoint" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:ShadingLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Shading level" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:ShadingStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Shading status" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:SolarCircuitReturnFluidTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar circuit return fluid temperature" ;
+  rdfs:subClassOf mm:ReturnFluidTemperature ;
+.
+mm:SolarCircuitSupplyFluidTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar circuit supply fluid temperature" ;
+  rdfs:subClassOf mm:SupplyFluidTemperature ;
+.
+mm:SolarCollectorReturnTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar collector return temperature" ;
+  rdfs:subClassOf mm:ReturnFluidTemperature ;
+.
+mm:SolarCollectorSupplyTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar collector supply temperature" ;
+  rdfs:subClassOf mm:SupplyFluidTemperature ;
+.
+mm:SolarRadiation
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Solar radiation" ;
+  rdfs:subClassOf mm:HVACmetric ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:SolarThermalCircuitPumpStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar thermal circuit pump status" ;
+  rdfs:subClassOf mm:PumpStatus ;
+.
+mm:SolarThermalCircuitVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar thermal circuit volume flow" ;
+  rdfs:subClassOf mm:MediumVolumeFlow ;
+.
+mm:SolarThermalPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Solar thermal power" ;
+  rdfs:subClassOf mm:ThermalPower ;
+.
+mm:SpecificDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Specific differential pressure" ;
+  rdfs:subClassOf mm:DifferentialPressure ;
+.
+mm:SpecificFanPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Specific fan power" ;
+  rdfs:subClassOf mm:ElectricPower ;
+.
+mm:SpecificPumpPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Specific pump power" ;
+  rdfs:subClassOf mm:ElectricPower ;
+.
+mm:SpecificVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Specific volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:Speed
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Speed" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:SpeedLevel
+  a owl:Class ;
+  rdfs:comment "" ;
+  rdfs:label "Speed level" ;
+  rdfs:subClassOf mm:Speed ;
+.
+mm:SpeedSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Speed setpoint" ;
+  rdfs:subClassOf mm:Setpoint ;
+.
+mm:SunshineDuration
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Sunshine duration" ;
+  rdfs:subClassOf mm:HVACmetric ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:SupplyAirDamperPosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air damper position" ;
+  rdfs:subClassOf mm:AirDamperPosition ;
+.
+mm:SupplyAirDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Supply air differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:SupplyAirFanRotationalSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air fan rotational speed" ;
+  rdfs:subClassOf mm:FanRotationalSpeed ;
+.
+mm:SupplyAirFanSpeedLevel
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Supply air fan speed level" ;
+  rdfs:subClassOf mm:FanSpeedLevel ;
+.
+mm:SupplyAirFanStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air fan status" ;
+  rdfs:subClassOf mm:FanStatus ;
+.
+mm:SupplyAirFilterDifferentialPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Supply air filter differential pressure" ;
+  rdfs:subClassOf mm:AirDifferentialPressure ;
+.
+mm:SupplyAirHumidity
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air humidity" ;
+  rdfs:subClassOf mm:Humidity ;
+.
+mm:SupplyAirHumiditySetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air humidity setpoint" ;
+  rdfs:subClassOf mm:HumiditySetpoint ;
+.
+mm:SupplyAirPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air pressure" ;
+  rdfs:subClassOf mm:AirPressure ;
+.
+mm:SupplyAirPressureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air pressure setpoint" ;
+  rdfs:subClassOf mm:AirPressureSetpoint ;
+.
+mm:SupplyAirTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air temperature" ;
+  rdfs:subClassOf mm:AirTemperature ;
+.
+mm:SupplyAirTemperatureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air temperature setpoint" ;
+  rdfs:subClassOf mm:TemperatureSetpoint ;
+.
+mm:SupplyAirVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Supply air volume flow" ;
+  rdfs:subClassOf mm:AirVolumeFlow ;
+.
+mm:SupplyAirVolumeFlowSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Supply air volume flow setpoint" ;
+  rdfs:subClassOf mm:AirVolumeFlowSetpoint ;
+.
+mm:SupplyFluidTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:comment "" ;
+  rdfs:label "Supply fluid temperature" ;
+  rdfs:subClassOf mm:MediumTemperature ;
+.
+mm:Target
+  a owl:Class ;
+  rdfs:label "Target" ;
+  rdfs:subClassOf mm:MetricRequirement ;
+.
+mm:Temperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Temperature" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:TemperatureSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Temperature setpoint" ;
+  rdfs:subClassOf mm:Setpoint ;
+.
+mm:ThermalPower
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Thermal power" ;
+  rdfs:subClassOf mm:Power ;
+.
+mm:ThermalTransmittance
+  a owl:Class ;
+  rdfs:label "Thermal transmittance" ;
+  rdfs:subClassOf mm:Energy-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP08" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:Threshold
+  a owl:Class ;
+  rdfs:label "Threshold" ;
+  rdfs:subClassOf mm:MetricRequirement ;
+.
+mm:Tolerance
+  a owl:Class ;
+  rdfs:label "Tolerance" ;
+  rdfs:subClassOf mm:MetricRequirement ;
+.
+mm:ToleranceType
+  a owl:Class ;
+  rdfs:label "Tolerance type" ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:oneOf (
+          mm:Absolute
+          mm:Relative
+        ) ;
+    ] ;
+.
+mm:TotalEnergyConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:KeyPerformanceIndicator ;
+  a mm:MetricDefinition ;
+  rdfs:label "Total energy consumption" ;
+  rdfs:subClassOf mm:EnergyConsumption ;
+  mm:appliesToEntity mm:Building ;
+  mm:assessedBy mm:EnergyExpert ;
+  mm:hasDescription "The total energy consumed by the building" ;
+  mm:hasID "KPI04" ;
+  mm:hasName "Total energy consumption" ;
+  mm:hasOptimizationType mm:Minimize ;
+  mm:hasTarget mm:TotalEnergyConsumptionTarget ;
+  mm:hasTolerance mm:TotalEnergyConsumptionTolerance ;
+  mm:hasUnit "kWh/m²a" ;
+  mm:usedInProjectPhase mm:UrbanDesign ;
+.
+mm:TotalEnergyConsumptionTarget
+  a owl:NamedIndividual ;
+  a mm:Target ;
+  rdfs:label "Total energy consumption target" ;
+  mm:hasUpperBound "30.0"^^xsd:double ;
+.
+mm:TotalEnergyConsumptionTolerance
+  a owl:NamedIndividual ;
+  a mm:Tolerance ;
+  rdfs:label "Total energy consumption tolerance" ;
+  mm:hasToleranceType mm:Absolute ;
+  mm:hasUpperBound "40.0"^^xsd:double ;
+.
+mm:TotalEnergyProduction
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:KeyPerformanceIndicator ;
+  a mm:MetricDefinition ;
+  rdfs:label "Total energy production" ;
+  rdfs:subClassOf mm:EnergyProduction ;
+.
+mm:Trend
+  a owl:NamedIndividual ;
+  a mm:MetricType ;
+  rdfs:label "Trend" ;
+.
+mm:UrbanDesign
+  a owl:NamedIndividual ;
+  a mm:ProjectPhase ;
+  rdfs:label "Urban design" ;
+  mm:hasName "Urban design" ;
+.
+mm:ValuePartition
+  a owl:Class ;
+  rdfs:label "Value partition" ;
+.
+mm:ValvePosition
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Valve position" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:Vibration
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Vibration" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:VolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Volume flow" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:VolumeFlowSetpoint
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Volume flow setpoint" ;
+  rdfs:subClassOf mm:Setpoint ;
+.
+mm:WaterConsumption
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Water consumption" ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:WaterPressure
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Water pressure" ;
+  rdfs:subClassOf mm:Pressure ;
+.
+mm:WaterTemperature
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Water temperature" ;
+  rdfs:subClassOf mm:Temperature ;
+.
+mm:WaterVolumeFlow
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Water volume flow" ;
+  rdfs:subClassOf mm:VolumeFlow ;
+.
+mm:WeatherMetric
+  a owl:Class ;
+  rdfs:comment "A metric that is usually used in climatology or meteorology to assess  weather conditions and changes." ;
+  rdfs:label "Weather metric" ;
+  rdfs:subClassOf mm:Metric ;
+.
+mm:WindSpeed
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Wind speed" ;
+  rdfs:subClassOf mm:HVACmetric ;
+  rdfs:subClassOf mm:WeatherMetric ;
+.
+mm:WindSpeedAroundBuilding
+  a owl:Class ;
+  rdfs:label "Wind speed around building" ;
+  rdfs:subClassOf mm:Comfort-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI09" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:WindSpeedAtBuildingEntrance
+  a owl:Class ;
+  rdfs:label "Wind speed at building entrance" ;
+  rdfs:subClassOf mm:Comfort-KPI ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KPI08" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:WindowStatus
+  a owl:Class ;
+  a owl:NamedIndividual ;
+  a mm:MetricDefinition ;
+  rdfs:label "Window status" ;
+  rdfs:subClassOf mm:BehavioralMetric ;
+  rdfs:subClassOf mm:HVACmetric ;
+.
+mm:WindowWallRatio
+  a owl:Class ;
+  rdfs:label "Window wall ratio" ;
+  rdfs:subClassOf mm:Geometry-KDP ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:hasValue "KDP16" ;
+      owl:onProperty mm:hasMetricClassID ;
+    ] ;
+.
+mm:appliesToEntity
+  a owl:ObjectProperty ;
+  rdfs:label "applies to entity" ;
+.
+mm:assessedBy
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "assessed by" ;
+  rdfs:range mm:Role ;
+.
+mm:composes
+  a owl:ObjectProperty ;
+  rdfs:label "composes" ;
+  owl:inverseOf mm:isComposedOf ;
+.
+mm:goal
+  a swrl:Variable ;
+.
+mm:hasCategory
+  a owl:DatatypeProperty ;
+  rdfs:label "has category" ;
+  rdfs:range xsd:string ;
+.
+mm:hasDescription
+  a owl:DatatypeProperty ;
+  rdfs:label "has description" ;
+  rdfs:range xsd:string ;
+.
+mm:hasGroup
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "has group" ;
+  rdfs:range mm:MetricGroup ;
+.
+mm:hasID
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "has ID" ;
+  rdfs:range xsd:string ;
+.
+mm:hasIndex
+  a owl:DatatypeProperty ;
+  rdfs:domain mm:MetricValue ;
+  rdfs:label "has index" ;
+  rdfs:range xsd:integer ;
+.
+mm:hasLowerBound
+  a owl:DatatypeProperty ;
+  rdfs:domain mm:MetricRequirement ;
+  rdfs:label "has lower bound" ;
+  rdfs:range xsd:double ;
+.
+mm:hasMetric
+  a owl:ObjectProperty ;
+  rdfs:label "has metric" ;
+  rdfs:range mm:Metric ;
+.
+mm:hasMetricClassID
+  a owl:DatatypeProperty ;
+  rdfs:label "has metric class ID" ;
+  rdfs:range xsd:string ;
+.
+mm:hasMetricRequirement
+  a owl:ObjectProperty ;
+  rdfs:label "has metric requirement" ;
+  rdfs:range mm:MetricRequirement ;
+.
+mm:hasMetricType
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "has metric type" ;
+  rdfs:range mm:MetricType ;
+.
+mm:hasMetricValue
+  a owl:ObjectProperty ;
+  rdfs:label "has metric value" ;
+  rdfs:range mm:MetricValue ;
+.
+mm:hasName
+  a owl:DatatypeProperty ;
+  rdfs:domain owl:Thing ;
+  rdfs:label "has name" ;
+  rdfs:range xsd:string ;
+.
+mm:hasOptimizationType
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "has optimization type" ;
+  rdfs:range mm:MetricOptimizationType ;
+.
+mm:hasQualitativeGoalValue
+  a owl:DatatypeProperty ;
+  rdfs:label "has qualitative goal value" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+mm:hasQualitativeValue
+  a owl:DatatypeProperty ;
+  rdfs:label "has qualitative value" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+mm:hasQuantitativeGoalValue
+  a owl:DatatypeProperty ;
+  rdfs:label "has quantitative goal value" ;
+  rdfs:range xsd:double ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+mm:hasQuantitativeValue
+  a owl:DatatypeProperty ;
+  rdfs:label "has quantitative value" ;
+  rdfs:range xsd:double ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+mm:hasRequirementCompliance
+  a owl:ObjectProperty ;
+  rdfs:domain mm:MetricValue ;
+  rdfs:label "has requirement compliance" ;
+  rdfs:range mm:RequirementCompliance ;
+.
+mm:hasTarget
+  a owl:ObjectProperty ;
+  rdfs:label "has target" ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+mm:hasThreshold
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "has threshold" ;
+  rdfs:range mm:Threshold ;
+.
+mm:hasTime
+  a owl:DatatypeProperty ;
+  rdfs:domain mm:MetricValue ;
+  rdfs:label "has time" ;
+  rdfs:range xsd:dateTime ;
+.
+mm:hasTolerance
+  a owl:ObjectProperty ;
+  rdfs:label "has tolerance" ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+mm:hasToleranceType
+  a owl:FunctionalProperty ;
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Tolerance ;
+  rdfs:label "has tolerance type" ;
+  rdfs:range mm:ToleranceType ;
+.
+mm:hasUnit
+  a owl:DatatypeProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "has unit" ;
+  rdfs:range xsd:string ;
+.
+mm:hasUpperBound
+  a owl:DatatypeProperty ;
+  rdfs:domain mm:MetricRequirement ;
+  rdfs:label "has upper bound" ;
+  rdfs:range xsd:double ;
+.
+mm:hasValue
+  a owl:DatatypeProperty ;
+  rdfs:label "has value" ;
+.
+mm:hasVariantID
+  a owl:DatatypeProperty ;
+  rdfs:domain mm:MetricValue ;
+  rdfs:label "has variant ID" ;
+  rdfs:range xsd:string ;
+.
+mm:hasWeight
+  a owl:DatatypeProperty ;
+  rdfs:label "has weight" ;
+  rdfs:range xsd:double ;
+.
+mm:isComposedOf
+  a owl:ObjectProperty ;
+  rdfs:label "is composed of" ;
+.
+mm:isDerivedFrom
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "is derived from" ;
+  rdfs:range mm:Metric ;
+.
+mm:isMeanOf
+  a owl:ObjectProperty ;
+  rdfs:label "is mean of" ;
+  rdfs:subPropertyOf mm:isDerivedFrom ;
+.
+mm:isStandardDeviationOf
+  a owl:ObjectProperty ;
+  rdfs:label "is standard deviation of" ;
+  rdfs:subPropertyOf mm:isDerivedFrom ;
+.
+mm:lob
+  a swrl:Variable ;
+.
+mm:m
+  a swrl:Variable ;
+.
+mm:t
+  a swrl:Variable ;
+.
+mm:upb
+  a swrl:Variable ;
+.
+mm:usedInProjectPhase
+  a owl:ObjectProperty ;
+  rdfs:domain mm:Metric ;
+  rdfs:label "used in project phase" ;
+  rdfs:range mm:ProjectPhase ;
+.
+mm:v
+  a swrl:Variable ;
+.
+mm:val
+  a swrl:Variable ;
+.
+mm:value
+  a swrl:Variable ;
+.
+[
+  a owl:AllDisjointClasses ;
+  owl:members (
+      mm:Metric
+      mm:MetricDefinition
+      mm:MetricGroup
+      mm:MetricRequirement
+      mm:MetricValue
+      mm:Process
+      mm:Product
+      mm:ProjectPhase
+      mm:Role
+      mm:ToleranceType
+    ) ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "DifferentFromQualitativeGoalValueRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:DatavaluedPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:value ;
+          swrl:propertyPredicate mm:hasQualitativeValue ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:DifferentIndividualsAtom ;
+              swrl:argument1 mm:value ;
+              swrl:argument2 mm:goal ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:ClassAtom ;
+                  swrl:argument1 mm:v ;
+                  swrl:classPredicate mm:MetricValue ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:IndividualPropertyAtom ;
+                      swrl:argument1 mm:v ;
+                      swrl:argument2 mm:t ;
+                      swrl:propertyPredicate mm:hasTarget ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:DatavaluedPropertyAtom ;
+                          swrl:argument1 mm:t ;
+                          swrl:argument2 mm:goal ;
+                          swrl:propertyPredicate mm:hasQualitativeGoalValue ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:OutsideTarget ;
+        ] ;
+      rdf:rest () ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "HigherThanTargetGoalValueRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:DatavaluedPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:value ;
+          swrl:propertyPredicate mm:hasQuantitativeValue ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:DatavaluedPropertyAtom ;
+              swrl:argument1 mm:t ;
+              swrl:argument2 mm:goal ;
+              swrl:propertyPredicate mm:hasQuantitativeGoalValue ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:BuiltinAtom ;
+                  swrl:arguments (
+                      mm:value
+                      mm:goal
+                    ) ;
+                  swrl:builtin swrlb:greaterThan ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:ClassAtom ;
+                      swrl:argument1 mm:v ;
+                      swrl:classPredicate mm:MetricValue ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:IndividualPropertyAtom ;
+                          swrl:argument1 mm:v ;
+                          swrl:argument2 mm:t ;
+                          swrl:propertyPredicate mm:hasTarget ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:OutsideTarget ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:AboveTarget ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "LowerThanTargetGoalValueRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:DatavaluedPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:value ;
+          swrl:propertyPredicate mm:hasQuantitativeValue ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:DatavaluedPropertyAtom ;
+              swrl:argument1 mm:t ;
+              swrl:argument2 mm:goal ;
+              swrl:propertyPredicate mm:hasQuantitativeGoalValue ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:ClassAtom ;
+                  swrl:argument1 mm:v ;
+                  swrl:classPredicate mm:MetricValue ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:IndividualPropertyAtom ;
+                      swrl:argument1 mm:v ;
+                      swrl:argument2 mm:t ;
+                      swrl:propertyPredicate mm:hasTarget ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:BuiltinAtom ;
+                          swrl:arguments (
+                              mm:goal
+                              mm:value
+                            ) ;
+                          swrl:builtin swrlb:greaterThan ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:OutsideTarget ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:BelowTarget ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "MetricValueHasTargetRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:IndividualPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:m ;
+          swrl:propertyPredicate mm:hasMetric ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:IndividualPropertyAtom ;
+              swrl:argument1 mm:m ;
+              swrl:argument2 mm:t ;
+              swrl:propertyPredicate mm:hasTarget ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:IndividualPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:t ;
+          swrl:propertyPredicate mm:hasTarget ;
+        ] ;
+      rdf:rest () ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "MetricValueHasToleranceRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:IndividualPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:m ;
+          swrl:propertyPredicate mm:hasMetric ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:IndividualPropertyAtom ;
+              swrl:argument1 mm:m ;
+              swrl:argument2 mm:t ;
+              swrl:propertyPredicate mm:hasTolerance ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:IndividualPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:t ;
+          swrl:propertyPredicate mm:hasTolerance ;
+        ] ;
+      rdf:rest () ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "OutOfTargetLowerBoundRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:BuiltinAtom ;
+          swrl:arguments (
+              mm:lob
+              mm:val
+            ) ;
+          swrl:builtin swrlb:greaterThan ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:MetricValue ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:IndividualPropertyAtom ;
+                  swrl:argument1 mm:v ;
+                  swrl:argument2 mm:t ;
+                  swrl:propertyPredicate mm:hasTarget ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:DatavaluedPropertyAtom ;
+                      swrl:argument1 mm:t ;
+                      swrl:argument2 mm:lob ;
+                      swrl:propertyPredicate mm:hasLowerBound ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:DatavaluedPropertyAtom ;
+                          swrl:argument1 mm:v ;
+                          swrl:argument2 mm:val ;
+                          swrl:propertyPredicate mm:hasQuantitativeValue ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:OutsideTarget ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:BelowTarget ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "OutOfTargetUpperBoundRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:DatavaluedPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:value ;
+          swrl:propertyPredicate mm:hasQuantitativeValue ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:MetricValue ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:IndividualPropertyAtom ;
+                  swrl:argument1 mm:v ;
+                  swrl:argument2 mm:t ;
+                  swrl:propertyPredicate mm:hasTarget ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:BuiltinAtom ;
+                      swrl:arguments (
+                          mm:value
+                          mm:upb
+                        ) ;
+                      swrl:builtin swrlb:greaterThan ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:DatavaluedPropertyAtom ;
+                          swrl:argument1 mm:t ;
+                          swrl:argument2 mm:upb ;
+                          swrl:propertyPredicate mm:hasUpperBound ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:OutsideTarget ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:AboveTarget ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "OutOfToleranceLowerBoundRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:BuiltinAtom ;
+          swrl:arguments (
+              mm:lob
+              mm:val
+            ) ;
+          swrl:builtin swrlb:greaterThan ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:MetricValue ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:IndividualPropertyAtom ;
+                  swrl:argument1 mm:v ;
+                  swrl:argument2 mm:t ;
+                  swrl:propertyPredicate mm:hasTolerance ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:DatavaluedPropertyAtom ;
+                      swrl:argument1 mm:t ;
+                      swrl:argument2 mm:lob ;
+                      swrl:propertyPredicate mm:hasLowerBound ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:DatavaluedPropertyAtom ;
+                          swrl:argument1 mm:v ;
+                          swrl:argument2 mm:val ;
+                          swrl:propertyPredicate mm:hasQuantitativeValue ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:OutsideTolerance ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:BelowTolerance ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+].
+[
+  a swrl:Imp ;
+  swrla:isRuleEnabled true ;
+  rdfs:comment "" ;
+  rdfs:label "OutOfToleranceUpperBoundRule" ;
+  swrl:body [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:DatavaluedPropertyAtom ;
+          swrl:argument1 mm:v ;
+          swrl:argument2 mm:value ;
+          swrl:propertyPredicate mm:hasQuantitativeValue ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:MetricValue ;
+            ] ;
+          rdf:rest [
+              a swrl:AtomList ;
+              rdf:first [
+                  a swrl:IndividualPropertyAtom ;
+                  swrl:argument1 mm:v ;
+                  swrl:argument2 mm:t ;
+                  swrl:propertyPredicate mm:hasTolerance ;
+                ] ;
+              rdf:rest [
+                  a swrl:AtomList ;
+                  rdf:first [
+                      a swrl:BuiltinAtom ;
+                      swrl:arguments (
+                          mm:value
+                          mm:upb
+                        ) ;
+                      swrl:builtin swrlb:greaterThan ;
+                    ] ;
+                  rdf:rest [
+                      a swrl:AtomList ;
+                      rdf:first [
+                          a swrl:DatavaluedPropertyAtom ;
+                          swrl:argument1 mm:t ;
+                          swrl:argument2 mm:upb ;
+                          swrl:propertyPredicate mm:hasUpperBound ;
+                        ] ;
+                      rdf:rest () ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] ;
+  swrl:head [
+      a swrl:AtomList ;
+      rdf:first [
+          a swrl:ClassAtom ;
+          swrl:argument1 mm:v ;
+          swrl:classPredicate mm:AboveTolerance ;
+        ] ;
+      rdf:rest [
+          a swrl:AtomList ;
+          rdf:first [
+              a swrl:ClassAtom ;
+              swrl:argument1 mm:v ;
+              swrl:classPredicate mm:OutsideTolerance ;
+            ] ;
+          rdf:rest () ;
+        ] ;
+    ] ;
+].

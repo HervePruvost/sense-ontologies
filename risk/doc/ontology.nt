@@ -1,0 +1,661 @@
+<https://www.w3id.org/risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/bibliographicCitation> "Pruvost. H. (2023): The RISK Ontology for a risk management paradigm in the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/risk."@en .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-7604-8543> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/hervepruvost> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/creator> "Hervé Pruvost" .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/description> "The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain."@en .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/issued> "2017-06-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/modified> "2023-06-07"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/publisher> "Fraunhofer IIS/EAS" .
+<https://www.w3id.org/risk> <http://purl.org/dc/terms/title> "RISK: the risk ontology."@en .
+<https://www.w3id.org/risk> <http://purl.org/vocab/vann/preferredNamespacePrefix> "risk" .
+<https://www.w3id.org/risk> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/risk#" .
+<https://www.w3id.org/risk> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> .
+<https://www.w3id.org/risk> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/risk#Treats
+<https://www.w3id.org/risk#Treats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#assessedBy
+<https://www.w3id.org/risk#assessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#assessedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/risk#assesses> .
+<https://www.w3id.org/risk#assessedBy> <http://www.w3.org/2000/01/rdf-schema#label> "assessed by" .
+# 
+# https://www.w3id.org/risk#assesses
+<https://www.w3id.org/risk#assesses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#assesses> <http://www.w3.org/2000/01/rdf-schema#label> "assesses" .
+# 
+# https://www.w3id.org/risk#causedBy
+<https://www.w3id.org/risk#causedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#causedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3id.org/risk#isEffectOf> .
+<https://www.w3id.org/risk#causedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/risk#causes> .
+# 
+# https://www.w3id.org/risk#causes
+<https://www.w3id.org/risk#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#causes> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://www.w3id.org/risk#hasEffect> .
+# 
+# https://www.w3id.org/risk#effectedBy
+<https://www.w3id.org/risk#effectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#effectedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/risk#effects> .
+<https://www.w3id.org/risk#effectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Problem> .
+<https://www.w3id.org/risk#effectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/risk#Problem> .
+# 
+# https://www.w3id.org/risk#effects
+<https://www.w3id.org/risk#effects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#effects> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Problem> .
+<https://www.w3id.org/risk#effects> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/risk#Problem> .
+# 
+# https://www.w3id.org/risk#hasEffect
+<https://www.w3id.org/risk#hasEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#hasEffect> <http://www.w3.org/2002/07/owl#equivalentProperty> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3id.org/risk#isEffectOf> .
+# 
+# https://www.w3id.org/risk#hasInstance
+<https://www.w3id.org/risk#hasInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#hasQuantitativeUncertainty
+<https://www.w3id.org/risk#hasQuantitativeUncertainty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#hasRisk
+<https://www.w3id.org/risk#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has risk" .
+# 
+# https://www.w3id.org/risk#hasTarget
+<https://www.w3id.org/risk#hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#hasTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#hasThreshold> .
+# 
+# https://www.w3id.org/risk#hasThreshold
+<https://www.w3id.org/risk#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#hasTolerance
+<https://www.w3id.org/risk#hasTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#hasTolerance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#hasThreshold> .
+# 
+# https://www.w3id.org/risk#isEffectOf
+<https://www.w3id.org/risk#isEffectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#isOccurenceOf
+<https://www.w3id.org/risk#isOccurenceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#isOccurenceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#RiskOccurence> .
+<https://www.w3id.org/risk#isOccurenceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#occursAt
+<https://www.w3id.org/risk#occursAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#occursAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#reducesExpectedImpactOfRisk
+<https://www.w3id.org/risk#reducesExpectedImpactOfRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#reducesExpectedImpactOfRisk> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#treatsRisk> .
+<https://www.w3id.org/risk#reducesExpectedImpactOfRisk> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk
+<https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#treatsOccurrenceOfRisk> .
+# 
+# https://www.w3id.org/risk#reducesRiskProbability
+<https://www.w3id.org/risk#reducesRiskProbability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#reducesRiskProbability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#treatsRisk> .
+# 
+# https://www.w3id.org/risk#relatesTo
+<https://www.w3id.org/risk#relatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#removesRisk
+<https://www.w3id.org/risk#removesRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#removesRisk> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#treatsRisk> .
+# 
+# https://www.w3id.org/risk#threatens
+<https://www.w3id.org/risk#threatens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#threatens> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#treatsOccurrenceOfRisk
+<https://www.w3id.org/risk#treatsOccurrenceOfRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#treatsOccurrenceOfRisk> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#treatsProblem> .
+<https://www.w3id.org/risk#treatsOccurrenceOfRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Measure> .
+<https://www.w3id.org/risk#treatsOccurrenceOfRisk> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/risk#Problem> .
+# 
+# https://www.w3id.org/risk#treatsProblem
+<https://www.w3id.org/risk#treatsProblem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://www.w3id.org/risk#treatsRisk
+<https://www.w3id.org/risk#treatsRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://www.w3id.org/risk#treatsRisk> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3id.org/risk#treatsProblem> .
+<https://www.w3id.org/risk#treatsRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Measure> .
+<https://www.w3id.org/risk#treatsRisk> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3id.org/risk#Problem> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/risk#ID
+<https://www.w3id.org/risk#ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://www.w3id.org/risk#hasDescription
+<https://www.w3id.org/risk#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://www.w3id.org/risk#hasName
+<https://www.w3id.org/risk#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://www.w3id.org/risk#hasTarget
+<https://www.w3id.org/risk#hasTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://www.w3id.org/risk#hasTolerance
+<https://www.w3id.org/risk#hasTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://www.w3id.org/risk#isCritical
+<https://www.w3id.org/risk#isCritical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/risk#isCritical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/risk#isCritical> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Problem> .
+<https://www.w3id.org/risk#isCritical> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://www.w3id.org/risk#isToBeAvoided
+<https://www.w3id.org/risk#isToBeAvoided> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/risk#isToBeAvoided> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/risk#isToBeAvoided> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Risk> .
+<https://www.w3id.org/risk#isToBeAvoided> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://www.w3id.org/risk#isToBeReduced
+<https://www.w3id.org/risk#isToBeReduced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/risk#isToBeReduced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/risk#isToBeReduced> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Risk> .
+<https://www.w3id.org/risk#isToBeReduced> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# https://www.w3id.org/risk#isTolerated
+<https://www.w3id.org/risk#isTolerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://www.w3id.org/risk#isTolerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://www.w3id.org/risk#isTolerated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://www.w3id.org/risk#Risk> .
+<https://www.w3id.org/risk#isTolerated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/risk#BetterThanTarget
+<https://www.w3id.org/risk#BetterThanTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#BetterThanTarget> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#MetricValuePartition> .
+# 
+# https://www.w3id.org/risk#CertificationRisk
+<https://www.w3id.org/risk#CertificationRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#CertificationRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#ConstructionRisk
+<https://www.w3id.org/risk#ConstructionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#ConstructionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#CostRisk
+<https://www.w3id.org/risk#CostRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#CostRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#CriticalError
+<https://www.w3id.org/risk#CriticalError> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#CriticalError> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Threshold> .
+# 
+# https://www.w3id.org/risk#DesignRisk
+<https://www.w3id.org/risk#DesignRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#DesignRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#EnergyRisk
+<https://www.w3id.org/risk#EnergyRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#EnergyRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#EntityAtRisk
+<https://www.w3id.org/risk#EntityAtRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#EntityAtRisk> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://www.w3id.org/risk#Risk> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://www.w3id.org/risk#hasRisk> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://www.w3id.org/risk#EntityAtRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Entity at risk" .
+# 
+# https://www.w3id.org/risk#Event
+<https://www.w3id.org/risk#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Problem> .
+# 
+# https://www.w3id.org/risk#GeotechnicalMeasure
+<https://www.w3id.org/risk#GeotechnicalMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#GeotechnicalMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#KnownMeasure> .
+# 
+# https://www.w3id.org/risk#GeotechnicalRisk
+<https://www.w3id.org/risk#GeotechnicalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#GeotechnicalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#HighPitMeasure
+<https://www.w3id.org/risk#HighPitMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#HighPitMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#GeotechnicalMeasure> .
+# 
+# https://www.w3id.org/risk#InTarget
+<https://www.w3id.org/risk#InTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#InTarget> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#MetricValuePartition> .
+# 
+# https://www.w3id.org/risk#InTolerance
+<https://www.w3id.org/risk#InTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#InTolerance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#MetricValuePartition> .
+# 
+# https://www.w3id.org/risk#IncompleteData
+<https://www.w3id.org/risk#IncompleteData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#IncompleteData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#QualitativeUncertainty> .
+# 
+# https://www.w3id.org/risk#KnownMeasure
+<https://www.w3id.org/risk#KnownMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#KnownMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Measure> .
+# 
+# https://www.w3id.org/risk#LegalRisk
+<https://www.w3id.org/risk#LegalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#LegalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#Likelihood
+<https://www.w3id.org/risk#Likelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#Likelihood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#QuantitativeUncertainty> .
+# 
+# https://www.w3id.org/risk#LowPitMeasure
+<https://www.w3id.org/risk#LowPitMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#LowPitMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#GeotechnicalMeasure> .
+# 
+# https://www.w3id.org/risk#Measure
+<https://www.w3id.org/risk#Measure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3id.org/risk#MetricValuePartition
+<https://www.w3id.org/risk#MetricValuePartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#MetricValuePartition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#ValuePartition> .
+# 
+# https://www.w3id.org/risk#NoData
+<https://www.w3id.org/risk#NoData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#NoData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#QualitativeUncertainty> .
+# 
+# https://www.w3id.org/risk#Occurence
+<https://www.w3id.org/risk#Occurence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#Occurence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://www.w3id.org/risk#occursAt> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/risk#Problem> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://www.w3id.org/risk#Occurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Problem> .
+<https://www.w3id.org/risk#Occurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://www.w3id.org/risk#ID> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://www.w3id.org/risk#OutsideTarget
+<https://www.w3id.org/risk#OutsideTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#OutsideTarget> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#MetricValuePartition> .
+# 
+# https://www.w3id.org/risk#OutsideTolerance
+<https://www.w3id.org/risk#OutsideTolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#OutsideTolerance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#MetricValuePartition> .
+# 
+# https://www.w3id.org/risk#ProactiveMeasure
+<https://www.w3id.org/risk#ProactiveMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#ProactiveMeasure> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://www.w3id.org/risk#Risk> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://www.w3id.org/risk#treatsRisk> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/risk#Measure> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://www.w3id.org/risk#ProactiveMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Measure> .
+# 
+# https://www.w3id.org/risk#ProbabilityDistribution
+<https://www.w3id.org/risk#ProbabilityDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#ProbabilityDistribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#QuantitativeUncertainty> .
+# 
+# https://www.w3id.org/risk#Problem
+<https://www.w3id.org/risk#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3id.org/risk#QualitativeUncertainty
+<https://www.w3id.org/risk#QualitativeUncertainty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#QualitativeUncertainty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Uncertainty> .
+# 
+# https://www.w3id.org/risk#QuantitativeUncertainty
+<https://www.w3id.org/risk#QuantitativeUncertainty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#QuantitativeUncertainty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Uncertainty> .
+# 
+# https://www.w3id.org/risk#Range
+<https://www.w3id.org/risk#Range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#Range> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#QuantitativeUncertainty> .
+# 
+# https://www.w3id.org/risk#ReactiveMeasure
+<https://www.w3id.org/risk#ReactiveMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#ReactiveMeasure> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://www.w3id.org/risk#Problem> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://www.w3id.org/risk#treatsOccurrenceOfRisk> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/risk#Measure> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://www.w3id.org/risk#ReactiveMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Measure> .
+# 
+# https://www.w3id.org/risk#ReliabilityRisk
+<https://www.w3id.org/risk#ReliabilityRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#ReliabilityRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#Risk
+<https://www.w3id.org/risk#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Problem> .
+# 
+# https://www.w3id.org/risk#RiskEvent
+<https://www.w3id.org/risk#RiskEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#RiskEvent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/risk#Risk> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://www.w3id.org/risk#Event> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://www.w3id.org/risk#RiskEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Risk> .
+# 
+# https://www.w3id.org/risk#RiskOccurence
+<https://www.w3id.org/risk#RiskOccurence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#RiskOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Occurence> .
+# 
+# https://www.w3id.org/risk#Threshold
+<https://www.w3id.org/risk#Threshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3id.org/risk#Uncertainty
+<https://www.w3id.org/risk#Uncertainty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3id.org/risk#ValuePartition
+<https://www.w3id.org/risk#ValuePartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.w3id.org/risk#Warning
+<https://www.w3id.org/risk#Warning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3id.org/risk#Warning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3id.org/risk#Threshold> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://www.w3id.org/risk#AirCooledButNotVentilated
+<https://www.w3id.org/risk#AirCooledButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#AirCooledButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#AirCooledButNotVentilated> <http://www.w3.org/2000/01/rdf-schema#label> "Air cooled but not ventilated" .
+# 
+# https://www.w3id.org/risk#AirHeatedButNotVentilated
+<https://www.w3id.org/risk#AirHeatedButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#AirHeatedButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#AirHeatedButNotVentilated> <http://www.w3.org/2000/01/rdf-schema#label> "Air heated but not ventilated" .
+# 
+# https://www.w3id.org/risk#AirHumidifiedButNotVentilated
+<https://www.w3id.org/risk#AirHumidifiedButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#AirHumidifiedButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#AirHumidifiedButNotVentilated> <http://www.w3.org/2000/01/rdf-schema#label> "Air humidified but not ventilated" .
+# 
+# https://www.w3id.org/risk#AirReturnedButNotSupplied
+<https://www.w3id.org/risk#AirReturnedButNotSupplied> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#AirReturnedButNotSupplied> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#AirReturnedButNotSupplied> <http://www.w3.org/2000/01/rdf-schema#label> "Air returned but not supplied" .
+# 
+# https://www.w3id.org/risk#AirSuppliedButNotReturned
+<https://www.w3id.org/risk#AirSuppliedButNotReturned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#AirSuppliedButNotReturned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#AirSuppliedButNotReturned> <http://www.w3.org/2000/01/rdf-schema#label> "Air supplied but not returned" .
+# 
+# https://www.w3id.org/risk#BuildingHeight
+<https://www.w3id.org/risk#BuildingHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#BuildingHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#OutsideTolerance> .
+# 
+# https://www.w3id.org/risk#BuildingPermissionRejected
+<https://www.w3id.org/risk#BuildingPermissionRejected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#BuildingPermissionRejected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#LegalRisk> .
+# 
+# https://www.w3id.org/risk#BuildingTooHigh
+<https://www.w3id.org/risk#BuildingTooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#BuildingTooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#Occurence> .
+<https://www.w3id.org/risk#BuildingTooHigh> <https://www.w3id.org/risk#causedBy> <https://www.w3id.org/risk#BuildingHeight> .
+<https://www.w3id.org/risk#BuildingTooHigh> <https://www.w3id.org/risk#causes> <https://www.w3id.org/risk#BuildingPermissionRejected> .
+# 
+# https://www.w3id.org/risk#DesignTemperature
+<https://www.w3id.org/risk#DesignTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#DesignTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#OutsideTolerance> .
+<https://www.w3id.org/risk#DesignTemperature> <https://www.w3id.org/risk#causes> <https://www.w3id.org/risk#NominalDesignTemperature_not_repected> .
+# 
+# https://www.w3id.org/risk#FitsValue
+<https://www.w3id.org/risk#FitsValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed
+<https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed> <http://www.w3.org/2000/01/rdf-schema#label> "Heat recovery inefficiently used" .
+# 
+# https://www.w3id.org/risk#HeatRecoveryUnused
+<https://www.w3id.org/risk#HeatRecoveryUnused> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#HeatRecoveryUnused> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#HeatRecoveryUnused> <http://www.w3.org/2000/01/rdf-schema#label> "Heat recovery unused" .
+# 
+# https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated
+<https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated> <http://www.w3.org/2000/01/rdf-schema#label> "Heat recovery used but not ventilated" .
+# 
+# https://www.w3id.org/risk#Install_Struts
+<https://www.w3id.org/risk#Install_Struts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#Install_Struts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#KnownMeasure> .
+<https://www.w3id.org/risk#Install_Struts> <https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk> <https://www.w3id.org/risk#lowSecurityIndex> .
+<https://www.w3id.org/risk#Install_Struts> <https://www.w3id.org/risk#removesRisk> <https://www.w3id.org/risk#lowSecurityIndex> .
+<https://www.w3id.org/risk#Install_Struts> <https://www.w3id.org/risk#treatsOccurrenceOfRisk> <https://www.w3id.org/risk#lowSecurityIndex> .
+# 
+# https://www.w3id.org/risk#Maximize
+<https://www.w3id.org/risk#Maximize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://www.w3id.org/risk#Minimize
+<https://www.w3id.org/risk#Minimize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://www.w3id.org/risk#ModelValidityLimitState_overstep
+<https://www.w3id.org/risk#ModelValidityLimitState_overstep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#ModelValidityLimitState_overstep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#GeotechnicalRisk> .
+# 
+# https://www.w3id.org/risk#NominalDesignTemperature_not_repected
+<https://www.w3id.org/risk#NominalDesignTemperature_not_repected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#NominalDesignTemperature_not_repected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#DesignRisk> .
+<https://www.w3id.org/risk#NominalDesignTemperature_not_repected> <https://www.w3id.org/risk#causedBy> <https://www.w3id.org/risk#DesignTemperature> .
+<https://www.w3id.org/risk#NominalDesignTemperature_not_repected> <https://www.w3id.org/risk#hasDescription> "Requested nominal temperature out of normative requirements about indoor condition" .
+# 
+# https://www.w3id.org/risk#OverheatingThroughSolarGain
+<https://www.w3id.org/risk#OverheatingThroughSolarGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#OverheatingThroughSolarGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#OverheatingThroughSolarGain> <http://www.w3.org/2000/01/rdf-schema#label> "Overheating through solar gain" .
+# 
+# https://www.w3id.org/risk#ServiceabilityLimitState_overstep
+<https://www.w3id.org/risk#ServiceabilityLimitState_overstep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#ServiceabilityLimitState_overstep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#GeotechnicalRisk> .
+# 
+# https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating
+<https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating> <http://www.w3.org/2000/01/rdf-schema#label> "Simulatenous air cooling and radiant heating" .
+# 
+# https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling
+<https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling> <http://www.w3.org/2000/01/rdf-schema#label> "Simultaneous air heating and air cooling" .
+# 
+# https://www.w3id.org/risk#SpaceOverheating
+<https://www.w3id.org/risk#SpaceOverheating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SpaceOverheating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SpaceOverheating> <http://www.w3.org/2000/01/rdf-schema#label> "Space overheating" .
+# 
+# https://www.w3id.org/risk#SpaceUndercooling
+<https://www.w3id.org/risk#SpaceUndercooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SpaceUndercooling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SpaceUndercooling> <http://www.w3.org/2000/01/rdf-schema#label> "Space undercooling" .
+# 
+# https://www.w3id.org/risk#SupplyAirHumidity_TooHigh
+<https://www.w3id.org/risk#SupplyAirHumidity_TooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SupplyAirHumidity_TooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SupplyAirHumidity_TooHigh> <http://www.w3.org/2000/01/rdf-schema#label> "Supply air humidity Too high" .
+# 
+# https://www.w3id.org/risk#SupplyAirHumidity_TooLow
+<https://www.w3id.org/risk#SupplyAirHumidity_TooLow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SupplyAirHumidity_TooLow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SupplyAirHumidity_TooLow> <http://www.w3.org/2000/01/rdf-schema#label> "Supply air humidity Too low" .
+# 
+# https://www.w3id.org/risk#SupplyAirPressure_TooHigh
+<https://www.w3id.org/risk#SupplyAirPressure_TooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SupplyAirPressure_TooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SupplyAirPressure_TooHigh> <http://www.w3.org/2000/01/rdf-schema#label> "Supply air pressure Too high" .
+# 
+# https://www.w3id.org/risk#SupplyAirPressure_TooLow
+<https://www.w3id.org/risk#SupplyAirPressure_TooLow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SupplyAirPressure_TooLow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SupplyAirPressure_TooLow> <http://www.w3.org/2000/01/rdf-schema#label> "Supply air pressure Too low" .
+# 
+# https://www.w3id.org/risk#SupplyAirTemperature_TooHigh
+<https://www.w3id.org/risk#SupplyAirTemperature_TooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SupplyAirTemperature_TooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SupplyAirTemperature_TooHigh> <http://www.w3.org/2000/01/rdf-schema#label> "Supply air temperature Too high" .
+# 
+# https://www.w3id.org/risk#SupplyAirTemperature_TooLow
+<https://www.w3id.org/risk#SupplyAirTemperature_TooLow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#SupplyAirTemperature_TooLow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#SupplyAirTemperature_TooLow> <http://www.w3.org/2000/01/rdf-schema#label> "Supply air temperature Too low" .
+# 
+# https://www.w3id.org/risk#UltimateLimitState_overstep
+<https://www.w3id.org/risk#UltimateLimitState_overstep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#UltimateLimitState_overstep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#GeotechnicalRisk> .
+# 
+# https://www.w3id.org/risk#UnusedAppliances
+<https://www.w3id.org/risk#UnusedAppliances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#UnusedAppliances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#UnusedAppliances> <http://www.w3.org/2000/01/rdf-schema#label> "Unused appliances" .
+# 
+# https://www.w3id.org/risk#UnusedCoolingEnergy
+<https://www.w3id.org/risk#UnusedCoolingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#UnusedCoolingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#UnusedCoolingEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Unused cooling energy" .
+# 
+# https://www.w3id.org/risk#UnusedHeatingEnergy
+<https://www.w3id.org/risk#UnusedHeatingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#UnusedHeatingEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#UnusedHeatingEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Unused heating energy" .
+# 
+# https://www.w3id.org/risk#UnusedLights
+<https://www.w3id.org/risk#UnusedLights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#UnusedLights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#UnusedLights> <http://www.w3.org/2000/01/rdf-schema#label> "Unused lights" .
+# 
+# https://www.w3id.org/risk#WastingEnergyThroughOpenings
+<https://www.w3id.org/risk#WastingEnergyThroughOpenings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#WastingEnergyThroughOpenings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#EnergyRisk> .
+<https://www.w3id.org/risk#WastingEnergyThroughOpenings> <http://www.w3.org/2000/01/rdf-schema#label> "Wasting energy through openings" .
+# 
+# https://www.w3id.org/risk#WindowWallRatio
+<https://www.w3id.org/risk#WindowWallRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#WindowWallRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#InTolerance> .
+<https://www.w3id.org/risk#WindowWallRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#OutsideTarget> .
+<https://www.w3id.org/risk#WindowWallRatio> <https://www.w3id.org/risk#causes> <https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated> .
+# 
+# https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated
+<https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#Occurence> .
+# 
+# https://www.w3id.org/risk#evacuate_building_site
+<https://www.w3id.org/risk#evacuate_building_site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#evacuate_building_site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#KnownMeasure> .
+<https://www.w3id.org/risk#evacuate_building_site> <https://www.w3id.org/risk#reducesExpectedImpactOfRisk> <https://www.w3id.org/risk#UltimateLimitState_overstep> .
+<https://www.w3id.org/risk#evacuate_building_site> <https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk> <https://www.w3id.org/risk#UltimateLimitState_overstep> .
+# 
+# https://www.w3id.org/risk#lagging
+<https://www.w3id.org/risk#lagging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://www.w3id.org/risk#leading
+<https://www.w3id.org/risk#leading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://www.w3id.org/risk#lowSecurityIndex
+<https://www.w3id.org/risk#lowSecurityIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.w3id.org/risk#lowSecurityIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3id.org/risk#GeotechnicalRisk> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

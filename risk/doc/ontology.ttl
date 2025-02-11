@@ -1,0 +1,755 @@
+@prefix : <https://www.w3id.org/risk#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix risk: <https://www.w3id.org/risk#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://www.w3id.org/risk#> .
+
+<https://www.w3id.org/risk> rdf:type owl:Ontology ;
+                             <http://purl.org/dc/terms/bibliographicCitation> "Pruvost. H. (2023): The RISK Ontology for a risk management paradigm in the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/risk."@en ;
+                             <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-7604-8543> ,
+                                                                <https://www.linkedin.com/in/hervepruvost> ,
+                                                                "Hervé Pruvost" ;
+                             <http://purl.org/dc/terms/description> "The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain."@en ;
+                             <http://purl.org/dc/terms/issued> "2017-06-22"^^xsd:date ;
+                             <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> ;
+                             <http://purl.org/dc/terms/modified> "2023-06-07"^^xsd:date ;
+                             <http://purl.org/dc/terms/publisher> <https://www.eas.iis.fraunhofer.de/> ,
+                                                                  "Fraunhofer IIS/EAS" ;
+                             <http://purl.org/dc/terms/title> "RISK: the risk ontology."@en ;
+                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "risk" ;
+                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/risk#" ;
+                             rdfs:seeAlso <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> ;
+                             owl:versionInfo "v1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://www.w3id.org/risk#Treats
+:Treats rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#assessedBy
+:assessedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :assesses ;
+            rdfs:label "assessed by" .
+
+
+###  https://www.w3id.org/risk#assesses
+:assesses rdf:type owl:ObjectProperty ;
+          rdfs:label "assesses" .
+
+
+###  https://www.w3id.org/risk#causedBy
+:causedBy rdf:type owl:ObjectProperty ;
+          owl:equivalentProperty :isEffectOf ,
+                                 [ owl:inverseOf :causes
+                                 ] .
+
+
+###  https://www.w3id.org/risk#causes
+:causes rdf:type owl:ObjectProperty ;
+        owl:equivalentProperty :hasEffect .
+
+
+###  https://www.w3id.org/risk#effectedBy
+:effectedBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :effects ;
+            rdfs:domain :Problem ;
+            rdfs:range :Problem .
+
+
+###  https://www.w3id.org/risk#effects
+:effects rdf:type owl:ObjectProperty ;
+         rdfs:domain :Problem ;
+         rdfs:range :Problem .
+
+
+###  https://www.w3id.org/risk#hasEffect
+:hasEffect rdf:type owl:ObjectProperty ;
+           owl:equivalentProperty [ owl:inverseOf :isEffectOf
+                                  ] .
+
+
+###  https://www.w3id.org/risk#hasInstance
+:hasInstance rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#hasQuantitativeUncertainty
+:hasQuantitativeUncertainty rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#hasRisk
+:hasRisk rdf:type owl:ObjectProperty ;
+         rdfs:label "has risk" .
+
+
+###  https://www.w3id.org/risk#hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :hasThreshold .
+
+
+###  https://www.w3id.org/risk#hasThreshold
+:hasThreshold rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#hasTolerance
+:hasTolerance rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasThreshold .
+
+
+###  https://www.w3id.org/risk#isEffectOf
+:isEffectOf rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#isOccurenceOf
+:isOccurenceOf rdf:type owl:ObjectProperty ;
+               rdfs:domain :RiskOccurence ;
+               rdfs:range :Risk .
+
+
+###  https://www.w3id.org/risk#occursAt
+:occursAt rdf:type owl:ObjectProperty ;
+          rdfs:domain :Risk .
+
+
+###  https://www.w3id.org/risk#reducesExpectedImpactOfRisk
+:reducesExpectedImpactOfRisk rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :treatsRisk ;
+                             rdfs:range :Risk .
+
+
+###  https://www.w3id.org/risk#reducesOccurrenceImpactOfRisk
+:reducesOccurrenceImpactOfRisk rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :treatsOccurrenceOfRisk .
+
+
+###  https://www.w3id.org/risk#reducesRiskProbability
+:reducesRiskProbability rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :treatsRisk .
+
+
+###  https://www.w3id.org/risk#relatesTo
+:relatesTo rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#removesRisk
+:removesRisk rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :treatsRisk .
+
+
+###  https://www.w3id.org/risk#threatens
+:threatens rdf:type owl:ObjectProperty ;
+           rdfs:domain :Risk .
+
+
+###  https://www.w3id.org/risk#treatsOccurrenceOfRisk
+:treatsOccurrenceOfRisk rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :treatsProblem ;
+                        rdfs:domain :Measure ;
+                        rdfs:range :Problem .
+
+
+###  https://www.w3id.org/risk#treatsProblem
+:treatsProblem rdf:type owl:ObjectProperty .
+
+
+###  https://www.w3id.org/risk#treatsRisk
+:treatsRisk rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :treatsProblem ;
+            rdfs:domain :Measure ;
+            rdfs:range :Problem .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://www.w3id.org/risk#ID
+:ID rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/risk#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/risk#hasName
+:hasName rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/risk#hasTarget
+:hasTarget rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/risk#hasTolerance
+:hasTolerance rdf:type owl:DatatypeProperty .
+
+
+###  https://www.w3id.org/risk#isCritical
+:isCritical rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Problem ;
+            rdfs:range xsd:boolean .
+
+
+###  https://www.w3id.org/risk#isToBeAvoided
+:isToBeAvoided rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Risk ;
+               rdfs:range xsd:boolean .
+
+
+###  https://www.w3id.org/risk#isToBeReduced
+:isToBeReduced rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Risk ;
+               rdfs:range xsd:boolean .
+
+
+###  https://www.w3id.org/risk#isTolerated
+:isTolerated rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Risk ;
+             rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://www.w3id.org/risk#BetterThanTarget
+:BetterThanTarget rdf:type owl:Class ;
+                  rdfs:subClassOf :MetricValuePartition .
+
+
+###  https://www.w3id.org/risk#CertificationRisk
+:CertificationRisk rdf:type owl:Class ;
+                   rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#ConstructionRisk
+:ConstructionRisk rdf:type owl:Class ;
+                  rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#CostRisk
+:CostRisk rdf:type owl:Class ;
+          rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#CriticalError
+:CriticalError rdf:type owl:Class ;
+               rdfs:subClassOf :Threshold .
+
+
+###  https://www.w3id.org/risk#DesignRisk
+:DesignRisk rdf:type owl:Class ;
+            rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#EnergyRisk
+:EnergyRisk rdf:type owl:Class ;
+            rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#EntityAtRisk
+:EntityAtRisk rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasRisk ;
+                                    owl:someValuesFrom :Risk
+                                  ] ;
+              rdfs:label "Entity at risk" .
+
+
+###  https://www.w3id.org/risk#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf :Problem .
+
+
+###  https://www.w3id.org/risk#GeotechnicalMeasure
+:GeotechnicalMeasure rdf:type owl:Class ;
+                     rdfs:subClassOf :KnownMeasure .
+
+
+###  https://www.w3id.org/risk#GeotechnicalRisk
+:GeotechnicalRisk rdf:type owl:Class ;
+                  rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#HighPitMeasure
+:HighPitMeasure rdf:type owl:Class ;
+                rdfs:subClassOf :GeotechnicalMeasure .
+
+
+###  https://www.w3id.org/risk#InTarget
+:InTarget rdf:type owl:Class ;
+          rdfs:subClassOf :MetricValuePartition .
+
+
+###  https://www.w3id.org/risk#InTolerance
+:InTolerance rdf:type owl:Class ;
+             rdfs:subClassOf :MetricValuePartition .
+
+
+###  https://www.w3id.org/risk#IncompleteData
+:IncompleteData rdf:type owl:Class ;
+                rdfs:subClassOf :QualitativeUncertainty .
+
+
+###  https://www.w3id.org/risk#KnownMeasure
+:KnownMeasure rdf:type owl:Class ;
+              rdfs:subClassOf :Measure .
+
+
+###  https://www.w3id.org/risk#LegalRisk
+:LegalRisk rdf:type owl:Class ;
+           rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#Likelihood
+:Likelihood rdf:type owl:Class ;
+            rdfs:subClassOf :QuantitativeUncertainty .
+
+
+###  https://www.w3id.org/risk#LowPitMeasure
+:LowPitMeasure rdf:type owl:Class ;
+               rdfs:subClassOf :GeotechnicalMeasure .
+
+
+###  https://www.w3id.org/risk#Measure
+:Measure rdf:type owl:Class .
+
+
+###  https://www.w3id.org/risk#MetricValuePartition
+:MetricValuePartition rdf:type owl:Class ;
+                      rdfs:subClassOf :ValuePartition .
+
+
+###  https://www.w3id.org/risk#NoData
+:NoData rdf:type owl:Class ;
+        rdfs:subClassOf :QualitativeUncertainty .
+
+
+###  https://www.w3id.org/risk#Occurence
+:Occurence rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Problem
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :occursAt ;
+                                                        owl:someValuesFrom owl:Thing
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Problem ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :ID ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] .
+
+
+###  https://www.w3id.org/risk#OutsideTarget
+:OutsideTarget rdf:type owl:Class ;
+               rdfs:subClassOf :MetricValuePartition .
+
+
+###  https://www.w3id.org/risk#OutsideTolerance
+:OutsideTolerance rdf:type owl:Class ;
+                  rdfs:subClassOf :MetricValuePartition .
+
+
+###  https://www.w3id.org/risk#ProactiveMeasure
+:ProactiveMeasure rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( :Measure
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :treatsRisk ;
+                                                               owl:someValuesFrom :Risk
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf :Measure .
+
+
+###  https://www.w3id.org/risk#ProbabilityDistribution
+:ProbabilityDistribution rdf:type owl:Class ;
+                         rdfs:subClassOf :QuantitativeUncertainty .
+
+
+###  https://www.w3id.org/risk#Problem
+:Problem rdf:type owl:Class .
+
+
+###  https://www.w3id.org/risk#QualitativeUncertainty
+:QualitativeUncertainty rdf:type owl:Class ;
+                        rdfs:subClassOf :Uncertainty .
+
+
+###  https://www.w3id.org/risk#QuantitativeUncertainty
+:QuantitativeUncertainty rdf:type owl:Class ;
+                         rdfs:subClassOf :Uncertainty .
+
+
+###  https://www.w3id.org/risk#Range
+:Range rdf:type owl:Class ;
+       rdfs:subClassOf :QuantitativeUncertainty .
+
+
+###  https://www.w3id.org/risk#ReactiveMeasure
+:ReactiveMeasure rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( :Measure
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :treatsOccurrenceOfRisk ;
+                                                              owl:someValuesFrom :Problem
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :Measure .
+
+
+###  https://www.w3id.org/risk#ReliabilityRisk
+:ReliabilityRisk rdf:type owl:Class ;
+                 rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf :Problem .
+
+
+###  https://www.w3id.org/risk#RiskEvent
+:RiskEvent rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Event
+                                                      :Risk
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf :Risk .
+
+
+###  https://www.w3id.org/risk#RiskOccurence
+:RiskOccurence rdf:type owl:Class ;
+               rdfs:subClassOf :Occurence .
+
+
+###  https://www.w3id.org/risk#Threshold
+:Threshold rdf:type owl:Class .
+
+
+###  https://www.w3id.org/risk#Uncertainty
+:Uncertainty rdf:type owl:Class .
+
+
+###  https://www.w3id.org/risk#ValuePartition
+:ValuePartition rdf:type owl:Class .
+
+
+###  https://www.w3id.org/risk#Warning
+:Warning rdf:type owl:Class ;
+         rdfs:subClassOf :Threshold .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.w3id.org/risk#AirCooledButNotVentilated
+:AirCooledButNotVentilated rdf:type owl:NamedIndividual ,
+                                    :EnergyRisk ;
+                           rdfs:label "Air cooled but not ventilated" .
+
+
+###  https://www.w3id.org/risk#AirHeatedButNotVentilated
+:AirHeatedButNotVentilated rdf:type owl:NamedIndividual ,
+                                    :EnergyRisk ;
+                           rdfs:label "Air heated but not ventilated" .
+
+
+###  https://www.w3id.org/risk#AirHumidifiedButNotVentilated
+:AirHumidifiedButNotVentilated rdf:type owl:NamedIndividual ,
+                                        :EnergyRisk ;
+                               rdfs:label "Air humidified but not ventilated" .
+
+
+###  https://www.w3id.org/risk#AirReturnedButNotSupplied
+:AirReturnedButNotSupplied rdf:type owl:NamedIndividual ,
+                                    :EnergyRisk ;
+                           rdfs:label "Air returned but not supplied" .
+
+
+###  https://www.w3id.org/risk#AirSuppliedButNotReturned
+:AirSuppliedButNotReturned rdf:type owl:NamedIndividual ,
+                                    :EnergyRisk ;
+                           rdfs:label "Air supplied but not returned" .
+
+
+###  https://www.w3id.org/risk#BuildingHeight
+:BuildingHeight rdf:type owl:NamedIndividual ,
+                         :OutsideTolerance .
+
+
+###  https://www.w3id.org/risk#BuildingPermissionRejected
+:BuildingPermissionRejected rdf:type owl:NamedIndividual ,
+                                     :LegalRisk .
+
+
+###  https://www.w3id.org/risk#BuildingTooHigh
+:BuildingTooHigh rdf:type owl:NamedIndividual ,
+                          :Occurence ;
+                 :causedBy :BuildingHeight ;
+                 :causes :BuildingPermissionRejected .
+
+
+###  https://www.w3id.org/risk#DesignTemperature
+:DesignTemperature rdf:type owl:NamedIndividual ,
+                            :OutsideTolerance ;
+                   :causes :NominalDesignTemperature_not_repected .
+
+
+###  https://www.w3id.org/risk#FitsValue
+:FitsValue rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#HeatRecoveryInefficientlyUsed
+:HeatRecoveryInefficientlyUsed rdf:type owl:NamedIndividual ,
+                                        :EnergyRisk ;
+                               rdfs:label "Heat recovery inefficiently used" .
+
+
+###  https://www.w3id.org/risk#HeatRecoveryUnused
+:HeatRecoveryUnused rdf:type owl:NamedIndividual ,
+                             :EnergyRisk ;
+                    rdfs:label "Heat recovery unused" .
+
+
+###  https://www.w3id.org/risk#HeatRecoveryUsedButNotVentilated
+:HeatRecoveryUsedButNotVentilated rdf:type owl:NamedIndividual ,
+                                           :EnergyRisk ;
+                                  rdfs:label "Heat recovery used but not ventilated" .
+
+
+###  https://www.w3id.org/risk#Install_Struts
+:Install_Struts rdf:type owl:NamedIndividual ,
+                         :KnownMeasure ;
+                :reducesOccurrenceImpactOfRisk :lowSecurityIndex ;
+                :removesRisk :lowSecurityIndex ;
+                :treatsOccurrenceOfRisk :lowSecurityIndex .
+
+
+###  https://www.w3id.org/risk#Maximize
+:Maximize rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#Minimize
+:Minimize rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#ModelValidityLimitState_overstep
+:ModelValidityLimitState_overstep rdf:type owl:NamedIndividual ,
+                                           :GeotechnicalRisk .
+
+
+###  https://www.w3id.org/risk#NominalDesignTemperature_not_repected
+:NominalDesignTemperature_not_repected rdf:type owl:NamedIndividual ,
+                                                :DesignRisk ;
+                                       :causedBy :DesignTemperature ;
+                                       :hasDescription "Requested nominal temperature out of normative requirements about indoor condition" .
+
+
+###  https://www.w3id.org/risk#OverheatingThroughSolarGain
+:OverheatingThroughSolarGain rdf:type owl:NamedIndividual ,
+                                      :EnergyRisk ;
+                             rdfs:label "Overheating through solar gain" .
+
+
+###  https://www.w3id.org/risk#ServiceabilityLimitState_overstep
+:ServiceabilityLimitState_overstep rdf:type owl:NamedIndividual ,
+                                            :GeotechnicalRisk .
+
+
+###  https://www.w3id.org/risk#SimulatenousAirCoolingAndRadiantHeating
+:SimulatenousAirCoolingAndRadiantHeating rdf:type owl:NamedIndividual ,
+                                                  :EnergyRisk ;
+                                         rdfs:label "Simulatenous air cooling and radiant heating" .
+
+
+###  https://www.w3id.org/risk#SimultaneousAirHeatingAndAirCooling
+:SimultaneousAirHeatingAndAirCooling rdf:type owl:NamedIndividual ,
+                                              :EnergyRisk ;
+                                     rdfs:label "Simultaneous air heating and air cooling" .
+
+
+###  https://www.w3id.org/risk#SpaceOverheating
+:SpaceOverheating rdf:type owl:NamedIndividual ,
+                           :EnergyRisk ;
+                  rdfs:label "Space overheating" .
+
+
+###  https://www.w3id.org/risk#SpaceUndercooling
+:SpaceUndercooling rdf:type owl:NamedIndividual ,
+                            :EnergyRisk ;
+                   rdfs:label "Space undercooling" .
+
+
+###  https://www.w3id.org/risk#SupplyAirHumidity_TooHigh
+:SupplyAirHumidity_TooHigh rdf:type owl:NamedIndividual ,
+                                    :EnergyRisk ;
+                           rdfs:label "Supply air humidity Too high" .
+
+
+###  https://www.w3id.org/risk#SupplyAirHumidity_TooLow
+:SupplyAirHumidity_TooLow rdf:type owl:NamedIndividual ,
+                                   :EnergyRisk ;
+                          rdfs:label "Supply air humidity Too low" .
+
+
+###  https://www.w3id.org/risk#SupplyAirPressure_TooHigh
+:SupplyAirPressure_TooHigh rdf:type owl:NamedIndividual ,
+                                    :EnergyRisk ;
+                           rdfs:label "Supply air pressure Too high" .
+
+
+###  https://www.w3id.org/risk#SupplyAirPressure_TooLow
+:SupplyAirPressure_TooLow rdf:type owl:NamedIndividual ,
+                                   :EnergyRisk ;
+                          rdfs:label "Supply air pressure Too low" .
+
+
+###  https://www.w3id.org/risk#SupplyAirTemperature_TooHigh
+:SupplyAirTemperature_TooHigh rdf:type owl:NamedIndividual ,
+                                       :EnergyRisk ;
+                              rdfs:label "Supply air temperature Too high" .
+
+
+###  https://www.w3id.org/risk#SupplyAirTemperature_TooLow
+:SupplyAirTemperature_TooLow rdf:type owl:NamedIndividual ,
+                                      :EnergyRisk ;
+                             rdfs:label "Supply air temperature Too low" .
+
+
+###  https://www.w3id.org/risk#UltimateLimitState_overstep
+:UltimateLimitState_overstep rdf:type owl:NamedIndividual ,
+                                      :GeotechnicalRisk .
+
+
+###  https://www.w3id.org/risk#UnusedAppliances
+:UnusedAppliances rdf:type owl:NamedIndividual ,
+                           :EnergyRisk ;
+                  rdfs:label "Unused appliances" .
+
+
+###  https://www.w3id.org/risk#UnusedCoolingEnergy
+:UnusedCoolingEnergy rdf:type owl:NamedIndividual ,
+                              :EnergyRisk ;
+                     rdfs:label "Unused cooling energy" .
+
+
+###  https://www.w3id.org/risk#UnusedHeatingEnergy
+:UnusedHeatingEnergy rdf:type owl:NamedIndividual ,
+                              :EnergyRisk ;
+                     rdfs:label "Unused heating energy" .
+
+
+###  https://www.w3id.org/risk#UnusedLights
+:UnusedLights rdf:type owl:NamedIndividual ,
+                       :EnergyRisk ;
+              rdfs:label "Unused lights" .
+
+
+###  https://www.w3id.org/risk#WastingEnergyThroughOpenings
+:WastingEnergyThroughOpenings rdf:type owl:NamedIndividual ,
+                                       :EnergyRisk ;
+                              rdfs:label "Wasting energy through openings" .
+
+
+###  https://www.w3id.org/risk#WindowWallRatio
+:WindowWallRatio rdf:type owl:NamedIndividual ,
+                          :InTolerance ,
+                          :OutsideTarget ;
+                 :causes :WindowWallRatio_Low-But-Tolerated .
+
+
+###  https://www.w3id.org/risk#WindowWallRatio_Low-But-Tolerated
+:WindowWallRatio_Low-But-Tolerated rdf:type owl:NamedIndividual ,
+                                            :Occurence .
+
+
+###  https://www.w3id.org/risk#evacuate_building_site
+:evacuate_building_site rdf:type owl:NamedIndividual ,
+                                 :KnownMeasure ;
+                        :reducesExpectedImpactOfRisk :UltimateLimitState_overstep ;
+                        :reducesOccurrenceImpactOfRisk :UltimateLimitState_overstep .
+
+
+###  https://www.w3id.org/risk#lagging
+:lagging rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#leading
+:leading rdf:type owl:NamedIndividual .
+
+
+###  https://www.w3id.org/risk#lowSecurityIndex
+:lowSecurityIndex rdf:type owl:NamedIndividual ,
+                           :GeotechnicalRisk .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

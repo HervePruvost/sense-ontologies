@@ -1,0 +1,6282 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "de", "en", "undefined" ],
+    "baseIris" : [ "https://w3id.org/baf", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "http://www.w3.org/2000/01/rdf-schema", "http://org.fhg.iis.eas.eee.esim/ESIMonto", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/ibp/CTRLont" ],
+    "title" : {
+      "en" : "BAF: Building Automation Functions."
+    },
+    "iri" : "https://w3id.org/baf",
+    "version" : "v1.0.0",
+    "author" : [ "https://orcid.org/0000-0001-7604-8543", "https://www.linkedin.com/in/hervepruvost", "Hervé Pruvost" ],
+    "description" : {
+      "en" : "The BAF (Building Automation Functions) model is a catalogue of generic control functions usually implemented by automation engineers."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by-sa/4.0",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Hervé Pruvost",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.linkedin.com/in/hervepruvost",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0001-7604-8543",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "baf",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2022-05-29",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "https://www.eas.iis.fraunhofer.de/",
+        "type" : "iri"
+      }, {
+        "identifier" : "publisher",
+        "language" : "undefined",
+        "value" : "Fraunhofer IIS/EAS",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "Pruvost. H. (2023): The BAF ontology - a formalization of generic building automation functions for heating, ventilation and air conditioning systems. https://w3id.org/baf.",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/baf#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2022-05-29",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "BAF: Building Automation Functions.",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://linkedbuildingdata.net/ldac2022/files/presentations/20220529_LDAC2022_Pruvost_v3.pdf",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "98",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "120",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "116",
+    "type" : "owl:Class"
+  }, {
+    "id" : "150",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "155",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "156",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "88",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "170",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "176",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "owl:Class"
+  }, {
+    "id" : "182",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "169",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "197",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "136",
+    "type" : "owl:Class"
+  }, {
+    "id" : "96",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "184",
+    "type" : "owl:Class"
+  }, {
+    "id" : "139",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "183",
+    "type" : "owl:Class"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "167",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/baf#FbBoilerModuleForModulatingBoiler",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbModulatingBoiler",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Kesselbaustein für modulierende Kessel",
+      "IRI-based" : "FbBoilerModuleForModulatingBoiler",
+      "en" : "Boiler module for modulating boiler"
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbPump",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPump",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Pumpe",
+      "IRI-based" : "FbPump",
+      "en" : "Pump"
+    },
+    "id" : "19",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/baf#CharacteristicCurve",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CharacteristicCurve",
+      "undefined" : "Characteristic curve"
+    },
+    "subClasses" : [ "22", "23", "24" ],
+    "id" : "21",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#Parameter",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Parameter",
+      "en" : "Parameter"
+    },
+    "subClasses" : [ "27", "28", "29", "30", "31", "32", "33", "34" ],
+    "comment" : {
+      "en" : "Parameter describe time-invariant values and settings of the respective control actor. Thus thay can be added dependent on the respective application logic."
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbAnalog3PointSignal",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbAnalog3Point",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Analoges 3-Punkt-Signal",
+      "IRI-based" : "FbAnalog3PointSignal",
+      "en" : "Analog 3-Point signal"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbAnalog3PointPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)"
+      },
+      "labels" : {
+        "IRI-based" : "FbAnalog3PointPattern",
+        "undefined" : "Analog 3-Point Signal Pattern"
+      }
+    } ],
+    "id" : "35",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbReducedMinimumFreshAir",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbMinFreshAir",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Reduzierte Mindestfrischluft",
+      "IRI-based" : "FbReducedMinimumFreshAir",
+      "en" : "Reduced minimum fresh air"
+    },
+    "id" : "37",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#Unit",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Unit",
+      "en" : "Unit"
+    },
+    "comment" : {
+      "en" : "Placeholder concept to stipulate reuse of existing ontologies such as Ontology for Units and Measures (OM) or QUDT."
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/baf#VolumeFlowRegulator",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbVolumeFlowRegulator",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Volumenstromregler",
+      "IRI-based" : "VolumeFlowRegulator",
+      "en" : "Volume flow regulator"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbTwoPointIndividualRoomController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fb2PointSingleRoomController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "2-Punkt-Einzelraumregler",
+      "IRI-based" : "FbTwoPointIndividualRoomController",
+      "en" : "Point individual room controller"
+    },
+    "id" : "40",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbCascadeController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbCascadeController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Kaskadenregler",
+      "IRI-based" : "FbCascadeController",
+      "en" : "Cascade controller"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbCascadeControllerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Cascade Controller (FbCascadeController)"
+      },
+      "labels" : {
+        "IRI-based" : "FbCascadeControllerPattern",
+        "undefined" : "Cascade Controller Pattern"
+      }
+    } ],
+    "id" : "41",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#AnnotatedElement",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AnnotatedElement",
+      "en" : "Annotated Element"
+    },
+    "subClasses" : [ "42", "43", "25" ],
+    "comment" : {
+      "en" : "An annotated element is a generic superclass for ctrl:Input, ctrl:Output and ctrl:Parameter"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/baf#FbControlOfContinuousDrivers",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbContinuousDriver",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ansteuerung von stetigen Antrieben",
+      "IRI-based" : "FbControlOfContinuousDrivers",
+      "en" : "Control of continuous drivers"
+    },
+    "id" : "44",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#DataType",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/xmlschema-2/#built-in-datatypes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DataType",
+      "en" : "Data type"
+    },
+    "comment" : {
+      "en" : "Placeholder class for the specification of basic data types such as, e.g. integer, boolean or double."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/baf#FuKTYCharacteristicCurve",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FuKTY",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "KTY-Kennlinie",
+      "IRI-based" : "FuKTYCharacteristicCurve",
+      "en" : "KTY Characteristic curve"
+    },
+    "id" : "23",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#Output",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Output",
+      "en" : "Output"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#xSpeedLevel1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Request fan level 1"
+      },
+      "labels" : {
+        "IRI-based" : "xSpeedLevel1",
+        "undefined" : "xSpeedLevel1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY_Heating",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Valve position heating register\r\nValue range = 0 – 32767"
+      },
+      "labels" : {
+        "IRI-based" : "wY_Heating",
+        "undefined" : "wY_Heating"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xCondensationProtection",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Condensation protection"
+      },
+      "labels" : {
+        "IRI-based" : "xCondensationProtection",
+        "undefined" : "xCondensationProtection"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xErrorPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Error message pump"
+      },
+      "labels" : {
+        "IRI-based" : "xErrorPump",
+        "undefined" : "xErrorPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xAlarm",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Output signal error"
+      },
+      "labels" : {
+        "IRI-based" : "xAlarm",
+        "undefined" : "xAlarm"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xClose",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Engine coil CLOSED"
+      },
+      "labels" : {
+        "IRI-based" : "xClose",
+        "undefined" : "xClose"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xSpeedLevel2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Request fan level 2"
+      },
+      "labels" : {
+        "IRI-based" : "xSpeedLevel2",
+        "undefined" : "xSpeedLevel2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rMaxReferenceValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum reference value for slave controller"
+      },
+      "labels" : {
+        "IRI-based" : "rMaxReferenceValue",
+        "undefined" : "rMaxReferenceValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xFollowUpTime",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pump is in the follo-up phase"
+      },
+      "labels" : {
+        "IRI-based" : "xFollowUpTime",
+        "undefined" : "xFollowUpTime"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#OutputFu4Point",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Output value"
+      },
+      "labels" : {
+        "IRI-based" : "OutputFu4Point",
+        "undefined" : "Fu4Point"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switching signal for the pump"
+      },
+      "labels" : {
+        "IRI-based" : "xPump",
+        "undefined" : "xPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#typStatusBoiler",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler status for the strategy module"
+      },
+      "labels" : {
+        "IRI-based" : "typStatusBoiler",
+        "undefined" : "typStatusBoiler"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_DamperExhaustAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for plate-type heat exchanger in\r\nexhaust air duct [%]\r\nValue range = 0 – 100"
+      },
+      "labels" : {
+        "IRI-based" : "rY_DamperExhaustAir",
+        "undefined" : "rY_DamperExhaustAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value:\r\nValue range: 0 ?32767 for damper"
+      },
+      "labels" : {
+        "IRI-based" : "wY",
+        "undefined" : "wY"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xErrorBoilerPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler circuit pump error"
+      },
+      "labels" : {
+        "IRI-based" : "xErrorBoilerPump",
+        "undefined" : "xErrorBoilerPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rMinBoilerTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum boiler temperature"
+      },
+      "labels" : {
+        "IRI-based" : "rMinBoilerTemperature",
+        "undefined" : "rMinBoilerTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xBoilerPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler circuit pump"
+      },
+      "labels" : {
+        "IRI-based" : "xBoilerPump",
+        "undefined" : "xBoilerPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rOutput",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Filtered output value"
+      },
+      "labels" : {
+        "IRI-based" : "rOutput",
+        "undefined" : "rOutput"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY_DamperSupplyAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for plate-type heat exchanger in\r\nthe incoming air duct\r\nValue range = 0 – 32767"
+      },
+      "labels" : {
+        "IRI-based" : "wY_DamperSupplyAir",
+        "undefined" : "wY_DamperSupplyAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wStatus",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Display current status\r\n0 = OK\r\n1 = On \r\n2 = Off\r\n10 = Error Pump\r\n29 = Error Safety chain\r\n30 = Condensation protection\r\n31 = Chimney sweep function\r\n32 = Overheating protection\r\n33 = Error Valve\r\n34 = Follow up time\r\n35 = Manual operation\r\n36 = In motion\r\n39 = Reference value exceeded\r\n40 = Startup behaviour\r\n42 = Error Damper position\r\n46 = Error limit switch\r\n47 = Synchronisation"
+      },
+      "labels" : {
+        "IRI-based" : "wStatus",
+        "undefined" : "wStatus"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_DamperSupplyAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for plate-type heat exchanger in\r\nincoming air duct [%]\r\nValue range = 0 – 100"
+      },
+      "labels" : {
+        "IRI-based" : "rY_DamperSupplyAir",
+        "undefined" : "rY_DamperSupplyAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rReferenceValueSlaveController",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reference value for slave controller [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rReferenceValueSlaveController",
+        "undefined" : "rReferenceValueSlaveController"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xChimneySweep",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Chimney sweep function active"
+      },
+      "labels" : {
+        "IRI-based" : "xChimneySweep",
+        "undefined" : "xChimneySweep"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_EnergyRecovery",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for energy recovery [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY_EnergyRecovery",
+        "undefined" : "rY_EnergyRecovery"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xActive",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Active indicator for sequence"
+      },
+      "labels" : {
+        "IRI-based" : "xActive",
+        "undefined" : "xActive"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switching signal for the admixing pump"
+      },
+      "labels" : {
+        "IRI-based" : "xAdmixingPump",
+        "undefined" : "xAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xOpen",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Engine coil OPEN"
+      },
+      "labels" : {
+        "IRI-based" : "xOpen",
+        "undefined" : "xOpen"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_Valve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Valve position, 3-way valve [%]. Value range = 0 – 100"
+      },
+      "labels" : {
+        "IRI-based" : "rY_Valve",
+        "undefined" : "rY_Valve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY_EnergyRecovery",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for energy recovery\r\nValue range = 0 – 32767"
+      },
+      "labels" : {
+        "IRI-based" : "wY_EnergyRecovery",
+        "undefined" : "wY_EnergyRecovery"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#dwOperatingMinutes",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Operating time in minutes"
+      },
+      "labels" : {
+        "IRI-based" : "dwOperatingMinutes",
+        "undefined" : "dwOperatingMinutes"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xErrorStartUp",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Start-up system fault"
+      },
+      "labels" : {
+        "IRI-based" : "xErrorStartUp",
+        "undefined" : "xErrorStartUp"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xErrorAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Admixing pump error"
+      },
+      "labels" : {
+        "IRI-based" : "xErrorAdmixingPump",
+        "undefined" : "xErrorAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY_DamperExhaustAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for plate-type heat exchanger in\r\nthe exhaust air duct\r\nValue range = 0 – 32767"
+      },
+      "labels" : {
+        "IRI-based" : "wY_DamperExhaustAir",
+        "undefined" : "wY_DamperExhaustAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xLevel2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler Level 2"
+      },
+      "labels" : {
+        "IRI-based" : "xLevel2",
+        "undefined" : "xLevel2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xError",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Some fault"
+      },
+      "labels" : {
+        "IRI-based" : "xError",
+        "undefined" : "xError"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY",
+        "undefined" : "rY"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xLevel1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler Level 1"
+      },
+      "labels" : {
+        "IRI-based" : "xLevel1",
+        "undefined" : "xLevel1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switching signal 2-way valve"
+      },
+      "labels" : {
+        "IRI-based" : "xValve",
+        "undefined" : "xValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY_FreshAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for mixed air damper\r\nValue range = 0 – 32767"
+      },
+      "labels" : {
+        "IRI-based" : "wY_FreshAir",
+        "undefined" : "wY_FreshAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_Heating",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Valve position heating register"
+      },
+      "labels" : {
+        "IRI-based" : "rY_Heating",
+        "undefined" : "rY_Heating"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rMinReferenceValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum reference value for slave controller"
+      },
+      "labels" : {
+        "IRI-based" : "rMinReferenceValue",
+        "undefined" : "rMinReferenceValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_FreshAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value mixed air damper [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY_FreshAir",
+        "undefined" : "rY_FreshAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#wY_Valve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Valve position, 3-way valve. Value range = 0 – 32767"
+      },
+      "labels" : {
+        "IRI-based" : "wY_Valve",
+        "undefined" : "wY_Valve"
+      }
+    } ],
+    "comment" : {
+      "en" : "An output allows compute results by the application logic of an control actor to be fowarded to outside entities such as actuators or other control actors."
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFanwithFrequencyConverter",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbFan_FC",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ventilator mit Frequenzumrichter",
+      "IRI-based" : "FbFanwithFrequencyConverter",
+      "en" : "Fanwith frequency converter"
+    },
+    "id" : "64",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFan3Level",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbFan_3Level",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ventilator, 3-stufig",
+      "IRI-based" : "FbFan3Level",
+      "en" : "Fan3-Level"
+    },
+    "id" : "65",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbMixedAirSequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceMixedAir",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenz Mischluft",
+      "IRI-based" : "FbMixedAirSequence",
+      "en" : "Mixed air sequence"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbSequenceMixedAirPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceMixedAirPattern",
+        "undefined" : "Mixed Air Sequence Pattern"
+      }
+    } ],
+    "id" : "66",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/ibp/CTRLont",
+      "baseIri" : "https://w3id.org/ibp",
+      "labels" : {
+        "IRI-based" : "CTRLont"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#ApplicationLogic",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ApplicationLogic",
+      "en" : "Application Logic"
+    },
+    "comment" : {
+      "en" : "Concept to specify the application logic of a control actor. Seperate ontologies may be used to further specify this concept."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/baf#FbFirstOrderLowPassFilterForAI0-32767",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbLowPassFilterAI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Tiefpassfilter 1. Ordnung für AI 0 - 32767",
+      "IRI-based" : "FbFirstOrderLowPassFilterForAI0-32767",
+      "en" : "1st order low pass filter for AI 0-32767"
+    },
+    "id" : "76",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FanControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FanControl",
+      "undefined" : "Fan control"
+    },
+    "subClasses" : [ "77", "64", "65", "78" ],
+    "id" : "58",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbRotaryHeatExchanger",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbRotaryHeatExchanger",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Rotationswärmetauscher",
+      "IRI-based" : "FbRotaryHeatExchanger",
+      "en" : "Rotary heat exchanger"
+    },
+    "id" : "79",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#ControlActor",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ControlActor",
+      "en" : "Control Actor"
+    },
+    "subClasses" : [ "2", "14" ],
+    "comment" : {
+      "en" : "Concept to describe the in general accepted Sense-Process-Actuate\npattern in automation systems, e.g. function blocks from IEC 61499."
+    },
+    "attributes" : [ "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/baf#SingleRoomControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleRoomControl",
+      "undefined" : "Single room control"
+    },
+    "subClasses" : [ "40", "81" ],
+    "id" : "4",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuSummerCompensation",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FuSummerCompensation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sommerkompensation",
+      "IRI-based" : "FuSummerCompensation",
+      "en" : "Summer compensation"
+    },
+    "id" : "82",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbPIDSingleRoomController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPIDSingleRoomController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "PID Einzelraumregler",
+      "IRI-based" : "FbPIDSingleRoomController",
+      "en" : "PIDSingle room controller"
+    },
+    "id" : "81",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/baf#EnumeratedControlFunctionPattern",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnumeratedControlFunctionPattern",
+      "undefined" : "Enumerated control function pattern"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbContinuousDamperPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)"
+      },
+      "labels" : {
+        "IRI-based" : "FbContinuousDamperPattern",
+        "undefined" : "Actuation of Continuous Dampers Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbSequenceMixedAirPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Mixed Air Sequence (FbSequenceMixedAir)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceMixedAirPattern",
+        "undefined" : "Mixed Air Sequence Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbValveAndPumpPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Valve and Pump (FbValveAndPump)"
+      },
+      "labels" : {
+        "IRI-based" : "FbValveAndPumpPattern",
+        "undefined" : "Valve and Pump Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbPlateHeatExchangerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)"
+      },
+      "labels" : {
+        "IRI-based" : "FbPlateHeatExchangerPattern",
+        "undefined" : "Plate-Type Heat Exchanger Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbSequenceControllerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Sequence Controller (FbSequenceController)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceControllerPattern",
+        "undefined" : "Sequence Controller Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#Fb2LevelBoilerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)"
+      },
+      "labels" : {
+        "IRI-based" : "Fb2LevelBoilerPattern",
+        "undefined" : " Boiler Module for 2-Level Boiler Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbSequenceEnergyRecoveryPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceEnergyRecoveryPattern",
+        "undefined" : "Energy Recovery Sequence Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbCascadeControllerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Cascade Controller (FbCascadeController)"
+      },
+      "labels" : {
+        "IRI-based" : "FbCascadeControllerPattern",
+        "undefined" : "Cascade Controller Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbSequenceHeatingPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Heating Sequence (FbSequenceHeating)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceHeatingPattern",
+        "undefined" : "Heating Sequence Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbLowPassFilterPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)"
+      },
+      "labels" : {
+        "IRI-based" : "FbLowPassFilterPattern",
+        "undefined" : "1st Order Low-Pass Filter Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#Fu4Point",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Four-Point Characteristic Curve (Fu4Point)"
+      },
+      "labels" : {
+        "IRI-based" : "Fu4Point",
+        "undefined" : "Four-Point Characteristic Curve Pattern"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#FbAnalog3PointPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Analog 3-Point Signal (FbAnalog3Point)"
+      },
+      "labels" : {
+        "IRI-based" : "FbAnalog3PointPattern",
+        "undefined" : "Analog 3-Point Signal Pattern"
+      }
+    } ],
+    "id" : "14",
+    "superClasses" : [ "12", "80" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFan1Level",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbFan_1Level",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ventilator, 1-stufig",
+      "IRI-based" : "FbFan1Level",
+      "en" : "Fan1-Level"
+    },
+    "id" : "77",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbActuationof2PointDampers",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fb2PointDamper",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ansteuerung von 2-Punkt Klappen",
+      "IRI-based" : "FbActuationof2PointDampers",
+      "en" : "Actuationof2-Point dampers"
+    },
+    "id" : "85",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#Input",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Input",
+      "en" : "Input"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#xDifferentialPressureMonitor",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Differential pressure sensor plate-type\r\nheat exchanger\r\nDefault setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xDifferentialPressureMonitor",
+        "undefined" : "xDifferentialPressureMonitor"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_MinFreshAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum fresh air rate [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY_MinFreshAir",
+        "undefined" : "rY_MinFreshAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xInit",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "A positive flank starts the reference run"
+      },
+      "labels" : {
+        "IRI-based" : "xInit",
+        "undefined" : "xInit"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xMotorProtection",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Motor protection switch pump\r\nDefault setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xMotorProtection",
+        "undefined" : "xMotorProtection"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xMotorProtectionPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Motor protection switch, Boiler circuit pump. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xMotorProtectionPump",
+        "undefined" : "xMotorProtectionPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xFeedbackManualOperation",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "External check-back signal, Manual mode"
+      },
+      "labels" : {
+        "IRI-based" : "xFeedbackManualOperation",
+        "undefined" : "xFeedbackManualOperation"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xSafetyChain",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Check-back signal from boiler safety chain. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xSafetyChain",
+        "undefined" : "xSafetyChain"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rActualReturnTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual boiler return temperature [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rActualReturnTemperature",
+        "undefined" : "rActualReturnTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xFrostAlarmWater",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Frost alarm from FbAntifreezeWater"
+      },
+      "labels" : {
+        "IRI-based" : "xFrostAlarmWater",
+        "undefined" : "xFrostAlarmWater"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xRepairSwitch",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Repair switch pump\r\nDefault setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xRepairSwitch",
+        "undefined" : "xRepairSwitch"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rManualValueValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Valve position in Manual mode [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rManualValueValve",
+        "undefined" : "rManualValueValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xRepairSwitchAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Repair switch, Admixing pump. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xRepairSwitchAdmixingPump",
+        "undefined" : "xRepairSwitchAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#bLeadBoiler",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Defining of lead boiler. Value range = 0 – 2 (0 = both boilers in parallel). Default setting = 1"
+      },
+      "labels" : {
+        "IRI-based" : "bLeadBoiler",
+        "undefined" : "bLeadBoiler"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xManualOnBoilerPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch on boiler circuit pump manually"
+      },
+      "labels" : {
+        "IRI-based" : "xManualOnBoilerPump",
+        "undefined" : "xManualOnBoilerPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#bManualLevelBoiler",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler level in Manual mode. Value range = 0 – 2"
+      },
+      "labels" : {
+        "IRI-based" : "bManualLevelBoiler",
+        "undefined" : "bManualLevelBoiler"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_EnergyRecovery",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for energy recovery [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY_EnergyRecovery",
+        "undefined" : "rY_EnergyRecovery"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xAuto",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Automatic mode"
+      },
+      "labels" : {
+        "IRI-based" : "xAuto",
+        "undefined" : "xAuto"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xEnablePump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable pump and valve control"
+      },
+      "labels" : {
+        "IRI-based" : "xEnablePump",
+        "undefined" : "xEnablePump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xManualSwitchPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch on pump manually"
+      },
+      "labels" : {
+        "IRI-based" : "xManualSwitchPump",
+        "undefined" : "xManualSwitchPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rManualValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value in manual mode [%] or [°C]\r\nValue range = 0 – 100%\r\nDefault setting = 22 °C"
+      },
+      "labels" : {
+        "IRI-based" : "rManualValue",
+        "undefined" : "rManualValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "y-coordinate of the second value"
+      },
+      "labels" : {
+        "IRI-based" : "rY2",
+        "undefined" : "rY2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "y-coordinate of the first value"
+      },
+      "labels" : {
+        "IRI-based" : "rY1",
+        "undefined" : "rY1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rExitAirTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual value exhaust air temperature [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rExitAirTemperature",
+        "undefined" : "rExitAirTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xFullLoad",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler is to run at full load"
+      },
+      "labels" : {
+        "IRI-based" : "xFullLoad",
+        "undefined" : "xFullLoad"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rInput",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Input value"
+      },
+      "labels" : {
+        "IRI-based" : "rInput",
+        "undefined" : "rInput"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rActualBoilerTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual boiler temperature [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rActualBoilerTemperature",
+        "undefined" : "rActualBoilerTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xNightVentilation",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Opening damper during night ventilation"
+      },
+      "labels" : {
+        "IRI-based" : "xNightVentilation",
+        "undefined" : "xNightVentilation"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xFrostAlarmAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Frost alarm from FbAntifreezeAir"
+      },
+      "labels" : {
+        "IRI-based" : "xFrostAlarmAir",
+        "undefined" : "xFrostAlarmAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rValvePosition",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Specified position of valve [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rValvePosition",
+        "undefined" : "rValvePosition"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xEnable",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable controller\r\nDefault setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xEnable",
+        "undefined" : "xEnable"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xLimitSwitchValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Limit switch, 2-way valve. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xLimitSwitchValve",
+        "undefined" : "xLimitSwitchValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#typSequenceController",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Data structure for data exchange between the individual sequences and the sequence controller"
+      },
+      "labels" : {
+        "IRI-based" : "typSequenceController",
+        "undefined" : "typSequenceController"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xEnableSystem",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable FbStartStop\r\nDefault setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xEnableSystem",
+        "undefined" : "xEnableSystem"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rX2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "x-coordinate of the second value"
+      },
+      "labels" : {
+        "IRI-based" : "rX2",
+        "undefined" : "rX2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rX1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "x-coordinate of the first value"
+      },
+      "labels" : {
+        "IRI-based" : "rX1",
+        "undefined" : "rX1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xMaximalThermostat",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum thermostat for heating circuit\r\nDefault setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xMaximalThermostat",
+        "undefined" : "xMaximalThermostat"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xManualOnAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch on admixing pump manually"
+      },
+      "labels" : {
+        "IRI-based" : "xManualOnAdmixingPump",
+        "undefined" : "xManualOnAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xSwitchOnBoiler",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-on signal in Automatic mode (e.g., from boiler strategy)"
+      },
+      "labels" : {
+        "IRI-based" : "xSwitchOnBoiler",
+        "undefined" : "xSwitchOnBoiler"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xMotorProtectionAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Motor protection switch, Admixing pump. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xMotorProtectionAdmixingPump",
+        "undefined" : "xMotorProtectionAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rMinExitAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum exhaust air temperature for\r\nregulation of the plate-type heat exchanger\r\nin the incoming air duct [°C]\r\nDefault setting = 6 °C"
+      },
+      "labels" : {
+        "IRI-based" : "rMinExitAir",
+        "undefined" : "rMinExitAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rExhaustAirTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual value for exhaust air temperature [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rExhaustAirTemperature",
+        "undefined" : "rExhaustAirTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xMinFreshAir",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Override mixed air damper using the minimum fresh air rate"
+      },
+      "labels" : {
+        "IRI-based" : "xMinFreshAir",
+        "undefined" : "xMinFreshAir"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rActualPosition",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual position of the continuous damper [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rActualPosition",
+        "undefined" : "rActualPosition"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY_Dehumidifying",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value for dehumidifier [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY_Dehumidifying",
+        "undefined" : "rY_Dehumidifying"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#bBoilerNumber",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Boiler number. Value range = 1 – 2. Default setting = 1"
+      },
+      "labels" : {
+        "IRI-based" : "bBoilerNumber",
+        "undefined" : "bBoilerNumber"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xManualOperation",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable manual operation"
+      },
+      "labels" : {
+        "IRI-based" : "xManualOperation",
+        "undefined" : "xManualOperation"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xManual",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Manual mode"
+      },
+      "labels" : {
+        "IRI-based" : "xManual",
+        "undefined" : "xManual"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rReferenceValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reference value [°C]\r\nDefault setting = 22 °C"
+      },
+      "labels" : {
+        "IRI-based" : "rReferenceValue",
+        "undefined" : "rReferenceValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#dwOperatingMinutes",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Operating time in minutes"
+      },
+      "labels" : {
+        "IRI-based" : "dwOperatingMinutes",
+        "undefined" : "dwOperatingMinutes"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rActualValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual value [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rActualValue",
+        "undefined" : "rActualValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xChimneySweepFunction",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Activate chimney sweep function"
+      },
+      "labels" : {
+        "IRI-based" : "xChimneySweepFunction",
+        "undefined" : "xChimneySweepFunction"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rReferencePosition",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reference position of the continuous damper [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rReferencePosition",
+        "undefined" : "rReferencePosition"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xQuit",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Error message acknowledgement"
+      },
+      "labels" : {
+        "IRI-based" : "xQuit",
+        "undefined" : "xQuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rOutsideTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Actual value outside temperature [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rOutsideTemperature",
+        "undefined" : "rOutsideTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rY",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Set value [%]"
+      },
+      "labels" : {
+        "IRI-based" : "rY",
+        "undefined" : "rY"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xErrorSequence",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Error check-back signal from device"
+      },
+      "labels" : {
+        "IRI-based" : "xErrorSequence",
+        "undefined" : "xErrorSequence"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xRepairSwitchPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Repair switch, Boiler circuit pump. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "xRepairSwitchPump",
+        "undefined" : "xRepairSwitchPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#rReferenceBoilerTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Specified boiler temperature [°C]"
+      },
+      "labels" : {
+        "IRI-based" : "rReferenceBoilerTemperature",
+        "undefined" : "rReferenceBoilerTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#xLimitSwitch",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Limit switch (opend, closed)"
+      },
+      "labels" : {
+        "IRI-based" : "xLimitSwitch",
+        "undefined" : "xLimitSwitch"
+      }
+    } ],
+    "comment" : {
+      "en" : "An input allow flows of information to enter a control actor. Inputs are processed by the respective application logic of the control actor to compute the outputs."
+    },
+    "attributes" : [ "external" ],
+    "id" : "42",
+    "superClasses" : [ "26" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigSequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigSequence",
+      "undefined" : "typConfigSequence"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_rX2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Max. setting value for sequence [%]"
+      },
+      "labels" : {
+        "IRI-based" : "_rX2",
+        "undefined" : ".rX2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rX1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Min. setting value for sequence [%]"
+      },
+      "labels" : {
+        "IRI-based" : "_rX1",
+        "undefined" : ".rX1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_bSequenceNumber",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Sequence number (from cooling toward heating)\r\nValue range = 1 – 4"
+      },
+      "labels" : {
+        "IRI-based" : "_bSequenceNumber",
+        "undefined" : ".bSequenceNumber"
+      }
+    } ],
+    "id" : "28",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbComfortZoneController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbHxControl",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Behaglichkeitsfeldregler",
+      "IRI-based" : "FbComfortZoneController",
+      "en" : "Comfort zone controller"
+    },
+    "id" : "86",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#Quantity",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Quantity",
+      "en" : "Quantity"
+    },
+    "comment" : {
+      "en" : "Placeholder concept to stipulate reuse of existing ontologies such as Ontology for Units and Measures (OM) or QUDT."
+    },
+    "attributes" : [ "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://w3id.org/baf#FbPWMOutput",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPWM",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "PWM-Ausgang",
+      "IRI-based" : "FbPWMOutput",
+      "en" : "PWM Output"
+    },
+    "id" : "90",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigLowPassFilter",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigLowPassFilter",
+      "undefined" : "typConfigLowPassFilter"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_tAlarm",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum time on limit violation until an alarm is issued.\r\nDefault setting: t#10s"
+      },
+      "labels" : {
+        "IRI-based" : "_tAlarm",
+        "undefined" : ".tAlarm"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rHighLimitAlarm",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Upper limit for value of the output signal alarm\r\nDefault setting = 32768"
+      },
+      "labels" : {
+        "IRI-based" : "_rHighLimitAlarm",
+        "undefined" : ".rHighLimitAlarm"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tCycleTime",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Cycle time for the PT1 circuit"
+      },
+      "labels" : {
+        "IRI-based" : "_tCycleTime",
+        "undefined" : ".tCycleTime"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rLowLimitAlarm",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Lower limit for value of the output signal\r\nalarm\r\nDefault setting = -32767"
+      },
+      "labels" : {
+        "IRI-based" : "_rLowLimitAlarm",
+        "undefined" : ".rLowLimitAlarm"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rOffset",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Measured value compensation for the input\r\nDefault setting = 0"
+      },
+      "labels" : {
+        "IRI-based" : "_rOffset",
+        "undefined" : ".rOffset"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xAutoQuit",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Automatic acknowledgement of the alarm or fault messages"
+      },
+      "labels" : {
+        "IRI-based" : "_xAutoQuit",
+        "undefined" : ".xAutoQuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rDefaultValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Defined output value as long as the\r\nxAlarm output is set\r\nDefault setting = 0"
+      },
+      "labels" : {
+        "IRI-based" : "_rDefaultValue",
+        "undefined" : ".rDefaultValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tT1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Time constant for the PT1 circuit\r\nDefault setting: t#2s"
+      },
+      "labels" : {
+        "IRI-based" : "_tT1",
+        "undefined" : ".tT1"
+      }
+    } ],
+    "id" : "34",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#GeneralDriver",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeneralDriver",
+      "undefined" : "General driver"
+    },
+    "subClasses" : [ "44", "90", "91", "35" ],
+    "id" : "36",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFilterMonitoring",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbFilterMonitoring",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Filterüberwachung",
+      "IRI-based" : "FbFilterMonitoring",
+      "en" : "Filter monitoring"
+    },
+    "id" : "92",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbCollectiveMalfunction",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbCollectiveMalfunction",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sammelstörung",
+      "IRI-based" : "FbCollectiveMalfunction",
+      "en" : "Collective malfunction"
+    },
+    "id" : "93",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbGlobalCollectiveMalfunction",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbGlobalMalfunction",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Globale Sammelstörung",
+      "IRI-based" : "FbGlobalCollectiveMalfunction",
+      "en" : "Global collective malfunction"
+    },
+    "id" : "94",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#AnalogSignal",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnalogSignal",
+      "undefined" : "Analog signal"
+    },
+    "subClasses" : [ "95", "96", "76", "97", "98", "99", "100" ],
+    "id" : "48",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#Controller",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Controller",
+      "undefined" : "Controller"
+    },
+    "subClasses" : [ "101", "41", "102", "103", "104", "105" ],
+    "id" : "8",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbRamp",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbRamp",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Rampe",
+      "IRI-based" : "FbRamp",
+      "en" : "Ramp"
+    },
+    "id" : "71",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbPILimitController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbLimitController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "PI-Begrenzungsregler",
+      "IRI-based" : "FbPILimitController",
+      "en" : "PILimit controller"
+    },
+    "id" : "101",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/baf#PumpControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PumpControl",
+      "en" : "Pump control"
+    },
+    "subClasses" : [ "106", "107", "19", "108" ],
+    "id" : "20",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbStartStopHeatingCircuitControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbStartStopHeatingCircuit",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Start-/Stopp-Heizkreisregelung",
+      "IRI-based" : "FbStartStopHeatingCircuitControl",
+      "en" : "Start stop heating circuit control"
+    },
+    "id" : "110",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbCalculationofSupplyTemperature",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbCalculatedSupplyTemperature",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Vorlauftemperaturberechnung",
+      "IRI-based" : "FbCalculationofSupplyTemperature",
+      "en" : "Calculationof supply temperature"
+    },
+    "id" : "111",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbPlateTypeHeatExchanger",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPlateHeatExchanger",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Plattenwärmetauscher",
+      "IRI-based" : "FbPlateTypeHeatExchanger",
+      "en" : "Plate-Type heat exchanger"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbPlateHeatExchangerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Plate-Type Heat Exchanger (FbPlateHeatExchanger)"
+      },
+      "labels" : {
+        "IRI-based" : "FbPlateHeatExchangerPattern",
+        "undefined" : "Plate-Type Heat Exchanger Pattern"
+      }
+    } ],
+    "id" : "112",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigValveAndPump",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigValveAndPump",
+      "undefined" : "typConfigValveAndPump"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_xThreeWayValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "3-way valve present in boiler circuit. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "_xThreeWayValve",
+        "undefined" : ".xThreeWayValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMaxChimneySweepFunction",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum duration of chimney sweep function. Default setting = t#15 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxChimneySweepFunction",
+        "undefined" : ".tMaxChimneySweepFunction"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOffDelay",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Turn-off delay of the pump\r\nDefault setting = t#15 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tOffDelay",
+        "undefined" : ".tOffDelay"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xPumpWinter",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable freeze protection"
+      },
+      "labels" : {
+        "IRI-based" : "_xPumpWinter",
+        "undefined" : ".xPumpWinter"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rY_Min",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum set value for valve or damper [%]\r\nDefault setting = 3"
+      },
+      "labels" : {
+        "IRI-based" : "_rY_Min",
+        "undefined" : ".rY_Min"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xAutoQuit",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Automatic acknowledgement of the alarm or fault messages"
+      },
+      "labels" : {
+        "IRI-based" : "_xAutoQuit",
+        "undefined" : ".xAutoQuit"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rValveChimneySweep",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Chimney sweep function valve position [%]\r\nDefault setting = 25"
+      },
+      "labels" : {
+        "IRI-based" : "_rValveChimneySweep",
+        "undefined" : ".rValveChimneySweep"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMaxOff",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum turn-off time of the pump when\r\nblocking protection is enabled\r\nDefault setting = t#48h"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxOff",
+        "undefined" : ".tMaxOff"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xBlockingProtection",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable blocking protection. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "_xBlockingProtection",
+        "undefined" : ".xBlockingProtection"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tSwitchOn",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Turn-on time of the pump when blocking\r\nprotection is enabled\r\nDefault setting: t#60s"
+      },
+      "labels" : {
+        "IRI-based" : "_tSwitchOn",
+        "undefined" : ".tSwitchOn"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMinOutsideTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum outside temperature for freeze\r\nprotection [°C]\r\nDefault setting = 2 °C"
+      },
+      "labels" : {
+        "IRI-based" : "_rMinOutsideTemperature",
+        "undefined" : ".rMinOutsideTemperature"
+      }
+    } ],
+    "id" : "32",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#ValveControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ValveControl",
+      "undefined" : "Valve control"
+    },
+    "subClasses" : [ "106", "107" ],
+    "id" : "6",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbDampedTemperature",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbDampedTemperature",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Gedämpfte Temperatur",
+      "IRI-based" : "FbDampedTemperature",
+      "en" : "Damped temperature"
+    },
+    "id" : "113",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbValveandPump",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbValveAndPump",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ventil und Pumpe",
+      "IRI-based" : "FbValveandPump",
+      "undefined" : "Valve and pump {@en} "
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbValveAndPumpPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Valve and Pump (FbValveAndPump)"
+      },
+      "labels" : {
+        "IRI-based" : "FbValveAndPumpPattern",
+        "undefined" : "Valve and Pump Pattern"
+      }
+    } ],
+    "id" : "106",
+    "superClasses" : [ "20", "6" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbSequenceController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenzregler",
+      "IRI-based" : "FbSequenceController",
+      "en" : "Sequence controller"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbSequenceControllerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Sequence Controller (FbSequenceController)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceControllerPattern",
+        "undefined" : "Sequence Controller Pattern"
+      }
+    } ],
+    "id" : "104",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbAirSideAntifreezeProtection",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbAntifreezeAir",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Luftseitiger Frostschutz",
+      "IRI-based" : "FbAirSideAntifreezeProtection",
+      "en" : "Air-Side antifreeze protection"
+    },
+    "id" : "114",
+    "superClasses" : [ "74" ]
+  }, {
+    "iri" : "https://w3id.org/baf#MiscellaneousFunction",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MiscellaneousFunction",
+      "undefined" : "Miscellaneous function"
+    },
+    "subClasses" : [ "115", "116", "117", "86", "118", "119", "120", "121", "71", "68" ],
+    "id" : "63",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFirstOrderLowPassFilterForBusSignals",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbLowPassFilterBus",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Tiefpassfilter 1. Ordnung für Bussignale",
+      "IRI-based" : "FbFirstOrderLowPassFilterForBusSignals",
+      "en" : "1st order low pass filter for bus signals"
+    },
+    "id" : "98",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "http://org.fhg.iis.eas.eee.esim/ESIMonto#ControlFunction",
+    "baseIri" : "http://org.fhg.iis.eas.eee.esim/ESIMonto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ControlFunction"
+    },
+    "subClasses" : [ "2", "14" ],
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/baf#FbPIDControllerwithTwoSetsofControlParameters",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPIDController2PIDSets",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "PID-Regler mit zwei Regelparametersätzen",
+      "IRI-based" : "FbPIDControllerwithTwoSetsofControlParameters",
+      "en" : "PIDControllerwith two setsof control parameters"
+    },
+    "id" : "102",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbBoilerStrategyForTwoBoilers",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fb2BoilerStrategy",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Kesselstrategie für zwei Kessel",
+      "IRI-based" : "FbBoilerStrategyForTwoBoilers",
+      "en" : "Boiler strategy for two boilers"
+    },
+    "id" : "125",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/baf#Sequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sequence",
+      "en" : "Sequence"
+    },
+    "subClasses" : [ "16", "128", "129", "130", "66", "124" ],
+    "id" : "10",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbSummerNightVentilation",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSummerNightVentilation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sommernachtlüftung",
+      "IRI-based" : "FbSummerNightVentilation",
+      "en" : "Summer night ventilation"
+    },
+    "id" : "133",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#TemperatureEvaluation",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TemperatureEvaluation",
+      "undefined" : "Temperature evaluation"
+    },
+    "subClasses" : [ "136", "137", "113" ],
+    "id" : "50",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigSequenceController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigSequenceController",
+      "undefined" : "typConfigSequenceController"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_rDeadZone",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Dead zone +/- [K]\r\nDefault setting = 0"
+      },
+      "labels" : {
+        "IRI-based" : "_rDeadZone",
+        "undefined" : ".rDeadZone"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rTn1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reset time of the controller for the first set of controller parameters [s]\r\nDefault setting = 300 s"
+      },
+      "labels" : {
+        "IRI-based" : "_rTn1",
+        "undefined" : ".rTn1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rTn2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reset time of the controller for the second set of controller parameters [s]\r\nDefault setting = 300 s"
+      },
+      "labels" : {
+        "IRI-based" : "_rTn2",
+        "undefined" : ".rTn2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_bMaxSequenceNumber",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Max. number of sequences used\r\nValue range = 2 – 4\r\nDefault setting = 2"
+      },
+      "labels" : {
+        "IRI-based" : "_bMaxSequenceNumber",
+        "undefined" : ".bMaxSequenceNumber"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rKp2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Proportional gain (P portion) for the second set of controller parameters\r\nDefault setting = 2.5"
+      },
+      "labels" : {
+        "IRI-based" : "_rKp2",
+        "undefined" : ".rKp2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rKp1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Proportional gain (P portion) for the first set of controller parameters\r\nDefault setting = 2.5"
+      },
+      "labels" : {
+        "IRI-based" : "_rKp1",
+        "undefined" : ".rKp1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rDeviation",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum deviation between specified/actual values for the second set of controller parameters [%]\r\nDefault setting = 0 (no switchover)"
+      },
+      "labels" : {
+        "IRI-based" : "_rDeviation",
+        "undefined" : ".rDeviation"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rTd1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Derivative time (D portion) for the first set of controller parameters [s]\r\nDefault setting = 0 s"
+      },
+      "labels" : {
+        "IRI-based" : "_rTd1",
+        "undefined" : ".rTd1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rTd2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Derivative time (D portion) for the second set of controller parameters [s]\r\nDefault setting = 0 s"
+      },
+      "labels" : {
+        "IRI-based" : "_rTd2",
+        "undefined" : ".rTd2"
+      }
+    } ],
+    "id" : "31",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#HeatExchangerControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeatExchangerControl",
+      "undefined" : "Heat exchanger control"
+    },
+    "subClasses" : [ "112", "79", "139" ],
+    "id" : "46",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbHumidifier",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbHumidifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Dampfbefeuchter",
+      "IRI-based" : "FbHumidifier",
+      "en" : "Humidifier"
+    },
+    "id" : "107",
+    "superClasses" : [ "20", "6" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFan2Level",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbFan_2Level",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ventilator, 2-stufig",
+      "IRI-based" : "FbFan2Level",
+      "en" : "Fan2-Level"
+    },
+    "id" : "78",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuTwoPointCharacteristic",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fu2Point",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Zweipunkt-Kennlinie",
+      "IRI-based" : "FuTwoPointCharacteristic",
+      "en" : "Two-point characteristic"
+    },
+    "id" : "24",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbOperatingHoursCounter",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbOperatingHours_01",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Betriebsstundenzähler",
+      "IRI-based" : "FbOperatingHoursCounter",
+      "en" : "Operating hours counter"
+    },
+    "id" : "120",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#Medium",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.productontology.org/id/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://wiki.dbpedia.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Medium",
+      "en" : "Medium"
+    },
+    "comment" : {
+      "en" : "Placeholder concept to stipulate reuse of existing ontologies such as dbpedia or  \thttp://www.productontology.org/id/"
+    },
+    "attributes" : [ "external" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/baf#FbPumpwithFrequencyConverter",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPumpFC",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Pumpe mit Frequenzumrichter",
+      "IRI-based" : "FbPumpwithFrequencyConverter",
+      "en" : "Pumpwith frequency converter"
+    },
+    "id" : "108",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbUnitMonitoring",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbRedundancyUnits",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Aggregatsüberwachung",
+      "IRI-based" : "FbUnitMonitoring",
+      "en" : "Unit monitoring"
+    },
+    "id" : "116",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#SemanticType",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SemanticType",
+      "en" : "Semantic Type"
+    },
+    "comment" : {
+      "en" : "It may be required to further annotate an Input, Output or Parameter with a specific Semantic Type. For example in building automation to differ between room air temperature or outdoor air temperature."
+    },
+    "attributes" : [ "external" ],
+    "id" : "150"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "154",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "155",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "156",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "88",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/baf#FbDehumidifyingSequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceDehumidifying",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenz Entfeuchten",
+      "IRI-based" : "FbDehumidifyingSequence",
+      "en" : "Dehumidifying sequence"
+    },
+    "id" : "129",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbBlockingProtectionForContinuousDrivers",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbBlockingProtectionAnalog",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Blockierschutz für stetige Antriebe",
+      "IRI-based" : "FbBlockingProtectionForContinuousDrivers",
+      "en" : "Blocking protection for continuous drivers"
+    },
+    "id" : "121",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbBoilerModuleFor2LevelBoiler",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fb2LevelBoiler",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Kesselbaustein für 2-stufige Kessel",
+      "IRI-based" : "FbBoilerModuleFor2LevelBoiler",
+      "en" : "Boiler module for 2-Level boiler"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#Fb2LevelBoilerPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Boiler Module for 2-Level Boiler (Fb2LevelBoiler)"
+      },
+      "labels" : {
+        "IRI-based" : "Fb2LevelBoilerPattern",
+        "undefined" : " Boiler Module for 2-Level Boiler Pattern"
+      }
+    } ],
+    "id" : "170",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigContinuousDamper",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigContinuousDamper",
+      "undefined" : "typConfigContinuousDamper"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_rTolerance",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Max. deviation, specified/actual position [%]\r\nDefault setting = 3"
+      },
+      "labels" : {
+        "IRI-based" : "_rTolerance",
+        "undefined" : ".rTolerance"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMinDeviationMovement",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum deviation for detection of motion [%]\r\nDefault setting = 5"
+      },
+      "labels" : {
+        "IRI-based" : "_rMinDeviationMovement",
+        "undefined" : ".rMinDeviationMovement"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOnDelayAlarm",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "ON-delay for alarm\r\nDefault setting = t#5 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tOnDelayAlarm",
+        "undefined" : ".tOnDelayAlarm"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rY_Min",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum set value for valve or damper [%]\r\nDefault setting = 3"
+      },
+      "labels" : {
+        "IRI-based" : "_rY_Min",
+        "undefined" : ".rY_Min"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xFeedbackDamper",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Check-back signal Damper position present\r\nDefault setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xFeedbackDamper",
+        "undefined" : ".xFeedbackDamper"
+      }
+    } ],
+    "id" : "33",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbControlOf2PointDrivers",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fb2PointDriver",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ansteuerung von 2-Punkt-Antrieben",
+      "IRI-based" : "FbControlOf2PointDrivers",
+      "en" : "Control of 2-Point drivers"
+    },
+    "id" : "91",
+    "superClasses" : [ "36" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbOverheatingandCondensationProtection",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbTemperatureOverride",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Überhitzungs- und Kondensationsschutz",
+      "IRI-based" : "FbOverheatingandCondensationProtection",
+      "en" : "Overheatingand condensation protection"
+    },
+    "id" : "176",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbOptimizedSupplyTemperature",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbOptimizedSupplyTemperature",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Optimierte Vorlauftemperatur",
+      "IRI-based" : "FbOptimizedSupplyTemperature",
+      "en" : "Optimized supply temperature"
+    },
+    "id" : "179",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbHeatingCharacteristics",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbHeatingCharacteristics",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Heizungskennlinie",
+      "IRI-based" : "FbHeatingCharacteristics",
+      "en" : "Heating characteristics"
+    },
+    "id" : "182",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbTwoPointControllerforDHWPreparation",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbDHWController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Zweipunktregler BWW- Ladung",
+      "IRI-based" : "FbTwoPointControllerforDHWPreparation",
+      "en" : "Two-Point controllerfor DHWPreparation"
+    },
+    "id" : "103",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbHysteresis",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbHysteresis",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Hysterese",
+      "IRI-based" : "FbHysteresis",
+      "en" : "Hysteresis"
+    },
+    "id" : "118",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#SystemMonitoring",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SystemMonitoring",
+      "undefined" : "System monitoring"
+    },
+    "subClasses" : [ "94", "169", "167", "92", "110", "93", "133" ],
+    "id" : "54",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#DamperControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DamperControl",
+      "undefined" : "Damper control"
+    },
+    "subClasses" : [ "85", "183" ],
+    "id" : "56",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#SetValueAdjustment",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SetValueAdjustment",
+      "undefined" : "Set value adjustment"
+    },
+    "subClasses" : [ "111", "179", "37", "182", "82", "184", "176" ],
+    "id" : "38",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#AntifreezeProtection",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AntifreezeProtection",
+      "undefined" : "Antifreeze protection"
+    },
+    "subClasses" : [ "197", "114" ],
+    "id" : "74",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbStartStopOptimization",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbStartStopOptimization",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Start-/Stoppoptimierung",
+      "IRI-based" : "FbStartStopOptimization",
+      "en" : "Start/Stop optimization"
+    },
+    "id" : "169",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbPIDController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbPIDController",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "PID-Regler",
+      "IRI-based" : "FbPIDController",
+      "en" : "PIDController"
+    },
+    "id" : "105",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbBlinker",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbBlinker",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Blinker",
+      "IRI-based" : "FbBlinker",
+      "en" : "Blinker"
+    },
+    "id" : "115",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbEnergyRecoverySequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceEnergyRecovery",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenz Energierückgewinnung",
+      "IRI-based" : "FbEnergyRecoverySequence",
+      "en" : "Energy recovery sequence"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbSequenceEnergyRecoveryPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Energy Recovery Sequence (FbSequenceEnergyRecovery)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceEnergyRecoveryPattern",
+        "undefined" : "Energy Recovery Sequence Pattern"
+      }
+    } ],
+    "id" : "16",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuFourPointCharacteristicCurve",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "Fu4Point",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Vierpunkt-Kennlinie",
+      "IRI-based" : "FuFourPointCharacteristicCurve",
+      "en" : "Four-point characteristic curve"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#Fu4Point",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Four-Point Characteristic Curve (Fu4Point)"
+      },
+      "labels" : {
+        "IRI-based" : "Fu4Point",
+        "undefined" : "Four-Point Characteristic Curve Pattern"
+      }
+    } ],
+    "id" : "22",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbWaterSideAntifreezeProtection",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbAntifreezeWater",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Wasserseitiger Frostschutz",
+      "IRI-based" : "FbWaterSideAntifreezeProtection",
+      "en" : "Water-Side antifreeze protection"
+    },
+    "id" : "197",
+    "superClasses" : [ "74" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbEnthalpy",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbEnthalpy",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Enthalpie",
+      "IRI-based" : "FbEnthalpy",
+      "en" : "Enthalpy"
+    },
+    "id" : "137",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/baf#BoilerControl",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BoilerControl",
+      "undefined" : "Boiler control"
+    },
+    "subClasses" : [ "125", "170", "17" ],
+    "id" : "18",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbAveragedOutsideTemperature",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbAveragedOutsideTemperature",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Gemittelte Außentemperatur",
+      "IRI-based" : "FbAveragedOutsideTemperature",
+      "en" : "Averaged outside temperature"
+    },
+    "id" : "136",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFirstOrderLowPassFilter",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbLowPassFilter",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Tiefpassfilter 1. Ordnung",
+      "IRI-based" : "FbFirstOrderLowPassFilter",
+      "en" : "1st order low pass filter"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbLowPassFilterPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block: 1st Order Low-Pass Filter (FbLowPassFilter)"
+      },
+      "labels" : {
+        "IRI-based" : "FbLowPassFilterPattern",
+        "undefined" : "1st Order Low-Pass Filter Pattern"
+      }
+    } ],
+    "id" : "96",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbFirstOrderLowPassFilterForTemperatures",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbLowPassFilterTemp",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Tiefpassfilter 1. Ordnung für Temperaturen",
+      "IRI-based" : "FbFirstOrderLowPassFilterForTemperatures",
+      "en" : "1st order low pass filter for temperatures"
+    },
+    "id" : "97",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfig2LevelBoiler",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfig2LevelBoiler",
+      "undefined" : "typConfig2LevelBoiler"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_tPumpValveMaxOFF",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum turn-off time of the pump and valve up to activation of blocking protection. Default setting = t#24h"
+      },
+      "labels" : {
+        "IRI-based" : "_tPumpValveMaxOFF",
+        "undefined" : ".tPumpValveMaxOFF"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xTwoWayValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "2-way valve (boiler valve) present. Default setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xTwoWayValve",
+        "undefined" : ".xTwoWayValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rLeadHysteresis",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Hysteresis as the lead boiler for the individual limit values. Default setting = 5"
+      },
+      "labels" : {
+        "IRI-based" : "_rLeadHysteresis",
+        "undefined" : ".rLeadHysteresis"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xSmallWaterVolume",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Low volume of water in boiler. Default setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xSmallWaterVolume",
+        "undefined" : ".xSmallWaterVolume"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOffDelayFullLoad",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-off delay for full-load operation. Default setting: t#30s"
+      },
+      "labels" : {
+        "IRI-based" : "_tOffDelayFullLoad",
+        "undefined" : ".tOffDelayFullLoad"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMaxRuntimeValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum runtime for 2-way valve. Default setting: t#30s"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxRuntimeValve",
+        "undefined" : ".tMaxRuntimeValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rDiffBoilerAndReturnTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Max. temperature difference between boiler and return temperature for deactivation of the boiler circuit pump [K]. Default setting = 5"
+      },
+      "labels" : {
+        "IRI-based" : "_rDiffBoilerAndReturnTemperature",
+        "undefined" : ".rDiffBoilerAndReturnTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMaxChimneySweepFunction",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum duration of chimney sweep function. Default setting = t#15 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxChimneySweepFunction",
+        "undefined" : ".tMaxChimneySweepFunction"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xTwoWayValvePermanentOpen",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "2-way valve closed in the event of a fault. Default setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xTwoWayValvePermanentOpen",
+        "undefined" : ".xTwoWayValvePermanentOpen"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMinReturnTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum return temperature [°C]. Default setting = 50"
+      },
+      "labels" : {
+        "IRI-based" : "_rMinReturnTemperature",
+        "undefined" : ".rMinReturnTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rHysteresis",
+      "baseIri" : "https://w3id.org/baf",
+      "labels" : {
+        "IRI-based" : "_rHysteresis",
+        "undefined" : ".rHysteresis"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tPumpValveON",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maintenance run time for pump and valve. Default setting: t#30s"
+      },
+      "labels" : {
+        "IRI-based" : "_tPumpValveON",
+        "undefined" : ".tPumpValveON"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Admixing pump present. Default setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xAdmixingPump",
+        "undefined" : ".xAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOffDelayPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-off delay for boiler circuit pump. Default setting = t#10 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tOffDelayPump",
+        "undefined" : ".tOffDelayPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMaxBoilerTemperatureLevel2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum boiler temperature at Level 2 [°C]. Default setting = 85"
+      },
+      "labels" : {
+        "IRI-based" : "_rMaxBoilerTemperatureLevel2",
+        "undefined" : ".rMaxBoilerTemperatureLevel2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rKpMinReturnTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Proportional gain (P portion). Default setting = 12"
+      },
+      "labels" : {
+        "IRI-based" : "_rKpMinReturnTemperature",
+        "undefined" : ".rKpMinReturnTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tLeadMinRuntimeLevel1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum runtime for lead boiler at Level 1. Default setting = t#5 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tLeadMinRuntimeLevel1",
+        "undefined" : ".tLeadMinRuntimeLevel1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMaxReturnTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum return temperature [°C]. Default setting = 75"
+      },
+      "labels" : {
+        "IRI-based" : "_rMaxReturnTemperature",
+        "undefined" : ".rMaxReturnTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rLeadOffsetReferenceTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Offset to the specified boiler temperature as lead boiler [K]. Default setting = 5"
+      },
+      "labels" : {
+        "IRI-based" : "_rLeadOffsetReferenceTemperature",
+        "undefined" : ".rLeadOffsetReferenceTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rTnMinReturnTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reset time of the controller [s]. Default setting = 0"
+      },
+      "labels" : {
+        "IRI-based" : "_rTnMinReturnTemperature",
+        "undefined" : ".rTnMinReturnTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOffDelayAdmixingPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-off delay for admixing pump. Default setting = t#1 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tOffDelayAdmixingPump",
+        "undefined" : ".tOffDelayAdmixingPump"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rOffsetReferenceTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Offset to the specified boiler temperature [K]. Default setting = 3"
+      },
+      "labels" : {
+        "IRI-based" : "_rOffsetReferenceTemperature",
+        "undefined" : ".rOffsetReferenceTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMinRuntimeLevel1",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum runtime for lag boiler at Level 1. Default setting = t#3 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tMinRuntimeLevel1",
+        "undefined" : ".tMinRuntimeLevel1"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xBlockingProtection",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable blocking protection. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "_xBlockingProtection",
+        "undefined" : ".xBlockingProtection"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMaxBoilerTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum boiler temperature at Level 1 [°C]. Default setting = 90"
+      },
+      "labels" : {
+        "IRI-based" : "_rMaxBoilerTemperature",
+        "undefined" : ".rMaxBoilerTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tSwitchOnDelayLevel2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-on delay for lag boiler at Level 2. Default setting = t#20 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tSwitchOnDelayLevel2",
+        "undefined" : ".tSwitchOnDelayLevel2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xThreeWayValve",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "3-way valve present in boiler circuit. Default setting = TRUE"
+      },
+      "labels" : {
+        "IRI-based" : "_xThreeWayValve",
+        "undefined" : ".xThreeWayValve"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tLeadSwitchOnDelayLevel2",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-on delay for lead boiler at Level 2. Default setting = t#15 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tLeadSwitchOnDelayLevel2",
+        "undefined" : ".tLeadSwitchOnDelayLevel2"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMaxStartupMinBoilerTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum time until minimum boiler temperature is achieved during the startup process. Default setting = t#10 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxStartupMinBoilerTemperature",
+        "undefined" : ".tMaxStartupMinBoilerTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tMaxFlushPeriod",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Maximum time for the startup process. Default setting = t#15 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxFlushPeriod",
+        "undefined" : ".tMaxFlushPeriod"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rMinBoilerTemperature",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Minimum boiler temperature [°C]. Default setting = 50"
+      },
+      "labels" : {
+        "IRI-based" : "_rMinBoilerTemperature",
+        "undefined" : ".rMinBoilerTemperature"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOnDelayPump",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Switch-on delay for boiler circuit pump with one 2-way valve. Default setting = t#2 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tOnDelayPump",
+        "undefined" : ".tOnDelayPump"
+      }
+    } ],
+    "id" : "30",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbMinValueAvgValueAndMaxValue",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "de" : "Min.-Wert, Mittelwert und Max.-Wert",
+      "IRI-based" : "FbMinValueAvgValueAndMaxValue",
+      "en" : "Min. Value, Avg. Value and Max. Value"
+    },
+    "id" : "117",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#HVAC_Function",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HVAC_Function"
+    },
+    "subClasses" : [ "18", "74", "50", "20", "36", "54", "56", "58", "21", "38", "63", "46", "48", "1", "4", "6", "8", "10" ],
+    "id" : "2",
+    "superClasses" : [ "12", "80" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbImpulseCounter",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbImpulseCounter",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Impulszähler",
+      "IRI-based" : "FbImpulseCounter",
+      "en" : "Impulse counter"
+    },
+    "id" : "119",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuScalingofInputValues0to32767",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FuAI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Skalierung der Eingangswerte",
+      "IRI-based" : "FuScalingofInputValues0to32767",
+      "en" : "Scalingof input values0to32767"
+    },
+    "id" : "99",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbAntiLegionnairesDiseaseFunction",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbAntiLegionella",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Anti-Legionellenfunktion",
+      "IRI-based" : "FbAntiLegionnairesDiseaseFunction",
+      "en" : "Anti legionnaires disease function"
+    },
+    "id" : "184",
+    "superClasses" : [ "38" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbRunAroundCoil",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbRunAroundCoil",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Kreislaufverbundsystem",
+      "IRI-based" : "FbRunAroundCoil",
+      "en" : "Run-around coil"
+    },
+    "id" : "139",
+    "superClasses" : [ "46" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuStatusIndicationAsString",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FuStatus",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Statusanzeige als STRING",
+      "IRI-based" : "FuStatusIndicationAsString",
+      "undefined" : "Status indication as STRING {@en} "
+    },
+    "id" : "68",
+    "superClasses" : [ "63" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbHumidifyingSequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceHumidifying",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenz Befeuchten",
+      "IRI-based" : "FbHumidifyingSequence",
+      "en" : "Humidifying sequence"
+    },
+    "id" : "130",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuScalingOfTemperatureValuesInDeg",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FuAI_Temp",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Skalierung der Temperaturwerte in °C",
+      "IRI-based" : "FuScalingOfTemperatureValuesInDeg",
+      "en" : "Scaling of temperature valuesin °C"
+    },
+    "id" : "100",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigCascadeController",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigCascadeController",
+      "undefined" : "typConfigCascadeController"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_rDeadZone",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Dead zone +/- [K]\r\nDefault setting = 0"
+      },
+      "labels" : {
+        "IRI-based" : "_rDeadZone",
+        "undefined" : ".rDeadZone"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tDelaySwitchOver",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Delay time for switching between the two fan levels\r\nDefault setting = t#5 m"
+      },
+      "labels" : {
+        "IRI-based" : "_tDelaySwitchOver",
+        "undefined" : ".tDelaySwitchOver"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rTn",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Reset time of the controller [s]\r\nDefault setting = 300 s"
+      },
+      "labels" : {
+        "IRI-based" : "_rTn",
+        "undefined" : ".rTn"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xControlSpeedLevel",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Enable for determining the required fan level\r\nDefault setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xControlSpeedLevel",
+        "undefined" : ".xControlSpeedLevel"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rOffsetMaxReferenceValue",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Offset for the maximum reference value for the slave controller as a function of the reference value [K]\r\nDefault setting = 6 K"
+      },
+      "labels" : {
+        "IRI-based" : "_rOffsetMaxReferenceValue",
+        "undefined" : ".rOffsetMaxReferenceValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rOffsetMinReference",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Offset for the minimum reference value for the slave controller as a function of the reference value [K]\r\nDefault setting = 4 K"
+      },
+      "labels" : {
+        "IRI-based" : "_rOffsetMinReference",
+        "undefined" : ".rOffsetMinReferenceValue"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rKp",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Proportional gain (P portion)\r\nDefault setting = 2.5"
+      },
+      "labels" : {
+        "IRI-based" : "_rKp",
+        "undefined" : ".rKp"
+      }
+    } ],
+    "id" : "27",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FuScalingOfOutputValues0to32767",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FuAO",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Skalierung der Ausgangswerte 0 bis 32767",
+      "IRI-based" : "FuScalingOfOutputValues0to32767",
+      "en" : "Scaling of output values 0 to 32767"
+    },
+    "id" : "95",
+    "superClasses" : [ "48" ]
+  }, {
+    "iri" : "https://w3id.org/baf#typConfigAnalog3Point_01",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "typConfigAnalog3Point_01",
+      "undefined" : "typConfigAnalog3Point_01"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#_tMaxRunTime",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Max. running time, which the actuator\r\nneeds for the max. stroke\r\nDefault setting: t#120s"
+      },
+      "labels" : {
+        "IRI-based" : "_tMaxRunTime",
+        "undefined" : ".tMaxRunTime"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_tOverride",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Run-on time after reaching end\r\npositions"
+      },
+      "labels" : {
+        "IRI-based" : "_tOverride",
+        "undefined" : ".tOverride"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_rHysteresis",
+      "baseIri" : "https://w3id.org/baf",
+      "labels" : {
+        "IRI-based" : "_rHysteresis",
+        "undefined" : ".rHysteresis"
+      }
+    }, {
+      "iri" : "https://w3id.org/baf#_xLimitSwitch",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Monitoring of the limit switches\r\nDefault setting = FALSE"
+      },
+      "labels" : {
+        "IRI-based" : "_xLimitSwitch",
+        "undefined" : ".xLimitSwitch"
+      }
+    } ],
+    "id" : "29",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbActuationofContinuousDampers",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbContinuousDamper",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Ansteuerung von stetigen Klappen",
+      "IRI-based" : "FbActuationofContinuousDampers",
+      "en" : "Actuationof continuous dampers"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbContinuousDamperPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Actuation of Continuous Dampers (FbContinuousDamper)"
+      },
+      "labels" : {
+        "IRI-based" : "FbContinuousDamperPattern",
+        "undefined" : "Actuation of Continuous Dampers Pattern"
+      }
+    } ],
+    "id" : "183",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbHeatingSequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceHeating",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenz Heizen",
+      "IRI-based" : "FbHeatingSequence",
+      "en" : "Heating sequence"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/baf#FbSequenceHeatingPattern",
+      "baseIri" : "https://w3id.org/baf",
+      "comment" : {
+        "undefined" : "Pattern of function block for Heating Sequence (FbSequenceHeating)"
+      },
+      "labels" : {
+        "IRI-based" : "FbSequenceHeatingPattern",
+        "undefined" : "Heating Sequence Pattern"
+      }
+    } ],
+    "id" : "128",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbStartStop",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbStartStop",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Start/Stopp",
+      "IRI-based" : "FbStartStop",
+      "en" : "Start/Stop"
+    },
+    "id" : "167",
+    "superClasses" : [ "54" ]
+  }, {
+    "iri" : "https://w3id.org/baf#FbCoolingSequence",
+    "baseIri" : "https://w3id.org/baf",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "FbSequenceCooling",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Sequenz Kühlen",
+      "IRI-based" : "FbCoolingSequence",
+      "en" : "Cooling sequence"
+    },
+    "id" : "124",
+    "superClasses" : [ "10" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "157",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "163",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "168",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "178",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "187",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "192",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "193",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "201",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "202",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "209",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "212",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "218",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "220",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "221",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "228",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "229",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "230",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "231",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "232",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "233",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "234",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "235",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "236",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "237",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "239",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "240",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "241",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "242",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "243",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "245",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "247",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "248",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "249",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "251",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "253",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "5"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "7"
+  }, {
+    "range" : "2",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "12",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "11"
+  }, {
+    "range" : "12",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "10",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "2",
+    "domain" : "46",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "2",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "2",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "2",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "2",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "2",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "2",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "2",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "2",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "2",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "2",
+    "domain" : "63",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "63",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "63",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "2",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "2",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasUnit",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "en" : "hasUnit"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to relate an input, output or parameter with its unit."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#supervises",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "80",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "supervises",
+      "en" : "supervises"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to describe if one control actor supervises another."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#logicInput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "logicInput",
+      "en" : "logicInput"
+    },
+    "domain" : "88",
+    "comment" : {
+      "en" : "Object property to express the relationship of some application logic concept to an input."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasOutput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "hasOutput"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its outputs."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "10",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "10",
+    "domain" : "124",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasMedium",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "127",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMedium",
+      "en" : "hasMedium"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to annotate an input, output or parameter with its medium."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "126"
+  }, {
+    "range" : "10",
+    "domain" : "128",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "131"
+  }, {
+    "range" : "10",
+    "domain" : "129",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "132"
+  }, {
+    "range" : "10",
+    "domain" : "130",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "134"
+  }, {
+    "range" : "25",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasQuantity",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "89",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasQuantity",
+      "en" : "hasQuantity"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to annotate an input, output or parameter with its quantity."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "138"
+  }, {
+    "range" : "25",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "25",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "141"
+  }, {
+    "range" : "25",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "142"
+  }, {
+    "range" : "25",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "143"
+  }, {
+    "range" : "25",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "144"
+  }, {
+    "range" : "25",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "145"
+  }, {
+    "range" : "21",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "146"
+  }, {
+    "range" : "21",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "147"
+  }, {
+    "range" : "25",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "148"
+  }, {
+    "range" : "21",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
+  }, {
+    "range" : "50",
+    "domain" : "137",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "151"
+  }, {
+    "range" : "50",
+    "domain" : "136",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "50",
+    "domain" : "113",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasInput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "hasInput"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its inputs."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "157"
+  }, {
+    "range" : "25",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "range" : "25",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "159"
+  }, {
+    "range" : "54",
+    "domain" : "93",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "160"
+  }, {
+    "range" : "56",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "161"
+  }, {
+    "range" : "54",
+    "domain" : "133",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasDataType",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDataType",
+      "en" : "hasDataType"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to annotate a input, output or parameter with its data type."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#logicOutput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "logicOutput",
+      "en" : "logicOutput"
+    },
+    "domain" : "155",
+    "comment" : {
+      "en" : "Object property to express the relationship of some application logic concept to an output."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#isSupervisedBy",
+    "inverse" : "84",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "80",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSupervisedBy",
+      "en" : "isSupervisedBy"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to describe hierarchical composition of control actors."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "165"
+  }, {
+    "range" : "54",
+    "domain" : "167",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "166"
+  }, {
+    "range" : "54",
+    "domain" : "169",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "168"
+  }, {
+    "range" : "54",
+    "domain" : "110",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "171"
+  }, {
+    "range" : "54",
+    "domain" : "92",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "4",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "80",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "range" : "54",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "4",
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasParameter",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "25",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasParameter",
+      "en" : "hasParameter"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its parameter."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "178"
+  }, {
+    "range" : "80",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "180"
+  }, {
+    "range" : "58",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "181"
+  }, {
+    "range" : "58",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "185"
+  }, {
+    "range" : "26",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "186"
+  }, {
+    "range" : "26",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "187"
+  }, {
+    "range" : "58",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "188"
+  }, {
+    "range" : "58",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "189"
+  }, {
+    "range" : "46",
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "190"
+  }, {
+    "range" : "46",
+    "domain" : "112",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "191"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#logicParameter",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "25",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "logicParameter",
+      "en" : "logicParameter"
+    },
+    "domain" : "156",
+    "comment" : {
+      "en" : "Object property to express the relationship of some application logic concept to an parameter."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "192"
+  }, {
+    "range" : "26",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "193"
+  }, {
+    "range" : "46",
+    "domain" : "139",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "194"
+  }, {
+    "range" : "48",
+    "domain" : "99",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
+  }, {
+    "range" : "48",
+    "domain" : "98",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "196"
+  }, {
+    "range" : "8",
+    "domain" : "101",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "198"
+  }, {
+    "range" : "48",
+    "domain" : "100",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "199"
+  }, {
+    "range" : "48",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "200"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasApplicationLogic",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "75",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasApplicationLogic",
+      "en" : "hasApplicationLogic"
+    },
+    "domain" : "154",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its specific application logic"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "201"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#isConnectedTo",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isConnectedTo",
+      "en" : "isConnectedTo"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Object property to describe the topological relationship between an input of one control actor and the output of another."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "202"
+  }, {
+    "range" : "48",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "203"
+  }, {
+    "range" : "48",
+    "domain" : "96",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "204"
+  }, {
+    "range" : "36",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "205"
+  }, {
+    "range" : "36",
+    "domain" : "90",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "206"
+  }, {
+    "range" : "48",
+    "domain" : "95",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "207"
+  }, {
+    "range" : "36",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "208"
+  }, {
+    "range" : "74",
+    "domain" : "197",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "209"
+  }, {
+    "range" : "38",
+    "domain" : "176",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "210"
+  }, {
+    "range" : "36",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "211"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasSemanticType",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "150",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSemanticType",
+      "en" : "hasSemanticType"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to relate an input, output or parameter with its semantic type."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "212"
+  }, {
+    "range" : "74",
+    "domain" : "114",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "213"
+  }, {
+    "range" : "38",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "214"
+  }, {
+    "range" : "38",
+    "domain" : "182",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "215"
+  }, {
+    "range" : "38",
+    "domain" : "184",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "216"
+  }, {
+    "range" : "38",
+    "domain" : "111",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "217"
+  }, {
+    "range" : "56",
+    "domain" : "183",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "218"
+  }, {
+    "range" : "38",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "219"
+  }, {
+    "range" : "38",
+    "domain" : "179",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "220"
+  }, {
+    "range" : "63",
+    "domain" : "119",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "221"
+  }, {
+    "range" : "63",
+    "domain" : "118",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "222"
+  }, {
+    "range" : "63",
+    "domain" : "121",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "223"
+  }, {
+    "range" : "63",
+    "domain" : "120",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "224"
+  }, {
+    "range" : "63",
+    "domain" : "116",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "225"
+  }, {
+    "range" : "63",
+    "domain" : "86",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "226"
+  }, {
+    "range" : "63",
+    "domain" : "117",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "227"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasDataType",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDataType",
+      "en" : "hasDataType"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to annotate a input, output or parameter with its data type."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "228"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasUnit",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "en" : "hasUnit"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to relate an input, output or parameter with its unit."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "229"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasSemanticType",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "150",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSemanticType",
+      "en" : "hasSemanticType"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to relate an input, output or parameter with its semantic type."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "230"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasOutput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "hasOutput"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its outputs."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "231"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasOutput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "43",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "hasOutput"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its outputs."
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "232"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasApplicationLogic",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "75",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasApplicationLogic",
+      "en" : "hasApplicationLogic"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its specific application logic"
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "233"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasApplicationLogic",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "75",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasApplicationLogic",
+      "en" : "hasApplicationLogic"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its specific application logic"
+    },
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "234"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasParameter",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "25",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasParameter",
+      "en" : "hasParameter"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its parameter."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "235"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasMedium",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "127",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMedium",
+      "en" : "hasMedium"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to annotate an input, output or parameter with its medium."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "236"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasQuantity",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "89",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasQuantity",
+      "en" : "hasQuantity"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Object property to annotate an input, output or parameter with its quantity."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "237"
+  }, {
+    "range" : "6",
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "238"
+  }, {
+    "range" : "20",
+    "domain" : "108",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "239"
+  }, {
+    "range" : "63",
+    "domain" : "115",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "240"
+  }, {
+    "range" : "6",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "241"
+  }, {
+    "range" : "20",
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "242"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "243"
+  }, {
+    "range" : "20",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "244"
+  }, {
+    "range" : "20",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "245"
+  }, {
+    "range" : "18",
+    "domain" : "170",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "246"
+  }, {
+    "range" : "18",
+    "domain" : "125",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "247"
+  }, {
+    "iri" : "https://w3id.org/ibp/CTRLont#hasInput",
+    "baseIri" : "https://w3id.org/ibp/CTRLont",
+    "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/ibp/CTRLont#ctrl",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "hasInput"
+    },
+    "domain" : "80",
+    "comment" : {
+      "en" : "Object property to relate a control actor to its inputs."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "248"
+  }, {
+    "range" : "8",
+    "domain" : "105",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "249"
+  }, {
+    "range" : "8",
+    "domain" : "102",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "250"
+  }, {
+    "range" : "8",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "251"
+  }, {
+    "range" : "8",
+    "domain" : "104",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "252"
+  }, {
+    "range" : "8",
+    "domain" : "103",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "253"
+  } ]
+}

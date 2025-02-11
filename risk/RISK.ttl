@@ -1,0 +1,583 @@
+# baseURI: https://www.w3id.org/risk
+# prefix: risk
+
+@prefix : <https://www.w3id.org/risk#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix risk: <https://www.w3id.org/risk#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://www.w3id.org/risk>
+  a owl:Ontology ;
+  dcterms:creator "Hervé Pruvost" ,
+                  <https://orcid.org/0000-0001-7604-8543> ,
+                  <https://www.linkedin.com/in/hervepruvost> ;                  
+  dcterms:issued "2017-06-22"^^xsd:date ;
+  dcterms:modified "2023-06-17"^^xsd:date ;
+  dcterms:title "RISK: the risk ontology."@en ;
+  dcterms:publisher "Fraunhofer IIS/EAS" ,
+                    <https://www.eas.iis.fraunhofer.de/> ;
+  dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+  rdfs:seeAlso <https://2023.eswc-conferences.org/wp-content/uploads/2023/05/paper_Pruvost_2023_Ontologies.pdf> ;
+  vann:preferredNamespacePrefix "risk" ;
+  vann:preferredNamespaceUri "https://w3id.org/risk#" ;
+  dcterms:description "The RISK ontology is a graph data structure that conceptualizes the domain of risk management by providing terms about risk identification, analysis and mitigation. It applies currently to the domain of engineering in the construction and facility management sector. But it aims at universally cover any domain."@en ;
+  owl:versionInfo "v1.0.0" ;
+  dcterms:bibliographicCitation "Pruvost. H. (2023): The RISK Ontology for a risk management paradigm in the Architecture, Engineering, Construction, and Facility Management domain. https://w3id.org/risk."@en ; 
+.
+risk:AirCooledButNotVentilated
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Air cooled but not ventilated" ;
+.
+risk:AirHeatedButNotVentilated
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Air heated but not ventilated" ;
+.
+risk:AirHumidifiedButNotVentilated
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Air humidified but not ventilated" ;
+.
+risk:AirReturnedButNotSupplied
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Air returned but not supplied" ;
+.
+risk:AirSuppliedButNotReturned
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Air supplied but not returned" ;
+.
+risk:BetterThanTarget
+  a owl:Class ;
+  rdfs:subClassOf risk:MetricValuePartition ;
+.
+risk:BuildingHeight
+  a owl:NamedIndividual ;
+  a risk:OutsideTolerance ;
+.
+risk:BuildingPermissionRejected
+  a owl:NamedIndividual ;
+  a risk:LegalRisk ;
+.
+risk:BuildingTooHigh
+  a owl:NamedIndividual ;
+  a risk:Occurence ;
+  risk:causedBy risk:BuildingHeight ;
+  risk:causes risk:BuildingPermissionRejected ;
+.
+risk:CertificationRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:ConstructionRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:CostRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:CriticalError
+  a owl:Class ;
+  rdfs:subClassOf risk:Threshold ;
+.
+risk:DesignRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:DesignTemperature
+  a owl:NamedIndividual ;
+  a risk:OutsideTolerance ;
+  risk:causes risk:NominalDesignTemperature_not_repected ;
+.
+risk:EnergyRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:EntityAtRisk
+  a owl:Class ;
+  rdfs:label "Entity at risk" ;
+  owl:equivalentClass [
+      a owl:Restriction ;
+      owl:onProperty risk:hasRisk ;
+      owl:someValuesFrom risk:Risk ;
+    ] ;
+.
+risk:Event
+  a owl:Class ;
+  rdfs:subClassOf risk:Problem ;
+.
+risk:FitsValue
+  a owl:NamedIndividual ;
+.
+risk:GeotechnicalMeasure
+  a owl:Class ;
+  rdfs:subClassOf risk:KnownMeasure ;
+.
+risk:GeotechnicalRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:HeatRecoveryInefficientlyUsed
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Heat recovery inefficiently used" ;
+.
+risk:HeatRecoveryUnused
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Heat recovery unused" ;
+.
+risk:HeatRecoveryUsedButNotVentilated
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Heat recovery used but not ventilated" ;
+.
+risk:HighPitMeasure
+  a owl:Class ;
+  rdfs:subClassOf risk:GeotechnicalMeasure ;
+.
+risk:ID
+  a owl:DatatypeProperty ;
+.
+risk:InTarget
+  a owl:Class ;
+  rdfs:subClassOf risk:MetricValuePartition ;
+.
+risk:InTolerance
+  a owl:Class ;
+  rdfs:subClassOf risk:MetricValuePartition ;
+.
+risk:IncompleteData
+  a owl:Class ;
+  rdfs:subClassOf risk:QualitativeUncertainty ;
+.
+risk:Install_Struts
+  a owl:NamedIndividual ;
+  a risk:KnownMeasure ;
+  risk:reducesOccurrenceImpactOfRisk risk:lowSecurityIndex ;
+  risk:removesRisk risk:lowSecurityIndex ;
+  risk:treatsOccurrenceOfRisk risk:lowSecurityIndex ;
+.
+risk:KnownMeasure
+  a owl:Class ;
+  rdfs:subClassOf risk:Measure ;
+.
+risk:LegalRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:Likelihood
+  a owl:Class ;
+  rdfs:subClassOf risk:QuantitativeUncertainty ;
+.
+risk:LowPitMeasure
+  a owl:Class ;
+  rdfs:subClassOf risk:GeotechnicalMeasure ;
+.
+risk:Maximize
+  a owl:NamedIndividual ;
+.
+risk:Measure
+  a owl:Class ;
+.
+risk:MetricValuePartition
+  a owl:Class ;
+  rdfs:subClassOf risk:ValuePartition ;
+.
+risk:Minimize
+  a owl:NamedIndividual ;
+.
+risk:ModelValidityLimitState_overstep
+  a owl:NamedIndividual ;
+  a risk:GeotechnicalRisk ;
+.
+risk:NoData
+  a owl:Class ;
+  rdfs:subClassOf risk:QualitativeUncertainty ;
+.
+risk:NominalDesignTemperature_not_repected
+  a owl:NamedIndividual ;
+  a risk:DesignRisk ;
+  risk:causedBy risk:DesignTemperature ;
+  risk:hasDescription "Requested nominal temperature out of normative requirements about indoor condition" ;
+.
+risk:Occurence
+  a owl:Class ;
+  rdfs:subClassOf risk:Problem ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty risk:ID ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          risk:Problem
+          [
+            a owl:Restriction ;
+            owl:onProperty risk:occursAt ;
+            owl:someValuesFrom owl:Thing ;
+          ]
+        ) ;
+    ] ;
+.
+risk:OutsideTarget
+  a owl:Class ;
+  rdfs:subClassOf risk:MetricValuePartition ;
+.
+risk:OutsideTolerance
+  a owl:Class ;
+  rdfs:subClassOf risk:MetricValuePartition ;
+.
+risk:OverheatingThroughSolarGain
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Overheating through solar gain" ;
+.
+risk:ProactiveMeasure
+  a owl:Class ;
+  rdfs:subClassOf risk:Measure ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          risk:Measure
+          [
+            a owl:Restriction ;
+            owl:onProperty risk:treatsRisk ;
+            owl:someValuesFrom risk:Risk ;
+          ]
+        ) ;
+    ] ;
+.
+risk:ProbabilityDistribution
+  a owl:Class ;
+  rdfs:subClassOf risk:QuantitativeUncertainty ;
+.
+risk:Problem
+  a owl:Class ;
+.
+risk:QualitativeUncertainty
+  a owl:Class ;
+  rdfs:subClassOf risk:Uncertainty ;
+.
+risk:QuantitativeUncertainty
+  a owl:Class ;
+  rdfs:subClassOf risk:Uncertainty ;
+.
+risk:Range
+  a owl:Class ;
+  rdfs:subClassOf risk:QuantitativeUncertainty ;
+.
+risk:ReactiveMeasure
+  a owl:Class ;
+  rdfs:subClassOf risk:Measure ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          risk:Measure
+          [
+            a owl:Restriction ;
+            owl:onProperty risk:treatsOccurrenceOfRisk ;
+            owl:someValuesFrom risk:Problem ;
+          ]
+        ) ;
+    ] ;
+.
+risk:ReliabilityRisk
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+.
+risk:Risk
+  a owl:Class ;
+  rdfs:subClassOf risk:Problem ;
+.
+risk:RiskEvent
+  a owl:Class ;
+  rdfs:subClassOf risk:Risk ;
+  owl:equivalentClass [
+      a owl:Class ;
+      owl:intersectionOf (
+          risk:Event
+          risk:Risk
+        ) ;
+    ] ;
+.
+risk:RiskOccurence
+  a owl:Class ;
+  rdfs:subClassOf risk:Occurence ;
+.
+risk:ServiceabilityLimitState_overstep
+  a owl:NamedIndividual ;
+  a risk:GeotechnicalRisk ;
+.
+risk:SimulatenousAirCoolingAndRadiantHeating
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Simulatenous air cooling and radiant heating" ;
+.
+risk:SimultaneousAirHeatingAndAirCooling
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Simultaneous air heating and air cooling" ;
+.
+risk:SpaceOverheating
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Space overheating" ;
+.
+risk:SpaceUndercooling
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Space undercooling" ;
+.
+risk:SupplyAirHumidity_TooHigh
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Supply air humidity Too high" ;
+.
+risk:SupplyAirHumidity_TooLow
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Supply air humidity Too low" ;
+.
+risk:SupplyAirPressure_TooHigh
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Supply air pressure Too high" ;
+.
+risk:SupplyAirPressure_TooLow
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Supply air pressure Too low" ;
+.
+risk:SupplyAirTemperature_TooHigh
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Supply air temperature Too high" ;
+.
+risk:SupplyAirTemperature_TooLow
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Supply air temperature Too low" ;
+.
+risk:Threshold
+  a owl:Class ;
+.
+risk:Treats
+  a owl:ObjectProperty ;
+.
+risk:UltimateLimitState_overstep
+  a owl:NamedIndividual ;
+  a risk:GeotechnicalRisk ;
+.
+risk:Uncertainty
+  a owl:Class ;
+.
+risk:UnusedAppliances
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Unused appliances" ;
+.
+risk:UnusedCoolingEnergy
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Unused cooling energy" ;
+.
+risk:UnusedHeatingEnergy
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Unused heating energy" ;
+.
+risk:UnusedLights
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Unused lights" ;
+.
+risk:ValuePartition
+  a owl:Class ;
+.
+risk:Warning
+  a owl:Class ;
+  rdfs:subClassOf risk:Threshold ;
+.
+risk:WastingEnergyThroughOpenings
+  a owl:NamedIndividual ;
+  a risk:EnergyRisk ;
+  rdfs:label "Wasting energy through openings" ;
+.
+risk:WindowWallRatio
+  a owl:NamedIndividual ;
+  a risk:InTolerance ;
+  a risk:OutsideTarget ;
+  risk:causes risk:WindowWallRatio_Low-But-Tolerated ;
+.
+risk:WindowWallRatio_Low-But-Tolerated
+  a owl:NamedIndividual ;
+  a risk:Occurence ;
+.
+risk:assessedBy
+  a owl:ObjectProperty ;
+  rdfs:label "assessed by" ;
+  owl:inverseOf risk:assesses ;
+.
+risk:assesses
+  a owl:ObjectProperty ;
+  rdfs:label "assesses" ;
+.
+risk:causedBy
+  a owl:ObjectProperty ;
+  owl:equivalentProperty risk:isEffectOf ;
+  owl:equivalentProperty [
+      owl:inverseOf risk:causes ;
+    ] ;
+.
+risk:causes
+  a owl:ObjectProperty ;
+  owl:equivalentProperty risk:hasEffect ;
+.
+risk:effectedBy
+  a owl:ObjectProperty ;
+  rdfs:domain risk:Problem ;
+  rdfs:range risk:Problem ;
+  owl:inverseOf risk:effects ;
+.
+risk:effects
+  a owl:ObjectProperty ;
+  rdfs:domain risk:Problem ;
+  rdfs:range risk:Problem ;
+.
+risk:evacuate_building_site
+  a owl:NamedIndividual ;
+  a risk:KnownMeasure ;
+  risk:reducesExpectedImpactOfRisk risk:UltimateLimitState_overstep ;
+  risk:reducesOccurrenceImpactOfRisk risk:UltimateLimitState_overstep ;
+.
+risk:hasDescription
+  a owl:DatatypeProperty ;
+.
+risk:hasEffect
+  a owl:ObjectProperty ;
+  owl:equivalentProperty [
+      owl:inverseOf risk:isEffectOf ;
+    ] ;
+.
+risk:hasInstance
+  a owl:ObjectProperty ;
+.
+risk:hasName
+  a owl:DatatypeProperty ;
+.
+risk:hasQuantitativeUncertainty
+  a owl:ObjectProperty ;
+.
+risk:hasRisk
+  a owl:ObjectProperty ;
+  rdfs:label "has risk" ;
+.
+risk:hasTarget
+  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf risk:hasThreshold ;
+.
+risk:hasThreshold
+  a owl:ObjectProperty ;
+.
+risk:hasTolerance
+  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf risk:hasThreshold ;
+.
+risk:isCritical
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain risk:Problem ;
+  rdfs:range xsd:boolean ;
+.
+risk:isEffectOf
+  a owl:ObjectProperty ;
+.
+risk:isOccurenceOf
+  a owl:ObjectProperty ;
+  rdfs:domain risk:RiskOccurence ;
+  rdfs:range risk:Risk ;
+.
+risk:isToBeAvoided
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain risk:Risk ;
+  rdfs:range xsd:boolean ;
+.
+risk:isToBeReduced
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain risk:Risk ;
+  rdfs:range xsd:boolean ;
+.
+risk:isTolerated
+  a owl:DatatypeProperty ;
+  a owl:FunctionalProperty ;
+  rdfs:domain risk:Risk ;
+  rdfs:range xsd:boolean ;
+.
+risk:lagging
+  a owl:NamedIndividual ;
+.
+risk:leading
+  a owl:NamedIndividual ;
+.
+risk:lowSecurityIndex
+  a owl:NamedIndividual ;
+  a risk:GeotechnicalRisk ;
+.
+risk:occursAt
+  a owl:ObjectProperty ;
+  rdfs:domain risk:Risk ;
+.
+risk:reducesExpectedImpactOfRisk
+  a owl:ObjectProperty ;
+  rdfs:range risk:Risk ;
+  rdfs:subPropertyOf risk:treatsRisk ;
+.
+risk:reducesOccurrenceImpactOfRisk
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf risk:treatsOccurrenceOfRisk ;
+.
+risk:reducesRiskProbability
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf risk:treatsRisk ;
+.
+risk:relatesTo
+  a owl:ObjectProperty ;
+.
+risk:removesRisk
+  a owl:ObjectProperty ;
+  rdfs:subPropertyOf risk:treatsRisk ;
+.
+risk:threatens
+  a owl:ObjectProperty ;
+  rdfs:domain risk:Risk ;
+.
+risk:treatsOccurrenceOfRisk
+  a owl:ObjectProperty ;
+  rdfs:domain risk:Measure ;
+  rdfs:range risk:Problem ;
+  rdfs:subPropertyOf risk:treatsProblem ;
+.
+risk:treatsProblem
+  a owl:ObjectProperty ;
+.
+risk:treatsRisk
+  a owl:ObjectProperty ;
+  rdfs:domain risk:Measure ;
+  rdfs:range risk:Problem ;
+  rdfs:subPropertyOf risk:treatsProblem ;
+.
